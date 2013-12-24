@@ -42,3 +42,19 @@ filetype plugin indent on	" 启动自动补全
 "set cursorcolumn		" 高亮当前列
 "set cursorline			" 高亮当前行
 "**********************************************************************
+
+"**********************************************************************
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" The NERD tree 以树形结构浏览文件夹中的文件
+Bundle 'scrooloose/nerdtree'
+
+" 比taglist更现代的代码结构浏览工具
+Bundle 'majutsushi/tagbar'
+
+"**********************************************************************
+
