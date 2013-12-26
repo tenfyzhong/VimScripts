@@ -57,8 +57,6 @@ nnoremap <leader>bi :BundleInstall<cr>
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-" The NERD tree 以树形结构浏览文件夹中的文件
-Bundle 'scrooloose/nerdtree'
 
 " 比taglist更现代的代码结构浏览工具
 Bundle 'majutsushi/tagbar'
@@ -69,7 +67,7 @@ Bundle 'majutsushi/tagbar'
 "**********************************************************************
 " ctags
 set tags=tags
-nmap <silent><leader>cc :!ctags -R<cr>
+nmap <silent><leader>cc :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<cr>
 "**********************************************************************
 
 "**********************************************************************
@@ -101,6 +99,25 @@ let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
-let g:clang_use_options='-stdlib=libc++ -std=c++11 -I/usr/include'
+let g:clang_use_options='-stdlib=libc++ -std=c++11'
 nnoremap <leader>gc :!~/.vim/bin/generate_clang_complete.sh<cr> 
+"**********************************************************************
+
+"**********************************************************************
+" The NERD tree 以树形结构浏览文件夹中的文件
+Bundle 'scrooloose/nerdtree'
+nmap <silent><leader>ntt :NERDTreeToggle<cr>
+let NERDTreeIgnore=['/.vim$','/~$'] " 不显示指定的内容
+let NERDTreeShowHidden=0 "	不显示隐藏文件
+let NERDTreeSortOrder=['//$','/.cpp$','/.c$','/.h$','*']	" 排序
+let NERDTreeCaseSensitiveSort=0	" 不分大小写排序
+let NERDTreeWinsize=30
+let NERDTreeShowBookmarks=1
+let NERDTreeQuitOnOpen=1	" 打开文件后，关闭NERDTree窗口
+let NERDTreeHightlightCursorline=1	"高亮NERDTree窗口的当前行
+"**********************************************************************
+
+"**********************************************************************
+Bundle 'FindMate'
+let g:FindMate_verbose = 'locate'
 "**********************************************************************
