@@ -102,4 +102,5 @@ let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
 let g:clang_use_options='-stdlib=libc++ -std=c++11 -I/usr/include'
+nnoremap <leader>gc :!~/.vim/bin/generate_clang_complete.sh<cr> 
 "**********************************************************************
