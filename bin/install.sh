@@ -13,6 +13,13 @@ if [ -e ~/.vimrc ]; then
 fi
 ln -s ~/.vim/.vimrc ~/.vimrc
 
+GenerateClangComplete=~/.vim/bin/generate_clang_complete.sh
+if [ -f $GenerateClangComplete ]; then
+	if ! [ -x $GenerateClangComplete ]; then
+		chmod +x $GenerateClangComplete 
+	fi
+fi
+
 echo "加载插件"
 # 运行BundleInstall加载插件
 vim -c BundleInstall
