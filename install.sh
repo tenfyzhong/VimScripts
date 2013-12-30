@@ -8,6 +8,12 @@ if ! [ -e ~/.vim/bundle/vundle/.git ]; then
 
 	echo "克隆vundle"
 	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle 
+
+else
+	cd ~/.vim/bundle/vundle/
+	echo "拉回vundle"
+	git pull
+	cd -
 fi
 
 if  ! [ -L ~/.vimrc ] || ! [ ~/.vimrc -ef ~/.vim/.vimrc ] ; then
