@@ -23,13 +23,17 @@ set showmatch	" 括号匹配
 set ruler		" 显示标尺
 set showmode	" 显示输入的命令
 set confirm		" 在处理未保存或只读文件的时候，弹出确认
+
+" vimrc文件修改之后自动加载
+autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost _vimrc source %
 "**********************************************************************
 
 "**********************************************************************
 " 全局快捷键
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-
+nnoremap <F12> <C-w>w	" F12 窗口切换
 "**********************************************************************
 
 "**********************************************************************
