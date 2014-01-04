@@ -163,6 +163,23 @@ let g:FindMate_verbose = 'locate'
 "**********************************************************************
 
 "**********************************************************************
+Bundle 'vim-scripts/minibufexplorerpp'
+let g:miniBufExplMapCTabSwitchBufs=1
+let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplMapWindowNavVim=1
+"**********************************************************************
+
+"**********************************************************************
+Bundle 'vim-scripts/grep.vim'
+"**********************************************************************
+
+"**********************************************************************
+Bundle 'ervandew/supertab'
+"let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+"**********************************************************************
+
+"**********************************************************************
 " cscope
 if has ("cscope")
 	set cscopetag " 使支持用Ctrl+]和Ctrl+t 快捷键在代码间跳来跳去
