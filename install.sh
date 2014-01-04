@@ -33,3 +33,16 @@ fi
 echo "加载插件"
 # 运行BundleInstall加载插件
 vim -c BundleInstall -c qa!
+
+# 修改csupport模板
+if [ -d ~/.vim/bundle/c.vim ]; then
+	echo "修改csupport模板"
+	#[[ -f ~/.vim/templates/MyselfTemplates ]] && cp -f ~/.vim/templates/MyselfTemplates ~/.vim/bundle/c.vim/c-support/templates/Templates || [[ -f ~/.vim/templates/Templates ]] && cp -f ~/.vim/templates/Templates ~/.vim/bundle/c.vim/c-support/templates/Templates
+	if [ -f ~/.vim/templates/MyselfTemplates ]; then
+		cp -f ~/.vim/templates/MyselfTemplates ~/.vim/bundle/c.vim/c-support/templates/Templates
+	else
+		[[ -f ~/.vim/templates/Templates ]] && cp -f ~/.vim/templates/Templates ~/.vim/bundle/c.vim/c-support/templates/Templates
+	fi
+	[[ -f ~/.vim/templates/cpp.comments.template ]] && cp -f ~/.vim/templates/cpp.comments.template ~/.vim/bundle/c.vim/c-support/templates/
+	[[ -f ~/.vim/templates/c.comments.template ]] && cp -f ~/.vim/templates/c.comments.template ~/.vim/bundle/c.vim/c-support/templates/
+fi
