@@ -11,3 +11,9 @@ bin/generate_clang_complete.sh用于生成c/c++自动补全的.clang_complete文
 	cp ~/.vim/templates/Templates ~/.vim/templates/MyselfTemplates
 在MyselfTemplates下进行编辑。MyselfTemplates不会被git进行跟踪。
 修改完后，运行install.sh进行加载。
+
+需要安装的软件：
+git
+ctags
+clang
+cscope(可选，没有则不能使用cscope)
