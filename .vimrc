@@ -175,8 +175,8 @@ Bundle 'vim-scripts/grep.vim'
 
 "**********************************************************************
 Bundle 'ervandew/supertab'
-"let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 "**********************************************************************
 
 "**********************************************************************
