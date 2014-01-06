@@ -71,7 +71,7 @@ function! s:load_plugin_vimrc(filename)
 
 	if globpath(l:vimrcs, a:filename) != ""
 		let l:filepathname = l:vimrcs . a:filename
-		execute "source " . l:vimrcs . a:filename
+		execute "source " . l:filepathname
 	elseif s:load_vimrc_warn 
 		echom "load " . a:filename . " failure"
 	endif
