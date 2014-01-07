@@ -12,7 +12,7 @@ static void<CURSOR> |?FUNCTION_NAME| ( <+argument list+> )
 }		// -----  end of static function |FUNCTION_NAME|  -----
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == idioms.main ==
-#include	<cstdlib>
+#include <cstdlib>
 
 int main( int argc, char *argv[] )
 {<CURSOR>
