@@ -25,8 +25,12 @@ set showmode	" 显示输入的命令
 set confirm		" 在处理未保存或只读文件的时候，弹出确认
 
 " vimrc文件修改之后自动加载
-autocmd! bufwritepost .vimrc source %
-autocmd! bufwritepost _vimrc source %
+autocmd! bufwritepost *vimrc source %
+autocmd FileType *
+  \ if &omnifunc != '' |
+  \   call SuperTabChain(&omnifunc, "<c-p>") |
+  \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+  \ endif
 
 let g:load_vimrc_warn 	= 1
 "**********************************************************************
@@ -100,4 +104,5 @@ call s:load_plugin_vimrc("grep.vim.vimrc")
 call s:load_plugin_vimrc("supertab.vimrc")
 call s:load_plugin_vimrc("cscope.vimrc")
 call s:load_plugin_vimrc("ctrlp.vim.vimrc")
+"call s:load_plugin_vimrc("neocomplcache.vim.vimrc")
 "**********************************************************************
