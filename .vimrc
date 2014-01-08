@@ -99,4 +99,5 @@ call s:load_plugin_vimrc("minibufexplorerpp.vimrc")
 call s:load_plugin_vimrc("grep.vim.vimrc")
 call s:load_plugin_vimrc("supertab.vimrc")
 call s:load_plugin_vimrc("cscope.vimrc")
+call s:load_plugin_vimrc("ctrlp.vim.vimrc")
 "**********************************************************************
