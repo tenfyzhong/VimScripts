@@ -5,6 +5,10 @@ if version >= 701
 	if g:plugin_exist("tagbar")
 		"echom "tagbar plugin"
 		nnoremap <silent><leader>tt :TagbarToggle<CR>
+	else
+		if g:load_vimrc_warn 
+			echo "no tagbar and taglist"
+		endif
 	endif
 else
 	Bundle 'vim-scripts/taglist.vim'
@@ -30,6 +34,10 @@ else
 		let Tlist_Use_Horiz_Window=0
 	
 		map <silent><leader>tt :TlistToggle<cr>
+	else
+		if g:load_vimrc_warn 
+			echo "no tagbar and taglist"
+		endif
 	endif
 endif
 "**********************************************************************

@@ -12,5 +12,9 @@ if g:plugin_exist("nerdtree")
 	let NERDTreeShowBookmarks=1
 	let NERDTreeQuitOnOpen=1	" 打开文件后，关闭NERDTree窗口
 	let NERDTreeHightlightCursorline=1	"高亮NERDTree窗口的当前行
+else
+	if g:load_vimrc_warn 
+		echo "no nerdtree"
+	endif
 endif
 "**********************************************************************

@@ -28,7 +28,7 @@ set confirm		" 在处理未保存或只读文件的时候，弹出确认
 autocmd! bufwritepost .vimrc source %
 autocmd! bufwritepost _vimrc source %
 
-let s:load_vimrc_warn 	= 1
+let g:load_vimrc_warn 	= 1
 "**********************************************************************
 
 "**********************************************************************
@@ -72,7 +72,7 @@ function! s:load_plugin_vimrc(filename)
 	if globpath(l:vimrcs, a:filename) != ""
 		let l:filepathname = l:vimrcs . a:filename
 		execute "source " . l:filepathname
-	elseif s:load_vimrc_warn 
+	elseif g:load_vimrc_warn 
 		echom "load " . a:filename . " failure"
 	endif
 endfunction

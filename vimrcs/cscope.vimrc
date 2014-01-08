@@ -40,5 +40,9 @@ if has ("cscope")
 	nmap <C-Space><C-Space>i /:vert scs find i <C-R>=expand("<cfile>")<CR><CR>
 	nmap <C-Space><C-Space>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
+else
+	if g:load_vimrc_warn 
+		echo "no cscope"
+	endif
 endif
 "**********************************************************************

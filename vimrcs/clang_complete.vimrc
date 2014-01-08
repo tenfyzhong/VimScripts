@@ -11,5 +11,9 @@ if g:plugin_exist("clang_complete")
 	let g:clang_use_library=1
 	let g:clang_use_options='-stdlib=libc++ -std=c++11'
 	nnoremap <leader>gc :!~/.vim/bin/generate_clang_complete.sh<cr> 
+else
+	if g:load_vimrc_warn 
+		echo "no clang_complete"
+	endif
 endif
 "**********************************************************************
