@@ -106,4 +106,5 @@ call s:load_plugin_vimrc("cscope.vimrc")
 call s:load_plugin_vimrc("ctrlp.vim.vimrc")
 "call s:load_plugin_vimrc("neocomplcache.vim.vimrc")
 call s:load_plugin_vimrc("vim-fugitive.vimrc")
+call s:load_plugin_vimrc("TagHighlight.vimrc")
 "**********************************************************************
