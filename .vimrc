@@ -107,5 +107,5 @@ call s:load_plugin_vimrc("ctrlp.vim.vimrc")
 "call s:load_plugin_vimrc("neocomplcache.vim.vimrc")
 call s:load_plugin_vimrc("vim-fugitive.vimrc")
 call s:load_plugin_vimrc("TagHighlight.vimrc")
-call s:load_plugin_vimrc("vim-powerline.vimrc")
+"call s:load_plugin_vimrc("vim-powerline.vimrc")
 "**********************************************************************
