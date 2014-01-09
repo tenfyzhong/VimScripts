@@ -15,6 +15,8 @@ bin/generate_clang_complete.sh用于生成c/c++自动补全的.clang_complete文
 在MyselfTemplates下进行编辑。MyselfTemplates不会被git进行跟踪。
 修改完后，运行install.sh进行加载。
 
+neocomplcache和clang_complete会冲突，只能使用一个
+
 需要安装的软件：
 git
 ctags
