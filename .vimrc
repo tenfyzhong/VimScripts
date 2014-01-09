@@ -32,7 +32,7 @@ autocmd FileType *
   \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
   \ endif
 
-let g:load_vimrc_warn 	= 1
+let g:load_vimrc_warn 	= 0
 "**********************************************************************
 
 "**********************************************************************
