@@ -109,4 +109,5 @@ call s:load_plugin_vimrc("vim-fugitive.vimrc")
 call s:load_plugin_vimrc("TagHighlight.vimrc")
 "call s:load_plugin_vimrc("vim-powerline.vimrc")
 "call s:load_plugin_vimrc("YouCompleteMe.vimrc")
+"call s:load_plugin_vimrc("syntastic.vimrc")
 "**********************************************************************
