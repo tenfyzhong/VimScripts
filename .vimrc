@@ -93,7 +93,7 @@ call s:load_plugin_vimrc("vundle.vimrc") 		" 这一句必须先调用
 call s:load_plugin_vimrc("clang_complete.vimrc")
 call s:load_plugin_vimrc("tagbar_or_taglist.vimrc")
 call s:load_plugin_vimrc("ctags.vimrc")
-call s:load_plugin_vimrc("ywvim.vimrc")
+"call s:load_plugin_vimrc("ywvim.vimrc")
 call s:load_plugin_vimrc("winmanager.vimrc")
 call s:load_plugin_vimrc("a.vim.vimrc")
 call s:load_plugin_vimrc("c.vim.vimrc")

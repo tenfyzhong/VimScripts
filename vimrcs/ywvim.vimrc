@@ -3,15 +3,7 @@
 Bundle 'vim-scripts/ywvim'
 if g:plugin_exist("ywvim")
 	" echom "ywvim script"
-	let g:ywvim_ims=[ 
-		\['wb', '五笔', 'wubi.ywvim'], 
-		\['py', '拼音', 'pinyin.ywvim'], 
-		\['cj', '仓颉', 'cangjie.ywvim'], 
-		\['wb98', '五笔98', 'wubi98.ywvim'], 
-		\['zm', '郑码', 'zhengma.ywvim'], 
-		\['zy', '注音', 'zhuyin.ywvim'], 
-		\['ar30', '行列', 'array30.ywvim'], 
-		\]
+	let g:ywvim_ims=[['wb', '五笔', 'wubi.ywvim'],['py', '拼音', 'pinyin.ywvim']]
 
 	let g:ywvim_py = { 'helpim':'wb', 'gb':0 }
 
