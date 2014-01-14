@@ -4,7 +4,22 @@ if version >= 701
 	Bundle 'majutsushi/tagbar'
 	if g:plugin_exist("tagbar")
 		"echom "tagbar plugin"
+		"
+        function! TagbarStatusFunc(current, sort, fname, ...) abort
+            let colour = a:current ? '%#StatusLine#' : '%#StatusLineNC#'
+            return colour . '[' . a:sort . '] ' . a:fname
+        endfunction
+		
 		nnoremap <silent><leader>tt :TagbarToggle<CR>
+        " autocmd FileType c,cpp,h,cc,hpp,cxx nested :TagbarOpen
+
+		let g:tagbar_width = 30
+		let g:tagbar_compact = 1
+        let g:tagbar_show_linenumbers = 1
+        let g:tagbar_status_func = 'TagbarStatusFunc'
+        let g:tagbar_show_visibility = 1
+        let g:tagbar_iconchars = ['▸', '▾']
+
 	else
 		if g:load_vimrc_warn 
 			echo "no tagbar and taglist"
