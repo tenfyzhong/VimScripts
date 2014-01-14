@@ -32,7 +32,7 @@ autocmd FileType *
   \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
   \ endif
 
-let g:load_vimrc_warn 	= 0
+let g:echo_plugin 		= 0
 "**********************************************************************
 
 "**********************************************************************
@@ -70,6 +70,7 @@ set smartcase	" 有一个或以上大写字母时仍大小写敏感
 
 "**********************************************************************
 " 函数
+" 加载插件脚本
 function! s:load_plugin_vimrc(filename)
 	let l:vimrcs = "~/.vim/vimrcs/"
 
@@ -81,33 +82,61 @@ function! s:load_plugin_vimrc(filename)
 	endif
 endfunction
 
+" 判断bundle管理的插件是否存在
 function! g:plugin_exist(plugin_name)
 	let l:bundle_path 		= "~/.vim/bundle/"
-	return globpath(l:bundle_path, a:plugin_name) != ""
+	if globpath(l:bundle_path, a:plugin_name) != ""
+		call g:echo_plugin_message(a:plugin_name, 1)
+		return 1
+	else
+		call g:echo_plugin_message(a:plugin_name, 0)
+		return 0
+	endif
+endfunction
+
+" 输出加载插件信息
+" 不调用g:plugin_exist，不会进行输出控制信息
+" 要调用g:echo_plugin_message输出
+function! g:echo_plugin_message(message, success)
+	if g:echo_plugin
+		if a:success
+			echom "load " . a:message . " success"
+		else
+			echom "load " . a:message . " fail"
+		endif
+	endif
 endfunction
 "**********************************************************************
 
 "**********************************************************************
 " 调用插件
-call s:load_plugin_vimrc("vundle.vimrc") 		" 这一句必须先调用
-call s:load_plugin_vimrc("clang_complete.vimrc")
-call s:load_plugin_vimrc("tagbar_or_taglist.vimrc")
-call s:load_plugin_vimrc("ctags.vimrc")
-"call s:load_plugin_vimrc("ywvim.vimrc")
-call s:load_plugin_vimrc("winmanager.vimrc")
-call s:load_plugin_vimrc("a.vim.vimrc")
-call s:load_plugin_vimrc("c.vim.vimrc")
-call s:load_plugin_vimrc("nerdtree.vimrc")
-call s:load_plugin_vimrc("FindMate.vimrc")
-call s:load_plugin_vimrc("minibufexpl.vim.vimrc")
-call s:load_plugin_vimrc("grep.vim.vimrc")
-call s:load_plugin_vimrc("supertab.vimrc")
-call s:load_plugin_vimrc("cscope.vimrc")
-call s:load_plugin_vimrc("ctrlp.vim.vimrc")
-"call s:load_plugin_vimrc("neocomplcache.vim.vimrc")
-call s:load_plugin_vimrc("vim-fugitive.vimrc")
-call s:load_plugin_vimrc("TagHighlight.vimrc")
-"call s:load_plugin_vimrc("vim-powerline.vimrc")
-"call s:load_plugin_vimrc("YouCompleteMe.vimrc")
-"call s:load_plugin_vimrc("syntastic.vimrc")
+
+" vundle必须放在第0位
+let g:vimrc_name_list = [
+	\ 'vundle.vimrc', 				
+	\ 'clang_complete.vimrc',
+	\ 'tagbar_or_taglist.vimrc',
+	\ 'ctags.vimrc',
+	\ 'winmanager.vimrc',
+	\ 'a.vim.vimrc',
+	\ 'c.vim.vimrc',
+	\ 'nerdtree.vimrc',
+	\ 'FindMate.vimrc',
+	\ 'minibufexpl.vim.vimrc',
+	\ 'grep.vim.vimrc',
+	\ 'supertab.vimrc',
+	\ 'cscope.vimrc',
+	\ 'ctrlp.vim.vimrc',
+	\ 'vim-fugitive.vimrc',
+	\ 'TagHighlight.vimrc',
+	\	]
+"	\ 'ywvim.vimrc',
+"	\ 'neocomplcache.vim.vimrc',
+"	\ 'vim-powerline.vimrc',
+"	\ 'YouCompleteMe.vimrc',
+"	\ 'syntastic.vimrc',
+
+for vimrc_name in g:vimrc_name_list
+	call s:load_plugin_vimrc(vimrc_name)
+endfor
 "**********************************************************************

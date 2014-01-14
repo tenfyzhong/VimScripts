@@ -3,8 +3,6 @@
 if version >= 701
 	Bundle 'majutsushi/tagbar'
 	if g:plugin_exist("tagbar")
-		"echom "tagbar plugin"
-		"
         function! TagbarStatusFunc(current, sort, fname, ...) abort
             let colour = a:current ? '%#StatusLine#' : '%#StatusLineNC#'
             return colour . '[' . a:sort . '] ' . a:fname
@@ -21,15 +19,10 @@ if version >= 701
         let g:tagbar_show_visibility = 1
         let g:tagbar_iconchars = ['▸', '▾']
 
-	else
-		if g:load_vimrc_warn 
-			echo "no tagbar and taglist"
-		endif
 	endif
 else
 	Bundle 'vim-scripts/taglist.vim'
 	if g:plugin_exist("taglist")
-		"echom "taglist plugin"
 		let Tlist_Ctags_Cmd='ctags'
 		let Tlist_Show_One_File=1
 		let Tlist_OnlyWindow=1
@@ -50,10 +43,6 @@ else
 		let Tlist_Use_Horiz_Window=0
 	
 		map <silent><leader>tt :TlistToggle<cr>
-	else
-		if g:load_vimrc_warn 
-			echo "no tagbar and taglist"
-		endif
 	endif
 endif
 "**********************************************************************

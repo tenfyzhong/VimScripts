@@ -1,7 +1,7 @@
 "**********************************************************************
 " cscope
 if has ("cscope")
-	" echom "cscope plugin"
+	call g:echo_plugin_message("cscope", 1)
 	set cscopetag " 使支持用Ctrl+]和Ctrl+t 快捷键在代码间跳来跳去
 	set csto=0
 	set cst
@@ -41,8 +41,6 @@ if has ("cscope")
 	nmap <C-Space><C-Space>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 else
-	if g:load_vimrc_warn 
-		echo "no cscope"
-	endif
+	call g:echo_plugin_message("cscope", 0)
 endif
 "**********************************************************************

@@ -1,7 +1,6 @@
 "**********************************************************************
 Bundle 'fholgado/minibufexpl.vim'
 if g:plugin_exist("minibufexpl.vim")
-	" echom "minibufexpl plugin"
 	let g:miniBufExplorerAutoStart 	= 1
 	let g:miniBufExplBuffersNeeded 	= 1
 	let g:miniBufExplCycleArround 	= 1
@@ -11,9 +10,5 @@ if g:plugin_exist("minibufexpl.vim")
 	nnoremap <Leader>mbc :MBEClose<cr>
 	nnoremap <Leader>mbt :MBEToggle<cr>
 	nnoremap <c-k> 5<c-w>k<cr>
-else
-	if g:load_vimrc_warn 
-		echo "no minibufexpl"
-	endif
 endif
 "**********************************************************************

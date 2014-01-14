@@ -1,7 +1,6 @@
 "**********************************************************************
 Bundle 'winmanager'
 if g:plugin_exist("winmanager")
-	" echom "winmanager plugin"
     "let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
 	let g:persitentBehaviour=0
 	let g:winManagerWidth=25
@@ -21,9 +20,5 @@ if g:plugin_exist("winmanager")
 
 	"let loaded_winmanager 	= 1
 	nnoremap <leader>wm :WMToggle<cr>
-else
-	if g:load_vimrc_warn 
-		echo "no winmanager"
-	endif
 endif
 "**********************************************************************

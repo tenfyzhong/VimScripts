@@ -2,7 +2,6 @@
 " The NERD tree 以树形结构浏览文件夹中的文件
 Bundle 'scrooloose/nerdtree'
 if g:plugin_exist("nerdtree")
-	" echom "nerdtree plugin"
 	nmap <silent><leader>nt :NERDTreeToggle<cr>
 	let NERDChristmasTree = 1
 	let NERDTreeIgnore = ['\.vim$', '\.o$', '\.swp$', '\.bak$', '\~$'] " 不显示指定的内容
@@ -15,9 +14,5 @@ if g:plugin_exist("nerdtree")
 	let NERDTreeHightlightCursorline = 1	"高亮NERDTree窗口的当前行
 	let NERDTreeShowLineNumbers = 1
 	let NERDTreeDirArrows = 1
-else
-	if g:load_vimrc_warn 
-		echo "no nerdtree"
-	endif
 endif
 "**********************************************************************

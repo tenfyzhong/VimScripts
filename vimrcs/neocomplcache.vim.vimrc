@@ -1,6 +1,5 @@
 Bundle 'Shougo/neocomplcache.vim'
 if g:plugin_exist("neocomplcache.vim")
-	"echom "neocomplcache plugin"
 	" Disable AutoComplPop.
 	let g:acp_enableAtStartup = 0
 	" Use neocomplcache.
@@ -17,8 +16,4 @@ if g:plugin_exist("neocomplcache.vim")
 	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-else
-	if g:load_vimrc_warn
-		echo " no neocomplcache.vim"
-	endif
 endif

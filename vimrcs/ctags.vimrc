@@ -1,13 +1,11 @@
 "**********************************************************************
 " ctags
 if executable('ctags')
-	" echom "ctags plugin"
+	call g:echo_plugin_message('ctags', 1)
 	set tags=tags
 	nmap <silent><leader>tg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<cr>
 else
-	if g:load_vimrc_warn 
-		echo "no ctags"
-	endif
+	call g:echo_plugin_message('ctags', 0)
 endif
 "**********************************************************************
 
