@@ -24,25 +24,11 @@ set ruler		" 显示标尺
 set showmode	" 显示输入的命令
 set confirm		" 在处理未保存或只读文件的时候，弹出确认
 
-" vimrc文件修改之后自动加载
-autocmd! bufwritepost *vimrc source %
-autocmd FileType *
-  \ if &omnifunc != '' |
-  \   call SuperTabChain(&omnifunc, "<c-p>") |
-  \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
-  \ endif
+set hlsearch	" 高亮search命中的文本
+set incsearch	" 随着键入即时搜索
+set ignorecase	" 搜索时忽略大小写
+set smartcase	" 有一个或以上大写字母时仍大小写敏感
 
-let g:echo_plugin 		= 0
-"**********************************************************************
-
-"**********************************************************************
-" 全局快捷键
-nnoremap <leader>ev :split $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <F12> <C-w>w	" F12 窗口切换
-"**********************************************************************
-
-"**********************************************************************
 " 显示相关
 "set cursorcolumn		" 高亮当前列
 "set cursorline			" 高亮当前行
@@ -61,11 +47,30 @@ filetype on					" 侦测文件类型
 filetype plugin on			" 开启文件识别
 filetype indent on			" 针对不同的文件类型采用不同的缩进格式
 filetype plugin indent on	" 启动自动补全
+"**********************************************************************
 
-set hlsearch	" 高亮search命中的文本
-set incsearch	" 随着键入即时搜索
-set ignorecase	" 搜索时忽略大小写
-set smartcase	" 有一个或以上大写字母时仍大小写敏感
+"**********************************************************************
+" 全局快捷键
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <F12> <C-w>w	" F12 窗口切换
+"**********************************************************************
+
+"**********************************************************************
+" autocmd
+" vimrc文件修改之后自动加载
+autocmd! bufwritepost *vimrc source %
+
+autocmd FileType *
+  \ if &omnifunc != '' |
+  \   call SuperTabChain(&omnifunc, "<c-p>") |
+  \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+  \ endif
+"**********************************************************************
+
+"**********************************************************************
+" 全局变量
+let g:echo_plugin 		= 0
 "**********************************************************************
 
 "**********************************************************************
@@ -112,7 +117,7 @@ endfunction
 " 调用插件
 
 " vundle必须放在第0位
-let g:vimrc_name_list = [
+let s:vimrc_name_list = [
 	\ 'vundle.vimrc', 				
 	\ 'clang_complete.vimrc',
 	\ 'tagbar_or_taglist.vimrc',
@@ -136,7 +141,7 @@ let g:vimrc_name_list = [
 "	\ 'YouCompleteMe.vimrc',
 "	\ 'syntastic.vimrc',
 
-for vimrc_name in g:vimrc_name_list
+for vimrc_name in s:vimrc_name_list
 	call s:load_plugin_vimrc(vimrc_name)
 endfor
 "**********************************************************************
