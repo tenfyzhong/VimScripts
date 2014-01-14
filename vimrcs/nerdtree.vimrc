@@ -3,7 +3,7 @@
 Bundle 'scrooloose/nerdtree'
 if g:plugin_exist("nerdtree")
 	" echom "nerdtree plugin"
-	nmap <silent><leader>ntt :NERDTreeToggle<cr>
+	nmap <silent><leader>nt :NERDTreeToggle<cr>
 	let NERDChristmasTree = 1
 	let NERDTreeIgnore = ['\.vim$', '\.o$', '\.swp$', '\.bak$', '\~$'] " 不显示指定的内容
 	let NERDTreeShowHidden = 0 "	不显示隐藏文件
