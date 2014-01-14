@@ -9,7 +9,7 @@ if g:plugin_exist("nerdtree")
 	let NERDTreeShowHidden = 0 "	不显示隐藏文件
 	let NERDTreeSortOrder = ['\/$', '*', '\.h$', '\.cpp$', '\.c$']	" 排序
 	let NERDTreeCaseSensitiveSort = 0	" 不分大小写排序
-	let NERDTreeWinsize = 30
+	let NERDTreeWinSize = 25
 	let NERDTreeShowBookmarks = 1
 	let NERDTreeQuitOnOpen = 0	" 打开文件后，关闭NERDTree窗口
 	let NERDTreeHightlightCursorline = 1	"高亮NERDTree窗口的当前行

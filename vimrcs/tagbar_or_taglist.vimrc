@@ -10,10 +10,11 @@ if version >= 701
             return colour . '[' . a:sort . '] ' . a:fname
         endfunction
 		
-		nnoremap <silent><leader>tt :TagbarToggle<CR>
+		nnoremap <leader>tt :TagbarToggle<CR>
+		nnoremap <leader>ta :NERDTreeToggle<cr><c-w>l:TagbarToggle<CR><c-w>j
         " autocmd FileType c,cpp,h,cc,hpp,cxx nested :TagbarOpen
 
-		let g:tagbar_width = 30
+		let g:tagbar_width = 25
 		let g:tagbar_compact = 1
         let g:tagbar_show_linenumbers = 1
         let g:tagbar_status_func = 'TagbarStatusFunc'

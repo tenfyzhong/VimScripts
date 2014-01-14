@@ -10,6 +10,7 @@ if g:plugin_exist("minibufexpl.vim")
 	nnoremap <Leader>mbe :MBEOpen<cr>
 	nnoremap <Leader>mbc :MBEClose<cr>
 	nnoremap <Leader>mbt :MBEToggle<cr>
+	nnoremap <c-k> 5<c-w>k<cr>
 else
 	if g:load_vimrc_warn 
 		echo "no minibufexpl"
