@@ -6,9 +6,10 @@ if g:plugin_exist("minibufexpl.vim")
 	let g:miniBufExplCycleArround 	= 1
 	let g:miniBufExplUseSingleClick = 1
 
-	nnoremap <Leader>mbe :MBEOpen<cr>
-	nnoremap <Leader>mbc :MBEClose<cr>
-	nnoremap <Leader>mbt :MBEToggle<cr>
-	nnoremap <c-k> 5<c-w>k<cr>
+	nnoremap <Leader>mbo 	:MBEOpen<cr>
+	nnoremap <Leader>mbc 	:MBEClose<cr>
+	nnoremap <Leader>mbt 	:MBEToggle<cr>
+	nnoremap <c-k> 			:MBEbn<cr>
+	nnoremap <c-j> 			:MBEbp<cr>
 endif
 "**********************************************************************
