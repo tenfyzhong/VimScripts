@@ -61,11 +61,6 @@ nnoremap <F12> <C-w>w	" F12 窗口切换
 " vimrc文件修改之后自动加载
 autocmd! bufwritepost *vimrc source %
 
-autocmd FileType *
-  \ if &omnifunc != '' |
-  \   call SuperTabChain(&omnifunc, "<c-p>") |
-  \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
-  \ endif
 "**********************************************************************
 
 "**********************************************************************
