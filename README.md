@@ -79,7 +79,7 @@ cscope(可选，没有则不能使用cscope)
 <leader>mbc: 	关闭minibuf窗口
 <leader>mbt: 	触发minibuf窗口
 <c-k>: 			minibuf中的下一个文件
-<c-j>: 			minibuf中的上一个文件
+<c-s-k>: 			minibuf中的上一个文件
 
 [nerdtree]
 <leader>nt: 	触发nerdtree
@@ -93,3 +93,9 @@ cscope(可选，没有则不能使用cscope)
 
 [winmanager]
 <leader>wm: 	触发winmanager
+
+[quickfix]
+<a-k>: 			上一条错误警告处
+<a-j>: 			下一条错误警告处
+<leader>qc 		关闭quickfix
+<leader>qo 		打开quckfix
