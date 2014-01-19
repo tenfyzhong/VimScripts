@@ -169,6 +169,7 @@ call g:bundle_all_plugin(s:bundle_list)
 let s:vimrc_name_list = [
 	\ 'ctags.vimrc',
 	\ 'cscope.vimrc',
+	\ 'quickfix.vimrc',
 	\	]
 
 for vimrc_name in s:vimrc_name_list
