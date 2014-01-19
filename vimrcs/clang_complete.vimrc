@@ -1,5 +1,5 @@
 "**********************************************************************
-Bundle 'Rip-Rip/clang_complete'
+"Bundle 'Rip-Rip/clang_complete'
 if g:plugin_exist("clang_complete")
 	let g:clang_auto_select=1	" 0不选择，1选择第一项，2选择第一项并插入
 	let g:clang_trailing_place_holder=1

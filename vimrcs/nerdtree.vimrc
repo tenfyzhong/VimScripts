@@ -1,6 +1,6 @@
 "**********************************************************************
 " The NERD tree 以树形结构浏览文件夹中的文件
-Bundle 'scrooloose/nerdtree'
+"Bundle 'scrooloose/nerdtree'
 if g:plugin_exist("nerdtree")
 	nmap <silent><leader>nt :NERDTreeToggle<cr>
 	let NERDChristmasTree = 1

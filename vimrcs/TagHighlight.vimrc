@@ -1,5 +1,5 @@
 "**********************************************************************
-Bundle 'magic-dot-files/TagHighlight'
+"Bundle 'magic-dot-files/TagHighlight'
 if g:plugin_exist("TagHighlight")
 endif
 "**********************************************************************

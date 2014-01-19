@@ -1,5 +1,5 @@
 "**********************************************************************
-Bundle 'a.vim'
+"Bundle 'a.vim'
 if g:plugin_exist("a.vim")
 	nnoremap <leader>as :A<cr>
 endif

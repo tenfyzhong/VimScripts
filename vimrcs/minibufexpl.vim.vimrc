@@ -1,5 +1,5 @@
 "**********************************************************************
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
 if g:plugin_exist("minibufexpl.vim")
 	let g:miniBufExplorerAutoStart 	= 1
 	let g:miniBufExplBuffersNeeded 	= 1

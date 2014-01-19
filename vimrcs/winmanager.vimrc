@@ -1,5 +1,5 @@
 "**********************************************************************
-Bundle 'winmanager'
+"Bundle 'winmanager'
 if g:plugin_exist("winmanager")
     "let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
 	let g:persitentBehaviour=0

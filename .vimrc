@@ -73,7 +73,7 @@ autocmd! bufwritepost *vimrc source %
 
 "**********************************************************************
 " 全局变量
-let g:echo_plugin 		= 0
+let g:load_warn 		= 0
 "**********************************************************************
 
 "**********************************************************************
@@ -85,8 +85,8 @@ function! s:load_plugin_vimrc(filename)
 	if globpath(l:vimrcs, a:filename) != ""
 		let l:filepathname = l:vimrcs . a:filename
 		execute "source " . l:filepathname
-	elseif g:load_vimrc_warn 
-		echom "load " . a:filename . " failure"
+	elseif g:load_warn
+		echom a:filename . " no exist"
 	endif
 endfunction
 
@@ -102,11 +102,23 @@ function! g:plugin_exist(plugin_name)
 	endif
 endfunction
 
+function! g:bundle_all_plugin(plugins)
+	if g:plugin_exist('vundle')
+		for p in a:plugins
+		"	Bundle p
+			execute "Bundle " . "'" . p . "'"
+			let l:vimrc_name = split(p, "/")[-1] . ".vimrc"
+			"echo l:vimrc_name
+			call s:load_plugin_vimrc(l:vimrc_name)	
+		endfor
+	endif
+endfunction
+
 " 输出加载插件信息
 " 不调用g:plugin_exist，不会进行输出控制信息
 " 要调用g:echo_plugin_message输出
 function! g:echo_plugin_message(message, success)
-	if g:echo_plugin
+	if g:load_warn
 		if a:success
 			echom "load " . a:message . " success"
 		else
@@ -118,31 +130,46 @@ endfunction
 
 "**********************************************************************
 " 调用插件
+" 第一步加载vundle
+" 第二步加载其他插件
+" 第三步加载没有插件的配置
+" 注意：插件的配置必须以插件名加.vimrc命名
+" 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
+call s:load_plugin_vimrc('vundle.vimrc')
 
-" vundle必须放在第0位
-let s:vimrc_name_list = [
-	\ 'vundle.vimrc', 				
-	\ 'clang_complete.vimrc',
-	\ 'tagbar_or_taglist.vimrc',
-	\ 'ctags.vimrc',
-	\ 'winmanager.vimrc',
-	\ 'a.vim.vimrc',
-	\ 'c.vim.vimrc',
-	\ 'nerdtree.vimrc',
-	\ 'FindMate.vimrc',
-	\ 'minibufexpl.vim.vimrc',
-	\ 'grep.vim.vimrc',
-	\ 'supertab.vimrc',
-	\ 'cscope.vimrc',
-	\ 'ctrlp.vim.vimrc',
-	\ 'vim-fugitive.vimrc',
-	\ 'TagHighlight.vimrc',
-	\	]
+let s:bundle_list = [
+	\ 'Rip-Rip/clang_complete',
+	\ 'winmanager',
+	\ 'a.vim',
+	\ 'c.vim',
+	\ 'scrooloose/nerdtree',
+	\ 'FindMate',
+	\ 'fholgado/minibufexpl.vim',
+	\ 'vim-scripts/grep.vim',
+	\ 'ervandew/supertab',
+	\ 'kien/ctrlp.vim',
+	\ 'tpope/vim-fugitive',
+	\ 'magic-dot-files/TagHighlight'
+	\]
 "	\ 'ywvim.vimrc',
 "	\ 'neocomplcache.vim.vimrc',
 "	\ 'vim-powerline.vimrc',
 "	\ 'YouCompleteMe.vimrc',
 "	\ 'syntastic.vimrc',
+
+if version >= 701
+	call add(s:bundle_list, 'majutsushi/tagbar')
+else
+	call add(s:bundle_list, 'vim-scripts/taglist.vim')
+endif
+
+call g:bundle_all_plugin(s:bundle_list)
+
+
+let s:vimrc_name_list = [
+	\ 'ctags.vimrc',
+	\ 'cscope.vimrc',
+	\	]
 
 for vimrc_name in s:vimrc_name_list
 	call s:load_plugin_vimrc(vimrc_name)
