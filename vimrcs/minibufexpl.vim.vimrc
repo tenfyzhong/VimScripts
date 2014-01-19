@@ -10,6 +10,6 @@ if g:plugin_exist("minibufexpl.vim")
 	nnoremap <Leader>mbc 	:MBEClose<cr>
 	nnoremap <Leader>mbt 	:MBEToggle<cr>
 	nnoremap <c-k> 			:MBEbn<cr>
-	nnoremap <c-j> 			:MBEbp<cr>
+	nnoremap <c-s-k>		:MBEbp<cr>
 endif
 "**********************************************************************
