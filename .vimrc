@@ -50,18 +50,24 @@ filetype plugin indent on	" 启动自动补全
 "**********************************************************************
 
 "**********************************************************************
+" 全局变量
+let g:load_warn 		= 0
+let mapleader 			= ","
+"**********************************************************************
+
+"**********************************************************************
 " 全局快捷键
-nnoremap <leader>ev 	:split $MYVIMRC<cr>
-nnoremap <leader>sv 	:source $MYVIMRC<cr>
-nnoremap <F12> 			<C-w>w	" F12 窗口切换
-nnoremap <leader>h 		<c-w>h
-nnoremap <leader>j 		<c-w>j
-nnoremap <leader>k 		<c-w>k
-nnoremap <leader>l 		<c-w>l
-nnoremap <c-left> 		<c-w>h
-nnoremap <c-down> 		<c-w>j
-nnoremap <c-up> 		<c-w>k
-nnoremap <c-right> 		<c-w>l
+nnoremap <silent><leader>ev 	:split $MYVIMRC<cr>
+nnoremap <silent><leader>sv 	:source $MYVIMRC<cr>
+nnoremap <F12> 					<C-w>w	" F12 窗口切换
+nnoremap <leader>h 				<c-w>h
+nnoremap <leader>j 				<c-w>j
+nnoremap <leader>k 				<c-w>k
+nnoremap <leader>l 				<c-w>l
+nnoremap <c-left> 				<c-w>h
+nnoremap <c-down> 				<c-w>j
+nnoremap <c-up> 				<c-w>k
+nnoremap <c-right> 				<c-w>l
 "**********************************************************************
 
 "**********************************************************************
@@ -71,10 +77,6 @@ autocmd! bufwritepost *vimrc source %
 
 "**********************************************************************
 
-"**********************************************************************
-" 全局变量
-let g:load_warn 		= 0
-"**********************************************************************
 
 "**********************************************************************
 " 函数

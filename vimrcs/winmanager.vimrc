@@ -19,6 +19,6 @@ if g:plugin_exist("winmanager")
 	endfunction
 
 	"let loaded_winmanager 	= 1
-	nnoremap <leader>wm :WMToggle<cr>
+	nnoremap <silent><leader>wm :WMToggle<cr>
 endif
 "**********************************************************************

@@ -6,6 +6,6 @@ if g:plugin_exist("vundle")
 	" let Vundle manage Vundle
 	Bundle 'gmarik/vundle'
 	
-	nnoremap <leader>bi :BundleInstall<cr>
+	nnoremap <silent><leader>bi :BundleInstall<cr>
 endif
 "**********************************************************************

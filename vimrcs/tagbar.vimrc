@@ -7,8 +7,8 @@ if g:plugin_exist("tagbar")
 		return colour . '[' . a:sort . '] ' . a:fname
 	endfunction
 	
-	nnoremap <leader>tt :TagbarToggle<CR>
-	nnoremap <leader>ta :NERDTreeToggle<cr><c-w>l:TagbarToggle<CR><c-w>j
+	nnoremap <silent><leader>tt :TagbarToggle<CR>
+	nnoremap <silent><leader>ta :NERDTreeToggle<cr><c-w>l:TagbarToggle<CR><c-w>j
 	" autocmd FileType c,cpp,h,cc,hpp,cxx nested :TagbarOpen
 
 	let g:tagbar_width = 25
