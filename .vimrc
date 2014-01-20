@@ -58,7 +58,7 @@ let mapleader 			= ","
 "**********************************************************************
 " 全局快捷键
 nnoremap <silent><leader>ev 	:split $MYVIMRC<cr>
-nnoremap <silent><leader>sv 	:source $MYVIMRC<cr>
+nnoremap <silent><leader>sv 	:source $MYVIMRC<cr>:echo "source .vimrc success"<cr>
 nnoremap <F12> 					<C-w>w	" F12 窗口切换
 nnoremap <leader>h 				<c-w>h
 nnoremap <leader>j 				<c-w>j
