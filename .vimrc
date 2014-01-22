@@ -29,6 +29,8 @@ set incsearch	" 随着键入即时搜索
 set ignorecase	" 搜索时忽略大小写
 set smartcase	" 有一个或以上大写字母时仍大小写敏感
 
+set wildmenu 	" 增加命令行自动补全操作
+
 " 显示相关
 "set cursorcolumn		" 高亮当前列
 "set cursorline			" 高亮当前行
