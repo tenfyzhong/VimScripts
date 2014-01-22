@@ -153,11 +153,11 @@ let s:bundle_list = [
 	\ 'ervandew/supertab',
 	\ 'kien/ctrlp.vim',
 	\ 'tpope/vim-fugitive',
-	\ 'magic-dot-files/TagHighlight'
+	\ 'magic-dot-files/TagHighlight',
 	\]
+"	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
 "	\ 'neocomplcache.vim.vimrc',
-"	\ 'vim-powerline.vimrc',
 "	\ 'YouCompleteMe.vimrc',
 "	\ 'syntastic.vimrc',
 
