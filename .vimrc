@@ -167,6 +167,7 @@ let s:bundle_list = [
 	\ 'kshenoy/vim-signature',
 	\ 'Rykka/colorv.vim',
 	\ 'sjl/gundo.vim',
+	\ 'leshill/vim-json',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
