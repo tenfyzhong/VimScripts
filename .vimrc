@@ -164,6 +164,7 @@ let s:bundle_list = [
 	\ 'Yggdroot/indentLine',
 	\ 'Shougo/unite.vim',
 	\ 'terryma/vim-multiple-cursors',
+	\ 'kshenoy/vim-signature',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
