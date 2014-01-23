@@ -154,6 +154,7 @@ let s:bundle_list = [
 	\ 'kien/ctrlp.vim',
 	\ 'tpope/vim-fugitive',
 	\ 'magic-dot-files/TagHighlight',
+	\ 'vim-scripts/DoxygenToolkit.vim',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
