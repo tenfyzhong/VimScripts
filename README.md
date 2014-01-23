@@ -27,7 +27,7 @@ cscope(可选，没有则不能使用cscope)
 
 
 快捷键绑定
-[global]
+[global : normal]
 <leader>ev: 	水平切分窗口打开.vimrc
 <leader>sv: 	加载.vimrc
 <F12>: 			逆时间切换窗口
@@ -40,13 +40,13 @@ cscope(可选，没有则不能使用cscope)
 <leader>k: 		移到上边窗口
 <leader>l: 		移到右边窗口
 
-[a.vim]
+[a.vim : normal]
 <leader>as: 	在源文件和头文件中切换
 
-[clang_complete]
+[clang_complete : normal]
 <leader>gc: 	在当前目录生成.clang_complete
 
-[cscope]
+[cscope : normal]
 <C-_>s:
 <C-_>g:
 <C-_>c:
@@ -71,31 +71,43 @@ cscope(可选，没有则不能使用cscope)
 <C-Space><C-Space>i:
 <C-Space><C-Space>d:
 
-[ctags]
+[ctags : normal]
 <leader>tg: 	在当前目录生成tags
 
-[minibufexpl.vim]
+[minibufexpl.vim : normal]
 <leader>mbo: 	打开minibuf窗口
 <leader>mbc: 	关闭minibuf窗口
 <leader>mbt: 	触发minibuf窗口
+<leader>mbk: 	minibuf中的下一个文件
+<leader>mbj: 	minibuf中的上一个文件
 <c-k>: 			minibuf中的下一个文件
-<c-s-k>: 			minibuf中的上一个文件
+<c-s-k>: 		minibuf中的上一个文件
 
-[nerdtree]
+[minibufexpl.vim : insert]
+<c-k>: 			minibuf中的下一个文件
+<c-s-k>: 		minibuf中的上一个文件
+
+[nerdtree : normal]
 <leader>nt: 	触发nerdtree
 
-[tagbar or taglist]
+[tagbar or taglist : normal]
 <leader>tt: 	触发tagbar or taglist
 <leader>ta: 	触发tagbar和nerdtree
 
-[vundle.vimrc]
+[vundle.vimrc : normal]
 <leader>bi: 	Bundle安装插件
 
-[winmanager]
+[winmanager : normal]
 <leader>wm: 	触发winmanager
 
-[quickfix]
+[quickfix : normal]
 <leader>qk:		上一条错误警告处
 <leader>qj: 	下一条错误警告处
 <leader>qc:		关闭quickfix
 <leader>qo:		打开quckfix
+
+[Doxygen : normal]
+<leader>dox: 	生成函数和类注释
+
+[Doxygen : insert]
+<leader>dox: 	生成函数和类注释
