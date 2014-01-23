@@ -159,6 +159,7 @@ let s:bundle_list = [
 	\ 'Raimondi/delimitMate',
 	\ 'tpope/vim-surround',
 	\ 'airblade/vim-gitgutter',
+	\ 'gregsexton/gitv',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
