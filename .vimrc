@@ -156,6 +156,7 @@ let s:bundle_list = [
 	\ 'magic-dot-files/TagHighlight',
 	\ 'vim-scripts/DoxygenToolkit.vim',
 	\ 'vim-jp/cpp-vim',
+	\ 'Raimondi/delimitMate',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
