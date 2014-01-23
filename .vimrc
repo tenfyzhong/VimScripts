@@ -157,6 +157,7 @@ let s:bundle_list = [
 	\ 'vim-scripts/DoxygenToolkit.vim',
 	\ 'vim-jp/cpp-vim',
 	\ 'Raimondi/delimitMate',
+	\ 'tpope/vim-surround',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
