@@ -162,6 +162,7 @@ let s:bundle_list = [
 	\ 'gregsexton/gitv',
 	\ 'tpope/vim-commentary',
 	\ 'Yggdroot/indentLine',
+	\ 'Shougo/unite.vim',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
