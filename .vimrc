@@ -163,6 +163,7 @@ let s:bundle_list = [
 	\ 'tpope/vim-commentary',
 	\ 'Yggdroot/indentLine',
 	\ 'Shougo/unite.vim',
+	\ 'terryma/vim-multiple-cursors',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
