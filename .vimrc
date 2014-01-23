@@ -158,7 +158,6 @@ let s:bundle_list = [
 	\ 'vim-jp/cpp-vim',
 	\ 'Raimondi/delimitMate',
 	\ 'tpope/vim-surround',
-	\ 'airblade/vim-gitgutter',
 	\ 'gregsexton/gitv',
 	\ 'tpope/vim-commentary',
 	\ 'Yggdroot/indentLine',
@@ -169,6 +168,7 @@ let s:bundle_list = [
 	\ 'sjl/gundo.vim',
 	\ 'leshill/vim-json',
 	\]
+"	\ 'airblade/vim-gitgutter',
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
 "	\ 'neocomplcache.vim.vimrc',
