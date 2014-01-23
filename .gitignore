@@ -2,6 +2,7 @@
 *.swp
 bundle
 bundle/
+templates/csupport/Templates
 Myself*
 !MyselfInstall.sh
 test/
