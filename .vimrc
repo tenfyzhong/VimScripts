@@ -160,6 +160,7 @@ let s:bundle_list = [
 	\ 'tpope/vim-surround',
 	\ 'airblade/vim-gitgutter',
 	\ 'gregsexton/gitv',
+	\ 'tpope/vim-commentary',
 	\]
 "	\ 'Lokaltog/powerline'
 "	\ 'ywvim.vimrc',
