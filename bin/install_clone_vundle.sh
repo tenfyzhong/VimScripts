@@ -1,16 +1,18 @@
 #!/bin/sh
 
 # 克隆vundle版本库
-if ! [ -e ~/.vim/bundle/vundle/.git ]; then
-	if [ -e ~/.vim/bundle/vundle ]; then
-		rm -rf ~/.vim/bundle/vundle
+VUNDLE=~/.vim/bundle/vundle
+if ! [ -e $VUNDLE/.git ]; then
+	echo $VUNDLE/.git
+	if [ -e $VUNDLE ]; then
+		rm -rf $VUNDLE
 	fi
 
 	echo "克隆vundle"
-	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle 
+	git clone https://github.com/gmarik/vundle.git $VUNDLE
 
 else
-	cd ~/.vim/bundle/vundle/
+	cd $VUNDLE
 	echo "拉回vundle"
 	git pull
 	cd -

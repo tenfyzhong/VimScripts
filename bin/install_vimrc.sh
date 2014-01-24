@@ -1,8 +1,10 @@
 #!/bin/sh
 
 # create .vimrc
-if  ! [ -L ~/.vimrc ] || ! [ ~/.vimrc -ef ~/.vim/.vimrc ] ; then
+BASEVIMRC=~/.vim/.vimrc
+VIMRC=~/.vimrc
+if  ! [ -L $VIMRC ] || ! [ $VIMRC -ef $BASEVIMRC ] ; then
 	echo "创建.vimrc"
-	rm -rf ~/.vimrc
-	ln -s ~/.vim/.vimrc ~/.vimrc
+	rm -f $VIMRC
+	ln -s $BASEVIMRC $VIMRC
 fi

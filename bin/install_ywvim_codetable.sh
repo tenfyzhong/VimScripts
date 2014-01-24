@@ -1,11 +1,14 @@
 #!/bin/sh
 
-if [ -d ~/.vim/bundle/ywvim ]; then
-	if [ -d ~/.vim/templates/ywvim ]; then
-		if ! [ -L ~/.vim/bundle/ywvim/keymap/ywvim ] || ! [ ~/.vim/templates/ywvim -ef ~/.vim/bundle/ywvim/keymap/ywvim ]; then
-			rm -rf ~/.vim/bundle/ywvim/keymap/ywvim
+YWVIMROOT=~/.vim/bundle/ywvim
+BASEYWVIMMAP=~/.vim/templates/ywvim
+TARGETYWVIMMAP=$YWVIMROOT/keymap/ywvim
+if [ -d $YWVIMROOT ]; then
+	if [ -d $BASEYWVIMMAP ]; then
+		if ! [ -L $TARGETYWVIMMAP ] || ! [ $BASEYWVIMMAP -ef $TARGETYWVIMMAP ]; then
+			rm -rf $TARGETYWVIMMAP
 			echo "注册ywvim码表"
-			ln -s ~/.vim/templates/ywvim ~/.vim/bundle/ywvim/keymap/ywvim
+			ln -s $BASEYWVIMMAP $TARGETYWVIMMAP
 		fi
 	fi
 fi
