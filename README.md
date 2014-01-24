@@ -111,3 +111,6 @@ cscope(可选，没有则不能使用cscope)
 
 [Doxygen : insert]
 <leader>dox: 	生成函数和类注释
+
+[Gundo : normal]
+<leader>gu: 	GundoToogle
