@@ -167,6 +167,13 @@ let s:bundle_list = [
 	\ 'Rykka/colorv.vim',
 	\ 'sjl/gundo.vim',
 	\ 'leshill/vim-json',
+	\ 'SirVer/ultisnips',
+	\ 'othree/xml.vim',
+	\ 'itchyny/calendar.vim',
+	\ 'vimwiki/vimwiki',
+	\ 'vim-scripts/VimRepress',
+	\ 'vim-scripts/VOoM',
+	\ 'vim-scripts/CmdlineComplete',
 	\]
 "	\ 'airblade/vim-gitgutter',
 "	\ 'Lokaltog/powerline'
