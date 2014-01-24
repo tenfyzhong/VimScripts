@@ -174,6 +174,7 @@ let s:bundle_list = [
 	\ 'vim-scripts/VimRepress',
 	\ 'vim-scripts/VOoM',
 	\ 'vim-scripts/CmdlineComplete',
+	\ 'DataWraith/auto_mkdir',
 	\]
 "	\ 'airblade/vim-gitgutter',
 "	\ 'Lokaltog/powerline'
