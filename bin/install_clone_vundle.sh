@@ -3,7 +3,6 @@
 # 克隆vundle版本库
 VUNDLE=~/.vim/bundle/vundle
 if ! [ -e $VUNDLE/.git ]; then
-	echo $VUNDLE/.git
 	if [ -e $VUNDLE ]; then
 		rm -rf $VUNDLE
 	fi
