@@ -39,9 +39,9 @@ function! g:echo_null_message(msg)
 endfunction
 
 let g:Warning_func 	= function('g:echo_warning_message')
-let g:Error_func 		= function('g:echo_error_message')
+let g:Error_func 	= function('g:echo_error_message')
 let g:Success_func 	= function('g:echo_success_message')
-let g:Null_func 		= function('g:echo_null_message')
+let g:Null_func 	= function('g:echo_null_message')
 
 " 加载插件脚本
 function! g:source_vimrc(vimrc_name, echo_func)
