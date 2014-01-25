@@ -1,17 +1,8 @@
 "**********************************************************************
 " 函数
 " 多次source此文件时，将之前定义的函数删除
-if exists("FUNCTION_VIMRC_load")
-	delfunction g:echo_plugin_message
-	delfunction g:bundle_all_plugin
-	delfunction g:plugin_exist
-	delfunction g:load_plugin_vimrc
-	delfunction g:echo_success_message
-	delfunction g:echo_error_message
-	delfunction g:echo_warning_message
-	delfunction g:set_variables_default
-endif
-
+if !exists("FUNCTION_VIMRC")
+let FUNCTION_VIMRC = 1
 
 " 对未定义的变量设置默认值
 function! g:set_variables_default(name, value)
@@ -45,52 +36,74 @@ function! g:echo_success_message(msg)
 	endif
 endfunction
 
-" 加载插件脚本
-function! g:load_plugin_vimrc(filename)
-	let l:vimrcs = "~/.vim/vimrcs/"
+" 不输出信息的输出函数
+function! g:echo_null_message(msg)
+endfunction
 
-	if globpath(l:vimrcs, a:filename) != ""
-		let l:filepathname = l:vimrcs . a:filename
-		execute "source " . l:filepathname
+let g:Warning_func 	= function('g:echo_warning_message')
+let g:Error_func 		= function('g:echo_error_message')
+let g:Success_func 	= function('g:echo_success_message')
+let g:Null_func 		= function('g:echo_null_message')
+
+" 加载插件脚本
+function! g:source_vimrc(vimrc_name, echo_func)
+	let l:vimrcs = "~/.vim/vimrcs/"
+	if globpath(l:vimrcs, a:vimrc_name) != ""
+		let l:vimrc_path = l:vimrcs . a:vimrc_name
+		execute "source " . l:vimrc_path
 	else
-"		echohl WarningMsg | echom a:filename . " no exist" | echohl None
-		let l:msg = a:filename . " no exist"
-		call g:echo_warning_message(l:msg)
+		let l:msg = a:vimrc_name . " no exist"
+		call call(a:echo_func, [l:msg])
+	endif
+endfunction
+
+" 构建插件脚本名字, 并加载
+" 若脚本值为"", 加载插件名+.vimrc，不存在不警告提示
+" 若脚本值为"1", 加载插件名+.vimrc，不存在警告提示
+" 若脚本值为"0", 不加载脚本
+" 其它则直接加载脚本值
+function! s:create_source_vimrc(plugin_key, plugin_value)
+	let l:vimrcs = "~/.vim/vimrcs/"
+	if a:plugin_value == ""
+		let l:vimrc_name = a:plugin_key . ".vimrc"
+		call g:source_vimrc(l:vimrc_name, g:Null_func)
+	elseif a:plugin_value == "1"
+		let l:vimrc_name = a:plugin_key . ".vimrc"
+		call g:source_vimrc(l:vimrc_name, g:Warning_func)
+	elseif a:plugin_value == "0"
+		" 不加载配置
+	else
+		call g:source_vimrc(a:plugin_value, g:Warning_func)
 	endif
 endfunction
 
 " 判断bundle管理的插件是否存在
 function! g:plugin_exist(plugin_name)
 	let l:bundle_path 	= "~/.vim/bundle/"
-	let l:msg 			= "load " . a:plugin_name
 	if globpath(l:bundle_path, a:plugin_name) != ""
-		let l:msg = l:msg . " success"
 		call g:echo_plugin_message(a:plugin_name, 1)
 		return 1
 	else
-		let l:msg = l:msg . " fail"
 		call g:echo_plugin_message(a:plugin_name, 0)
 		return 0
 	endif
 endfunction
 
-function! g:bundle_all_plugin(plugins)
+" 加载所有的插件及配置
+function! g:bundle_plugins_dict(plugins)
 	if g:plugin_exist('vundle')
-		for p in a:plugins
-
-			execute "Bundle " . "'" . p . "'"
-			
-			let l:plugin_name = split(p, "/")[-1]
-			let l:vimrc_name = l:plugin_name . ".vimrc"
+		for [pkey, pvalue] in items(a:plugins)
+			execute "Bundle " . "'" . pkey . "'"
+			let l:plugin_name = split(pkey, "/")[-1]
 			if g:plugin_exist(l:plugin_name)
-				call g:load_plugin_vimrc(l:vimrc_name)	
+				call s:create_source_vimrc(l:plugin_name, pvalue)
 			endif
 		endfor
 	endif
 endfunction
 
 " 输出加载插件信息
-" 不调用g:plugin_exist，不会进行输出控制信息
+" 不调用g:plugin_exist，不会进行输出提示信息
 " 要调用g:echo_plugin_message输出
 function! g:echo_plugin_message(plugin_name, success)
 	let l:msg = "load " . a:plugin_name
@@ -103,5 +116,5 @@ function! g:echo_plugin_message(plugin_name, success)
 	endif
 endfunction
 
-let FUNCTION_VIMRC_load = 1
+endif
 "**********************************************************************
