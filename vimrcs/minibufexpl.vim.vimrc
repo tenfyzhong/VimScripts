@@ -1,4 +1,7 @@
 " minibufexpl.vim
+if !exists('MINIBUFEXPL_VIM_VIMRC')
+let MINIBUFEXPL_VIM_VIMRC = 1
+
 let g:miniBufExplorerAutoStart 	= 1
 let g:miniBufExplBuffersNeeded 	= 1
 let g:miniBufExplCycleArround 	= 1
@@ -14,3 +17,5 @@ nnoremap <silent><c-k> 			<esc>:w<esc>:MBEbn<cr>
 nnoremap <silent><c-s-k>		<esc>:w<esc>:MBEbp<cr>
 inoremap <silent><c-k> 			<esc>:w<esc>:MBEbn<cr>
 inoremap <silent><c-s-k>		<esc>:w<esc>:MBEbp<cr>
+
+endif

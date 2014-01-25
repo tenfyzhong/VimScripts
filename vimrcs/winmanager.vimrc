@@ -1,4 +1,7 @@
 " winmanager
+if !exists('WINMANAGER_VIMRC')
+let WINMANAGER_VIMRC = 1
+
 
 "let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
 let g:persitentBehaviour 		= 0
@@ -19,3 +22,5 @@ endfunction
 
 "let loaded_winmanager 	= 1
 nnoremap <silent><leader>wm :WMToggle<cr>
+
+endif

@@ -1,6 +1,4 @@
-"**********************************************************************
-" 函数
-" 多次source此文件时，将之前定义的函数删除
+" functions
 if !exists("FUNCTION_VIMRC")
 let FUNCTION_VIMRC = 1
 
@@ -117,4 +115,3 @@ function! g:echo_plugin_message(plugin_name, success)
 endfunction
 
 endif
-"**********************************************************************

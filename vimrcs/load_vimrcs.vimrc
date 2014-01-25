@@ -1,4 +1,7 @@
-"**********************************************************************
+" load_vimrc
+if !exists('LOAD_VIMRCS_VIMRC')
+let LOAD_VIMRCS_VIMRC = 1
+
 " 加载插件
 " 注意：插件的配置必须以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
@@ -76,4 +79,5 @@ let s:vimrc_name_list = [
 for vimrc_name in s:vimrc_name_list
 	call g:source_vimrc(vimrc_name, g:Warning_func)
 endfor
-"**********************************************************************
+
+endif

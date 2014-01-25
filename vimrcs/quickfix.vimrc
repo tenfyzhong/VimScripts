@@ -1,4 +1,7 @@
 " quickfix
+if !exists('QUICKFIX_VIMRC')
+let QUICKFIX_VIMRC = 1
+
 if has ("quickfix")
 	call g:echo_plugin_message('quickfix', 1)
 
@@ -10,3 +13,5 @@ else
 	call g:echo_plugin_message('quickfix', 0)
 endif
 
+
+endif

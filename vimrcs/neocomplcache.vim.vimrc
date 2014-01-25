@@ -1,4 +1,7 @@
 " neocomplcache.vim
+if !exists('NEOCOMPLCACHE_VIM_VIMRC')
+let NEOCOMPLCACHE_VIM_VIMRC = 1
+
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup 						= 0
@@ -16,3 +19,5 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+endif

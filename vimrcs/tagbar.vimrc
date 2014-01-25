@@ -1,4 +1,7 @@
 " tagbar
+if !exists('TAGBAR_VIMRC')
+let TAGBAR_VIMRC = 1
+
 " 比taglist更现代的代码结构浏览工具
 function! TagbarStatusFunc(current, sort, fname, ...) abort
 	let colour = a:current ? '%#StatusLine#' : '%#StatusLineNC#'
@@ -15,3 +18,5 @@ let g:tagbar_show_linenumbers 	= 1
 let g:tagbar_status_func 		= 'TagbarStatusFunc'
 let g:tagbar_show_visibility 	= 1
 let g:tagbar_iconchars 			= ['▸', '▾']
+
+endif

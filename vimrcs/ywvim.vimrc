@@ -1,4 +1,7 @@
 " ywvim
+if !exists('YWVIM_VIMRC')
+let YWVIM_VIMRC = 1
+
 let g:ywvim_ims 				= [['wb', '五笔', 'wubi.ywvim'],['py', '拼音', 'pinyin.ywvim']]
 
 let g:ywvim_py 					= { 'helpim':'wb', 'gb':0 }
@@ -15,3 +18,5 @@ let g:ywvim_gb 					= 0
 let g:ywvim_preconv 			= 'g2b'
 let g:ywvim_conv 				= ''
 let g:ywvim_lockb 				= 1
+
+endif
