@@ -1,4 +1,3 @@
-"**********************************************************************
 " ctags
 if executable('ctags')
 	call g:echo_plugin_message('ctags', 1)
@@ -7,5 +6,3 @@ if executable('ctags')
 else
 	call g:echo_plugin_message('ctags', 0)
 endif
-"**********************************************************************
-

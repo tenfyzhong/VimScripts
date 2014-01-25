@@ -1,24 +1,21 @@
-"**********************************************************************
-"Bundle 'winmanager'
-if g:plugin_exist("winmanager")
-    "let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
-	let g:persitentBehaviour=0
-	let g:winManagerWidth=25
-	let g:defaultExplorer=1
+" winmanager
 
-	let g:NERDTree_title='[NERD Tree]'
+"let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
+let g:persitentBehaviour 		= 0
+let g:winManagerWidth 			= 25
+let g:defaultExplorer 			= 1
 
-	let g:winManagerWindowLayout='NERDTree|TagList'
+let g:NERDTree_title 			= '[NERD Tree]'
 
-	function! NERDTree_Start()
-	   exec 'NERDTree'
-	endfunction
+let g:winManagerWindowLayout 	= 'NERDTree|TagList'
 
-	function! NERDTree_IsValid()
-	   return 1
-	endfunction
+function! NERDTree_Start()
+   exec 'NERDTree'
+endfunction
 
-	"let loaded_winmanager 	= 1
-	nnoremap <silent><leader>wm :WMToggle<cr>
-endif
-"**********************************************************************
+function! NERDTree_IsValid()
+   return 1
+endfunction
+
+"let loaded_winmanager 	= 1
+nnoremap <silent><leader>wm :WMToggle<cr>

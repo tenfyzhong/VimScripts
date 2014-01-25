@@ -109,11 +109,14 @@ endfunction
 function! g:bundle_all_plugin(plugins)
 	if g:plugin_exist('vundle')
 		for p in a:plugins
-		"	Bundle p
+
 			execute "Bundle " . "'" . p . "'"
-			let l:vimrc_name = split(p, "/")[-1] . ".vimrc"
-			"echo l:vimrc_name
-			call s:load_plugin_vimrc(l:vimrc_name)	
+			
+			let l:plugin_name = split(p, "/")[-1]
+			let l:vimrc_name = l:plugin_name . ".vimrc"
+			if g:plugin_exist(l:plugin_name)
+				call s:load_plugin_vimrc(l:vimrc_name)	
+			endif
 		endfor
 	endif
 endfunction

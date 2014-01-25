@@ -1,6 +1,2 @@
-"**********************************************************************
-"Bundle 'a.vim'
-if g:plugin_exist("a.vim")
-	nnoremap <silent><leader>as :A<cr>
-endif
-"**********************************************************************
+" a.vim
+nnoremap <silent><leader>as :A<cr>

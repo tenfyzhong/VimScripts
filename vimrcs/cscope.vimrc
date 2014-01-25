@@ -1,4 +1,3 @@
-"**********************************************************************
 " cscope
 if has ("cscope")
 	call g:echo_plugin_message("cscope", 1)
@@ -43,4 +42,3 @@ if has ("cscope")
 else
 	call g:echo_plugin_message("cscope", 0)
 endif
-"**********************************************************************

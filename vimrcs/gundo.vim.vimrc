@@ -1,6 +1,2 @@
-"**********************************************************************
-if g:plugin_exist("gundo.vim")
-	nnoremap <silent><leader>gu <esc>:GundoToggle<cr>
-
-endif
-"**********************************************************************
+" gundo.vim
+nnoremap <silent><leader>gu <esc>:GundoToggle<cr>

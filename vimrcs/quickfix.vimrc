@@ -1,5 +1,4 @@
-
-
+" quickfix
 if has ("quickfix")
 	call g:echo_plugin_message('quickfix', 1)
 

@@ -1,6 +1,2 @@
-"**********************************************************************
-"Bundle 'FindMate'
-if g:plugin_exist("FindMate")
-	let g:FindMate_verbose = 'locate'
-endif
-"**********************************************************************
+" FindMate
+let g:FindMate_verbose = 'locate'

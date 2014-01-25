@@ -1,7 +1,5 @@
-"**********************************************************************
-if g:plugin_exist("xml.vim")
-	let g:xml_syntax_folding = 1
-	set foldmethod=syntax
+" xml.vim
 
-endif
-"**********************************************************************
+let g:xml_syntax_folding = 1
+
+set foldmethod=syntax
