@@ -1,17 +1,15 @@
 "**********************************************************************
-" 调用插件
-" 第0步 载入全局函数
-" 第1步 加载vundle
-" 第2步 加载其他插件
-" 第3步 加载没有插件的配置
+" 加载插件
 " 注意：插件的配置必须以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 
-" 载入函数
+" 第0步 载入全局函数
 source ~/.vim/vimrcs/functions.vimrc
 
+" 第1步 加载vundle
 call g:load_plugin_vimrc('vundle.vimrc')
 
+" 第2步 加载其他插件
 let s:bundle_list = [
 	\ 'Rip-Rip/clang_complete',
 	\ 'winmanager',
@@ -63,6 +61,7 @@ endif
 call g:bundle_all_plugin(s:bundle_list)
 
 
+" 第3步 加载没有插件的配置
 let s:vimrc_name_list = [
 	\ 'ctags.vimrc',
 	\ 'cscope.vimrc',
