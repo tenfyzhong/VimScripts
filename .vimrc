@@ -82,5 +82,5 @@ nnoremap <c-right> 				<c-w>l
 
 "**********************************************************************
 " 加载所有插件vimrc配置
-source ~/.vim/vimrcs/load_vimrcs.vimrc
+source ~/.vim/vimrcs/LOAD_VIMRCS.vimrc
 "**********************************************************************

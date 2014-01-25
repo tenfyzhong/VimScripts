@@ -7,7 +7,7 @@ let LOAD_VIMRCS_VIMRC = 1
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 
 " 第0步 载入全局函数
-source ~/.vim/vimrcs/functions.vimrc
+source ~/.vim/vimrcs/FUNCTIONS.vimrc
 
 " 第1步 加载vundle
 call g:source_vimrc('vundle.vimrc', g:Warning_func)
