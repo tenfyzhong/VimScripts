@@ -80,12 +80,12 @@ cscope(可选，没有则不能使用cscope)
 <leader>mbt: 	触发minibuf窗口
 <leader>mbk: 	minibuf中的下一个文件
 <leader>mbj: 	minibuf中的上一个文件
-<c-k>: 			minibuf中的下一个文件
-<c-s-k>: 		minibuf中的上一个文件
+<c-l>: 			minibuf中的下一个文件
+<c-h>: 			minibuf中的上一个文件
 
 [minibufexpl.vim : insert]
-<c-k>: 			minibuf中的下一个文件
-<c-s-k>: 		minibuf中的上一个文件
+<c-l>: 			minibuf中的下一个文件
+<c-h>: 			minibuf中的上一个文件
 
 [nerdtree : normal]
 <leader>nt: 	触发nerdtree

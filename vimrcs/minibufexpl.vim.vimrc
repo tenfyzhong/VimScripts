@@ -13,9 +13,9 @@ nnoremap <silent><Leader>mbc 	:MBEClose<cr>
 nnoremap <silent><Leader>mbt 	:MBEToggle<cr>
 nnoremap <silent><Leader>mbk 	<esc>:w<esc>:MBEbn<cr>
 nnoremap <silent><Leader>mbj 	<esc>:w<esc>:MBEbp<cr>
-nnoremap <silent><c-k> 			<esc>:w<esc>:MBEbn<cr>
-nnoremap <silent><c-s-k>		<esc>:w<esc>:MBEbp<cr>
-inoremap <silent><c-k> 			<esc>:w<esc>:MBEbn<cr>
-inoremap <silent><c-s-k>		<esc>:w<esc>:MBEbp<cr>
+nnoremap <silent><c-h>			<esc>:w<esc>:MBEbp<cr>
+nnoremap <silent><c-l> 			<esc>:w<esc>:MBEbn<cr>
+inoremap <silent><c-h>			<esc>:w<esc>:MBEbp<cr>
+inoremap <silent><c-l> 			<esc>:w<esc>:MBEbn<cr>
 
 endif
