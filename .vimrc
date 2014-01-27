@@ -4,6 +4,7 @@
 source $VIMRUNTIME/vimrc_example.vim
 set nocompatible " 关闭vi兼容模式
 set cindent 	 " C语言缩进方式
+set foldmethod=indent  " 根据缩进折叠
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,gb2312,cp936,usc-bom,euc-jp,gb18030
 set mouse=a 		 " 禁用鼠标
