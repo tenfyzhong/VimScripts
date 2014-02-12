@@ -4,7 +4,7 @@
 source $VIMRUNTIME/vimrc_example.vim
 set nocompatible " 关闭vi兼容模式
 set cindent 	 " C语言缩进方式
-set foldmethod=indent  " 根据缩进折叠
+"set foldmethod=indent   根据缩进折叠
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,gb2312,cp936,usc-bom,euc-jp,gb18030
 set mouse=a 		 " 禁用鼠标
@@ -27,8 +27,8 @@ set confirm		" 在处理未保存或只读文件的时候，弹出确认
 
 set hlsearch	" 高亮search命中的文本
 set incsearch	" 随着键入即时搜索
-set ignorecase	" 搜索时忽略大小写
-set smartcase	" 有一个或以上大写字母时仍大小写敏感
+"set ignorecase	 搜索时忽略大小写
+"set smartcase	 有一个或以上大写字母时仍大小写敏感
 
 set wildmenu 	" 增加命令行自动补全操作
 
