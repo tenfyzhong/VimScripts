@@ -108,9 +108,13 @@ cscope(可选，没有则不能使用cscope)
 
 [Doxygen : normal]
 <leader>dox: 	生成函数和类注释
+<leader>doa: 	生成文件注释
+<leader>dol: 	生成证书注释
 
 [Doxygen : insert]
 <leader>dox: 	生成函数和类注释
+<leader>doa: 	生成文件注释
+<leader>dol: 	生成证书注释
 
 [Gundo : normal]
 <leader>gu: 	GundoToogle
