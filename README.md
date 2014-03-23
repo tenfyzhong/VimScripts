@@ -107,14 +107,14 @@ cscope(可选，没有则不能使用cscope)
 <leader>qo:		打开quckfix
 
 [Doxygen : normal]
-<leader>dox: 	生成函数和类注释
-<leader>doa: 	生成文件注释
-<leader>dol: 	生成证书注释
+<leader>dx: 	生成函数和类注释
+<leader>da: 	生成文件注释
+<leader>dl: 	生成证书注释
 
 [Doxygen : insert]
-<leader>dox: 	生成函数和类注释
-<leader>doa: 	生成文件注释
-<leader>dol: 	生成证书注释
+<leader>dx: 	生成函数和类注释
+<leader>da: 	生成文件注释
+<leader>dl: 	生成证书注释
 
 [Gundo : normal]
 <leader>gu: 	GundoToogle
