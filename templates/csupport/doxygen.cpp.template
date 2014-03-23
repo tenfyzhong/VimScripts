@@ -64,24 +64,24 @@ void<CURSOR> |?CLASSNAME|::|?METHODNAME| ( <+argument list+> )
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == cpp.accessor-implementation ==
 /**
- * @brief |?CLASSNAME|::get_|?ATTRIBUTE|
+ * @brief |?CLASSNAME|::get|?ATTRIBUTE:c|
  *
  * @return 
  */
-inline |?RETURNTYPE| |CLASSNAME|::get_|ATTRIBUTE| (  ) const
+inline |?RETURNTYPE| |CLASSNAME|::get|ATTRIBUTE| (  ) const
 {
 	return |ATTRIBUTE|;
-}		// -----  end of method |CLASSNAME|::get_|ATTRIBUTE|  -----
+}		// -----  end of method |CLASSNAME|::get|ATTRIBUTE|  -----
 
 /**
- * @brief |CLASSNAME|::set_|ATTRIBUTE| 
+ * @brief |CLASSNAME|::set|ATTRIBUTE| 
  *
  */
-inline void |CLASSNAME|::set_|ATTRIBUTE| ( |RETURNTYPE| value )
+inline void |CLASSNAME|::set|ATTRIBUTE| ( |RETURNTYPE| value )
 {
 	|ATTRIBUTE|	= value;
 	return ;
-}		// -----  end of method |CLASSNAME|::set_|ATTRIBUTE|  -----
+}		// -----  end of method |CLASSNAME|::set|ATTRIBUTE|  -----
 <CURSOR>
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == cpp.class-definition ==
