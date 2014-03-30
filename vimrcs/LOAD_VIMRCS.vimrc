@@ -53,6 +53,7 @@ let s:bundle_dict = {
 			\ 'vim-scripts/CmdlineComplete': '0',
 			\ 'DataWraith/auto_mkdir': '0',
 			\}
+""			\ 'honza/vim-snippets' : ''
 "			\ 'airblade/vim-gitgutter': '',
 "			\ 'Lokaltog/powerline': '',
 "			\ 'ywvim.vimrc': '',
