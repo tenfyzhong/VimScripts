@@ -24,6 +24,7 @@ git
 ctags
 clang
 cscope(可选，没有则不能使用cscope)
+doxygen(可选，用于生成代码文档)
 
 
 快捷键绑定
