@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 YWVIMROOT=~/.vim/bundle/ywvim
 BASEYWVIMMAP=~/.vim/templates/ywvim

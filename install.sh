@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SCRIPTS=(\
 	~/.vim/bin/install_clone_vundle.sh \

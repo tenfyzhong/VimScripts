@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # 克隆vundle版本库
 VUNDLE=~/.vim/bundle/vundle

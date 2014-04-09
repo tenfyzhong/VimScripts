@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # create .vimrc
 BASEVIMRC=~/.vim/.vimrc

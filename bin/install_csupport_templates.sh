@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/bash 
 
 # 修改csupport模板
 TEMPLATES=~/.vim/templates/csupport/Templates

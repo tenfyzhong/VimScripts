@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -f ./.clang_complete ]; then
 	sed -e '/##Generate begin/,/##WARN请/d' ./.clang_complete >> .clang_complete.tmp
