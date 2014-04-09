@@ -19,7 +19,7 @@ call g:source_vimrc('vundle.vimrc', g:Warning_func)
 " 			 : '0' 不加载
 " 			 " 'vimrc' 加载vimrc
 let s:bundle_dict = {
-			\ 'Rip-Rfp/clang_complete': '1',
+			\ 'Rip-Rip/clang_complete': '1',
 			\ 'winmanager': '1',
 			\ 'a.vim': '1',
 			\ 'c.vim': '1',
