@@ -5,20 +5,20 @@
 	mv VimScripts ~/.vim  
 	sh ~/.vim/install.sh  
 
-bin/generate_clang_complete.sh用于生成c/c++自动补全的.clang_complete文件，请
-在工程根目录下运行，或者在工程根目录下的vim命令模式下运行<leader>gc,<leader>
-为vim的一个设置变量，默认为'\'。
+bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete文件
+，请在工程根目录下运行，或者在工程根目录下的vim命令模式下运行<leader>gc,
+<leader> 为vim的一个设置变量，默认为'\'。
 
-使用csupport，可以在.vim/templates下修改Templates模板，使其支持自己的信息，
+使用csupport，可以在.vim/templates下修改Templates模板，使其支持自己的信息。
 
 ##注意
 - neocomplcache和clang_complete会冲突，只能使用一个。
 - vim-powerline会与clang_complete冲突，建议不使用。
 
-##需要安装的软件：
-- git
-- ctags
-- clang
+##依赖程序
+- git:用于版本管理
+- ctags:tags，如tagbag等要用到
+- clang:clang\_complete要用于
 - cscope(可选，没有则不能使用cscope)
 - doxygen(可选，用于生成代码文档)
 
