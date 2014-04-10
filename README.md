@@ -28,7 +28,7 @@ bin/generate_clang_complete.sh用于生成c/c++自动补全的.clang_complete文
 
 
 ##快捷键绑定
-**[global : normal]**
+**[global : normal]**  
 &lt;leader&gt;ev: 	水平切分窗口打开.vimrc  
 &lt;leader&gt;sv: 	加载.vimrc  
 &lt;F12&gt;: 			逆时间切换窗口  
@@ -41,13 +41,13 @@ bin/generate_clang_complete.sh用于生成c/c++自动补全的.clang_complete文
 &lt;leader&gt;k: 		移到上边窗口  
 &lt;leader&gt;l: 		移到右边窗口  
 
-**[a.vim : normal]**
+**[a.vim : normal]**  
 &lt;leader&gt;as: 	在源文件和头文件中切换  
 
-**[clang_complete : normal]**
+**[clang_complete : normal]**  
 &lt;leader&gt;gc: 	在当前目录生成.clang_complete  
 
-**[cscope : normal]**
+**[cscope : normal]**  
 &lt;C-_&gt;s:  
 &lt;C-_&gt;g:  
 &lt;C-_&gt;c:  
@@ -72,10 +72,10 @@ bin/generate_clang_complete.sh用于生成c/c++自动补全的.clang_complete文
 &lt;C-Space&gt;&lt;C-Space&gt;i:  
 &lt;C-Space&gt;&lt;C-Space&gt;d:  
 
-**[ctags : normal]**
+**[ctags : normal]**  
 &lt;leader&gt;tg: 	在当前目录生成tags  
 
-**[minibufexpl.vim : normal]**
+**[minibufexpl.vim : normal]**  
 &lt;leader&gt;mbo: 	打开minibuf窗口  
 &lt;leader&gt;mbc: 	关闭minibuf窗口  
 &lt;leader&gt;mbt: 	触发minibuf窗口  
@@ -84,38 +84,38 @@ bin/generate_clang_complete.sh用于生成c/c++自动补全的.clang_complete文
 &lt;c-l&gt;: 			minibuf中的下一个文件  
 &lt;c-h&gt;: 			minibuf中的上一个文件  
 
-**[minibufexpl.vim : insert]**
+**[minibufexpl.vim : insert]**  
 &lt;c-l&gt;: 			minibuf中的下一个文件  
 &lt;c-h&gt;: 			minibuf中的上一个文件  
 
-**[nerdtree : normal]**
+**[nerdtree : normal]**  
 &lt;leader&gt;nt: 	触发nerdtree  
 
-**[tagbar or taglist : normal]**
+**[tagbar or taglist : normal]**  
 &lt;leader&gt;tt: 	触发tagbar or taglist  
 &lt;leader&gt;ta: 	触发tagbar和nerdtree  
 
-**[vundle.vimrc : normal]**
+**[vundle.vimrc : normal]**  
 &lt;leader&gt;bi: 	Bundle安装插件  
 
-**[winmanager : normal]**
+**[winmanager : normal]**  
 &lt;leader&gt;wm: 	触发winmanager  
 
-**[quickfix : normal]**
+**[quickfix : normal]**  
 &lt;leader&gt;qk:		上一条错误警告处  
 &lt;leader&gt;qj: 	下一条错误警告处  
 &lt;leader&gt;qc:		关闭quickfix  
 &lt;leader&gt;qo:		打开quckfix  
 
-**[Doxygen : normal]**
+**[Doxygen : normal]**  
 &lt;leader&gt;dx: 	生成函数和类注释  
 &lt;leader&gt;da: 	生成文件注释  
 &lt;leader&gt;dl: 	生成证书注释  
 
-**[Doxygen : insert]**
+**[Doxygen : insert]**  
 &lt;leader&gt;dx: 	生成函数和类注释  
 &lt;leader&gt;da: 	生成文件注释  
 &lt;leader&gt;dl: 	生成证书注释  
 
-**[Gundo : normal]**
+**[Gundo : normal]**  
 &lt;leader&gt;gu: 	GundoToogle  
