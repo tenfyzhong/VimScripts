@@ -48,14 +48,14 @@ bin/generate_clang_complete.sh用于生成c/c++自动补全的.clang_complete文
 &lt;leader&gt;gc: 	在当前目录生成.clang_complete  
 
 **[cscope : normal]**  
-&lt;C-_&gt;s:  
-&lt;C-_&gt;g:  
-&lt;C-_&gt;c:  
-&lt;C-_&gt;t:  
-&lt;C-_&gt;e:  
-&lt;C-_&gt;f:  
-&lt;C-_&gt;i:  
-&lt;C-_&gt;d:  
+&lt;C-\_&gt;s:  
+&lt;C-\_&gt;g:  
+&lt;C-\_&gt;c:  
+&lt;C-\_&gt;t:  
+&lt;C-\_&gt;e:  
+&lt;C-\_&gt;f:  
+&lt;C-\_&gt;i:  
+&lt;C-\_&gt;d:  
 &lt;C-Space&gt;s:  
 &lt;C-Space&gt;g:  
 &lt;C-Space&gt;c:  
