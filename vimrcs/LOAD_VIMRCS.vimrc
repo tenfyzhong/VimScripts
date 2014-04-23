@@ -2,6 +2,13 @@
 if !exists('LOAD_VIMRCS_VIMRC')
 let LOAD_VIMRCS_VIMRC = 1
 
+" 若设置了环境变量NOVIMWARNING，则不进行任何警告
+if $NOVIMWARNING
+	let g:warning_message 	= 0
+	let g:error_message 	= 0
+	let g:success_message 	= 0
+endif
+
 " 加载插件
 " 注意：插件的配置必须以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
