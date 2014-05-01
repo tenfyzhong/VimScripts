@@ -60,6 +60,7 @@ let s:bundle_dict = {
 			\ 'vim-scripts/CmdlineComplete': '0',
 			\ 'DataWraith/auto_mkdir': '0',
 			\ 'vim-scripts/php.vim--Garvin': '1',
+			\ 'vim-scripts/slimv.vim': '1',
 			\}
 ""			\ 'honza/vim-snippets' : ''
 "			\ 'airblade/vim-gitgutter': '',
