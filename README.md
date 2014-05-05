@@ -21,6 +21,7 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 - clang:clang\_complete要用于
 - cscope(可选，没有则不能使用cscope)
 - doxygen(可选，用于生成代码文档)
+- sbcl:common lisp的编译器，slimv用到
 
 
 ##快捷键绑定
