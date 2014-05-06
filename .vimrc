@@ -37,8 +37,11 @@ set wildmenu 	" 增加命令行自动补全操作
 "set cursorline			" 高亮当前行
 
 " tab缩进4
-set ts=4
-set sw=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set smarttab
 
 set nu 			 " 显示行号
 
@@ -55,7 +58,8 @@ filetype plugin indent on	" 启动自动补全
 "**********************************************************************
 " autocmd
 " vimrc文件修改之后自动加载
-autocmd! bufwritepost *vimrc source %
+autocmd bufwritepost *vimrc source %
+autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE set noexpandtab
 "**********************************************************************
 
 "**********************************************************************
