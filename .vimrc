@@ -58,8 +58,11 @@ filetype plugin indent on	" 启动自动补全
 "**********************************************************************
 " autocmd
 " vimrc文件修改之后自动加载
-autocmd bufwritepost *vimrc source %
-autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE set noexpandtab
+augroup initial
+    au!
+    autocmd bufwritepost *vimrc source %
+    autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE set noexpandtab
+augroup END
 "**********************************************************************
 
 "**********************************************************************
