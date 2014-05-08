@@ -1,6 +1,4 @@
 " ctags
-if !exists('CTAGS_VIMRC')
-let CTAGS_VIMRC = 1
 
 if executable('ctags')
 	call g:echo_plugin_message('ctags', 1)
@@ -10,4 +8,3 @@ else
 	call g:echo_plugin_message('ctags', 0)
 endif
 
-endif

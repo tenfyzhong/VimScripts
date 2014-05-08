@@ -1,6 +1,4 @@
 " nerdtree
-if !exists('NERDTREE_VIMRC')
-let NERDTREE_VIMRC = 1
 
 
 " The NERD tree 以树形结构浏览文件夹中的文件
@@ -18,4 +16,3 @@ let NERDTreeHightlightCursorline 	= 1	"高亮NERDTree窗口的当前行
 let NERDTreeShowLineNumbers 		= 1
 let NERDTreeDirArrows 				= 1
 
-endif

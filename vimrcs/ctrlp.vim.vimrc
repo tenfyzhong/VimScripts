@@ -1,6 +1,4 @@
 " ctrlp.vim
-if !exists('CTRLP_VIM_VIMRC')
-let CTRLP_VIM_VIMRC = 1
 
 let g:ctrlp_by_filename 		= 1
 let g:ctrlp_working_path_mode 	= 'ra'
@@ -11,4 +9,3 @@ let g:ctrlp_custom_ignore 		= {
 		\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 	 	\ }
 
-endif

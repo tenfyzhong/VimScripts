@@ -1,6 +1,4 @@
 " neocomplcache.vim
-if !exists('NEOCOMPLCACHE_VIM_VIMRC')
-let NEOCOMPLCACHE_VIM_VIMRC = 1
 
 
 " Disable AutoComplPop.
@@ -20,4 +18,3 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-endif

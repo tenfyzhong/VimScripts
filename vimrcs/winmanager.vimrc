@@ -1,6 +1,4 @@
 " winmanager
-if !exists('WINMANAGER_VIMRC')
-let WINMANAGER_VIMRC = 1
 
 
 "let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
@@ -23,4 +21,3 @@ endfunction
 "let loaded_winmanager 	= 1
 nnoremap <silent><leader>wm :WMToggle<cr>
 
-endif

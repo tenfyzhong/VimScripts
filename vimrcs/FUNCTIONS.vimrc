@@ -1,6 +1,4 @@
 " functions
-if !exists("FUNCTION_VIMRC")
-let FUNCTION_VIMRC = 1
 
 " 对未定义的变量设置默认值
 function! g:set_variables_default(name, value)
@@ -114,4 +112,3 @@ function! g:echo_plugin_message(plugin_name, success)
 	endif
 endfunction
 
-endif

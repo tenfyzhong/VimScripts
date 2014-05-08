@@ -1,6 +1,4 @@
 " taglist
-if !exists('TAGLIST_VIM_VIMRC')
-let TAGLIST_VIM_VIMRC = 1
 
 
 let Tlist_Ctags_Cmd 				= 'ctags'
@@ -24,4 +22,3 @@ let Tlist_Use_Horiz_Window 			= 0
 
 map <silent><leader>tt :TlistToggle<cr>
 
-endif

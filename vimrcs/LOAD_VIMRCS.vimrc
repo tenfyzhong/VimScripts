@@ -1,6 +1,4 @@
 " load_vimrc
-if !exists('LOAD_VIMRCS_VIMRC')
-let LOAD_VIMRCS_VIMRC = 1
 
 " 若设置了环境变量NOVIMWARNING，则不进行任何警告
 if $NOVIMWARNING
@@ -91,4 +89,3 @@ for vimrc_name in s:vimrc_name_list
 	call g:source_vimrc(vimrc_name, g:Warning_func)
 endfor
 
-endif

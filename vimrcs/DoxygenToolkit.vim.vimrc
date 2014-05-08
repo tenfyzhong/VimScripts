@@ -1,6 +1,4 @@
 " DoxygenToolkit.vim
-if !exists('DOXYGENTOOLKIT_VIM_VIMRC')
-let DOXYGENTOOLKIT_VIM_VIMRC = 1
 
 let g:load_doxygen_syntax 					= 1
 let g:doxygen_enhanced_color	 			= 1
@@ -14,4 +12,3 @@ inoremap <silent><leader>da <esc>:DoxAuthor<cr>
 nnoremap <silent><leader>dl <esc>:DoxLic<cr>
 inoremap <silent><leader>dl <esc>:DoxLic<cr>
 
-endif
