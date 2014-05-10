@@ -2,7 +2,7 @@
 " help pymode
 
 " add paths to sys.path
-let g:pymode_paths = []
+let g:pymode_paths = ['~/code/python']
 " E221:操作符左边多个空格
 " E222:操作符右边多个空格
 " W391:文本末尾有空行
