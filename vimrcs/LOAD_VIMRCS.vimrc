@@ -15,7 +15,7 @@ endif
 source ~/.vim/vimrcs/FUNCTIONS.vimrc
 
 " 第1步 加载vundle
-call g:source_vimrc('vundle.vimrc', g:Warning_func)
+call SourceVimrc('vundle.vimrc', g:Warning_func)
 
 " 第2步 加载其他插件
 " 'plugin_name':'vimrc_name'
@@ -75,7 +75,7 @@ else
 	let s:bundle_dict['vim-scripts/taglist.vim'] = "1"
 endif
 
-call g:bundle_plugins_dict(s:bundle_dict)
+call BundlePluginsDict(s:bundle_dict)
 
 
 " 第3步 加载没有插件的配置
@@ -86,6 +86,6 @@ let s:vimrc_name_list = [
 	\	]
 
 for vimrc_name in s:vimrc_name_list
-	call g:source_vimrc(vimrc_name, g:Warning_func)
+	call SourceVimrc(vimrc_name, g:Warning_func)
 endfor
 

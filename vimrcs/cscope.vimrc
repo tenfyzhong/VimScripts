@@ -1,7 +1,7 @@
 " cscope
 
 if has ("cscope")
-	call g:echo_plugin_message("cscope", 1)
+	call EchoPluginMessage("cscope", 1)
 	set cscopetag " 使支持用Ctrl+]和Ctrl+t 快捷键在代码间跳来跳去
 	set csto=0
 	set cst
@@ -41,6 +41,6 @@ if has ("cscope")
 	nnoremap <C-Space><C-Space>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 else
-	call g:echo_plugin_message("cscope", 0)
+	call EchoPluginMessage("cscope", 0)
 endif
 
