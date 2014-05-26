@@ -11,7 +11,7 @@ set mouse=a 		 " 禁用鼠标
 set wrapmargin=4
 set textwidth=0
 set backspace=2 " 使回格键正常处理indet,eol,start 等
-set iskeyword+= " 设为字，遇到这些字符时不断行
+set iskeyword+=- " 设为字，遇到这些字符时不断行
 set whichwrap+=<,>,h,l	" 允许backspace和光标键跨越行边界
 set formatoptions=tcrqn " 自动格式化
 "set autochdir " 自动切换工作目录为当前文件所在的目录
