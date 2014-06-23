@@ -117,3 +117,8 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 
 **[Gundo : normal]**  
 &lt;leader&gt;gu: 	GundoToogle  
+
+**[vimshell : normal]**  
+$lt;leader%gt;vt:   在tab中打开一个VimShell
+$lt;leader%gt;vs:   在当前打开一个VimShell
+
