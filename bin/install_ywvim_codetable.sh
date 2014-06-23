@@ -1,7 +1,7 @@
 #!/bin/bash
 
 YWVIMROOT=~/.vim/bundle/ywvim
-BASEYWVIMMAP=~/.vim/templates/ywvim
+BASEYWVIMMAP=~/.vim/resource/ywvim
 TARGETYWVIMMAP=$YWVIMROOT/keymap/ywvim
 if [ -d $YWVIMROOT ]; then
 	if [ -d $BASEYWVIMMAP ]; then

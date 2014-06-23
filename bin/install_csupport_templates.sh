@@ -1,10 +1,10 @@
 #!/bin/bash 
 
 # 修改csupport模板
-TEMPLATES=~/.vim/templates/csupport/Templates
-MYSELFTEMPLATES=~/.vim/templates/csupport/MyselfTemplates
-BASETEMPLATES=~/.vim/templates/csupport/BaseTemplates
-DEFAULTTEMPLATES=~/.vim/bundle/c.vim/c-support/templates/Templates 
+TEMPLATES=~/.vim/resource/csupport/Templates
+MYSELFTEMPLATES=~/.vim/resource/csupport/MyselfTemplates
+BASETEMPLATES=~/.vim/resource/csupport/BaseTemplates
+DEFAULTTEMPLATES=~/.vim/bundle/c.vim/c-support/resource/Templates 
 
 COPYTEMPLATES=$BASETEMPLATES
 
