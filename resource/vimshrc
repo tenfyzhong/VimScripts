@@ -1,0 +1,1 @@
+[[ -f ~/.common_rc ]] && source ~/.common_rc

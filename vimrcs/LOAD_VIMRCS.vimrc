@@ -60,6 +60,8 @@ let s:bundle_dict = {
 			\ 'vim-scripts/php.vim--Garvin': '1',
 			\ 'vim-scripts/slimv.vim': '1',
 			\ 'klen/python-mode': '1',
+            \ 'Shougo/vimshell.vim': '1',
+            \ 'Shougo/vimproc.vim': '0',
 			\}
 ""			\ 'honza/vim-snippets' : ''
 "			\ 'airblade/vim-gitgutter': '',
