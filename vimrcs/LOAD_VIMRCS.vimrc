@@ -62,6 +62,7 @@ let s:bundle_dict = {
 			\ 'klen/python-mode': '1',
             \ 'Shougo/vimshell.vim': '1',
             \ 'Shougo/vimproc.vim': '0',
+            \ 'vim-scripts/bash-support.vim': '',
 			\}
 ""			\ 'honza/vim-snippets' : ''
 "			\ 'airblade/vim-gitgutter': '',
