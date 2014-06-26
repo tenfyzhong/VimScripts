@@ -1,5 +1,11 @@
 #!/bin/bash
 
 cd ~/.vim/bundle/vimproc.vim
-make
+declare -u os
+os=`uname -o`
+if [ "$os" == "CYGWIN" ]; then
+    make -f make_cygwin.mak
+else
+    make
+fi
 
