@@ -1,5 +1,5 @@
 #VimScripts
-##安装说明：
+##安装说明
 将克隆下来的VimScripts重命名为.vim，然后运行install.sh:  
 	mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作  
 	mv VimScripts ~/.vim  
@@ -11,9 +11,13 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 
 使用csupport，可以在.vim/resource下修改Templates模板，使其支持自己的信息。
 
+##建议
+在crontab中加入clear\_bak\_un\_file.sh的执行，比如每天21:00执行  
+0 21 * * * ~/bin/clear\_bak\_un\_file.sh > /dev/null 2>&1  
+
 ##注意
-- neocomplcache和clang_complete会冲突，只能使用一个。
-- vim-powerline会与clang_complete冲突，建议不使用。
+- neocomplcache和clang\_complete会冲突，只能使用一个。
+- vim-powerline会与clang\_complete冲突，建议不使用。
 
 ##依赖程序
 - git:用于版本管理
@@ -43,7 +47,7 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 &lt;leader&gt;as: 	在源文件和头文件中切换  
 
 **[clang_complete : normal]**  
-&lt;leader&gt;gc: 	在当前目录生成.clang_complete  
+&lt;leader&gt;gc: 	在当前目录生成.clang\_complete  
 
 **[cscope : normal]**  
 &lt;C-\_&gt;s:  
