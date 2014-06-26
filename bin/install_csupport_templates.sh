@@ -4,7 +4,7 @@
 TEMPLATES=~/.vim/resource/csupport/Templates
 MYSELFTEMPLATES=~/.vim/resource/csupport/MyselfTemplates
 BASETEMPLATES=~/.vim/resource/csupport/BaseTemplates
-DEFAULTTEMPLATES=~/.vim/bundle/c.vim/c-support/resource/Templates 
+DEFAULTTEMPLATES=~/.vim/bundle/c.vim/c-support/templates/Templates 
 
 COPYTEMPLATES=$BASETEMPLATES
 
