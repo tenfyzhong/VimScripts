@@ -63,6 +63,7 @@ let s:bundle_dict = {
             \ 'Shougo/vimshell.vim': '1',
             \ 'Shougo/vimproc.vim': '0',
             \ 'vim-scripts/bash-support.vim': '',
+            \ 'vim-scripts/Conque-GDB': '',
 			\}
 ""			\ 'honza/vim-snippets' : ''
 "			\ 'airblade/vim-gitgutter': '',
