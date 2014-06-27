@@ -79,6 +79,10 @@ else
 	let s:bundle_dict['vim-scripts/taglist.vim'] = "1"
 endif
 
+if g:use_chinese_doc
+    let s:bundle_dict['asins/vimcdoc'] = ""
+endif
+
 call BundlePluginsDict(s:bundle_dict)
 
 

@@ -73,6 +73,7 @@ augroup END
 let g:warning_message 	= 1
 let g:error_message 	= 1
 let g:success_message 	= 0
+let g:use_chinese_doc   = 1     " 是否使用中文文档，1为使用
 let mapleader 			= "'"
 "**********************************************************************
 
