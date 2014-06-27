@@ -11,6 +11,10 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 
 使用csupport，可以在.vim/resource下修改Templates模板，使其支持自己的信息。
 
+运行bin目录下的chinese\_doc\_install.sh安装中文文档。  
+运行bin目录下的chinese\_doc\_uninstall.sh卸载中文文档。  
+会要求root权限。
+
 ##建议
 在crontab中加入clear\_bak\_un\_file.sh的执行，比如每天21:00执行  
 0 21 * * * ~/bin/clear\_bak\_un\_file.sh > /dev/null 2>&1  
