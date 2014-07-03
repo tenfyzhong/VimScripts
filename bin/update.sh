@@ -25,6 +25,4 @@ if ! [ -e $VUNDLE/.git ]; then
     exit 1
 fi
 
-cd $VUNDLE
-git pull
 vim -c BundleClean -c BundleUpdate -c qa!
