@@ -2,9 +2,6 @@
 *.swp
 bundle
 bundle/
-templates/csupport/Templates
 Myself*
-!MyselfInstall.sh
 test/
 \#*\#
-vimcdoc-1.9.0/*
