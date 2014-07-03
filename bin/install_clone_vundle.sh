@@ -10,10 +10,10 @@ if ! [ -e $VUNDLE/.git ]; then
 	echo "克隆vundle"
 	git clone https://github.com/gmarik/vundle.git $VUNDLE
 
-else
-	cd $VUNDLE
-	echo "拉回vundle"
-	git pull
-	cd -
+# else
+# 	cd $VUNDLE
+# 	echo "拉回vundle"
+# 	git pull
+# 	cd -
 fi
 
