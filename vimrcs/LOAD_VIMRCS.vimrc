@@ -64,6 +64,7 @@ let s:bundle_dict = {
             \ 'Shougo/vimproc.vim': '0',
             \ 'vim-scripts/bash-support.vim': '',
             \ 'vim-scripts/Conque-GDB': '',
+            \ 'tenghui0425/jce-highlight': '1',
 			\}
 ""			\ 'honza/vim-snippets' : ''
 "			\ 'airblade/vim-gitgutter': '',
