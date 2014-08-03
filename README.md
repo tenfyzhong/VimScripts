@@ -128,6 +128,10 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 &lt;leader&gt;gu: 	GundoToogle  
 
 **[vimshell : normal]**  
-$lt;leader%gt;vt:   在tab中打开一个VimShell
-$lt;leader%gt;vs:   在当前打开一个VimShell
+&lt;leader&gt;vt:   在tab中打开一个VimShell
+&lt;leader&gt;vs:   在当前打开一个VimShell
 
+**[unite : normal]**  
+&lt;leader&gt;uf:   进行Unite file的查找
+&lt;leader&gt;ur:   进行Unite file\_rec的查找
+&lt;leader&gt;ub:   进行Unite buffer的查找
