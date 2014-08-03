@@ -29,7 +29,6 @@ let s:bundle_dict = {
 			\ 'a.vim': '1',
 			\ 'c.vim': '1',
 			\ 'scrooloose/nerdtree': '1',
-			\ 'FindMate': '1',
 			\ 'fholgado/minibufexpl.vim': '1',
 			\ 'vim-scripts/grep.vim': '1',
 			\ 'ervandew/supertab': '1',
@@ -66,7 +65,8 @@ let s:bundle_dict = {
             \ 'vim-scripts/Conque-GDB': '',
             \ 'tenghui0425/jce-highlight': '1',
 			\}
-""			\ 'honza/vim-snippets' : ''
+"			\ 'FindMate': '1',
+"			\ 'honza/vim-snippets' : ''
 "			\ 'airblade/vim-gitgutter': '',
 "			\ 'Lokaltog/powerline': '',
 "			\ 'ywvim.vimrc': '',
