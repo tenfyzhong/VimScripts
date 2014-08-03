@@ -43,7 +43,7 @@ let s:bundle_dict = {
 			\ 'gregsexton/gitv': '0',
 			\ 'tpope/vim-commentary': '0',
 			\ 'Yggdroot/indentLine': '1',
-			\ 'Shougo/unite.vim': '0',
+			\ 'Shougo/unite.vim': '1',
 			\ 'terryma/vim-multiple-cursors': '0',
 			\ 'kshenoy/vim-signature': '0',
 			\ 'Rykka/colorv.vim': '0',
