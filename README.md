@@ -21,6 +21,7 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 0 21 * * * ~/bin/clear\_bak\_un\_file.sh > /dev/null 2>&1  
 
 ##注意
+- vim版本要求7.0以上，否则很多配置用不了，会直接不加载配置。
 - neocomplcache和clang\_complete会冲突，只能使用一个。
 - vim-powerline会与clang\_complete冲突，建议不使用。
 
