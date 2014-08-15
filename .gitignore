@@ -2,6 +2,7 @@
 *.swp
 bundle
 bundle/
+sessions
 Myself*
 test/
 \#*\#

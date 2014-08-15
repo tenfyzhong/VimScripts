@@ -65,6 +65,7 @@ let s:bundle_dict = {
             \ 'vim-scripts/Conque-GDB': '',
             \ 'tenghui0425/jce-highlight': '1',
             \ 'juneedahamed/svnj.vim': '1',
+            \ 'vim-scripts/sessionman.vim': '0',
 			\}
 "			\ 'FindMate': '1',
 "			\ 'honza/vim-snippets' : ''
