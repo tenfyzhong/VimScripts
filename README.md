@@ -20,6 +20,12 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 在.vimrc中将g:use\_chinese\_doc设为1则使用中文文档。  
 若不成功，请运行:BundleInstall   
 
+##说明  
+对于要使用cscope的项目，在项目根路径生成cscope的数据库，用以下命令：
+<pre><code>cscope -Rbkq</code></pre>
+设置CSCOPE\_DB\_PATH的系统变量指向项目的根路径。 最后不要以'/'结尾。例如：  
+<pre><code>export CSCOPE_DB_PATH=~/project</code></pre>
+
 ##建议
 在crontab中加入clear\_bak\_un\_file.sh的执行，比如每天21:00执行  
 0 21 * * * ~/bin/clear\_bak\_un\_file.sh > /dev/null 2>&1  
