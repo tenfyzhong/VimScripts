@@ -67,6 +67,7 @@ let s:bundle_dict = {
             \ 'juneedahamed/svnj.vim': '1',
             \ 'vim-scripts/sessionman.vim': '0',
             \ 'xkdcc/Session-Viminfo-Management': '',
+            \ 'artnez/vim-rename': '0',
 			\}
 "			\ 'FindMate': '1',
 "			\ 'honza/vim-snippets' : ''
