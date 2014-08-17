@@ -5,7 +5,9 @@
 nmap <silent><leader>nt :NERDTreeToggle<cr>
 
 let NERDChristmasTree 				= 1
-let NERDTreeIgnore 					= ['\.o$', '\.swp$', '\.bak$', '\~$', 'tags', '\.git$'] " 不显示指定的内容
+" 不显示指定的内容
+let NERDTreeIgnore 					= ['\.o$', '\.swp$', '\.bak$', '\~$', 
+        \'tags', '\.git$', '\.out$', '\.session$', '\.viminfo'] 
 let NERDTreeShowHidden 				= 0 "	不显示隐藏文件
 let NERDTreeSortOrder 				= ['\/$', '*', '\.h$', '\.cpp$', '\.c$']	" 排序
 let NERDTreeCaseSensitiveSort 		= 0	" 不分大小写排序
