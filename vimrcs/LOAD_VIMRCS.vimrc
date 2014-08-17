@@ -66,6 +66,7 @@ let s:bundle_dict = {
             \ 'tenghui0425/jce-highlight': '1',
             \ 'juneedahamed/svnj.vim': '1',
             \ 'vim-scripts/sessionman.vim': '0',
+            \ 'xkdcc/Session-Viminfo-Management': '',
 			\}
 "			\ 'FindMate': '1',
 "			\ 'honza/vim-snippets' : ''
