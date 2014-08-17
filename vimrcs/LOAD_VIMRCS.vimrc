@@ -25,7 +25,6 @@ call SourceVimrc('vundle.vimrc', g:Warning_func)
 " 			 " 'vimrc' 加载vimrc
 let s:bundle_dict = {
 			\ 'Rip-Rip/clang_complete': '1',
-			\ 'winmanager': '1',
 			\ 'a.vim': '1',
 			\ 'c.vim': '1',
 			\ 'scrooloose/nerdtree': '1',
@@ -69,6 +68,7 @@ let s:bundle_dict = {
             \ 'xkdcc/Session-Viminfo-Management': '',
             \ 'artnez/vim-rename': '0',
 			\}
+"			\ 'winmanager': '1',
 "			\ 'FindMate': '1',
 "			\ 'honza/vim-snippets' : ''
 "			\ 'airblade/vim-gitgutter': '',
