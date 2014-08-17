@@ -18,3 +18,7 @@ let NERDTreeHightlightCursorline 	= 1	"高亮NERDTree窗口的当前行
 let NERDTreeShowLineNumbers 		= 1
 let NERDTreeDirArrows 				= 1
 
+augroup nerdtree
+    au!
+    autocmd VimLeavePre * NERDTreeClose
+augroup END
