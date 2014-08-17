@@ -62,7 +62,7 @@ let s:bundle_dict = {
             \ 'Shougo/vimproc.vim': '0',
             \ 'vim-scripts/bash-support.vim': '',
             \ 'vim-scripts/Conque-GDB': '',
-            \ 'tenghui0425/jce-highlight': '1',
+            \ 'tenghui0425/jce-highlight': '0',
             \ 'juneedahamed/svnj.vim': '1',
             \ 'vim-scripts/sessionman.vim': '0',
             \ 'xkdcc/Session-Viminfo-Management': '',
