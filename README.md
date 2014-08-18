@@ -98,11 +98,12 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 &lt;leader&gt;tg: 	在当前目录生成tags  
 
 **[minibufexpl.vim : normal]**  
-&lt;leader&gt;mbo: 	打开minibuf窗口  
-&lt;leader&gt;mbc: 	关闭minibuf窗口  
-&lt;leader&gt;mbt: 	触发minibuf窗口  
-&lt;leader&gt;mbk: 	minibuf中的下一个文件  
-&lt;leader&gt;mbj: 	minibuf中的上一个文件  
+&lt;leader&gt;mo: 	打开minibuf窗口  
+&lt;leader&gt;mc: 	关闭minibuf窗口  
+&lt;leader&gt;mt: 	触发minibuf窗口  
+&lt;leader&gt;mf: 	跳到minibuf中
+&lt;leader&gt;mk: 	minibuf中的下一个文件  
+&lt;leader&gt;mj: 	minibuf中的上一个文件  
 &lt;c-l&gt;: 			minibuf中的下一个文件  
 &lt;c-h&gt;: 			minibuf中的上一个文件  
 &lt;Space&gt;: 			minibuf中的下一个文件  
