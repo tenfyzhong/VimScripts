@@ -40,14 +40,13 @@ let s:bundle_dict = {
 			\ 'tpope/vim-surround': '0',
 			\ 'gregsexton/gitv': '0',
 			\ 'tpope/vim-commentary': '0',
-			\ 'Yggdroot/indentLine': '1',
 			\ 'Shougo/unite.vim': '1',
 			\ 'terryma/vim-multiple-cursors': '0',
 			\ 'kshenoy/vim-signature': '0',
 			\ 'Rykka/colorv.vim': '0',
 			\ 'sjl/gundo.vim': '1',
 			\ 'leshill/vim-json': '0',
-			\ 'SirVer/ultisnips': '0',
+			\ 'SirVer/ultisnips': '1',
 			\ 'othree/xml.vim': '1',
 			\ 'itchyny/calendar.vim': '1',
 			\ 'vimwiki/vimwiki': '0',
@@ -77,6 +76,7 @@ let s:bundle_dict = {
 "			\ 'neocomplcache.vim.vimrc': '',
 "			\ 'YouCompleteMe.vimrc': '',
 "			\ 'syntastic.vimrc': '',
+			" \ 'Yggdroot/indentLine': '1',
 
 if version >= 701
 	let s:bundle_dict['majutsushi/tagbar'] = "1"
