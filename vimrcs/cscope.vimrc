@@ -7,7 +7,7 @@ if has ("cscope")
 
 	set nocsverb
 	if filereadable ("cscope.out")
-		cs add cscope.out
+		execute "cs add cscope.out " . getcwd()
 	elseif $CSCOPE_DB_PATH != ""
     	cs add ${CSCOPE_DB_PATH}/cscope.out $CSCOPE_DB_PATH
 	endif
