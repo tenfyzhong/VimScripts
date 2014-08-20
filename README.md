@@ -26,6 +26,10 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 设置CSCOPE\_DB\_PATH的系统变量指向项目的根路径。 最后不要以'/'结尾。例如：  
 <pre><code>export CSCOPE_DB_PATH=~/project</code></pre>
 
+加入插件，在 ~/.vim/vimrcs/ 下加入一个.vimrc后缀的脚本，在脚本开头调用PluginAdd命令
+加载插件，脚本下面可以加入其他的配置。例如：
+<pre><code>PluginAdd 'a.vim'</code></pre>
+
 ##建议
 在crontab中加入clear\_bak\_un\_file.sh的执行，比如每天21:00执行  
 0 21 * * * ~/bin/clear\_bak\_un\_file.sh > /dev/null 2>&1  

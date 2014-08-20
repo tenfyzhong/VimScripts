@@ -1,4 +1,9 @@
 " tagbar
+if version < 701
+    finish
+endif
+
+PluginAdd 'majutsushi/tagbar'
 
 " 比taglist更现代的代码结构浏览工具
 function! TagbarStatusFunc(current, sort, fname, ...) abort

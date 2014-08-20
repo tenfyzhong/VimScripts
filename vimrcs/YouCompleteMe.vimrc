@@ -1,4 +1,6 @@
 " YouCompleteMe
+finish
+PluginAdd 'Valloric/YouCompleteMe'
 
 let g:ycm_min_num_of_chars_for_completion 			= 1
 let g:ycm_add_preview_to_completeopt 				= 1

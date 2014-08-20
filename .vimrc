@@ -75,10 +75,7 @@ augroup END
 
 "**********************************************************************
 " 全局变量
-let g:warning_message 	= 1
 let g:error_message 	= 1
-let g:success_message 	= 0
-let g:use_chinese_doc   = 1     " 是否使用中文文档，1为使用
 let mapleader 			= "'"
 "**********************************************************************
 
@@ -99,5 +96,5 @@ nnoremap <c-right> 				<c-w>l
 
 "**********************************************************************
 " 加载所有插件vimrc配置
-source ~/.vim/vimrcs/LOAD_VIMRCS.vimrc
+source ~/.vim/vimrcs/load_vimrcs.vim
 "**********************************************************************

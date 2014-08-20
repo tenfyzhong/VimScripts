@@ -1,3 +1,3 @@
 " gitv
-
+PluginAdd 'gregsexton/gitv'
 

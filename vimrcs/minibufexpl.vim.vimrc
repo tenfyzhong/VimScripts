@@ -1,4 +1,6 @@
 " minibufexpl.vim
+PluginAdd 'fholgado/minibufexpl.vim'
+
 
 let g:miniBufExplorerAutoStart 	= 1
 let g:miniBufExplBuffersNeeded 	= 1

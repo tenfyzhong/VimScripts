@@ -1,3 +1,3 @@
-" auto_mkdir
-
+"  auto_mkdir
+PluginAdd 'DataWraith/auto_mkdir'
 

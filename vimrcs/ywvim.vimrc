@@ -1,4 +1,6 @@
 " ywvim
+finish
+PluginAdd 'ywvim'
 
 let g:ywvim_ims 				= [['wb', '五笔', 'wubi.ywvim'],['py', '拼音', 'pinyin.ywvim']]
 

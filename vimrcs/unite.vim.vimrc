@@ -1,4 +1,5 @@
 " unite.vim
+PluginAdd 'Shougo/unite.vim'
 
 let g:unite_source_history_yank_enable = 1
 nnoremap <leader>uf :<C-u>Unite file<cr>

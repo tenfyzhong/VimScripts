@@ -1,3 +1,5 @@
+PluginAdd 'juneedahamed/svnj.vim'
+
 let g:svnj_custom_statusbar_ops_hide = 1
 let g:svnj_custom_fuzzy_match_hl = 'Directory' 
 let g:svnj_custom_menu_color = 'Question' 

@@ -1,5 +1,6 @@
 " python_mode
 " help pymode
+PluginAdd 'klen/python-mode'
 
 " add paths to sys.path
 let g:pymode_paths = ['~/code/python']

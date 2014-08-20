@@ -1,5 +1,9 @@
 " taglist
+if version >= 701
+    finish
+endif
 
+PluginAdd 'vim-scripts/taglist.vim'
 
 let Tlist_Ctags_Cmd 				= 'ctags'
 let Tlist_Show_One_File 			= 1

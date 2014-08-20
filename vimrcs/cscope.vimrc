@@ -1,7 +1,6 @@
-" cscope
+"  cscope
 
 if has ("cscope")
-	call EchoPluginMessage("cscope", 1)
 	set cscopetag " 使支持用Ctrl+]和Ctrl+t 快捷键在代码间跳来跳去
 	set csto=0
 	set cst
@@ -41,7 +40,5 @@ if has ("cscope")
 	nnoremap <C-@><C-@>i /:vert scs find i <C-R>=expand("<cfile>")<CR><CR>
 	nnoremap <C-@><C-@>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
-else
-	call EchoPluginMessage("cscope", 0)
 endif
 

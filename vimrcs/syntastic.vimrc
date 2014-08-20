@@ -1,3 +1,4 @@
 " syntastic
-
+finish
+PluginAdd 'syntastic'
 

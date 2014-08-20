@@ -1,5 +1,5 @@
 " nerdtree
-
+PluginAdd 'scrooloose/nerdtree'
 
 " The NERD tree 以树形结构浏览文件夹中的文件
 nmap <silent><leader>nt :NERDTreeToggle<cr>

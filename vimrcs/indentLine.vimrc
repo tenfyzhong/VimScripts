@@ -1,4 +1,5 @@
 " indentLine
+PluginAdd 'Yggdroot/indentLine'
 
 " TAB默认不会显示
 let g:indentLine_loaded 	= 1

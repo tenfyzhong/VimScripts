@@ -1,3 +1,4 @@
-" CmdlineComplete
+"  CmdlineComplete
+PluginAdd 'vim-scripts/CmdlineComplete'
 
 
