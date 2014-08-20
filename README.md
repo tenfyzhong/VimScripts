@@ -75,30 +75,30 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 &lt;leader&gt;gc: 	在当前目录生成.clang\_complete  
 
 **[cscope : normal]**  
-&lt;C-\\&gt;s:  查找这个C符号 
-&lt;C-\\&gt;g:  查找这个定义
-&lt;C-\\&gt;c:  查找调用这个函数的函数
-&lt;C-\\&gt;t:  查找这个字符串
-&lt;C-\\&gt;e:  查找这个egrep匹配模式
-&lt;C-\\&gt;f:  查找这个文件
-&lt;C-\\&gt;i:  查找#include这个文件的文件
-&lt;C-\\&gt;d:  查找被这个函数调用的函数
-&lt;C-@&gt;s:   查找这个C符号, 水平切分窗口 
-&lt;C-@&gt;g:   查找这个定, 水平切分窗口义
-&lt;C-@&gt;c:   查找调用这个函数的函, 水平切分窗口数
-&lt;C-@&gt;t:   查找这个字符, 水平切分窗口串
-&lt;C-@&gt;e:   查找这个egrep匹配模, 水平切分窗口式
-&lt;C-@&gt;f:   查找这个文, 水平切分窗口件
-&lt;C-@&gt;i:   查找#include这个文件的文, 水平切分窗口件
-&lt;C-@&gt;d:   查找被这个函数调用的函, 水平切分窗口数
-&lt;C-@&gt;&lt;C-@&gt;s:  查找这个C符号, 竖直切分窗口 
-&lt;C-@&gt;&lt;C-@&gt;g:  查找这个定, 竖直切分窗口义
-&lt;C-@&gt;&lt;C-@&gt;c:  查找调用这个函数的函, 竖直切分窗口数
-&lt;C-@&gt;&lt;C-@&gt;t:  查找这个字符, 竖直切分窗口串
-&lt;C-@&gt;&lt;C-@&gt;e:  查找这个egrep匹配模, 竖直切分窗口式
-&lt;C-@&gt;&lt;C-@&gt;f:  查找这个文, 竖直切分窗口件
-&lt;C-@&gt;&lt;C-@&gt;i:  查找#include这个文件的文, 竖直切分窗口件
-&lt;C-@&gt;&lt;C-@&gt;d:  查找被这个函数调用的函, 竖直切分窗口数
+&lt;C-\\&gt;s:  查找这个C符号   
+&lt;C-\\&gt;g:  查找这个定义  
+&lt;C-\\&gt;c:  查找调用这个函数的函数  
+&lt;C-\\&gt;t:  查找这个字符串  
+&lt;C-\\&gt;e:  查找这个egrep匹配模式  
+&lt;C-\\&gt;f:  查找这个文件  
+&lt;C-\\&gt;i:  查找#include这个文件的文件  
+&lt;C-\\&gt;d:  查找被这个函数调用的函数  
+&lt;C-@&gt;s:   查找这个C符号, 水平切分窗口   
+&lt;C-@&gt;g:   查找这个定, 水平切分窗口义  
+&lt;C-@&gt;c:   查找调用这个函数的函, 水平切分窗口数  
+&lt;C-@&gt;t:   查找这个字符, 水平切分窗口串  
+&lt;C-@&gt;e:   查找这个egrep匹配模, 水平切分窗口式  
+&lt;C-@&gt;f:   查找这个文, 水平切分窗口件  
+&lt;C-@&gt;i:   查找#include这个文件的文, 水平切分窗口件  
+&lt;C-@&gt;d:   查找被这个函数调用的函, 水平切分窗口数  
+&lt;C-@&gt;&lt;C-@&gt;s:  查找这个C符号, 竖直切分窗口   
+&lt;C-@&gt;&lt;C-@&gt;g:  查找这个定, 竖直切分窗口义  
+&lt;C-@&gt;&lt;C-@&gt;c:  查找调用这个函数的函, 竖直切分窗口数  
+&lt;C-@&gt;&lt;C-@&gt;t:  查找这个字符, 竖直切分窗口串  
+&lt;C-@&gt;&lt;C-@&gt;e:  查找这个egrep匹配模, 竖直切分窗口式  
+&lt;C-@&gt;&lt;C-@&gt;f:  查找这个文, 竖直切分窗口件  
+&lt;C-@&gt;&lt;C-@&gt;i:  查找#include这个文件的文, 竖直切分窗口件  
+&lt;C-@&gt;&lt;C-@&gt;d:  查找被这个函数调用的函, 竖直切分窗口数  
 
 **[ctags : normal]**  
 &lt;leader&gt;tg: 	在当前目录生成tags  
