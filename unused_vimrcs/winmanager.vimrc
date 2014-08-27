@@ -1,5 +1,4 @@
 " winmanager
-finish
 PluginAdd 'winmanager'
 
 "let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'

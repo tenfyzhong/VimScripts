@@ -1,5 +1,4 @@
 " neocomplcache.vim
-finish
 PluginAdd 'Shougo/neocomplcache.vim'
 
 
