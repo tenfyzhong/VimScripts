@@ -48,6 +48,8 @@ set expandtab
 set softtabstop=4
 set smarttab
 
+set showtabline=0   "永完不显示标签栏
+
 set nu 			 " 显示行号
 
 set backupdir=~/.vim/.backupfile
