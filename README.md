@@ -1,13 +1,9 @@
 #VimScripts
 ##安装说明
 将克隆下来的VimScripts重命名为.vim，然后运行install.sh:  
-<pre>
-<code>
-mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作  
+<pre><code>mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作  
 mv VimScripts ~/.vim  
-sh ~/.vim/install.sh  
-</code>
-</pre>
+sh ~/.vim/install.sh</code></pre>
 
 bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete文件
 ，请在工程根目录下运行，或者在工程根目录下的vim命令模式下运行
