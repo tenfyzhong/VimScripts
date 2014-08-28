@@ -30,10 +30,10 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 加载插件，脚本下面可以加入其他的配置。例如：
 <pre><code>PluginAdd 'a.vim'</code></pre>  
 对于不使用的插件，可以有以下操作：  
-1. 将其移到unused\_vimrcs目录下(建议)  
-1. 将其脚本删除  
-1. 将其.vimrc的后缀重命名为其他  
-1. 在脚本的开头加上 finish  
+-  将其移到unused\_vimrcs目录下(建议)  
+-  将其脚本删除  
+-  将其.vimrc的后缀重命名为其他  
+-  在脚本的开头加上 finish  
 
 ##建议
 在crontab中加入clear\_bak\_un\_file.sh的执行，比如每天21:00执行  
