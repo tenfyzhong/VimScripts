@@ -16,5 +16,3 @@ nnoremap <silent><Leader>mk 	<esc>:w<esc>:MBEbn<cr>
 nnoremap <silent><Leader>mj 	<esc>:w<esc>:MBEbp<cr>
 nnoremap <silent><c-h>			<esc>:w<esc>:MBEbp<cr>
 nnoremap <silent><c-l> 			<esc>:w<esc>:MBEbn<cr>
-nnoremap <silent><BS>			<esc>:w<esc>:MBEbp<cr>
-nnoremap <silent><Space>        <esc>:w<esc>:MBEbn<cr>

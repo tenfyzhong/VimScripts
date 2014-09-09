@@ -111,8 +111,6 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 &lt;leader&gt;mj: 	minibuf中的上一个文件  
 &lt;c-l&gt;: 			minibuf中的下一个文件  
 &lt;c-h&gt;: 			minibuf中的上一个文件  
-&lt;Space&gt;: 			minibuf中的下一个文件  
-&lt;BS&gt;: 			minibuf中的上一个文件  
 
 **[nerdtree : normal]**  
 &lt;leader&gt;nt: 	触发nerdtree  
