@@ -1,3 +1,3 @@
 " delimitMate
-
+PluginAdd 'Raimondi/delimitMate'
 

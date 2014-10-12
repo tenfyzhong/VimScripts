@@ -1,3 +1,8 @@
+" 版本低于7.0会有很多配置用不了，要求更新
+if version < 700
+    echoerr "请更新到vim 7.0以上"
+    finish
+endif
 "**********************************************************************
 " 基础设置
 " source $VIMRUNTIME/mswin.vim
@@ -43,6 +48,8 @@ set expandtab
 set softtabstop=4
 set smarttab
 
+set showtabline=0   "永完不显示标签栏
+
 set nu 			 " 显示行号
 
 set backupdir=~/.vim/.backupfile
@@ -70,10 +77,7 @@ augroup END
 
 "**********************************************************************
 " 全局变量
-let g:warning_message 	= 1
 let g:error_message 	= 1
-let g:success_message 	= 0
-let g:use_chinese_doc   = 1     " 是否使用中文文档，1为使用
 let mapleader 			= "'"
 "**********************************************************************
 
@@ -94,5 +98,5 @@ nnoremap <c-right> 				<c-w>l
 
 "**********************************************************************
 " 加载所有插件vimrc配置
-source ~/.vim/vimrcs/LOAD_VIMRCS.vimrc
+source ~/.vim/vimrcs/load_vimrcs.vim
 "**********************************************************************

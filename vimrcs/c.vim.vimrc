@@ -1,4 +1,5 @@
-" c.vim
+"  c.vim
+PluginAdd 'c.vim'
 
 " 帮助: help csupport
 let g:C_GuiSnippetBrowser 	= 'commandline'

@@ -1,3 +1,3 @@
-" colorv.vim
-
+"  colorv.vim
+PluginAdd 'Rykka/colorv.vim'
 

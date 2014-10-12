@@ -1,0 +1,1 @@
+PluginAdd 'asins/vimcdoc'

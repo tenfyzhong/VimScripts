@@ -1,0 +1,1 @@
+PluginAdd 'artnez/vim-rename'

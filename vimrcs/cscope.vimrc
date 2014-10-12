@@ -1,46 +1,36 @@
-" cscope
+"  cscope
 
-if has ("cscope")
-	call EchoPluginMessage("cscope", 1)
-	set cscopetag " 使支持用Ctrl+]和Ctrl+t 快捷键在代码间跳来跳去
-	set csto=0
-	set cst
+PluginAdd 'tenghui0425/cscope.vim'
 
-	set nocsverb
-	if filereadable ("cscope.out")
-		cs add cscope.out
-	elseif $CSCOPE_DB != ""
-		cs add $CSCOPE_DB
-	endif
-	set csverb
+let g:cscope_files = '\.c$\|\.cpp$\|\.h$\|\.hpp$\|\.jce$\|\.ini$'
+let g:cscope_ignore_custom='\.py$\|\.java$\|\.log$\|\.txt$\|\.sh$\|\.js$\|\.pl$\|\.PL$'
 
-	nnoremap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-	nnoremap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
-	nnoremap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>cg :CsGen<CR>
 
-	nnoremap <C-Space>s :scs find s <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space>g :scs find g <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space>c :scs find c <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space>t :scs find t <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space>e :scs find e <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
-	nnoremap <C-Space>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
-	nnoremap <C-Space>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-\>s :call CscopeFind('s', expand('<cword>'))<CR>
+nnoremap <C-\>g :call CscopeFind('g', expand('<cword>'))<CR>
+nnoremap <C-\>c :call CscopeFind('c', expand('<cword>'))<CR>
+nnoremap <C-\>t :call CscopeFind('t', expand('<cword>'))<CR>
+nnoremap <C-\>e :call CscopeFind('e', expand('<cword>'))<CR>
+nnoremap <C-\>f :call CscopeFind('f', expand('<cword>'))<CR>
+nnoremap <C-\>i :call CscopeFind('i', expand('<cword>'))<CR>
+nnoremap <C-\>d :call CscopeFind('d', expand('<cword>'))<CR>
 
-	nnoremap <C-Space><C-Space>s /:vert scs find s <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space><C-Space>g /:vert scs find g <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space><C-Space>c /:vert scs find c <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space><C-Space>t /:vert scs find t <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space><C-Space>e /:vert scs find e <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <C-Space><C-Space>i /:vert scs find i <C-R>=expand("<cfile>")<CR><CR>
-	nnoremap <C-Space><C-Space>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-@>s :call ScscopeFind('s', expand('<cword>'))<CR>
+nnoremap <C-@>g :call ScscopeFind('g', expand('<cword>'))<CR>
+nnoremap <C-@>c :call ScscopeFind('c', expand('<cword>'))<CR>
+nnoremap <C-@>t :call ScscopeFind('t', expand('<cword>'))<CR>
+nnoremap <C-@>e :call ScscopeFind('e', expand('<cword>'))<CR>
+nnoremap <C-@>f :call ScscopeFind('f', expand('<cword>'))<CR>
+nnoremap <C-@>i :call ScscopeFind('i', expand('<cword>'))<CR>
+nnoremap <C-@>d :call ScscopeFind('d', expand('<cword>'))<CR>
 
-else
-	call EchoPluginMessage("cscope", 0)
-endif
+nnoremap <C-@><C-@>s :call VcscopeFind('s', expand('<cword>'))<CR>
+nnoremap <C-@><C-@>g :call VcscopeFind('g', expand('<cword>'))<CR>
+nnoremap <C-@><C-@>c :call VcscopeFind('c', expand('<cword>'))<CR>
+nnoremap <C-@><C-@>t :call VcscopeFind('t', expand('<cword>'))<CR>
+nnoremap <C-@><C-@>e :call VcscopeFind('e', expand('<cword>'))<CR>
+nnoremap <C-@><C-@>f :call VcscopeFind('f', expand('<cword>'))<CR>
+nnoremap <C-@><C-@>i :call VcscopeFind('i', expand('<cword>'))<CR>
+nnoremap <C-@><C-@>d :call VcscopeFind('d', expand('<cword>'))<CR>
 

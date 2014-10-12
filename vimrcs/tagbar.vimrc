@@ -1,4 +1,9 @@
 " tagbar
+if version < 701
+    finish
+endif
+
+PluginAdd 'majutsushi/tagbar'
 
 " 比taglist更现代的代码结构浏览工具
 function! TagbarStatusFunc(current, sort, fname, ...) abort
@@ -17,3 +22,7 @@ let g:tagbar_status_func 		= 'TagbarStatusFunc'
 let g:tagbar_show_visibility 	= 1
 let g:tagbar_iconchars 			= ['▸', '▾']
 
+augroup tagbar
+    au!
+    autocmd VimLeavePre * TagbarClose
+augroup END

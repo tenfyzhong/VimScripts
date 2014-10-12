@@ -1,0 +1,3 @@
+" syntastic
+PluginAdd 'syntastic'
+

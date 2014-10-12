@@ -1,4 +1,5 @@
 " neocomplcache.vim
+PluginAdd 'Shougo/neocomplcache.vim'
 
 
 " Disable AutoComplPop.

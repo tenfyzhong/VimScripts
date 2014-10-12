@@ -1,5 +1,5 @@
 " winmanager
-
+PluginAdd 'winmanager'
 
 "let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
 let g:persitentBehaviour 		= 0

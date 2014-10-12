@@ -1,9 +1,9 @@
 #VimScripts
 ##安装说明
 将克隆下来的VimScripts重命名为.vim，然后运行install.sh:  
-	mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作  
-	mv VimScripts ~/.vim  
-	sh ~/.vim/install.sh  
+<pre><code>mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作  
+mv VimScripts ~/.vim  
+sh ~/.vim/install.sh</code></pre>
 
 bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete文件
 ，请在工程根目录下运行，或者在工程根目录下的vim命令模式下运行
@@ -16,13 +16,32 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 在.vimrc中将g:use\_chinese\_doc设为1则使用中文文档。  
 若不成功，请运行:BundleInstall   
 
+##说明  
+对于要使用cscope的项目，在项目根路径生成cscope的数据库，用以下命令：
+<pre><code>cscope -Rbkq</code></pre>
+设置CSCOPE\_DB\_PATH的系统变量指向项目的根路径。 最后不要以'/'结尾。例如：  
+<pre><code>export CSCOPE_DB_PATH=~/project</code></pre>
+
+加入插件，在 ~/.vim/vimrcs/ 下加入一个.vimrc后缀的脚本，在脚本开头调用PluginAdd命令
+加载插件，脚本下面可以加入其他的配置。例如：
+<pre><code>PluginAdd 'a.vim'</code></pre>  
+对于不使用的插件，可以有以下操作：  
+-  将其移到unused\_vimrcs目录下(建议)  
+-  将其脚本删除  
+-  将其.vimrc的后缀重命名为其他  
+-  在脚本的开头加上 finish  
+
 ##建议
 在crontab中加入clear\_bak\_un\_file.sh的执行，比如每天21:00执行  
 0 21 * * * ~/bin/clear\_bak\_un\_file.sh > /dev/null 2>&1  
 
 ##注意
+- vim版本要求7.0以上，否则很多配置用不了，会直接不加载配置。
 - neocomplcache和clang\_complete会冲突，只能使用一个。
 - vim-powerline会与clang\_complete冲突，建议不使用。
+- 若退出vim时报未定义的变量b:NERDTree的错误，请将
+~/.vim/bundle/nerdtree/plugin/NERD\_tree.vim下augroup NERDTree
+的autocmd BufWinLeave注释掉。
 
 ##依赖程序
 - git:用于版本管理
@@ -55,43 +74,41 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 &lt;leader&gt;gc: 	在当前目录生成.clang\_complete  
 
 **[cscope : normal]**  
-&lt;C-\_&gt;s:  
-&lt;C-\_&gt;g:  
-&lt;C-\_&gt;c:  
-&lt;C-\_&gt;t:  
-&lt;C-\_&gt;e:  
-&lt;C-\_&gt;f:  
-&lt;C-\_&gt;i:  
-&lt;C-\_&gt;d:  
-&lt;C-Space&gt;s:  
-&lt;C-Space&gt;g:  
-&lt;C-Space&gt;c:  
-&lt;C-Space&gt;t:  
-&lt;C-Space&gt;e:  
-&lt;C-Space&gt;f:  
-&lt;C-Space&gt;i:  
-&lt;C-Space&gt;d:  
-&lt;C-Space&gt;&lt;C-Space&gt;s:  
-&lt;C-Space&gt;&lt;C-Space&gt;g:  
-&lt;C-Space&gt;&lt;C-Space&gt;c:  
-&lt;C-Space&gt;&lt;C-Space&gt;t:  
-&lt;C-Space&gt;&lt;C-Space&gt;e:  
-&lt;C-Space&gt;&lt;C-Space&gt;i:  
-&lt;C-Space&gt;&lt;C-Space&gt;d:  
+&lt;C-\\&gt;s:  查找这个C符号   
+&lt;C-\\&gt;g:  查找这个定义  
+&lt;C-\\&gt;c:  查找调用这个函数的函数  
+&lt;C-\\&gt;t:  查找这个字符串  
+&lt;C-\\&gt;e:  查找这个egrep匹配模式  
+&lt;C-\\&gt;f:  查找这个文件  
+&lt;C-\\&gt;i:  查找#include这个文件的文件  
+&lt;C-\\&gt;d:  查找被这个函数调用的函数  
+&lt;C-@&gt;s:   查找这个C符号, 水平切分窗口   
+&lt;C-@&gt;g:   查找这个定, 水平切分窗口义  
+&lt;C-@&gt;c:   查找调用这个函数的函, 水平切分窗口数  
+&lt;C-@&gt;t:   查找这个字符, 水平切分窗口串  
+&lt;C-@&gt;e:   查找这个egrep匹配模, 水平切分窗口式  
+&lt;C-@&gt;f:   查找这个文, 水平切分窗口件  
+&lt;C-@&gt;i:   查找#include这个文件的文, 水平切分窗口件  
+&lt;C-@&gt;d:   查找被这个函数调用的函, 水平切分窗口数  
+&lt;C-@&gt;&lt;C-@&gt;s:  查找这个C符号, 竖直切分窗口   
+&lt;C-@&gt;&lt;C-@&gt;g:  查找这个定, 竖直切分窗口义  
+&lt;C-@&gt;&lt;C-@&gt;c:  查找调用这个函数的函, 竖直切分窗口数  
+&lt;C-@&gt;&lt;C-@&gt;t:  查找这个字符, 竖直切分窗口串  
+&lt;C-@&gt;&lt;C-@&gt;e:  查找这个egrep匹配模, 竖直切分窗口式  
+&lt;C-@&gt;&lt;C-@&gt;f:  查找这个文, 竖直切分窗口件  
+&lt;C-@&gt;&lt;C-@&gt;i:  查找#include这个文件的文, 竖直切分窗口件  
+&lt;C-@&gt;&lt;C-@&gt;d:  查找被这个函数调用的函, 竖直切分窗口数  
 
 **[ctags : normal]**  
 &lt;leader&gt;tg: 	在当前目录生成tags  
 
 **[minibufexpl.vim : normal]**  
-&lt;leader&gt;mbo: 	打开minibuf窗口  
-&lt;leader&gt;mbc: 	关闭minibuf窗口  
-&lt;leader&gt;mbt: 	触发minibuf窗口  
-&lt;leader&gt;mbk: 	minibuf中的下一个文件  
-&lt;leader&gt;mbj: 	minibuf中的上一个文件  
-&lt;c-l&gt;: 			minibuf中的下一个文件  
-&lt;c-h&gt;: 			minibuf中的上一个文件  
-
-**[minibufexpl.vim : insert]**  
+&lt;leader&gt;mo: 	打开minibuf窗口  
+&lt;leader&gt;mc: 	关闭minibuf窗口  
+&lt;leader&gt;mt: 	触发minibuf窗口  
+&lt;leader&gt;mf: 	跳到minibuf中
+&lt;leader&gt;mk: 	minibuf中的下一个文件  
+&lt;leader&gt;mj: 	minibuf中的上一个文件  
 &lt;c-l&gt;: 			minibuf中的下一个文件  
 &lt;c-h&gt;: 			minibuf中的上一个文件  
 
@@ -128,6 +145,10 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 &lt;leader&gt;gu: 	GundoToogle  
 
 **[vimshell : normal]**  
-$lt;leader%gt;vt:   在tab中打开一个VimShell
-$lt;leader%gt;vs:   在当前打开一个VimShell
+&lt;leader&gt;vt:   在tab中打开一个VimShell
+&lt;leader&gt;vs:   在当前打开一个VimShell
 
+**[unite : normal]**  
+&lt;leader&gt;uf:   进行Unite file的查找
+&lt;leader&gt;ur:   进行Unite file\_rec的查找
+&lt;leader&gt;ub:   进行Unite buffer的查找
