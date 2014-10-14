@@ -1,5 +1,5 @@
 "  cscope
-
+finish
 PluginAdd 'tenghui0425/cscope.vim'
 
 let g:cscope_files = '\.c$\|\.cpp$\|\.h$\|\.hpp$\|\.jce$\|\.ini$'
