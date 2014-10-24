@@ -94,6 +94,8 @@ nnoremap <c-left> 				<c-w>h
 nnoremap <c-down> 				<c-w>j
 nnoremap <c-up> 				<c-w>k
 nnoremap <c-right> 				<c-w>l
+nnoremap j                      gj
+nnoremap k                      gk
 "**********************************************************************
 
 "**********************************************************************
