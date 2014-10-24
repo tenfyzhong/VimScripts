@@ -66,8 +66,8 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 &lt;leader&gt;j: 		移到下边窗口  
 &lt;leader&gt;k: 		移到上边窗口  
 &lt;leader&gt;l: 		移到右边窗口  
-j:              gj
-k:              gk
+j:              gj    
+k:              gk    
 
 **[a.vim : normal]**  
 &lt;leader&gt;as: 	在源文件和头文件中切换  
