@@ -19,5 +19,5 @@
 
 set -o nounset                              # Treat unset variables as an error
 
-find ~/.vim/.backupfile -mtime +10 -name "*" -exec rm -rf {} \;
-find ~/.vim/.undofile -mtime +10 -name "*" -exec rm -rf {} \;
+find ~/.vim/.backupfile -mtime +10 -name "*~" -exec rm -rf {} \;
+find ~/.vim/.undofile -mtime +10 -name "%*" -exec rm -rf {} \;
