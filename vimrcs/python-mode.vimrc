@@ -9,7 +9,7 @@ let g:pymode_paths = ['~/code/python']
 " W391:文本末尾有空行
 let g:pymode_lint_ignore = "E221,E222,W391"
 let g:pymode = 1
-let g:pymode_warnings = 1
+let g:pymode_folding = 0
 let g:pymode_options = 1
 let g:pymode_options_max_line_length = 80
 let g:pymode_quickfix_minheight = 3
