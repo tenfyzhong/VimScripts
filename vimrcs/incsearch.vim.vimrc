@@ -6,7 +6,7 @@ map g/ <Plug>(incsearch-stay)
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 " :h g:incsearch#auto_nohlsearch
 set hlsearch
-let g:incsearch#auto_nohlsearch = 1
+let g:incsearch#auto_nohlsearch = 0
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
 map *  <Plug>(incsearch-nohl-*)
