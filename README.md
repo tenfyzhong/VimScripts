@@ -41,7 +41,8 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 - vim-powerline会与clang\_complete冲突，建议不使用。
 - 若退出vim时报未定义的变量b:NERDTree的错误，请将
 ~/.vim/bundle/nerdtree/plugin/NERD\_tree.vim下augroup NERDTree
-的autocmd BufWinLeave注释掉。
+的autocmd BufWinLeave注释掉。  
+- YouCompleteMe的安装说明请参考其文档。  
 
 ##依赖程序
 - git:用于版本管理
