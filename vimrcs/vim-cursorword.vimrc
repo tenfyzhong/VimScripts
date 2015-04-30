@@ -1,0 +1,1 @@
+PluginAdd 'tenfyzhong/vim-cursorword'

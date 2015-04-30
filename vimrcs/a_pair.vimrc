@@ -1,1 +1,1 @@
-PluginAdd 'tenghui0425/a_pair'
+PluginAdd 'tenfyzhong/a_pair'

@@ -44,6 +44,17 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 的autocmd BufWinLeave注释掉。  
 - YouCompleteMe的安装说明请参考其文档。  
 
+##自编译vim建议  
+加入以下的属性  
+- --with-features=huge：支持最大特性
+- --enable-rubyinterp：启用Vim对ruby编写的插件的支持
+- --enable-pythoninterp：启用Vim对python编写的插件的支持
+- --enable-luainterp：启用Vim对lua编写的插件的支持
+- --enable-perlinterp：启用Vim对perl编写的插件的支持
+- --enable-multibyte：多字节支持 可以在Vim中输入中文
+- --enable-cscope：Vim对cscope支持
+- --enable-gui=gtk2：gtk2支持,也可以使用gnome，表示生成gvim
+
 ##依赖程序
 - git:用于版本管理
 - ctags:tags，如tagbag等要用到
@@ -52,7 +63,6 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 - doxygen(可选，用于生成代码文档)
 - sbcl:common lisp的编译器，slimv用到
 - xterm:运行lisp解析器服务器
-
 
 ##快捷键绑定
 **[global : normal]**  

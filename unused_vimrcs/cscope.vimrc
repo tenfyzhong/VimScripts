@@ -1,6 +1,6 @@
 "  cscope
 finish
-PluginAdd 'tenghui0425/cscope.vim'
+PluginAdd 'tenfyzhong/cscope.vim'
 
 let g:cscope_files = '\.c$\|\.cpp$\|\.h$\|\.hpp$\|\.jce$\|\.ini$'
 let g:cscope_ignore_custom='\.py$\|\.java$\|\.log$\|\.txt$\|\.sh$\|\.js$\|\.pl$\|\.PL$'
