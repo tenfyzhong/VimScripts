@@ -1,1 +1,1 @@
-PluginAdd 'tenghui0425/jce-highlight'
+PluginAdd 'tenfyzhong/jce-highlight'

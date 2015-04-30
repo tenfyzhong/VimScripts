@@ -1,1 +1,1 @@
-PluginAdd 'tenghui0425/vim-cursorword'
+PluginAdd 'tenfyzhong/vim-cursorword'

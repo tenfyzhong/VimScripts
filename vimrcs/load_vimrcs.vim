@@ -44,8 +44,8 @@ endfunction
 
 
 " plugin为插件的全名
-" 比如https://github.com/tenghui0425/jce-highlight
-" 则plugin为tenghui0425/jce-highlight
+" 比如https://github.com/tenfyzhong/jce-highlight
+" 则plugin为tenfyzhong/jce-highlight
 function! BundlePlugin(plugin)
     if has_key(g:plugin_lists, a:plugin)
         return 1
