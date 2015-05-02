@@ -1,0 +1,48 @@
+#!/bin/bash - 
+#===============================================================================
+#
+#          FILE: build_ycm.sh
+# 
+#         USAGE: ./build_ycm.sh [project_path] 
+# 
+#   DESCRIPTION: 查找目录下的.h文件，将它导入对应的ycm配置中
+# 
+#       OPTIONS: 要构建的路径
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: tenfy
+#  ORGANIZATION: 
+#       CREATED: 2014年11月09日 18:49
+#      REVISION:  1.0
+#===============================================================================
+
+set -o nounset                              # Treat unset variables as an error
+
+if [ $# -ne 1 ]; then
+    echo "用法: build_ycm [project_path]"
+    exit 1
+fi
+
+cwd=$(readlink -f $1)
+
+if [ ! -d $cwd ]; then
+    echo "$1 is not a valid path"
+    exit 2
+fi
+
+cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py $cwd
+
+sed -i "s/final_flags\.remove.*stdlib=libc.*/pass/" $cwd/.ycm_extra_conf.py
+
+INCFILES=$(find $cwd -name "*.h" | tr "\n" " ")
+
+if [ "$INCFILES" ]; then
+    INCLUDE=$(echo $INCFILES | xargs -l1 dirname | sort | uniq)
+    for item in ${INCLUDE[@]}; do
+        sed -i "/'\.\/ClangCompleter',/a '-I',\n'$item'," $cwd/.ycm_extra_conf.py
+        echo "building [$item]"
+    done
+fi
+
+echo -e "\033[32;49;1m build .ycm_extra_conf.py on path [$cwd] success\033[0m"
