@@ -38,7 +38,7 @@ sed -i "s/final_flags\.remove.*stdlib=libc.*/pass/" $cwd/.ycm_extra_conf.py
 INCFILES=$(find $cwd -name "*.h" | tr "\n" " ")
 
 if [ "$INCFILES" ]; then
-    INCLUDE=$(echo $INCFILES | xargs -l1 dirname | sort | uniq)
+    INCLUDE=$(echo $INCFILES | xargs dirname | sort | uniq)
     for item in ${INCLUDE[@]}; do
         sed -i "/'\.\/ClangCompleter',/a '-I',\n'$item'," $cwd/.ycm_extra_conf.py
         echo "building [$item]"
