@@ -16,7 +16,7 @@ endfunction
 function! LoadSingleVimrc(vimrc, will_check_exist)
     if a:will_check_exist == 1
         if !filereadable(expand(a:vimrc))
-            call Error(a:vimrc . " is not exist")
+            call ErrorLog(a:vimrc . " is not exist")
             return
         endif
     endif
@@ -41,11 +41,49 @@ function! PluginExist(plugin_name)
     return globpath(b:bundle_path, a:plugin_name) != "" 
 endfunction
 
-" 输出错误信息
-function! Error(msg)
-	if g:error_message 
-		echohl ErrorMsg | echom a:msg | echohl None
+function! LOG_TRACE()
+    return 1
+endfunction
+
+function! LOG_DEBUG()
+    return 2
+endfunction
+
+function! LOG_ERROR()
+    return 4
+endfunction
+
+function! LOG_SYSTEM()
+    return 8
+endfunction
+
+function! Log(msg)
+    echohl ErrorMsg | echom a:msg | echohl None
+endfunction
+
+function! TraceLog(msg)
+    if g:log_level <= LOG_TRACE()
+        call Log(a:msg)
+    endif
+endfunction
+
+function! DebugLog(msg)
+    if g:log_level <= LOG_DEBUG()
+        call Log(a:msg)
+    endif
+endfunction
+
+function! ErrorLog(msg)
+	if g:log_level <= LOG_ERROR()
+        call Log(a:msg)
 	endif
+endfunction
+
+" 系统错误log
+function! SystemLog(msg)
+    if g:log_level <= LOG_SYSTEM()
+        call Log(a:msg)
+    endif
 endfunction
 
 
@@ -61,7 +99,7 @@ function! BundlePlugin(plugin)
 	execute "Bundle " . "'" . a:plugin . "'"
 	let l:plugin_name   = split(a:plugin, "/")[-1]
     if PluginExist(l:plugin_name) == 0
-        call Error(l:plugin_name . ' not exist')
+        call ErrorLog(l:plugin_name . ' not exist')
         return 0
     else
         return 1
@@ -70,11 +108,11 @@ endfunction
 
 com! -nargs=1 PluginAdd if BundlePlugin(<args>) == 0 | finish | endif
 
-call SetVariablesDefault("g:error_message", 0)
+call SetVariablesDefault("g:log_level", 4)
 
-" 若设置了环境变量NOVIMWARNING，则不进行任何警告
-if $NOVIMWARNING
-	let g:error_message 	= 0
+" 若设置了环境变量VIML_LOG_LEVEL，则不进行任何警告
+if $VIML_LOG_LEVEL
+	let g:log_level 	= $VIML_LOG_LEVEL
 endif
 
 " 加载插件

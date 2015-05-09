@@ -9,6 +9,6 @@ if PluginExist('vundle')
 	
 	nnoremap <silent><leader>bi :BundleInstall<cr>
 else
-    call Error('vundle no exist')
+    call ErrorLog('vundle no exist')
 endif
 

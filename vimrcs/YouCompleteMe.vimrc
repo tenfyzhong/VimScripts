@@ -5,7 +5,7 @@ let b:youcomplete_path = "~/.vim/bundle/YouCompleteMe/"
 " 如果ycm不可用，则去加载supertab
 if isdirectory(expand(b:youcomplete_path))
     if !has('python')
-        call Error('has no python, will load supertab')
+        call DebugLog('has no python, will load supertab')
         let g:use_supertab = 1
         call LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
         finish
@@ -14,7 +14,7 @@ if isdirectory(expand(b:youcomplete_path))
     let b:youcompleteme_lib_path = b:youcomplete_path . "third_party/ycmd/"
     if !filereadable(b:youcompleteme_lib_path . "libclang.so") 
                 \&& !filereadable(b:youcompleteme_lib_path . "ycm_core.so")
-        call Error("has no compile YCM, will load supertab")
+        call DebugLog("has no compile YCM, will load supertab")
         let g:use_supertab = 1
         call LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
         finish
