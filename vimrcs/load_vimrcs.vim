@@ -39,7 +39,7 @@ function! PluginExist(plugin_name)
     if isdirectory(b:bundle_path . a:plugin_name)
         return 1
     else
-        call ErrorLog(l:plugin_name . ' not exist')
+        call ErrorLog(a:plugin_name . ' not exist')
         return 0
     endif
 endfunction
