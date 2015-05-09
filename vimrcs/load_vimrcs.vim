@@ -49,12 +49,16 @@ function! LOG_DEBUG()
     return 2
 endfunction
 
-function! LOG_ERROR()
+function! LOG_INFO()
     return 4
 endfunction
 
-function! LOG_SYSTEM()
+function! LOG_ERROR()
     return 8
+endfunction
+
+function! LOG_SYSTEM()
+    return 16
 endfunction
 
 function! Log(msg)
@@ -69,6 +73,12 @@ endfunction
 
 function! DebugLog(msg)
     if g:log_level <= LOG_DEBUG()
+        call Log(a:msg)
+    endif
+endfunction
+
+function! InfoLog(msg)
+    if g:log_level <= LOG_INFO()
         call Log(a:msg)
     endif
 endfunction
