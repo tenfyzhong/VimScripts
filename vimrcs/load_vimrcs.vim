@@ -13,7 +13,13 @@ endfunction
 
 
 " 加载一个vimrc脚本 
-function! LoadSingleVimrc(vimrc)
+function! LoadSingleVimrc(vimrc, will_check_exist)
+    if a:will_check_exist == 1
+        if !filereadable(expand(a:vimrc))
+            call Error(a:vimrc . " is not exist")
+            return
+        endif
+    endif
     execute "source " . a:vimrc
 endfunction
 
@@ -21,12 +27,12 @@ endfunction
 " 加载~/.vim/vimrcs/目录下的所有.vimrc脚本
 function! LoadVimrcs()
     " 先加载vundle，再加载其他插件
-    call LoadSingleVimrc(b:vimrc_path . 'vundle.vim')
+    call LoadSingleVimrc(b:vimrc_path . 'vundle.vim', 1)
     if PluginExist('vundle')
         let l:vimrc_path_str    = globpath(b:vimrc_path, "*.vimrc")
         let l:vimrc_list        = split(l:vimrc_path_str)
         for vimrc in l:vimrc_list
-            call LoadSingleVimrc(vimrc)
+            call LoadSingleVimrc(vimrc, 0)
         endfor
     endif
 endfunction

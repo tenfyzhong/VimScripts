@@ -1,4 +1,8 @@
 " supertab
+if !exists("g:use_supertab") || g:use_supertab == 0
+    finish
+end
+
 PluginAdd 'ervandew/supertab'
 
 let g:SuperTabDefaultCompletionType 	= "context"
