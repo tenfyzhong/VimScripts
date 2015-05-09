@@ -1,6 +1,8 @@
 " YouCompleteMe
 
 let b:youcomplete_path = "~/.vim/bundle/YouCompleteMe/"
+" 如果ycm的project目录已经存在，则去判断ycm是否可用
+" 如果ycm不可用，则去加载supertab
 if isdirectory(expand(b:youcomplete_path))
     if !has('python')
         call Error('has no python, will load supertab')
@@ -19,6 +21,8 @@ if isdirectory(expand(b:youcomplete_path))
     endif
 endif
 
+" 如果ycm的project目录不存在，直接PluginAdd ycm，以便git clone ycm
+" 如果ycm的project目录存在，且ycm可用，也PluginAdd ycm，以便加载ycm
 PluginAdd 'Valloric/YouCompleteMe'
 
 let g:ycm_min_num_of_chars_for_completion 			= 1
