@@ -40,6 +40,7 @@ set wildmenu 	" 增加命令行自动补全操作
 " 显示相关
 "set cursorcolumn		" 高亮当前列
 "set cursorline			" 高亮当前行
+set t_Co=256 
 
 " tab缩进4
 set tabstop=4
