@@ -34,6 +34,7 @@ fi
 cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py $cwd
 
 sed -i "s/final_flags\.remove.*stdlib=libc.*/pass/" $cwd/.ycm_extra_conf.py
+sed -i "/'-fexceptions',/a '-Wno-unused-parameter'," $cwd/.ycm_extra_conf.py
 
 INCFILES=$(find $cwd -name "*.h" | tr "\n" " ")
 
