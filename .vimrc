@@ -56,6 +56,8 @@ set nu 			 " 显示行号
 set backupdir=~/.vim/.backupfile
 set undodir=~/.vim/.undofile
 
+set pastetoggle=<leader>p
+
 " 开启语法高亮
 syntax on
 syntax enable
