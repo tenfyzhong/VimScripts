@@ -2,7 +2,7 @@
 
 if has ("cscope")
 	set cscopetag " 使支持用Ctrl+]和Ctrl+t 快捷键在代码间跳来跳去
-	set csto=0
+	set csto=1
 	set cst
 
 	set nocsverb
