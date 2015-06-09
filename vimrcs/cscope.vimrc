@@ -1,21 +1,4 @@
 "  cscope
-"  查找当前目录到父目录中的cscope.out
-function! FindCscopePath(path)
-    if a:path == '/'
-        return ''
-    endif
-
-    if filereadable (a:path . '/cscope.out')
-        return a:path 
-    else
-        let id = strridx(a:path, '/')
-        if id > 0 && a:path[id] == '/'
-            let id = id - 1
-        endif
-        return FindCscopePath(a:path[0:id])
-    endif
-
-endfunction
 
 if has ("cscope")
 	set cscopetag " 使支持用Ctrl+]和Ctrl+t 快捷键在代码间跳来跳去
@@ -23,7 +6,7 @@ if has ("cscope")
 	set cst
 
 	set nocsverb
-    let p = FindCscopePath(getcwd())
+    let p = FindFile(getcwd(), 'cscope.out')
     if p != ''
         execute "cs add " . p . "/cscope.out " . p
     endif

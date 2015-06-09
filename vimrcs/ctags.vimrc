@@ -1,7 +1,10 @@
 " ctags
 
 if executable('ctags')
-	set tags=tags
+    let p = FindFile(getcwd(), 'tags')
+    if p != ''
+        execute "set tags=" . p . "/tags"
+    endif
 	nnoremap <silent><leader>tg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<cr>
 endif
 
