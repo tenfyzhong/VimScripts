@@ -22,6 +22,22 @@ let g:tagbar_status_func 		= 'TagbarStatusFunc'
 let g:tagbar_show_visibility 	= 1
 let g:tagbar_iconchars 			= ['▸', '▾']
 
+let g:tagbar_type_jce = {
+            \ 'ctagstype'   : 'jce',
+            \ 'kinds'       : [
+                \ 'm:module',
+                \ 's:struct',
+            \],
+            \ 'sro'         : '::'
+\}
+
+let g:tagbar_type_make = {
+            \ 'kinds':[
+                \ 'm:macros',
+                \ 't:targets'
+            \ ]
+\}
+
 augroup tagbar
     au!
     autocmd VimLeavePre * TagbarClose
