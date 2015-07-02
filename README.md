@@ -79,6 +79,10 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 j:              gj    
 k:              gk    
 &lt;leader&gt;p:        paste toggle  
+&lt;c-e&gt;             ESC
+
+**[global : insert]**  
+&lt;c-e&gt;             ESC
 
 **[a.vim : normal]**  
 &lt;leader&gt;as: 	在源文件和头文件中切换  
