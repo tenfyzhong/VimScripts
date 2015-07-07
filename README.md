@@ -80,9 +80,6 @@ j:              gj
 k:              gk    
 &lt;leader&gt;p:        paste toggle  
 
-**[global : all]**  
-&lt;c-e&gt;             ESC
-
 **[a.vim : normal]**  
 &lt;leader&gt;as: 	在源文件和头文件中切换  
 
