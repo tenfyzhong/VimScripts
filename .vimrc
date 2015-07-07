@@ -59,7 +59,7 @@ set undodir=~/.vim/.undofile
 
 set pastetoggle=<leader>p
 
-set splitbelow
+" set splitbelow
 set splitright
 
 " 开启语法高亮
