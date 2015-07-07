@@ -100,8 +100,8 @@ nnoremap <c-up> 				<c-w>k
 nnoremap <c-right> 				<c-w>l
 nnoremap j                      gj
 nnoremap k                      gk
-nnoremap <c-e>                  <ESC>
-inoremap <c-e>                  <ESC>
+noremap <c-e>                  <ESC>
+noremap! <c-e>                 <ESC>
 "**********************************************************************
 
 "**********************************************************************
