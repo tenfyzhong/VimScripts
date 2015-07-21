@@ -1,0 +1,1 @@
+PluginAdd 'garyburd/go-explorer'
