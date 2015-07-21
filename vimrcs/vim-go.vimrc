@@ -1,0 +1,1 @@
+PluginAdd 'fatih/vim-go'
