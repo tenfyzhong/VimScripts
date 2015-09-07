@@ -80,6 +80,10 @@ j:              gj
 k:              gk    
 &lt;leader&gt;p:        paste toggle  
 
+**[global : console]**  
+&lt;c-k&gt;             命令行上滚  
+&lt;c-j&gt;             命令行下滚  
+
 **[a.vim : normal]**  
 &lt;leader&gt;as: 	在源文件和头文件中切换  
 

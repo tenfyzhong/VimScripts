@@ -106,6 +106,8 @@ nnoremap <c-up> 				<c-w>k
 nnoremap <c-right> 				<c-w>l
 nnoremap j                      gj
 nnoremap k                      gk
+cnoremap <c-k>                  <Up>
+cnoremap <c-j>                  <Down>
 "**********************************************************************
 
 "**********************************************************************
