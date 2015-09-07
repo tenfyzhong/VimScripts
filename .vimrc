@@ -37,6 +37,7 @@ set incsearch	" 随着键入即时搜索
 "set smartcase	 有一个或以上大写字母时仍大小写敏感
 
 set wildmenu 	" 增加命令行自动补全操作
+set history=500
 
 " 显示相关
 "set cursorcolumn		" 高亮当前列
