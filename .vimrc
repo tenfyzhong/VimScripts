@@ -109,6 +109,10 @@ nnoremap j                      gj
 nnoremap k                      gk
 cnoremap <c-k>                  <Up>
 cnoremap <c-j>                  <Down>
+nnoremap <silent><leader>1 :diffget 1<CR> :diffupdate<CR>
+nnoremap <silent><leader>2 :diffget 2<CR> :diffupdate<CR>
+nnoremap <silent><leader>3 :diffget 3<CR> :diffupdate<CR>
+nnoremap <silent><leader>4 :diffget 4<CR> :diffupdate<CR>
 "**********************************************************************
 
 "**********************************************************************
