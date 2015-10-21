@@ -173,3 +173,5 @@ k:              gk
 &lt;leader&gt;uf:   进行Unite file的查找
 &lt;leader&gt;ur:   进行Unite file\_rec的查找
 &lt;leader&gt;ub:   进行Unite buffer的查找
+
+hello
