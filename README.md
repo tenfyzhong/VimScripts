@@ -79,9 +79,9 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 j:              gj    
 k:              gk    
 &lt;leader&gt;p:        paste toggle  
-&lt;leader&gt;1:        合并时取窗口LOCAL的内容
-&lt;leader&gt;2:        合并时取窗口BASE的内容
-&lt;leader&gt;3:        合并时取窗口REMOTE的内容
+&lt;leader&gt;l:        合并时取窗口LOCAL的内容
+&lt;leader&gt;b:        合并时取窗口BASE的内容
+&lt;leader&gt;r:        合并时取窗口REMOTE的内容
 
 **[global : console]**  
 &lt;c-k&gt;             命令行上滚  
