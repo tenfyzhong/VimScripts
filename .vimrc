@@ -109,7 +109,9 @@ nnoremap <c-down> 				<c-w>j
 nnoremap <c-up> 				<c-w>k
 nnoremap <c-right> 				<c-w>l
 nnoremap j                      gj
+nnoremap gj                     j
 nnoremap k                      gk
+nnoremap gk                     k
 cnoremap <c-k>                  <Up>
 cnoremap <c-j>                  <Down>
 nnoremap <silent><leader>l :diffget LO<CR> :diffupdate<CR> 

@@ -1,0 +1,1 @@
+PluginAdd 'tpope/vim-abolish'
