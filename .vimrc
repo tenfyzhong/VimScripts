@@ -113,9 +113,9 @@ nnoremap k                      gk
 nnoremap gk                     k
 cnoremap <c-k>                  <Up>
 cnoremap <c-j>                  <Down>
-nnoremap <silent><leader>l :diffget LO<CR> :diffupdate<CR> 
-nnoremap <silent><leader>b :diffget BA<CR> :diffupdate<CR>
-nnoremap <silent><leader>r :diffget RE<CR> :diffupdate<CR>
+nnoremap <silent>]l :diffget LO<CR> :diffupdate<CR> 
+nnoremap <silent>]b :diffget BA<CR> :diffupdate<CR>
+nnoremap <silent>]r :diffget RE<CR> :diffupdate<CR>
 " }}} --------------------------------------------------------------------------
 
 " source plugin ------------------------------------------------------------ {{{
