@@ -12,8 +12,8 @@ if isdirectory(b:youcomplete_path)
     endif
 
     let b:youcompleteme_lib_path = b:youcomplete_path . "third_party/ycmd/"
-    if !filereadable(b:youcompleteme_lib_path . "libclang.so") 
-                \&& !filereadable(b:youcompleteme_lib_path . "ycm_core.so")
+    if !(filereadable(b:youcompleteme_lib_path . "ycm_client_support.so") && filereadable(b:youcompleteme_lib_path . "ycm_core.so")
+                \||filereadable(b:youcompleteme_lib_path . "ycm_client_support.dll") && filereadable(b:youcompleteme_lib_path . "ycm_core.dll"))
         call InfoLog("has no compile YCM, will load supertab")
         let g:use_supertab = 1
         call LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
