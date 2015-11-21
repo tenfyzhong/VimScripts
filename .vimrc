@@ -14,7 +14,7 @@ set cindent 	 " C语言缩进方式
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,gb2312,cp936,usc-bom,euc-jp,gb18030
 set mouse= 		  " 禁用鼠标
-set wrapmargin=4
+set wrapmargin=0
 set textwidth=0
 set colorcolumn=81
 set backspace=2 " 使回格键正常处理indet,eol,start 等
