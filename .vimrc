@@ -91,7 +91,7 @@ augroup END
 
 " global variable ---------------------------------------------------------- {{{
 " 全局变量
-let g:log_level = 8
+let g:log_level = vimlog#error_level()
 let mapleader 	= "'"
 " }}} --------------------------------------------------------------------------
 
@@ -121,3 +121,5 @@ nnoremap <silent><leader>r :diffget RE<CR> :diffupdate<CR>
 " source plugin ------------------------------------------------------------ {{{
 source ~/.vim/vimrcs/load_vimrcs.vim
 " }}} --------------------------------------------------------------------------
+"
+

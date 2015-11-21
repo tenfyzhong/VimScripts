@@ -1,6 +1,6 @@
 " powerline
 if version < 702
-    InfoLog("version should be greater 7.2")
+    call vimlog#InfoLog("version should be greater 7.2")
     finish
 endif
 

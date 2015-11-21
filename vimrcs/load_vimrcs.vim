@@ -18,7 +18,7 @@ endfunction
 " 加载一个vimrc脚本 ---------------------------------------------------------{{{
 function! LoadSingleVimrc(vimrc, will_check_exist)
     if a:will_check_exist == 1 && !filereadable(expand(a:vimrc))
-        call ErrorLog(a:vimrc . " is not exist")
+        call vimlog#ErrorLog(a:vimrc . " is not exist")
     else
         execute "source " . a:vimrc
     endif
@@ -45,67 +45,8 @@ function! PluginExist(plugin_name)
     if isdirectory(b:bundle_path . a:plugin_name)
         return 1
     else
-        call ErrorLog(a:plugin_name . ' not exist')
+        call vimlog#ErrorLog(a:plugin_name . ' not exist')
         return 0
-    endif
-endfunction
-" }}} --------------------------------------------------------------------------
-
-" log level -----------------------------------------------------------------{{{
-function! LOG_TRACE()
-    return 1
-endfunction
-
-function! LOG_DEBUG()
-    return 2
-endfunction
-
-function! LOG_INFO()
-    return 4
-endfunction
-
-function! LOG_ERROR()
-    return 8
-endfunction
-
-function! LOG_SYSTEM()
-    return 16
-endfunction
-" }}} --------------------------------------------------------------------------
-
-" log function --------------------------------------------------------------{{{
-function! Log(msg)
-    echohl ErrorMsg | echom a:msg | echohl None
-endfunction
-
-function! TraceLog(msg)
-    if g:log_level <= LOG_TRACE()
-        call Log(a:msg)
-    endif
-endfunction
-
-function! DebugLog(msg)
-    if g:log_level <= LOG_DEBUG()
-        call Log(a:msg)
-    endif
-endfunction
-
-function! InfoLog(msg)
-    if g:log_level <= LOG_INFO()
-        call Log(a:msg)
-    endif
-endfunction
-
-function! ErrorLog(msg)
-	if g:log_level <= LOG_ERROR()
-        call Log(a:msg)
-	endif
-endfunction
-
-" 系统错误log
-function! SystemLog(msg)
-    if g:log_level <= LOG_SYSTEM()
-        call Log(a:msg)
     endif
 endfunction
 " }}} --------------------------------------------------------------------------
