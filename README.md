@@ -81,9 +81,14 @@ gj:             j
 k:              gk    
 gk:             k    
 &lt;leader&gt;p:        paste toggle  
-&lt;leader&gt;l:        合并时取窗口LOCAL的内容
-&lt;leader&gt;b:        合并时取窗口BASE的内容
-&lt;leader&gt;r:        合并时取窗口REMOTE的内容
+[1:        diff时取窗口1的内容
+[2:        diff时取窗口2的内容
+[3:        diff时取窗口3的内容
+[4:        diff时取窗口4的内容
+]1:        diff时将内容放到窗口1
+]2:        diff时将内容放到窗口2
+]3:        diff时将内容放到窗口3
+]4:        diff时将内容放到窗口4
 
 **[global : console]**  
 &lt;c-k&gt;             命令行上滚  

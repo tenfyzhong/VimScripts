@@ -113,9 +113,16 @@ nnoremap k                      gk
 nnoremap gk                     k
 cnoremap <c-k>                  <Up>
 cnoremap <c-j>                  <Down>
-nnoremap <silent>]l :diffget LO<CR> :diffupdate<CR> 
-nnoremap <silent>]b :diffget BA<CR> :diffupdate<CR>
-nnoremap <silent>]r :diffget RE<CR> :diffupdate<CR>
+if &diff
+nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR> 
+nnoremap <silent>[2 :diffget 2<CR> :diffupdate<CR>
+nnoremap <silent>[3 :diffget 3<CR> :diffupdate<CR>
+nnoremap <silent>[4 :diffget 4<CR> :diffupdate<CR>
+nnoremap <silent>]1 :diffput 1<CR> :diffupdate<CR> 
+nnoremap <silent>]2 :diffput 2<CR> :diffupdate<CR>
+nnoremap <silent>]3 :diffput 3<CR> :diffupdate<CR>
+nnoremap <silent>]4 :diffput 4<CR> :diffupdate<CR>
+endif
 " }}} --------------------------------------------------------------------------
 
 " source plugin ------------------------------------------------------------ {{{
