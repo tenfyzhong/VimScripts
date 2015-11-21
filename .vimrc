@@ -80,12 +80,6 @@ augroup initial
     autocmd FileType vim setlocal foldmethod=marker
     autocmd bufwritepost *vimrc source %
     autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE set noexpandtab
-    autocmd BufRead,BufNewFile *.go set filetype=go
-    autocmd BufRead,BufNewFile *.go setfiletype go
-    autocmd BufRead,BufNewFile *.go set syntax=go
-    autocmd BufRead,BufNewFile *.scala set filetype=scala
-    autocmd BufRead,BufNewFile *.scala setfiletype scala
-    autocmd BufRead,BufNewFile *.scala set syntax=scala
 augroup END
 " }}} --------------------------------------------------------------------------
 
