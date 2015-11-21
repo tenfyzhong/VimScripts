@@ -1,18 +1,21 @@
 " load_vimrc
 
+" variable ------------------------------------------------------------------{{{
 let g:plugin_lists = {}
 let b:vimrc_path    = expand("~/.vim/vimrcs/")
 let b:bundle_path 	= expand("~/.vim/bundle/")
+" }}} --------------------------------------------------------------------------
 
-" 对未定义的变量设置默认值
+" 对未定义的变量设置默认值 --------------------------------------------------{{{
 function! SetVariablesDefault(name, value)
 	if !exists(a:name)
 		execute "let " . a:name " = " . a:value
 	endif
 endfunction
+" }}} --------------------------------------------------------------------------
 
 
-" 加载一个vimrc脚本 
+" 加载一个vimrc脚本 ---------------------------------------------------------{{{
 function! LoadSingleVimrc(vimrc, will_check_exist)
     if a:will_check_exist == 1 && !filereadable(expand(a:vimrc))
         call ErrorLog(a:vimrc . " is not exist")
@@ -20,9 +23,10 @@ function! LoadSingleVimrc(vimrc, will_check_exist)
         execute "source " . a:vimrc
     endif
 endfunction
+" }}} --------------------------------------------------------------------------
 
 
-" 加载~/.vim/vimrcs/目录下的所有.vimrc脚本
+" 加载~/.vim/vimrcs/目录下的所有.vimrc脚本-----------------------------------{{{
 function! LoadVimrcs()
     if PluginExist('vundle')
         " 先加载vundle，再加载其他插件
@@ -34,7 +38,9 @@ function! LoadVimrcs()
         endfor
     endif
 endfunction
+" }}} --------------------------------------------------------------------------
 
+" 检查插件是否存在 ----------------------------------------------------------{{{
 function! PluginExist(plugin_name)
     if isdirectory(b:bundle_path . a:plugin_name)
         return 1
@@ -43,7 +49,9 @@ function! PluginExist(plugin_name)
         return 0
     endif
 endfunction
+" }}} --------------------------------------------------------------------------
 
+" log level -----------------------------------------------------------------{{{
 function! LOG_TRACE()
     return 1
 endfunction
@@ -63,7 +71,9 @@ endfunction
 function! LOG_SYSTEM()
     return 16
 endfunction
+" }}} --------------------------------------------------------------------------
 
+" log function --------------------------------------------------------------{{{
 function! Log(msg)
     echohl ErrorMsg | echom a:msg | echohl None
 endfunction
@@ -98,8 +108,10 @@ function! SystemLog(msg)
         call Log(a:msg)
     endif
 endfunction
+" }}} --------------------------------------------------------------------------
 
 
+" BundlePlugin 加载插件的函数 -----------------------------------------------{{{
 " plugin为插件的全名
 " 比如https://github.com/tenfyzhong/jce-highlight
 " 则plugin为tenfyzhong/jce-highlight
@@ -112,8 +124,9 @@ function! BundlePlugin(plugin)
         call PluginExist(l:plugin_name)
     endif
 endfunction
+" }}} --------------------------------------------------------------------------
 
-" 从path目录开始向上查找filename，找到则返回对应的path
+" 从path目录开始向上查找filename，找到则返回对应的path ----------------------{{{
 function! FindFile(path, filename)
     if a:path == '/'
         if filereadable (a:path . '/' . a:filename)
@@ -133,9 +146,13 @@ function! FindFile(path, filename)
         return FindFile(a:path[0:id], a:filename)
     endif
 endfunction
+" }}} --------------------------------------------------------------------------
 
+" command -------------------------------------------------------------------{{{
 com! -nargs=1 PluginAdd call BundlePlugin(<args>)
+" }}} --------------------------------------------------------------------------
 
+" call function -------------------------------------------------------------{{{
 call SetVariablesDefault("g:log_level", 8)
 
 " 若设置了环境变量VIML_LOG_LEVEL，则不进行任何警告
@@ -148,4 +165,5 @@ endif
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
 call LoadVimrcs()
+" }}} --------------------------------------------------------------------------
 

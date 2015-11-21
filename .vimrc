@@ -1,11 +1,12 @@
+" Requirement -------------------------------------------------------------- {{{
 " 版本低于7.0会有很多配置用不了，要求更新
 if version < 700
     echoerr "请更新到vim 7.0以上"
     finish
 endif
-"**********************************************************************
-" 基础设置
-" source $VIMRUNTIME/mswin.vim
+" }}} --------------------------------------------------------------------------
+
+" base setting  ------------------------------------------------------------ {{{
 source $VIMRUNTIME/vimrc_example.vim
 set nocompatible " 关闭vi兼容模式
 set cindent 	 " C语言缩进方式
@@ -71,13 +72,12 @@ filetype on					" 侦测文件类型
 filetype plugin on			" 开启文件识别
 filetype indent on			" 针对不同的文件类型采用不同的缩进格式
 filetype plugin indent on	" 启动自动补全
-"**********************************************************************
+" }}} --------------------------------------------------------------------------
 
-"**********************************************************************
-" autocmd
-" vimrc文件修改之后自动加载
+" autocmd ------------------------------------------------------------------ {{{
 augroup initial
     au!
+    autocmd FileType vim setlocal foldmethod=marker
     autocmd bufwritepost *vimrc source %
     autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE set noexpandtab
     autocmd BufRead,BufNewFile *.go set filetype=go
@@ -87,16 +87,15 @@ augroup initial
     autocmd BufRead,BufNewFile *.scala setfiletype scala
     autocmd BufRead,BufNewFile *.scala set syntax=scala
 augroup END
-"**********************************************************************
+" }}} --------------------------------------------------------------------------
 
-"**********************************************************************
+" global variable ---------------------------------------------------------- {{{
 " 全局变量
 let g:log_level = 8
 let mapleader 	= "'"
-"**********************************************************************
+" }}} --------------------------------------------------------------------------
 
-"**********************************************************************
-" 全局快捷键
+" global mapping ----------------------------------------------------------- {{{
 nnoremap <silent><leader>ev 	:split $MYVIMRC<cr>
 nnoremap <silent><leader>sv 	:source $MYVIMRC<cr>:echo "source .vimrc success"<cr>
 nnoremap <F12> 					<C-w>w	" F12 窗口切换
@@ -117,9 +116,8 @@ cnoremap <c-j>                  <Down>
 nnoremap <silent><leader>l :diffget LO<CR> :diffupdate<CR> 
 nnoremap <silent><leader>b :diffget BA<CR> :diffupdate<CR>
 nnoremap <silent><leader>r :diffget RE<CR> :diffupdate<CR>
-"**********************************************************************
+" }}} --------------------------------------------------------------------------
 
-"**********************************************************************
-" 加载所有插件vimrc配置
+" source plugin ------------------------------------------------------------ {{{
 source ~/.vim/vimrcs/load_vimrcs.vim
-"**********************************************************************
+" }}} --------------------------------------------------------------------------
