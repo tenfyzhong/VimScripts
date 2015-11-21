@@ -6,7 +6,7 @@ if has ("cscope")
 	set cst
 
 	set nocsverb
-    let p = FindFile(getcwd(), 'cscope.out')
+    let p = file#FindFile(getcwd(), 'cscope.out')
     if p != ''
         execute "cs add " . p . "/cscope.out " . p
     endif

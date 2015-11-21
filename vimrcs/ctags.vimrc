@@ -1,7 +1,7 @@
 " ctags
 
 if executable('ctags')
-    let p = FindFile(getcwd(), 'tags')
+    let p = file#FindFile(getcwd(), 'tags')
     if p != ''
         execute "set tags=" . p . "/tags"
     endif
