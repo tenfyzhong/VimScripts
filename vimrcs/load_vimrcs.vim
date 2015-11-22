@@ -16,7 +16,7 @@ endfunction
 
 
 " 加载一个vimrc脚本 ---------------------------------------------------------{{{
-function! s:LoadSingleVimrc(vimrc, will_check_exist)
+function! LoadSingleVimrc(vimrc, will_check_exist)
     if a:will_check_exist == 1 && !filereadable(expand(a:vimrc))
         call vimlog#ErrorLog(a:vimrc . " is not exist")
     else
@@ -30,11 +30,11 @@ endfunction
 function! s:LoadVimrcs()
     if <SID>PluginExist('vundle')
         " 先加载vundle，再加载其他插件
-        call <SID>LoadSingleVimrc(b:vimrc_path . 'vundle.vim', 1)
+        call LoadSingleVimrc(b:vimrc_path . 'vundle.vim', 1)
         let l:vimrc_path_str    = globpath(b:vimrc_path, "*.vimrc")
         let l:vimrc_list        = split(l:vimrc_path_str)
         for vimrc in l:vimrc_list
-            call <SID>LoadSingleVimrc(vimrc, 0)
+            call LoadSingleVimrc(vimrc, 0)
         endfor
     endif
 endfunction
