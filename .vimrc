@@ -10,7 +10,7 @@ endif
 source $VIMRUNTIME/vimrc_example.vim
 set nocompatible " 关闭vi兼容模式
 set cindent 	 " C语言缩进方式
-"set foldmethod=indent   根据缩进折叠
+set foldmethod=syntax   " 根据缩进折叠
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,gb2312,cp936,usc-bom,euc-jp,gb18030
 set mouse= 		  " 禁用鼠标
@@ -107,6 +107,7 @@ nnoremap k                      gk
 nnoremap gk                     k
 cnoremap <c-k>                  <Up>
 cnoremap <c-j>                  <Down>
+
 if &diff
 nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR> 
 nnoremap <silent>[2 :diffget 2<CR> :diffupdate<CR>
@@ -122,5 +123,4 @@ endif
 " source plugin ------------------------------------------------------------ {{{
 source ~/.vim/vimrcs/load_vimrcs.vim
 " }}} --------------------------------------------------------------------------
-"
 
