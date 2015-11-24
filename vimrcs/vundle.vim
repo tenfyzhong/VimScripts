@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 " let Vundle manage Vundle
-PluginAdd 'gmarik/vundle'
+PluginAdd 'VundleVim/Vundle.vim'
 
 nnoremap <silent><leader>bi :BundleInstall<cr>
 
