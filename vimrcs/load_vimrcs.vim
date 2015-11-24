@@ -28,14 +28,25 @@ endfunction
 
 " 加载~/.vim/vimrcs/目录下的所有.vimrc脚本-----------------------------------{{{
 function! s:LoadVimrcs()
-    if <SID>PluginExist('vundle')
+    if <SID>PluginExist('Vundle.vim')
+        filetype off
+        set rtp+=~/.vim/bundle/Vundle.vim
+        call vundle#begin()
+
         " 先加载vundle，再加载其他插件
         call LoadSingleVimrc(b:vimrc_path . 'vundle.vim', 1)
+
         let l:vimrc_path_str    = globpath(b:vimrc_path, "*.vimrc")
         let l:vimrc_list        = split(l:vimrc_path_str)
         for vimrc in l:vimrc_list
             call LoadSingleVimrc(vimrc, 0)
         endfor
+
+        call vundle#end()
+        filetype on					" 侦测文件类型	
+        filetype plugin on			" 开启文件识别
+        filetype indent on			" 针对不同的文件类型采用不同的缩进格式
+        filetype plugin indent on	" 启动自动补全
     endif
 endfunction
 " }}} --------------------------------------------------------------------------
@@ -60,7 +71,7 @@ function! s:BundlePlugin(plugin)
     " 每个插件只加载一次
     if !has_key(g:plugin_lists, a:plugin)
         let g:plugin_lists[a:plugin] = 1
-        execute "Bundle " . "'" . a:plugin . "'"
+        execute "Plugin " . "'" . a:plugin . "'"
         let l:plugin_name   = split(a:plugin, "/")[-1]
         call <SID>PluginExist(l:plugin_name)
     endif
@@ -83,11 +94,6 @@ endif
 " 建议：插件的配置最好以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
-filetype off
 call <SID>LoadVimrcs()
-filetype on					" 侦测文件类型	
-filetype plugin on			" 开启文件识别
-filetype indent on			" 针对不同的文件类型采用不同的缩进格式
-filetype plugin indent on	" 启动自动补全
 " }}} --------------------------------------------------------------------------
 
