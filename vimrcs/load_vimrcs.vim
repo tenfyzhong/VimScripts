@@ -83,6 +83,11 @@ endif
 " 建议：插件的配置最好以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
+filetype off
 call <SID>LoadVimrcs()
+filetype on					" 侦测文件类型	
+filetype plugin on			" 开启文件识别
+filetype indent on			" 针对不同的文件类型采用不同的缩进格式
+filetype plugin indent on	" 启动自动补全
 " }}} --------------------------------------------------------------------------
 
