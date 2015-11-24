@@ -68,10 +68,6 @@ set splitright
 syntax on
 syntax enable
 
-filetype on					" 侦测文件类型	
-filetype plugin on			" 开启文件识别
-filetype indent on			" 针对不同的文件类型采用不同的缩进格式
-filetype plugin indent on	" 启动自动补全
 " }}} --------------------------------------------------------------------------
 
 " autocmd ------------------------------------------------------------------ {{{
@@ -121,6 +117,11 @@ endif
 " }}} --------------------------------------------------------------------------
 
 " source plugin ------------------------------------------------------------ {{{
+filetype off
 source ~/.vim/vimrcs/load_vimrcs.vim
+filetype on					" 侦测文件类型	
+filetype plugin on			" 开启文件识别
+filetype indent on			" 针对不同的文件类型采用不同的缩进格式
+filetype plugin indent on	" 启动自动补全
 " }}} --------------------------------------------------------------------------
 
