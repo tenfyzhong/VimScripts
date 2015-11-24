@@ -1,0 +1,1 @@
+PluginAdd 'digitaltoad/vim-jade'
