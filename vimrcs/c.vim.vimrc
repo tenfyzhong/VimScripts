@@ -8,4 +8,4 @@ let g:C_FormatDate 			= '%Y-%m-%d'
 let g:C_FormatTime 			= '%H:%M'
 
 let g:C_LocalTemplateFile 	= $HOME . '/.vim/resource/csupport/Templates'
-
+let g:C_GlobalTemplateFile  = g:C_LocalTemplateFile
