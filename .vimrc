@@ -73,10 +73,9 @@ syntax enable
 " autocmd ------------------------------------------------------------------ {{{
 augroup initial
     au!
-    autocmd FileType vim setlocal foldmethod=marker
-    autocmd bufwritepost *vimrc source %
-    autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE set noexpandtab
-    autocmd FileType html,jade setlocal shiftwidth=2 softtabstop=2
+    autocmd bufwritepost *vimrc source % 
+    autocmd bufwritepost *.vim source % 
+    autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE setlocal noexpandtab
 augroup END
 " }}} --------------------------------------------------------------------------
 
