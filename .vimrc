@@ -76,6 +76,7 @@ augroup initial
     autocmd FileType vim setlocal foldmethod=marker
     autocmd bufwritepost *vimrc source %
     autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE set noexpandtab
+    autocmd FileType html,jade setlocal shiftwidth=2 softtabstop=2
 augroup END
 " }}} --------------------------------------------------------------------------
 
