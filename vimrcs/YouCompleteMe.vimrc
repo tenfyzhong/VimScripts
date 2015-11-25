@@ -7,7 +7,7 @@ if isdirectory(b:youcomplete_path)
     if !has('python')
         call vimlog#InfoLog('has no python, will load supertab')
         let g:use_supertab = 1
-        call LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
+        call loader#core#LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
         finish
     endif
 
@@ -16,7 +16,7 @@ if isdirectory(b:youcomplete_path)
                 \||filereadable(b:youcompleteme_lib_path . "ycm_client_support.dll") && filereadable(b:youcompleteme_lib_path . "ycm_core.dll"))
         call vimlog#InfoLog("has no compile YCM, will load supertab")
         let g:use_supertab = 1
-        call LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
+        call loader#core#LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
         finish
     endif
 endif
