@@ -1,5 +1,5 @@
 AddTabularPattern! define /#define \w*\zs /l0
-AddTabularPattern! colon  /:\zs
+AddTabularPattern! colon  /:\zs/l0r1
 
 
 " augroup {{{

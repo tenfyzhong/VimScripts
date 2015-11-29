@@ -180,7 +180,11 @@ gk:             k
 &lt;leader&gt;ur:   进行Unite file\_rec的查找
 &lt;leader&gt;ub:   进行Unite buffer的查找
 
+**[tabular : normal]**  
+&lt;leader&gt;a=:   进行全局的等号对齐  
+&lt;leader&gt;a::   进行全局的冒号对齐  
+
 **[tabular : visual]**  
 &lt;leader&gt;a=:   选择的行进行等号对齐  
-&lt;leader&gt;a::   选择的行进行冒号对齐
+&lt;leader&gt;a::   选择的行进行冒号对齐  
 
