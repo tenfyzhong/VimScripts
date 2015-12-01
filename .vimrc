@@ -75,7 +75,6 @@ augroup initial
     au!
     autocmd bufwritepost *vimrc source % 
     autocmd bufwritepost *.vim source % 
-    autocmd BufNewFile,BufRead makefile,Makefile,MAKEFILE setlocal noexpandtab
 augroup END
 " }}} --------------------------------------------------------------------------
 
