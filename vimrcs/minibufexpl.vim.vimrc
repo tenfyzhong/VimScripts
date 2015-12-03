@@ -8,11 +8,10 @@ let g:miniBufExplCycleArround 	= 1
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMaxSize 		= 1
 
-nnoremap <silent><Leader>mo 	:MBEOpen<cr>
-nnoremap <silent><Leader>mc 	:MBEClose<cr>
-nnoremap <silent><Leader>mt 	:MBEToggle<cr>
-nnoremap <silent><Leader>mf     :MBEFocus<cr>
-nnoremap <silent><Leader>mk 	<esc>:w<esc>:MBEbn<cr>
-nnoremap <silent><Leader>mj 	<esc>:w<esc>:MBEbp<cr>
-nnoremap <silent><c-h>			<esc>:w<esc>:MBEbp<cr>
-nnoremap <silent><c-l> 			<esc>:w<esc>:MBEbn<cr>
+if !exists("g:minibufexpl_map")
+    let g:minibufexpl_map = 1
+    nnoremap <unique> <silent> <Leader>mt 	:MBEToggle<cr>
+    nnoremap <unique> <silent> <Leader>mf   :MBEFocus<cr>
+    nnoremap <unique> <silent> <c-h>		<esc>:w<esc>:MBEbp<cr>
+    nnoremap <unique> <silent> <c-l> 		<esc>:w<esc>:MBEbn<cr>
+endif

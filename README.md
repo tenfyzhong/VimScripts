@@ -130,14 +130,10 @@ gk:             k
 &lt;leader&gt;tg: 	在当前目录生成tags  
 
 **[minibufexpl.vim : normal]**  
-&lt;leader&gt;mo: 	打开minibuf窗口  
-&lt;leader&gt;mc: 	关闭minibuf窗口  
 &lt;leader&gt;mt: 	触发minibuf窗口  
 &lt;leader&gt;mf: 	跳到minibuf中
-&lt;leader&gt;mk: 	minibuf中的下一个文件  
-&lt;leader&gt;mj: 	minibuf中的上一个文件  
-&lt;c-l&gt;: 			minibuf中的下一个文件  
-&lt;c-h&gt;: 			minibuf中的上一个文件  
+&lt;c-l&gt;: 		minibuf中的下一个文件  
+&lt;c-h&gt;: 		minibuf中的上一个文件  
 
 **[nerdtree : normal]**  
 &lt;leader&gt;nt: 	触发nerdtree  
@@ -188,6 +184,18 @@ gk:             k
 &lt;leader&gt;a=:   选择的行进行等号对齐  
 &lt;leader&gt;a::   选择的行进行冒号对齐  
 
-**[tabular : all]**  
-&lt;leader&gt;M:   mark当前单词
-&lt;leader&gt;N:   清除mark
+**[Mark--Karkat : all]**  
+&lt;leader&gt;M:   mark当前单词  
+&lt;leader&gt;N:   清除mark  
+
+**[vim-bookmarks : normal]**  
+&lt;leader&gt;mm:   toggle一个bookmark  
+&lt;leader&gt;mi:   toggle一个annotate  
+&lt;leader&gt;ma:   显示所有的bookmark和annotate  
+&lt;leader&gt;mj:   跳到下一个bookmark  
+&lt;leader&gt;mk:   跳到上一个bookmark  
+&lt;leader&gt;mc:   清除bookmark  
+&lt;leader&gt;mx:   清除所有的bookmark  
+&lt;leader&gt;mu:   bookmark上移  
+&lt;leader&gt;md:   bookmark下移  
+
