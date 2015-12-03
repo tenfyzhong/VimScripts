@@ -188,3 +188,6 @@ gk:             k
 &lt;leader&gt;a=:   选择的行进行等号对齐  
 &lt;leader&gt;a::   选择的行进行冒号对齐  
 
+**[tabular : all]**  
+&lt;leader&gt;M:   mark当前单词
+&lt;leader&gt;N:   清除mark
