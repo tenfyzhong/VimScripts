@@ -24,5 +24,8 @@ let Tlist_WinHeight 				= 10
 let Tlist_WinWidth 					= 18
 let Tlist_Use_Horiz_Window 			= 0
 
-map <silent><leader>tt :TlistToggle<cr>
+if !exists("g:taglist_vim_maps")
+    let g:taglist_vim_maps = 1
+    nnoremap <unique><silent><leader>tt :TlistToggle<cr>
+endif
 

@@ -2,7 +2,10 @@
 PluginAdd 'scrooloose/nerdtree'
 
 " The NERD tree 以树形结构浏览文件夹中的文件
-nmap <silent><leader>nt :NERDTreeToggle<cr>
+if !exists("g:nerdtree_maps")
+    let g:nerdtree_maps = 1
+    nnoremap <unique><silent><leader>nt :NERDTreeToggle<cr>
+endif
 
 let NERDChristmasTree 				= 1
 " 不显示指定的内容

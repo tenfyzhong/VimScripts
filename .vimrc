@@ -86,33 +86,36 @@ let mapleader 	= "'"
 " }}} --------------------------------------------------------------------------
 
 " global mapping ----------------------------------------------------------- {{{
-nnoremap <silent><leader>ev 	:split $MYVIMRC<cr>
-nnoremap <silent><leader>sv 	:source $MYVIMRC<cr>:echo "source .vimrc success"<cr>
-nnoremap <F12> 					<C-w>w	" F12 窗口切换
-nnoremap <leader>h 				<c-w>h
-nnoremap <leader>j 				<c-w>j
-nnoremap <leader>k 				<c-w>k
-nnoremap <leader>l 				<c-w>l
-nnoremap <c-left> 				<c-w>h
-nnoremap <c-down> 				<c-w>j
-nnoremap <c-up> 				<c-w>k
-nnoremap <c-right> 				<c-w>l
-nnoremap j                      gj
-nnoremap gj                     j
-nnoremap k                      gk
-nnoremap gk                     k
-cnoremap <c-k>                  <Up>
-cnoremap <c-j>                  <Down>
+if !exists("g:vimrc_maps")
+    let g:vimrc_maps = 1
+    nnoremap <unique><silent><leader>ev 	:split $MYVIMRC<cr>
+    nnoremap <unique><silent><leader>sv 	:source $MYVIMRC<cr>:echo "source .vimrc success"<cr>
+    nnoremap <unique><F12> 					<C-w>w	" F12 窗口切换
+    nnoremap <unique><leader>h 				<c-w>h
+    nnoremap <unique><leader>j 				<c-w>j
+    nnoremap <unique><leader>k 				<c-w>k
+    nnoremap <unique><leader>l 				<c-w>l
+    nnoremap <unique><c-left> 				<c-w>h
+    nnoremap <unique><c-down> 				<c-w>j
+    nnoremap <unique><c-up> 				<c-w>k
+    nnoremap <unique><c-right> 				<c-w>l
+    nnoremap <unique>j                      gj
+    nnoremap <unique>gj                     j
+    nnoremap <unique>k                      gk
+    nnoremap <unique>gk                     k
+    cnoremap <unique><c-k>                  <Up>
+    cnoremap <unique><c-j>                  <Down>
 
-if &diff
-nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR> 
-nnoremap <silent>[2 :diffget 2<CR> :diffupdate<CR>
-nnoremap <silent>[3 :diffget 3<CR> :diffupdate<CR>
-nnoremap <silent>[4 :diffget 4<CR> :diffupdate<CR>
-nnoremap <silent>]1 :diffput 1<CR> :diffupdate<CR> 
-nnoremap <silent>]2 :diffput 2<CR> :diffupdate<CR>
-nnoremap <silent>]3 :diffput 3<CR> :diffupdate<CR>
-nnoremap <silent>]4 :diffput 4<CR> :diffupdate<CR>
+    if &diff
+        nnoremap <unique><silent>[1 :diffget 1<CR> :diffupdate<CR> 
+        nnoremap <unique><silent>[2 :diffget 2<CR> :diffupdate<CR>
+        nnoremap <unique><silent>[3 :diffget 3<CR> :diffupdate<CR>
+        nnoremap <unique><silent>[4 :diffget 4<CR> :diffupdate<CR>
+        nnoremap <unique><silent>]1 :diffput 1<CR> :diffupdate<CR> 
+        nnoremap <unique><silent>]2 :diffput 2<CR> :diffupdate<CR>
+        nnoremap <unique><silent>]3 :diffput 3<CR> :diffupdate<CR>
+        nnoremap <unique><silent>]4 :diffput 4<CR> :diffupdate<CR>
+    endif
 endif
 " }}} --------------------------------------------------------------------------
 

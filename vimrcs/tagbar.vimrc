@@ -11,8 +11,11 @@ function! TagbarStatusFunc(current, sort, fname, ...) abort
 	return colour . '[' . a:sort . '] ' . a:fname
 endfunction
 
-nnoremap <silent><leader>tt :TagbarToggle<CR>
-nnoremap <silent><leader>ta :NERDTreeToggle<cr><c-w>l:TagbarToggle<CR><c-w>j
+if !exists("g:tagbar_maps")
+    let g:tagbar_maps = 1
+    nnoremap <unique><silent><leader>tt :TagbarToggle<CR>
+    nnoremap <unique><silent><leader>ta :NERDTreeToggle<cr><c-w>l:TagbarToggle<CR><c-w>j
+endif
 " autocmd FileType c,cpp,h,cc,hpp,cxx nested :TagbarOpen
 
 let g:tagbar_width 				= 25

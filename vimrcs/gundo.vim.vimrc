@@ -3,5 +3,8 @@ PluginAdd 'sjl/gundo.vim'
 
 let g:gundo_right = 1
 
-nnoremap <silent><leader>gu <esc>:GundoToggle<cr>
+if !exists("g:gundo_vim_maps")
+    let g:gundo_vim_maps = 1
+    nnoremap <unique><silent><leader>gu <esc>:GundoToggle<cr>
+endif
 
