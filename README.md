@@ -63,135 +63,93 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 - sbcl:common lisp的编译器，slimv用到
 - xterm:运行lisp解析器服务器
 
-##快捷键绑定
-**[global : normal]**  
-&lt;leader&gt;ev: 	水平切分窗口打开.vimrc  
-&lt;leader&gt;sv: 	加载.vimrc  
-&lt;F12&gt;: 			逆时间切换窗口  
-&lt;c-left&gt;: 		移到左边窗口  
-&lt;c-down&gt;: 		移到下边窗口  
-&lt;c-up&gt;: 		移到上边窗口  
-&lt;c-right&gt;: 		移到右边窗口  
-&lt;leader&gt;h: 		移到左边窗口  
-&lt;leader&gt;j: 		移到下边窗口  
-&lt;leader&gt;k: 		移到上边窗口  
-&lt;leader&gt;l: 		移到右边窗口  
-j:              gj    
-gj:             j    
-k:              gk    
-gk:             k    
-&lt;leader&gt;p:        paste toggle  
-[1:        diff时取窗口1的内容
-[2:        diff时取窗口2的内容
-[3:        diff时取窗口3的内容
-[4:        diff时取窗口4的内容
-]1:        diff时将内容放到窗口1
-]2:        diff时将内容放到窗口2
-]3:        diff时将内容放到窗口3
-]4:        diff时将内容放到窗口4
-
-**[global : console]**  
-&lt;c-k&gt;             命令行上滚  
-&lt;c-j&gt;             命令行下滚  
-
-**[a.vim : normal]**  
-&lt;leader&gt;as: 	在源文件和头文件中切换  
-
-**[clang_complete : normal]**  
-&lt;leader&gt;gc: 	在当前目录生成.clang\_complete  
-
-**[cscope : normal]**  
-&lt;C-\\&gt;s:  查找这个C符号   
-&lt;C-\\&gt;g:  查找这个定义  
-&lt;C-\\&gt;c:  查找调用这个函数的函数  
-&lt;C-\\&gt;t:  查找这个字符串  
-&lt;C-\\&gt;e:  查找这个egrep匹配模式  
-&lt;C-\\&gt;f:  查找这个文件  
-&lt;C-\\&gt;i:  查找#include这个文件的文件  
-&lt;C-\\&gt;d:  查找被这个函数调用的函数  
-&lt;C-@&gt;s:   查找这个C符号, 水平切分窗口   
-&lt;C-@&gt;g:   查找这个定, 水平切分窗口义  
-&lt;C-@&gt;c:   查找调用这个函数的函, 水平切分窗口数  
-&lt;C-@&gt;t:   查找这个字符, 水平切分窗口串  
-&lt;C-@&gt;e:   查找这个egrep匹配模, 水平切分窗口式  
-&lt;C-@&gt;f:   查找这个文, 水平切分窗口件  
-&lt;C-@&gt;i:   查找#include这个文件的文, 水平切分窗口件  
-&lt;C-@&gt;d:   查找被这个函数调用的函, 水平切分窗口数  
-&lt;C-@&gt;&lt;C-@&gt;s:  查找这个C符号, 竖直切分窗口   
-&lt;C-@&gt;&lt;C-@&gt;g:  查找这个定, 竖直切分窗口义  
-&lt;C-@&gt;&lt;C-@&gt;c:  查找调用这个函数的函, 竖直切分窗口数  
-&lt;C-@&gt;&lt;C-@&gt;t:  查找这个字符, 竖直切分窗口串  
-&lt;C-@&gt;&lt;C-@&gt;e:  查找这个egrep匹配模, 竖直切分窗口式  
-&lt;C-@&gt;&lt;C-@&gt;f:  查找这个文, 竖直切分窗口件  
-&lt;C-@&gt;&lt;C-@&gt;i:  查找#include这个文件的文, 竖直切分窗口件  
-&lt;C-@&gt;&lt;C-@&gt;d:  查找被这个函数调用的函, 竖直切分窗口数  
-
-**[ctags : normal]**  
-&lt;leader&gt;tg: 	在当前目录生成tags  
-
-**[minibufexpl.vim : normal]**  
-&lt;leader&gt;mt: 	触发minibuf窗口  
-&lt;leader&gt;mf: 	跳到minibuf中
-&lt;c-l&gt;: 		minibuf中的下一个文件  
-&lt;c-h&gt;: 		minibuf中的上一个文件  
-
-**[nerdtree : normal]**  
-&lt;leader&gt;nt: 	触发nerdtree  
-
-**[tagbar or taglist : normal]**  
-&lt;leader&gt;tt: 	触发tagbar or taglist  
-&lt;leader&gt;ta: 	触发tagbar和nerdtree  
-
-**[vundle.vimrc : normal]**  
-&lt;leader&gt;bi: 	Bundle安装插件  
-
-**[winmanager : normal]**  
-&lt;leader&gt;wm: 	触发winmanager  
-
-**[quickfix : normal]**  
-&lt;leader&gt;qk:		上一条错误警告处  
-&lt;leader&gt;qj: 	下一条错误警告处  
-&lt;leader&gt;qc:		关闭quickfix  
-&lt;leader&gt;qo:		打开quckfix  
-
-**[Doxygen : normal]**  
-&lt;leader&gt;dx: 	生成函数和类注释  
-&lt;leader&gt;da: 	生成文件注释  
-&lt;leader&gt;dl: 	生成证书注释  
-
-**[Doxygen : insert]**  
-&lt;leader&gt;dx: 	生成函数和类注释  
-&lt;leader&gt;da: 	生成文件注释  
-&lt;leader&gt;dl: 	生成证书注释  
-
-**[Gundo : normal]**  
-&lt;leader&gt;gu: 	GundoToogle  
-
-**[vimshell : normal]**  
-&lt;leader&gt;vt:   在tab中打开一个VimShell
-&lt;leader&gt;vs:   在当前打开一个VimShell
-
-**[unite : normal]**  
-&lt;leader&gt;uf:   进行Unite file的查找
-&lt;leader&gt;ur:   进行Unite file\_rec的查找
-&lt;leader&gt;ub:   进行Unite buffer的查找
-
-**[tabular : normal]**  
-&lt;leader&gt;a=:   进行全局的等号对齐  
-&lt;leader&gt;a::   进行全局的冒号对齐  
-
-**[tabular : visual]**  
-&lt;leader&gt;a=:   选择的行进行等号对齐  
-&lt;leader&gt;a::   选择的行进行冒号对齐  
-
-**[vim-bookmarks : normal]**  
-&lt;leader&gt;MM:   toggle一个bookmark  
-&lt;leader&gt;MI:   toggle一个annotate  
-&lt;leader&gt;MA:   显示所有的bookmark和annotate  
-&lt;leader&gt;MJ:   跳到下一个bookmark  
-&lt;leader&gt;MK:   跳到上一个bookmark  
-&lt;leader&gt;MC:   清除bookmark  
-&lt;leader&gt;MX:   清除所有的bookmark  
-&lt;leader&gt;MU:   bookmark上移  
-&lt;leader&gt;MD:   bookmark下移  
+##键映射
+|map|model|script|describe|
+|---|:---|:---|:---|
+|&lt;leader&gt;ev|n|global|水平切分窗口打开.vimrc|
+|&lt;leader&gt;sv|n|global|加载.vimrc|
+|&lt;F12&gt;|n|global|逆时间切换窗口|
+|&lt;c-left&gt;|n|global|移到左边窗口|
+|&lt;c-down&gt;|n|global|移到下边窗口|
+|&lt;c-up&gt;|n|global|移到上边窗口|
+|&lt;c-right&gt;|n|global|移到右边窗口|
+|&lt;leader&gt;h|n|global|移到左边窗口|
+|&lt;leader&gt;j|n|global|移到下边窗口|
+|&lt;leader&gt;k|n|global|移到上边窗口|
+|&lt;leader&gt;l|n|global|移到右边窗口|
+|j|n|global|gj|
+|gj|n|global|j|
+|k|n|global|gk|
+|gk|n|global|k|
+|&lt;leader&gt;p|n|global|paste toggle|
+|[1|n|global|diff时取窗口1的内容|
+|[2|n|global|diff时取窗口2的内容|
+|[3|n|global|diff时取窗口3的内容|
+|[4|n|global|diff时取窗口4的内容|
+|]1|n|global|diff时将内容放到窗口1|
+|]2|n|global|diff时将内容放到窗口2|
+|]3|n|global|diff时将内容放到窗口3|
+|]4|n|global|diff时将内容放到窗口4|
+|&lt;c-k&gt;|c|global|命令行上滚|
+|&lt;c-j&gt;|c|global|命令行下滚|
+|&lt;leader&gt;as|n|a.vim|在源文件和头文件中切换|
+|&lt;leader&gt;gc|n|clang\_complete|在当前目录生成.clang\_complete|
+|&lt;C-\\&gt;s|n|cscope|查找这个C符号|
+|&lt;C-\\&gt;g|n|cscope|查找这个定义|
+|&lt;C-\\&gt;c|n|cscope|查找调用这个函数的函数|
+|&lt;C-\\&gt;t|n|cscope|查找这个字符串|
+|&lt;C-\\&gt;e|n|cscope|查找这个egrep匹配模式|
+|&lt;C-\\&gt;f|n|cscope|查找这个文件|
+|&lt;C-\\&gt;i|n|cscope|查找#include这个文件的文件|
+|&lt;C-\\&gt;d|n|cscope|查找被这个函数调用的函数|
+|&lt;C-@&gt;s|n|cscope|查找这个C符号,|水平切分窗口   
+|&lt;C-@&gt;g|n|cscope|查找这个定,|水平切分窗口义  
+|&lt;C-@&gt;c|n|cscope|查找调用这个函数的函,|水平切分窗口数  
+|&lt;C-@&gt;t|n|cscope|查找这个字符,|水平切分窗口串  
+|&lt;C-@&gt;e|n|cscope|查找这个egrep匹配模,|水平切分窗口式  
+|&lt;C-@&gt;f|n|cscope|查找这个文,|水平切分窗口件  
+|&lt;C-@&gt;i|n|cscope|查找#include这个文件的文,|水平切分窗口件  
+|&lt;C-@&gt;d|n|cscope|查找被这个函数调用的函,|水平切分窗口数  
+|&lt;C-@&gt;&lt;C-@&gt;s|n|cscope|查找这个C符号,|竖直切分窗口   
+|&lt;C-@&gt;&lt;C-@&gt;g|n|cscope|查找这个定,|竖直切分窗口义  
+|&lt;C-@&gt;&lt;C-@&gt;c|n|cscope|查找调用这个函数的函,|竖直切分窗口数  
+|&lt;C-@&gt;&lt;C-@&gt;t|n|cscope|查找这个字符,|竖直切分窗口串  
+|&lt;C-@&gt;&lt;C-@&gt;e|n|cscope|查找这个egrep匹配模,|竖直切分窗口式  
+|&lt;C-@&gt;&lt;C-@&gt;f|n|cscope|查找这个文,|竖直切分窗口件  
+|&lt;C-@&gt;&lt;C-@&gt;i|n|cscope|查找#include这个文件的文,|竖直切分窗口件  
+|&lt;C-@&gt;&lt;C-@&gt;d|n|cscope|查找被这个函数调用的函,|竖直切分窗口数  
+|&lt;leader&gt;tg|n|ctags|在当前目录生成tags|
+|&lt;leader&gt;mt|n|minibufexpl|触发minibuf窗口|
+|&lt;leader&gt;mf|n|minibufexpl|跳到minibuf中|
+|&lt;c-l&gt;|n|minibufexpl|minibuf中的下一个文件|
+|&lt;c-h&gt;|n|minibufexpl|minibuf中的上一个文件|
+|&lt;leader&gt;nt|n|nerdtree|触发nerdtree|
+|&lt;leader&gt;tt|n|tagbar or taglist|触发tagbar or taglist|
+|&lt;leader&gt;ta|n|tagbar or taglist|触发tagbar和nerdtree|
+|&lt;leader&gt;bi|n|vundle|Bundle安装插件|
+|&lt;leader&gt;wm|n|winmanager|触发winmanager|
+|&lt;leader&gt;qk|n|quickfix|上一条错误警告处|
+|&lt;leader&gt;qj|n|quickfix|下一条错误警告处|
+|&lt;leader&gt;qc|n|quickfix|关闭quickfix|
+|&lt;leader&gt;qo|n|quickfix|打开quckfix|
+|&lt;leader&gt;dx|ni|Doxygen|生成函数和类注释|
+|&lt;leader&gt;da|ni|Doxygen|生成文件注释|
+|&lt;leader&gt;dl|ni|Doxygen|生成证书注释|
+|&lt;leader&gt;gu|n|Gundo|GundoToogle|
+|&lt;leader&gt;vt|n|vimshell|在tab中打开一个VimShell|
+|&lt;leader&gt;vs|n|vimshell|在当前打开一个VimShell|
+|&lt;leader&gt;uf|n|unite|进行Unite file的查找|
+|&lt;leader&gt;ur|n|unite|进行Unite file\_rec的查找|
+|&lt;leader&gt;ub|n|unite|进行Unite buffer的查找|
+|&lt;leader&gt;a=|nv|tabular|进行全局的等号对齐|
+|&lt;leader&gt;a:|nv|tabular|进行全局的冒号对齐|
+|MM|n|vim-bookmarks|toggle一个bookmark|
+|MI|n|vim-bookmarks|toggle一个annotate|
+|MA|n|vim-bookmarks|显示所有的bookmark和annotate|
+|MJ|n|vim-bookmarks|跳到下一个bookmark|
+|MK|n|vim-bookmarks|跳到上一个bookmark|
+|MC|n|vim-bookmarks|清除bookmark|
+|MX|n|vim-bookmarks|清除所有的bookmark|
+|MU|n|vim-bookmarks|bookmark上移|
+|MD|n|vim-bookmarks|bookmark下移|
 
