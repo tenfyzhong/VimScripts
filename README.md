@@ -184,18 +184,14 @@ gk:             k
 &lt;leader&gt;a=:   选择的行进行等号对齐  
 &lt;leader&gt;a::   选择的行进行冒号对齐  
 
-**[Mark--Karkat : all]**  
-&lt;leader&gt;M:   mark当前单词  
-&lt;leader&gt;N:   清除mark  
-
 **[vim-bookmarks : normal]**  
-&lt;leader&gt;mm:   toggle一个bookmark  
-&lt;leader&gt;mi:   toggle一个annotate  
-&lt;leader&gt;ma:   显示所有的bookmark和annotate  
-&lt;leader&gt;mj:   跳到下一个bookmark  
-&lt;leader&gt;mk:   跳到上一个bookmark  
-&lt;leader&gt;mc:   清除bookmark  
-&lt;leader&gt;mx:   清除所有的bookmark  
-&lt;leader&gt;mu:   bookmark上移  
-&lt;leader&gt;md:   bookmark下移  
+&lt;leader&gt;MM:   toggle一个bookmark  
+&lt;leader&gt;MI:   toggle一个annotate  
+&lt;leader&gt;MA:   显示所有的bookmark和annotate  
+&lt;leader&gt;MJ:   跳到下一个bookmark  
+&lt;leader&gt;MK:   跳到上一个bookmark  
+&lt;leader&gt;MC:   清除bookmark  
+&lt;leader&gt;MX:   清除所有的bookmark  
+&lt;leader&gt;MU:   bookmark上移  
+&lt;leader&gt;MD:   bookmark下移  
 
