@@ -37,7 +37,6 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 
 ##注意
 - vim版本要求7.0以上，否则很多配置用不了，会直接不加载配置。
-- neocomplcache和clang\_complete会冲突，只能使用一个。
 - 若退出vim时报未定义的变量b:NERDTree的错误，请将
 ~/.vim/bundle/nerdtree/plugin/NERD\_tree.vim下augroup NERDTree
 的autocmd BufWinLeave注释掉。  
