@@ -63,6 +63,7 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 - xterm:运行lisp解析器服务器
 
 ##键映射
+以下model, n对应normal, i对应insert, v对应visual, c对应console  
 |map|model|script|describe|
 |---|:---|:---|:---|
 |&lt;leader&gt;ev|n|global|水平切分窗口打开.vimrc|
