@@ -4,7 +4,7 @@ endif
 
 AddTabularPattern! define    /#define \w*\zs /l0
 AddTabularPattern! colon     /:\zs/l0r1
-AddTabularPattern! statement /.*\zs\ze \w*;\?/
+AddTabularPattern! statement /.*\zs\ze \w*;\?/l0r1
 
 
 " augroup {{{
