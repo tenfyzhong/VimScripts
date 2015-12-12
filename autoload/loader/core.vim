@@ -1,7 +1,7 @@
 " variable ------------------------------------------------------------------{{{
 let g:plugin_lists = {}
-let b:vimrc_path    = expand("~/.vim/vimrcs/")
-let b:bundle_path 	= expand("~/.vim/bundle/")
+let g:vimrc_path    = expand("~/.vim/vimrcs/")
+let g:bundle_path 	= expand("~/.vim/bundle/")
 " }}} --------------------------------------------------------------------------
 
 " 加载一个vimrc脚本 ---------------------------------------------------------{{{
@@ -17,6 +17,11 @@ endfunction
 
 " 加载~/.vim/vimrcs/目录下的所有.vimrc脚本-----------------------------------{{{
 function! loader#core#LoadVimrcs()
+    if (exists("g:has_load_vimrcs"))
+        return
+    else
+        let g:has_load_vimrcs = 1
+    endif 
 
     call common#SetVariablesDefault("g:log_level", 8)
 
@@ -31,9 +36,9 @@ function! loader#core#LoadVimrcs()
         call vundle#begin()
 
         " 先加载vundle，再加载其他插件
-        call loader#core#LoadSingleVimrc(b:vimrc_path . 'Vundle.vim.vimrc', 1)
+        call loader#core#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)
 
-        let l:vimrc_path_str    = globpath(b:vimrc_path, "*.vimrc")
+        let l:vimrc_path_str    = globpath(g:vimrc_path, "*.vimrc")
         let l:vimrc_list        = split(l:vimrc_path_str)
         for vimrc in l:vimrc_list
             call loader#core#LoadSingleVimrc(vimrc, 0)
@@ -50,7 +55,7 @@ endfunction
 
 " 检查插件是否存在 ----------------------------------------------------------{{{
 function! loader#core#PluginExist(plugin_name)
-    if isdirectory(b:bundle_path . a:plugin_name)
+    if isdirectory(g:bundle_path . a:plugin_name)
         return 1
     else
         call vimlog#ErrorLog(a:plugin_name . ' not exist')
