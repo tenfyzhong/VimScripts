@@ -10,6 +10,13 @@ endif
 source $VIMRUNTIME/vimrc_example.vim
 set nocompatible " 关闭vi兼容模式
 set cindent 	 " C语言缩进方式
+set cinoptions+=:0 " case的括号不缩进
+set cinoptions+=l1 " 大括号与case对齐
+set cinoptions+=g0 " public,protected,private不缩进
+set cinoptions+=N-s " c++ namespace里面的内容不缩进
+set cinoptions+=(0 " 没结束的括号与上一行的内容对齐
+set cinoptions+=j1 " 匿名类设置正确的缩进
+set cinoptions+=J1 " 正常设置js的对齐声明
 set foldmethod=syntax   " 根据缩进折叠
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,gb2312,cp936,usc-bom,euc-jp,gb18030
