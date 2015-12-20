@@ -112,6 +112,7 @@ if !exists("g:vimrc_maps")
     nnoremap <unique>gk                     k
     cnoremap <unique><c-k>                  <Up>
     cnoremap <unique><c-j>                  <Down>
+    nnoremap <unique><silent><Space>        :call fold#FoldIfLevelGreat0(line("."))<CR>
 
     if &diff
         nnoremap <unique><silent>[1 :diffget 1<CR> :diffupdate<CR> 

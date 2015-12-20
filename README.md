@@ -93,6 +93,7 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 |]4|n|global|diff时将内容放到窗口4|
 |&lt;c-k&gt;|c|global|命令行上滚|
 |&lt;c-j&gt;|c|global|命令行下滚|
+|&lt;Space&gt;|n|global|za|
 |&lt;leader&gt;as|n|a.vim|在源文件和头文件中切换|
 |&lt;leader&gt;gc|n|clang\_complete|在当前目录生成.clang\_complete|
 |&lt;C-\\&gt;s|n|cscope|查找这个C符号|
