@@ -89,7 +89,9 @@ augroup END
 " global variable ---------------------------------------------------------- {{{
 " 全局变量
 let g:log_level = vimlog#error_level()
-let mapleader 	= "'"
+let mapleader   = "'"
+let g:MSWIN     = has("win16") || has("win32")   || has("win64") || has("win95")
+let g:UNIX      = has("unix")  || has("macunix") || has("win32unix")
 " }}} --------------------------------------------------------------------------
 
 " global mapping ----------------------------------------------------------- {{{
