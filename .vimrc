@@ -94,6 +94,16 @@ let g:MSWIN     = has("win16") || has("win32")   || has("win64") || has("win95")
 let g:UNIX      = has("unix")  || has("macunix") || has("win32unix")
 " }}} --------------------------------------------------------------------------
 
+
+" mswin setting -------------------------------------------------------------{{{
+if g:MSWIN
+    source $VIMRUNTIME/mswin.vim
+    set diffexpr = mswin#Diff()
+    behave mswin
+endif
+" }}} --------------------------------------------------------------------------
+
+
 " global mapping ----------------------------------------------------------- {{{
 if !exists("g:vimrc_maps")
     let g:vimrc_maps = 1
