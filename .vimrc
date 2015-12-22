@@ -97,9 +97,12 @@ let g:UNIX      = has("unix")  || has("macunix") || has("win32unix")
 
 " mswin setting -------------------------------------------------------------{{{
 if g:MSWIN
-    source $VIMRUNTIME/mswin.vim
-    set diffexpr = mswin#Diff()
-    behave mswin
+    if filereadable("$VIMRUNTIME/_vimrc")
+        source $VIMRUNTIME/_vimrc
+    endif
+    if filereadable("$VIMRUNTIME/../_vimrc")
+        source $VIMRUNTIME/../_vimrc
+    endif
 endif
 " }}} --------------------------------------------------------------------------
 
