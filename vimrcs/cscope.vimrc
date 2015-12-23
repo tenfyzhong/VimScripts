@@ -5,7 +5,7 @@ if has ("cscope")
 	set csto=1
 	set cst
 
-    call file#RefreshCscope()
+    call file#RefreshCscope(0)
 
     if !exists("g:cscope_maps")
         let g:cscope_maps = 1
@@ -37,7 +37,7 @@ if has ("cscope")
         nnoremap <unique><C-@><C-@>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
     endif
 
-    com! -nargs=0 RefreshCscope call file#RefreshCscope()
+    com! -nargs=0 RefreshCscope call file#RefreshCscope(1)
 
 endif
 

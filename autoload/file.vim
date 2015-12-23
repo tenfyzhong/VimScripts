@@ -33,13 +33,16 @@ endfunction
 
 
 " 重连cscope.out {{{
-function! file#RefreshCscope()
-    cs kill -1
+function! file#RefreshCscope(alter)
 	set nocsverb
+    cs kill -1
     let p = file#FindFile(getcwd(), 'cscope.out')
     if p != ''
         execute "cs add " . p . "/cscope.out " . p
     endif
 	set csverb
+    if a:alter
+        echo "refresh " . p . "/cscope.out success"
+    endif
 endfunction
 " }}}
