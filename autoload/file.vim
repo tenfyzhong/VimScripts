@@ -30,3 +30,16 @@ function! s:FindFileAbsolutePath(path, filename)
     endif
 endfunction
 " }}}
+
+
+" 重连cscope.out {{{
+function! file#RefreshCscope()
+    cs kill -1
+	set nocsverb
+    let p = file#FindFile(getcwd(), 'cscope.out')
+    if p != ''
+        execute "cs add " . p . "/cscope.out " . p
+    endif
+	set csverb
+endfunction
+" }}}

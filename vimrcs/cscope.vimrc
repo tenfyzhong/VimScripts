@@ -5,12 +5,7 @@ if has ("cscope")
 	set csto=1
 	set cst
 
-	set nocsverb
-    let p = file#FindFile(getcwd(), 'cscope.out')
-    if p != ''
-        execute "cs add " . p . "/cscope.out " . p
-    endif
-	set csverb
+    call file#RefreshCscope()
 
     if !exists("g:cscope_maps")
         let g:cscope_maps = 1
@@ -41,6 +36,8 @@ if has ("cscope")
         nnoremap <unique><C-@><C-@>i /:vert scs find i <C-R>=expand("<cfile>")<CR><CR>
         nnoremap <unique><C-@><C-@>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
     endif
+
+    com! -nargs=0 RefreshCscope call file#RefreshCscope()
 
 endif
 
