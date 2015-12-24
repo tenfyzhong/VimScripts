@@ -62,6 +62,12 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 - sbcl:common lisp的编译器，slimv用到
 - xterm:运行lisp解析器服务器
 
+##命令  
+|command|args|describe|
+|:---|:---|:---|
+|PluginAdd|参数名|安装插件|
+|RefreshCscope||刷新cscope.out|
+
 ##键映射  
 以下model, n对应normal, i对应insert, v对应visual, c对应console  
 
