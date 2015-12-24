@@ -23,7 +23,7 @@ let g:tagbar_compact 			= 1
 let g:tagbar_show_linenumbers 	= 1
 let g:tagbar_status_func 		= 'TagbarStatusFunc'
 let g:tagbar_show_visibility 	= 1
-let g:tagbar_iconchars 			= ['▸', '▾']
+let g:tagbar_iconchars 			= ['+', '-']
 
 let g:tagbar_type_jce = {
             \ 'ctagstype'   : 'jce',

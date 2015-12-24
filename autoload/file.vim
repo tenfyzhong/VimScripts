@@ -11,9 +11,16 @@ endfunction
 
 " 从绝对对路path开始查找filename，辅助函数 {{{
 function! s:FindFileAbsolutePath(path, filename)
-    if a:path == '/'
+    let l:isRoot = 0
+    if g:MSWIN
+        let l:isRoot = a:path =~ '^\w:\\$'
+    else
+        let l:isRoot = a:path == '/'
+    endif
+
+    if l:isRoot
         if filereadable (a:path . '/' . a:filename)
-            return '/'
+            return a:path
         else
             return ''
         endif
@@ -22,11 +29,8 @@ function! s:FindFileAbsolutePath(path, filename)
     if filereadable (a:path . '/' . a:filename)
         return a:path 
     else
-        let id = strridx(a:path, '/')
-        if id > 0 && a:path[id] == '/'
-            let id = id - 1
-        endif
-        return <SID>FindFileAbsolutePath(a:path[0:id], a:filename)
+        let l:parent = fnamemodify(a:path, ":p:h:h")
+        return <SID>FindFileAbsolutePath(l:parent, a:filename)
     endif
 endfunction
 " }}}

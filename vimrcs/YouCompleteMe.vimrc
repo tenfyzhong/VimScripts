@@ -1,13 +1,18 @@
 " YouCompleteMe
+if g:MSWIN
+    let g:use_supertab = 1
+    call loader#core#LoadSingleVimrc(g:vimrc_path . '/supertab.vimrc', 1)
+    finish
+endif
 
-let b:youcomplete_path = expand("~/.vim/bundle/YouCompleteMe/")
+let b:youcomplete_path = expand(g:bundle_path . "/YouCompleteMe/")
 " 如果ycm的project目录已经存在，则去判断ycm是否可用
 " 如果ycm不可用，则去加载supertab
 if isdirectory(b:youcomplete_path)
     if !has('python')
         call vimlog#InfoLog('has no python, will load supertab')
         let g:use_supertab = 1
-        call loader#core#LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
+        call loader#core#LoadSingleVimrc(g:vimrc_path . '/supertab.vimrc', 1)
         finish
     endif
 

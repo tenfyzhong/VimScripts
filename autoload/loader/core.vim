@@ -1,7 +1,5 @@
 " variable ------------------------------------------------------------------{{{
 let g:plugin_lists = {}
-let g:vimrc_path    = expand("~/.vim/vimrcs/")
-let g:bundle_path 	= expand("~/.vim/bundle/")
 " }}} --------------------------------------------------------------------------
 
 " 加载一个vimrc脚本 ---------------------------------------------------------{{{
@@ -32,8 +30,8 @@ function! loader#core#LoadVimrcs()
 
     if loader#core#PluginExist('Vundle.vim')
         filetype off
-        set rtp+=~/.vim/bundle/Vundle.vim
-        call vundle#begin()
+        exec "set rtp+=" . g:bundle_path . "/Vundle.vim"
+        call vundle#begin(g:bundle_path)
 
         " 先加载vundle，再加载其他插件
         call loader#core#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)

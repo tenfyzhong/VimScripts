@@ -92,6 +92,13 @@ let g:log_level = vimlog#error_level()
 let mapleader   = "'"
 let g:MSWIN     = has("win16") || has("win32")   || has("win64") || has("win95")
 let g:UNIX      = has("unix")  || has("macunix") || has("win32unix")
+if g:MSWIN
+    let g:VIMHOME=expand("~/vimfiles")
+else
+    let g:VIMHOME=expand("~/vimfiles")
+endif
+let g:vimrc_path    = expand(g:VIMHOME . "/vimrcs/")
+let g:bundle_path 	= expand(g:VIMHOME . "/bundle/")
 " }}} --------------------------------------------------------------------------
 
 
