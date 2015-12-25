@@ -95,7 +95,7 @@ let g:UNIX      = has("unix")  || has("macunix") || has("win32unix")
 if g:MSWIN
     let g:VIMHOME=expand("~/vimfiles")
 else
-    let g:VIMHOME=expand("~/vimfiles")
+    let g:VIMHOME=expand("~/.vim")
 endif
 let g:vimrc_path    = expand(g:VIMHOME . "/vimrcs/")
 let g:bundle_path 	= expand(g:VIMHOME . "/bundle/")
