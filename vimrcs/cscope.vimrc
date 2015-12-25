@@ -5,7 +5,10 @@ if has ("cscope")
 	set csto=1
 	set cst
 
-    call file#RefreshCscope(0)
+    augroup CSCOPE_VIMRC
+        au!
+        autocmd FileType c,cpp call file#RefreshCscope(1)
+    augroup END
 
     if !exists("g:cscope_maps")
         let g:cscope_maps = 1
@@ -37,7 +40,7 @@ if has ("cscope")
         nnoremap <unique><C-@><C-@>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
     endif
 
-    com! -nargs=0 RefreshCscope call file#RefreshCscope(1)
+    com! -nargs=0 RefreshCscope call file#RefreshCscope(0)
 
 endif
 

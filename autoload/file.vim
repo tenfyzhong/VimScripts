@@ -37,7 +37,13 @@ endfunction
 
 
 " 重连cscope.out {{{
-function! file#RefreshCscope(alter)
+function! file#RefreshCscope(autoconnect)
+    if a:autoconnect && exists("g:cscope_has_connect")
+        return
+    endif
+
+    let g:cscope_has_connect = 1
+
 	set nocsverb
     cs kill -1
     let p = file#FindFile(getcwd(), 'cscope.out')
@@ -45,7 +51,7 @@ function! file#RefreshCscope(alter)
         execute "cs add " . p . "/cscope.out " . p
     endif
 	set csverb
-    if a:alter
+    if !a:autoconnect
         echo "refresh " . p . "/cscope.out success"
     endif
 endfunction
