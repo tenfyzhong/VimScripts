@@ -56,3 +56,30 @@ function! file#RefreshCscope(autoconnect)
     endif
 endfunction
 " }}}
+
+
+" 对file文件进行cmd命令 {{{
+function! file#ExecFile(cmd, file)
+    let l:file_expand = expand(a:file)
+    if filereadable(l:file_expand)
+        exec a:cmd . ' ' . l:file_expand
+        return 1
+    endif
+    return 0
+endfunction
+" }}}
+
+" 对file的目录执行cmd动作，如果file是目录，则直接执行 {{{
+function! file#ExecFilePath(cmd, file)
+    let l:file_expand = expand(a:file)
+    if isdirectory(l:file_expand)
+        exec a:cmd . ' ' . l:file_expand
+        return l:file_expand
+    elseif filereadable(l:file_expand)
+        let l:file_path = fnamemodify(l:file_expand, ":p:h")
+        exec a:cmd . ' ' . l:file_path
+        return l:file_path
+    endif
+    return ''
+endfunction
+" }}}
