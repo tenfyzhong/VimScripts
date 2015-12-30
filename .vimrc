@@ -104,6 +104,7 @@ let g:bundle_path 	= expand(g:VIMHOME . "/bundle/")
 
 " mswin setting -------------------------------------------------------------{{{
 if g:MSWIN
+    colorscheme evening
     if filereadable("$VIMRUNTIME/_vimrc")
         source $VIMRUNTIME/_vimrc
     endif
