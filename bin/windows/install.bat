@@ -1,7 +1,7 @@
 @echo "this script is to install vimfiles"
 
-install_vimrc.bat
-install_clone_vundle.bat
-install_load_plugin.bat
+call install_vimrc.bat
+call install_clone_vundle.bat
+call install_load_plugin.bat
 
 pause
