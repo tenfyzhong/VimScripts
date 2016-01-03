@@ -90,8 +90,8 @@ augroup END
 " 全局变量
 let g:log_level = vimlog#error_level()
 let mapleader   = "'"
-let g:MSWIN     = has("win16") || has("win32")   || has("win64") || has("win95")
-let g:UNIX      = has("unix")  || has("macunix") || has("win32unix")
+let g:MSWIN     = system#IsMswin()
+let g:UNIX      = system#IsUnix()
 if g:MSWIN
     let g:VIMHOME=expand("~/vimfiles")
 else
