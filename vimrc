@@ -6,6 +6,21 @@ if version < 700
 endif
 " }}} --------------------------------------------------------------------------
 
+" global variable ---------------------------------------------------------- {{{
+" 全局变量
+let g:log_level = vimlog#error_level()
+let mapleader   = "'"
+let g:MSWIN     = system#IsMswin()
+let g:UNIX      = system#IsUnix()
+if g:MSWIN
+    let g:VIMHOME=expand("~/vimfiles")
+else
+    let g:VIMHOME=expand("~/.vim")
+endif
+let g:vimrc_path    = expand(g:VIMHOME . "/vimrcs/")
+let g:bundle_path 	= expand(g:VIMHOME . "/bundle/")
+" }}} --------------------------------------------------------------------------
+
 " base setting  ------------------------------------------------------------ {{{
 source $VIMRUNTIME/vimrc_example.vim
 set nocompatible " 关闭vi兼容模式
@@ -86,22 +101,6 @@ augroup initial
 augroup END
 " }}} --------------------------------------------------------------------------
 
-" global variable ---------------------------------------------------------- {{{
-" 全局变量
-let g:log_level = vimlog#error_level()
-let mapleader   = "'"
-let g:MSWIN     = system#IsMswin()
-let g:UNIX      = system#IsUnix()
-if g:MSWIN
-    let g:VIMHOME=expand("~/vimfiles")
-else
-    let g:VIMHOME=expand("~/.vim")
-endif
-let g:vimrc_path    = expand(g:VIMHOME . "/vimrcs/")
-let g:bundle_path 	= expand(g:VIMHOME . "/bundle/")
-" }}} --------------------------------------------------------------------------
-
-
 " mswin setting -------------------------------------------------------------{{{
 if g:MSWIN
     colorscheme evening
@@ -113,7 +112,6 @@ if g:MSWIN
     endif
 endif
 " }}} --------------------------------------------------------------------------
-
 
 " global mapping ----------------------------------------------------------- {{{
 if !exists("g:vimrc_maps")
