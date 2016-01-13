@@ -78,8 +78,8 @@ set showtabline=0   "永远不显示标签栏
 
 set nu 			 " 显示行号
 
-set backupdir=~/.vim/.backupfile
-set undodir=~/.vim/.undofile
+exec "set backupdir=" . g:VIMHOME . ".backupfile"
+exec "set undodir=" . g:VIMHOME . ".undofile"
 
 set pastetoggle=<leader>p
 
@@ -110,9 +110,6 @@ if g:MSWIN
     if filereadable("$VIMRUNTIME/../_vimrc")
         source $VIMRUNTIME/../_vimrc
     endif
-
-    set backupdir=~\_vim\_backupfile
-    set undodir=~\_vim\_undofile
 endif
 " }}} --------------------------------------------------------------------------
 
