@@ -13,12 +13,12 @@ let mapleader   = "'"
 let g:MSWIN     = system#IsMswin()
 let g:UNIX      = system#IsUnix()
 if g:MSWIN
-    let g:VIMHOME=expand("~/vimfiles")
+    let g:VIMHOME=expand("~/vimfiles/")
 else
-    let g:VIMHOME=expand("~/.vim")
+    let g:VIMHOME=expand("~/.vim/")
 endif
-let g:vimrc_path    = expand(g:VIMHOME . "/vimrcs/")
-let g:bundle_path 	= expand(g:VIMHOME . "/bundle/")
+let g:vimrc_path    = expand(g:VIMHOME . "vimrcs/")
+let g:bundle_path 	= expand(g:VIMHOME . "bundle/")
 " }}} --------------------------------------------------------------------------
 
 " base setting  ------------------------------------------------------------ {{{
@@ -110,6 +110,9 @@ if g:MSWIN
     if filereadable("$VIMRUNTIME/../_vimrc")
         source $VIMRUNTIME/../_vimrc
     endif
+
+    set backupdir=~\_vim\_backupfile
+    set undodir=~\_vim\_undofile
 endif
 " }}} --------------------------------------------------------------------------
 
