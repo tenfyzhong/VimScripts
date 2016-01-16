@@ -97,7 +97,6 @@ augroup initial
     au!
     autocmd bufwritepost *vimrc source % 
     autocmd bufwritepost *.vim source % 
-    autocmd bufwritepost .bashrc,.zshrc,.common_rc,.local_rc.sh slient !source %<CR><CR>
 augroup END
 " }}} --------------------------------------------------------------------------
 
