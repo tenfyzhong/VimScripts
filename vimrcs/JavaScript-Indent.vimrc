@@ -1,1 +1,0 @@
-PluginAdd 'tenfyzhong/JavaScript-Indent'
