@@ -1,1 +1,1 @@
-PluginAdd 'vim-scripts/JavaScript-Indent'
+PluginAdd 'tenfyzhong/JavaScript-Indent'
