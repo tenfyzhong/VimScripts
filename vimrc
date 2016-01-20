@@ -159,9 +159,3 @@ com! -nargs=1 PluginAdd call loader#core#BundlePlugin(<args>)
 call loader#core#LoadVimrcs()
 " }}} --------------------------------------------------------------------------
 
-" after load plugin autocmd {{{
-augroup after_load_plugin
-    au!
-    autocmd filetype html setlocal iskeyword-=58
-augroup END
-" }}}
