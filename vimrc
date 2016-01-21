@@ -161,3 +161,7 @@ com! -nargs=1 PluginAdd call loader#core#BundlePlugin(<args>)
 call loader#core#LoadVimrcs()
 " }}} --------------------------------------------------------------------------
 
+if filereadable(expand("local.vim"))
+    so local.vim
+endif
+
