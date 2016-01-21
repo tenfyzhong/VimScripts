@@ -161,7 +161,10 @@ com! -nargs=1 PluginAdd call loader#core#BundlePlugin(<args>)
 call loader#core#LoadVimrcs()
 " }}} --------------------------------------------------------------------------
 
-if filereadable(expand("local.vim"))
-    so local.vim
+" local.vim {{{
+let b:local_vim = expand(g:VIMHOME . "local.vim")
+if filereadable(b:local_vim)
+    exec "so " . b:local_vim
 endif
+" }}}
 
