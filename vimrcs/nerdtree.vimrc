@@ -12,7 +12,7 @@ let NERDChristmasTree 				= 1
 let NERDTreeIgnore 					= ['\.o$', '\.swp$', '\.bak$', '\~$', 
         \'tags', '\.git$', '\.out$', '\.session$', '\.viminfo', '\.d.\d*$', 'cscope.*out$'] 
 let NERDTreeShowHidden 				= 0 "	不显示隐藏文件
-let NERDTreeSortOrder 				= ['\/$', '\.hp\{-,2}$', '\.c\{-,2}$', '*']	" 排序
+" let NERDTreeSortOrder 				= ['\/$', '\.[ch]p\{-,2}$', '*']	" 排序
 let NERDTreeCaseSensitiveSort 		= 0	" 不分大小写排序
 let NERDTreeWinSize 				= 30
 let NERDTreeShowBookmarks 			= 1
