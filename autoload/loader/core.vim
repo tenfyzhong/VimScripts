@@ -42,6 +42,13 @@ function! loader#core#LoadVimrcs()
             call loader#core#LoadSingleVimrc(vimrc, 0)
         endfor
 
+        let l:local_plugin_path = expand(g:vimrc_path . "local_plugin")
+        let l:local_plugin_vimrc_files = globpath(l:local_plugin_path, "*.vimrc")
+        let l:vimrc_list        = split(l:local_plugin_vimrc_files)
+        for vimrc in l:vimrc_list
+            call loader#core#LoadSingleVimrc(vimrc, 0)
+        endfor
+
         call vundle#end()
         filetype on					" 侦测文件类型	
         filetype plugin on			" 开启文件识别
