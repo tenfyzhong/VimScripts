@@ -97,8 +97,8 @@ syntax enable
 " autocmd ------------------------------------------------------------------ {{{
 augroup initial
     au!
-    autocmd bufwritepost *vimrc source % 
-    autocmd bufwritepost *.vim source % 
+    autocmd BufWritePost *vimrc source % 
+    autocmd BufWritePost *.vim source % 
 augroup END
 " }}} --------------------------------------------------------------------------
 
