@@ -1,10 +1,11 @@
 " variable ------------------------------------------------------------------{{{
 let g:plugin_lists = {}
 
-let b:type_plugin_list = []
+" 先插入空目录名为当前目录
+let b:type_plugin_list = [""]
 
 if exists('g:type_plugin_list')
-    let b:type_plugin_list = g:type_plugin_list
+    let b:type_plugin_list = b:type_plugin_list + g:type_plugin_list
 endif
 
 " }}} --------------------------------------------------------------------------
@@ -50,8 +51,6 @@ function! loader#core#LoadVimrcs()
 
         " 先加载vundle，再加载其他插件
         call loader#core#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)
-
-        call <SID>LoadDirPlugin(g:vimrc_path)
 
         for dir in b:type_plugin_list
             call <SID>LoadDirPlugin(g:vimrc_path . dir)
