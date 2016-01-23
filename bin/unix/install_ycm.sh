@@ -23,7 +23,8 @@ set -o nounset                              # Treat unset variables as an error
 cd $HOME
 mkdir ycm_build
 cd ycm_build
-cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON .  ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+LIBCLANG=$(locate libclang.so | grep llvm | head)
+cmake -G "Unix Makefiles" -DEXTERNAL_LIBCLANG_PATH=$(LIBCLANG) .  ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 make ycm_support_libs
 cd $HOME
 rm -rf ycm_build
