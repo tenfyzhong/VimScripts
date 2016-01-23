@@ -153,6 +153,13 @@ endif
 com! -nargs=1 PluginAdd call loader#core#BundlePlugin(<args>)
 " }}} --------------------------------------------------------------------------
 
+" local.vim {{{
+let b:local_vim = expand(g:VIMHOME . "local.vim")
+if filereadable(b:local_vim)
+    exec "so " . b:local_vim
+endif
+" }}}
+
 " source plugin ------------------------------------------------------------ {{{
 " 加载插件
 " 建议：插件的配置最好以插件名加.vimrc命名
@@ -160,11 +167,4 @@ com! -nargs=1 PluginAdd call loader#core#BundlePlugin(<args>)
 " 加载vimrcs目录下的所有脚本
 call loader#core#LoadVimrcs()
 " }}} --------------------------------------------------------------------------
-
-" local.vim {{{
-let b:local_vim = expand(g:VIMHOME . "local.vim")
-if filereadable(b:local_vim)
-    exec "so " . b:local_vim
-endif
-" }}}
 

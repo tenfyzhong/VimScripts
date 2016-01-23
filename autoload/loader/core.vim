@@ -1,5 +1,12 @@
 " variable ------------------------------------------------------------------{{{
 let g:plugin_lists = {}
+
+let b:type_plugin_list = []
+
+if exists('g:type_plugin_list')
+    let b:type_plugin_list = g:type_plugin_list
+endif
+
 " }}} --------------------------------------------------------------------------
 
 " 加载一个vimrc脚本 ---------------------------------------------------------{{{
@@ -11,6 +18,14 @@ function! loader#core#LoadSingleVimrc(vimrc, will_check_exist)
     endif
 endfunction
 " }}} --------------------------------------------------------------------------
+
+function! s:LoadDirPlugin(dirpath)
+    let l:vimrc_path_str    = globpath(a:dirpath, "*.vimrc")
+    let l:vimrc_list        = split(l:vimrc_path_str)
+    for vimrc in l:vimrc_list
+            call loader#core#LoadSingleVimrc(vimrc, 0)
+    endfor
+endfunction
 
 
 " 加载~/.vim/vimrcs/目录下的所有.vimrc脚本-----------------------------------{{{
@@ -36,17 +51,10 @@ function! loader#core#LoadVimrcs()
         " 先加载vundle，再加载其他插件
         call loader#core#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)
 
-        let l:vimrc_path_str    = globpath(g:vimrc_path, "*.vimrc")
-        let l:vimrc_list        = split(l:vimrc_path_str)
-        for vimrc in l:vimrc_list
-            call loader#core#LoadSingleVimrc(vimrc, 0)
-        endfor
+        call <SID>LoadDirPlugin(g:vimrc_path)
 
-        let l:local_plugin_path = expand(g:vimrc_path . "local_plugin")
-        let l:local_plugin_vimrc_files = globpath(l:local_plugin_path, "*.vimrc")
-        let l:vimrc_list        = split(l:local_plugin_vimrc_files)
-        for vimrc in l:vimrc_list
-            call loader#core#LoadSingleVimrc(vimrc, 0)
+        for dir in b:type_plugin_list
+            call <SID>LoadDirPlugin(g:vimrc_path . dir)
         endfor
 
         call vundle#end()
