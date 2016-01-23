@@ -26,15 +26,14 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 通过配置g:type\_plugin\_list来加载vimrcs下子目录的插件，vimrcs下的插件默认全部  
 加载。g:type\_plugin\_list是一个列表。如果要加载所有的插件，只要包含'\*\*'项即  
 可。配置例子：  
-<pre><code>let g:type\_plugin\_list = ["c", "go", "javascript"] </code></pre>  
+<pre><code>let g:type_plugin_list = ["c", "go", "javascript"] </code></pre>  
 以上的例子会加载vimrcs目录下的c,go,javascript目录下的插件。  
 
 
 ##说明  
 对于要使用cscope的项目，在项目根路径生成cscope的数据库，用以下命令：
 <pre><code>cscope -Rbkq</code></pre>
-设置CSCOPE\_DB\_PATH的系统变量指向项目的根路径。 最后不要以'/'结尾。例如：  
-<pre><code>export CSCOPE\_DB\_PATH=~/project</code></pre>
+cscope会从当前目录一直往上去查找cscope目录，找到则链接  
 
 加入插件，在 ~/.vim/vimrcs/ 下加入一个.vimrc后缀的脚本，在脚本开头调用PluginAdd命令
 加载插件，脚本下面可以加入其他的配置。例如：
