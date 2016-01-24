@@ -26,8 +26,8 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 通过配置g:type\_plugin\_list来加载vimrcs下子目录的插件，vimrcs下的插件默认全部  
 加载。g:type\_plugin\_list是一个列表。如果要加载所有的插件，只要包含'\*\*'项即  
 可。配置例子：  
-<pre><code>let g:type_plugin_list = ["c", "go", "javascript"] </code></pre>  
-以上的例子会加载vimrcs目录下的c,go,javascript目录下的插件。  
+<pre><code>let g:type_plugin_list = ["c", "go", "web"] </code></pre>  
+以上的例子会加载vimrcs目录下的c,go,web目录下的插件。  
 
 
 ##说明  
