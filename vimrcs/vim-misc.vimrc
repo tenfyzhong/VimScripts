@@ -1,0 +1,1 @@
+PluginAdd 'xolox/vim-misc'
