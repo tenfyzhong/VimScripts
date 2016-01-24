@@ -29,7 +29,3 @@ if b:NERDTreeBookmarksFile_tmp != ''
 endif
 
 
-augroup nerdtree
-    au!
-    autocmd VimLeavePre * NERDTreeClose
-augroup END

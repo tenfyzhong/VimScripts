@@ -41,7 +41,3 @@ let g:tagbar_type_make = {
             \ ]
 \}
 
-augroup tagbar
-    au!
-    autocmd VimLeavePre * TagbarClose
-augroup END
