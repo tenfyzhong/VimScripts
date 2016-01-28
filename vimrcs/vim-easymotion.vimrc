@@ -1,4 +1,4 @@
-PluginAdd 'Lokaltog/vim-easymotion'
+PluginAdd 'easymotion/vim-easymotion'
 
 let g:EasyMotion_keys = 'asdfghjkl;qwertyuiopzxcvbnm'
 let g:EasyMotion_smartcase = 1
