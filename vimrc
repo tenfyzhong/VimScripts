@@ -88,6 +88,8 @@ set pastetoggle=<leader>p
 " set splitbelow
 set splitright
 
+set viminfo+=!
+
 " 开启语法高亮
 syntax on
 syntax enable
