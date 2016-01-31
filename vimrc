@@ -90,6 +90,9 @@ set splitright
 
 set viminfo+=!
 
+set sessionoptions-=buffers
+
+
 " 开启语法高亮
 syntax on
 syntax enable
