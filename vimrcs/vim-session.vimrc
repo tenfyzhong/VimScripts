@@ -1,7 +1,5 @@
 PluginAdd 'tenfyzhong/vim-session'
 
-set sessionoptions-=buffers
-
 let g:session_default_overwrite = 0
 let g:session_autosave          = 'yes'
 let g:session_verbose_messages  = 0
