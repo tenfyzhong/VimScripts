@@ -1,4 +1,4 @@
-PluginAdd 'vim-scripts/YankRing.vim'
+PluginAdd 'tenfyzhong/YankRing.vim'
 
 let g:yankring_history_file = '.yankring_history'
 
