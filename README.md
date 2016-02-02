@@ -173,4 +173,5 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |MX|n|vim-bookmarks|清除所有的bookmark|
 |MU|n|vim-bookmarks|bookmark上移|
 |MD|n|vim-bookmarks|bookmark下移|
-
+|&lt;C-J&gt;|n|YankRing|选择rankring中的更早一项|
+|&lt;C-k&gt;|n|YankRing|选择rankring中的更新一项|
