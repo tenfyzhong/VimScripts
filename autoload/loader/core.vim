@@ -4,6 +4,8 @@ let g:plugin_lists = {}
 " 先插入空目录名为当前目录
 let b:type_plugin_list = [""]
 
+let b:has_source_vimrc = {}
+
 if exists('g:type_plugin_list')
     let b:type_plugin_list = b:type_plugin_list + g:type_plugin_list
 endif
@@ -15,7 +17,10 @@ function! loader#core#LoadSingleVimrc(vimrc, will_check_exist)
     if a:will_check_exist == 1 && !filereadable(expand(a:vimrc))
         call vimlog#ErrorLog(a:vimrc . " is not exist")
     else
-        execute "source " . a:vimrc
+        if !has_key(b:has_source_vimrc, a:vimrc)
+            execute "source " . a:vimrc
+            let b:has_source_vimrc[a:vimrc] = 1
+        endif
     endif
 endfunction
 " }}} --------------------------------------------------------------------------
