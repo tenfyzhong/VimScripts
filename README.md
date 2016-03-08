@@ -45,8 +45,9 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 -  在脚本的开头加上 finish  
 
 ##建议
-在crontab中加入clear\_bak\_un\_file.sh的执行，比如每天21:00执行  
-0 21 * * * ~/bin/clear\_bak\_un\_file.sh > /dev/null 2>&1  
+在crontab中加入清除备份文件和undo文件的脚本  
+<pre><code>0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" | xargs rm -rf  
+0 3 * * * find /home/tenfyzhong/.vim/.undofile -mtime +10 -name "%*" | xargs rm -rf</code></pre>
 
 ##注意
 - vim版本要求7.0以上，否则很多配置用不了，会直接不加载配置。
