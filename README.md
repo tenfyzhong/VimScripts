@@ -141,10 +141,17 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |&lt;C-@&gt;&lt;C-@&gt;i|n|cscope|查找#include这个文件的文,|竖直切分窗口件  
 |&lt;C-@&gt;&lt;C-@&gt;d|n|cscope|查找被这个函数调用的函,|竖直切分窗口数  
 |&lt;leader&gt;tg|n|ctags|在当前目录生成tags|
-|&lt;leader&gt;mt|n|minibufexpl|触发minibuf窗口|
-|&lt;leader&gt;mf|n|minibufexpl|跳到minibuf中|
-|&lt;c-l&gt;|n|minibufexpl|minibuf中的下一个文件|
-|&lt;c-h&gt;|n|minibufexpl|minibuf中的上一个文件|
+|&lt;c-l&gt;|n|airline|airline tab中的下一个文件|
+|&lt;c-h&gt;|n|airline|airline tab中的上一个文件|
+|&lt;leader&gt;1|n|airline|airline tab中的标号1的文件|
+|&lt;leader&gt;2|n|airline|airline tab中的标号2的文件|
+|&lt;leader&gt;3|n|airline|airline tab中的标号3的文件|
+|&lt;leader&gt;4|n|airline|airline tab中的标号4的文件|
+|&lt;leader&gt;5|n|airline|airline tab中的标号5的文件|
+|&lt;leader&gt;6|n|airline|airline tab中的标号6的文件|
+|&lt;leader&gt;7|n|airline|airline tab中的标号7的文件|
+|&lt;leader&gt;8|n|airline|airline tab中的标号8的文件|
+|&lt;leader&gt;9|n|airline|airline tab中的标号9的文件|
 |&lt;leader&gt;nt|n|nerdtree|触发nerdtree|
 |&lt;leader&gt;tt|n|tagbar or taglist|触发tagbar or taglist|
 |&lt;leader&gt;ta|n|tagbar or taglist|触发tagbar和nerdtree|
