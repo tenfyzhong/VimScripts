@@ -2,7 +2,7 @@
 PluginAdd 'fholgado/minibufexpl.vim'
 
 
-let g:miniBufExplAutoStart      = 0
+let g:miniBufExplAutoStart      = 1
 let g:miniBufExplBuffersNeeded 	= 1
 let g:miniBufExplCycleArround 	= 1
 let g:miniBufExplUseSingleClick = 1
