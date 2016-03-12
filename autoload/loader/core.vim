@@ -68,7 +68,7 @@ function! loader#core#LoadVimrcs()
         filetype plugin indent on	" 启动自动补全
 
         unlet b:has_source_vimrc
-        unlet b:plugin_lists
+        " unlet b:plugin_lists
     endif
 endfunction
 " }}} --------------------------------------------------------------------------
