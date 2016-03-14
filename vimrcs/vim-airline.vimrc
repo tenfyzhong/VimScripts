@@ -4,7 +4,7 @@ PluginAdd 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#ycm#enabled = 1
+let g:airline#extensions#ycm#enabled = 0
 let g:airline#extensions#ycm#error_symbol = 'E:'
 let g:airline#extensions#ycm#warning_symbol = 'W:'
 let g:airline#extensions#tabline#buffer_nr_show = 0
