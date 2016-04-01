@@ -9,7 +9,7 @@ let g:startify_bookmarks = []
 let g:startify_custom_header = 
             \['*--------------------------------------------------------*',
             \ '| Open: b(same window) s(split) v(vertical split) t(tab) |',
-            \ '| Action: q(quit) e(empty buffer) i(insert)              |',
+            \ '| Action: q(quit) e(empty buffer) i(insert)  tenfyzhong  |',
             \ '*--------------------------------------------------------*',
             \ '       o                                                  ',
             \ '        o   ^__^                                          ',
