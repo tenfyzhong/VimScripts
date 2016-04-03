@@ -24,7 +24,7 @@ cd $HOME
 mkdir ycm_build
 cd ycm_build
 LIBCLANG=$(locate libclang.so | grep llvm | head)
-cmake -G "Unix Makefiles" -DEXTERNAL_LIBCLANG_PATH=$(LIBCLANG) .  ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+cmake -G "Unix Makefiles" -DEXTERNAL_LIBCLANG_PATH=$LIBCLANG .  ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 make ycm_support_libs
 cd $HOME
 rm -rf ycm_build
