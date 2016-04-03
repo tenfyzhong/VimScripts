@@ -156,7 +156,7 @@ endif
 " }}} --------------------------------------------------------------------------
 
 " command -------------------------------------------------------------------{{{
-com! -nargs=1 PluginAdd call loader#core#BundlePlugin(<args>)
+com! -nargs=+ -bar PluginAdd call loader#core#BundlePlugin(<args>)
 " }}} --------------------------------------------------------------------------
 
 " local.vim {{{

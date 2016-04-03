@@ -88,11 +88,15 @@ endfunction
 " plugin为插件的全名
 " 比如https://github.com/tenfyzhong/jce-highlight
 " 则plugin为tenfyzhong/jce-highlight
-function! loader#core#BundlePlugin(plugin)
+function! loader#core#BundlePlugin(plugin, ...)
     " 每个插件只加载一次
     if !has_key(b:plugin_lists, a:plugin)
         let b:plugin_lists[a:plugin] = 1
-        execute "Plugin " . "'" . a:plugin . "'"
+        let l:plugin_args = join(a:000, ",")
+        if len(l:plugin_args) != 0
+            let l:plugin_args = "," . l:plugin_args
+        endif
+        execute "Plugin " . "'" . a:plugin . "'" . l:plugin_args
         let l:plugin_name   = split(a:plugin, "/")[-1]
         call loader#core#PluginExist(l:plugin_name)
     endif
