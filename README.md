@@ -113,6 +113,10 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |]4|n|global|diff时将内容放到窗口4|
 |&lt;c-k&gt;|c|global|命令行上滚|
 |&lt;c-j&gt;|c|global|命令行下滚|
+|&lt;c-e&gt;|i|global|屏幕下翻一行|
+|&lt;c-y&gt;|i|global|屏幕上翻一行|
+|&lt;c-f&gt;|i|global|屏幕下翻一页|
+|&lt;c-d&gt;|i|global|屏幕上翻一页|
 |&lt;Space&gt;|n|global|za|
 |&lt;leader&gt;as|n|a.vim|在源文件和头文件中切换|
 |&lt;leader&gt;gc|n|clang\_complete|在当前目录生成.clang\_complete|
