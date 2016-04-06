@@ -1,1 +1,0 @@
-PluginAdd 'scrooloose/nerdcommenter'
