@@ -1,0 +1,1 @@
+PluginAdd 'edsono/vim-matchit'
