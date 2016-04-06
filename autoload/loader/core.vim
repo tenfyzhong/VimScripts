@@ -1,10 +1,10 @@
 " variable ------------------------------------------------------------------{{{
-let b:plugin_lists = {}
+let s:plugin_lists = {}
 
 " 先插入空目录名为当前目录
 let b:type_plugin_list = [""]
 
-let b:has_source_vimrc = {}
+let s:has_source_vimrc = {}
 
 if exists('g:type_plugin_list')
     let b:type_plugin_list = b:type_plugin_list + g:type_plugin_list
@@ -17,9 +17,9 @@ function! loader#core#LoadSingleVimrc(vimrc, will_check_exist)
     if a:will_check_exist == 1 && !filereadable(expand(a:vimrc))
         call vimlog#ErrorLog(a:vimrc . " is not exist")
     else
-        if !has_key(b:has_source_vimrc, a:vimrc)
+        if !has_key(s:has_source_vimrc, a:vimrc)
             execute "source " . a:vimrc
-            let b:has_source_vimrc[a:vimrc] = 1
+            let s:has_source_vimrc[a:vimrc] = 1
         endif
     endif
 endfunction
@@ -67,8 +67,6 @@ function! loader#core#LoadVimrcs()
         filetype indent on			" 针对不同的文件类型采用不同的缩进格式
         filetype plugin indent on	" 启动自动补全
 
-        unlet b:has_source_vimrc
-        " unlet b:plugin_lists
     endif
 endfunction
 " }}} --------------------------------------------------------------------------
@@ -90,8 +88,8 @@ endfunction
 " 则plugin为tenfyzhong/jce-highlight
 function! loader#core#BundlePlugin(plugin, ...)
     " 每个插件只加载一次
-    if !has_key(b:plugin_lists, a:plugin)
-        let b:plugin_lists[a:plugin] = 1
+    if !has_key(s:plugin_lists, a:plugin)
+        let s:plugin_lists[a:plugin] = 1
         let l:plugin_args = join(a:000, ",")
         if len(l:plugin_args) != 0
             let l:plugin_args = "," . l:plugin_args
