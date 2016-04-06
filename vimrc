@@ -106,6 +106,19 @@ augroup initial
     autocmd BufWritePost *vimrc source % 
     autocmd BufWritePost *.vim source % 
 augroup END
+
+" vim -b : edit binary using xxd-format!
+let g:bin_postfix = "*.bin,*.dat,*.mp3,*.mp4,*.o,*.a,*.so,*.exe"
+augroup Binary
+    au!
+    exec "au BufReadPre " . g:bin_postfix . " let &bin=1"
+    exec "au BufReadPost " . g:bin_postfix . " if &bin | %!xxd"
+    exec "au BufReadPost " . g:bin_postfix . " set ft=xxd | endif"
+    exec "au BufWritePre " . g:bin_postfix . " if &bin | %!xxd -r"
+    exec "au BufWritePre " . g:bin_postfix . " endif"
+    exec "au BufWritePost " . g:bin_postfix . " if &bin | %!xxd"
+    exec "au BufWritePost " . g:bin_postfix . " set nomod | endif"
+augroup END
 " }}} --------------------------------------------------------------------------
 
 " mswin setting -------------------------------------------------------------{{{
