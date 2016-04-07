@@ -115,7 +115,6 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |&lt;m-y&gt;|i|global|屏幕下拉一行|
 |&lt;Space&gt;|n|global|za|
 |&lt;leader&gt;as|n|a.vim|在源文件和头文件中切换|
-|&lt;leader&gt;gc|n|clang\_complete|在当前目录生成.clang\_complete|
 |&lt;C-\\&gt;s|n|cscope|查找这个C符号|
 |&lt;C-\\&gt;g|n|cscope|查找这个定义|
 |&lt;C-\\&gt;c|n|cscope|查找调用这个函数的函数|
@@ -156,7 +155,6 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |&lt;leader&gt;tt|n|tagbar or taglist|触发tagbar or taglist|
 |&lt;leader&gt;ta|n|tagbar or taglist|触发tagbar和nerdtree|
 |&lt;leader&gt;bi|n|vundle|Bundle安装插件|
-|&lt;leader&gt;wm|n|winmanager|触发winmanager|
 |&lt;leader&gt;qk|n|quickfix|上一条错误警告处|
 |&lt;leader&gt;qj|n|quickfix|下一条错误警告处|
 |&lt;leader&gt;qc|n|quickfix|关闭quickfix|
@@ -165,8 +163,6 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |&lt;leader&gt;da|ni|Doxygen|生成文件注释|
 |&lt;leader&gt;dl|ni|Doxygen|生成证书注释|
 |&lt;leader&gt;gu|n|Gundo|GundoToogle|
-|&lt;leader&gt;vt|n|vimshell|在tab中打开一个VimShell|
-|&lt;leader&gt;vs|n|vimshell|在当前打开一个VimShell|
 |&lt;leader&gt;uf|n|unite|进行Unite file的查找|
 |&lt;leader&gt;ur|n|unite|进行Unite file\_rec的查找|
 |&lt;leader&gt;ub|n|unite|进行Unite buffer的查找|
