@@ -134,8 +134,7 @@ endif
 " }}} --------------------------------------------------------------------------
 
 " global mapping ----------------------------------------------------------- {{{
-if !exists("g:vimrc_maps")
-    let g:vimrc_maps = 1
+if !exists("g:load_vimrc")
     nnoremap <unique><F12> 					<C-w>w	" F12 窗口切换
     nnoremap <unique><leader>h 				<c-w>h
     nnoremap <unique><leader>j 				<c-w>j
@@ -185,6 +184,9 @@ endif
 " 建议：插件的配置最好以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
-call loader#core#LoadVimrcs()
+if !exists("g:load_vimrc")
+    call loader#core#LoadVimrcs()
+endif
 " }}} --------------------------------------------------------------------------
 
+let g:load_vimrc = 1
