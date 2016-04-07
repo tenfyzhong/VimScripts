@@ -16,7 +16,7 @@ endfunction "}}}
 
 " {{{ alt键需要使用这个函数来做映射
 function! keymap#Mate(action)
-    let l:key = substitute(a:action, "\\c.*<m-\\(\\w\\)>.*", "\\l\\1", "")
+    let l:key = substitute(a:action, "\\c.*<m-\\(\\S\\)>.*", "\\l\\1", "")
     call keymap#EnableMateKey(l:key)
     if !empty(a:action)
         exec a:action
