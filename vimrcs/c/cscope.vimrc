@@ -21,23 +21,23 @@ if has ("cscope")
         nnoremap <unique><C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
         nnoremap <unique><C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
-        nnoremap <unique><C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
-        nnoremap <unique><C-@>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
-        nnoremap <unique><C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+        nnoremap <unique><C-_>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+        nnoremap <unique><C-_>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+        nnoremap <unique><C-_>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+        nnoremap <unique><C-_>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+        nnoremap <unique><C-_>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+        nnoremap <unique><C-_>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+        nnoremap <unique><C-_>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
+        nnoremap <unique><C-_>d :scs find d <C-R>=expand("<cword>")<CR><CR>
 
-        nnoremap <unique><C-@><C-@>s /:vert scs find s <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@><C-@>g /:vert scs find g <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@><C-@>c /:vert scs find c <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@><C-@>t /:vert scs find t <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@><C-@>e /:vert scs find e <C-R>=expand("<cword>")<CR><CR>
-        nnoremap <unique><C-@><C-@>f /:vert scs find f <C-R>=expand("<cfile>")<CR><CR>
-        nnoremap <unique><C-@><C-@>i /:vert scs find i <C-R>=expand("<cfile>")<CR><CR>
-        nnoremap <unique><C-@><C-@>d /:vert scs find d <C-R>=expand("<cword>")<CR><CR>
+        call keymap#Mate("nnoremap <unique><m-\\>s :vert scs find s <C-R>=expand('<cword>')<CR><CR>")
+        call keymap#Mate("nnoremap <unique><m-\\>g :vert scs find g <C-R>=expand('<cword>')<CR><CR>")
+        call keymap#Mate("nnoremap <unique><m-\\>c :vert scs find c <C-R>=expand('<cword>')<CR><CR>")
+        call keymap#Mate("nnoremap <unique><m-\\>t :vert scs find t <C-R>=expand('<cword>')<CR><CR>")
+        call keymap#Mate("nnoremap <unique><m-\\>e :vert scs find e <C-R>=expand('<cword>')<CR><CR>")
+        call keymap#Mate("nnoremap <unique><m-\\>f :vert scs find f <C-R>=expand('<cfile>')<CR><CR>")
+        call keymap#Mate("nnoremap <unique><m-\\>i :vert scs find i <C-R>=expand('<cfile>')<CR><CR>")
+        call keymap#Mate("nnoremap <unique><m-\\>d :vert scs find d <C-R>=expand('<cword>')<CR><CR>")
     endif
 
     com! -nargs=0 RefreshCscope call file#RefreshCscope(0)
