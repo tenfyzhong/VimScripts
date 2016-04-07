@@ -87,8 +87,6 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 
 |map|model|script|describe|
 |---|:---|:---|:---|
-|&lt;leader&gt;ev|n|global|水平切分窗口打开.vimrc|
-|&lt;leader&gt;sv|n|global|加载.vimrc|
 |&lt;F12&gt;|n|global|逆时间切换窗口|
 |&lt;c-left&gt;|n|global|移到左边窗口|
 |&lt;c-down&gt;|n|global|移到下边窗口|
@@ -113,10 +111,8 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |]4|n|global|diff时将内容放到窗口4|
 |&lt;c-k&gt;|c|global|命令行上滚|
 |&lt;c-j&gt;|c|global|命令行下滚|
-|&lt;c-e&gt;|i|global|屏幕下翻一行|
-|&lt;c-y&gt;|i|global|屏幕上翻一行|
-|&lt;c-f&gt;|i|global|屏幕下翻一页|
-|&lt;c-d&gt;|i|global|屏幕上翻一页|
+|&lt;m-e&gt;|i|global|屏幕上拉一行|
+|&lt;m-y&gt;|i|global|屏幕下拉一行|
 |&lt;Space&gt;|n|global|za|
 |&lt;leader&gt;as|n|a.vim|在源文件和头文件中切换|
 |&lt;leader&gt;gc|n|clang\_complete|在当前目录生成.clang\_complete|
@@ -188,4 +184,4 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |&lt;C-J&gt;|n|YankRing|选择rankring中的更早一项|
 |&lt;C-k&gt;|n|YankRing|选择rankring中的更新一项|
 |&lt;leader&gt;yr|n|YankRing|YankRingShow|
-|&lt;m-y&gt;|in|emmet|emmet leader key|
+|&lt;leader&gt;e|in|emmet|emmet leader key|

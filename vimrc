@@ -136,8 +136,6 @@ endif
 " global mapping ----------------------------------------------------------- {{{
 if !exists("g:vimrc_maps")
     let g:vimrc_maps = 1
-    nnoremap <unique><silent><leader>ev 	:split $MYVIMRC<cr>
-    nnoremap <unique><silent><leader>sv 	:source $MYVIMRC<cr>:echo "source .vimrc success"<cr>
     nnoremap <unique><F12> 					<C-w>w	" F12 窗口切换
     nnoremap <unique><leader>h 				<c-w>h
     nnoremap <unique><leader>j 				<c-w>j
@@ -154,10 +152,9 @@ if !exists("g:vimrc_maps")
     cnoremap <unique><c-k>                  <Up>
     cnoremap <unique><c-j>                  <Down>
     nnoremap <unique><silent><Space>        :call fold#FoldIfLevelGreat0(line("."))<CR>
-    inoremap <unique><c-e>                  <c-x><c-e>
-    inoremap <unique><c-y>                  <c-x><c-y>
-    inoremap <unique><c-f>                  <c-o><c-f>
-    inoremap <unique><c-b>                  <c-o><c-b>
+
+    call keymap#Mate("inoremap <unique><m-e> <c-x><c-e>")
+    call keymap#Mate("inoremap <unique><m-y> <c-x><c-y>")
 
     if &diff
         nnoremap <unique><silent>[1 :diffget 1<CR> :diffupdate<CR> 
