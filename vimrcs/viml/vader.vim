@@ -1,0 +1,1 @@
+PluginAdd 'junegunn/vader.vim'
