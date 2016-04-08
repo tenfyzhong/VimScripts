@@ -111,8 +111,6 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |]4|n|global|diff时将内容放到窗口4|
 |&lt;c-k&gt;|c|global|命令行上滚|
 |&lt;c-j&gt;|c|global|命令行下滚|
-|&lt;m-e&gt;|i|global|屏幕上拉一行|
-|&lt;m-y&gt;|i|global|屏幕下拉一行|
 |&lt;Space&gt;|n|global|za|
 |&lt;leader&gt;as|n|a.vim|在源文件和头文件中切换|
 |&lt;C-\\&gt;s|n|cscope|查找这个C符号|

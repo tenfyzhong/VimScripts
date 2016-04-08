@@ -9,16 +9,18 @@
 
 "{{{ 激活m-[key]的组合键
 function! keymap#EnableMateKey(key) 
-    if !empty(a:key)
+    if system#IsUnix() && !system#IsUnixInMswin() && !has('gui') && !empty(a:key)
         exec "set <m-" . a:key . ">=\<esc>" . a:key
+        return 1
     endif
+    return 0
 endfunction "}}}
 
 " {{{ alt键需要使用这个函数来做映射
 function! keymap#Mate(action)
     let l:key = substitute(a:action, "\\c.*<m-\\(\\S\\)>.*", "\\l\\1", "")
-    call keymap#EnableMateKey(l:key)
-    if !empty(a:action)
+    let l:result = keymap#EnableMateKey(l:key)
+    if l:result && !empty(a:action)
         exec a:action
     endif
 endfunction

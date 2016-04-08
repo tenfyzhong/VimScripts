@@ -19,3 +19,9 @@ function! system#IsUnix()
     return has("unix")  || has("macunix") || has("win32unix")
 endfunction
 " }}} 
+
+" system#IsUnixInMswin() 判断是否是寄生在windows上的unix {{{
+function! system#IsUnixInMswin()
+    return has("win32unix")
+endfunction
+" }}}
