@@ -9,7 +9,7 @@
 
 "{{{ 激活m-[key]的组合键
 function! keymap#EnableMateKey(key) 
-    if system#IsUnix() && !has('gui') && !empty(a:key)
+    if system#IsUnix() && !system#IsUnixInMswin() && !has('gui') && !empty(a:key)
         exec "set <m-" . a:key . ">=\<esc>" . a:key
         return 1
     endif
