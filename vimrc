@@ -152,8 +152,8 @@ if !exists("g:load_vimrc")
     cnoremap <unique><c-j>                  <Down>
     nnoremap <unique><silent><Space>        :call fold#FoldIfLevelGreat0(line("."))<CR>
 
-    call keymap#Mate("inoremap <unique><m-e> <c-x><c-e>")
-    call keymap#Mate("inoremap <unique><m-y> <c-x><c-y>")
+    " call keymap#Mate("inoremap <unique><m-e> <c-x><c-e>")
+    " call keymap#Mate("inoremap <unique><m-y> <c-x><c-y>")
 
     if &diff
         nnoremap <unique><silent>[1 :diffget 1<CR> :diffupdate<CR> 
