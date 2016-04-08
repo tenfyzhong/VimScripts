@@ -41,5 +41,19 @@ let g:ycm_confirm_extra_conf                        = 0
 let g:ycm_key_list_select_completion                = ['<C-n>', '<Down>'] 
 let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>'] 
 
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'pandoc' : 1,
+      \ 'infolog' : 1,
+      \ 'mail' : 1,
+      \ 'java' : 1,
+      \}
+
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
