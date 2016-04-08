@@ -7,3 +7,8 @@
 " created: 2016-04-08 22:00:50
 "==============================================================
 PluginAdd 'artur-shaik/vim-javacomplete2'
+
+augroup javacomplete2
+    au!
+    autocmd FileType java setlocal omnifunc=javacomplete#Complete
+augroup END
