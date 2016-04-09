@@ -7,7 +7,7 @@ if has ("cscope")
 
     augroup CSCOPE_VIMRC
         au!
-        autocmd FileType c,cpp call file#RefreshCscope(1)
+        autocmd FileType c,cpp,java call file#RefreshCscope(1)
     augroup END
 
     if !exists("g:cscope_maps")
