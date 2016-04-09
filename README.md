@@ -179,3 +179,7 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |&lt;C-k&gt;|n|YankRing|选择rankring中的更新一项|
 |&lt;leader&gt;yr|n|YankRing|YankRingShow|
 |&lt;leader&gt;e|in|emmet|emmet leader key|
+|\js|in|javacomplete2|trying to guess import option|
+|\ja|in|javacomplete2|will ask for import option|
+|\jm|in|javacomplete2|add all missing imports|
+|\jr|in|javacomplete2|remove all missing imports|

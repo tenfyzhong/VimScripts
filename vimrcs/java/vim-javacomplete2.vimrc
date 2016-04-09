@@ -12,3 +12,6 @@ augroup javacomplete2
     au!
     autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup END
+
+let g:JavaComplete_ImportSortType = 'packageName'
+
