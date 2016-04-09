@@ -108,7 +108,7 @@ augroup initial
 augroup END
 
 " vim -b : edit binary using xxd-format!
-let g:bin_pattern = "*.bin,*.dat,*.mp3,*.mp4,*.o,*.a,*.so,*.exe"
+let g:bin_pattern = "*.bin,*.dat,*.mp3,*.mp4,*.o,*.a,*.so,*.exe,*.class"
 augroup Binary
     au!
     exec "au BufReadPre " . g:bin_pattern . " let &bin=1"
