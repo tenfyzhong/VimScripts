@@ -7,20 +7,27 @@
 " created: 2016-04-09 10:52:53
 "==============================================================
 
-if !exists(":JCserverStart")
+if exists("g:javacomplete_keymap")
     finish
 endif
 
+if exists(":EclimEnable") && exists("Java")
+    nnoremap <buffer><unique>\ji :JavaImport<cr>
+    nnoremap <buffer><unique>\jd :JavaDocSearch -x declarations<cr>
+    nnoremap <buffer><unique>\js :JavaSearchContext<cr>
+elseif exists(":JCserverStart")
+    " For smart (trying to guess import option) insert class import:
+    nmap <buffer><unique>\ji <Plug>(JavaComplete-Imports-AddSmart)
+    imap <buffer><unique>\ji <Plug>(JavaComplete-Imports-AddSmart)
+    " For usual (will ask for import option) insert class import:
+    nmap <buffer><unique>\ja <Plug>(JavaComplete-Imports-Add)
+    imap <buffer><unique>\ja <Plug>(JavaComplete-Imports-Add)
+    " For add all missing imports with <F6>:
+    nmap <buffer><unique>\jm <Plug>(JavaComplete-Imports-AddMissing)
+    imap <buffer><unique>\jm <Plug>(JavaComplete-Imports-AddMissing)
+    " For remove all missing imports with <F7>:
+    nmap <buffer><unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
+    imap <buffer><unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
+endif
+
 let g:javacomplete_keymap = 1
-" For smart (trying to guess import option) insert class import:
-nmap <buffer><unique>\js <Plug>(JavaComplete-Imports-AddSmart)
-imap <buffer><unique>\js <Plug>(JavaComplete-Imports-AddSmart)
-" For usual (will ask for import option) insert class import:
-nmap <buffer><unique>\ja <Plug>(JavaComplete-Imports-Add)
-imap <buffer><unique>\ja <Plug>(JavaComplete-Imports-Add)
-" For add all missing imports with <F6>:
-nmap <buffer><unique>\jm <Plug>(JavaComplete-Imports-AddMissing)
-imap <buffer><unique>\jm <Plug>(JavaComplete-Imports-AddMissing)
-" For remove all missing imports with <F7>:
-nmap <buffer><unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
-imap <buffer><unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)

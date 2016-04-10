@@ -7,3 +7,7 @@
 " created: 2016-04-10 18:11:08
 "==============================================================
 PluginAdd 'starcraftman/vim-eclim'
+
+if exists(":YcmCompleter")
+    let g:EclimCompletionMethod = 'omnifunc'
+endif
