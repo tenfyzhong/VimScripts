@@ -161,9 +161,10 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |&lt;leader&gt;da|ni|Doxygen|生成文件注释|
 |&lt;leader&gt;dl|ni|Doxygen|生成证书注释|
 |&lt;leader&gt;gu|n|Gundo|GundoToogle|
-|&lt;leader&gt;uf|n|unite|进行Unite file的查找|
-|&lt;leader&gt;ur|n|unite|进行Unite file\_rec的查找|
-|&lt;leader&gt;ub|n|unite|进行Unite buffer的查找|
+|&lt;leader&gt;uf|n|lookupfile|lookupfile|
+|&lt;leader&gt;ut|n|lookupfile|lookupfile tags|
+|&lt;leader&gt;ub|n|lookupfile|lookup file bufs|
+|&lt;leader&gt;uw|n|lookupfile|lookup file walk|
 |&lt;leader&gt;a=|nv|tabular|进行全局的等号对齐|
 |&lt;leader&gt;a:|nv|tabular|进行全局的冒号对齐|
 |MM|n|vim-bookmarks|toggle一个bookmark|
