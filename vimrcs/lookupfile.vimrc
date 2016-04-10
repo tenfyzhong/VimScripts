@@ -16,7 +16,7 @@ let g:LookupFile_AlwaysAcceptFirst = 1
 let g:LookupFile_AllowNewFiles = 0
 let g:LookupFile_SearchForBufsInTabs = 1
 let g:LookupFile_EscCancelsPopup = 0
-let g:LookupFile_FileFilter = '\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.a$\|\.d$\|\.out$\|\.bak$'
+let g:LookupFile_FileFilter = '\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.a$\|\.so$\|\.d$\|\.out$\|\.bak$\|\.swp$'
 
 
 
