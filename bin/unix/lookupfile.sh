@@ -19,15 +19,22 @@
 
 set -o nounset                              # Treat unset variables as an error
 
-echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase/" > .lookupfile_tags
-find . -not -regex '.*\.\(png\|gif\|mp3\|mp4\|pdf\|o\|d\|a\|so\|class\|obj\|exe\|jar\|zip\|tar.gz\|out\|lookupfile_tags\|tags\|bak\|pyc\|swp\)' \
+project=.
+if [ $# -gt 0 ] &&  [ -d $1 ]; then
+    project=$1
+fi
+
+project=$(dirname $project)/$(basename $project)
+
+echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase/" > $project/.lookupfile_tags
+find $project -not -regex '.*\.\(png\|gif\|mp3\|mp4\|pdf\|o\|d\|a\|so\|class\|obj\|exe\|jar\|zip\|tar.gz\|out\|lookupfile_tags\|tags\|bak\|pyc\|swp\)' \
     -a -not -regex '\.git.*' -a -not -regex '\.hg.*' -a -not -name 'NO_RESOURCES' \
     -a -not -name "*~" -a -not -name 'cscope.*' -a -not -name ".npmignore" \
     -a -not -wholename '*.svn*' -a -not -wholename "*.git*" \
     -a -not -wholename "*/.undofile/*" -a -not -wholename ".hg/*" \
-    -type f -printf "%f\t%p\t1\n" | sort -f >> .lookupfile_tags
+    -type f -printf "%f\t%p\t1\n" | sort -f >> $project/.lookupfile_tags
 
-if [ $HOME/.vim == $(pwd) ]; then
-    sed -i '/\/bundle\//d' .lookupfile_tags
+if [ $HOME/.vim == $project ]; then
+    sed -i '/\/bundle\//d' $project/.lookupfile_tags
 fi
 
