@@ -19,5 +19,6 @@
 
 set -o nounset                              # Treat unset variables as an error
 echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase/" > .lookupfile_tags
-find .  -type f -printf "%f\t%p\t1\n" | sort -f >> .lookupfile_tags
+find . -not -regex '.*\.\(png\|gif\|mp3\|mp4\|o\|d\|a\|class\|obj\|exe\|jar\|zip\|tar.gz\|out\|lookupfile_tags\|tags\|gitignore\|git\|gitconfig\)' \
+    -not -name 'NO_RESOURCES' -not -name "cscope.files" -type f -printf "%f\t%p\t1\n" | sort -f >> .lookupfile_tags
 
