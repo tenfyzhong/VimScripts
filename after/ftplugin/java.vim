@@ -13,14 +13,14 @@ endif
 
 let g:javacomplete_keymap = 1
 " For smart (trying to guess import option) insert class import:
-nmap <unique>\js <Plug>(JavaComplete-Imports-AddSmart)
-imap <unique>\js <Plug>(JavaComplete-Imports-AddSmart)
+nmap <buffer><unique>\js <Plug>(JavaComplete-Imports-AddSmart)
+imap <buffer><unique>\js <Plug>(JavaComplete-Imports-AddSmart)
 " For usual (will ask for import option) insert class import:
-nmap <unique>\ja <Plug>(JavaComplete-Imports-Add)
-imap <unique>\ja <Plug>(JavaComplete-Imports-Add)
+nmap <buffer><unique>\ja <Plug>(JavaComplete-Imports-Add)
+imap <buffer><unique>\ja <Plug>(JavaComplete-Imports-Add)
 " For add all missing imports with <F6>:
-nmap <unique>\jm <Plug>(JavaComplete-Imports-AddMissing)
-imap <unique>\jm <Plug>(JavaComplete-Imports-AddMissing)
+nmap <buffer><unique>\jm <Plug>(JavaComplete-Imports-AddMissing)
+imap <buffer><unique>\jm <Plug>(JavaComplete-Imports-AddMissing)
 " For remove all missing imports with <F7>:
-nmap <unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
-imap <unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
+nmap <buffer><unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <buffer><unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
