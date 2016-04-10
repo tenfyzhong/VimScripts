@@ -1,0 +1,1 @@
+../c/cscope.vimrc
