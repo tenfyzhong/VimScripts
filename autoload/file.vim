@@ -26,7 +26,8 @@ function! s:FindFileAbsolutePath(path, filename)
         endif
     endif
 
-    if filereadable (a:path . '/' . a:filename)
+    let l:wholeFileName = a:path . '/' . a:filename
+    if filereadable (l:wholeFileName) || isdirectory(l:wholeFileName)
         return a:path 
     else
         let l:parent = fnamemodify(a:path, ":p:h:h")
@@ -81,5 +82,23 @@ function! file#ExecFilePath(cmd, file)
         return l:file_path
     endif
     return ''
+endfunction
+" }}}
+
+" 从当前目录去查找项目根目录 {{{
+function! file#GuessProjectRoot(...)
+    if a:0
+        let l:pwd = a:1
+    else
+        let l:pwd = getcwd()
+    endif
+    let l:root_file_flag = [".git", ".svn", ".hg", "README.mk", "Rakefile", "pom.xml"]
+    for flag in l:root_file_flag
+        let path = file#FindFile(l:pwd, flag)
+        if path != ''
+            return path
+        endif
+    endfor
+    return l:pwd
 endfunction
 " }}}
