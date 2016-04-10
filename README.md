@@ -81,6 +81,7 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |:---|:---|:---|
 |PluginAdd|参数名|安装插件|
 |RefreshCscope||刷新cscope.out|
+|LookupGenTag|路径名|在路径下生成.lookypfile\_tags|
 
 ##键映射  
 以下model, n对应normal, i对应insert, v对应visual, c对应console  

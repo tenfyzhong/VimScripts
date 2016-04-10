@@ -32,4 +32,21 @@ if s:lookupfile_tags != ''
     exec "let g:LookupFile_TagExpr = \"'" . s:lookupfile_tags . "/.lookupfile_tags'\""
 endif
 
+com! -nargs=? -complete=dir LookupGenTag call <SID>GenerateFileTag(<q-args>)
+
+function! s:GenerateFileTag(...)
+    if a:0 && a:1 != ''
+        let l:pwd = a:1
+    else
+        let l:pwd = getcwd()
+    endif
+    let l:root = file#GuessProjectRoot(l:pwd)
+    call system("~/.vim/bin/unix/lookupfile.sh " . l:root)
+    echo "Wow! Create .lookupfile_tags file success!"
+    if l:pwd == getcwd() 
+        exec "let g:LookupFile_TagExpr = \"'" . l:root . "/.lookupfile_tags'\""
+    endif
+endfunction
+
 let g:lookupfile_vimrc = 1
+
