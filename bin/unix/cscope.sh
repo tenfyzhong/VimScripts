@@ -19,5 +19,5 @@
 
 set -o nounset                              # Treat unset variables as an error
 
-find . -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.cc" -o -name "*.java" -o -name "*.cs" > cscope.files
-cscope -bkq -i cscope.files
+find . -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.hpp" -o -name "*.cc" -o -name "*.java" -o -name "*.cs" > .cscope.files
+cscope -bkq -i .cscope.files
