@@ -6,5 +6,5 @@ imap <buffer><silent><leader>uf <C-O><Plug>LookupFile
 setlocal ignorecase
 nnoremap <buffer><Esc><Esc> <C-W>q
 inoremap <buffer><Esc><Esc> <Esc><C-W>q
-inoremap <buffer><c-j> <Down>
-inoremap <buffer><c-k> <Up>
+inoremap <buffer><c-j> <c-n>
+inoremap <buffer><c-k> <c-p>
