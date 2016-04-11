@@ -44,6 +44,9 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 -  将其.vimrc的后缀重命名为其他  
 -  在脚本的开头加上 finish  
 
+LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使用<bang>会在当前目录  
+去生成，否则会查找工程的根目录去生成，如果不存在工程，则也是在当前目录生成  
+
 ##建议
 在crontab中加入清除备份文件和undo文件的脚本  
 <pre><code>0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" | xargs rm -rf  
@@ -81,7 +84,7 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 |:---|:---|:---|
 |PluginAdd|参数名|安装插件|
 |RefreshCscope||刷新cscope.out|
-|LookupGenTag|路径名|在路径下生成.lookypfile\_tags|
+|LookupGenTag[!]|路径名|在路径下生成.lookypfile\_tags|
 
 ##键映射  
 以下model, n对应normal, i对应insert, v对应visual, c对应console  

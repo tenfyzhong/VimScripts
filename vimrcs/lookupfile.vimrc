@@ -32,15 +32,20 @@ if s:lookupfile_tags != ''
     exec "let g:LookupFile_TagExpr = \"'" . s:lookupfile_tags . "/.lookupfile_tags'\""
 endif
 
-com! -nargs=? -complete=dir LookupGenTag call <SID>GenerateFileTag(<q-args>)
+" 如果使用<bang>会在当前目录去生成.lookupfile_tags文件，而不会去查找工程目录
+com! -bang -nargs=? -complete=dir LookupGenTag call <SID>GenerateFileTag("<bang>", <q-args>)
 
-function! s:GenerateFileTag(...)
+function! s:GenerateFileTag(bang, ...)
     if a:0 && a:1 != ''
         let l:pwd = a:1
     else
         let l:pwd = getcwd()
     endif
-    let l:root = file#GuessProjectRoot(l:pwd)
+    if a:bang == "!"
+        let l:root = l:pwd
+    else
+        let l:root = file#GuessProjectRoot(l:pwd)
+    endif
     call system("~/.vim/bin/unix/lookupfile.sh " . l:root)
     echo "Wow! Create .lookupfile_tags file success!"
     if l:pwd == getcwd() 
