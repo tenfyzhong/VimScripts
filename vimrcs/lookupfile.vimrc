@@ -16,7 +16,7 @@ let g:LookupFile_AlwaysAcceptFirst = 1
 let g:LookupFile_AllowNewFiles = 0
 let g:LookupFile_SearchForBufsInTabs = 1
 let g:LookupFile_EscCancelsPopup = 0
-let g:LookupFile_FileFilter = '\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.a$\|\.so$\|\.d$\|\.out$\|\.bak$\|\.swp$'
+let g:LookupFile_FileFilter = '\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.a$\|\.so$\|\.d$\|\.out$\|\.bak$\|\.swp$\|^\.ycm_extra_conf.py$\|\.doc$\|\.docx$\|\.xls$\|\.xlsx$\|^\.NERDTreeBookmarks$\|\.tgz$\|\.tar\.gz$\|\.Plo$\|\.Po$\|\.d\.\d\d*$\|\.dblite$\|\.dirstamp$'
 
 
 
