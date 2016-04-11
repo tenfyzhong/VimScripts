@@ -32,7 +32,7 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 
 ##说明  
 对于要使用cscope的项目，在项目根路径生成cscope的数据库，用以下命令：
-<pre><code>cscope -Rbkq</code></pre>
+<pre><code>~/.vim/bin/unix/cscope.sh</code></pre>
 cscope会从当前目录一直往上去查找cscope目录，找到则链接  
 
 加入插件，在 ~/.vim/vimrcs/ 下加入一个.vimrc后缀的脚本，在脚本开头调用PluginAdd命令
@@ -188,3 +188,6 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 |\ja|in|javacomplete2|will ask for import option|
 |\jm|in|javacomplete2|add all missing imports|
 |\jr|in|javacomplete2|remove all missing imports|
+|\ji|n|eclim|:JavaImport|
+|\jd|n|eclim|:JavaDocSearch -x declarations|
+|\jc|n|eclim|:JavaSearchContext|

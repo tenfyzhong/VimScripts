@@ -7,18 +7,20 @@
 " created: 2016-04-09 10:52:53
 "==============================================================
 
-if exists("g:javacomplete_keymap")
+if exists("g:java_after_ftplugin")
     finish
 endif
 
-if exists(":EclimEnable") && exists("Java")
+if exists(":EclimEnable") 
     nnoremap <buffer><unique>\ji :JavaImport<cr>
     nnoremap <buffer><unique>\jd :JavaDocSearch -x declarations<cr>
-    nnoremap <buffer><unique>\js :JavaSearchContext<cr>
-elseif exists(":JCserverStart")
+    nnoremap <buffer><unique>\jc :JavaSearchContext<cr>
+endif
+
+if exists(":JCserverStart")
     " For smart (trying to guess import option) insert class import:
-    nmap <buffer><unique>\ji <Plug>(JavaComplete-Imports-AddSmart)
-    imap <buffer><unique>\ji <Plug>(JavaComplete-Imports-AddSmart)
+    nmap <buffer><unique>\js <Plug>(JavaComplete-Imports-AddSmart)
+    imap <buffer><unique>\js <Plug>(JavaComplete-Imports-AddSmart)
     " For usual (will ask for import option) insert class import:
     nmap <buffer><unique>\ja <Plug>(JavaComplete-Imports-Add)
     imap <buffer><unique>\ja <Plug>(JavaComplete-Imports-Add)
@@ -30,4 +32,13 @@ elseif exists(":JCserverStart")
     imap <buffer><unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
 endif
 
-let g:javacomplete_keymap = 1
+if exists(":YcmCompleter")
+    let g:EclimCompletionMethod = 'omnifunc'
+endif
+
+if !eclim#EclimAvailable() 
+    setlocal omnifunc=javacomplete#Complete 
+endif
+
+
+let g:java_after_ftplugin = 1

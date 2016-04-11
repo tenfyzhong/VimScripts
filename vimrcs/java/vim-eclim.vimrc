@@ -8,6 +8,3 @@
 "==============================================================
 PluginAdd 'starcraftman/vim-eclim'
 
-if exists(":YcmCompleter")
-    let g:EclimCompletionMethod = 'omnifunc'
-endif
