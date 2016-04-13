@@ -22,7 +22,7 @@
 "==============================================================
 PluginAdd 'easymotion/vim-easymotion'
 
-let g:EasyMotion_keys = 'asdfghjkl;qwertyuiopzxcvbnm'
+let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm'
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 0 
 
