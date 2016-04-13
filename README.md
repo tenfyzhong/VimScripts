@@ -104,6 +104,14 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 |gj|n|global|j|
 |k|n|global|gk|
 |gk|n|global|k|
+|;|n|global|:|
+|:||global|;|
+|n|n|global|nzz|
+|N|n|global|NZZ|
+|\*|n|global|\*zz|
+|#|n|global|#zz|
+|g\*|n|global|g\*zz|
+|w!!|c|global|w !sudo tee >/dev/null %|
 |&lt;leader&gt;p|n|global|paste toggle|
 |[1|n|global|diff时取窗口1的内容|
 |[2|n|global|diff时取窗口2的内容|

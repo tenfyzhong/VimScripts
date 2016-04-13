@@ -105,6 +105,9 @@ augroup initial
     au!
     autocmd BufWritePost *vimrc source % 
     autocmd BufWritePost *.vim source % 
+    autocmd InsertEnter * set norelativenumber number
+    autocmd InsertLeave * set relativenumber
+    autocmd InsertLeave * set nopaste
 augroup END
 
 " vim -b : edit binary using xxd-format!
@@ -151,6 +154,15 @@ if !exists("g:load_vimrc")
     cnoremap <unique><c-k>                  <Up>
     cnoremap <unique><c-j>                  <Down>
     nnoremap <unique><silent><Space>        :call fold#FoldIfLevelGreat0(line("."))<CR>
+    nnoremap ; :
+    nnoremap : ;
+    nnoremap <silent>n nzz
+    nnoremap <silent>N Nzz
+    nnoremap <silent>* *zz
+    nnoremap <silent># #zz
+    nnoremap <silent>g* g*zz
+    cnoremap w!! w !sudo tee >/dev/null %
+    nnoremap <leader>w :wa<CR>
 
     " call keymap#Mate("inoremap <unique><m-e> <c-x><c-e>")
     " call keymap#Mate("inoremap <unique><m-y> <c-x><c-y>")
