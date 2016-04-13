@@ -9,7 +9,7 @@
 "          以上四个命令如果在Ag前加L,则使用location-list替换quickfix
 "          :AgFile [options] {pattern} [{directory}] 在目录下去查找文件名匹配pattern的文件
 "
-" buffer map:
+" buffer nmap:
 "           e open file and close the quickfix window.
 "           o open file (same as enter).
 "           go preview file (open but maintain focus on ag.vim results).

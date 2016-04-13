@@ -7,7 +7,7 @@
 "          :BufExploreHorizontalSplit 水平分割出一个BufExplorer窗口
 "          :BufExplorerVerticalSplit 竖直分割出一个BufExplorer窗口
 "
-"     map: <leader>be :BufExplorer
+"    nmap: <leader>be :BufExplorer
 "          <leader>bt :ToggleBufExplorer
 "          <leader>bs :BufExploreHorizontalSplit
 "          <leader>bv :BufExplorerVerticalSplit
