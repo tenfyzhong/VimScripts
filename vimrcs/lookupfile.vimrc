@@ -1,6 +1,21 @@
 "==============================================================
 "    file: lookupfile.vimrc
 "   brief: 通过tag来查找文件
+"
+" command: LUTags 通过tag文件中查找文件
+"          LUPath 在'path'中查找文件
+"          LUBufs 在buffers中查找文件
+"          LUWalk 一层层的去查找文件
+"          LUArgs 在:args中去查找文件
+"          LookupFile 上一次执行的命令
+"
+"    nmap:
+"
+" lookupfile下的map
+"    nmap: <Esc><Esc> 退出lookupfile窗口
+"    imap: <Esc><Esc> 退出lookupfile窗口
+"          <c-j> 下一个文件
+"          <c-k> 上一个文件
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
