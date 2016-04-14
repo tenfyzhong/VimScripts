@@ -52,6 +52,8 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 <pre><code>0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" | xargs rm -rf  
 0 3 * * * find /home/tenfyzhong/.vim/.undofile -mtime +10 -name "%*" | xargs rm -rf</code></pre>
 
+大工程使用TagHighlight，建议定时后台跑~/.vim/bin/unix/tag\_highlight.sh来生成tag，不然会卡死在生成tag。  
+
 ##注意
 - vim版本要求7.0以上，否则很多配置用不了，会直接不加载配置。
 - 若退出vim时报未定义的变量b:NERDTree的错误，请将
