@@ -107,7 +107,7 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 |;|n|global|:|
 |:|n|global|;|
 |n|n|global|nzz|
-|N|n|global|NZZ|
+|N|n|global|Nzz|
 |\*|n|global|\*zz|
 |#|n|global|#zz|
 |g\*|n|global|g\*zz|
