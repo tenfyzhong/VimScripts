@@ -1,8 +1,26 @@
+"==============================================================
+"    file: incsearch.vim.vimrc
+"   brief: 高亮查找,/和?查找时会启用
+"
+"    nmap: <esc><esc> 取消高亮
+" VIM Version: 7.4
+"  author: tenfyzhong
+"   email: 364755805@qq.com
+" created: 2016-04-14 13:34:27
+"==============================================================
 PluginAdd 'haya14busa/incsearch.vim'
+
+if exists("g:incsearch_vim_init")
+    finish
+endif
+
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 set hlsearch
 let g:incsearch#auto_nohlsearch = 0
+
+nnoremap <unique><Esc><Esc> :<C-u>nohlsearch<CR>
+
+let g:incsearch_vim_init = 1
