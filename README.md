@@ -178,6 +178,7 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 |&lt;leader&gt;uw|n|lookupfile|lookup file walk|
 |&lt;leader&gt;a=|nv|tabular|进行全局的等号对齐|
 |&lt;leader&gt;a:|nv|tabular|进行全局的冒号对齐|
+|&lt;leader&gt;N|n|Mark|清除所有的mark|
 |MM|n|vim-bookmarks|toggle一个bookmark|
 |MI|n|vim-bookmarks|toggle一个annotate|
 |MA|n|vim-bookmarks|显示所有的bookmark和annotate|
