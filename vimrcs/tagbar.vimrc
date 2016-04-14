@@ -1,4 +1,24 @@
-" tagbar
+"==============================================================
+"    file: tagbar.vimrc
+"   brief: 浏览tag的工具
+"
+" command: TagbarOpen [{flags}] 打开tagbar
+"          TagbarClose 关闭tagbar
+"          TagbarToggle 触发tagbar
+"          TagbarTogglePause 触发冻结当前的tagbar,文件间切换也不会变
+"          TagbarOpenAutoClose 打开tagbar窗口后,选择完就关闭
+"          TagbarSetFoldlevel[!] {number} 设置折叠级别
+"          TagbarShowTag 显示当前结点
+"          TagbarCurrentTag [{flags}] 回显当前结点
+"          TagbarGetTypeConfig {filetype} 粘贴filetype的配置
+"
+"    ncmd: <leader>tt :TagbarToggle
+" VIM Version: 7.4
+"  author: tenfyzhong
+"   email: 364755805@qq.com
+" created: 2016-04-14 19:48:14
+"==============================================================
+
 if version < 701
     finish
 endif
@@ -24,6 +44,8 @@ let g:tagbar_show_linenumbers 	= 1
 let g:tagbar_status_func 		= 'TagbarStatusFunc'
 let g:tagbar_show_visibility 	= 1
 let g:tagbar_iconchars 			= ['+', '-']
+let g:tagbar_indent             = 1
+let g:tagbar_show_linenumbers   = 0
 
 let g:tagbar_type_jce = {
             \ 'ctagstype'   : 'jce',
