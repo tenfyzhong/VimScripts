@@ -13,7 +13,7 @@
 "==============================================================
 PluginAdd 'Raimondi/delimitMate'
 
-let delimitMate_matchpairs = &matchpairs . ",<:>"
+" let delimitMate_matchpairs = &matchpairs . ",<:>"
 
 augroup delimitMate_setting
     au!
