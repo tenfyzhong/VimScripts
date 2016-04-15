@@ -12,3 +12,8 @@
 "==============================================================
 PluginAdd 'magic-dot-files/TagHighlight'
 
+if !exists("g:TagHighlightSettings")
+    let g:TagHighlightSettings = {}
+endif
+
+let g:TagHighlightSettings['TypesFilePrefix'] = ".types"
