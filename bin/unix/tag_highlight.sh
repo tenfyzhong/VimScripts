@@ -22,10 +22,16 @@ set -o nounset                              # Treat unset variables as an error
 path=$(pwd)
 old_path=$path
 
-if [ $# -gt 0 ] && [ -d $1 ]; then
+if [ $# -gt 0 ]; then
     path=$1
+fi
+
+if ! [ -d $path ]; then
+    echo "$path is not a directory"
+    exit 1
 fi
 
 cd $path
 vim -c UpdateTypesFile -c qa
 cd $old_path
+echo "generate tag_highlight files success"
