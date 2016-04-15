@@ -59,7 +59,12 @@ function! s:GenerateFileTag(bang, ...)
     if a:bang == "!"
         let l:root = l:pwd
     else
-        let l:root = file#GuessProjectRoot(l:pwd)
+        let l:guest_root = file#GuessProjectRoot(l:pwd)
+        if l:guest_root != ''
+            let l:root = l:guest_root
+        else
+            let l:root = l:pwd
+        endif
     endif
     call system("~/.vim/bin/unix/lookupfile.sh " . l:root)
     echo "Wow! Create .lookupfile_tags file success!"

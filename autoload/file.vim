@@ -99,6 +99,6 @@ function! file#GuessProjectRoot(...)
             return path
         endif
     endfor
-    return l:pwd
+    return ''
 endfunction
 " }}}
