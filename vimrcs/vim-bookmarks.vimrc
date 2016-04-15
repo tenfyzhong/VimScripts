@@ -14,14 +14,14 @@
 "          BookmarkSave <FILE_PATH> 保存书签
 "          BookmarkLoad <FILE_PATH> 加载书签
 "
-"    nmap: "MM :BookmarkToggle
-"          "MA :BookmarkAnnotate
-"          "MS :BookmarkShowAll
-"          "MN :BookmarkNext
-"          "MP :BookmarkPrev
-"          "MC :BookmarkClear
-"          "MU :BookmarkMoveUp
-"          "MD :BookmarkMoveDown
+"    nmap: Mm :BookmarkToggle
+"          Ma :BookmarkAnnotate
+"          Ms :BookmarkShowAll
+"          Mn :BookmarkNext
+"          Mp :BookmarkPrev
+"          Mc :BookmarkClear
+"          Mu :BookmarkMoveUp
+"          Md :BookmarkMoveDown
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -37,14 +37,14 @@ if exists("g:vim_bookmarks_init")
     finish
 endif
 
-nnoremap <unique><silent>"MM :BookmarkToggle<CR>
-nnoremap <unique><silent>"MA :BookmarkAnnotate<CR>
-nnoremap <unique><silent>"MS :BookmarkShowAll<CR>
-nnoremap <unique><silent>"MN :BookmarkNext<CR>
-nnoremap <unique><silent>"MP :BookmarkPrev<CR>
-nnoremap <unique><silent>"MC :BookmarkClear<CR>
-nnoremap <unique><silent>"MX :BookmarkClearAll<CR>
-nnoremap <unique><silent>"MU :BookmarkMoveUp<CR>
-nnoremap <unique><silent>"MD :BookmarkMoveDown<CR>
+nnoremap <unique><silent>Mm :BookmarkToggle<CR>
+nnoremap <unique><silent>Ma :BookmarkAnnotate<CR>
+nnoremap <unique><silent>Ms :BookmarkShowAll<CR>
+nnoremap <unique><silent>Mn :BookmarkNext<CR>
+nnoremap <unique><silent>Mp :BookmarkPrev<CR>
+nnoremap <unique><silent>Mc :BookmarkClear<CR>
+nnoremap <unique><silent>Mx :BookmarkClearAll<CR>
+nnoremap <unique><silent>Mu :BookmarkMoveUp<CR>
+nnoremap <unique><silent>Md :BookmarkMoveDown<CR>
 
 let g:vim_bookmarks_init = 1
