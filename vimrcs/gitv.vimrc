@@ -4,6 +4,8 @@
 "
 " command: :[range]Gitv[!] [args] 打开gitv窗口,指定range时会打开只影响的行,!会使用file mode替换browser mode
 "          :Git 在browser窗口上运行
+"
+"    nmap: <leader>gv Gitv
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -11,3 +13,10 @@
 "==============================================================
 PluginAdd 'gregsexton/gitv'
 
+if exists("g:gitv_init")
+    finish
+endif
+
+nnoremap <silent><unique><leader>gv :Gitv<cr>
+
+let g:gitv_init = 1
