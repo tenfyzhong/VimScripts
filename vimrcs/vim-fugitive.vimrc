@@ -35,12 +35,11 @@
 "     Gbrowse [...]@{remote} 强制使用给定的remote
 "     {range}Gbrowse[!] [args] 
 "
-"    nmap: <leader>cw Gwrite
-"          <leader>ca Gwrite
-"          <leader>cc Gcommit
-"          <leader>cb Gblame
-"          <leader>cd Gvdiff
-"          <leader>cl Glog
+"    nmap: <leader>gw Gwrite
+"          <leader>gc Gcommit
+"          <leader>gb Gblame
+"          <leader>gd Gvdiff
+"          <leader>gl Glog
 "
 "    cmap: <c-r><c-g> 在命令行中返回当前文件
 "          ["x]y<c-g> 粘贴当前对象的提交sha值
@@ -67,11 +66,10 @@ if exists('g:vim_fugitive_init')
     finish
 endif
 
-nnoremap <silent><unique><leader>cw :Gwrite<cr>
-nnoremap <silent><unique><leader>ca :Gwrite<cr>
-nnoremap <silent><unique><leader>cc :Gcommit<cr>
-nnoremap <silent><unique><leader>cb :Gblame<cr>
-nnoremap <silent><unique><leader>cd :Gvdiff<cr>
-nnoremap <silent><unique><leader>cl :Glog<cr>
+nnoremap <silent><unique><leader>gw :Gwrite<cr>
+nnoremap <silent><unique><leader>gc :Gcommit<cr>
+nnoremap <silent><unique><leader>gb :Gblame<cr>
+nnoremap <silent><unique><leader>gd :Gvdiff<cr>
+nnoremap <silent><unique><leader>gl :Glog<cr>
 
 let g:vim_fugitive_init = 1

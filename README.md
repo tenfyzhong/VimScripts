@@ -211,3 +211,8 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 |&lt;leader&gt;gr|n|GitGutter|回滚块|
 |&lt;leader&gt;gp|n|GitGutter|预览滚块|
 |&lt;leader&gt;gv|n|gitv|Gitv|
+|&lt;leader&gt;gw|n|fugitive|Gwrite|
+|&lt;leader&gt;gc|n|fugitive|Gcommit|
+|&lt;leader&gt;gb|n|fugitive|Gblame|
+|&lt;leader&gt;gd|n|fugitive|Gvdiff|
+|&lt;leader&gt;gl|n|fugitive|Glog|
