@@ -51,4 +51,6 @@ PluginAdd 'vcscommand.vim'
 augroup VCSCommand
     au!
     au User VCSBufferCreated silent! nnoremap <unique><buffer> q :bwipeout<cr>
+    au FileType gitcommit,vcscommit :startinsert
 augroup END
+
