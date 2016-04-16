@@ -1,6 +1,6 @@
 "==============================================================
 "    file: jquery.vimrc
-"   brief: 
+"   brief: jquery语法高亮
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
