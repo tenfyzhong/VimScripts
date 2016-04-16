@@ -29,6 +29,10 @@ bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete
 <pre><code>let g:type_plugin_list = ["c", "go", "web"] </code></pre>  
 以上的例子会加载vimrcs目录下的c,go,web目录下的插件。  
 
+golang支持  
+需要安装: godef
+<pre><code>go get -v code.google.com/p/rog-go/exp/cmd/godef
+go install -v code.google.com/p/rog-go/exp/cmd/godef</code></pre>
 
 ##说明  
 对于要使用cscope的项目，在项目根路径生成cscope的数据库，用以下命令：

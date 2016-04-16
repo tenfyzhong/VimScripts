@@ -50,7 +50,12 @@ PluginAdd 'vcscommand.vim'
 
 augroup VCSCommand
     au!
-    au User VCSBufferCreated silent! nnoremap <unique><buffer> q :bwipeout<cr>
-    au FileType gitcommit,vcscommit :startinsert
+    au User VCSBufferCreated call <SID>BufferCreate()
 augroup END
 
+function! s:BufferCreate()
+    silent! nnoremap <unique><buffer> q :bwipeout<cr>
+    if bufname('%') =~? '.*commitlog.*'
+        :startinsert
+    endif
+endfunction
