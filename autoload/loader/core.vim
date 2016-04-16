@@ -14,12 +14,13 @@ endif
 
 " 加载一个vimrc脚本 ---------------------------------------------------------{{{
 function! loader#core#LoadSingleVimrc(vimrc, will_check_exist)
-    if a:will_check_exist == 1 && !filereadable(expand(a:vimrc))
-        call vimlog#ErrorLog(a:vimrc . " is not exist")
+    let l:expand_vimrc = escape(expand(a:vimrc), ' ')
+    if a:will_check_exist == 1 && !filereadable(l:expand_vimrc)
+        call vimlog#ErrorLog(l:expand_vimrc . " is not exist")
     else
-        if !has_key(s:has_source_vimrc, a:vimrc)
-            execute "source " . a:vimrc
-            let s:has_source_vimrc[a:vimrc] = 1
+        if !has_key(s:has_source_vimrc, l:expand_vimrc)
+            execute "source " . l:expand_vimrc
+            let s:has_source_vimrc[l:expand_vimrc] = 1
         endif
     endif
 endfunction
@@ -27,7 +28,7 @@ endfunction
 
 function! s:LoadDirPlugin(dirpath)
     let l:vimrc_path_str    = globpath(a:dirpath, "*.vimrc")
-    let l:vimrc_list        = split(l:vimrc_path_str)
+    let l:vimrc_list        = split(l:vimrc_path_str, '\n')
     for vimrc in l:vimrc_list
             call loader#core#LoadSingleVimrc(vimrc, 0)
     endfor
