@@ -48,3 +48,7 @@
 "==============================================================
 PluginAdd 'vcscommand.vim'
 
+augroup vcscommand_init
+    au!
+    autocmd FileType gitstatus,gitadd,gitcommit nnoremap <buffer>q :q<cr>
+augroup END
