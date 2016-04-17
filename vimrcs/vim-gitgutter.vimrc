@@ -22,7 +22,7 @@
 "        nmap: 
 "          [c GitGutterPrevHunk
 "          ]c GitGutterNextHunk
-"          <leader>gs GitGutterStageHunk
+"          <leader>gt GitGutterStageHunk
 "          <leader>gr GitGutterRevertHunk
 "          <leader>gp GitGutterPreviewHunk
 " VIM Version: 7.4
@@ -41,7 +41,7 @@ let g:gitgutter_escape_grep = 1
 
 nmap [c <Plug>GitGutterPrevHunk
 nmap ]c <Plug>GitGutterNextHunk
-nmap <Leader>gs <Plug>GitGutterStageHunk
+nmap <Leader>gt <Plug>GitGutterStageHunk
 nmap <Leader>gr <Plug>GitGutterRevertHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
 

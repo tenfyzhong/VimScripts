@@ -40,6 +40,7 @@
 "          <leader>gb Gblame
 "          <leader>gd Gvdiff
 "          <leader>gl Glog
+"          <leader>gs Gstatus
 "
 "    cmap: <c-r><c-g> 在命令行中返回当前文件
 "          ["x]y<c-g> 粘贴当前对象的提交sha值
@@ -62,6 +63,12 @@
 "==============================================================
 PluginAdd 'tpope/vim-fugitive'
 
+augroup fugitive_init
+    au! 
+    autocmd FileType gitcommit cnoremap <buffer>x silent x
+    autocmd FileType gitcommit cnoremap <buffer>q silent q
+augroup END
+
 if exists('g:vim_fugitive_init')
     finish
 endif
@@ -71,5 +78,6 @@ nnoremap <silent><unique><leader>gc :Gcommit<cr>
 nnoremap <silent><unique><leader>gb :Gblame<cr>
 nnoremap <silent><unique><leader>gd :Gvdiff<cr>
 nnoremap <silent><unique><leader>gl :Glog<cr>
+nnoremap <silent><unique><leader>gs :Gstatus<cr>
 
 let g:vim_fugitive_init = 1

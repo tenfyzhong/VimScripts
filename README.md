@@ -207,7 +207,7 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 |\jc|n|eclim|:JavaSearchContext|
 |[c|n|GitGutter|跳到上一个修改的块|
 |]c|n|GitGutter|跳到下一个修改的块|
-|&lt;leader&gt;gs|n|GitGutter|stage块|
+|&lt;leader&gt;gt|n|GitGutter|stage块|
 |&lt;leader&gt;gr|n|GitGutter|回滚块|
 |&lt;leader&gt;gp|n|GitGutter|预览滚块|
 |&lt;leader&gt;gv|n|gitv|Gitv|
@@ -216,3 +216,4 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 |&lt;leader&gt;gb|n|fugitive|Gblame|
 |&lt;leader&gt;gd|n|fugitive|Gvdiff|
 |&lt;leader&gt;gl|n|fugitive|Glog|
+|&lt;leader&gt;gs|n|fugitive|Gstatus|
