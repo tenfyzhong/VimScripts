@@ -78,7 +78,7 @@ nnoremap <silent><unique><leader>gw :Gwrite<cr>
 nnoremap <silent><unique><leader>gc :Gcommit<cr>
 nnoremap <silent><unique><leader>gb :Gblame<cr>
 nnoremap <silent><unique><leader>gd :Gvdiff<cr>
-nnoremap <silent><unique><leader>gl :silent Glog<cr>
+nnoremap <silent><unique><leader>gl :silent Glog!<cr>
 nnoremap <silent><unique><leader>gs :Gstatus<cr>
 
 let g:vim_fugitive_init = 1
