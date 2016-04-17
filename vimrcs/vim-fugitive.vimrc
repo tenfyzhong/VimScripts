@@ -67,6 +67,7 @@ augroup fugitive_init
     au! 
     autocmd FileType gitcommit cnoremap <buffer>x silent x
     autocmd FileType gitcommit cnoremap <buffer>q silent q
+    autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
 if exists('g:vim_fugitive_init')
