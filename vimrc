@@ -160,6 +160,7 @@ if !exists("g:load_vimrc")
     nnoremap <silent># #zz
     nnoremap <silent>g* g*zz
     nnoremap <leader>w :wa<CR>
+    nnoremap <leader>q :q<CR>
 
     " call keymap#Mate("inoremap <unique><m-e> <c-x><c-e>")
     " call keymap#Mate("inoremap <unique><m-y> <c-x><c-y>")

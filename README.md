@@ -106,6 +106,8 @@ LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使�
 |&lt;leader&gt;j|n|global|移到下边窗口|
 |&lt;leader&gt;k|n|global|移到上边窗口|
 |&lt;leader&gt;l|n|global|移到右边窗口|
+|&lt;leader&gt;w|n|global|保存所有文件|
+|&lt;leader&gt;q|n|global|关闭当前文件|
 |j|n|global|gj|
 |gj|n|global|j|
 |k|n|global|gk|
