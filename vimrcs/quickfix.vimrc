@@ -21,7 +21,7 @@ endif
 
 augroup quickfix_init
     au!
-    au FileType qf nnoremap <unique><silent><buffer>q <esc>:cclose<cr>
+    au FileType qf nnoremap <silent><buffer>q <esc>:cclose<cr>
 augroup END
 
 
