@@ -20,9 +20,9 @@
 "          GitGutterPreviewHunk 预览当前块
 "
 "        nmap: 
-"          [c GitGutterPrevHunk
-"          ]c GitGutterNextHunk
-"          <leader>gt GitGutterStageHunk
+"          [h GitGutterPrevHunk
+"          ]h GitGutterNextHunk
+"          <leader>ga GitGutterStageHunk
 "          <leader>gr GitGutterRevertHunk
 "          <leader>gp GitGutterPreviewHunk
 " VIM Version: 7.4
@@ -39,9 +39,9 @@ endif
 let g:gitgutter_map_keys    = 0
 let g:gitgutter_escape_grep = 1
 
-nmap [c <Plug>GitGutterPrevHunk
-nmap ]c <Plug>GitGutterNextHunk
-nmap <Leader>gt <Plug>GitGutterStageHunk
+nmap [h <Plug>GitGutterPrevHunk
+nmap ]h <Plug>GitGutterNextHunk
+nmap <Leader>ga <Plug>GitGutterStageHunk
 nmap <Leader>gr <Plug>GitGutterRevertHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
