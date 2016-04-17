@@ -13,4 +13,4 @@
 "   email: 364755805@qq.com
 " created: 2016-04-17 10:29:31
 "==============================================================
-PluginAdd 'joonty/vim-do'
+PluginAdd 'WolfgangMehner/vim-do'
