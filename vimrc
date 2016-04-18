@@ -193,11 +193,20 @@ endif
 " }}}
 
 " {{{ source dir vimrc
-let b:dir_vimrc_path = file#FindFile(getcwd(), '.vimrc')
-if b:dir_vimrc_path != '' && 
-            \ b:dir_vimrc_path != expand('~') 
-    let b:dir_vimrc = expand(b:dir_vimrc_path . '/.vimrc')
-    exec 'source ' . b:dir_vimrc
+
+function! s:SourceDirVimrc(name) 
+    let l:dir_vimrc_path = file#FindFile(getcwd(), a:name)
+    if l:dir_vimrc_path != '' && 
+                \ l:dir_vimrc_path != expand('~') 
+        let l:dir_vimrc = expand(l:dir_vimrc_path . '/' . a:name)
+        exec 'source ' . l:dir_vimrc
+    endif
+endfunction 
+
+if g:MSWIN
+    call <SID>SourceDirVimrc('_vimrc')
+else
+    call <SID>SourceDirVimrc('.vimrc')
 endif
 " }}}
 
