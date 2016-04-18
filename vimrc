@@ -192,6 +192,15 @@ if filereadable(b:local_vim)
 endif
 " }}}
 
+" {{{ source dir vimrc
+let b:dir_vimrc_path = file#FindFile(getcwd(), '.vimrc')
+if b:dir_vimrc_path != '' && 
+            \ b:dir_vimrc_path != expand('~') 
+    let b:dir_vimrc = expand(b:dir_vimrc_path . '/.vimrc')
+    exec 'source ' . b:dir_vimrc
+endif
+" }}}
+
 " source plugin ------------------------------------------------------------ {{{
 " 加载插件
 " 建议：插件的配置最好以插件名加.vimrc命名
