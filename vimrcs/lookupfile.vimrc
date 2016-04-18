@@ -44,7 +44,7 @@ endif
 
 let s:lookupfile_tags = file#FindFile(getcwd(), ".lookupfile_tags")
 if s:lookupfile_tags != ''
-    exec "let g:LookupFile_TagExpr = \"'" . s:lookupfile_tags . "/.lookupfile_tags'\""
+    exec "let g:LookupFile_TagExpr = \"'" . s:lookupfile_tags . ".lookupfile_tags'\""
 endif
 
 " 如果使用<bang>会在当前目录去生成.lookupfile_tags文件，而不会去查找工程目录

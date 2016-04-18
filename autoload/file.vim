@@ -28,7 +28,7 @@ function! s:FindFileAbsolutePath(path, filename)
 
     let l:wholeFileName = a:path . '/' . a:filename
     if filereadable (l:wholeFileName) || isdirectory(l:wholeFileName)
-        return a:path 
+        return fnamemodify(a:path , ':p')
     else
         let l:parent = fnamemodify(a:path, ":p:h:h")
         return <SID>FindFileAbsolutePath(l:parent, a:filename)

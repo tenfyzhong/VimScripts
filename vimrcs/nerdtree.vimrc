@@ -45,7 +45,7 @@ let NERDTreeCascadeOpenSingleChildDir = 1
 let NERDTreeAutoDeleteBuffer        = 1
 
 " 从工程目录中去读取bookmark的文件，不存在则使用默认的
-let b:bookmarks_filename            = '/.NERDTreeBookmarks'
+let b:bookmarks_filename            = '.NERDTreeBookmarks'
 let b:NERDTreeBookmarksFile_tmp     = file#FindFile(getcwd(), b:bookmarks_filename)           
 if b:NERDTreeBookmarksFile_tmp != ''
     let NERDTreeBookmarksFile       = b:NERDTreeBookmarksFile_tmp . b:bookmarks_filename

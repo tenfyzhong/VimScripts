@@ -13,7 +13,7 @@
 if executable('ctags')
     let p = file#FindFile(getcwd(), 'tags')
     if p != ''
-        execute "set tags=" . p . "/tags"
+        execute "set tags=" . p . "tags"
     endif
 
     if !exists("g:ctags_map")

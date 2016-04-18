@@ -13,12 +13,12 @@ let mapleader   = "'"
 let g:MSWIN     = system#IsMswin()
 let g:UNIX      = system#IsUnix()
 if g:MSWIN
-    let g:VIMHOME=expand("~/vimfiles/")
+    let g:VIMHOME=fnamemodify("~/vimfiles/", ':p')
 else
-    let g:VIMHOME=expand("~/.vim/")
+    let g:VIMHOME=fnamemodify("~/.vim/", ':p')
 endif
-let g:vimrc_path    = expand(g:VIMHOME . "vimrcs/")
-let g:bundle_path 	= expand(g:VIMHOME . "bundle/")
+let g:vimrc_path    = fnamemodify(g:VIMHOME . "vimrcs/", ':p')
+let g:bundle_path 	= fnamemodify(g:VIMHOME . "bundle/", ':p')
 " }}} --------------------------------------------------------------------------
 
 " base setting  ------------------------------------------------------------ {{{
@@ -186,7 +186,7 @@ com! -nargs=+ -bar PluginAdd call loader#core#BundlePlugin(<args>)
 " }}} --------------------------------------------------------------------------
 
 " local.vim {{{
-let b:local_vim = expand(g:VIMHOME . "local.vim")
+let b:local_vim = g:VIMHOME . "local.vim"
 if filereadable(b:local_vim)
     exec "so " . b:local_vim
 endif
@@ -197,8 +197,8 @@ endif
 function! s:SourceDirVimrc(name) 
     let l:dir_vimrc_path = file#FindFile(getcwd(), a:name)
     if l:dir_vimrc_path != '' && 
-                \ l:dir_vimrc_path != expand('~') 
-        let l:dir_vimrc = expand(l:dir_vimrc_path . '/' . a:name)
+                \ l:dir_vimrc_path != fnamemodify($HOME, ':p') 
+        let l:dir_vimrc = l:dir_vimrc_path . a:name
         exec 'source ' . l:dir_vimrc
     endif
 endfunction 
