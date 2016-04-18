@@ -51,6 +51,10 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 LookupGenTag命令会生成lookupfile需要的tag文件，并链接。如果使用<bang>会在当前目录  
 去生成，否则会查找工程的根目录去生成，如果不存在工程，则也是在当前目录生成  
 
+本地目录下增加.vimrc(windows下为\_vimrc)，可以在加载完home目录下的.vimrc文件后，  
+加载插件之前，去加载这个文件。可以在这个文件里做一些特殊的配置。比如可以调用  
+g:type\_plugin\_list来加载特定的插件。  
+
 ##建议
 在crontab中加入清除备份文件和undo文件的脚本  
 <pre><code>0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" | xargs rm -rf  
