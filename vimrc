@@ -154,12 +154,7 @@ if !exists("g:load_vimrc")
     cnoremap <unique><c-j>                  <Down>
     nnoremap <unique><silent><Space>        :call fold#FoldIfLevelGreat0(line("."))<CR>
     nnoremap ; :
-    nnoremap : ;
-    nnoremap <silent>n nzz
-    nnoremap <silent>N Nzz
-    nnoremap <silent>* *zz
-    nnoremap <silent># #zz
-    nnoremap <silent>g* g*zz
+    call keymap#Mate("nnoremap <unique><m-,> ;")
     nnoremap <leader>w :wa<CR>
     nnoremap <leader>q :q<CR>
     nnoremap do :diffget<cr>:diffupdate<cr>

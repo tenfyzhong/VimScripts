@@ -117,12 +117,7 @@ g:type\_plugin\_list来加载特定的插件。
 |k|n|global|gk|
 |gk|n|global|k|
 |;|n|global|:|
-|:|n|global|;|
-|n|n|global|nzz|
-|N|n|global|Nzz|
-|\*|n|global|\*zz|
-|#|n|global|#zz|
-|g\*|n|global|g\*zz|
+|a-,|n|global|;|
 |&lt;leader&gt;p|n|global|paste toggle|
 |[1|n|global|diff时取窗口1的内容|
 |[2|n|global|diff时取窗口2的内容|
