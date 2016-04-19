@@ -1,1 +1,1 @@
-../c/cscope.vimrc
+source ../c/cscope.vimrc
