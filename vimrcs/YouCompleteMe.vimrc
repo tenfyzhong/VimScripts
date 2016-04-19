@@ -69,5 +69,5 @@ let g:ycm_key_list_select_completion                = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>'] 
 let g:ycm_server_log_level                          = 'error'
 
-nnoremap <leader>jd :YcmCompleter GoToImprecise<CR>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
