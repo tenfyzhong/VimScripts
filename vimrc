@@ -137,31 +137,29 @@ endif
 
 " global mapping ----------------------------------------------------------- {{{
 if !exists("g:load_vimrc")
-    nnoremap <unique><F12> 					<C-w>w	" F12 窗口切换
-    nnoremap <unique><leader>h 				<c-w>h
-    nnoremap <unique><leader>j 				<c-w>j
-    nnoremap <unique><leader>k 				<c-w>k
-    nnoremap <unique><leader>l 				<c-w>l
-    nnoremap <unique><c-left> 				<c-w>h
-    nnoremap <unique><c-down> 				<c-w>j
-    nnoremap <unique><c-up> 				<c-w>k
-    nnoremap <unique><c-right> 				<c-w>l
-    nnoremap <unique>j                      gj
-    nnoremap <unique>gj                     j
-    nnoremap <unique>k                      gk
-    nnoremap <unique>gk                     k
-    cnoremap <unique><c-k>                  <Up>
-    cnoremap <unique><c-j>                  <Down>
-    nnoremap <unique><silent><Space>        :call fold#FoldIfLevelGreat0(line("."))<CR>
-    nnoremap ; :
-    call keymap#Mate("nnoremap <unique><m-,> ;")
-    nnoremap <leader>w :wa<CR>
-    nnoremap <leader>q :q<CR>
-    nnoremap do :diffget<cr>:diffupdate<cr>
-    nnoremap dp :diffput<cr>:diffupdate<cr>
+    nnoremap <unique><F12> 				<C-w>w	" F12 窗口切换
+    nnoremap <unique><leader>h 			<c-w>h
+    nnoremap <unique><leader>j 			<c-w>j
+    nnoremap <unique><leader>k 			<c-w>k
+    nnoremap <unique><leader>l 			<c-w>l
+    nnoremap <unique><c-left> 			<c-w>h
+    nnoremap <unique><c-down> 			<c-w>j
+    nnoremap <unique><c-up> 			<c-w>k
+    nnoremap <unique><c-right> 			<c-w>l
+    nnoremap <unique>j                  gj
+    nnoremap <unique>gj                 j
+    nnoremap <unique>k                  gk
+    nnoremap <unique>gk                 k
+    cnoremap <unique><c-k>              <Up>
+    cnoremap <unique><c-j>              <Down>
+    nnoremap <unique><silent><Space>    :call fold#FoldIfLevelGreat0(line("."))<CR>
+    nnoremap ;                          :
+    nnoremap <leader>w                  :wa<CR>
+    nnoremap <leader>q                  :q<CR>
+    nnoremap do                         :diffget<cr>:diffupdate<cr>
+    nnoremap dp                         :diffput<cr>:diffupdate<cr>
 
-    " call keymap#Mate("inoremap <unique><m-e> <c-x><c-e>")
-    " call keymap#Mate("inoremap <unique><m-y> <c-x><c-y>")
+    call keymap#Mate("nnoremap <unique><m-,> ;")
 
     if &diff
         nnoremap <unique><silent>[1 :diffget 1<CR> :diffupdate<CR> 
@@ -188,7 +186,6 @@ endif
 " }}}
 
 " {{{ source dir vimrc
-
 function! s:SourceDirVimrc(name) 
     let l:dir_vimrc_path = file#FindFile(getcwd(), a:name)
     if l:dir_vimrc_path != '' && 
