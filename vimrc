@@ -192,7 +192,7 @@ endif
 function! s:SourceDirVimrc(name) 
     let l:dir_vimrc_path = file#FindFile(getcwd(), a:name)
     if l:dir_vimrc_path != '' && 
-                \ l:dir_vimrc_path != fnamemodify($HOME, ':p') 
+                \ l:dir_vimrc_path != resolve(fnamemodify($HOME, ':p'))
         let l:dir_vimrc = l:dir_vimrc_path . a:name
         exec 'source ' . l:dir_vimrc
     endif
