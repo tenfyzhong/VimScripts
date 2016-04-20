@@ -97,7 +97,7 @@ g:type\_plugin\_list来加载特定的插件。
 |LookupGenTag[!]|路径名|在路径下生成.lookypfile\_tags|
 
 ##键映射  
-以下model, n对应normal, i对应insert, v对应visual, c对应console  
+以下model, n对应normal, i对应insert, v对应visual, c对应console, x对应选择模式  
 
 |map|model|script|describe|
 |---|:---|:---|:---|
@@ -183,8 +183,7 @@ g:type\_plugin\_list来加载特定的插件。
 |&lt;leader&gt;ut|n|lookupfile|lookupfile tags|
 |&lt;leader&gt;ub|n|lookupfile|lookup file bufs|
 |&lt;leader&gt;uw|n|lookupfile|lookup file walk|
-|&lt;leader&gt;a=|nv|tabular|进行全局的等号对齐|
-|&lt;leader&gt;a:|nv|tabular|进行全局的冒号对齐|
+|gt|nx|vim-easy-align|开启对齐|
 |&lt;leader&gt;N|n|Mark|清除所有的mark|
 |Mm|n|vim-bookmarks|toggle一个bookmark|
 |Ma|n|vim-bookmarks|toggle一个annotate|
