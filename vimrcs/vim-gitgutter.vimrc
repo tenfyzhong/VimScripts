@@ -25,6 +25,7 @@
 "          <leader>ga GitGutterStageHunk
 "          <leader>gr GitGutterRevertHunk
 "          <leader>gp GitGutterPreviewHunk
+"          <leader>gg :GitGutter
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -44,4 +45,5 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap <Leader>ga <Plug>GitGutterStageHunk
 nmap <Leader>gr <Plug>GitGutterRevertHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
+nnoremap <Leader>gg :GitGutter<cr>
 

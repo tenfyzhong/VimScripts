@@ -210,6 +210,7 @@ g:type\_plugin\_list来加载特定的插件。
 |&lt;leader&gt;ga|n|GitGutter|stage块|
 |&lt;leader&gt;gr|n|GitGutter|回滚块|
 |&lt;leader&gt;gp|n|GitGutter|预览滚块|
+|&lt;leader&gt;gg|n|GitGutter|刷新GitGutter|
 |&lt;leader&gt;gv|n|gitv|Gitv|
 |&lt;leader&gt;gw|n|fugitive|Gwrite|
 |&lt;leader&gt;gc|n|fugitive|Gcommit|
