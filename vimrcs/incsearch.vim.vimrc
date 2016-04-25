@@ -21,6 +21,6 @@ map g/ <Plug>(incsearch-stay)
 set hlsearch
 let g:incsearch#auto_nohlsearch = 0
 
-nnoremap <unique><Esc><Esc> :<C-u>nohlsearch<CR>
+nnoremap <unique><silent><Esc><Esc> :<C-u>nohlsearch<CR>
 
 let g:incsearch_vim_init = 1
