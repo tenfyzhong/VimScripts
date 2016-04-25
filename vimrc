@@ -156,8 +156,8 @@ if !exists("g:load_vimrc")
     nnoremap ;                          :
     nnoremap <leader>w                  :wa<CR>
     nnoremap <leader>q                  :q<CR>
-    nnoremap do                         :diffget<cr>:diffupdate<cr>
-    nnoremap dp                         :diffput<cr>:diffupdate<cr>
+    nnoremap <silent>do                 :diffget<cr>:diffupdate<cr>
+    nnoremap <silent>dp                 :diffput<cr>:diffupdate<cr>
 
     call keymap#Mate("nnoremap <unique><m-,> ;")
 
