@@ -45,5 +45,5 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap <Leader>ga <Plug>GitGutterStageHunk
 nmap <Leader>gr <Plug>GitGutterRevertHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
-nnoremap <Leader>gg :GitGutter<cr>
+nnoremap <silent><Leader>gg :GitGutter<cr>
 
