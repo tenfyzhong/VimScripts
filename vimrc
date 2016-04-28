@@ -8,6 +8,10 @@ endif
 
 " global variable ---------------------------------------------------------- {{{
 " 全局变量
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+
 let g:log_level = vimlog#error_level()
 let mapleader   = "'"
 let g:MSWIN     = system#IsMswin()
