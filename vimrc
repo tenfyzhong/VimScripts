@@ -1,12 +1,12 @@
-" Requirement -------------------------------------------------------------- {{{
+" Requirement {{{
 " 版本低于7.0会有很多配置用不了，要求更新
 if version < 700
     echoerr "请更新到vim 7.0以上"
     finish
 endif
-" }}} --------------------------------------------------------------------------
+" }}} 
 
-" global variable ---------------------------------------------------------- {{{
+" global variable {{{
 " 全局变量
 if &shell =~# 'fish$'
     set shell=sh
@@ -23,9 +23,9 @@ else
 endif
 let g:vimrc_path    = fnamemodify(g:VIMHOME . "vimrcs/", ':p')
 let g:bundle_path 	= fnamemodify(g:VIMHOME . "bundle/", ':p')
-" }}} --------------------------------------------------------------------------
+" }}} 
 
-" base setting  ------------------------------------------------------------ {{{
+" base setting {{{
 source $VIMRUNTIME/vimrc_example.vim
 set nocompatible " 关闭vi兼容模式
 set cindent 	 " C语言缩进方式
@@ -103,9 +103,9 @@ set sessionoptions-=buffers
 syntax on
 syntax enable
 
-" }}} --------------------------------------------------------------------------
+" }}}
 
-" autocmd ------------------------------------------------------------------ {{{
+" autocmd {{{
 augroup initial
     au!
     autocmd BufWritePost *vimrc source % 
@@ -125,9 +125,9 @@ augroup Binary
     exec "au BufWritePost " . g:bin_pattern . " if &bin | silent %!xxd"
     exec "au BufWritePost " . g:bin_pattern . " set nomod | endif"
 augroup END
-" }}} --------------------------------------------------------------------------
+" }}} 
 
-" mswin setting -------------------------------------------------------------{{{
+" mswin setting {{{
 if g:MSWIN
     colorscheme evening
     if filereadable("$VIMRUNTIME/_vimrc")
@@ -137,9 +137,9 @@ if g:MSWIN
         source $VIMRUNTIME/../_vimrc
     endif
 endif
-" }}} --------------------------------------------------------------------------
+" }}} 
 
-" global mapping ----------------------------------------------------------- {{{
+" global mapping {{{
 if !exists("g:load_vimrc")
     nnoremap <unique><F12> 				<C-w>w	" F12 窗口切换
     nnoremap <unique><leader>h 			<c-w>h
@@ -176,11 +176,11 @@ if !exists("g:load_vimrc")
         nnoremap <unique><silent>]4 :diffput 4<CR> :diffupdate<CR>
     endif
 endif
-" }}} --------------------------------------------------------------------------
+" }}} 
 
-" command -------------------------------------------------------------------{{{
+" command {{{
 com! -nargs=+ -bar PluginAdd call loader#core#BundlePlugin(<args>)
-" }}} --------------------------------------------------------------------------
+" }}} 
 
 " local.vim {{{
 let b:local_vim = g:VIMHOME . "local.vim"
@@ -206,7 +206,7 @@ else
 endif
 " }}}
 
-" source plugin ------------------------------------------------------------ {{{
+" source plugin {{{
 " 加载插件
 " 建议：插件的配置最好以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
@@ -216,5 +216,5 @@ if !exists("g:load_vimrc")
 endif
 
 let g:load_vimrc = 1
-" }}} --------------------------------------------------------------------------
+" }}} 
 
