@@ -108,8 +108,7 @@ syntax enable
 " autocmd {{{
 augroup initial
     au!
-    autocmd BufWritePost *vimrc source % 
-    autocmd BufWritePost *.vim source % 
+    autocmd BufWritePost *vimrc,*.vim source % 
     autocmd InsertLeave * set nopaste
 augroup END
 
