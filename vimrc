@@ -23,6 +23,8 @@ else
 endif
 let g:vimrc_path    = fnamemodify(g:VIMHOME . "vimrcs/", ':p')
 let g:bundle_path   = fnamemodify(g:VIMHOME . "bundle/", ':p')
+
+let g:binary_extensions = "^\(bin\|dat\|mp3\|mp4\|o\|a\|so\|exe\|class\)$"
 " }}} 
 
 " base setting {{{
@@ -115,13 +117,10 @@ augroup END
 " vim -b : edit binary using xxd-format!
 augroup Binary
     au!
-    au BufReadPre *.bin,*.dat,*.mp3,*.mp4,*.o,*.a,*.so,*.exe,*.class set binary
-    au BufReadPost * if &bin | silent %!xxd
-    au BufReadPost * set ft=xxd | endif
-    au BufWritePre * if &bin | silent %!xxd -r
-    au BufWritePre * endif
-    au BufWritePost * if &bin | silent %!xxd
-    au BufWritePost * set nomod | endif
+    au BufReadPre * call file#SetIfBinary(expand('%'))
+    au BufreadPost * call file#BinaryBufReadPost()
+    au BufWritePre * call file#BinaryBufWritePre()
+    au BufWritePost * call file#BinaryBufWritePost()
 augroup END
 " }}} 
 

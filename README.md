@@ -39,6 +39,9 @@ go install -v code.google.com/p/rog-go/exp/cmd/godef</code></pre>
 <pre><code>~/.vim/bin/unix/cscope.sh</code></pre>
 cscope会从当前目录一直往上去查找cscope目录，找到则链接  
 
+对于没有后缀二进制文件，会使用perl来检查然后用xxd来进行打开
+对于有后缀的二进制文件，为了减少perl检查的开销，请在`g:binary_extensions`里设置后缀
+
 加入插件，在 ~/.vim/vimrcs/ 下加入一个.vimrc后缀的脚本，在脚本开头调用PluginAdd命令
 加载插件，脚本下面可以加入其他的配置。例如：
 <pre><code>PluginAdd 'a.vim'</code></pre>  
