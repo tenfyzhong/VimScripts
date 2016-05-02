@@ -127,7 +127,7 @@ function! file#SetIfBinary(filename) "{{{
     let l:extension = fnamemodify(a:filename, ':e')
     if l:extension != ''
         if exists("g:binary_extensions") && 
-                    \g:binary_extensions =~ l:extension
+                    \g:binary_extensions =~? l:extension
             setlocal binary
             return
         endif
