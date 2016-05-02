@@ -139,15 +139,15 @@ endif
 
 " global mapping {{{
 if !exists("g:load_vimrc")
-    nnoremap <unique><F12> 				<C-w>w	" F12 窗口切换
-    nnoremap <unique><leader>h 			<c-w>h
-    nnoremap <unique><leader>j 			<c-w>j
-    nnoremap <unique><leader>k 			<c-w>k
-    nnoremap <unique><leader>l 			<c-w>l
-    nnoremap <unique><c-left> 			<c-w>h
-    nnoremap <unique><c-down> 			<c-w>j
-    nnoremap <unique><c-up> 			<c-w>k
-    nnoremap <unique><c-right> 			<c-w>l
+    nnoremap <unique><F12>              <C-w>w
+    nnoremap <unique><leader>h          <c-w>h
+    nnoremap <unique><leader>j          <c-w>j
+    nnoremap <unique><leader>k          <c-w>k
+    nnoremap <unique><leader>l          <c-w>l
+    nnoremap <unique><c-left>           <c-w>h
+    nnoremap <unique><c-down>           <c-w>j
+    nnoremap <unique><c-up>             <c-w>k
+    nnoremap <unique><c-right>          <c-w>l
     nnoremap <unique>j                  gj
     nnoremap <unique>gj                 j
     nnoremap <unique>k                  gk
@@ -156,6 +156,7 @@ if !exists("g:load_vimrc")
     cnoremap <unique><c-j>              <Down>
     nnoremap <unique><silent><Space>    :call fold#FoldIfLevelGreat0(line("."))<CR>
     nnoremap ;                          :
+    xnoremap ;                          :
     nnoremap <leader>w                  :wa<CR>
     nnoremap <leader>q                  :q<CR>
     nnoremap <silent>do                 :diffget<cr>:diffupdate<cr>
