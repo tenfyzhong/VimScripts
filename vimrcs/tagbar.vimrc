@@ -47,19 +47,4 @@ let g:tagbar_iconchars 			= ['+', '-']
 let g:tagbar_indent             = 1
 let g:tagbar_show_linenumbers   = 0
 
-let g:tagbar_type_jce = {
-            \ 'ctagstype'   : 'jce',
-            \ 'kinds'       : [
-                \ 'm:module',
-                \ 's:struct',
-            \],
-            \ 'sro'         : '::'
-\}
-
-let g:tagbar_type_make = {
-            \ 'kinds':[
-                \ 'm:macros',
-                \ 't:targets'
-            \ ]
-\}
 
