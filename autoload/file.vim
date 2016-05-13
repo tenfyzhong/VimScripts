@@ -19,7 +19,7 @@ function! s:FindFileAbsolutePath(path, filename)
     endif
 
     if l:isRoot
-        if filereadable (a:path . '/' . a:filename)
+        if filereadable (a:path . a:filename)
             return a:path
         else
             return ''
