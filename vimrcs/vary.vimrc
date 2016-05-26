@@ -8,5 +8,5 @@
 "==============================================================
 PluginAdd 'dongweiming/vary.vim'
 
-let g:auto_striptrail = "python,ruby,cpp,c,sed,awk"
-let g:auto_striptab   = "python,ruby,cpp,c"
+let g:auto_striptrail = "python,ruby,sed,awk"
+let g:auto_striptab   = "python,ruby"
