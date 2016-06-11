@@ -26,13 +26,16 @@ function! loader#core#LoadSingleVimrc(vimrc, will_check_exist)
 endfunction
 " }}} --------------------------------------------------------------------------
 
-function! s:LoadDirPlugin(dirpath)
+function! s:LoadDirPlugin(dirpath) "{{{
     let l:vimrc_path_str    = globpath(a:dirpath, "*.vimrc")
+    let l:vim_path_str      = globpath(a:dirpath, "*.vim")
     let l:vimrc_list        = split(l:vimrc_path_str, '\n')
+    let l:vim_list          = split(l:vim_path_str, '\n')
+    let l:vimrc_list        = l:vimrc_list + l:vim_list
     for vimrc in l:vimrc_list
             call loader#core#LoadSingleVimrc(vimrc, 0)
     endfor
-endfunction
+endfunction "}}}
 
 
 " 加载~/.vim/vimrcs/目录下的所有.vimrc脚本-----------------------------------{{{
