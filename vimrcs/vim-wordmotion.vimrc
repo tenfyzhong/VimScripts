@@ -1,6 +1,6 @@
 "==============================================================
 "    file: vim-wordmotion.vimrc
-"   brief: 'wbe'这些移动命令前加'-'，会根据语义来移动
+"   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -8,4 +8,5 @@
 "==============================================================
 PluginAdd 'chaoren/vim-wordmotion'
 
-let g:wordmotion_prefix = '-'
+let g:wordmotion_on = 1
+
