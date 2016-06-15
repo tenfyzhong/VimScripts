@@ -12,6 +12,10 @@
 "   email: 364755805@qq.com
 " created: 2016-04-16 11:57:01
 "==============================================================
+if g:MSWIN
+    finish
+endif
+
 PluginAdd 'mhinz/vim-startify'
 
 let g:startify_session_dir = g:VIMHOME . '.startify_session'
