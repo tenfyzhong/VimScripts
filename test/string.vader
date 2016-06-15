@@ -1,0 +1,11 @@
+Execute (string#ToCamel):
+  let result = string#ToCamel('hello_world_hello')
+  AssertEqual 'HelloWorldHello', result
+
+Execute (string#ToCamel 'hello_world_'):
+  let result = string#ToCamel('hello_world_')
+  AssertEqual 'HelloWorld', result
+
+Execute (string#ToCamel '_hello_world_'):
+  let result = string#ToCamel('_hello_world_')
+  AssertEqual 'HelloWorld', result
