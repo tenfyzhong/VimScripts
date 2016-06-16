@@ -6,7 +6,7 @@
 "   email: 364755805@qq.com
 " created: 2016-06-13 11:14:26
 "==============================================================
-PluginAdd 'chaoren/vim-wordmotion'
+PluginAdd 'tenfyzhong/vim-wordmotion'
 
 let g:wordmotion_on = 1
 
