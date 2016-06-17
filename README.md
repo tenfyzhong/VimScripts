@@ -2,13 +2,20 @@
 ##安装说明
 ###类unix  
 将克隆下来的VimScripts重命名为.vim，然后运行bin/unix/install.sh:  
-<pre><code>mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作  
+```sh
+mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作  
 mv VimScripts ~/.vim  
-sh ~/.vim/install.sh</code></pre>
+sh ~/.vim/install.sh
+```
 
 ###windows  
 安装msysgit  
 将克隆下来的VimScripts重命令为vimfiles，然后运行bin\windows\install.bat  
+如果windows系统安装了python，vim会支持python。但是默认会从C:\Python27目录去  
+查找python(以python2.7为例)，如果找不到vim会crash。需要设置系统变量  
+```
+PYTHONPATH=C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Lib\lib-tk
+```
 
 ###common  
 bin/generate\_clang\_complete.sh用于生成c/c++自动补全的.clang\_complete文件

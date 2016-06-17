@@ -9,7 +9,7 @@
 "   email: 364755805@qq.com
 " created: 2016-04-15 12:52:50
 "==============================================================
-if !has('python') || (g:MSWIN && has('gui_running'))
+if !has('python') 
     finish
 endif
 
