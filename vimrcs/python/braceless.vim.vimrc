@@ -7,3 +7,11 @@
 " created: 2016-06-19 14:55:45
 "==============================================================
 PluginAdd 'tweekmonster/braceless.vim'
+
+highlight BracelessIndent ctermfg=NONE ctermbg=Black guibg=Grey90 
+
+augroup BRACELESS_SETTING
+    au!
+    autocmd FileType python,yaml,coffee BracelessEnable +indent +flod +highlight
+augroup end
+
