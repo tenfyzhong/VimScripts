@@ -22,6 +22,18 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:ycm_show_diagnostics_ui = 0
 
+if executable('gcc')
+    let gccversion = system('gcc -dumpversion')
+    let [mainver, subver, fixver] = split(gccversion, '\.')
+    let vernum = mainver * 100 + subver * 10 + fixver
+    if vernum >= 480
+        let g:syntastic_cpp_compiler_options = ' -std=c++11 '
+    elseif vernum >= 430
+        let g:syntastic_cpp_compiler_options = ' -std=c++0x '
+    endif
+endif
+
+
 if exists('AirlineToggle')
     let g:airline#extensions#syntastic#enabled = 1
 endif
