@@ -33,8 +33,8 @@ endfunction
 
 if !exists("g:tagbar_maps")
     let g:tagbar_maps = 1
-    nnoremap <unique><silent><leader>tt :TagbarToggle<CR>
-    nnoremap <unique><silent><leader>ta :NERDTreeToggle<cr><c-w>l:TagbarToggle<CR><c-w>j
+    nnoremap <unique><silent><leader>tb :TagbarToggle<CR>
+    nnoremap <unique><silent><leader>ta :call <SID>ToggleNerdTreeAndTagbar()<CR>
 endif
 " autocmd FileType c,cpp,h,cc,hpp,cxx nested :TagbarOpen
 
@@ -47,4 +47,14 @@ let g:tagbar_iconchars 			= ['+', '-']
 let g:tagbar_indent             = 1
 let g:tagbar_show_linenumbers   = 0
 
+function! s:ToggleNerdTreeAndTagbar()
+    let l:pos = getpos('.')
+    if exists(':NERDTreeToggle')
+        NERDTreeToggle
+        normal <c-w>l
+    endif
+    TagbarToggle
+    normal <c-w>h
+    call setpos('.', l:pos)
+endfunction
 
