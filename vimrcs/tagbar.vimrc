@@ -48,13 +48,22 @@ let g:tagbar_indent             = 1
 let g:tagbar_show_linenumbers   = 0
 
 function! s:ToggleNerdTreeAndTagbar()
+    let l:bufname = bufname('%')
     let l:pos = getpos('.')
     if exists(':NERDTreeToggle')
         NERDTreeToggle
-        normal <c-w>l
     endif
     TagbarToggle
-    normal <c-w>h
-    call setpos('.', l:pos)
+    if l:bufname !~ 'Tagbar' && l:bufname !~ 'NERD_tree'
+        while 1
+            let l:curbuf = bufname('%')
+            if l:curbuf == l:bufname
+                break
+            else
+                exec "normal \<c-w>w"
+            endif
+        endwhile
+        call setpos('.', l:pos)
+    endif
 endfunction
 
