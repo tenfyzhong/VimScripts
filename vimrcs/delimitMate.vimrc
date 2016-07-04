@@ -18,4 +18,5 @@ PluginAdd 'Raimondi/delimitMate'
 augroup delimitMate_setting
     au!
     au FileType python let b:delimitMate_nesting_quotes = ['"']
+    au FileType markdown let b:delimitMate_nesting_quotes = ['`']
 augroup END
