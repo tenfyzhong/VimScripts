@@ -7,3 +7,5 @@
 " created: 2016-07-06 13:47:32
 "==============================================================
 PluginAdd 'spf13/PIV'
+
+let g:DisableAutoPHPFolding = 1
