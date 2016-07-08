@@ -27,7 +27,7 @@ fi
 project=$(dirname $project)/$(basename $project)
 
 echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase/" > $project/.lookupfile_tags
-find $project -not -regex '.*\.\(png\|gif\|mp3\|mp4\|pdf\|i\|o\|d\|a\|so\|class\|obj\|exe\|jar\|zip\|out\|lookupfile_tags\|tags\|bak\|pyc\|swp\|doc\|docx\|xls\|xlsx\|ppt\|pptx\|tgz\|tar.gz\|d\.[0-9]+\|Plo\|Po\)' \
+find $project -not -regex '.*\.\(png\|gif\|jpg\|jpeg\|ttf\|dat\|mp3\|mp4\|pdf\|i\|o\|d\|a\|so\|class\|obj\|exe\|jar\|zip\|out\|lookupfile_tags\|tags\|bak\|pyc\|swp\|doc\|docx\|xls\|xlsx\|ppt\|pptx\|tgz\|tar.gz\|d\.[0-9]+\|Plo\|Po\|swo\|swn\)' \
     -a -not -regex '\.git.*' -a -not -regex '\.hg.*' -a -not -name 'NO_RESOURCES' \
     -a -not -name "*~" -a -not -name 'cscope.*' -a -not -name ".npmignore" \
     -a -not -name ".cscope.files" \
