@@ -80,10 +80,11 @@ set expandtab
 set softtabstop=4
 set smarttab
 
-set showtabline=0   "永远不显示标签栏
+set showtabline=2   "标签栏
 set laststatus=2    "永远显示状态栏
 
-set nu              " 显示行号
+set number          " 显示行号
+set relativenumber
 
 exec "set backupdir=" . g:VIMHOME . ".backupfile"
 exec "set undodir=" . g:VIMHOME . ".undofile"
