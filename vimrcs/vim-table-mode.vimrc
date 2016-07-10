@@ -38,3 +38,9 @@
 PluginAdd 'dhruvasagar/vim-table-mode'
 
 let g:table_mode_corner='|'
+
+function! TableModeStatusLine()
+    return tablemode#IsActive() ? 'tablemode' : ''
+endfunction
+
+set statusline+=%!TableModeStatusLine()
