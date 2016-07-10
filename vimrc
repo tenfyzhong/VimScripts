@@ -52,6 +52,7 @@ set autowrite " 文件跳转时自动保存
 
 set shortmess=atI    " 启动的时候不显示援助乌干达儿童提示
 set autoread    " 文件修改后自动载入
+set hidden
 
 set showmatch    " 括号匹配
 set ruler        " 显示标尺
