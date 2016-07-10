@@ -1,4 +1,6 @@
 #VimScripts
+
+
 ##安装说明
 ###类unix  
 将克隆下来的VimScripts重命名为.vim，然后运行`bin/unix/install.sh`:  
@@ -25,6 +27,7 @@ PYTHONPATH=C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Lib\lib-tk
 在.vimrc中将`g:use_chinese_doc`设为1则使用中文文档。  
 若不成功，请运行`:BundleInstall`   
 
+
 ##配置  
 通过配置`g:type_plugin_list`来加载vimrcs下子目录的插件，vimrcs下的插件默认全部  
 加载。`g:type_plugin_list`是一个列表。如果要加载所有的插件，只要包含`'**'`项即  
@@ -40,6 +43,7 @@ golang支持
 go get -v code.google.com/p/rog-go/exp/cmd/godef
 go install -v code.google.com/p/rog-go/exp/cmd/godef
 ```
+
 
 ##说明  
 对于要使用cscope的项目，在项目根路径生成cscope的数据库，用以下命令：
@@ -69,6 +73,7 @@ PluginAdd 'a.vim'
 加载插件之前，去加载这个文件。可以在这个文件里做一些特殊的配置。比如可以调用  
 `g:type_plugin_list`来加载特定的插件。  
 
+
 ##建议
 在crontab中加入清除备份文件和undo文件的脚本  
 ```crontab
@@ -77,6 +82,7 @@ PluginAdd 'a.vim'
 ```
 
 大工程使用`TagHighlight`，建议定时后台跑`~/.vim/bin/unix/tag_highlight.sh`来生成tag，不然会卡死在生成tag。  
+
 
 ##注意
 - vim版本要求7.0以上，否则很多配置用不了，会直接不加载配置。
@@ -94,6 +100,7 @@ PluginAdd 'a.vim'
 - --enable-cscope：Vim对cscope支持
 - --enable-gui=gtk2：gtk2支持,也可以使用gnome，表示生成gvim
 
+
 ##依赖程序
 - git:用于版本管理
 - ctags:tags，如tagbag等要用到
@@ -103,12 +110,14 @@ PluginAdd 'a.vim'
 - sbcl:common lisp的编译器，slimv用到
 - xterm:运行lisp解析器服务器
 
+
 ##命令  
 | command           | args   | describe                      |
 |:------------------|:-------|:------------------------------|
 | `PluginAdd`       | 参数名 | 安装插件                      |
 | `RefreshCscope`   |        | 刷新cscope.out                |
 | `LookupGenTag[!]` | 路径名 | 在路径下生成.lookypfile\_tags |
+
 
 ##键映射  
 以下model, n对应normal, i对应insert, v对应visual, c对应console, x对应选择模式  
@@ -144,6 +153,7 @@ PluginAdd 'a.vim'
 | `<c-k>`      | c     | global            | 命令行上滚                              |
 | `<c-j>`      | c     | global            | 命令行下滚                              |
 | `<Space>`    | n     | global            | za                                      |
+| `<leader>`n  | n     | global            | 切换行号模式                            |
 | `<leader>as` | n     | a.vim             | 在源文件和头文件中切换                  |
 | `<C-\\>s`    | n     | cscope            | 查找这个C符号                           |
 | `<C-\\>g`    | n     | cscope            | 查找这个定义                            |
@@ -234,4 +244,3 @@ PluginAdd 'a.vim'
 | `<leader>gl` | n     | fugitive          | Glog                                    |
 | `<leader>gs` | n     | fugitive          | Gstatus                                 |
 | `<leader>aw` | n     | argwrap           | 参数转换成同行或者换行模式              |
-
