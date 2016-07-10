@@ -164,6 +164,8 @@ if !exists("g:load_vimrc")
         nnoremap <unique><silent>]3 :diffput 3<CR> :diffupdate<CR>
         nnoremap <unique><silent>]4 :diffput 4<CR> :diffupdate<CR>
     endif
+
+    onoremap af :<c-u>normal! ggVG<CR>
 endif
 " }}} 
 
