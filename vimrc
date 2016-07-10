@@ -151,6 +151,8 @@ if !exists("g:load_vimrc")
     nnoremap <silent>do                 :diffget<cr>:diffupdate<cr>
     nnoremap <silent>dp                 :diffput<cr>:diffupdate<cr>
     nnoremap <silent><unique><leader>n  :call feature#PollNumber()<cr>
+    vnoremap < <gv
+    vnoremap > >gv
 
     call keymap#Mate("nnoremap <unique><m-,> ;")
 

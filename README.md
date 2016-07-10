@@ -120,7 +120,8 @@ PluginAdd 'a.vim'
 
 
 ##键映射  
-以下model, n对应normal, i对应insert, v对应visual, c对应console, x对应选择模式  
+以下model, n对应normal, i对应insert, v对应visual, c对应console, x对应选择模式 
+o对应motion模式  
 
 | map          | model | script            | describe                                |
 |--------------|:------|:------------------|:----------------------------------------|
@@ -154,6 +155,9 @@ PluginAdd 'a.vim'
 | `<c-j>`      | c     | global            | 命令行下滚                              |
 | `<Space>`    | n     | global            | za                                      |
 | `<leader>`n  | n     | global            | 切换行号模式                            |
+| `<`          | v     | global            | `<gv`                                   |
+| `>`          | v     | global            | `>gv`                                   |
+| `af`         | o     | global            | 整个文件的motion动作                    |
 | `<leader>as` | n     | a.vim             | 在源文件和头文件中切换                  |
 | `<C-\\>s`    | n     | cscope            | 查找这个C符号                           |
 | `<C-\\>g`    | n     | cscope            | 查找这个定义                            |
