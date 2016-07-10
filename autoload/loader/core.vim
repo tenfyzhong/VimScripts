@@ -40,11 +40,10 @@ endfunction "}}}
 
 " 加载~/.vim/vimrcs/目录下的所有.vimrc脚本-----------------------------------{{{
 function! loader#core#LoadVimrcs()
-    if (exists("g:has_load_vimrcs"))
+    if exists("g:has_load_vimrcs")
         return
-    else
-        let g:has_load_vimrcs = 1
     endif 
+    let g:has_load_vimrcs = 1
 
     call common#SetVariablesDefault("g:log_level", 8)
 

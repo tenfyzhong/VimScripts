@@ -204,9 +204,7 @@ endif
 " 建议：插件的配置最好以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
-if !exists("g:load_vimrc")
-    call loader#core#LoadVimrcs()
-endif
+call loader#core#LoadVimrcs()
 
 let g:load_vimrc = 1
 " }}} 
