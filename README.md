@@ -198,7 +198,8 @@ PluginAdd 'a.vim'
 | `<leader>ub` | n     | lookupfile        | lookup file bufs                        |
 | `<leader>uw` | n     | lookupfile        | lookup file walk                        |
 | `gt`         | nx    | vim-easy-align    | 开启对齐                                |
-| `<leader>N`  | n     | Mark              | 清除所有的mark                          |
+| `<leader>M`  | n     | Mark              | 清除所有的mark                          |
+| `<leader>N`  | n     | Mark              | 如果在高亮处，则取消高亮，否则触发高亮  |
 | `Mm`         | n     | vim-bookmarks     | toggle一个bookmark                      |
 | `Ma`         | n     | vim-bookmarks     | toggle一个annotate                      |
 | `Ms`         | n     | vim-bookmarks     | 显示所有的bookmark和annotate            |

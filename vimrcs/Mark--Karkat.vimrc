@@ -4,7 +4,8 @@
 "
 "    nmap: <leader>m 高亮或者取消高亮
 "          <leader>r 输入正则表达式来进行高亮或者取消高亮
-"          <leader>N 清除所有的高亮
+"          <leader>N 在高亮处理则取消高亮，否则关闭或者开启高亮
+"          <leader>M 清除所有的高亮
 "          <leader>* 跳到当前高亮字符串的下一个高亮处,并记为"last mark",
 "                    不在高亮字符串的时候跳到下一个"last mark"处
 "          <leader>/ 跳到下一个任意的高亮处
@@ -24,4 +25,6 @@ PluginAdd 'vim-scripts/Mark--Karkat'
 
 nmap <Plug>IgnoreMarkSearchNext <Plug>MarkSearchNext
 nmap <Plug>IgnoreMarkSearchPrev <Plug>MarkSearchPrev
-nmap <Leader>N <Plug>MarkAllClear
+nmap <Leader>M <Plug>MarkAllClear
+nmap <Leader>N <Plug>MarkClear
+
