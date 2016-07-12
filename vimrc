@@ -112,6 +112,8 @@ augroup initial
     au!
     autocmd BufWritePost *vimrc,*.vim source % 
     autocmd InsertLeave * set nopaste
+    autocmd WinLeave * setl nocursorline
+    autocmd WinEnter * setl cursorline
 augroup END
 " }}} 
 
