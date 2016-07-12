@@ -130,10 +130,10 @@ o对应motion模式
 | `<c-down>`   | n     | global            | 移到下边窗口                            |
 | `<c-up>`     | n     | global            | 移到上边窗口                            |
 | `<c-right>`  | n     | global            | 移到右边窗口                            |
-| `<leader>h`  | n     | global            | 移到左边窗口                            |
-| `<leader>j`  | n     | global            | 移到下边窗口                            |
-| `<leader>k`  | n     | global            | 移到上边窗口                            |
-| `<leader>l`  | n     | global            | 移到右边窗口                            |
+| `<c-h>`      | n     | global            | 移到左边窗口                            |
+| `<c-j>`      | n     | global            | 移到下边窗口                            |
+| `<c-k>`      | n     | global            | 移到上边窗口                            |
+| `<c-l>`      | n     | global            | 移到右边窗口                            |
 | `<leader>w`  | n     | global            | 保存所有文件                            |
 | `<leader>q`  | n     | global            | 关闭当前文件                            |
 | `j`          | n     | global            | gj                                      |
@@ -223,8 +223,8 @@ o对应motion模式
 | `Mx`         | n     | vim-bookmarks     | 清除所有的bookmark                      |
 | `Mu`         | n     | vim-bookmarks     | bookmark上移                            |
 | `Md`         | n     | vim-bookmarks     | bookmark下移                            |
-| `<C-J>`      | n     | YankRing          | 选择rankring中的更早一项                |
-| `<C-k>`      | n     | YankRing          | 选择rankring中的更新一项                |
+| `<leader>j`  | n     | YankRing          | 选择rankring中的更早一项                |
+| `<leader>k`  | n     | YankRing          | 选择rankring中的更新一项                |
 | `<leader>yr` | n     | YankRing          | YankRingShow                            |
 | `<leader>e`  | in    | emmet             | emmet leader key                        |
 | `\js`        | in    | javacomplete2     | trying to guess import option           |

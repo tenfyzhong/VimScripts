@@ -20,8 +20,8 @@
 "          YRCheckClipboard 从粘贴版中取元素到yankring
 "          YRRunAfterMaps 
 "
-"    nmap: <c-j> 选择yankring中的下一个进行替换
-"          <c-k> 选择yankring中的上一个进行替换
+"    nmap: <leader>j 选择yankring中的下一个进行替换
+"          <leader>k 选择yankring中的上一个进行替换
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -31,8 +31,8 @@ PluginAdd 'tenfyzhong/YankRing.vim'
 
 let g:yankring_history_file = '.yankring_history'
 
-let g:yankring_replace_n_pkey = '<C-J>'
-let g:yankring_replace_n_nkey = '<C-K>'
+let g:yankring_replace_n_pkey = '<leader>j'
+let g:yankring_replace_n_nkey = '<leader>k'
 
 if !exists("g:yankring_init")
     nnoremap <unique><silent><leader>yr :YRShow
