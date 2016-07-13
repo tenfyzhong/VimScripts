@@ -132,10 +132,10 @@ endif
 " global mapping {{{
 if !exists("g:load_vimrc")
     nnoremap <unique><F12>              <C-w>w
-    " nnoremap <unique><leader>h          <c-w>h
-    " nnoremap <unique><leader>j          <c-w>j
-    " nnoremap <unique><leader>k          <c-w>k
-    " nnoremap <unique><leader>l          <c-w>l
+    nnoremap <unique><leader>h          <c-w>h
+    nnoremap <unique><leader>j          <c-w>j
+    nnoremap <unique><leader>k          <c-w>k
+    nnoremap <unique><leader>l          <c-w>l
     nnoremap <unique><c-left>           <c-w>h
     nnoremap <unique><c-down>           <c-w>j
     nnoremap <unique><c-up>             <c-w>k
