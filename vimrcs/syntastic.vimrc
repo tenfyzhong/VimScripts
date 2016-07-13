@@ -24,6 +24,10 @@ let g:ycm_show_diagnostics_ui = 0
 let g:syntastic_cpp_remove_include_errors = 1
 let g:syntastic_c_remove_include_errors = 1
 
+let g:syntastic_mode_map = {
+            \ "mode": "active",
+            \ "passive_filetypes": ["python"] }
+
 if executable('gcc')
     let gccversion = system('gcc -dumpversion')
     if gccversion >= '4.8.0'
