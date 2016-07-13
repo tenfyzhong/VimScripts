@@ -7,5 +7,3 @@
 " created: 2016-07-12 20:12:25
 "==============================================================
 PluginAdd 'christoomey/vim-tmux-navigator'
-
-let g:tmux_navigator_save_on_switch = 1
