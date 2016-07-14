@@ -153,7 +153,7 @@ if !exists("g:load_vimrc")
     nnoremap <leader>q                  :q<CR>
     nnoremap <silent>do                 :diffget<cr>:diffupdate<cr>
     nnoremap <silent>dp                 :diffput<cr>:diffupdate<cr>
-    nnoremap <silent><unique><leader>n  :call feature#PollNumber()<cr>
+    nnoremap <silent><unique><leader>nn :call feature#PollNumber()<cr>
     vnoremap < <gv
     vnoremap > >gv
 
