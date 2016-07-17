@@ -45,7 +45,7 @@ let g:tagbar_status_func 		= 'TagbarStatusFunc'
 let g:tagbar_show_visibility 	= 1
 let g:tagbar_iconchars 			= ['+', '-']
 let g:tagbar_indent             = 1
-let g:tagbar_show_linenumbers   = 0
+let g:tagbar_show_linenumbers   = -1
 
 function! s:ToggleNerdTreeAndTagbar()
     let l:bufname = bufname('%')
