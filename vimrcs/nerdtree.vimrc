@@ -39,10 +39,11 @@ let NERDTreeWinSize 				= 30
 let NERDTreeShowBookmarks 			= 1
 let NERDTreeQuitOnOpen 				= 0	" 打开文件后，关闭NERDTree窗口
 let NERDTreeHightlightCursorline 	= 1	"高亮NERDTree窗口的当前行
-let NERDTreeShowLineNumbers 		= 0
+let NERDTreeShowLineNumbers 		= 1
 let NERDTreeDirArrows 				= 1
 let NERDTreeCascadeOpenSingleChildDir = 1
 let NERDTreeAutoDeleteBuffer        = 1
+let NERDTreeChDirMode               = 2
 
 " 从工程目录中去读取bookmark的文件，不存在则使用默认的
 let b:bookmarks_filename            = '.NERDTreeBookmarks'
