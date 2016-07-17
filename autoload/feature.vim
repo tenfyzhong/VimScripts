@@ -9,16 +9,20 @@
 
 
 function! feature#PollNumber() "{{{ 行号相对行号间切换
-    let g:number_mode = &number  + &relativenumber 
+    let g:number_mode = &number * 2 + &relativenumber 
     " g:number_mode 
-    " 2为开启行号和相对行号
-    " 1为开启行号
+    " 3为开启行号和相对行号
+    " 2为开启行号
+    " 1为开启相对行号
     " 0为关闭所有
-    " 每次值减1
-    if g:number_mode == 2
+    " 为3, (2|1), 0
+    if g:number_mode == 3   
         set norelativenumber
-    elseif g:number_mode == 1
+        set number
+    elseif g:number_mode == 2 || 
+                \g:number_mode == 1
         set nonumber
+        set norelativenumber
     else
         set number
         set relativenumber
