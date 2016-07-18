@@ -26,4 +26,4 @@ else
     let g:CtrlSpaceIgnoredFiles = ''
 endif
 
-let g:CtrlSpaceIgnoredFiles .= '\%(tmp\|temp\|bin\|lib\|obj\|bak\)[\/]\|.*\.\%(jpg\|a\|o\|d\|so\|jpeg\|bak\)$'
+let g:CtrlSpaceIgnoredFiles .= '^\%(tmp\|temp\|bin\|lib\|obj\|bak\)[\/]\|.*\.\%(jpg\|a\|o\|d\|so\|jpeg\|bak\)$'
