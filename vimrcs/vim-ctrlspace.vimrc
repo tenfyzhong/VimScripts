@@ -6,6 +6,9 @@
 "   email: 364755805@qq.com
 " created: 2016-07-10 23:36:51
 "==============================================================
+if g:MSWIN
+    finish
+endif
 PluginAdd 'vim-ctrlspace/vim-ctrlspace'
 
 if executable("ag")
