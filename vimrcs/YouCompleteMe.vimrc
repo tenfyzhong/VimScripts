@@ -32,6 +32,11 @@ if g:MSWIN
     finish
 endif
 
+if !executable('clang')
+    let g:use_supertab = 1
+    finish
+endif
+
 let b:youcomplete_path = expand(g:bundle_path . "/YouCompleteMe/")
 " 如果ycm的project目录已经存在，则去判断ycm是否可用
 " 如果ycm不可用，则去加载supertab
