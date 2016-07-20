@@ -62,7 +62,7 @@ endif
 " 如果ycm的project目录存在，且ycm可用，也PluginAdd ycm，以便加载ycm
 PluginAdd 'Valloric/YouCompleteMe', {'pinned': 1}
 
-let g:ycm_min_num_of_chars_for_completion 			= 1
+let g:ycm_min_num_of_chars_for_completion 			= 2
 let g:ycm_add_preview_to_completeopt 				= 0
 let g:ycm_autoclose_preview_window_after_insertion 	= 1
 let g:ycm_error_symbol                              = 'EE'
