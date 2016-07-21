@@ -68,7 +68,7 @@ set wildmenu     " 增加命令行自动补全操作
 set history=500
 
 highlight CursorLine term=underline cterm=NONE ctermbg=DarkGrey guibg=Grey90 
-highlight ColorColumn ctermbg=White guibg=Grey90
+highlight ColorColumn ctermbg=DarkGrey guibg=Grey90
 
 " 显示相关
 "set cursorcolumn        " 高亮当前列
