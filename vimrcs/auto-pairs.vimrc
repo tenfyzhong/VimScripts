@@ -5,7 +5,6 @@
 " (in)map: \ap 触发补齐
 "          \ae 将后面的单词放到当前括号里
 "          \an 跳到下一个补齐的括号
-"          \ab 
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -16,5 +15,5 @@ PluginAdd 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutToggle = '\ap'
 let g:AutoPairsShortcutFastWrap = '\ae'
 let g:AutoPairsShortcutJump = '\an'
-let g:AutoPairsShortcutBackInsert = '\ab'
+let g:AutoPairsShortcutBackInsert = ''
 
