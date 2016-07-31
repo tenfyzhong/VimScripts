@@ -1,6 +1,11 @@
 "==============================================================
 "    file: auto-pairs.vimrc
-"   brief: 
+"   brief: 自动补齐括号
+"
+" (in)map: \ap 触发补齐
+"          \ae 将后面的单词放到当前括号里
+"          \an 跳到下一个补齐的括号
+"          \ab 
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -8,7 +13,8 @@
 "==============================================================
 PluginAdd 'jiangmiao/auto-pairs'
 
-let g:AutoPairsShortcutToggle = '<leader>ap'
-let g:AutoPairsShortcutFastWrap = '<leader>ae'
-let g:AutoPairsShortcutJump = '<leader>an'
-let g:AutoPairsShortcutBackInsert = '<leader>ab'
+let g:AutoPairsShortcutToggle = '\ap'
+let g:AutoPairsShortcutFastWrap = '\ae'
+let g:AutoPairsShortcutJump = '\an'
+let g:AutoPairsShortcutBackInsert = '\ab'
+
