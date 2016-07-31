@@ -226,7 +226,7 @@ o对应motion模式
 | `<C-J>`      | n     | YankRing          | 选择rankring中的更早一项                |
 | `<C-k>`      | n     | YankRing          | 选择rankring中的更新一项                |
 | `<leader>yr` | n     | YankRing          | YankRingShow                            |
-| `<leader>e`  | in    | emmet             | emmet leader key                        |
+| `\e`         | in    | emmet             | emmet leader key                        |
 | `\js`        | in    | javacomplete2     | trying to guess import option           |
 | `\ja`        | in    | javacomplete2     | will ask for import option              |
 | `\jm`        | in    | javacomplete2     | add all missing imports                 |
@@ -249,4 +249,6 @@ o对应motion模式
 | `<leader>gs` | n     | fugitive          | Gstatus                                 |
 | `<leader>aw` | n     | argwrap           | 参数转换成同行或者换行模式              |
 | `<leader>sw` | n     | windowswap        | 交换窗口                                |
-
+| `\ap`        | in    | auto-pairs        | 触发补齐                                |
+| `\ae`        | in    | auto-pairs        | 将后面的单词放到当前括号里              |
+| `\an`        | in    | auto-pairs        | 跳到一个对齐的括号                      |
