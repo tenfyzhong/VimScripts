@@ -7,3 +7,8 @@
 " created: 2016-07-31 23:21:56
 "==============================================================
 PluginAdd 'jiangmiao/auto-pairs'
+
+let g:AutoPairsShortcutToggle = '<leader>ap'
+let g:AutoPairsShortcutFastWrap = '<leader>ae'
+let g:AutoPairsShortcutJump = '<leader>an'
+let g:AutoPairsShortcutBackInsert = '<leader>ab'
