@@ -8,4 +8,4 @@
 "==============================================================
 PluginAdd 'spf13/PIV'
 
-let g:DisableAutoPHPFolding = 1
+let g:DisableAutoPHPFolding = 0
