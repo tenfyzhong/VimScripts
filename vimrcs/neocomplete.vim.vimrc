@@ -14,7 +14,7 @@ let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#auto_completion_start_length = 2
+let g:neocomplete#auto_completion_start_length = 1
 let g:neocomplete#min_keyword_length = 2
 let g:neocomplete#auto_complete_delay = 0
 let g:neocomplete#enable_refresh_always = 1
