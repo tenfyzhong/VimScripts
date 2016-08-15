@@ -54,8 +54,8 @@ function! loader#core#LoadVimrcs()
 
     if loader#core#PluginExist('Vundle.vim')
         filetype off
-        exec "set rtp+=" . g:bundle_path . "/Vundle.vim"
-        call vundle#begin(g:bundle_path)
+        " exec "set rtp+=" . g:bundle_path . "/Vundle.vim"
+        call plug#begin(g:bundle_path)
 
         " 先加载vundle，再加载其他插件
         call loader#core#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)
@@ -64,7 +64,7 @@ function! loader#core#LoadVimrcs()
             call <SID>LoadDirPlugin(g:vimrc_path . dir)
         endfor
 
-        call vundle#end()
+        call plug#end()
         filetype on					" 侦测文件类型	
         filetype plugin on			" 开启文件识别
         filetype indent on			" 针对不同的文件类型采用不同的缩进格式
@@ -97,7 +97,7 @@ function! loader#core#BundlePlugin(plugin, ...)
         if len(l:plugin_args) != 0
             let l:plugin_args = "," . l:plugin_args
         endif
-        execute "Plugin " . "'" . a:plugin . "'" . l:plugin_args
+        execute "Plug " . "'" . a:plugin . "'" . l:plugin_args
         let l:plugin_name   = split(a:plugin, "/")[-1]
         call loader#core#PluginExist(l:plugin_name)
     endif
