@@ -25,8 +25,10 @@ endfunction
 
 " 如果foldlevel大于0,则执行za {{{
 function! fold#FoldIfLevelGreat0(lnum)
-    if foldlevel(a:lnum) > 0
-        normal za
+    if foldclosed(a:lnum) == -1
+        normal zc
+    else
+        normal zo
     endif
 endfunction
 " }}}
