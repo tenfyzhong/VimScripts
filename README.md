@@ -196,7 +196,7 @@ o对应motion模式
 | `<leader>8`  | n     | airline           | airline tab中的标号8的文件              |
 | `<leader>9`  | n     | airline           | airline tab中的标号9的文件              |
 | `<leader>nt` | n     | nerdtree          | 触发nerdtree                            |
-| `<leader>tt` | n     | tagbar or taglist | 触发tagbar or taglist                   |
+| `<leader>tb` | n     | tagbar or taglist | 触发tagbar or taglist                   |
 | `<leader>ta` | n     | tagbar or taglist | 触发tagbar和nerdtree                    |
 | `<leader>bi` | n     | vundle            | Bundle安装插件                          |
 | `<leader>qk` | n     | quickfix          | 上一条错误警告处                        |

@@ -26,6 +26,6 @@ let Tlist_Use_Horiz_Window 			= 0
 
 if !exists("g:taglist_vim_maps")
     let g:taglist_vim_maps = 1
-    nnoremap <unique><silent><leader>tt :TlistToggle<cr>
+    nnoremap <unique><silent><leader>tb :TlistToggle<cr>
 endif
 

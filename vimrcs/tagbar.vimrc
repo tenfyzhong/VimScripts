@@ -12,7 +12,7 @@
 "          TagbarCurrentTag [{flags}] 回显当前结点
 "          TagbarGetTypeConfig {filetype} 粘贴filetype的配置
 "
-"    nmap: <leader>tt :TagbarToggle
+"    nmap: <leader>tb :TagbarToggle
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
