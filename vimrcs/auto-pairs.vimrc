@@ -2,7 +2,7 @@
 "    file: auto-pairs.vimrc
 "   brief: 自动补齐括号
 "
-" (in)map: \ap 触发补齐
+" (in)map: \ap 开启和关闭auto-pairs
 "          \ae 将后面的单词放到当前括号里
 "          \an 跳到下一个补齐的括号
 " VIM Version: 7.4
