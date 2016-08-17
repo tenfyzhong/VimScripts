@@ -6,7 +6,7 @@
 "       :Errors                 打开location-list显示错误
 "       :SyntasticToggleMode    触发自动模式
 "       :SyntasticCheck         手动检查语法
-"       :SyntasticCheck         显示filetype的checker
+"       :SyntasticInfo          显示filetype的checker
 "       :SyntasticReset         清除所有的错误
 "       :SyntasticSetLoclist    
 " VIM Version: 7.4
