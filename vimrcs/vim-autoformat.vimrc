@@ -12,3 +12,9 @@ PluginAdd 'Chiel92/vim-autoformat'
 
 let g:formatdef_my_custom_cpp = '"clang-format -style=file"'
 let g:formatters_cpp = ['my_custom_cpp']
+
+augroup autoformat_setting
+    au!
+    autocmd BufWrite * :Autoformat
+augroup END
+
