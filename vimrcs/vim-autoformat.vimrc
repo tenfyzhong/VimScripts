@@ -15,6 +15,6 @@ let g:formatters_cpp = ['my_custom_cpp']
 
 augroup autoformat_setting
     au!
-    autocmd BufWrite * :Autoformat
+    autocmd BufWrite * :silent Autoformat
 augroup END
 
