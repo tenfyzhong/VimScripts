@@ -25,14 +25,14 @@ endfunction
 
 " 如果foldlevel大于0,则执行za {{{
 function! fold#FoldIfLevelGreat0(lnum)
-    if foldlevel(a:lnum) > 0
-        if foldclosed(a:lnum) == -1
+    if foldclosed(a:lnum) == -1
+        try
             normal zc
-        else
-            normal zo
-        endif
+        catch
+            echohl WarningMsg | echo 'aha, no fold!' | echohl None
+        endtry
     else
-        echohl WarningMsg | echo 'aha, no fold!' | echohl None
+        normal zo
     endif
 endfunction
 " }}}
