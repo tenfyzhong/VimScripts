@@ -17,6 +17,7 @@ set -o nounset                              # Treat unset variables as an error
 # $3 installer的参数
 function format_install()
 {
+    echo ""
     INSTALLER=$(whereis $2 | awk '{print $2}')
     if [ -n "$INSTALLER" ]; then
         INSTALLER=$(echo $INSTALLER | awk '{print $1}')
@@ -25,14 +26,15 @@ function format_install()
             if (( $# > 2 )); then
                 FLAG=$3
             fi
-            echo ""
             echo "$INSTALLER install $FLAG $1"
             $INSTALLER install $FLAG $1
         else
-            echo "no $2"
+            echo "$2 install $1"
+            echo "has no $2"
         fi
     else
-        echo "no $2"
+        echo "$2 install $1"
+        echo "has no $2"
     fi
 }
 
