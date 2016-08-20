@@ -25,6 +25,7 @@ function format_install()
             if (( $# > 2 )); then
                 FLAG=$3
             fi
+            echo ""
             echo "$INSTALLER install $FLAG $1"
             $INSTALLER install $FLAG $1
         else
@@ -34,6 +35,11 @@ function format_install()
         echo "no $2"
     fi
 }
+
+if [ "$(id -u)" != "0" ]; then
+    echo "This script must be run as root"
+    exit 1
+fi
 
 format_install autopep8 pip
 
