@@ -28,3 +28,15 @@ function! feature#PollNumber() "{{{ 行号相对行号间切换
         set relativenumber
     endif
 endfunction "}}}
+
+function! feature#quickfixDo(cmd) "{{{ quickfix和location兼容性的命令
+    let l:prefix = ''
+    if len(getloclist(0)) > 0
+        let l:prefix = 'l'
+    else
+        let l:prefix = 'c'
+    endif
+    let l:cmd = l:prefix . a:cmd 
+    exec l:cmd
+endfunction "}}}
+

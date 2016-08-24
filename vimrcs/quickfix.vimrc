@@ -19,19 +19,13 @@ if !has("quickfix")
     finish
 endif
 
-augroup quickfix_init
-    au!
-    au FileType qf nnoremap <silent><buffer>q <esc>:cclose<cr>
-augroup END
-
-
 if exists("g:quickfix_init")
     finish
 endif
 
-nnoremap <unique><silent><leader>qk <esc>:cprevious<cr>
-nnoremap <unique><silent><leader>qj <esc>:cnext<cr>
-nnoremap <unique><silent><leader>qc <esc>:cclose<cr>
-nnoremap <unique><silent><leader>qo <esc>:copen<cr>
+nnoremap <unique><silent><leader>qk :call feature#quickfixDo('previous')<cr>
+nnoremap <unique><silent><leader>qj :call feature#quickfixDo('next')<cr>
+nnoremap <unique><silent><leader>qc :call feature#quickfixDo('close')<cr>
+nnoremap <unique><silent><leader>qo :call feature#quickfixDo('open')<cr>
 
 let g:quickfix_init = 1
