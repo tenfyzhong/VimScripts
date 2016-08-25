@@ -5,7 +5,8 @@
 "
 "    nmap: <leader>m 高亮或者取消高亮
 "          <leader>r 输入正则表达式来进行高亮或者取消高亮
-"          <leader>N 清除所有的高亮
+"          <leader>N 在高亮处理则取消高亮，否则关闭或者开启高亮
+"          <leader>M 清除所有的高亮
 "          <leader>* 跳到当前高亮字符串的下一个高亮处,并记为"last mark",
 "                    不在高亮字符串的时候跳到下一个"last mark"处
 "          <leader>/ 跳到下一个任意的高亮处
@@ -51,18 +52,33 @@
 
 
 "==============================================================
-"    file: vim-eclim.vimrc
+"    file: vim-javacomplete2.vimrc
 "   brief: 
 "==============================================================
 
 "==============================================================
-"    file: vim-javacomplete2.vimrc
+"    file: NrrwRgn.vimrc
 "   brief: 
 "==============================================================
 
 "==============================================================
 "    file: supertab.vimrc
 "   brief: 使用tab键来进行补全
+"==============================================================
+
+"==============================================================
+"    file: vim-speeddating.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: targets.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: Recover.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -86,7 +102,7 @@
 "          TagbarCurrentTag [{flags}] 回显当前结点
 "          TagbarGetTypeConfig {filetype} 粘贴filetype的配置
 "
-"    nmap: <leader>tt :TagbarToggle
+"    nmap: <leader>tb :TagbarToggle
 "==============================================================
 
 "==============================================================
@@ -136,7 +152,7 @@
 "       :Errors                 打开location-list显示错误
 "       :SyntasticToggleMode    触发自动模式
 "       :SyntasticCheck         手动检查语法
-"       :SyntasticCheck         显示filetype的checker
+"       :SyntasticInfo          显示filetype的checker
 "       :SyntasticReset         清除所有的错误
 "       :SyntasticSetLoclist    
 "==============================================================
@@ -247,28 +263,16 @@
 
 
 "==============================================================
-"    file: vary.vim
-"   brief: 将tab展开成空格，去掉行尾的空格
+"    file: vim-argwrap.vimrc
+"   brief: 参数换行和同行模式转换
+"
+" command: :ArgWrap 转换
+"    nmap: <leader>aw :ArgWrap
 "==============================================================
 
 "==============================================================
-"    file: lookupfile.vimrc
-"   brief: 通过tag来查找文件
-"
-" command: LUTags 通过tag文件中查找文件
-"          LUPath 在'path'中查找文件
-"          LUBufs 在buffers中查找文件
-"          LUWalk 一层层的去查找文件
-"          LUArgs 在:args中去查找文件
-"          LookupFile 上一次执行的命令
-"
-"    nmap:
-"
-" lookupfile下的map
-"    nmap: <Esc><Esc> 退出lookupfile窗口
-"    imap: <Esc><Esc> 退出lookupfile窗口
-"          <c-j> 下一个文件
-"          <c-k> 上一个文件
+"    file: csv.vim.vimrc
+"   brief: 
 "==============================================================
 
 
@@ -278,8 +282,10 @@
 "==============================================================
 
 "==============================================================
-"    file: vim-wordmotion.vimrc
-"   brief: 
+"    file: vim-windowswap.vimrc
+"   brief: 交换两个窗口
+" 
+"    nmap: <leader>sw 标志窗口，交换窗口
 "==============================================================
 
 "==============================================================
@@ -294,13 +300,8 @@
 
 
 "==============================================================
-"    file: delimitMate.vimrc
-"   brief: 自动补全右括号引号等
-"
-" command: :DelimitMateReload 重设所有的map
-"          :DelimitMateOn enable DelimitMate mappings
-"          :DelimitMateOff disable DelimitMate mappings
-"          :DelimitMateSwitch switches DelimitMate on and off
+"    file: vim-repeat.vimrc
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -314,21 +315,8 @@
 "==============================================================
 
 "==============================================================
-"    file: bash-support.vim.vimrc
-"   brief: bash ide
-"
-"    nmap:
-"  [n]\rr     update file, run script             (n, i)
-"     \ra     set script cmd. line arguments      (n, i)
-"     \rba    set Bash cmd. line arguments        (n, i)
-"     \rc     update file, check syntax           (n, i)
-"     \rco    syntax check options                (n, i)
-"     \rd     start debugger                      (n, i)
-"     \re     make script executable/not exec.(*) (in )
-"     \rh     hardcopy buffer to FILENAME.ps      (n, i)
-"     \rs     plug-in settings                    (n, i)
-"     \rt     set xterm size (*)                  (n, i)
-"     \ro     change output destination           (n, i)
+"    file: neocomplete.vim.vimrc
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -432,11 +420,6 @@
 "==============================================================
 
 "==============================================================
-"    file: vim-css-color.vimrc
-"   brief: 颜色显示css的颜色值
-"==============================================================
-
-"==============================================================
 "    file: vim-css3-syntax.vimrc
 "   brief: css3语法高亮
 "==============================================================
@@ -451,6 +434,11 @@
 "
 "    nmap: gf 在require("...")中跳到对应的模块
 "          [I 查询当前字符需要的文件
+"==============================================================
+
+"==============================================================
+"    file: Vim-Jinja2-Syntax.vimrc
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -502,22 +490,6 @@
 "          Done alias for Doing
 "          '<,'>DoThis 执行选择中的command
 "          DoAgain 重跑上一次的命令
-"==============================================================
-
-"==============================================================
-"    file: bufexplorer.vimrc
-"   brief: 查看当前打开的buffer的窗口列表
-"
-" commend: :BufExplorer 在当前窗口打开BufExplorer
-"          :ToggleBufExplorer 触发BufExplorer,已经打开的话,则关闭
-"          :BufExploreHorizontalSplit 水平分割出一个BufExplorer窗口
-"          :BufExplorerVerticalSplit 竖直分割出一个BufExplorer窗口
-"
-"    nmap: <leader>be :BufExplorer
-"          <leader>bt :ToggleBufExplorer
-"          <leader>bs :BufExploreHorizontalSplit
-"          <leader>bv :BufExplorerVerticalSplit
-"
 "==============================================================
 
 "==============================================================
@@ -603,6 +575,11 @@
 "           gv open in vertical split silently.
 "           q close the quickfix window.
 "
+"==============================================================
+
+"==============================================================
+"    file: vim-ctrlspace.vimrc
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -774,6 +751,15 @@
 "          UltiSnipsAddFileTypes 合并其他文件类型的snippet
 "==============================================================
 
+"==============================================================
+"    file: PIV.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-php-refactoring-toolbox.vimrc
+"   brief: 
+"==============================================================
 
 "==============================================================
 "    file: CmdlineComplete.vimrc
@@ -800,6 +786,11 @@
 " command: CD [directory/filepath] 使用cd命令跳到目录
 "          LCD [directory/filepath] 使用lcd命令跳到目录
 "
+"==============================================================
+
+"==============================================================
+"    file: FastFlod.vimrc
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -840,31 +831,6 @@
 "       gs 进入交互模式
 "    xmap:
 "       gs 交互模式
-"==============================================================
-
-"==============================================================
-"    file: YouCompleteMe.vimrc
-"   brief: 
-" 
-" command: YcmRestartServer 重启ycmd
-"          YcmForceCompileAndDiagnostics 强制编译
-"          YcmDiags 列出错误
-"          YcmShowDetailedDiagnostic 诊断信息
-"          YcmDebugInfo debug信息
-"          YcmCompleter 调用编译器的命令
-"          YcmCompleter GoToDeclaration 跳到声明
-"          YcmCompleter GoToDefinithion 跳到定义
-"          YcmCompleter GoTo 跳到定义，如果没有定义，则跳到声明
-"          YcmCompleter GoToImprecise 类似于GoTo，但是不进行重新编译
-"          YcmCompleter ClearCompilationFlagCache 清掉ycm_extra_conf.py中的flag
-"          YcmCompleter StartServer 启动server,仅在cs中支持
-"          YcmCompleter StopServer 停止server,仅在cs中支持
-"          YcmCompleter RestartServer 重启server,仅在cs中支持
-"          YcmCompleter ReloadSolution 重新加载,仅在cs中支持
-"          YcmCompleter GoToImplementation 跳到实现,仅在cs中支持
-"          YcmCompleter GoToImplementationElseDeclaration 跳到实现,否则跳到声明,仅在cs中支持
-"
-"    nmap: <leader>jd YcmCompleter GoToImpreciset 
 "==============================================================
 
 "==============================================================
@@ -977,31 +943,6 @@
 "==============================================================
 
 "==============================================================
-"    file: c.vim.vimrc
-"   brief: help文件是csupport
-"
-"    nmap:
-"    \rc       save and compile                    (n,i)
-"    \rl       link                                (n,i)
-"    \rr       run                                 (n,i)
-"    \ra       set comand line arguments           (n,i)
-"    \rm       run make                            (n,i)
-"    \rmc      run 'make clean'                    (n,i)
-"    \rcm      choose makefile                     (n,i)
-"    \rme      executable to run                   (n,i)
-"    \rma      cmd. line arg. for make             (n,i)
-"    \rp       run splint                          (n,i)
-"    \rpa      cmd. line arg. for splint           (n,i)
-"    \rk       run CodeCheck (TM)                  (n,i)
-"    \rka      cmd. line arg. for CodeCheck (TM)   (n,i)
-"    \rd       run indent                          (n,v,i)
-" [n]\rh       hardcopy buffer                     (n,v,i)
-"    \rs       show plugin settings                (n,i)
-"    \rx       set xterm size                      (n, only Linux/UNIX & GUI)
-"    \ro       change output destination           (n,i)
-"==============================================================
-
-"==============================================================
 "    file: vim-gtest.vimrc
 "   brief: 
 "==============================================================
@@ -1009,6 +950,15 @@
 "==============================================================
 "    file: vim-gencode-cpp.vimrc
 "   brief: 
+"==============================================================
+
+"==============================================================
+"    file: auto-pairs.vimrc
+"   brief: 自动补齐括号
+"
+" (in)map: \ap 开启和关闭auto-pairs
+"          \ae 将后面的单词放到当前括号里
+"          \an 跳到下一个补齐的括号
 "==============================================================
 
 "==============================================================
@@ -1090,6 +1040,15 @@
 "
 " command: InsertTemplate 在文件头部插入注释
 "
+"==============================================================
+
+"==============================================================
+"    file: ReplaceWithRegister.vimrc
+"   brief: 使用寄存器的内容替换而不更新寄存器内容
+"
+"    nmap: [count]["x]gr{motion} 使用寄存器内容替换{motion}内容
+"          [count]["x}grr 替换一行
+"    xmap: ["x]gr 使用寄存器内容替换选中内容
 "==============================================================
 
 "==============================================================
