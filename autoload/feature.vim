@@ -36,7 +36,11 @@ function! feature#quickfixDo(cmd) "{{{ quickfix和location兼容性的命令
     else
         let l:prefix = 'c'
     endif
-    let l:cmd = l:prefix . a:cmd 
-    exec l:cmd
+    let l:cmd = 'silent ' . l:prefix . a:cmd 
+    try
+        exec l:cmd
+    catch /^Vim\%((\a\+)\)\=:E553/
+        echo 'No more items'
+    endtry
 endfunction "}}}
 
