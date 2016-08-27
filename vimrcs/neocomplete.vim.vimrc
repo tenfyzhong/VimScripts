@@ -1,6 +1,19 @@
 "==============================================================
 "    file: neocomplete.vim.vimrc
-"   brief: 
+"   brief: 补全
+"
+" command: NeoCompleteEnable 开启补全
+"          NeoCompleteDisable 关闭补全
+"          NeoCompleteToggle 触发锁定补全
+"          NeoCompleteLock 锁定，此时不会自动补全，可以手动补全
+"          NeoCompleteUnlock 解锁
+"          NeoCompleteAutoCompletionLength {length} 修改当前buffer的触发补全字符数
+"          NeoCompleteClean 清除g:neocomplete#data_directory的文件
+"          NeoCompleteSetFileType [filetype] 修改neocomplete的文件类型，不影响文件本身
+"          NeoCompleteBufferMakeCache [bufname] 对bufname的文件生成cache
+"          NeoCompleteDictionaryMakeCache 对文件类型进行生成cache
+"          NeoCompleteTagMakeCache 从当前文件的tags生成cache
+"          NeoCompleteMemberMakeCache 对当前的buffer建立成员cache
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -8,6 +21,8 @@
 "==============================================================
 PluginAdd 'Shougo/neocomplete.vim'
 PluginAdd 'Shougo/neopairs.vim'
+PluginAdd 'Shougo/neoinclude.vim'
+PluginAdd 'Shougo/neco-syntax'
 
 let g:neopairs#enable = 1
 
@@ -21,7 +36,7 @@ let g:neocomplete#auto_completion_start_length = 1
 let g:neocomplete#min_keyword_length = 2
 let g:neocomplete#auto_complete_delay = 0
 let g:neocomplete#enable_refresh_always = 1
-let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_auto_close_preview = 1
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
