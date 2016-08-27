@@ -63,8 +63,7 @@ augroup END
 
 inoremap <expr><CR> pumvisible()? "\<C-y>" : "\<CR>"
 
-
 " tab键先尝试进行UltiSnips展开，展开失败再尝试补全的下拉，下拉失败则返回tab
 inoremap <TAB> <C-r>=keymap#Tab()<CR>
-inoremap <expr><s-TAB> pumvisible()? "\<C-p>" : "\<S-TAB>"
+inoremap <expr><S-TAB> pumvisible()? "\<C-p>" : "\<S-TAB>"
 
