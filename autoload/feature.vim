@@ -44,3 +44,11 @@ function! feature#quickfixDo(cmd) "{{{ quickfix和location兼容性的命令
     endtry
 endfunction "}}}
 
+function! feature#UltiSnipsExpandSnippet() "{{{ 进行UltiSnips展开，返回成功与否
+    let g:ulti_expand_res = 0
+    if exists('*UltiSnips#ExpandSnippet')
+        call UltiSnips#ExpandSnippet()
+    endif
+    return g:ulti_expand_res
+endfunction "}}}
+
