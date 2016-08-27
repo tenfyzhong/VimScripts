@@ -14,6 +14,8 @@
 "          NeoCompleteDictionaryMakeCache 对文件类型进行生成cache
 "          NeoCompleteTagMakeCache 从当前文件的tags生成cache
 "          NeoCompleteMemberMakeCache 对当前的buffer建立成员cache
+"
+"          NeoIncludeMakeCache [bufname] 对bufname进行建立cache
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -25,6 +27,8 @@ PluginAdd 'Shougo/neoinclude.vim'
 PluginAdd 'Shougo/neco-syntax'
 
 let g:neopairs#enable = 1
+
+let g:necosyntax#min_keyword_length = 2
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
