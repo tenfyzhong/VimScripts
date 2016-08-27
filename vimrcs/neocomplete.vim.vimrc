@@ -21,6 +21,7 @@ let g:neocomplete#auto_completion_start_length = 1
 let g:neocomplete#min_keyword_length = 2
 let g:neocomplete#auto_complete_delay = 0
 let g:neocomplete#enable_refresh_always = 1
+let g:neocomplete#enable_auto_select = 1
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
@@ -40,4 +41,6 @@ augroup neocomplete_setting
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup END
+
+inoremap <expr><CR> pumvisible()? "\<C-y>" : "\<CR>"
 
