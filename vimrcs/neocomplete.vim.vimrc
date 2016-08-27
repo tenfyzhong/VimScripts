@@ -23,8 +23,6 @@
 PluginAdd 'Shougo/neocomplete.vim'
 PluginAdd 'Shougo/neopairs.vim'
 
-let g:neopairs#enable = 1
-
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
