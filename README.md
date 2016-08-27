@@ -2,42 +2,42 @@
 
 
 ##安装说明
-###类unix  
-将克隆下来的VimScripts重命名为.vim，然后运行`bin/unix/install.sh`:  
+###类unix
+将克隆下来的VimScripts重命名为.vim，然后运行`bin/unix/install.sh`:
 ```bash
-mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作  
-mv VimScripts ~/.vim  
+mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作
+mv VimScripts ~/.vim
 sh ~/.vim/install.sh
 ```
 
-###windows  
-安装msysgit  
-将克隆下来的VimScripts重命令为vimfiles，然后运行`bin\windows\install.bat`  
-如果windows系统安装了python，vim会支持python。但是默认会从C:\Python27目录去  
-查找python(以python2.7为例)，如果找不到vim会crash。需要设置系统变量  
+###windows
+安装msysgit
+将克隆下来的VimScripts重命令为vimfiles，然后运行`bin\windows\install.bat`
+如果windows系统安装了python，vim会支持python。但是默认会从C:\Python27目录去
+查找python(以python2.7为例)，如果找不到vim会crash。需要设置系统变量
 ```bash
 PYTHONPATH=C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Lib\lib-tk
 ```
 
-###common  
-使用csupport，可以在`.vim/resource/csupport`下修改Templates模板，使其支持自己的信息。  
+###common
+使用csupport，可以在`.vim/resource/csupport`下修改Templates模板，使其支持自己的信息。
 
-使用bash-support，可以在`.vim/resource/bash-support`下修改Templates模板，使其支持自己的信息。  
+使用bash-support，可以在`.vim/resource/bash-support`下修改Templates模板，使其支持自己的信息。
 
-在.vimrc中将`g:use_chinese_doc`设为1则使用中文文档。  
-若不成功，请运行`:BundleInstall`   
+在.vimrc中将`g:use_chinese_doc`设为1则使用中文文档。
+若不成功，请运行`:BundleInstall`
 
 
-##配置  
-通过配置`g:type_plugin_list`来加载vimrcs下子目录的插件，vimrcs下的插件默认全部  
-加载。`g:type_plugin_list`是一个列表。如果要加载所有的插件，只要包含`'**'`项即  
-可。配置例子：  
+##配置
+通过配置`g:type_plugin_list`来加载vimrcs下子目录的插件，vimrcs下的插件默认全部
+加载。`g:type_plugin_list`是一个列表。如果要加载所有的插件，只要包含`'**'`项即
+可。配置例子：
 ```viml
-let g:type_plugin_list = ["c", "go", "web"] 
+let g:type_plugin_list = ["c", "go", "web"]
 ```
-以上的例子会加载vimrcs目录下的c,go,web目录下的插件。  
+以上的例子会加载vimrcs目录下的c,go,web目录下的插件。
 
-golang支持  
+golang支持
 需要安装: godef
 ```bash
 go get -v code.google.com/p/rog-go/exp/cmd/godef
@@ -45,12 +45,12 @@ go install -v code.google.com/p/rog-go/exp/cmd/godef
 ```
 
 
-##说明  
+##说明
 对于要使用cscope的项目，在项目根路径生成cscope的数据库，用以下命令：
 ```bash
 ~/.vim/bin/unix/cscope.sh
 ```
-cscope会从当前目录一直往上去查找cscope目录，找到则链接  
+cscope会从当前目录一直往上去查找cscope目录，找到则链接
 
 对于没有后缀二进制文件，会使用perl来检查然后用xxd来进行打开
 对于有后缀的二进制文件，为了减少perl检查的开销，请在`g:binary_extensions`里设置后缀
@@ -60,37 +60,37 @@ cscope会从当前目录一直往上去查找cscope目录，找到则链接
 ```viml
 PluginAdd 'a.vim'
 ```
-对于不使用的插件，可以有以下操作：  
--  将其移到`unused_vimrcs`目录下(建议)  
--  将其脚本删除  
--  将其.vimrc的后缀重命名为其他  
--  在脚本的开头加上 `finish`  
+对于不使用的插件，可以有以下操作：
+-  将其移到`unused_vimrcs`目录下(建议)
+-  将其脚本删除
+-  将其.vimrc的后缀重命名为其他
+-  在脚本的开头加上 `finish`
 
-`LookupGenTag`命令会生成lookupfile需要的tag文件，并链接。如果使用`!`会在当前目录  
-去生成，否则会查找工程的根目录去生成，如果不存在工程，则也是在当前目录生成  
+    `LookupGenTag`命令会生成lookupfile需要的tag文件，并链接。如果使用`!`会在当前目录
+    去生成，否则会查找工程的根目录去生成，如果不存在工程，则也是在当前目录生成
 
-本地目录下增加`.vimrc`(windows下为`_vimrc`)，可以在加载完home目录下的.vimrc文件后，  
-加载插件之前，去加载这个文件。可以在这个文件里做一些特殊的配置。比如可以调用  
-`g:type_plugin_list`来加载特定的插件。  
+    本地目录下增加`.vimrc`(windows下为`_vimrc`)，可以在加载完home目录下的.vimrc文件后，
+    加载插件之前，去加载这个文件。可以在这个文件里做一些特殊的配置。比如可以调用
+    `g:type_plugin_list`来加载特定的插件。
 
 
 ##建议
-在crontab中加入清除备份文件和undo文件的脚本  
+在crontab中加入清除备份文件和undo文件的脚本
 ```crontab
-0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" | xargs rm -rf  
+0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" | xargs rm -rf
 0 3 * * * find /home/tenfyzhong/.vim/.undofile -mtime +10 -name "%*" | xargs rm -rf
 ```
 
-大工程使用`TagHighlight`，建议定时后台跑`~/.vim/bin/unix/tag_highlight.sh`来生成tag，不然会卡死在生成tag。  
+大工程使用`TagHighlight`，建议定时后台跑`~/.vim/bin/unix/tag_highlight.sh`来生成tag，不然会卡死在生成tag。
 
 
 ##注意
 - vim版本要求7.0以上，否则很多配置用不了，会直接不加载配置。
-- 若退出vim时报未定义的变量b:NERDTree的错误，请将 `~/.vim/bundle/nerdtree/plugin/NERD_tree.vim`下augroup NERDTree 的autocmd BufWinLeave注释掉。  
-- YouCompleteMe的安装说明请参考其文档。  
+- 若退出vim时报未定义的变量b:NERDTree的错误，请将 `~/.vim/bundle/nerdtree/plugin/NERD_tree.vim`下augroup NERDTree 的autocmd BufWinLeave注释掉。
+- YouCompleteMe的安装说明请参考其文档。
 
-##自编译vim建议  
-加入以下的属性  
+##自编译vim建议
+加入以下的属性
 - --with-features=huge：支持最大特性
 - --enable-rubyinterp：启用Vim对ruby编写的插件的支持
 - --enable-pythoninterp：启用Vim对python编写的插件的支持
@@ -111,7 +111,7 @@ PluginAdd 'a.vim'
 - xterm:运行lisp解析器服务器
 
 
-##命令  
+##命令
 | command           | args   | describe                      |
 |:------------------|:-------|:------------------------------|
 | `PluginAdd`       | 参数名 | 安装插件                      |
@@ -119,9 +119,9 @@ PluginAdd 'a.vim'
 | `LookupGenTag[!]` | 路径名 | 在路径下生成.lookypfile\_tags |
 
 
-##键映射  
-以下model, n对应normal, i对应insert, v对应visual, c对应console, x对应选择模式 
-o对应motion模式  
+##键映射
+以下model, n对应normal, i对应insert, v对应visual, c对应console, x对应选择模式
+o对应motion模式
 
 | map          | model | script            | describe                                |
 |--------------|:------|:------------------|:----------------------------------------|
@@ -184,17 +184,8 @@ o对应motion模式
 | `<M-\\>i`    | n     | cscope            | 查找#include这个文件的文,竖直切分窗口件 |
 | `<M-\\>d`    | n     | cscope            | 查找被这个函数调用的函,竖直切分窗口数   |
 | `<leader>tg` | n     | ctags             | 在当前目录生成tags                      |
-| `<c-l>`      | n     | airline           | airline tab中的下一个文件               |
-| `<c-h>`      | n     | airline           | airline tab中的上一个文件               |
-| `<leader>1`  | n     | airline           | airline tab中的标号1的文件              |
-| `<leader>2`  | n     | airline           | airline tab中的标号2的文件              |
-| `<leader>3`  | n     | airline           | airline tab中的标号3的文件              |
-| `<leader>4`  | n     | airline           | airline tab中的标号4的文件              |
-| `<leader>5`  | n     | airline           | airline tab中的标号5的文件              |
-| `<leader>6`  | n     | airline           | airline tab中的标号6的文件              |
-| `<leader>7`  | n     | airline           | airline tab中的标号7的文件              |
-| `<leader>8`  | n     | airline           | airline tab中的标号8的文件              |
-| `<leader>9`  | n     | airline           | airline tab中的标号9的文件              |
+| `<c-l>`      | n     | ctrlspace         | tablist中的下一个文件                   |
+| `<c-h>`      | n     | ctrlspace         | tablist中的上一个文件                   |
 | `<leader>nt` | n     | nerdtree          | 触发nerdtree                            |
 | `<leader>tb` | n     | tagbar or taglist | 触发tagbar or taglist                   |
 | `<leader>ta` | n     | tagbar or taglist | 触发tagbar和nerdtree                    |
@@ -252,3 +243,5 @@ o对应motion模式
 | `\ap`        | in    | auto-pairs        | 触发补齐                                |
 | `\ae`        | in    | auto-pairs        | 将后面的单词放到当前括号里              |
 | `\an`        | in    | auto-pairs        | 跳到一个对齐的括号                      |
+
+
