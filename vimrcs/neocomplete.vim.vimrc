@@ -24,7 +24,7 @@
 PluginAdd 'Shougo/neocomplete.vim'
 PluginAdd 'Shougo/neopairs.vim'
 PluginAdd 'Shougo/neoinclude.vim'
-PluginAdd 'Shougo/neco-syntax'
+" PluginAdd 'Shougo/neco-syntax'
 
 let g:neopairs#enable = 1
 
