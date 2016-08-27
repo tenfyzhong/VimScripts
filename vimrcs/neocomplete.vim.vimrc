@@ -7,6 +7,9 @@
 " created: 2016-08-15 00:01:39
 "==============================================================
 PluginAdd 'Shougo/neocomplete.vim'
+PluginAdd 'Shougo/neopairs.vim'
+
+let g:neopairs#enable = 1
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
