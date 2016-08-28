@@ -32,7 +32,6 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#auto_completion_start_length = 1
 let g:neocomplete#min_keyword_length = 2
 let g:neocomplete#auto_complete_delay = 0
-let g:neocomplete#enable_refresh_always = 1
 let g:neocomplete#enable_auto_close_preview = 1
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
