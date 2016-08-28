@@ -15,6 +15,10 @@
 "          NeoCompleteTagMakeCache 从当前文件的tags生成cache
 "          NeoCompleteMemberMakeCache 对当前的buffer建立成员cache
 "
+"    imap: <c-e>关闭补全菜单
+"          <c-y>插入候选并关闭菜单
+"          <tab>能用UltiSnips展开则展开，否则有补全则候选向下，再否则输入一个tab
+"          <s-tab>有补全则候选向上，否则输入<s-tab>
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
