@@ -18,7 +18,7 @@ PluginAdd 'honza/vim-snippets'
 
 let g:UltiSnipsEditSplit            = "horizontal"
 let g:UltiSnipsExpandTrigger        = "<c-tab>"
+let g:UltiSnipsJumpForwardTrigger   = "<c-tab>"
 let g:UltiSnipsListSnippets         = "<c-s-t>"
-let g:UltiSnipsJumpForwardTrigger   = "<c-s-tab>"
 let g:UltiSnipsJumpBackwardTrigger  = "<c-s-tab>"
 
