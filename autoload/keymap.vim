@@ -26,8 +26,3 @@ function! keymap#Mate(action)
 endfunction
 " }}}
 
-function! keymap#Tab() "{{{ tab键先尝试进行UltiSnips展开，展开失败再尝试补全的下拉，下拉失败则返回tab
-    return feature#UltiSnipsExpandSnippet() ? '' :
-                \pumvisible() ? "\<C-n>" : "\<TAB>"
-endfunction "}}}
-

@@ -17,8 +17,6 @@
 "
 "    imap: <c-e>关闭补全菜单
 "          <c-y>插入候选并关闭菜单
-"          <tab>能用UltiSnips展开则展开，否则有补全则候选向下，再否则输入一个tab
-"          <s-tab>有补全则候选向上，否则输入<s-tab>
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -49,10 +47,4 @@ augroup neocomplete_setting
 	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup END
-
-" inoremap <expr><CR> pumvisible()? "\<C-y>" : "\<CR>"
-
-" tab键先尝试进行UltiSnips展开，展开失败再尝试补全的下拉，下拉失败则返回tab
-inoremap <TAB> <C-r>=keymap#Tab()<CR>
-inoremap <expr><S-TAB> pumvisible()? "\<C-p>" : "\<S-TAB>"
 
