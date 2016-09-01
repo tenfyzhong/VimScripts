@@ -214,9 +214,10 @@ o对应motion模式
 | `Mx`         | n     | vim-bookmarks     | 清除所有的bookmark                      |
 | `Mu`         | n     | vim-bookmarks     | bookmark上移                            |
 | `Md`         | n     | vim-bookmarks     | bookmark下移                            |
-| `<C-J>`      | n     | YankRing          | 选择rankring中的更早一项                |
-| `<C-k>`      | n     | YankRing          | 选择rankring中的更新一项                |
+| `<leader>yj` | n     | YankRing          | 选择rankring中的更早一项                |
+| `<leader>yk` | n     | YankRing          | 选择rankring中的更新一项                |
 | `<leader>yr` | n     | YankRing          | YankRingShow                            |
+| `<leader>ys` | n     | YankRing          | YankSearch                              |
 | `\e`         | in    | emmet             | emmet leader key                        |
 | `\js`        | in    | javacomplete2     | trying to guess import option           |
 | `\ja`        | in    | javacomplete2     | will ask for import option              |
