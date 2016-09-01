@@ -51,9 +51,9 @@ function! s:ToggleNerdTreeAndTagbar()
     let l:bufname = bufname('%')
     let l:pos = getpos('.')
     if exists(':NERDTreeToggle')
-        NERDTreeToggle
+        silent NERDTreeToggle
     endif
-    TagbarToggle
+    silent TagbarToggle
     if l:bufname !~ 'Tagbar' && l:bufname !~ 'NERD_tree'
         while 1
             let l:curbuf = bufname('%')

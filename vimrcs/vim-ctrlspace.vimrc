@@ -52,6 +52,6 @@ endif
 
 let g:CtrlSpaceIgnoredFiles .= '^\%(tmp\|temp\|bin\|lib\|obj\|bak\)[\/]\|.*\.\%(jpg\|a\|o\|d\|so\|jpeg\|bak\)$'
 
-nnoremap <c-h> :<c-u>CtrlSpaceGoUp<cr>
-nnoremap <c-l> :<c-u>CtrlSpaceGoDown<cr>
+nnoremap <silent><c-h> :<c-u>CtrlSpaceGoUp<cr>
+nnoremap <silent><c-l> :<c-u>CtrlSpaceGoDown<cr>
 
