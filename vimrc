@@ -134,6 +134,8 @@ endif
 
 " global mapping {{{
 if !exists("g:load_vimrc")
+    nnoremap <c-k>                      gT
+    nnoremap <c-j>                      gt
     nnoremap <unique><F12>              <C-w>w
     nnoremap <unique><leader>h          <c-w>h
     nnoremap <unique><leader>j          <c-w>j

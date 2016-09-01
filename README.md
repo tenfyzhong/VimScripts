@@ -158,6 +158,8 @@ o对应motion模式
 | `<`          | v     | global            | `<gv`                                   |
 | `>`          | v     | global            | `>gv`                                   |
 | `af`         | o     | global            | 整个文件的motion动作                    |
+| `<c-j>`      | n     | global            | gt                                      |
+| `<c-k>`      | n     | global            | gT                                      |
 | `<leader>as` | n     | a.vim             | 在源文件和头文件中切换                  |
 | `<C-\\>s`    | n     | cscope            | 查找这个C符号                           |
 | `<C-\\>g`    | n     | cscope            | 查找这个定义                            |
