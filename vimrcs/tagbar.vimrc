@@ -33,7 +33,7 @@ endfunction
 
 if !exists("g:tagbar_maps")
     let g:tagbar_maps = 1
-    nnoremap <unique><silent><leader>tb :TagbarToggle<CR>
+    nnoremap <unique><silent><leader>tb :call <SID>ToggleTagbar()<CR>
     nnoremap <unique><silent><leader>ta :call <SID>ToggleNerdTreeAndTagbar()<CR>
 endif
 " autocmd FileType c,cpp,h,cc,hpp,cxx nested :TagbarOpen
@@ -54,11 +54,21 @@ function! s:ToggleNerdTreeAndTagbar()
     if exists(':NERDTreeToggle')
         silent NERDTreeToggle
     endif
-    try
-        silent TagbarToggle
-    catch
-    endtry
+    call <SID>ToggleTagbar()
     call win_gotoid(l:winid)
     call setpos('.', l:pos)
+endfunction
+
+function! s:ToggleTagbar()
+    if &filetype != 'startify'
+        try
+            let l:winid = win_getid()
+            let l:pos = getpos('.')
+            silent TagbarToggle
+            call win_gotoid(l:winid)
+            call setpos('.', l:pos)
+        catch
+        endtry
+    endif
 endfunction
 
