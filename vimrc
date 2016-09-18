@@ -1,7 +1,7 @@
 " Requirement {{{
-" 版本低于7.0会有很多配置用不了，要求更新
-if version < 700
-    echoerr "请更新到vim 7.0以上"
+" 版本低于8.0会有很多配置用不了，要求更新
+if version < 800
+    echoerr "请更新到vim 8.0以上"
     finish
 endif
 " }}} 
@@ -49,6 +49,7 @@ set whichwrap+=<,>,h,l    " 允许backspace和光标键跨越行边界
 set formatoptions=tcrqn " 自动格式化
 set autochdir " 自动切换工作目录为当前文件所在的目录
 set autowrite " 文件跳转时自动保存
+set scrolloff=5
 
 set shortmess=atI    " 启动的时候不显示援助乌干达儿童提示
 set autoread    " 文件修改后自动载入
