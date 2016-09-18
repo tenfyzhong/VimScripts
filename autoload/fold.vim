@@ -29,7 +29,7 @@ function! fold#FoldIfLevelGreat0(lnum)
         try
             normal zc
         catch
-            echohl WarningMsg | echo 'aha, no fold!' | echohl None
+            echohl WarningMsg | echo 'aha, there is no fold!' | echohl None
         endtry
     else
         normal zo
