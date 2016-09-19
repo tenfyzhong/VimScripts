@@ -37,26 +37,13 @@ endfunction
 " }}}
 
 
-" 重连cscope.out {{{
-function! file#RefreshCscope(autoconnect)
-    if a:autoconnect && exists("g:cscope_has_connect")
-        return
-    endif
-
-    let g:cscope_has_connect = 1
-
+function! file#ResetCscope(...) "{{{ 重设cscope连接
 	set nocsverb
-    cs kill -1
-    let p = file#FindFile(getcwd(), 'cscope.out')
-    if p != ''
-        execute "cs add " . p . "/cscope.out " . p
-    endif
+    cs reset
 	set csverb
-    if !a:autoconnect
-        echo "refresh " . p . "/cscope.out success"
-    endif
+    echom 'reset cscope'
 endfunction
-" }}}
+"}}}
 
 
 " 对file文件进行cmd命令 {{{

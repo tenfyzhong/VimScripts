@@ -35,12 +35,28 @@ set cscopetag " 使支持用Ctrl+]和Ctrl+t 快捷键在代码间跳来跳去
 set csto=1
 set cst
 
+let g:cscope_timer = 0
+
+function! s:ConnectCscope() " {{{ 查找cscope.out并连接
+	set nocsverb
+    cs kill -1
+    let p = file#FindFile(getcwd(), 'cscope.out')
+    if p != ''
+        execute "cs add " . p . "/cscope.out " . p
+        " 定时更新
+        if g:cscope_timer == 0
+            let g:cscope_timer = timer_start(600000, 'file#ResetCscope', {'repeat': -1})
+        endif
+    endif
+	set csverb
+endfunction
+" }}}
+
+
 augroup CSCOPE_VIMRC
     au!
-    autocmd FileType c,cpp,java call file#RefreshCscope(1)
+    autocmd FileType c,cpp,java call <SID>ConnectCscope()
 augroup END
-
-com! -nargs=0 RefreshCscope call file#RefreshCscope(0)
 
 if exists("g:cscope_init")
     finish
