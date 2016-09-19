@@ -41,7 +41,6 @@ function! file#ResetCscope(...) "{{{ 重设cscope连接
 	set nocsverb
     cs reset
 	set csverb
-    echom 'reset cscope'
 endfunction
 "}}}
 
