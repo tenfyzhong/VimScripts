@@ -55,7 +55,8 @@ endfunction
 
 augroup CSCOPE_VIMRC
     au!
-    autocmd FileType c,cpp,java call <SID>ConnectCscope()
+    " autocmd FileType c,cpp,java call <SID>ConnectCscope()
+    autocmd VimEnter * call <SID>ConnectCscope()
 augroup END
 
 if exists("g:cscope_init")
