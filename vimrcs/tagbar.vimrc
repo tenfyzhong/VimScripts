@@ -49,24 +49,32 @@ let g:tagbar_show_linenumbers   = -1
 
 function! s:ToggleNerdTreeAndTagbar()
     let l:bufname = bufname('%')
-    let l:winid = win_getid()
-    let l:pos = getpos('.')
+    if version >= 800
+        let l:winid = win_getid()
+        let l:pos = getpos('.')
+    endif
     if exists(':NERDTreeToggle')
         silent NERDTreeToggle
     endif
     call <SID>ToggleTagbar()
-    call win_gotoid(l:winid)
-    call setpos('.', l:pos)
+    if version >= 800
+        call win_gotoid(l:winid)
+        call setpos('.', l:pos)
+    endif
 endfunction
 
 function! s:ToggleTagbar()
     if &filetype != 'startify'
         try
-            let l:winid = win_getid()
-            let l:pos = getpos('.')
+            if version >= 800
+                let l:winid = win_getid()
+                let l:pos = getpos('.')
+            endif
             silent TagbarToggle
-            call win_gotoid(l:winid)
-            call setpos('.', l:pos)
+            if version >= 800
+                call win_gotoid(l:winid)
+                call setpos('.', l:pos)
+            endif
         catch
         endtry
     endif

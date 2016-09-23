@@ -43,9 +43,12 @@ function! s:ConnectCscope() " {{{ 查找cscope.out并连接
     let p = file#FindFile(getcwd(), 'cscope.out')
     if p != ''
         execute "cs add " . p . "/cscope.out " . p
-        " 定时更新
-        if g:cscope_timer == 0
-            let g:cscope_timer = timer_start(600000, 'file#ResetCscope', {'repeat': -1})
+
+        if version >= 800
+            " 定时更新
+            if g:cscope_timer == 0
+                let g:cscope_timer = timer_start(600000, 'file#ResetCscope', {'repeat': -1})
+            endif
         endif
     endif
 	set csverb

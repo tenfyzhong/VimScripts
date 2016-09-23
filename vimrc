@@ -1,7 +1,6 @@
 " Requirement {{{
-" 版本低于8.0会有很多配置用不了，要求更新
-if version < 800
-    echoerr "请更新到vim 8.0以上"
+if version < 704
+    echoerr "请更新到vim 7.4以上"
     finish
 endif
 " }}} 
