@@ -152,7 +152,7 @@ if !exists("g:load_vimrc")
     nnoremap <unique>gk                 k
     cnoremap <unique><c-k>              <Up>
     cnoremap <unique><c-j>              <Down>
-    nnoremap <unique><silent><Space>    :call fold#FoldIfLevelGreat0(line("."))<CR>
+    nnoremap <unique><silent><Space>    za
     nnoremap ;                          :
     xnoremap ;                          :
     nnoremap <leader>w                  :wa<CR>
