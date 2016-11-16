@@ -20,6 +20,8 @@
 "          YcmCompleter GoToImplementation 跳到实现,仅在cs中支持
 "          YcmCompleter GoToImplementationElseDeclaration 跳到实现,否则跳到声明,仅在cs中支持
 "
+"          YcmGenerateConfig 生成.ycm_extra_conf.py的配置
+"
 "    nmap: <leader>jd YcmCompleter GoToImpreciset 
 " VIM Version: 7.4
 "  author: tenfyzhong
