@@ -27,6 +27,7 @@
 " created: 2016-04-16 17:02:00
 "==============================================================
 PluginAdd 'Valloric/YouCompleteMe', {'pinned': 1}
+PluginAdd 'rdnetto/YCM-Generator'
 
 let g:ycm_min_num_of_chars_for_completion 			= 1
 let g:ycm_add_preview_to_completeopt 				= 0
