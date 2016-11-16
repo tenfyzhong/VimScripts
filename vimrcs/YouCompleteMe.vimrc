@@ -26,22 +26,9 @@
 "   email: 364755805@qq.com
 " created: 2016-04-16 17:02:00
 "==============================================================
-if g:MSWIN
-    let g:use_supertab = 1
-    call loader#core#LoadSingleVimrc(g:vimrc_path . '/supertab.vimrc', 1)
-    finish
-endif
-
-if !executable('clang')
-    let g:use_supertab = 1
-    finish
-endif
-
-" 如果ycm的project目录不存在，直接PluginAdd ycm，以便git clone ycm
-" 如果ycm的project目录存在，且ycm可用，也PluginAdd ycm，以便加载ycm
 PluginAdd 'Valloric/YouCompleteMe', {'pinned': 1}
 
-let g:ycm_min_num_of_chars_for_completion 			= 2
+let g:ycm_min_num_of_chars_for_completion 			= 1
 let g:ycm_add_preview_to_completeopt 				= 0
 let g:ycm_autoclose_preview_window_after_insertion 	= 1
 let g:ycm_error_symbol                              = 'EE'
