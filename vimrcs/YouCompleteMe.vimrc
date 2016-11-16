@@ -37,27 +37,6 @@ if !executable('clang')
     finish
 endif
 
-let b:youcomplete_path = expand(g:bundle_path . "/YouCompleteMe/")
-" 如果ycm的project目录已经存在，则去判断ycm是否可用
-" 如果ycm不可用，则去加载supertab
-if isdirectory(b:youcomplete_path)
-    if !has('python')
-        call vimlog#InfoLog('has no python, will load supertab')
-        let g:use_supertab = 1
-        call loader#core#LoadSingleVimrc(g:vimrc_path . '/supertab.vimrc', 1)
-        finish
-    endif
-
-    let b:youcompleteme_lib_path = b:youcomplete_path . "third_party/ycmd/"
-    if !(filereadable(b:youcompleteme_lib_path . "ycm_core.so")
-                \|| filereadable(b:youcompleteme_lib_path . "ycm_core.dll"))
-        call vimlog#InfoLog("has no compile YCM, will load supertab")
-        let g:use_supertab = 1
-        call loader#core#LoadSingleVimrc('~/.vim/vimrcs/supertab.vimrc', 1)
-        finish
-    endif
-endif
-
 " 如果ycm的project目录不存在，直接PluginAdd ycm，以便git clone ycm
 " 如果ycm的project目录存在，且ycm可用，也PluginAdd ycm，以便加载ycm
 PluginAdd 'Valloric/YouCompleteMe', {'pinned': 1}
