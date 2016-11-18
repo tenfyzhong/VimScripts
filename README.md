@@ -20,10 +20,6 @@ PYTHONPATH=C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Lib\lib-tk
 ```
 
 ###common
-使用csupport，可以在`.vim/resource/csupport`下修改Templates模板，使其支持自己的信息。
-
-使用bash-support，可以在`.vim/resource/bash-support`下修改Templates模板，使其支持自己的信息。
-
 在.vimrc中将`g:use_chinese_doc`设为1则使用中文文档。
 若不成功，请运行`:BundleInstall`
 
@@ -52,11 +48,8 @@ go install -v code.google.com/p/rog-go/exp/cmd/godef
 ```
 cscope会从当前目录一直往上去查找cscope目录，找到则链接
 
-对于没有后缀二进制文件，会使用perl来检查然后用xxd来进行打开
-对于有后缀的二进制文件，为了减少perl检查的开销，请在`g:binary_extensions`里设置后缀
-
-加入插件，在 `~/.vim/vimrcs/` 下加入一个.vimrc后缀的脚本，在脚本开头调用`PluginAdd`命令
-加载插件，脚本下面可以加入其他的配置。例如：
+加入插件，在 `~/.vim/vimrcs/` 下加入一个.vimrc或.vim后缀的脚本，
+在脚本开头调用`PluginAdd`命令 加载插件，脚本下面可以加入其他的配置。例如：
 ```viml
 PluginAdd 'a.vim'
 ```
@@ -66,12 +59,10 @@ PluginAdd 'a.vim'
 -  将其.vimrc的后缀重命名为其他
 -  在脚本的开头加上 `finish`
 
-    `LookupGenTag`命令会生成lookupfile需要的tag文件，并链接。如果使用`!`会在当前目录
-    去生成，否则会查找工程的根目录去生成，如果不存在工程，则也是在当前目录生成
 
-    本地目录下增加`.vimrc`(windows下为`_vimrc`)，可以在加载完home目录下的.vimrc文件后，
-    加载插件之前，去加载这个文件。可以在这个文件里做一些特殊的配置。比如可以调用
-    `g:type_plugin_list`来加载特定的插件。
+本地目录下增加`.vimrc`(windows下为`_vimrc`)，可以在加载完home目录下的.vimrc文件后，
+加载插件之前，去加载这个文件。可以在这个文件里做一些特殊的配置。比如可以调用
+`g:type_plugin_list`来加载特定的插件。
 
 
 ##建议
@@ -81,16 +72,15 @@ PluginAdd 'a.vim'
 0 3 * * * find /home/tenfyzhong/.vim/.undofile -mtime +10 -name "%*" | xargs rm -rf
 ```
 
-大工程使用`TagHighlight`，建议定时后台跑`~/.vim/bin/unix/tag_highlight.sh`来生成tag，不然会卡死在生成tag。
-
 
 ##注意
-- vim版本要求7.0以上，否则很多配置用不了，会直接不加载配置。
-- 若退出vim时报未定义的变量b:NERDTree的错误，请将 `~/.vim/bundle/nerdtree/plugin/NERD_tree.vim`下augroup NERDTree 的autocmd BufWinLeave注释掉。
+- vim版本使用最新的版本，否则有些特性用不了
 - YouCompleteMe的安装说明请参考其文档。
 
 ##自编译vim建议
 加入以下的属性
+--with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-luainterp
+--enable-perlinterp --enable-multibyte --enable-cscope --enable-gui=gtk2
 - --with-features=huge：支持最大特性
 - --enable-rubyinterp：启用Vim对ruby编写的插件的支持
 - --enable-pythoninterp：启用Vim对python编写的插件的支持
@@ -114,9 +104,7 @@ PluginAdd 'a.vim'
 ##命令
 | command           | args   | describe                      |
 |:------------------|:-------|:------------------------------|
-| `PluginAdd`       | 参数名 | 安装插件                      |
-| `RefreshCscope`   |        | 刷新cscope.out                |
-| `LookupGenTag[!]` | 路径名 | 在路径下生成.lookypfile\_tags |
+| `PluginAdd`       | 插件名 | 安装插件                      |
 
 
 ##键映射
@@ -200,10 +188,6 @@ o对应motion模式
 | `<leader>da` | ni    | Doxygen           | 生成文件注释                            |
 | `<leader>dl` | ni    | Doxygen           | 生成证书注释                            |
 | `<leader>gu` | n     | Gundo             | GundoToogle                             |
-| `<leader>uf` | n     | lookupfile        | lookupfile                              |
-| `<leader>ut` | n     | lookupfile        | lookupfile tags                         |
-| `<leader>ub` | n     | lookupfile        | lookup file bufs                        |
-| `<leader>uw` | n     | lookupfile        | lookup file walk                        |
 | `gt`         | nx    | vim-easy-align    | 开启对齐                                |
 | `<leader>M`  | n     | Mark              | 清除所有的mark                          |
 | `<leader>N`  | n     | Mark              | 如果在高亮处，则取消高亮，否则触发高亮  |
@@ -216,18 +200,11 @@ o对应motion模式
 | `Mx`         | n     | vim-bookmarks     | 清除所有的bookmark                      |
 | `Mu`         | n     | vim-bookmarks     | bookmark上移                            |
 | `Md`         | n     | vim-bookmarks     | bookmark下移                            |
-| `<leader>yj` | n     | YankRing          | 选择rankring中的更早一项                |
-| `<leader>yk` | n     | YankRing          | 选择rankring中的更新一项                |
-| `<leader>yr` | n     | YankRing          | YankRingShow                            |
-| `<leader>ys` | n     | YankRing          | YankSearch                              |
 | `\e`         | in    | emmet             | emmet leader key                        |
 | `\js`        | in    | javacomplete2     | trying to guess import option           |
 | `\ja`        | in    | javacomplete2     | will ask for import option              |
 | `\jm`        | in    | javacomplete2     | add all missing imports                 |
 | `\jr`        | in    | javacomplete2     | remove all missing imports              |
-| `\ji`        | n     | eclim             | :JavaImport                             |
-| `\jd`        | n     | eclim             | :JavaDocSearch -x declarations          |
-| `\jc`        | n     | eclim             | :JavaSearchContext                      |
 | `[h`         | n     | GitGutter         | 跳到上一个修改的块                      |
 | `]h`         | n     | GitGutter         | 跳到下一个修改的块                      |
 | `<leader>ga` | n     | GitGutter         | stage块                                 |
