@@ -30,7 +30,7 @@ PluginAdd 'scrooloose/nerdtree'
 
 let NERDChristmasTree 				= 1
 " 不显示指定的内容
-let NERDTreeIgnore 					= ['\.o$', '\.swp$', '\.bak$', '\~$', 
+let NERDTreeIgnore 					= ['\.o$', '\.swp$', '\.bak$', '\~$', '\.d$',
         \'^tags$', '\.git$', '\.out$', '\.session$', '\.viminfo$', '\.d.\d*$', 
         \'cscope.*out$', '\.pyc$'] 
 let NERDTreeShowHidden 				= 0 "	不显示隐藏文件
