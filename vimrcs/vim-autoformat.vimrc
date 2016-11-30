@@ -15,6 +15,6 @@ let g:formatters_cpp = ['my_custom_cpp']
 
 augroup autoformat_setting
     au!
-    autocmd BufWrite *.py,*.json,*.css,*.xml,*.pl,*.md :silent Autoformat
+    autocmd BufWrite *.py,*.json,*.css,*.xml,*.pl :silent Autoformat
 augroup END
 
