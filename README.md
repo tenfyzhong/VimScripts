@@ -68,8 +68,8 @@ PluginAdd 'a.vim'
 ##建议
 在crontab中加入清除备份文件和undo文件的脚本
 ```crontab
-0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" | xargs rm -rf
-0 3 * * * find /home/tenfyzhong/.vim/.undofile -mtime +10 -name "%*" | xargs rm -rf
+0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" -delete
+0 3 * * * find /home/tenfyzhong/.vim/.undofile -mtime +10 -name "%*" -delete
 ```
 
 
