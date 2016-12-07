@@ -20,6 +20,7 @@ endif
 
 PluginAdd 'SirVer/ultisnips'
 PluginAdd 'honza/vim-snippets'
+PluginAdd 'tenfyzhong/tsnippets.vim'
 
 let g:UltiSnipsEditSplit            = "horizontal"
 
