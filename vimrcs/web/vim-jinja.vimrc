@@ -1,9 +1,9 @@
 "==============================================================
-"    file: Vim-Jinja2-Syntax.vimrc
+"    file: vim-jinja.vimrc
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
-" created: 2016-07-09 20:47:18
+" created: 2016-12-12 13:27:36
 "==============================================================
-PluginAdd 'Glench/Vim-Jinja2-Syntax'
+PluginAdd 'mitsuhiko/vim-jinja'
