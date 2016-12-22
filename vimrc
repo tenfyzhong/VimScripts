@@ -107,6 +107,8 @@ set sessionoptions-=buffers
 syntax on
 syntax enable
 
+set background=dark
+colorscheme solarized
 " }}}
 
 " autocmd {{{
