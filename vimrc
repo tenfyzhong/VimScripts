@@ -109,6 +109,7 @@ syntax enable
 
 set background=dark
 colorscheme solarized
+highlight Folded term=bold cterm=bold ctermfg=12 ctermbg=0 guifg=Cyan guibg=DarkGrey
 " }}}
 
 " autocmd {{{
