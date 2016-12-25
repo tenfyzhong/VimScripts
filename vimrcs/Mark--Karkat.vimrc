@@ -28,3 +28,10 @@ nmap <Plug>IgnoreMarkSearchPrev <Plug>MarkSearchPrev
 nmap <Leader>M <Plug>MarkAllClear
 nmap <Leader>N <Plug>MarkClear
 
+highlight MarkWord1 ctermfg=0 ctermbg=1 guifg=Black guibg=#8CCBEA
+highlight MarkWord2 ctermfg=0 ctermbg=2 guifg=Black guibg=#8CCBEA
+highlight MarkWord3 ctermfg=0 ctermbg=15 guifg=Black guibg=#8CCBEA
+highlight MarkWord4 ctermfg=0 ctermbg=4 guifg=Black guibg=#8CCBEA
+highlight MarkWord5 ctermfg=0 ctermbg=5 guifg=Black guibg=#8CCBEA
+highlight MarkWord6 ctermfg=0 ctermbg=6 guifg=Black guibg=#8CCBEA
+
