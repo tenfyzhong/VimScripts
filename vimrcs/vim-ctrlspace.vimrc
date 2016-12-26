@@ -40,7 +40,11 @@ if executable("ag")
 endif
 
 " let g:CtrlSpaceSearchTiming = 500
-let g:CtrlSpaceUseUnicode = 0
+if has('mac')
+    let g:CtrlSpaceUseUnicode = 1
+else
+    let g:CtrlSpaceUseUnicode = 0
+endif
 " let g:CtrlSpaceSaveWorkspaceOnExit = 1
 " let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 
