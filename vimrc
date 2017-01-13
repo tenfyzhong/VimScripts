@@ -184,7 +184,7 @@ endif
 " }}} 
 
 " command {{{
-com! -nargs=+ -bar PluginAdd call loader#core#BundlePlugin(<args>)
+com! -nargs=+ -bar PluginAdd call loader#BundlePlugin(<args>)
 " }}} 
 
 " local.vim {{{
@@ -216,7 +216,7 @@ endif
 " 建议：插件的配置最好以插件名加.vimrc命名
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
-call loader#core#LoadVimrcs()
+call loader#LoadVimrcs()
 
 let g:load_vimrc = 1
 " }}} 

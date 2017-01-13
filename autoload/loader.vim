@@ -13,7 +13,7 @@ endif
 " }}} --------------------------------------------------------------------------
 
 " 加载一个vimrc脚本 ---------------------------------------------------------{{{
-function! loader#core#LoadSingleVimrc(vimrc, will_check_exist)
+function! loader#LoadSingleVimrc(vimrc, will_check_exist)
     let l:expand_vimrc = escape(expand(a:vimrc), ' ')
     if a:will_check_exist == 1 && !filereadable(l:expand_vimrc)
         call vimlog#ErrorLog(l:expand_vimrc . " is not exist")
@@ -33,13 +33,13 @@ function! s:LoadDirPlugin(dirpath) "{{{
     let l:vim_list          = split(l:vim_path_str, '\n')
     let l:vimrc_list        = l:vimrc_list + l:vim_list
     for vimrc in l:vimrc_list
-            call loader#core#LoadSingleVimrc(vimrc, 0)
+            call loader#LoadSingleVimrc(vimrc, 0)
     endfor
 endfunction "}}}
 
 
 " 加载~/.vim/vimrcs/目录下的所有.vimrc脚本-----------------------------------{{{
-function! loader#core#LoadVimrcs()
+function! loader#LoadVimrcs()
     if exists("g:has_load_vimrcs")
         return
     endif 
@@ -52,13 +52,13 @@ function! loader#core#LoadVimrcs()
         let g:log_level 	= $VIML_LOG_LEVEL
     endif
 
-    if loader#core#PluginExist('Vundle.vim')
+    if loader#PluginExist('Vundle.vim')
         filetype off
         exec "set rtp+=" . g:bundle_path . "/Vundle.vim"
         call vundle#begin(g:bundle_path)
 
         " 先加载vundle，再加载其他插件
-        call loader#core#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)
+        call loader#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)
 
         for dir in b:type_plugin_list
             call <SID>LoadDirPlugin(g:vimrc_path . dir)
@@ -75,7 +75,7 @@ endfunction
 " }}} --------------------------------------------------------------------------
 
 " 检查插件是否存在 ----------------------------------------------------------{{{
-function! loader#core#PluginExist(plugin_name)
+function! loader#PluginExist(plugin_name)
     if isdirectory(g:bundle_path . a:plugin_name)
         return 1
     else
@@ -89,7 +89,7 @@ endfunction
 " plugin为插件的全名
 " 比如https://github.com/tenfyzhong/jce-highlight
 " 则plugin为tenfyzhong/jce-highlight
-function! loader#core#BundlePlugin(plugin, ...)
+function! loader#BundlePlugin(plugin, ...)
     " 每个插件只加载一次
     if !has_key(s:plugin_lists, a:plugin)
         let s:plugin_lists[a:plugin] = 1
@@ -99,7 +99,7 @@ function! loader#core#BundlePlugin(plugin, ...)
         endif
         execute "Plugin " . "'" . a:plugin . "'" . l:plugin_args
         let l:plugin_name   = split(a:plugin, "/")[-1]
-        call loader#core#PluginExist(l:plugin_name)
+        call loader#PluginExist(l:plugin_name)
     endif
 endfunction
 " }}} --------------------------------------------------------------------------
