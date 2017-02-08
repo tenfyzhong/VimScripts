@@ -14,6 +14,10 @@
 "   email: 364755805@qq.com
 " created: 2016-06-28 15:37:06
 "==============================================================
+if version >= 800
+    finish
+endif
+
 PluginAdd 'scrooloose/syntastic'
 
 let g:syntastic_always_populate_loc_list = 1
