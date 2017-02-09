@@ -34,6 +34,6 @@ let g:syntastic_mode_map = {
 
 let g:syntastic_cpp_compiler_options = ' -std=c++11 '
 
-if exists('AirlineToggle')
-    let g:airline#extensions#syntastic#enabled = 1
-endif
+" 关闭pymode的检查
+let g:pymode_lint = 1
+
