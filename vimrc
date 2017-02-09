@@ -25,6 +25,7 @@ let g:bundle_path   = fnamemodify(g:VIMHOME . "bundle/", ':p')
 " }}} 
 
 " base setting {{{
+lang messages en_US.UTF-8
 source $VIMRUNTIME/vimrc_example.vim
 set nocompatible " 关闭vi兼容模式
 set cindent      " C语言缩进方式
