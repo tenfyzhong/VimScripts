@@ -71,7 +71,6 @@ let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
 let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_bind = '<leader>b'
-let g:pymode_lint = 1
 let g:pymode_lint_on_write = 1
 let g:pymode_lint_on_fly = 0
 let g:pymode_lint_message = 1
@@ -80,6 +79,10 @@ let g:pymode_trim_whitespaces = 1
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_regenerate_on_write = 0
 let g:pymode_rope_goto_definition_bind = "<C-]>"
+
+if version >= 800
+    let g:pymode_lint = 0
+endif
 
 let g:pymode_virtualenv = 1
 let g:pymode_virtualenv_path = $VIRTUAL_ENV

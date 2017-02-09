@@ -33,15 +33,6 @@ let g:syntastic_mode_map = {
             \ "passive_filetypes": ["python"] }
 
 let g:syntastic_cpp_compiler_options = ' -std=c++11 '
-" if executable('gcc')
-"     let gccversion = system('gcc -dumpversion')
-"     if gccversion >= '4.8.0'
-"         let g:syntastic_cpp_compiler_options = ' -std=c++11 '
-"     elseif gccversion >= '4.3.0'
-"         let g:syntastic_cpp_compiler_options = ' -std=c++0x '
-"     endif
-" endif
-
 
 if exists('AirlineToggle')
     let g:airline#extensions#syntastic#enabled = 1
