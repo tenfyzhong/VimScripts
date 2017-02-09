@@ -36,7 +36,11 @@ function! feature#quickfixDo(cmd) "{{{ quickfix和location兼容性的命令
     else
         let l:prefix = 'c'
     endif
-    let l:cmd = 'silent ' . l:prefix . a:cmd 
+    if a:cmd == 'open'
+        let l:cmd = 'silent botright ' . l:prefix . a:cmd 
+    else
+        let l:cmd = 'silent ' . l:prefix . a:cmd 
+    endif
     try
         exec l:cmd
     catch /^Vim\%((\a\+)\)\=:E553/
