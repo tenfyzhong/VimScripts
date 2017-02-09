@@ -37,7 +37,7 @@
 if isdirectory($HOME . '/.fzf/plugin')
     set rtp+=~/.fzf
 elseif isdirectory('/usr/local/opt/fzf/plugin')
-    set rtp+=/usr/local/opt/fzf/plugin
+    set rtp+=/usr/local/opt/fzf
 else
     finish
 endif
