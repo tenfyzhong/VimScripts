@@ -79,11 +79,13 @@ PluginAdd 'a.vim'
 
 ##自编译vim建议
 加入以下的属性
---with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-luainterp
---enable-perlinterp --enable-multibyte --enable-cscope --enable-gui=gtk2
+--with-features=huge --enable-rubyinterp --enable-pythoninterp 
+--enable-python3interp --enable-luainterp --enable-perlinterp 
+--enable-multibyte --enable-cscope --enable-gui=gtk2  
 - --with-features=huge：支持最大特性
 - --enable-rubyinterp：启用Vim对ruby编写的插件的支持
 - --enable-pythoninterp：启用Vim对python编写的插件的支持
+- --enable-python3interp：启用Vim对python3编写的插件的支持
 - --enable-luainterp：启用Vim对lua编写的插件的支持
 - --enable-perlinterp：启用Vim对perl编写的插件的支持
 - --enable-multibyte：多字节支持 可以在Vim中输入中文
