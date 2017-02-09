@@ -83,6 +83,9 @@ let g:pymode_rope_goto_definition_bind = "<C-]>"
 let g:pymode_virtualenv = 1
 let g:pymode_virtualenv_path = $VIRTUAL_ENV
 
+let g:pymode_rope_autoimport = 1
+let g:pymode_rope_autoimport_import_after_complete = 0
+
 let g:pymode_lint_options_pep8 =
     \ {'max_line_length': g:pymode_options_max_line_length}
 let g:pymode_lint_options_pylint =
