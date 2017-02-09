@@ -1,6 +1,9 @@
 "==============================================================
 "    file: asyncrun.vim
-"   brief: 
+"   brief: 异步执行外部程序
+"
+" command: AsyncRun[!] [options] {cmd} 执行cmd命令，[!]关闭自动滚动
+"          AsyncStop[!] 停止任务，[!]会使用KILL信号
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfyzhong@tencent.com
