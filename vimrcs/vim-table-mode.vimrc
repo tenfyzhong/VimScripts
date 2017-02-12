@@ -40,10 +40,9 @@ PluginAdd 'dhruvasagar/vim-table-mode'
 let g:table_mode_corner='|'
 
 function! TableModeStatusLine()
-    if exists('tablemode#IsActive()')
+    if exists(':TableModeToggle')
         return tablemode#IsActive() ? 'tablemode' : ''
     endif
-    return ''
 endfunction
 
 set statusline+=%!TableModeStatusLine()
