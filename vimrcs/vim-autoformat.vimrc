@@ -12,9 +12,12 @@ PluginAdd 'Chiel92/vim-autoformat'
 
 let g:formatdef_my_custom_cpp = '"clang-format -style=file"'
 let g:formatters_cpp = ['my_custom_cpp']
+let g:formatter_yapf_style = 'pep8'
 
-augroup autoformat_setting
-    au!
-    autocmd BufWrite *.py,*.json,*.css,*.xml,*.pl :silent Autoformat
-augroup END
+" augroup autoformat_setting
+    " au!
+    " autocmd BufWrite *.py,*.json,*.css,*.xml,*.pl :silent Autoformat
+" augroup END
+
+nnoremap <leader>fm :Autoformat<cr>
 
