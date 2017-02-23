@@ -228,5 +228,11 @@ o对应motion模式
 | `<leader>jd` | n     | YouCompleteMe     | 跳到当前光标单词的定义                  |
 | `<leader>dd` | n     | YouCompleteMe     | 查看当前的错误                          |
 | `<leader>ds  | n     | dash              | 在dash中搜索当前单词                    |
+| `<leader>zf` | n     | fzf               | FZFFiles                                |
+| `<leader>zg` | n     | fzf               | FZFGFiles                               |
+| `<leader>zb` | n     | fzf               | FZFBuffers                              |
+| `<leader>zw` | n     | fzf               | FZFWindowss                             |
+| `<leader>zm` | n     | fzf               | FZFMarks                                |
+| `<leader>z?` | n     | fzf               | FZFMaps                                 |
 
 

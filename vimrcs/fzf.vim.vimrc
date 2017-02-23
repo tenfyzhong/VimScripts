@@ -44,3 +44,11 @@ endif
 
 PluginAdd 'junegunn/fzf.vim'
 let g:fzf_command_prefix = 'FZF'
+
+nnoremap <leader>zf :FZFFiles<cr>
+nnoremap <leader>zg :FZFGFiles<cr>
+nnoremap <leader>zb :FZFBuffers<cr>
+nnoremap <leader>zw :FZFWindows<cr>
+nnoremap <leader>zm :FZFMarks<cr>
+nnoremap <leader>z? :FZFMaps<cr>
+
