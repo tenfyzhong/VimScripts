@@ -18,4 +18,4 @@ endif
 
 let g:windowswap_setting = 1
 
-nnoremap <silent><unique><leader>sw :call WindowSwap#EasyWindowSwap()<CR>
+nnoremap <silent><leader>sw :call WindowSwap#EasyWindowSwap()<CR>

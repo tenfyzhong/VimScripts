@@ -16,6 +16,6 @@ endif
 
 let g:gundo_right = 1
 
-nnoremap <unique><silent><leader>gu <esc>:GundoToggle<cr>
+nnoremap <silent><leader>gu <esc>:GundoToggle<cr>
 
 let g:gundo_vim_init = 1

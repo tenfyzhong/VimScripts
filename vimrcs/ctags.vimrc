@@ -18,7 +18,7 @@ if executable('ctags')
 
     if !exists("g:ctags_map")
         let g:ctags_map = 1
-        nnoremap <unique><silent><leader>tg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<cr>
+        nnoremap <silent><leader>tg :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<cr>
     endif
 endif
 

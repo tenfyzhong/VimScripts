@@ -17,6 +17,6 @@ if exists("g:gitv_init")
     finish
 endif
 
-nnoremap <silent><unique><leader>gv :Gitv<cr>
+nnoremap <silent><leader>gv :Gitv<cr>
 
 let g:gitv_init = 1

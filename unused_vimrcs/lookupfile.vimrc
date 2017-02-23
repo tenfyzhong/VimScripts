@@ -36,10 +36,10 @@ let g:LookupFile_FileFilter = ''
 
 
 if !exists("g:lookupfile_vimrc")
-    nmap     <unique><silent><leader>uf <Plug>LookupFile
-    nnoremap <unique><silent><leader>ut :LUTags<cr>
-    nnoremap <unique><silent><leader>ub :LUBufs<cr>
-    nnoremap <unique><silent><leader>uw :LUWalk<cr>
+    nmap     <silent><leader>uf <Plug>LookupFile
+    nnoremap <silent><leader>ut :LUTags<cr>
+    nnoremap <silent><leader>ub :LUBufs<cr>
+    nnoremap <silent><leader>uw :LUWalk<cr>
 endif
 
 let s:lookupfile_tags = file#FindFile(getcwd(), ".lookupfile_tags")

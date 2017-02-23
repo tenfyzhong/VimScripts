@@ -48,7 +48,7 @@ set backspace=2 " 使回格键正常处理indet,eol,start 等
 set iskeyword+= " 设为字，遇到这些字符时不断行
 set whichwrap+=<,>,h,l    " 允许backspace和光标键跨越行边界
 set formatoptions=tcrqn " 自动格式化
-set autochdir " 自动切换工作目录为当前文件所在的目录
+" set autochdir " 自动切换工作目录为当前文件所在的目录
 set autowrite " 文件跳转时自动保存
 set scrolloff=2
 
@@ -138,50 +138,48 @@ endif
 " }}} 
 
 " global mapping {{{
-if !exists("g:load_vimrc")
-    nnoremap <c-k>                      gT
-    nnoremap <c-j>                      gt
-    nnoremap <unique><F12>              <C-w>w
-    nnoremap <unique><leader>h          <c-w>h
-    nnoremap <unique><leader>j          <c-w>j
-    nnoremap <unique><leader>k          <c-w>k
-    nnoremap <unique><leader>l          <c-w>l
-    nnoremap <unique><c-left>           <c-w>h
-    nnoremap <unique><c-down>           <c-w>j
-    nnoremap <unique><c-up>             <c-w>k
-    nnoremap <unique><c-right>          <c-w>l
-    nnoremap <unique>j                  gj
-    nnoremap <unique>gj                 j
-    nnoremap <unique>k                  gk
-    nnoremap <unique>gk                 k
-    cnoremap <unique><c-k>              <Up>
-    cnoremap <unique><c-j>              <Down>
-    nnoremap <unique><silent><Space>    za
-    nnoremap ;                          :
-    xnoremap ;                          :
-    nnoremap <leader>w                  :wa<CR>
-    nnoremap <leader>q                  :q<CR>
-    nnoremap <silent>do                 :diffget<cr>:diffupdate<cr>
-    nnoremap <silent>dp                 :diffput<cr>:diffupdate<cr>
-    nnoremap <silent><unique><leader>nn :call feature#PollNumber()<cr>
-    vnoremap < <gv
-    vnoremap > >gv
+nnoremap <c-k>              gT
+nnoremap <c-j>              gt
+nnoremap <F12>              <C-w>w
+nnoremap <leader>h          <c-w>h
+nnoremap <leader>j          <c-w>j
+nnoremap <leader>k          <c-w>k
+nnoremap <leader>l          <c-w>l
+nnoremap <c-left>           <c-w>h
+nnoremap <c-down>           <c-w>j
+nnoremap <c-up>             <c-w>k
+nnoremap <c-right>          <c-w>l
+nnoremap j                  gj
+nnoremap gj                 j
+nnoremap k                  gk
+nnoremap gk                 k
+cnoremap <c-k>              <Up>
+cnoremap <c-j>              <Down>
+nnoremap <silent><Space>    za
+nnoremap ;                  :
+xnoremap ;                  :
+nnoremap <leader>w          :wa<CR>
+nnoremap <leader>q          :q<CR>
+nnoremap <silent>do         :diffget<cr>:diffupdate<cr>
+nnoremap <silent>dp         :diffput<cr>:diffupdate<cr>
+nnoremap <silent><leader>nn :call feature#PollNumber()<cr>
+vnoremap < <gv
+vnoremap > >gv
 
-    call keymap#Mate("nnoremap <unique><m-,> ;")
+call keymap#Mate("nnoremap <m-,> ;")
 
-    if &diff
-        nnoremap <unique><silent>[1 :diffget 1<CR> :diffupdate<CR> 
-        nnoremap <unique><silent>[2 :diffget 2<CR> :diffupdate<CR>
-        nnoremap <unique><silent>[3 :diffget 3<CR> :diffupdate<CR>
-        nnoremap <unique><silent>[4 :diffget 4<CR> :diffupdate<CR>
-        nnoremap <unique><silent>]1 :diffput 1<CR> :diffupdate<CR> 
-        nnoremap <unique><silent>]2 :diffput 2<CR> :diffupdate<CR>
-        nnoremap <unique><silent>]3 :diffput 3<CR> :diffupdate<CR>
-        nnoremap <unique><silent>]4 :diffput 4<CR> :diffupdate<CR>
-    endif
-
-    onoremap af :<c-u>normal! ggVG<CR>
+if &diff
+    nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR> 
+    nnoremap <silent>[2 :diffget 2<CR> :diffupdate<CR>
+    nnoremap <silent>[3 :diffget 3<CR> :diffupdate<CR>
+    nnoremap <silent>[4 :diffget 4<CR> :diffupdate<CR>
+    nnoremap <silent>]1 :diffput 1<CR> :diffupdate<CR> 
+    nnoremap <silent>]2 :diffput 2<CR> :diffupdate<CR>
+    nnoremap <silent>]3 :diffput 3<CR> :diffupdate<CR>
+    nnoremap <silent>]4 :diffput 4<CR> :diffupdate<CR>
 endif
+
+onoremap af :<c-u>normal! ggVG<CR>
 " }}} 
 
 " command {{{

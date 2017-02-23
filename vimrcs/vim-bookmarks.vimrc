@@ -85,15 +85,15 @@ if exists("g:vim_bookmarks_init")
     finish
 endif
 
-nnoremap <unique><silent>Mm :BookmarkToggle<CR>
-nnoremap <unique><silent>Ma :BookmarkAnnotate<CR>
-nnoremap <unique><silent>Ms :BookmarkShowAll<CR>
-nnoremap <unique><silent>Mn :BookmarkNext<CR>
-nnoremap <unique><silent>Mp :BookmarkPrev<CR>
-nnoremap <unique><silent>Mc :BookmarkClear<CR>
-nnoremap <unique><silent>Mx :BookmarkClearAll<CR>
-nnoremap <unique><silent>Mu :BookmarkMoveUp<CR>
-nnoremap <unique><silent>Md :BookmarkMoveDown<CR>
+nnoremap <silent>Mm :BookmarkToggle<CR>
+nnoremap <silent>Ma :BookmarkAnnotate<CR>
+nnoremap <silent>Ms :BookmarkShowAll<CR>
+nnoremap <silent>Mn :BookmarkNext<CR>
+nnoremap <silent>Mp :BookmarkPrev<CR>
+nnoremap <silent>Mc :BookmarkClear<CR>
+nnoremap <silent>Mx :BookmarkClearAll<CR>
+nnoremap <silent>Mu :BookmarkMoveUp<CR>
+nnoremap <silent>Md :BookmarkMoveDown<CR>
 
 let g:vim_bookmarks_init = 1
 

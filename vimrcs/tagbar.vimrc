@@ -33,8 +33,8 @@ endfunction
 
 if !exists("g:tagbar_maps")
     let g:tagbar_maps = 1
-    nnoremap <unique><silent><leader>tb :call <SID>ToggleTagbar()<CR>
-    nnoremap <unique><silent><leader>ta :call <SID>ToggleNerdTreeAndTagbar()<CR>
+    nnoremap <silent><leader>tb :call <SID>ToggleTagbar()<CR>
+    nnoremap <silent><leader>ta :call <SID>ToggleNerdTreeAndTagbar()<CR>
 endif
 " autocmd FileType c,cpp,h,cc,hpp,cxx nested :TagbarOpen
 

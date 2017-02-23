@@ -27,5 +27,5 @@ if exists("g:a_vim_init")
     finish
 endif
 
-nnoremap <unique><silent><leader>as :A<cr>
+nnoremap <silent><leader>as :A<cr>
 let g:a_vim_init = 1

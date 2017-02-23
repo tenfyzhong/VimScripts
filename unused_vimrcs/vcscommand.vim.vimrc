@@ -54,7 +54,7 @@ augroup VCSCommand
 augroup END
 
 function! s:BufferCreate()
-    silent! nnoremap <unique><buffer> q :bwipeout<cr>
+    silent! nnoremap <buffer> q :bwipeout<cr>
     if bufname('%') =~? '.*commitlog.*'
         :startinsert
     endif

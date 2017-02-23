@@ -7,6 +7,6 @@ let g:vimshell_vimshrc_path = '~/.vim/resource/vimshrc'
 
 if !exists("g:vimshell_vim_maps")
     let g:vimshell_vim_maps = 1
-    nnoremap <unique><silent><leader>vt     :VimShellTab<cr>
-    nnoremap <unique><silent><leader>vs     :VimShell<cr>
+    nnoremap <silent><leader>vt     :VimShellTab<cr>
+    nnoremap <silent><leader>vs     :VimShell<cr>
 endif

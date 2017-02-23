@@ -17,4 +17,4 @@ endif
 let g:vim_argwrap_setting = 1
 let g:argwrap_wrap_closing_brace = 0
 
-nnoremap <silent><unique><leader>aw :ArgWrap<cr>
+nnoremap <silent><leader>aw :ArgWrap<cr>

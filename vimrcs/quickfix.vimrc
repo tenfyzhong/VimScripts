@@ -23,9 +23,9 @@ if exists("g:quickfix_init")
     finish
 endif
 
-nnoremap <unique><silent><leader>qk :call feature#quickfixDo('previous')<cr>
-nnoremap <unique><silent><leader>qj :call feature#quickfixDo('next')<cr>
-nnoremap <unique><silent><leader>qc :call feature#quickfixDo('close')<cr>
-nnoremap <unique><silent><leader>qo :call feature#quickfixDo('open')<cr>
+nnoremap <silent><leader>qk :call feature#quickfixDo('previous')<cr>
+nnoremap <silent><leader>qj :call feature#quickfixDo('next')<cr>
+nnoremap <silent><leader>qc :call feature#quickfixDo('close')<cr>
+nnoremap <silent><leader>qo :call feature#quickfixDo('open')<cr>
 
 let g:quickfix_init = 1

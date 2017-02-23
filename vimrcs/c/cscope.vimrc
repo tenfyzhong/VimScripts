@@ -67,32 +67,32 @@ if exists("g:cscope_init")
 endif
 
 let g:cscope_maps = 1
-nnoremap <unique><C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nnoremap <unique><C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
-nnoremap <unique><C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nnoremap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nnoremap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
-nnoremap <unique><C-_>s :scs find s <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-_>g :scs find g <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-_>c :scs find c <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-_>t :scs find t <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-_>e :scs find e <C-R>=expand("<cword>")<CR><CR>
-nnoremap <unique><C-_>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
-nnoremap <unique><C-_>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
-nnoremap <unique><C-_>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-_>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-_>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-_>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-_>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-_>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-_>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+nnoremap <C-_>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
+nnoremap <C-_>d :scs find d <C-R>=expand("<cword>")<CR><CR>
 
-call keymap#Mate("nnoremap <unique><m-\\>s :vert scs find s <C-R>=expand('<cword>')<CR><CR>")
-call keymap#Mate("nnoremap <unique><m-\\>g :vert scs find g <C-R>=expand('<cword>')<CR><CR>")
-call keymap#Mate("nnoremap <unique><m-\\>c :vert scs find c <C-R>=expand('<cword>')<CR><CR>")
-call keymap#Mate("nnoremap <unique><m-\\>t :vert scs find t <C-R>=expand('<cword>')<CR><CR>")
-call keymap#Mate("nnoremap <unique><m-\\>e :vert scs find e <C-R>=expand('<cword>')<CR><CR>")
-call keymap#Mate("nnoremap <unique><m-\\>f :vert scs find f <C-R>=expand('<cfile>')<CR><CR>")
-call keymap#Mate("nnoremap <unique><m-\\>i :vert scs find i <C-R>=expand('<cfile>')<CR><CR>")
-call keymap#Mate("nnoremap <unique><m-\\>d :vert scs find d <C-R>=expand('<cword>')<CR><CR>")
+call keymap#Mate("nnoremap <m-\\>s :vert scs find s <C-R>=expand('<cword>')<CR><CR>")
+call keymap#Mate("nnoremap <m-\\>g :vert scs find g <C-R>=expand('<cword>')<CR><CR>")
+call keymap#Mate("nnoremap <m-\\>c :vert scs find c <C-R>=expand('<cword>')<CR><CR>")
+call keymap#Mate("nnoremap <m-\\>t :vert scs find t <C-R>=expand('<cword>')<CR><CR>")
+call keymap#Mate("nnoremap <m-\\>e :vert scs find e <C-R>=expand('<cword>')<CR><CR>")
+call keymap#Mate("nnoremap <m-\\>f :vert scs find f <C-R>=expand('<cfile>')<CR><CR>")
+call keymap#Mate("nnoremap <m-\\>i :vert scs find i <C-R>=expand('<cfile>')<CR><CR>")
+call keymap#Mate("nnoremap <m-\\>d :vert scs find d <C-R>=expand('<cword>')<CR><CR>")
 
 
 let g:cscope_init = 1

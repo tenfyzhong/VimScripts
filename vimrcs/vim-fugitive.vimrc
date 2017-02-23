@@ -74,11 +74,11 @@ if exists('g:vim_fugitive_init')
     finish
 endif
 
-nnoremap <silent><unique><leader>gw :Gwrite<cr>
-nnoremap <silent><unique><leader>gc :Gcommit<cr>
-nnoremap <silent><unique><leader>gb :Gblame<cr>
-nnoremap <silent><unique><leader>gd :Gvdiff<cr>
-nnoremap <silent><unique><leader>gl :silent Glog!<cr>
-nnoremap <silent><unique><leader>gs :Gstatus<cr>
+nnoremap <silent><leader>gw :Gwrite<cr>
+nnoremap <silent><leader>gc :Gcommit<cr>
+nnoremap <silent><leader>gb :Gblame<cr>
+nnoremap <silent><leader>gd :Gvdiff<cr>
+nnoremap <silent><leader>gl :silent Glog!<cr>
+nnoremap <silent><leader>gs :Gstatus<cr>
 
 let g:vim_fugitive_init = 1

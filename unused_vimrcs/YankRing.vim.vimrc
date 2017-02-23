@@ -35,8 +35,8 @@ let g:yankring_replace_n_pkey = '<leader>yj'
 let g:yankring_replace_n_nkey = '<leader>yk'
 
 if !exists("g:yankring_init")
-    nnoremap <unique><silent><leader>yr :YRShow<cr>
-    nnoremap <unique><silent><leader>ys :YRSearch<cr>
+    nnoremap <silent><leader>yr :YRShow<cr>
+    nnoremap <silent><leader>ys :YRSearch<cr>
 endif
 
 let g:yankring_init = 1
