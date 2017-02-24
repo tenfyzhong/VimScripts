@@ -17,7 +17,7 @@
 "   email: 364755805@qq.com
 " created: 2016-04-16 11:10:03
 "==============================================================
-PluginAdd 'tenfyzhong/vim-session'
+PluginAdd 'xolox/vim-session'
 
 let g:session_default_overwrite = 0
 let g:session_autosave          = 'yes'
