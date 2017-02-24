@@ -61,7 +61,7 @@
 "   email: 364755805@qq.com
 " created: 2016-04-15 15:39:29
 "==============================================================
-PluginAdd 'tenfyzhong/vim-fugitive'
+PluginAdd 'tpope/vim-fugitive'
 
 augroup fugitive_init
     au! 
