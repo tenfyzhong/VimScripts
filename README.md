@@ -179,6 +179,7 @@ o对应motion模式
 | `<c-l>`      | n     | ctrlspace         | tablist中的下一个文件                   |
 | `<c-h>`      | n     | ctrlspace         | tablist中的上一个文件                   |
 | `<leader>nt` | n     | nerdtree          | 触发nerdtree                            |
+| `<leader>nc` | n     | nerdtree          | NERDTreeCWD                             |
 | `<leader>tb` | n     | tagbar or taglist | 触发tagbar or taglist                   |
 | `<leader>ta` | n     | tagbar or taglist | 触发tagbar和nerdtree                    |
 | `<leader>bi` | n     | vundle            | Bundle安装插件                          |

@@ -58,5 +58,6 @@ if exists("g:nerdtree_init")
 endif
 
 nnoremap <silent><leader>nt :NERDTreeToggle<cr>
+nnoremap <silent><leader>nc :NERDTreeCWD<cr>
 
 let g:nerdtree_init = 1
