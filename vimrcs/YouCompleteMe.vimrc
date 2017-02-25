@@ -28,7 +28,7 @@
 "   email: 364755805@qq.com
 " created: 2016-04-16 17:02:00
 "==============================================================
-PluginAdd 'Valloric/YouCompleteMe', {'pinned': 1}
+PluginAdd 'Valloric/YouCompleteMe', {'frozen': 1, 'do': './install.py'  }
 PluginAdd 'rdnetto/YCM-Generator'
 
 let g:ycm_min_num_of_chars_for_completion 			= 1

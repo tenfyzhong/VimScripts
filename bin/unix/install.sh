@@ -7,8 +7,7 @@ PWD=$(pwd)
 cd $UNIX_INSTALL_PATH/../..
 
 SCRIPTS=(\
-	$UNIX_INSTALL_PATH/install_clone_vundle.sh \
-	$UNIX_INSTALL_PATH/install_vimrc.sh \
+	$UNIX_INSTALL_PATH/install_plug.sh \
     $UNIX_INSTALL_PATH/install_load_plugin.sh)
 
 for script in ${SCRIPTS[@]}; do

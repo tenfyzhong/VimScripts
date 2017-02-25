@@ -10,4 +10,4 @@
 "   email: 364755805@qq.com
 " created: 2016-04-16 10:57:31
 "==============================================================
-PluginAdd 'Shougo/vimproc.vim'
+PluginAdd 'Shougo/vimproc.vim', {'do' : 'make'}

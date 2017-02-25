@@ -25,4 +25,4 @@ if ! [ -e $VUNDLE/.git ]; then
     exit 1
 fi
 
-vim -c BundleClean -c BundleUpdate -c qa!
+vim -c BundleUpdate -c qa!

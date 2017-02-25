@@ -21,7 +21,7 @@ PYTHONPATH=C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Lib\lib-tk
 
 ###common
 在.vimrc中将`g:use_chinese_doc`设为1则使用中文文档。
-若不成功，请运行`:BundleInstall`
+若不成功，请运行`:PlugInstall`
 
 
 ##配置
@@ -32,13 +32,6 @@ PYTHONPATH=C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Lib\lib-tk
 let g:type_plugin_list = ["c", "go", "web"]
 ```
 以上的例子会加载vimrcs目录下的c,go,web目录下的插件。
-
-golang支持
-需要安装: godef
-```bash
-go get -v code.google.com/p/rog-go/exp/cmd/godef
-go install -v code.google.com/p/rog-go/exp/cmd/godef
-```
 
 
 ##说明
@@ -182,7 +175,6 @@ o对应motion模式
 | `<leader>nc` | n     | nerdtree          | NERDTreeCWD                             |
 | `<leader>tb` | n     | tagbar or taglist | 触发tagbar or taglist                   |
 | `<leader>ta` | n     | tagbar or taglist | 触发tagbar和nerdtree                    |
-| `<leader>bi` | n     | vundle            | Bundle安装插件                          |
 | `<leader>qk` | n     | quickfix          | 上一条错误警告处                        |
 | `<leader>qj` | n     | quickfix          | 下一条错误警告处                        |
 | `<leader>qc` | n     | quickfix          | 关闭quickfix                            |

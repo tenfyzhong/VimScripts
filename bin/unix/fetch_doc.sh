@@ -49,13 +49,15 @@ files=$(find $dir -name '*.vimrc' -o -name '*.vim')
 
 for f in ${files[@]}; do
     if [ -f $f ]; then
-        sed '/^"=\{10,\}$/,/^"=\{10,\}$/p' $f -n >> $output
+        sed -n '/^"=\{10,\}$/,/^"=\{10,\}$/p' $f >> $output
         echo "" >> $output
     fi
 done
 
-sed -i '/" VIM Version/d' $output
-sed -i '/"  author/d' $output
-sed -i '/"   email/d' $output
-sed -i '/" created/d' $output
+# exit 0
+
+sed -i '' '/" VIM Version/d' $output
+sed -i '' '/"  author/d' $output
+sed -i '' '/"   email/d' $output
+sed -i '' '/" created/d' $output
 

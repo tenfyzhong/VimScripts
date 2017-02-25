@@ -52,25 +52,28 @@ function! loader#LoadVimrcs()
         let g:log_level 	= $VIML_LOG_LEVEL
     endif
 
-    if loader#PluginExist('Vundle.vim')
-        filetype off
-        exec "set rtp+=" . g:bundle_path . "/Vundle.vim"
-        call vundle#begin(g:bundle_path)
+    " if loader#PluginExist('Vundle.vim')
+    " filetype off
+        " exec "set rtp+=" . g:bundle_path . "/Vundle.vim"
+        " call vundle#begin(g:bundle_path)
+        call plug#begin('~/.vim/bundle')
 
         " 先加载vundle，再加载其他插件
-        call loader#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)
+        "call loader#LoadSingleVimrc(g:vimrc_path . 'Vundle.vim.vimrc', 1)
 
         for dir in b:type_plugin_list
             call <SID>LoadDirPlugin(g:vimrc_path . dir)
         endfor
 
-        call vundle#end()
+        
+        " call vundle#end()
+        call plug#end()
         filetype on					" 侦测文件类型	
         filetype plugin on			" 开启文件识别
         filetype indent on			" 针对不同的文件类型采用不同的缩进格式
         filetype plugin indent on	" 启动自动补全
 
-    endif
+        " endif
 endfunction
 " }}} --------------------------------------------------------------------------
 
@@ -97,7 +100,7 @@ function! loader#BundlePlugin(plugin, ...)
         if len(l:plugin_args) != 0
             let l:plugin_args = "," . l:plugin_args
         endif
-        execute "Plugin " . "'" . a:plugin . "'" . l:plugin_args
+        execute "Plug " . "'" . a:plugin . "'" . l:plugin_args
         let l:plugin_name   = split(a:plugin, "/")[-1]
         call loader#PluginExist(l:plugin_name)
     endif
