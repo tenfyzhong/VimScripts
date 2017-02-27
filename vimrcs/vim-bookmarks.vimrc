@@ -33,53 +33,27 @@ PluginAdd 'MattesGroeger/vim-bookmarks'
 let g:bookmark_sign            = ">"
 let g:bookmark_annotation_sign = "$"
 let g:bookmark_no_default_key_mappings = 1
-" let g:bookmark_save_per_working_dir = 1
-let g:bookmark_save_per_project_dir = 0
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_auto_save = 1
 
-augroup bookmark_init
-    au! 
-    autocmd VimLeave * call <SID>SaveOnProjectRoot()
-augroup END
-
-function! s:SaveOnProjectRoot() " {{{
-    if !exists("g:bookmark_save_per_project_dir") || 
-                \g:bookmark_save_per_project_dir == 0
-        return
+" Finds the Git super-project directory.
+function! g:BMWorkDirFileLocation()
+    let filename = 'bookmarks'
+    let location = ''
+    if isdirectory('.git')
+        " Current work dir is git's work tree
+        let location = getcwd().'/.git'
+    else
+        " Look upwards (at parents) for a directory named '.git'
+        let location = finddir('.git', '.;')
     endif
-
-    let l:pwd = getcwd()
-    let l:root = file#GuessProjectRoot(l:pwd)
-    " 如果不存在项目，直接返回
-    if l:root == ''
-        return
+    if len(location) > 0
+        return location.'/'.filename
+    else
+        return getcwd().'/.'.filename
     endif
+endfunction
 
-    " 如果根目录是当前目录，且设置了g:bookmark_save_per_working_dir，直接返回
-    if l:root == l:pwd && 
-                \exists("g:bookmark_save_per_working_dir") && 
-                \g:bookmark_save_per_working_dir
-        return
-    endif
-
-    let l:file = <SID>consBookmarkFile(l:root)
-    call BookmarkSave(l:file, 0)
-endfunction " }}}
-
-function! s:LoadProjectRootBookmark() " {{{
-    let l:pwd = getcwd()
-    let l:root = file#GuessProjectRoot(l:pwd)
-    if l:root == ''
-        return
-    endif
-    let l:file = <SID>consBookmarkFile(l:root)
-    call BookmarkLoad(l:file, 0, 0)
-endfunction " }}}
-
-function! s:consBookmarkFile(path) " {{{
-    return expand(a:path . '/.vim-bookmarks')
-endfunction " }}}
-
-command! -nargs=0 BookmarkProjectLoad call <SID>LoadProjectRootBookmark()
 
 if exists("g:vim_bookmarks_init")
     finish
