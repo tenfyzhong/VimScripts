@@ -19,5 +19,5 @@ let g:formatter_yapf_style = 'pep8'
     " autocmd BufWrite *.py,*.json,*.css,*.xml,*.pl :silent Autoformat
 " augroup END
 
-nnoremap <leader>fm :Autoformat<cr>
+nnoremap <leader>af :Autoformat<cr>
 

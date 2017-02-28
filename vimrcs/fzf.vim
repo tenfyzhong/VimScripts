@@ -45,10 +45,15 @@ endif
 PluginAdd 'junegunn/fzf.vim'
 let g:fzf_command_prefix = 'FZF'
 
-nnoremap <leader>zf :FZFFiles<cr>
-nnoremap <leader>zg :FZFGFiles<cr>
-nnoremap <leader>zb :FZFBuffers<cr>
-nnoremap <leader>zw :FZFWindows<cr>
-nnoremap <leader>zm :FZFMarks<cr>
-nnoremap <leader>z? :FZFMaps<cr>
+nnoremap <leader>ff :FZFFiles<cr>
+nnoremap <leader>fg :FZFGFiles<cr>
+nnoremap <leader>fb :FZFBuffers<cr>
+nnoremap <leader>fw :FZFWindows<cr>
+nnoremap <leader>fm :FZFMarks<cr>
+nnoremap <leader>f: :FZFHistory:<cr>
+nnoremap <leader>fs :FZFSnippets<cr>
+nnoremap <leader>fc :FZFCommands<cr>
 
+nmap <leader><tab> <plug>(fzf-maps-n)
+omap <leader><tab> <plug>(fzf-maps-o)
+xmap <leader><tab> <plug>(fzf-maps-x)
