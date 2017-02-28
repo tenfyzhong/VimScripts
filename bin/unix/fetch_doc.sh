@@ -56,8 +56,8 @@ done
 
 # exit 0
 
-sed -i '' '/" VIM Version/d' $output
-sed -i '' '/"  author/d' $output
-sed -i '' '/"   email/d' $output
-sed -i '' '/" created/d' $output
+gsed -i '/" VIM Version/d' $output
+gsed -i '/"  author/d' $output
+gsed -i '/"   email/d' $output
+gsed -i '/" created/d' $output
 
