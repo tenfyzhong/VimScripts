@@ -3,6 +3,8 @@
 "   brief: 格式化代码
 "
 " command: Autoformat [{filetype}] 格式化当前文件
+"
+"    nmap: <leader>af 进行format
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com

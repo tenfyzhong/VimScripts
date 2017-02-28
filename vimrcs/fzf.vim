@@ -28,6 +28,18 @@
 "      `Maps`            | Normal mode mappings
 "      `Helptags`        | Help tags [1]
 "      `Filetypes`       | File types
+"
+"    nmap:  <leader>ff :FZFFiles
+"           <leader>fg :FZFGFiles
+"           <leader>fb :FZFBuffers
+"           <leader>fw :FZFWindows
+"           <leader>fm :FZFMarks
+"           <leader>f: :FZFHistory:
+"           <leader>fs :FZFSnippets
+"           <leader>fc :FZFCommands
+"           <leader><tab> nmap模式的map
+"    omap:  <leader><tab> omap模式的map
+"    xmap:  <leader><tab> xmap模式的map
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfyzhong@tencent.com
