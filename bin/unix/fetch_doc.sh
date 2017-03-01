@@ -56,8 +56,15 @@ done
 
 # exit 0
 
-gsed -i '/" VIM Version/d' $output
-gsed -i '/"  author/d' $output
-gsed -i '/"   email/d' $output
-gsed -i '/" created/d' $output
+system=$(uname)
+
+SED=sed
+if [ "$system" = 'Darwin' ]; then
+    SED=gsed
+fi
+
+$SED -i '/" VIM Version/d' $output
+$SED -i '/"  author/d' $output
+$SED -i '/"   email/d' $output
+$SED -i '/" created/d' $output
 
