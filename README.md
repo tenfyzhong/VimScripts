@@ -118,7 +118,6 @@ o对应motion模式
 | `<leader>k`     | n     | global            | 移到上边窗口                            |
 | `<leader>l`     | n     | global            | 移到右边窗口                            |
 | `<leader>w`     | n     | global            | 保存所有文件                            |
-| `<leader>q`     | n     | global            | 关闭当前文件                            |
 | `j`             | n     | global            | gj                                      |
 | `gj`            | n     | global            | j                                       |
 | `k`             | n     | global            | gk                                      |
