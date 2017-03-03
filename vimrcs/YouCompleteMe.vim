@@ -22,7 +22,6 @@
 "
 "          YcmGenerateConfig 生成.ycm_extra_conf.py的配置
 "
-"    nmap: <leader>jd YcmCompleter GoToImpreciset 
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -44,5 +43,4 @@ let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>']
 let g:ycm_server_log_level                          = 'error'
 let g:ycm_python_binary_path                        = 'python'
 
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
 

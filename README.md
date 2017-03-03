@@ -217,7 +217,6 @@ o对应motion模式
 | `\ap`           | in    | auto-pairs        | 触发补齐                                |
 | `\ae`           | in    | auto-pairs        | 将后面的单词放到当前括号里              |
 | `\an`           | in    | auto-pairs        | 跳到一个对齐的括号                      |
-| `<leader>jd`    | n     | YouCompleteMe     | 跳到当前光标单词的定义                  |
 | `<leader>dd`    | n     | YouCompleteMe     | 查看当前的错误                          |
 | `<leader>ds`    | n     | dash              | 在dash中搜索当前单词                    |
 | `<leader>ff`    | n     | fzf               | FZFFiles                                |
