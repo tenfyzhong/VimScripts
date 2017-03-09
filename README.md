@@ -140,7 +140,6 @@ o对应motion模式
 | `<`             | v     | global            | `<gv`                                   |
 | `>`             | v     | global            | `>gv`                                   |
 | `af`            | o     | global            | 整个文件的motion动作                    |
-| `"`             | n     | global            | `'`                                     |
 | `<c-j>`         | n     | global            | gt                                      |
 | `<c-k>`         | n     | global            | gT                                      |
 | `<leader>as`    | n     | a.vim             | 在源文件和头文件中切换                  |
