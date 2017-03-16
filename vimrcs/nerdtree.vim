@@ -53,6 +53,10 @@ if b:NERDTreeBookmarksFile_tmp != ''
     let NERDTreeBookmarksFile       = b:NERDTreeBookmarksFile_tmp . b:bookmarks_filename
 endif
 
+augroup nerdtree_autocmd_init
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup END
+
 if exists("g:nerdtree_init")
     finish
 endif
