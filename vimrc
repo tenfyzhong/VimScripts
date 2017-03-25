@@ -164,6 +164,7 @@ nnoremap <silent>dp         :diffput<cr>:diffupdate<cr>
 nnoremap <silent><leader>nn :call feature#PollNumber()<cr>
 vnoremap < <gv
 vnoremap > >gv
+nnoremap <leader><Space> zA
 
 call keymap#Mate("nnoremap <m-,> ;")
 
