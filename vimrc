@@ -26,7 +26,11 @@ let g:bundle_path   = fnamemodify(g:VIMHOME . "bundle/", ':p')
 
 " base setting {{{
 lang messages en_US.UTF-8
-source $VIMRUNTIME/vimrc_example.vim
+if !exists('g:has_load_vimrc_example_vim')
+    let g:has_load_vimrc_example_vim = 1
+    source $VIMRUNTIME/vimrc_example.vim
+endif
+
 set nocompatible " 关闭vi兼容模式
 set cindent      " C语言缩进方式
 set cinoptions+=:0 " case的括号不缩进
@@ -69,9 +73,6 @@ set incsearch    " 随着键入即时搜索
 set wildmenu     " 增加命令行自动补全操作
 set history=500
 
-highlight CursorLine term=underline cterm=NONE ctermbg=DarkGrey guibg=Grey90 
-highlight ColorColumn ctermbg=DarkGrey guibg=Grey90
-
 " 显示相关
 "set cursorcolumn        " 高亮当前列
 set cursorline            " 高亮当前行
@@ -103,15 +104,20 @@ set viminfo+=!
 
 set sessionoptions-=buffers
 
+if !exists('g:once_init_syntax')
+    let g:once_init_syntax = 1
+    " 开启语法高亮
+    syntax on
+    syntax enable
 
-" 开启语法高亮
-syntax on
-syntax enable
-
-set background=dark
-colorscheme solarized
-highlight Folded term=bold cterm=bold ctermfg=12 ctermbg=0 guifg=Cyan guibg=DarkGrey
+    set background=dark
+    highlight CursorLine term=underline cterm=NONE ctermbg=DarkGrey guibg=Grey90 
+    highlight ColorColumn ctermbg=DarkGrey guibg=Grey90
+    colorscheme solarized
+    highlight Folded term=bold cterm=bold ctermfg=12 ctermbg=0 guifg=Cyan guibg=DarkGrey
+endif
 " }}}
+
 
 " autocmd {{{
 augroup initial
