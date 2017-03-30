@@ -165,6 +165,8 @@ nnoremap <silent><leader>nn :call feature#PollNumber()<cr>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap <leader><Space> zA
+nnoremap <leader>tn         <Esc>:tabnew<cr>
+nnoremap <leader>tc         <Esc>:tabclose<cr>
 
 call keymap#Mate("nnoremap <m-,> ;")
 
