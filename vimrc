@@ -167,6 +167,8 @@ vnoremap > >gv
 nnoremap <leader><Space> zA
 nnoremap <leader>tn         <Esc>:tabnew<cr>
 nnoremap <leader>tc         <Esc>:tabclose<cr>
+nnoremap <leader>cf         <Esc>:let @"=expand('%')<cr>
+nnoremap <leader>cp         <Esc>:let @"=expand('%:p')<cr>
 
 call keymap#Mate("nnoremap <m-,> ;")
 
