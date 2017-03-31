@@ -57,6 +57,7 @@ PluginAdd 'a.vim'
 加载插件之前，去加载这个文件。可以在这个文件里做一些特殊的配置。比如可以调用
 `g:type_plugin_list`来加载特定的插件。
 
+对于大于100K的文件，如果foldmethod为syntax，会将它设成indent，以加快打开速度  
 
 ## 建议
 在crontab中加入清除备份文件和undo文件的脚本
