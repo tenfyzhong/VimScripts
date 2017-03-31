@@ -15,10 +15,8 @@ augroup END
 
 function! s:LargeFile()
     let f = getfsize(expand('<afile>'))
-    if (f > g:LargeFile || f == -2) && &buftype !=? 'help'
-        set eventignore+=FileType
-        echom 'The file is larger than ' . (g:LargeFile / 1024) . ' KB, so some options are changed.'
-    else
-        set eventignore-=FileType
+    if (f > g:LargeFile || f == -2) && &foldmethod ==? 'syntax'
+        setlocal foldmethod=indent
+        echom 'The file is larger than ' . (g:LargeFile / 1024) . ' KB, so set foldmethod=indent.'
     endif
 endfunction
