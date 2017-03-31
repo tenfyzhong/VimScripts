@@ -184,9 +184,9 @@ o对应motion模式
 | `<leader>qj`      | n     | quickfix          | 下一条错误警告处                        |
 | `<leader>qc`      | n     | quickfix          | 关闭quickfix                            |
 | `<leader>qo`      | n     | quickfix          | 打开quckfix                             |
-| `<leader>dx`      | ni    | Doxygen           | 生成函数和类注释                        |
-| `<leader>da`      | ni    | Doxygen           | 生成文件注释                            |
-| `<leader>dl`      | ni    | Doxygen           | 生成证书注释                            |
+| `<leader>dx`      | n     | Doxygen           | 生成函数和类注释                        |
+| `<leader>da`      | n     | Doxygen           | 生成文件注释                            |
+| `<leader>dl`      | n     | Doxygen           | 生成证书注释                            |
 | `<leader>gu`      | n     | Gundo             | GundoToogle                             |
 | `gt`              | nx    | vim-easy-align    | 开启对齐                                |
 | `<leader>M`       | n     | Mark              | 清除所有的mark                          |
