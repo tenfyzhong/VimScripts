@@ -1,8 +1,8 @@
-#VimScripts
+# VimScripts
 
 
-##安装说明
-###类unix
+## 安装说明
+### 类unix
 将克隆下来的VimScripts重命名为.vim，然后运行`bin/unix/install.sh`:
 ```bash
 mv ~/.vim ~/.vim.bak # 备份之前自己的vim配置，若不存在则不用此操作
@@ -10,7 +10,7 @@ mv VimScripts ~/.vim
 sh ~/.vim/install.sh
 ```
 
-###windows
+### windows
 安装msysgit
 将克隆下来的VimScripts重命令为vimfiles，然后运行`bin\windows\install.bat`
 如果windows系统安装了python，vim会支持python。但是默认会从C:\Python27目录去
@@ -19,12 +19,12 @@ sh ~/.vim/install.sh
 PYTHONPATH=C:\Python27\Lib;C:\Python27\DLLs;C:\Python27\Lib\lib-tk
 ```
 
-###common
+### common
 在.vimrc中将`g:use_chinese_doc`设为1则使用中文文档。
 若不成功，请运行`:PlugInstall`
 
 
-##配置
+## 配置
 通过配置`g:type_plugin_list`来加载vimrcs下子目录的插件，vimrcs下的插件默认全部
 加载。`g:type_plugin_list`是一个列表。如果要加载所有的插件，只要包含`'**'`项即
 可。配置例子：
@@ -34,7 +34,7 @@ let g:type_plugin_list = ["c", "go", "web"]
 以上的例子会加载vimrcs目录下的c,go,web目录下的插件。
 
 
-##说明
+## 说明
 对于要使用cscope的项目，在项目根路径生成cscope的数据库，用以下命令：
 ```bash
 ~/.vim/bin/unix/cscope.sh
@@ -58,7 +58,7 @@ PluginAdd 'a.vim'
 `g:type_plugin_list`来加载特定的插件。
 
 
-##建议
+## 建议
 在crontab中加入清除备份文件和undo文件的脚本
 ```crontab
 0 3 * * * find /home/tenfyzhong/.vim/.backupfile -mtime +10 -name "*~" -delete
@@ -66,11 +66,11 @@ PluginAdd 'a.vim'
 ```
 
 
-##注意
+## 注意
 - vim版本使用最新的版本，否则有些特性用不了
 - YouCompleteMe的安装说明请参考其文档。
 
-##自编译vim建议
+## 自编译vim建议
 加入以下的属性
 --with-features=huge --enable-rubyinterp --enable-pythoninterp 
 --enable-python3interp --enable-luainterp --enable-perlinterp 
@@ -86,7 +86,7 @@ PluginAdd 'a.vim'
 - --enable-gui=gtk2：gtk2支持,也可以使用gnome，表示生成gvim
 
 
-##依赖程序
+## 依赖程序
 - git:用于版本管理
 - ctags:tags，如tagbag等要用到
 - clang:youcompleteme需要用到
@@ -96,13 +96,13 @@ PluginAdd 'a.vim'
 - xterm:运行lisp解析器服务器
 
 
-##命令
+## 命令
 | command           | args   | describe                      |
 |:------------------|:-------|:------------------------------|
 | `PluginAdd`       | 插件名 | 安装插件                      |
 
 
-##键映射
+## 键映射
 以下model, n对应normal, i对应insert, v对应visual, c对应console, x对应选择模式
 o对应motion模式
 
