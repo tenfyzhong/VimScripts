@@ -6,9 +6,11 @@ let b:type_plugin_list = [""]
 
 let s:has_source_vimrc = {}
 
-if exists('g:type_plugin_list')
-    let b:type_plugin_list = b:type_plugin_list + g:type_plugin_list
+if !exists('g:type_plugin_list')
+    let g:type_plugin_list = ['**']
 endif
+
+let b:type_plugin_list += g:type_plugin_list
 
 " }}} --------------------------------------------------------------------------
 
