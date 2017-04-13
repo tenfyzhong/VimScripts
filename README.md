@@ -238,4 +238,13 @@ o对应motion模式
 | `<leader>af`      | n     | autoformat        | 进行autoformat                          |
 | `<leader>p`       | n     | yankstack         | 选择更旧的进行paste                     |
 | `<leader>P`       | n     | yankstack         | 选择更新的进行paste                     |
+| `<leader>rs`      | n     | vim-go            | go-implements                           |
+| `<leader>ri`      | n     | vim-go            | go-info                                 |
+| `<leader>re`      | n     | vim-go            | go-rename                               |
+| `<leader>rr`      | n     | vim-go            | go-run                                  |
+| `<leader>rb`      | n     | vim-go            | go-build                                |
+| `<leader>rt`      | n     | vim-go            | go-test                                 |
+| `<leader>rf`      | n     | vim-go            | go-test-func                            |
+| `<leader>rd`      | n     | vim-go            | go-doc                                  |
+| `<leader>rc`      | n     | vim-go            | go-coverage                             |
 

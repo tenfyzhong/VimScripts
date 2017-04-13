@@ -38,6 +38,16 @@
 "          GoFreevars 枚举free variables
 "          GoChannelPeers 显示可能的发送接收channel
 "          GoReferers 查询引用
+"
+"    nmap: <leader>rs go-implements
+"          <leader>ri go-info
+"          <leader>re go-rename
+"          <leader>rr go-run
+"          <leader>rb go-build
+"          <leader>rt go-test
+"          <leader>rf go-test-func
+"          <leader>rd go-doc
+"          <leader>rc go-coverage
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -54,3 +64,16 @@ let g:go_fmt_fail_silently = 1
 let g:go_get_update = 0
 
 let g:go_fmt_command = "goimports"
+
+augroup go_filetype_local
+    au!
+    au FileType go nmap <leader>rs <Plug>(go-implements)
+    au FileType go nmap <Leader>ri <Plug>(go-info)
+    au FileType go nmap <Leader>re <Plug>(go-rename)
+    au FileType go nmap <leader>rr <Plug>(go-run)
+    au FileType go nmap <leader>rb <Plug>(go-build)
+    au FileType go nmap <leader>rt <Plug>(go-test)
+    au FileType go nmap <leader>rf <Plug>(go-test-func)
+    au FileType go nmap <leader>rd <Plug>(go-doc)
+    au FileType go nmap <leader>rc <Plug>(go-coverage)
+augroup END

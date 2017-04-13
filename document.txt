@@ -227,6 +227,16 @@
 "          GoFreevars 枚举free variables
 "          GoChannelPeers 显示可能的发送接收channel
 "          GoReferers 查询引用
+"
+"    nmap: <leader>rs go-implements
+"          <leader>ri go-info
+"          <leader>re go-rename
+"          <leader>rr go-run
+"          <leader>rb go-build
+"          <leader>rt go-test
+"          <leader>rf go-test-func
+"          <leader>rd go-doc
+"          <leader>rc go-coverage
 "==============================================================
 
 "==============================================================
