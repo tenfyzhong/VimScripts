@@ -146,7 +146,6 @@ endif
 " global mapping {{{
 nnoremap <c-k>              gT
 nnoremap <c-j>              gt
-nnoremap <F12>              <C-w>w
 nnoremap <leader>h          <c-w>h
 nnoremap <leader>j          <c-w>j
 nnoremap <leader>k          <c-w>k
