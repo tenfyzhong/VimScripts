@@ -247,4 +247,23 @@ o对应motion模式
 | `<leader>rf`      | n     | vim-go            | go-test-func                            |
 | `<leader>rd`      | n     | vim-go            | go-doc                                  |
 | `<leader>rc`      | n     | vim-go            | go-coverage                             |
+| `<leader>rr`      | n     | pymode            | :PymodeRun                              |
+| `<leader>rb`      | n     | pymode            | 设置断点                                |
+| `<leader>ra`      | n     | pymode            | autoimport                              |
+| `<leader>rg`      | n     | pymode            | 跳到定义                                |
+| `<leader>rd`      | n     | pymode            | show document                           |
+| `<leader>rf`      | n     | pymode            | find it                                 |
+| `<leader>ro`      | n     | pymode            | organize import                         |
+| `<leader>re`      | n     | pymode            | 重命名                                  |
+| `<leader>r1m`     | n     | pymode            | 重命名模块                              |
+| `<leader>r1p`     | n     | pymode            | module to package                       |
+| `<leader>rm`      | n     | pymode            | 提取方法                                |
+| `<leader>rl`      | n     | pymode            | 提取变量                                |
+| `<leader>ri`      | n     | pymode            | rope inline                             |
+| `<leader>rv`      | n     | pymode            | move method/fields                      |
+| `<leader>rnf`     | n     | pymode            | generate function                       |
+| `<leader>rnc`     | n     | pymode            | generate class                          |
+| `<leader>rnp`     | n     | pymode            | generate package                        |
+| `<leader>rs`      | n     | pymode            | change signature                        |
+| `<leader>ru`      | n     | pymode            | use function                            |
 

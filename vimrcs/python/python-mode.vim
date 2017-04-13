@@ -33,20 +33,25 @@
 "     PymodeRopeUndoe 撤消重构
 "
 "    nmap:
-"       <leader>r :PymodeRun
-"       <leader>b 设置断点
-"       <c-c>d show document
-"       <c-c>g 跳到定义
-"       <c-c>rr 重命名
-"       <c-c>r1r 重命名模块
-"       <c-c>ro import组织
-"       <c-c>ra import
-"       <c-c>r1p PymodeRopeModuleToPackage
-"       <c-c>rm 提取方法
-"       <c-c>rl 提取变量
-"       <c-c>ru use function
-"       <c-c>rv move method/fields
-"       <c-c>rs 修改函数签名
+"     <leader>rr :PymodeRun
+"     <leader>rb 设置断点
+"     <leader>ra autoimport
+"     <leader>rg 跳到定义
+"     <leader>rd show document
+"     <leader>rf find it
+"     <leader>ro organize import
+"     <leader>re 重命名
+"     <leader>r1m 重命名模块
+"     <leader>r1p module to package
+"     <leader>rm 提取方法
+"     <leader>rl 提取变量
+"     <leader>ri rope inline
+"     <leader>rv move method/fields
+"     <leader>rnf generate function
+"     <leader>rnc generate class
+"     <leader>rnp generate package
+"     <leader>rs change signature
+"     <leader>ru use function
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
@@ -68,9 +73,7 @@ let g:pymode_indent = 1
 let g:pymode_motion = 1
 let g:pymode_doc = 1
 let g:pymode_run = 1
-let g:pymode_run_bind = '<leader>r'
 let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
 let g:pymode_lint_on_write = 1
 let g:pymode_lint_on_fly = 0
 let g:pymode_lint_message = 1
@@ -78,7 +81,27 @@ let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
 let g:pymode_trim_whitespaces = 1
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_regenerate_on_write = 0
+
 let g:pymode_rope_goto_definition_bind = "<C-]>"
+let g:pymode_run_bind = '<leader>rr'
+let g:pymode_breakpoint_bind = '<leader>rb'
+let g:pymode_rope_autoimport_bind = '<leader>ra'
+let g:pymode_rope_goto_definition_bind = '<leader>rg'
+let g:pymode_rope_show_doc_bind = '<leader>rd'
+let g:pymode_rope_find_it_bind = '<leader>rf'
+let g:pymode_rope_organize_imports_bind = '<leader>ro'
+let g:pymode_rope_rename_bind = '<leader>re'
+let g:pymode_rope_rename_module_bind = '<leader>r1m'
+let g:pymode_rope_module_to_package_bind = '<leader>r1p'
+let g:pymode_rope_extract_method_bind = '<leader>rm'
+let g:pymode_rope_extract_variable_bind = '<leader>rl'
+let g:pymode_rope_inline_bind = '<leader>ri'
+let g:pymode_rope_move_bind = '<leader>rv'
+let g:pymode_rope_generate_function_bind = '<leader>rnf'
+let g:pymode_rope_generate_class_bind = '<leader>rnc'
+let g:pymode_rope_generate_package_bind = '<leader>rnp'
+let g:pymode_rope_change_signature_bind = '<leader>rs'
+let g:pymode_rope_use_function_bind = '<leader>ru'
 
 let g:pymode_virtualenv = 1
 let g:pymode_virtualenv_path = $VIRTUAL_ENV

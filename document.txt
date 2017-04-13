@@ -401,20 +401,25 @@
 "     PymodeRopeUndoe 撤消重构
 "
 "    nmap:
-"       <leader>r :PymodeRun
-"       <leader>b 设置断点
-"       <c-c>d show document
-"       <c-c>g 跳到定义
-"       <c-c>rr 重命名
-"       <c-c>r1r 重命名模块
-"       <c-c>ro import组织
-"       <c-c>ra import
-"       <c-c>r1p PymodeRopeModuleToPackage
-"       <c-c>rm 提取方法
-"       <c-c>rl 提取变量
-"       <c-c>ru use function
-"       <c-c>rv move method/fields
-"       <c-c>rs 修改函数签名
+"     <leader>rr :PymodeRun
+"     <leader>rb 设置断点
+"     <leader>ra autoimport
+"     <leader>rg 跳到定义
+"     <leader>rd show document
+"     <leader>rf find it
+"     <leader>ro organize import
+"     <leader>re 重命名
+"     <leader>r1m 重命名模块
+"     <leader>r1p module to package
+"     <leader>rm 提取方法
+"     <leader>rl 提取变量
+"     <leader>ri rope inline
+"     <leader>rv move method/fields
+"     <leader>rnf generate function
+"     <leader>rnc generate class
+"     <leader>rnp generate package
+"     <leader>rs change signature
+"     <leader>ru use function
 "==============================================================
 
 "==============================================================
