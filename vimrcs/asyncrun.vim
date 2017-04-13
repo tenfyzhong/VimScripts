@@ -12,6 +12,6 @@
 PluginAdd 'skywind3000/asyncrun.vim'
 
 augroup asyncrun_user_init
-    au!
+    autocmd!
     autocmd User AsyncRunStop call asyncrun#quickfix_toggle(8)
 augroup END

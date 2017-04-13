@@ -9,6 +9,6 @@
 PluginAdd 'vim-scripts/octave.vim--'
 
 augroup octave_init
-    au!
+    autocmd!
     autocmd BufRead,BufNewFile *.m,*.oct setfiletype octave
 augroup END

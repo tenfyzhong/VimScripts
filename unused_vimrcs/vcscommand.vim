@@ -49,7 +49,7 @@
 PluginAdd 'vcscommand.vim'
 
 augroup VCSCommand
-    au!
+    autocmd!
     au User VCSBufferCreated call <SID>BufferCreate()
 augroup END
 

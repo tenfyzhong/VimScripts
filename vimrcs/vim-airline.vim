@@ -58,7 +58,7 @@ function! AfterAirlineInitSetting()
 endfunction
 
 augroup AirlineSetting
-    au!
+    autocmd!
     autocmd User AirlineAfterInit call AfterAirlineInitSetting()
 augroup END
 

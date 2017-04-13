@@ -66,7 +66,7 @@ let g:go_get_update = 0
 let g:go_fmt_command = "goimports"
 
 augroup go_filetype_local
-    au!
+    autocmd!
     au FileType go nmap <leader>rs <Plug>(go-implements)
     au FileType go nmap <Leader>ri <Plug>(go-info)
     au FileType go nmap <Leader>re <Plug>(go-rename)

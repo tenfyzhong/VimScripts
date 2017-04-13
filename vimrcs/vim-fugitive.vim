@@ -64,7 +64,7 @@
 PluginAdd 'tpope/vim-fugitive'
 
 augroup fugitive_init
-    au! 
+    autocmd! 
     autocmd FileType gitcommit cnoremap <buffer>x silent x
     autocmd FileType gitcommit cnoremap <buffer>q silent q
     autocmd QuickFixCmdPost *grep* cwindow

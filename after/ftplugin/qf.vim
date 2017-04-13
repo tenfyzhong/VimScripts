@@ -1,5 +1,5 @@
 augroup quickfix_after_plugin
-    au!
+    autocmd!
     autocmd BufEnter <buffer> if winnr('$') < 2 | q | endif
     " open entry in a new horizontal window
     autocmd FileType qf nnoremap <buffer> s <C-w><CR>

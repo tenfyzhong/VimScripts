@@ -11,7 +11,7 @@ PluginAdd 'tweekmonster/braceless.vim'
 highlight BracelessIndent ctermfg=NONE ctermbg=Black guibg=Grey90 
 
 augroup BRACELESS_SETTING
-    au!
+    autocmd!
     autocmd FileType python,yaml,coffee BracelessEnable +indent +fold +highlight
 augroup end
 

@@ -121,7 +121,7 @@ endif
 
 " autocmd {{{
 augroup initial
-    au!
+    autocmd!
     autocmd BufWritePost *vimrc,*.vim source % 
     autocmd InsertLeave * set nopaste
     autocmd InsertEnter * set number norelativenumber 

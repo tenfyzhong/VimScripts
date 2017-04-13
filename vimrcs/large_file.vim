@@ -10,6 +10,7 @@
 " file is large from 100K
 let g:LargeFile = 1024 * 100
 augroup LargeFile 
+    autocmd!
     autocmd BufReadPre * call <SID>LargeFile()
 augroup END
 

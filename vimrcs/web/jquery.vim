@@ -9,6 +9,6 @@
 PluginAdd 'nono/jquery.vim'
 
 augroup JQUERY
-    au!
+    autocmd!
     au BufRead,BufNewFile jquery.js,jquery.*.js set ft=javascript syntax=jquery
 augroup END
