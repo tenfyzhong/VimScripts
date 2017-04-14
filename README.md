@@ -124,7 +124,6 @@ o对应motion模式
 | `gk`              | n     | global            | k                                       |
 | `;`               | nx    | global            | :                                       |
 | `<m-,>`           | n     | global            | ;                                       |
-| `<leader>p`       | n     | global            | paste toggle                            |
 | `[1`              | n     | global            | diff时取窗口1的内容                     |
 | `[2`              | n     | global            | diff时取窗口2的内容                     |
 | `[3`              | n     | global            | diff时取窗口3的内容                     |

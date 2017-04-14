@@ -94,8 +94,6 @@ set relativenumber
 exec "set backupdir=" . g:VIMHOME . ".backupfile"
 exec "set undodir=" . g:VIMHOME . ".undofile"
 
-set pastetoggle=<leader>p
-
 " set splitbelow
 set splitright
 set diffopt=filler,vertical
