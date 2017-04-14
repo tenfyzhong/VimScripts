@@ -165,13 +165,13 @@ nnoremap <leader>w          :wa<CR>
 nnoremap <silent>do         :diffget<cr>:diffupdate<cr>
 nnoremap <silent>dp         :diffput<cr>:diffupdate<cr>
 nnoremap <silent><leader>nn :call feature#PollNumber()<cr>
-vnoremap < <gv
-vnoremap > >gv
-nnoremap <leader><Space> zA
-nnoremap <silent><leader>tn         <Esc>:tabnew<cr>
-nnoremap <silent><leader>tc         <Esc>:tabclose<cr>
-nnoremap <silent><leader>cf         <Esc>:let @"=expand('%')<cr>
-nnoremap <silent><leader>cp         <Esc>:let @"=expand('%:p')<cr>
+vnoremap <                  <gv
+vnoremap >                  >gv
+nnoremap <leader><Space>    zA
+nnoremap <silent><leader>tn <Esc>:tabnew<cr>
+nnoremap <silent><leader>tc <Esc>:tabclose<cr>
+nnoremap <silent><leader>cf <Esc>:let @"=expand('%')<cr>
+nnoremap <silent><leader>cp <Esc>:let @"=expand('%:p')<cr>
 
 call keymap#Mate("nnoremap <m-,> ;")
 
