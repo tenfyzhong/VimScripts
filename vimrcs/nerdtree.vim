@@ -24,7 +24,7 @@
 "   email: 364755805@qq.com
 " created: 2016-04-14 19:23:56
 "==============================================================
-PluginAdd 'scrooloose/nerdtree'
+PluginAdd 'scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeToggle']}
 
 " The NERD tree 以树形结构浏览文件夹中的文件
 
