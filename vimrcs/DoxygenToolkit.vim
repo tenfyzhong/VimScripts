@@ -19,7 +19,7 @@ PluginAdd 'vim-scripts/DoxygenToolkit.vim'
 let g:load_doxygen_syntax 					= 1
 let g:doxygen_enhanced_color	 			= 1
 let g:DoxygenToolkit_briefTag_funcName 		= "yes"
-let g:DoxygenToolkit_authorName 			= substitute(system("whoami"), "\s*", "", "g")
+" let g:DoxygenToolkit_authorName 			= substitute(system("whoami"), "\s*", "", "g")
 
 if !exists("g:DoxygenToolkit_vim_maps")
     let g:DoxygenToolkit_vim_maps = 1
