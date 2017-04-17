@@ -35,7 +35,7 @@ let NERDTreeIgnore 					= ['\.o$', '\.swp$', '\.bak$', '\~$', '\.d$',
         \'cscope.*out$', '\.pyc$'] 
 let NERDTreeShowHidden 				= 0 "	不显示隐藏文件
 " let NERDTreeSortOrder 				= ['\/$', '\.[ch]p\{-,2}$', '*']	" 排序
-let NERDTreeCaseSensitiveSort 		= 0	" 不分大小写排序
+let NERDTreeCaseSensitiveSort 		= 1	" 不分大小写排序
 let NERDTreeWinSize 				= 30
 let NERDTreeShowBookmarks 			= 1
 let NERDTreeQuitOnOpen 				= 0	" 打开文件后，关闭NERDTree窗口
