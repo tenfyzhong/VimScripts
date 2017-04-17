@@ -27,6 +27,5 @@
 " created: 2016-04-13 13:37:23
 "==============================================================
 PluginAdd 'tenfyzhong/ag.vim'
-" PluginAdd 'Chun-Yang/vim-action-ag'
 
 let g:ag_highlight = 1
