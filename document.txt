@@ -263,7 +263,6 @@
 "   brief: 
 "==============================================================
 
-
 "==============================================================
 "    file: vim-json.vimrc
 "   brief: 高亮json
@@ -634,35 +633,6 @@
 "==============================================================
 
 "==============================================================
-"    file: vim-ctrlspace.vimrc
-"   brief: 管理文件
-"
-" command: CtrlSpace [keys] 显示ctrlspace
-"          CtrlSpaceGoUp 跳到上一个buffer
-"          CtrlSpaceGoDown 跳到下一个buffer
-"          CtrlSpaceTabLabel 修改tab名
-"          CtrlSpaceSaveWorkspace [workspace] 保存workspace
-"          CtrlSpaceNewWorkspace 新建workspace
-"          CtrlSpaceLoadWorkspace[!] [workspace] 加载workspace
-"          CtrlSpaceAddProjectRoot [directory] 添加一个工程目录
-"          CtrlSpaceRemoveProjectRoot [directory] 删除一个工程目录
-"
-" ctrlspace下的快捷键
-" | Key | Action                                                |
-" | --- | ----------------------------------------------------- |
-" | `h`   | Toggle Buffer List (aka `H`ome List)                    |
-" | `H`   | Jump to Buffer List (aka `H`ome List) with Search Mode  |
-" | `o`   | Toggle File List (aka `O`pen List)                      |
-" | `O`   | Jump to File List (aka `O`pen List) with Search Mode    |
-" | `l`   | Toggle Tab List (aka `L`ists List)                      |
-" | `L`   | Jump to Tab List (aka `L`ists List) with Search Mode    |
-" | `w`   | Toggle `W`orkspace List                                 |
-" | `W`   | Jump to `W`orkspace List with Search Mode               |
-" | `b`   | Toggle `B`ookmark List                                  |
-" | `B`   | Jump to `B`ookmark List with Search Mode                |
-"==============================================================
-
-"==============================================================
 "    file: vim-easy-align.vimrc
 "   brief: 对齐插件
 "   预定制的key: =:.|&#,
@@ -913,6 +883,22 @@
 "==============================================================
 "    file: vim-repeat.vimrc
 "   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-session.vimrc
+"   brief: 保存加载session
+"
+" command: SaveSession[!] 保存session,!会直接覆盖同名的session而不提示
+"          OpenSession[!] 加载session,!会忽略已经加载的提示
+"          RestartVim 保存当前的session,重新打开vim和加载session
+"          CloseSession[!] 关闭所有的窗口和buffer,然后打开一个空的buffer,!会忽略所有的未保存修改而不提示
+"          DeleteSession[!] 删除session,!会忽略删除当前正打开的session的告警
+"          ViewSession[!] 查看session的脚本
+"          OpenTabSession 类似于OpenSession，但是只请求当前的tab页
+"          SaveTabSession 类似于SaveSession，但是只请求当前的tab页
+"          AppendTabSession 打开一个新的tab页，加载给定的scoped session
+"          CloseTabSession 类似于CloseSession，但是只请求当前的tab页
 "==============================================================
 
 "==============================================================
