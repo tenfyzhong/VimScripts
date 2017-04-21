@@ -162,8 +162,7 @@ nnoremap <silent><leader>tn <Esc>:tabnew<cr>
 nnoremap <silent><leader>tc <Esc>:tabclose<cr>
 nnoremap <silent><leader>cf <Esc>:let @"=expand('%')<cr>
 nnoremap <silent><leader>cp <Esc>:let @"=expand('%:p')<cr>
-
-call keymap#Mate("nnoremap <m-,> ;")
+nnoremap <silent><m-,>      ;
 
 if &diff
     nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR> 
