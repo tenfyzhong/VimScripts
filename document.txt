@@ -1031,6 +1031,16 @@
 "==============================================================
 
 "==============================================================
+"    file: vim-tmux-navigator.vim
+"   brief: 使切窗口与tmux一致
+"
+"    nmap: <c-h> 跳到左边窗口
+"          <c-j> 跳到下边窗口
+"          <c-k> 跳到上边窗口
+"          <c-l> 跳到右边窗口
+"==============================================================
+
+"==============================================================
 "    file: vim-windowswap.vimrc
 "   brief: 交换两个窗口
 " 
@@ -1061,6 +1071,25 @@
 " command: VimProcBang {path} 执行path命令然后echo结果,这是同步的
 "          VimProcRead {path} 执行path命令然后将结果粘贴到当前的buffer
 "          VimProcInstall {args} build
+"==============================================================
+
+"==============================================================
+"    file: vimunx.vim
+"   brief: 与tmux交互的插件
+"
+" command: VimuxPromptCommand 提示输入命令运行
+"          VimuxRunLastCommand 运行上一次的命令
+"          VimuxInspectRunner 进入运行窗口并进入选择模式
+"          VimuxCloseRunner 关闭运行窗口
+"          VimuxInterruptRunner 给运行窗口发送中断信号
+"          VimuxZoomRunner 将运行窗口全屏，在tmux下使用<prefix>z返回
+"
+"    nmap: <leader>vp :VimuxPromptCommand
+"          <leader>vl :VimuxRunLastCommand
+"          <leader>vi :VimuxInspectRunner
+"          <leader>vq :VimuxCloseRunner
+"          <leader>vc :VimuxInterruptRunner
+"          <leader>vz :VimuxZoomRunner
 "==============================================================
 
 

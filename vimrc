@@ -142,16 +142,6 @@ endif
 " }}} 
 
 " global mapping {{{
-nnoremap <c-k>              gT
-nnoremap <c-j>              gt
-nnoremap <leader>h          <c-w>h
-nnoremap <leader>j          <c-w>j
-nnoremap <leader>k          <c-w>k
-nnoremap <leader>l          <c-w>l
-nnoremap <c-left>           <c-w>h
-nnoremap <c-down>           <c-w>j
-nnoremap <c-up>             <c-w>k
-nnoremap <c-right>          <c-w>l
 nnoremap j                  gj
 nnoremap gj                 j
 nnoremap k                  gk
