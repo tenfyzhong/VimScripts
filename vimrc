@@ -212,7 +212,5 @@ endif
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
 call loader#LoadVimrcs()
-
-let g:load_vimrc = 1
 " }}} 
 
