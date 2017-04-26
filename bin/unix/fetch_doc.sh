@@ -54,14 +54,8 @@ for f in ${files[@]}; do
     fi
 done
 
-# exit 0
-
-system=$(uname)
 
 SED=sed
-if [ "$system" = 'Darwin' ]; then
-    SED=gsed
-fi
 
 $SED -i '/" VIM Version/d' $output
 $SED -i '/"  author/d' $output
