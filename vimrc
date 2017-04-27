@@ -58,6 +58,7 @@ set scrolloff=2
 
 set shortmess=atI    " 启动的时候不显示援助乌干达儿童提示
 set autoread    " 文件修改后自动载入
+set cmdheight=1
 set hidden
 
 set showmatch    " 括号匹配
@@ -126,6 +127,8 @@ augroup initial
     autocmd InsertLeave * set number relativenumber 
     autocmd WinLeave * setl nocursorline
     autocmd WinEnter * setl cursorline
+    autocmd BufReadPre,BufNewFile * set cmdheight=2
+    autocmd BufWinEnter * set cmdheight=1
 augroup END
 " }}} 
 

@@ -18,6 +18,6 @@ function! s:LargeFile()
     let f = getfsize(expand('<afile>'))
     if (f > g:LargeFile || f == -2) && &foldmethod ==? 'syntax'
         setlocal foldmethod=indent
-        " echom 'The file is larger than ' . (g:LargeFile / 1024) . ' KB, so set foldmethod=indent.'
+        echom 'The file is larger than ' . (g:LargeFile / 1024) . ' KB, so set foldmethod=indent.'
     endif
 endfunction
