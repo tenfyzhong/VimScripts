@@ -19,13 +19,11 @@
 "   email: 364755805@qq.com
 " created: 2016-04-16 17:25:46
 "==============================================================
-PluginAdd 'tenfyzhong/a.vim'
+PluginAdd 'tenfyzhong/a.vim', {'for': ['c', 'cpp']}
 
 let g:alternateNoDefaultAlternate = 1
 
-if exists("g:a_vim_init")
-    finish
-endif
-
-nnoremap <silent><leader>as :A<cr>
-let g:a_vim_init = 1
+augroup a_vim_init
+    autocmd!
+    au FileType c,cpp nnoremap <silent><leader>as :A<cr>
+augroup END
