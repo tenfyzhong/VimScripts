@@ -84,7 +84,7 @@
 "   email: 364755805@qq.com
 " created: 2016-04-16 18:46:26
 "==============================================================
-PluginAdd 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+PluginAdd 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'tag': '*'}
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
