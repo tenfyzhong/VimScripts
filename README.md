@@ -136,6 +136,8 @@ o对应motion模式
 | `<leader>tc`      | n     | global             | :tabclose                               |
 | `<leader>cf`      | n     | global             | 复制文件名(不包括路径)到匿名缓存区      |
 | `<leader>cp`      | n     | global             | 复制文件名和路径到匿名缓存区            |
+| `<m-j>`           | n     | global             | gT                                      |
+| `<m-k>`           | n     | global             | gt                                      |
 | `<leader>as`      | n     | a.vim              | 在源文件和头文件中切换                  |
 | `<C-\>s`          | n     | cscope             | 查找这个C符号                           |
 | `<C-\>g`          | n     | cscope             | 查找这个定义                            |
