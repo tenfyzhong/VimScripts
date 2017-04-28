@@ -17,8 +17,8 @@
 "      <leader>7 选择tab7的内容
 "      <leader>8 选择tab8的内容
 "      <leader>9 选择tab9的内容
-"      <c-h> 左边tab内容
-"      <c-l> 右边tab内容
+"      <m-h> 选择左边buffer
+"      <m-l> 选择右边buffer
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: 364755805@qq.com
