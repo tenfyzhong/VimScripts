@@ -23,7 +23,7 @@
 "
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-04-13 13:37:23
 "==============================================================
 PluginAdd 'tenfyzhong/ag.vim'

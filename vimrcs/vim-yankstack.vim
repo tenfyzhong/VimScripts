@@ -9,7 +9,7 @@
 "          <leader>P 选择更新的进行paste
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2017-04-04 17:35:55
 "==============================================================
 PluginAdd 'tenfyzhong/vim-yankstack'

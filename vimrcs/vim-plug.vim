@@ -12,7 +12,7 @@
 "   PlugSnapshot[!] [output path]   Generate script for restoring the current snapshot of the plugins
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2017-02-25 21:42:29
 "==============================================================
 PluginAdd 'junegunn/vim-plug'

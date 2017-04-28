@@ -5,7 +5,7 @@
 " command: Rename {new name}
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-04-14 20:38:51
 "==============================================================
 PluginAdd 'artnez/vim-rename'

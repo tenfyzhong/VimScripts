@@ -58,7 +58,7 @@
 "      a    Show the current tag, commit, or tree in an alternate format.
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-04-15 15:39:29
 "==============================================================
 PluginAdd 'tpope/vim-fugitive'

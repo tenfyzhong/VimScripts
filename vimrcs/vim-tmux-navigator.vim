@@ -8,7 +8,7 @@
 "          <c-l> 跳到右边窗口
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2017-04-21 09:36:42
 "==============================================================
 PluginAdd 'christoomey/vim-tmux-navigator'

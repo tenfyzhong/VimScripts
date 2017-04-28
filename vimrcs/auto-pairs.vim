@@ -7,7 +7,7 @@
 "          \an 跳到下一个补齐的括号
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-07-31 23:21:56
 "==============================================================
 PluginAdd 'jiangmiao/auto-pairs'

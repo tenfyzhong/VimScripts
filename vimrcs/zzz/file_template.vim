@@ -6,7 +6,7 @@
 "
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-04-14 09:49:19
 "==============================================================
 PluginAdd 'tenfyzhong/file_template.vim'

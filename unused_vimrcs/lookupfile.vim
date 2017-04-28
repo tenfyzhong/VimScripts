@@ -18,7 +18,7 @@
 "          <c-k> 上一个文件
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-04-09 23:17:32
 "==============================================================
 PluginAdd 'vim-scripts/lookupfile'

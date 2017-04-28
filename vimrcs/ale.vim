@@ -3,7 +3,7 @@
 "   brief: 异步语法检查
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2017-02-08 12:52:47
 "==============================================================
 if version < 800

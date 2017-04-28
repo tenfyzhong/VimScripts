@@ -6,7 +6,7 @@
 "    nmap: <leader>aw :ArgWrap
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-07-09 19:53:40
 "==============================================================
 PluginAdd 'FooSoft/vim-argwrap'

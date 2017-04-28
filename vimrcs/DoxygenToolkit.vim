@@ -11,7 +11,7 @@
 "          <leader>dl :DoxLic
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-04-13 14:46:55
 "==============================================================
 PluginAdd 'vim-scripts/DoxygenToolkit.vim'

@@ -10,7 +10,7 @@
 "          DoAgain 重跑上一次的命令
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-04-17 10:29:31
 "==============================================================
 PluginAdd 'WolfgangMehner/vim-do'

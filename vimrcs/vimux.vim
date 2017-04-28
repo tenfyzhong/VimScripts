@@ -17,7 +17,7 @@
 "          <leader>vz :VimuxZoomRunner
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2017-04-21 09:51:08
 "==============================================================
 PluginAdd 'benmills/vimux'

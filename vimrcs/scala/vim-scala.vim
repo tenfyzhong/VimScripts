@@ -5,7 +5,7 @@
 " command: SortScalaImports 将import排序
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: 364755805@qq.com
+"   email: tenfyzhong@qq.com
 " created: 2016-05-04 21:24:03
 "==============================================================
 PluginAdd 'derekwyatt/vim-scala'

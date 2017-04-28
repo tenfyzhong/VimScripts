@@ -12,7 +12,7 @@
 #  REQUIREMENTS: ---
 #          BUGS: ---
 #         NOTES: ---
-#        AUTHOR: tenfyzhong (tenfy), 364755805@qq.com
+#        AUTHOR: tenfyzhong (tenfy), tenfyzhong@qq.com
 #  ORGANIZATION: 
 #       CREATED: 2016年07月05日 20:13
 #      REVISION:  ---
