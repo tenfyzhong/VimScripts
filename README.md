@@ -235,8 +235,10 @@ o对应motion模式
 | `<leader>rb`      | n     | vim-go             | go-build                                |
 | `<leader>rt`      | n     | vim-go             | go-test                                 |
 | `<leader>rf`      | n     | vim-go             | go-test-func                            |
-| `<leader>rd`      | n     | vim-go             | go-doc                                  |
 | `<leader>rc`      | n     | vim-go             | go-coverage                             |
+| `<leader>as`      | n     | vim-go             | go-alternate-edit                       |
+| `<C-]>`           | n     | vim-go             | GoDef                                   |
+| `<c-t>`           | n     | vim-go             | GoDefPop                                |
 | `<leader>rr`      | n     | pymode             | :PymodeRun                              |
 | `<leader>rb`      | n     | pymode             | 设置断点                                |
 | `<leader>ra`      | n     | pymode             | autoimport                              |

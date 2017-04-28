@@ -196,15 +196,21 @@
 "          [range]GoPlay 分享代码到play.golang.org
 "          GoVet[!] [options] 去街go vet
 "          GoDef [identifier] 跳到声明或者定义
-"          GoRun[!] [expand] 去街当前包的main函数
+"          GoDefStack [number] 打开GoDef的跳转列表
+"          GoDefStackClear 清除GoDefStack
+"          GoDefPop [count] 跳回到上一次调用GoDef的地方
+"          GoRun[!] [expand] 运行当前包的main函数
 "          GoBuild[!] [expand] go build构建当前包
 "          GoGenerate[!] [expand] go generate
-"          GoInfo 显示cursor下字符串信息
+"          GoInfo 显示cursor下函数的声明
 "          GoInstall[!] [options] 安装包
 "          GoTest[!] [expand] 运行测试
 "          GoTestFunc[!] [expand] 运行特定的测试函数
 "          GoTestCompile[!] [expand] 编译测试包
 "          GoCoverage[!] [options] 生成覆盖报告
+"          GoCoverageToggle[!] [options] 在GoCoverage和GoCoverageClear中转换
+"          GoCoverageClear [options] 清除覆盖报告
+"          GoCoverageBrowser[!] [options] 在浏览器中产生覆盖报告
 "          GoErrCheck [options] 检查错误
 "          GoFiles 显示当前包的文件
 "          GoDeps 显示当前包的依赖
@@ -212,14 +218,38 @@
 "          GoUpdateBinaries 更新这个vim插件需要的包
 "          GoImplements 显示选择包的实现接口
 "          GoRename [to] 重命名
-"          GoOracleScope [path1] [path2] ... 修改g:go_oracle_scope设置
+"          GoGuruScope [pattern] [pattern2] ... [patternN]
 "          GoCallees 显示被调用的包
 "          GoCallers 显示调用的包
 "          GoDescribe 显示选择的语法和属性
 "          GoCallstack 显示调用栈
-"          GoFreevars 枚举free variables
+"          GoFreevars 抽离出自由变量
 "          GoChannelPeers 显示可能的发送接收channel
 "          GoReferers 查询引用
+"          GoSameIds 高亮相同的identifiers
+"          GoSameIdsClear 去除identifiers的高亮
+"          GoSameIdsToggle 在GoSameIds和GoSameIdsClear中切换
+"          GoSameIdsAutoToggle 触发启动自动高亮identifiers
+"          GoMetaLinter [path] 调用gometalinter进行检查 
+"          GoBuildTags [tags] 
+"          AsmFmt 
+"          GoAlternate[!] 在源文件和测试文件中切换
+"          GoWhicherrs 显示当前可能的错误
+"          GoDecls [file] 启动ctrlp.vim时才能用，显示所有的声明
+"          GoDeclsDir [dir] 启动ctrlp.vim时才能用，显示所有的声明
+"          GoImpl [receiver] [interface] 实现接口
+"          [range]GoAddTags [key],[option] [key1],[option1] ... 给成员增加tag
+"          [range]GoRemoveTags [key],[option] [key1],[option1] ... 给成员删除tag
+"          GoAutoTypeInfoToggle toggle g:go_auto_type_info
+"          GoFmtAutoSaveToggle toggle g:go_fmt_autosave
+"          GoAsmFmtAutoSaveToggle toggle g:go_asmfmt_autosave
+"          GoMetaLinterAutoSaveToggle toggle g:go_metalinter_autosave
+"          GoTemplateAutoCreateToggle toggle g:go_template_autocreate
+"
+"          A 源文件和测试文件中切换
+"          AV 源文件和测试文件中切换，在vsplit中打开
+"          AS 源文件和测试文件中切换，在split中打开
+"          AT 源文件和测试文件中切换，在tab中打开
 "
 "    nmap: <leader>rs go-implements
 "          <leader>ri go-info
@@ -228,8 +258,9 @@
 "          <leader>rb go-build
 "          <leader>rt go-test
 "          <leader>rf go-test-func
-"          <leader>rd go-doc
 "          <leader>rc go-coverage
+"          <C-]> GoDef
+"          <c-t> GoDefPop
 "==============================================================
 
 "==============================================================
