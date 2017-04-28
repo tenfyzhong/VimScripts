@@ -256,8 +256,8 @@ o对应motion模式
 | `<leader>rnp`     | n     | pymode             | generate package                        |
 | `<leader>rs`      | n     | pymode             | change signature                        |
 | `<leader>ru`      | n     | pymode             | use function                            |
-| `<leader>h`       | n     | airline            | 选择左边的buffer                        |
-| `<leader>l`       | n     | airline            | 选择右边的buffer                        |
+| `<m-h>`           | n     | airline            | 选择左边的buffer                        |
+| `<m-l>`           | n     | airline            | 选择右边的buffer                        |
 | `<leader>1`       | n     | airline            | 选择buffer 1                            |
 | `<leader>2`       | n     | airline            | 选择buffer 2                            |
 | `<leader>3`       | n     | airline            | 选择buffer 3                            |
