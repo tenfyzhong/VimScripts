@@ -176,7 +176,7 @@ o对应motion模式
 | `<leader>da`      | n     | Doxygen            | 生成文件注释                            |
 | `<leader>dl`      | n     | Doxygen            | 生成证书注释                            |
 | `<leader>gu`      | n     | Gundo              | GundoToogle                             |
-| `gt`              | nx    | vim-easy-align     | 开启对齐                                |
+| `ga`              | nx    | vim-easy-align     | 开启对齐                                |
 | `<leader>M`       | n     | Mark               | 清除所有的mark                          |
 | `<leader>N`       | n     | Mark               | 如果在高亮处，则取消高亮，否则触发高亮  |
 | `<leader>R`       | nv    | Mark               | 根据正则进行高亮                        |
