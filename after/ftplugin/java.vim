@@ -11,12 +11,6 @@ if exists("g:java_after_ftplugin")
     finish
 endif
 
-if exists(":EclimEnable") 
-    nnoremap <buffer><unique>\ji :JavaImport<cr>
-    nnoremap <buffer><unique>\jd :JavaDocSearch -x declarations<cr>
-    nnoremap <buffer><unique>\jc :JavaSearchContext<cr>
-endif
-
 if exists(":JCserverStart")
     " For smart (trying to guess import option) insert class import:
     nmap <buffer><unique>\js <Plug>(JavaComplete-Imports-AddSmart)
@@ -32,12 +26,18 @@ if exists(":JCserverStart")
     imap <buffer><unique>\jr <Plug>(JavaComplete-Imports-RemoveUnused)
 endif
 
-if exists(":YcmCompleter")
-    let g:EclimCompletionMethod = 'omnifunc'
-endif
+if exists(":EclimEnable") 
+    nnoremap <buffer><unique>\ji :JavaImport<cr>
+    nnoremap <buffer><unique>\jd :JavaDocSearch -x declarations<cr>
+    nnoremap <buffer><unique>\jc :JavaSearchContext<cr>
+    if exists(":YcmCompleter")
+        let g:EclimCompletionMethod = 'omnifunc'
+    endif
 
-if !eclim#EclimAvailable() 
-    setlocal omnifunc=javacomplete#Complete 
+    if !eclim#EclimAvailable() 
+        setlocal omnifunc=javacomplete#Complete 
+    endif
+
 endif
 
 
