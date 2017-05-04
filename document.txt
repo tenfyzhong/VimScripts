@@ -840,7 +840,7 @@
 "          GitGutterLineHighlightsToggle  触发高亮
 "          GitGutterNextHunk 跳到下一个修改的块
 "          GitGutterPrevHunk 跳到上一个修改的块
-"          GitGutterStageHunk 将当前块添加到stage区
+"          GitGutterUndoHunk 将当前块添加到stage区
 "          GitGutterRevertHunk 回滚当前块的stage区
 "          GitGutterPreviewHunk 预览当前块
 "
@@ -848,7 +848,7 @@
 "          [h GitGutterPrevHunk
 "          ]h GitGutterNextHunk
 "          <leader>ga GitGutterStageHunk
-"          <leader>gr GitGutterRevertHunk
+"          <leader>gr GitGutterUndoHunk
 "          <leader>gp GitGutterPreviewHunk
 "          <leader>gg :GitGutter
 "==============================================================

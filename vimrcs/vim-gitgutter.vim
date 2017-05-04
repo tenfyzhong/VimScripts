@@ -15,7 +15,7 @@
 "          GitGutterLineHighlightsToggle  触发高亮
 "          GitGutterNextHunk 跳到下一个修改的块
 "          GitGutterPrevHunk 跳到上一个修改的块
-"          GitGutterStageHunk 将当前块添加到stage区
+"          GitGutterUndoHunk 将当前块添加到stage区
 "          GitGutterRevertHunk 回滚当前块的stage区
 "          GitGutterPreviewHunk 预览当前块
 "
@@ -23,7 +23,7 @@
 "          [h GitGutterPrevHunk
 "          ]h GitGutterNextHunk
 "          <leader>ga GitGutterStageHunk
-"          <leader>gr GitGutterRevertHunk
+"          <leader>gr GitGutterUndoHunk
 "          <leader>gp GitGutterPreviewHunk
 "          <leader>gg :GitGutter
 " VIM Version: 7.4
@@ -43,7 +43,7 @@ let g:gitgutter_escape_grep = 1
 nmap [h <Plug>GitGutterPrevHunk
 nmap ]h <Plug>GitGutterNextHunk
 nmap <Leader>ga <Plug>GitGutterStageHunk
-nmap <Leader>gr <Plug>GitGutterRevertHunk
+nmap <Leader>gr <Plug>GitGutterUndoHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
 nnoremap <silent><Leader>gg :GitGutter<cr>
 
