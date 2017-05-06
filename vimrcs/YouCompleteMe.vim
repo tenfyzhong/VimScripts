@@ -27,13 +27,13 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-16 17:02:00
 "==============================================================
-PluginAdd 'Valloric/YouCompleteMe', {'frozen': 1, 'do': './install.py --all', 'on': []  }
+PluginAdd 'Valloric/YouCompleteMe', {'frozen': 1, 'do': './install.py --all'}
 PluginAdd 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': ['c', 'cpp'] }
 
-augroup load_ycm
-    autocmd!
-    autocmd InsertEnter * call plug#load('YouCompleteMe') | autocmd! load_ycm
-augroup END
+" augroup load_ycm
+    " autocmd!
+    " autocmd InsertEnter * call plug#load('YouCompleteMe') | autocmd! load_ycm
+" augroup END
 
 let g:ycm_min_num_of_chars_for_completion 			= 1
 let g:ycm_add_preview_to_completeopt 				= 0
