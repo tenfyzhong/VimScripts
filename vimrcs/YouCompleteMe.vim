@@ -27,7 +27,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-16 17:02:00
 "==============================================================
-PluginAdd 'Valloric/YouCompleteMe', {'frozen': 1, 'do': './install.py', 'on': []  }
+PluginAdd 'Valloric/YouCompleteMe', {'frozen': 1, 'do': './install.py --all', 'on': []  }
 PluginAdd 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': ['c', 'cpp'] }
 
 augroup load_ycm
