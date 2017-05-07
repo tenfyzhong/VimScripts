@@ -24,6 +24,34 @@
 "==============================================================
 
 "==============================================================
+"    file: agit.vim
+"   brief: gitk插件
+"
+" command: Agit [{options}] 打开一个agit的tab
+"          AgitFile [{options}] 只打开当前文件相关的log
+"
+"    nmap: 
+"        J			<Plug>(agit-scrolldown-stat)
+"        K			<Plug>(agit-scrollup-stat)
+"        <C-j>		<Plug>(agit-scrolldown-diff)
+"        <C-k>		<Plug>(agit-scrollup-diff)
+"        u			<PLug>(agit-reload)
+"        yh			<Plug>(agit-yank-hash)
+"        <C-g>		<Plug>(agit-print-commitmsg)
+"        q			<Plug>(agit-exit)
+"        C			<Plug>(agit-git-checkout)
+"        cb			<Plug>(agit-git-checkout-b)
+"        D			<Plug>(agit-git-branch-d)
+"        rs			<Plug>(agit-git-reset-soft)
+"        rm			<Plug>(agit-git-reset)
+"        rh			<Plug>(agit-git-reset-hard)
+"        rb			<Plug>(agit-git-rebase)
+"        ri			<Plug>(agit-git-rebase-i)
+"        di			<Plug>(agit-diff)
+"        dl			<Plug>(agit-diff-with-local)
+"==============================================================
+
+"==============================================================
 "    file: ale.vimrc
 "   brief: 异步语法检查
 "==============================================================
@@ -190,16 +218,6 @@
 "           <leader><tab> nmap模式的map
 "    omap:  <leader><tab> omap模式的map
 "    xmap:  <leader><tab> xmap模式的map
-"==============================================================
-
-"==============================================================
-"    file: gitv.vimrc
-"   brief: 类似gitk的git展示
-"
-" command: :[range]Gitv[!] [args] 打开gitv窗口,指定range时会打开只影响的行,!会使用file mode替换browser mode
-"          :Git 在browser窗口上运行
-"
-"    nmap: <leader>gv Gitv
 "==============================================================
 
 "==============================================================
@@ -492,6 +510,25 @@
 "    nmap: [count]["x]gr{motion} 使用寄存器内容替换{motion}内容
 "          [count]["x}grr 替换一行
 "    xmap: ["x]gr 使用寄存器内容替换选中内容
+"==============================================================
+
+"==============================================================
+"    file: rust.vim
+"   brief: 
+" 
+" command: RustRun [args] 编译运行当前文件
+"          RustRun! [rustc-args] [--] [args]
+"          RustExpand [args] 使用--pretty扩展当前文件
+"          RustExpand! [TYPE] [args]
+"          RustEmitIr [args] 编译当前文件到LLVM IR
+"          RustEmitAsm [args] 编译当前文件到assembly
+"          RustFmt 格式化
+"          RustFmtRange 对选择的区域进行格式化
+"==============================================================
+
+"==============================================================
+"    file: vim-toml.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
