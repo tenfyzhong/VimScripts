@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-14 20:24:15
 "==============================================================
-PluginAdd 'tar.vim'
+PluginAdd 'vim-scripts/tar.vim'
