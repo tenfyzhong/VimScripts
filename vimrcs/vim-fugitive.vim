@@ -67,7 +67,7 @@ augroup fugitive_init
     autocmd! 
     autocmd FileType gitcommit cabbrev <buffer> x silent x
     autocmd FileType gitcommit cabbrev <buffer> q silent q
-    autocmd BufRead,BufNew .git/COMMIT_EDITMSG call cursor(2, 1)
+    autocmd BufRead,BufNew COMMIT_EDITMSG call cursor(2, 1)
     autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
