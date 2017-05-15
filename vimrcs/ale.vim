@@ -16,7 +16,6 @@ let g:ale_cpp_gcc_options = '-std=c++11 -Wall'
 let g:ale_linters = {
             \ 'c': [], 
             \ 'cpp': [],
-            \ 'go': ['gofmt']
             \}
 
 " 关闭pymode的检查
