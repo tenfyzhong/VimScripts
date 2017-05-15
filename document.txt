@@ -54,6 +54,22 @@
 "==============================================================
 "    file: ale.vimrc
 "   brief: 异步语法检查
+"
+" command: ALELint 进行检查
+"          ALEPrevious 上一个错误或警告,不循环
+"          ALEPreviousWrap 上一个错误或警告,循环
+"          ALENext 下一个错误或警告,不循环
+"          ALENextWrap 下一个错误或警告,循环
+"          ALEToggle 触发启用ale
+"          ALEEnable 启用ale
+"          ALEDisable 禁用ale
+"          ALEDetail 显示完整的错误信息在底行
+"
+"    nmap: <leader>al ALELint
+"          <leader>ad ALEDetail
+"          <leader>at ALEToggle
+"          <leader>aj ALENextWrap
+"          <leader>ak ALEPreviousWrap
 "==============================================================
 
 "==============================================================
@@ -704,6 +720,11 @@
 "          Mc :BookmarkClear
 "          Mu :BookmarkMoveUp
 "          Md :BookmarkMoveDown
+"==============================================================
+
+"==============================================================
+"    file: vim-bracketed-paste.vim
+"   brief: 粘贴时自动设置set paste
 "==============================================================
 
 "==============================================================
