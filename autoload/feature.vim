@@ -52,15 +52,15 @@ function! feature#GetQuickfixOrLoclistWinNr() "{{{ 返回quickfix和loclist的wi
         endif
     endfor
     return result
-endfunction
+endfunction "}}}
 
-function! feature#QuickfixOpen()
+function! feature#QuickfixOpen() "{{{ 打开quickfix或者loclist
     if len(getloclist(0)) > 0
         silent botright lopen
     else
         silent botright copen
     endif
-endfunction
+endfunction "}}}
 
 function! feature#QuickfixDo(cmd) "{{{ quickfix和location兼容性的命令
     let quickfix_info = feature#GetQuickfixOrLoclistWinNr()
