@@ -172,8 +172,10 @@ o对应motion模式
 | `<leader>ta`      | n     | tagbar or taglist  | 触发tagbar和nerdtree                    |
 | `<leader>qk`      | n     | quickfix           | 上一条错误警告处                        |
 | `<leader>qj`      | n     | quickfix           | 下一条错误警告处                        |
-| `<leader>qc`      | n     | quickfix           | 关闭quickfix                            |
-| `<leader>qo`      | n     | quickfix           | 打开quckfix                             |
+| `<leader>qc`      | n     | quickfix           | 关闭quickfix或者loclist                 |
+| `<leader>qo`      | n     | quickfix           | 打开quickfix或者loclist                 |
+| `<leader>qq`      | n     | quickfix           | 打开quickfix                            |
+| `<leader>ql`      | n     | quickfix           | 打开loclist                             |
 | `<leader>dx`      | n     | Doxygen            | 生成函数和类注释                        |
 | `<leader>da`      | n     | Doxygen            | 生成文件注释                            |
 | `<leader>dl`      | n     | Doxygen            | 生成证书注释                            |

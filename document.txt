@@ -505,10 +505,12 @@
 "    file: quickfix.vimrc
 "   brief: 
 "
-"    nmap: <leader>qk 跳到上一个quickfix的内容
-"          <leader>qj 跳到下一个quickfix的内容
-"          <leader>qc 关闭quickfix
-"          <leader>qo 打开quickfix
+"    nmap: <leader>qk 跳到上一个quickfix或者loclist的内容
+"          <leader>qj 跳到下一个quickfix或者loclist的内容
+"          <leader>qc 关闭quickfix或者loclist
+"          <leader>qo 打开quickfix或者loclist
+"          <leader>qq 打开quickfix
+"          <leader>ql 打开loclist
 "
 " quickfix的nmap
 "     q: cclose

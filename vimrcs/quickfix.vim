@@ -2,10 +2,12 @@
 "    file: quickfix.vimrc
 "   brief: 
 "
-"    nmap: <leader>qk 跳到上一个quickfix的内容
-"          <leader>qj 跳到下一个quickfix的内容
-"          <leader>qc 关闭quickfix
-"          <leader>qo 打开quickfix
+"    nmap: <leader>qk 跳到上一个quickfix或者loclist的内容
+"          <leader>qj 跳到下一个quickfix或者loclist的内容
+"          <leader>qc 关闭quickfix或者loclist
+"          <leader>qo 打开quickfix或者loclist
+"          <leader>qq 打开quickfix
+"          <leader>ql 打开loclist
 "
 " quickfix的nmap
 "     q: cclose
@@ -19,13 +21,10 @@ if !has("quickfix")
     finish
 endif
 
-if exists("g:quickfix_init")
-    finish
-endif
+nnoremap <silent><leader>qk :call feature#QuickfixDo('previous')<cr>
+nnoremap <silent><leader>qj :call feature#QuickfixDo('next')<cr>
+nnoremap <silent><leader>qc :call feature#QuickfixDo('close')<cr>
+nnoremap <silent><leader>qo :call feature#QuickfixOpen()<cr>
+nnoremap <silent><leader>qq :silent botright copen<cr>
+nnoremap <silent><leader>ql :silent botright lopen<cr>
 
-nnoremap <silent><leader>qk :call feature#quickfixDo('previous')<cr>
-nnoremap <silent><leader>qj :call feature#quickfixDo('next')<cr>
-nnoremap <silent><leader>qc :call feature#quickfixDo('close')<cr>
-nnoremap <silent><leader>qo :call feature#quickfixDo('open')<cr>
-
-let g:quickfix_init = 1

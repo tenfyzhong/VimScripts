@@ -29,20 +29,54 @@ function! feature#PollNumber() "{{{ 行号相对行号间切换
     endif
 endfunction "}}}
 
-function! feature#quickfixDo(cmd) "{{{ quickfix和location兼容性的命令
-    let l:prefix = ''
+function! feature#GetLoclistWinNr() "{{{ 如果loclist已经打开，则返回其winnr，否则返回-1
+    return feature#GetQuickfixOrLoclistWinNr()[0]
+endfunction "}}}
+
+function! feature#GetQuickfixWinNr() "{{{ 如果quickfix已经打开，则返回其winnr，否则返回-1
+    return feature#GetQuickfixOrLoclistWinNr()[1]
+endfunction "}}}
+
+function! feature#GetQuickfixOrLoclistWinNr() "{{{ 返回quickfix和loclist的winnr元组，[0]为loclist,[1]为quickfix
+    let wininfo = getwininfo()
+    " let result = {'quickfix':-1, 'loclist':-1}
+    let result = [-1, -1]
+    for info in wininfo
+        if info['quickfix'] == 1 && info['loclist'] == 1
+            " let result['loclist'] = info['winnr']
+            let result[0] = info['winnr']
+        endif
+        if info['quickfix'] == 1 && info['loclist'] == 0
+            " let result['quickfix'] = info['winnr']
+            let result[1] = info['winnr']
+        endif
+    endfor
+    return result
+endfunction
+
+function! feature#QuickfixOpen()
     if len(getloclist(0)) > 0
-        let l:prefix = 'l'
+        silent botright lopen
     else
-        let l:prefix = 'c'
+        silent botright copen
     endif
-    if a:cmd == 'open'
-        let l:cmd = 'silent botright ' . l:prefix . a:cmd 
+endfunction
+
+function! feature#QuickfixDo(cmd) "{{{ quickfix和location兼容性的命令
+    let quickfix_info = feature#GetQuickfixOrLoclistWinNr()
+    let prefix = 'l'
+
+    if quickfix_info[0] != -1
+        let prefix = 'l'
+    elseif quickfix_info[1] != -1
+        let prefix = 'c'
     else
-        let l:cmd = 'silent ' . l:prefix . a:cmd 
+        echo 'No quickfix or loclist window'
+        return
     endif
+
     try
-        exec l:cmd
+        exec 'silent ' . prefix . a:cmd
     catch /^Vim\%((\a\+)\)\=:E553/
         echo 'No more items'
     endtry
