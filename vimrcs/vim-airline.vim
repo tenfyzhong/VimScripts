@@ -46,7 +46,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:airline#extensions#disable_rtp_load = 0
 let g:airline_exclude_preview = 1
-let g:airline#extensions#whitespace#checks = [ 'indent', 'mixed-indent-file' ]
+let g:airline#extensions#whitespace#checks = [ 'indent', 'mixed-indent' ]
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
