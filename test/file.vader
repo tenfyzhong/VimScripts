@@ -1,0 +1,25 @@
+Execute (file#Join noArgument):
+  let result = file#Join()
+  AssertEqual '', result
+
+Execute (file#Join emptyString):
+  let result = file#Join('')
+  AssertEqual '', result
+  let result = file#Join('', '')
+  AssertEqual '', result
+
+Execute (file#Join firstEmpty):
+  let result = file#Join('', 'haha')
+  AssertEqual 'haha', result
+
+Execute (file#Join oneArg):
+  let result = file#Join('haha')
+  AssertEqual 'haha', result
+
+Execute (file#Join relativePath):
+  let result = file#Join('haha', 'hehe', 'xixi')
+  AssertEqual 'haha/hehe/xixi', result
+
+Execute (file#Join absolutePath):
+  let result = file#Join('/haha', 'hehe', 'xixi')
+  AssertEqual '/haha/hehe/xixi', result

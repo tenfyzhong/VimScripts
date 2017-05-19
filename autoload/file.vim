@@ -89,3 +89,39 @@ function! file#GuessProjectRoot(...)
 endfunction
 " }}}
 
+function! file#GetGitHome() "{{{ 返回git工程的根目录
+    if !executable('git')
+        return ''
+    endif
+    return substitute(system('git rev-parse --show-toplevel 2> /dev/null'), '\n', '', 'g')
+endfunction "}}}
+
+function! file#Join(...) "{{{ 拼接路径
+    " if a:0 == 0
+    "     return ''
+    " endif
+
+    let delim = '/'
+    if system#IsMswin()
+        let delim = '\'
+    endif
+
+    let i = 0
+    let result = ''
+    while i < a:0 && result == ''
+        let result = a:000[i]
+        let i += 1
+    endwhile
+
+    for item in a:000[i:]
+        if item != ''
+            let result .= delim
+            let result .= item
+        endif
+    endfor
+    return result
+endfunction "}}}
+
+function! file#Absolute(path) "{{{ 返回文件绝对路径
+    return fnamemodify(a:path, ':p')
+endfunction "}}}
