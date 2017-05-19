@@ -38,20 +38,15 @@ let g:bookmark_auto_save = 1
 
 " Finds the Git super-project directory.
 function! g:BMWorkDirFileLocation()
-    let filename = 'bookmarks'
-    let location = ''
-    if isdirectory('.git')
-        " Current work dir is git's work tree
-        let location = getcwd().'/.git'
+    let path = file#GetGitHome()
+    let result = ''
+    if path != ''
+        let result = file#Join(path, '.git', 'bookmarks')
     else
-        " Look upwards (at parents) for a directory named '.git'
-        let location = finddir('.git', '.;')
+        let result = file#Join(path, '.bookmarks')
     endif
-    if len(location) > 0
-        return location.'/'.filename
-    else
-        return getcwd().'/.'.filename
-    endif
+    let result = file#Absolute(result)
+    return result
 endfunction
 
 
