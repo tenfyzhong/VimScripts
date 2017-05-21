@@ -228,8 +228,8 @@ o对应motion模式
 | `<leader>fc`      | n     | fzf                | FZFCommands                             |
 | `<leader><tab>`   | nox   | fzf                | 查找对应的map进行执行                   |
 | `<leader>af`      | n     | autoformat         | 进行autoformat                          |
-| `<leader>p`       | n     | yankstack          | 选择更旧的进行paste                     |
-| `<leader>P`       | n     | yankstack          | 选择更新的进行paste                     |
+| `<m-p>`           | nxi   | yankstack          | 选择更旧的进行paste                     |
+| `<m-P>`           | nxi   | yankstack          | 选择更新的进行paste                     |
 | `<leader>rs`      | n     | vim-go             | go-implements                           |
 | `<leader>ri`      | n     | vim-go             | go-info                                 |
 | `<leader>re`      | n     | vim-go             | go-rename                               |
