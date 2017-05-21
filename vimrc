@@ -101,6 +101,7 @@ set diffopt=filler,vertical
 
 set viminfo+=!
 
+set pastetoggle=<leader>p
 set sessionoptions-=buffers
 
 if !exists('g:once_init_syntax')
