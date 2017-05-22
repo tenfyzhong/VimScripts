@@ -82,3 +82,23 @@ function! feature#QuickfixDo(cmd) "{{{ quickfix和location兼容性的命令
     endtry
 endfunction "}}}
 
+function! feature#toggle_xxd() "{{{
+    if !exists('b:is_xxd')
+        let b:is_xxd = 0
+    endif
+    let modified = &modified
+    if b:is_xxd
+        set nobinary
+        silent %!xxd -r
+        let b:is_xxd = 0
+    else
+        set binary
+        silent %!xxd
+        let b:is_xxd = 1
+    endif
+    if modified
+        set modified
+    else
+        set nomodified
+    endif
+endfunction "}}}
