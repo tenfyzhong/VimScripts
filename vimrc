@@ -170,6 +170,7 @@ nnoremap <silent><m-,>      ;
 nnoremap <m-j>              gT
 nnoremap <m-k>              gt
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
+nnoremap <silent><c-o>      <esc>:redraw!<cr>
 
 if &diff
     nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR> 
