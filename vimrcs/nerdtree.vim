@@ -30,9 +30,14 @@ PluginAdd 'scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeTog
 
 let NERDChristmasTree 				= 1
 " 不显示指定的内容
-let NERDTreeIgnore 					= ['\.o$', '\.swp$', '\.bak$', '\~$', '\.d$',
+let NERDTreeIgnoreTmp 				= ['\.o$', '\.swp$', '\.bak$', '\~$', '\.d$',
         \'^tags$', '\.git$', '\.out$', '\.session$', '\.viminfo$', '\.d.\d*$', 
         \'cscope.*out$', '\.pyc$'] 
+if exists('NERDTreeIgnore')
+    let NERDTreeIgnore += NERDTreeIgnoreTmp
+else
+    let NERDTreeIgnore = NERDTreeIgnoreTmp
+endif
 let NERDTreeShowHidden 				= 0 "	不显示隐藏文件
 " let NERDTreeSortOrder 				= ['\/$', '\.[ch]p\{-,2}$', '*']	" 排序
 let NERDTreeCaseSensitiveSort 		= 1	" 不分大小写排序
