@@ -26,9 +26,18 @@
 "==============================================================
 PluginAdd 'scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeToggle']}
 
-" The NERD tree 以树形结构浏览文件夹中的文件
-
 let NERDChristmasTree 				= 1
+let NERDTreeShowHidden 				= 0 "	不显示隐藏文件
+let NERDTreeCaseSensitiveSort 		= 1	" 不分大小写排序
+let NERDTreeWinSize 				= 30
+let NERDTreeShowBookmarks 			= 1
+let NERDTreeQuitOnOpen 				= 0	" 打开文件后，关闭NERDTree窗口
+let NERDTreeHightlightCursorline 	= 1	"高亮NERDTree窗口的当前行
+let NERDTreeShowLineNumbers 		= 1
+let NERDTreeDirArrows 				= 1
+let NERDTreeCascadeOpenSingleChildDir = 1
+let NERDTreeAutoDeleteBuffer        = 1
+let NERDTreeChDirMode               = 2
 " 不显示指定的内容
 let NERDTreeIgnoreTmp 				= 
             \['\.o$[[file]]', 
@@ -49,18 +58,6 @@ if exists('NERDTreeIgnore')
 else
     let NERDTreeIgnore = NERDTreeIgnoreTmp
 endif
-let NERDTreeShowHidden 				= 0 "	不显示隐藏文件
-" let NERDTreeSortOrder 				= ['\/$', '\.[ch]p\{-,2}$', '*']	" 排序
-let NERDTreeCaseSensitiveSort 		= 1	" 不分大小写排序
-let NERDTreeWinSize 				= 30
-let NERDTreeShowBookmarks 			= 1
-let NERDTreeQuitOnOpen 				= 0	" 打开文件后，关闭NERDTree窗口
-let NERDTreeHightlightCursorline 	= 1	"高亮NERDTree窗口的当前行
-let NERDTreeShowLineNumbers 		= 1
-let NERDTreeDirArrows 				= 1
-let NERDTreeCascadeOpenSingleChildDir = 1
-let NERDTreeAutoDeleteBuffer        = 1
-let NERDTreeChDirMode               = 2
 
 " 从工程目录中去读取bookmark的文件，不存在则使用默认的
 let b:bookmarks_filename            = '.NERDTreeBookmarks'
@@ -74,11 +71,6 @@ augroup nerdtree_autocmd_init
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
 
-if exists("g:nerdtree_init")
-    finish
-endif
-
 nnoremap <silent><leader>nt :NERDTreeToggle<cr>
 nnoremap <silent><leader>nc :NERDTreeCWD<cr>
 
-let g:nerdtree_init = 1
