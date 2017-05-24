@@ -30,9 +30,20 @@ PluginAdd 'scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeTog
 
 let NERDChristmasTree 				= 1
 " 不显示指定的内容
-let NERDTreeIgnoreTmp 				= ['\.o$', '\.swp$', '\.bak$', '\~$', '\.d$',
-        \'^tags$', '\.git$', '\.out$', '\.session$', '\.viminfo$', '\.d.\d*$', 
-        \'cscope.*out$', '\.pyc$'] 
+let NERDTreeIgnoreTmp 				= 
+            \['\.o$[[file]]', 
+            \'\.swp$[[file]]', 
+            \'\.bak$[[file]]', 
+            \'\~$[[file]]', 
+            \'\.d$[[file]]',
+            \'^tags$[[file]]', 
+            \'\.git$[[dir]]', 
+            \'\.out$[[file]]', 
+            \'\.session$[[dir]]', 
+            \'\.viminfo$[[dir]]', 
+            \'\.d.\d*$[[file]]', 
+            \'cscope.*out$[[file]]', 
+            \'\.pyc$[[file]]'] 
 if exists('NERDTreeIgnore')
     let NERDTreeIgnore += NERDTreeIgnoreTmp
 else
