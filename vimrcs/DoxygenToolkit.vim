@@ -14,16 +14,15 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-13 14:46:55
 "==============================================================
-PluginAdd 'vim-scripts/DoxygenToolkit.vim'
+PluginAdd 'vim-scripts/DoxygenToolkit.vim', {'for': ['c', 'cpp']}
 
-let g:load_doxygen_syntax 					= 1
-let g:doxygen_enhanced_color	 			= 1
-let g:DoxygenToolkit_briefTag_funcName 		= "yes"
-" let g:DoxygenToolkit_authorName 			= substitute(system("whoami"), "\s*", "", "g")
+let g:load_doxygen_syntax              = 1
+let g:doxygen_enhanced_color           = 1
+let g:DoxygenToolkit_briefTag_funcName = "yes"
 
-if !exists("g:DoxygenToolkit_vim_maps")
-    let g:DoxygenToolkit_vim_maps = 1
-    nnoremap <silent><leader>dx <esc>:Dox<cr>
-    nnoremap <silent><leader>da <esc>:DoxAuthor<cr>
-    nnoremap <silent><leader>dl <esc>:DoxLic<cr>
-endif
+augroup doxygen_toolkit_init
+    autocmd!
+    autocmd FileType c,cpp nnoremap <silent><leader>dx <esc>:Dox<cr>
+    autocmd FileType c,cpp nnoremap <silent><leader>da <esc>:DoxAuthor<cr>
+    autocmd FileType c,cpp nnoremap <silent><leader>dl <esc>:DoxLic<cr>
+augroup END
