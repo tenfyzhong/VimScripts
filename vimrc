@@ -91,6 +91,7 @@ set laststatus=2    "永远显示状态栏
 
 set number          " 显示行号
 set relativenumber
+set completeopt=menuone
 
 exec "set backupdir=" . g:VIMHOME . ".backupfile"
 exec "set undodir=" . g:VIMHOME . ".undofile"
