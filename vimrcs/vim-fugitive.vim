@@ -67,13 +67,23 @@ augroup fugitive_init
     autocmd! 
     autocmd FileType gitcommit cabbrev <buffer> x silent x
     autocmd FileType gitcommit cabbrev <buffer> q silent q
-    autocmd BufRead,BufNew COMMIT_EDITMSG call cursor(2, 1)
+    autocmd BufRead,BufNew COMMIT_EDITMSG call <SID>set_commit_edit_msg_cursor()
     autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
-if exists('g:vim_fugitive_init')
-    finish
-endif
+function! s:set_commit_edit_msg_cursor()
+    let lnum = 1
+    let last_lnum = line('$')
+    while lnum <= last_lnum
+        let content = getline(lnum)
+        if content =~# '^#'
+            let lnum += 1
+        else
+            break
+        endif
+    endwhile
+    call cursor(lnum, 1)
+endfunction
 
 nnoremap <silent><leader>gw :Gwrite<cr>
 nnoremap <silent><leader>gc :Gcommit<cr>
@@ -82,4 +92,3 @@ nnoremap <silent><leader>gd :Gvdiff<cr>
 nnoremap <silent><leader>gl :silent Glog!<cr>
 nnoremap <silent><leader>gs :Gstatus<cr>
 
-let g:vim_fugitive_init = 1
