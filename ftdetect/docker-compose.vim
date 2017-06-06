@@ -1,1 +1,1 @@
-autocmd BufRead,BufNew docker-compose.yml set ft=docker-compose.yaml
+autocmd BufRead,BufNew docker-compose.yml setlocal ft=docker-compose.yaml
