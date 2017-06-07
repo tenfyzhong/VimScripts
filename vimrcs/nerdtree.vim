@@ -19,6 +19,10 @@
 "          ClearAllBookmarks 清除所有的标签
 "          ReadBookmarks 重新载入标签
 "
+"    nmap: <leader>nt toggle nerdtree
+"          <leader>nc nerdtree cwd
+"          <leader>np nerdtree parrent
+"          <leader>nf nerdtree file
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfyzhong@qq.com
@@ -75,4 +79,6 @@ augroup END
 
 nnoremap <silent><leader>nt :NERDTreeToggle<cr>
 nnoremap <silent><leader>nc :NERDTreeCWD<cr>
+nnoremap <silent><leader>np :NERDTree ..<cr>
+nnoremap <silent><leader>nf :NERDTree %<cr>
 
