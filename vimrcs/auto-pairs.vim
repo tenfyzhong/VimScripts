@@ -17,3 +17,5 @@ let g:AutoPairsShortcutFastWrap = '\ae'
 let g:AutoPairsShortcutJump = '\an'
 let g:AutoPairsShortcutBackInsert = ''
 
+let g:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
+inoremap <buffer><silent> ) <C-R>=AutoPairsInsert(')')<CR>
