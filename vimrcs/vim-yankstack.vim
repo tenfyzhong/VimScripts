@@ -18,3 +18,6 @@
 "==============================================================
 PluginAdd 'tenfyzhong/vim-yankstack'
 
+let g:yankstack_map_keys = 0
+nmap <leader><leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader><leader>P <Plug>yankstack_substitute_newer_paste
