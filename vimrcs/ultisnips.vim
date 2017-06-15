@@ -22,13 +22,5 @@ PluginAdd 'SirVer/ultisnips'
 PluginAdd 'honza/vim-snippets'
 PluginAdd 'tenfyzhong/tsnippets.vim'
 
-augroup load_ultisnips
-    autocmd!
-    autocmd InsertEnter * call plug#load('ultisnips') 
-                \| call plug#load('vim-snippets') 
-                \| call plug#load('tsnippets.vim') 
-                \| autocmd! load_ultisnips
-augroup END
-
 let g:UltiSnipsEditSplit            = "horizontal"
 
