@@ -47,9 +47,11 @@ let g:tagbar_iconchars 			= ['+', '-']
 let g:tagbar_indent             = 1
 let g:tagbar_show_linenumbers   = -1
 
+let s:support_winid = version >= 800 || has('nvim')
+
 function! s:ToggleNerdTreeAndTagbar()
     let l:bufname = bufname('%')
-    if version >= 800
+    if s:support_winid
         let l:winid = win_getid()
         let l:pos = getpos('.')
     endif
@@ -57,7 +59,7 @@ function! s:ToggleNerdTreeAndTagbar()
         silent NERDTreeToggle
     endif
     call <SID>ToggleTagbar()
-    if version >= 800
+    if s:support_winid
         call win_gotoid(l:winid)
         call setpos('.', l:pos)
     endif
@@ -66,12 +68,12 @@ endfunction
 function! s:ToggleTagbar()
     if &filetype != 'startify'
         try
-            if version >= 800
+            if s:support_winid
                 let l:winid = win_getid()
                 let l:pos = getpos('.')
             endif
             silent TagbarToggle
-            if version >= 800
+            if s:support_winid
                 call win_gotoid(l:winid)
                 call setpos('.', l:pos)
             endif

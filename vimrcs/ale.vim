@@ -22,7 +22,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2017-02-08 12:52:47
 "==============================================================
-if version < 800
+if !has('nvim') && version < 800
     finish
 endif
 PluginAdd 'w0rp/ale'
