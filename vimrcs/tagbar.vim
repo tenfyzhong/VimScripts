@@ -24,6 +24,7 @@ if version < 701
 endif
 
 PluginAdd 'majutsushi/tagbar'
+PluginAdd 'lvht/tagbar-markdown'
 
 " 比taglist更现代的代码结构浏览工具
 function! TagbarStatusFunc(current, sort, fname, ...) abort
