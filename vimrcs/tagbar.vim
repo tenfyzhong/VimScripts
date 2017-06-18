@@ -25,6 +25,7 @@ endif
 
 PluginAdd 'majutsushi/tagbar'
 PluginAdd 'tenfyzhong/tagbar-markdown.vim'
+PluginAdd 'tenfyzhong/tagbar-proto.vim'
 
 " 比taglist更现代的代码结构浏览工具
 function! TagbarStatusFunc(current, sort, fname, ...) abort
