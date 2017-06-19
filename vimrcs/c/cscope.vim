@@ -18,8 +18,8 @@
 "		8 or i: Find files #including this file
 "
 "    nmap: <prefix> <c-\> cs find
-"                   <c-_> csc find
-"                   <a-\> vert scs find
+"                   <c-_>s csc find
+"                   <a-_>v vert scs find
 "
 "         <c-]> 跳到定义
 " VIM Version: 7.4
