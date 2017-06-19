@@ -14,7 +14,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-06-28 15:37:06
 "==============================================================
-if system#version() >= 800 || system#nvim()
+if version >= 800 || has('nvim')
     finish
 endif
 

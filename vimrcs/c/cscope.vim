@@ -44,7 +44,7 @@ function! s:ConnectCscope() " {{{ 查找cscope.out并连接
     if p != ''
         execute "cs add " . p . "/cscope.out " . p
 
-        if system#version() >= 800 || system#nvim()
+        if version >= 800 || has('nvim')
             " 定时更新
             if g:cscope_timer == 0
                 let g:cscope_timer = timer_start(600000, 'file#ResetCscope', {'repeat': -1})

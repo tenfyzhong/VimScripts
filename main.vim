@@ -1,5 +1,5 @@
 " Requirement {{{
-if system#version() < 704
+if version < 704
     echoerr "请更新到vim 7.4以上"
     finish
 endif
