@@ -58,13 +58,8 @@ endfunction
 
 augroup CSCOPE_VIMRC
     au!
-    " autocmd FileType c,cpp,java call <SID>ConnectCscope()
     autocmd VimEnter * call <SID>ConnectCscope()
 augroup END
-
-if exists("g:cscope_init")
-    finish
-endif
 
 nnoremap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nnoremap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
