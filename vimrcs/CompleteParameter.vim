@@ -9,4 +9,3 @@
 PluginAdd 'tenfyzhong/CompleteParameter.vim'
 
 let g:complete_parameter_log_level = 4
-inoremap <buffer><silent> ) <C-R>=AutoPairsInsert(')')<CR>
