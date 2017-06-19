@@ -19,7 +19,7 @@
 " created: 2016-04-14 19:48:14
 "==============================================================
 
-if version < 701
+if system#version() < 701
     finish
 endif
 
@@ -50,7 +50,7 @@ let g:tagbar_iconchars 			= ['+', '-']
 let g:tagbar_indent             = 1
 let g:tagbar_show_linenumbers   = -1
 
-let s:support_winid = version >= 800 || has('nvim')
+let s:support_winid = system#version() >= 800 || system#nvim()
 
 function! s:ToggleNerdTreeAndTagbar()
     let l:bufname = bufname('%')

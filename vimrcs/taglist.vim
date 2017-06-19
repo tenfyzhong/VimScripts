@@ -1,5 +1,5 @@
 " taglist
-if version >= 701
+if system#version() >= 701
     finish
 endif
 

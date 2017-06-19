@@ -8,7 +8,7 @@
 "==============================================================
 PluginAdd 'pangloss/vim-javascript'
 
-if version < 704
+if system#version() < 704
     set regexpengine=1
     syntax enable
 endif
