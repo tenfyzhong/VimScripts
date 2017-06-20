@@ -44,7 +44,7 @@ function! s:ConnectCscope() " {{{ 查找cscope.out并连接
     if p != ''
         execute "cs add " . p . "/cscope.out " . p
 
-        if version >= 800
+        if version >= 800 || has('nvim')
             " 定时更新
             if g:cscope_timer == 0
                 let g:cscope_timer = timer_start(600000, 'file#ResetCscope', {'repeat': -1})
@@ -58,13 +58,8 @@ endfunction
 
 augroup CSCOPE_VIMRC
     au!
-    " autocmd FileType c,cpp,java call <SID>ConnectCscope()
     autocmd VimEnter * call <SID>ConnectCscope()
 augroup END
-
-if exists("g:cscope_init")
-    finish
-endif
 
 nnoremap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nnoremap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>

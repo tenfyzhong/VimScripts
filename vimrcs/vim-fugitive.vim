@@ -67,22 +67,17 @@ augroup fugitive_init
     autocmd! 
     autocmd FileType gitcommit cabbrev <buffer> x silent x
     autocmd FileType gitcommit cabbrev <buffer> q silent q
-    autocmd BufRead,BufNew COMMIT_EDITMSG call <SID>set_commit_edit_msg_cursor()
+    autocmd BufEnter *COMMIT_EDITMSG call <SID>set_commit_edit_msg_cursor()
     autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
 function! s:set_commit_edit_msg_cursor()
     let lnum = 1
     let last_lnum = line('$')
-    while lnum <= last_lnum
-        let content = getline(lnum)
-        if content =~# '^#'
-            let lnum += 1
-        else
-            break
-        endif
+    while lnum <= last_lnum && getline(lnum) =~# '\m^#'
+        let lnum += 1
     endwhile
-    call cursor(lnum, 1)
+    call feedkeys(lnum.'gg1|')
 endfunction
 
 nnoremap <silent><leader>gw :Gwrite<cr>
