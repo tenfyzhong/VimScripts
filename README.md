@@ -98,9 +98,11 @@ PluginAdd 'a.vim'
 
 
 ## 命令
-| command           | args   | describe                      |
-|:------------------|:-------|:------------------------------|
-| `PluginAdd`       | 插件名 | 安装插件                      |
+| command     | args   | describe    |
+|:------------|:-------|:------------|
+| `PluginAdd` | 插件名 | 安装插件    |
+| `Bigger`    |        | 加大gui字体 |
+| `Smaller`   |        | 缩小gui字体 |
 
 
 ## 键映射

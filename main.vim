@@ -198,6 +198,12 @@ if &diff
     nnoremap <silent>]4 :diffput 4<CR> :diffupdate<CR>
 endif
 
+if has('gui_running')
+    " gui下，调大调小字体
+    command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
+    command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
+endif
+
 " 普通模式是块光标
 " 插入模式竖线光标
 " 替换模式下横线光标
