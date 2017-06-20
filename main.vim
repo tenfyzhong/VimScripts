@@ -198,6 +198,19 @@ if &diff
     nnoremap <silent>]4 :diffput 4<CR> :diffupdate<CR>
 endif
 
+" 普通模式是块光标
+" 插入模式竖线光标
+" 替换模式下横线光标
+if empty($TMUX)
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+else
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+endif
+
 onoremap af :<c-u>normal! ggVG<CR>
 " }}} 
 
