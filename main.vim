@@ -102,6 +102,10 @@ set diffopt=filler,vertical
 
 set viminfo+=!
 
+set noerrorbells
+set novisualbell
+set t_vb=
+
 set pastetoggle=<leader>p
 set sessionoptions-=buffers
 
