@@ -102,3 +102,12 @@ function! feature#toggle_xxd() "{{{
         set nomodified
     endif
 endfunction "}}}
+
+function! feature#exec_list(...) "{{{ 执行所有的命令，没有返回值
+    for cmd in a:000
+        if empty(cmd)
+            continue
+        endif
+        exec cmd
+    endfor
+endfunction "}}}
