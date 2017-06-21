@@ -9,7 +9,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-14 09:49:19
 "==============================================================
-PluginAdd 'tenfyzhong/file_template.vim'
+PluginAdd 'tenfyzhong/file_template.vim', 9
 
 " let g:file_template_ignore_filetype = ['sh', 'cpp', 'c'] 
 

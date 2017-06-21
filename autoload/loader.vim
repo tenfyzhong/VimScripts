@@ -14,6 +14,19 @@ let b:type_plugin_list += g:type_plugin_list
 
 " }}} --------------------------------------------------------------------------
 
+let s:plugins = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+
+function! s:load_plugins() "{{{ 调用插件管理命令进行加载
+    let level = 0
+    for level_item in s:plugins
+        for [k, v] in items(level_item)
+            exec v
+            call loader#PluginExist(k)
+        endfor
+        let level += 1
+    endfor
+endfunction "}}}
+
 " 加载一个vimrc脚本 ---------------------------------------------------------{{{
 function! loader#LoadSingleVimrc(vimrc, will_check_exist)
     let l:expand_vimrc = escape(expand(a:vimrc), ' ')
@@ -35,7 +48,7 @@ function! s:LoadDirPlugin(dirpath) "{{{
     let l:vim_list          = split(l:vim_path_str, '\n')
     let l:vimrc_list        = l:vimrc_list + l:vim_list
     for vimrc in l:vimrc_list
-            call loader#LoadSingleVimrc(vimrc, 0)
+        call loader#LoadSingleVimrc(vimrc, 0)
     endfor
 endfunction "}}}
 
@@ -60,6 +73,8 @@ function! loader#LoadVimrcs()
         call <SID>LoadDirPlugin(g:vimrc_path . dir)
     endfor
 
+    call <SID>load_plugins()
+
     call plug#end()
     filetype on					" 侦测文件类型	
     filetype plugin on			" 开启文件识别
@@ -69,11 +84,12 @@ endfunction
 " }}} --------------------------------------------------------------------------
 
 " 检查插件是否存在 ----------------------------------------------------------{{{
-function! loader#PluginExist(plugin_name)
-    if isdirectory(g:bundle_path . a:plugin_name)
+function! loader#PluginExist(plugin)
+    let plugin_name = split(a:plugin, "/")[-1]
+    if isdirectory(g:bundle_path . plugin_name)
         return 1
     else
-        call vimlog#ErrorLog(a:plugin_name . ' not exist')
+        call vimlog#ErrorLog(plugin_name . ' not exist')
         return 0
     endif
 endfunction
@@ -84,16 +100,28 @@ endfunction
 " 比如https://github.com/tenfyzhong/jce-highlight
 " 则plugin为tenfyzhong/jce-highlight
 function! loader#BundlePlugin(plugin, ...)
-    " 每个插件只加载一次
-    if !has_key(s:plugin_lists, a:plugin)
-        let s:plugin_lists[a:plugin] = 1
-        let l:plugin_args = join(a:000, ",")
-        if len(l:plugin_args) != 0
-            let l:plugin_args = "," . l:plugin_args
-        endif
-        execute "Plug " . "'" . a:plugin . "'" . l:plugin_args
-        let l:plugin_name   = split(a:plugin, "/")[-1]
-        call loader#PluginExist(l:plugin_name)
+    let loaded = get(s:plugin_lists, a:plugin, 0) 
+    if loaded
+        return
     endif
+    let s:plugin_lists[a:plugin] = 1
+
+    " 每个插件只加载一次
+    let plug_args = {}
+    let level = 5
+    if a:0 == 1 && type(a:1) == 0
+        let level = a:1
+    elseif a:0 == 1 && type(a:1) == 4
+        let plug_args = a:1
+    elseif a:0 == 2 
+        let level = a:2
+        let plug_args = a:1
+    endif
+
+    let level = level % 10
+
+    let cmd = printf("Plug '%s', %s", a:plugin, string(plug_args))
+    let s:plugins[level][a:plugin] = cmd
+
 endfunction
 " }}} --------------------------------------------------------------------------
