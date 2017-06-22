@@ -248,6 +248,8 @@ if g:MSWIN
 else
     call <SID>SourceDirVimrc('.vimrc')
 endif
+
+source ~/.vim/abbreviations.vim
 " }}}
 
 " source plugin {{{
