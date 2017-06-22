@@ -117,7 +117,8 @@ o对应motion模式
 | `k`                       | n     | global             | gk                                      |
 | `gk`                      | n     | global             | k                                       |
 | `;`                       | nx    | global             | :                                       |
-| `<m-,>`                   | n     | global             | ;                                       |
+| `,`                       | n     | global             | ;                                       |
+| `<m-,>`                   | n     | global             | ,                                       |
 | `[1`                      | n     | global             | diff时取窗口1的内容                     |
 | `[2`                      | n     | global             | diff时取窗口2的内容                     |
 | `[3`                      | n     | global             | diff时取窗口3的内容                     |

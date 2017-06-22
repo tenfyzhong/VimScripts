@@ -160,6 +160,7 @@ cnoremap <c-j>              <Down>
 nnoremap <silent><Space>    za
 nnoremap ;                  :
 xnoremap ;                  :
+nnoremap ,                  ;
 nnoremap <leader>w          :wa<CR>
 nnoremap <silent>do         :diffget<cr>:diffupdate<cr>
 nnoremap <silent>dp         :diffput<cr>:diffupdate<cr>
@@ -171,7 +172,7 @@ nnoremap <silent><leader>tn <Esc>:tabnew<cr>
 nnoremap <silent><leader>tc <Esc>:tabclose<cr>
 nnoremap <silent><leader>cf <Esc>:let @"=expand('%')<cr>
 nnoremap <silent><leader>cp <Esc>:let @"=expand('%:p')<cr>
-nnoremap <silent><m-,>      ;
+nnoremap <silent><m-,>      ,
 nnoremap <m-j>              gT
 nnoremap <m-k>              gt
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
