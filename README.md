@@ -144,8 +144,6 @@ o对应motion模式
 | `<leader>p`               | n     | global             | pastetoggle                             |
 | `<leader>xx`              | n     | global             | 在16进制的xxd中切换                     |
 | `<leader>o`               | n     | global             | redraw!                                 |
-| `[count]<leader>lm`       | n     | global             | 当前行向下移动[count]行                 |
-| `[count]<leader>Lm`       | n     | global             | 当前行向上移动[count]行                 |
 | `[count]<leader>l<space>` | n     | global             | 在上面添加[count]个空行                 |
 | `[count]<leader>L<space>` | n     | global             | 在下面添加[count]个空行                 |
 | `<leader>as`              | n     | a.vim              | 在源文件和头文件中切换                  |
@@ -293,3 +291,5 @@ o对应motion模式
 | `<leader>vq`              | n     | vimux              | VimuxCloseRunner                        |
 | `<leader>vc`              | n     | vimux              | VimuxInterruptRunner                    |
 | `<leader>vz`              | n     | vimux              | VimuxZoomRunner                         |
+| `<m-j>`                   | nv    | vim-move           | 当前行或块下移                          |
+| `<m-k>`                   | nv    | vim-move           | 当前行或块上称                          |

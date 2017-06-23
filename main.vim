@@ -178,11 +178,6 @@ nnoremap <m-k>              gt
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 nnoremap <silent><c-o>      <esc>:redraw!<cr>
 
-" 当前行上移
-nnoremap <leader>Lm :<c-u>call feature#exec_list('normal m`', 'move -1-'.v:count1, 'normal ``')<cr>
-" 当前行下移
-nnoremap <leader>lm :<c-u>call feature#exec_list('normal m`', 'move +'.v:count1, 'normal ``')<cr>
-
 " 上面加空行
 nnoremap <leader>L<space> :<c-u>call feature#exec_list('normal m`', 'put! =repeat(nr2char(10), ' . v:count1 . ')', 'normal ``')<cr>
 " 下面加空行
