@@ -18,11 +18,6 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-14 19:48:14
 "==============================================================
-
-if version < 701
-    finish
-endif
-
 PluginAdd 'majutsushi/tagbar'
 PluginAdd 'tenfyzhong/tagbar-markdown.vim'
 PluginAdd 'tenfyzhong/tagbar-proto.vim'
