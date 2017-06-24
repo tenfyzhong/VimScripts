@@ -178,7 +178,7 @@ nnoremap <m-k>              gt
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 nnoremap <silent><c-o>      <esc>:redraw!<cr>
 
-inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
+" inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
 
 " 上面加空行
 nnoremap <leader>L<space> :<c-u>call feature#exec_list('normal m`', 'put! =repeat(nr2char(10), ' . v:count1 . ')', 'normal ``')<cr>
