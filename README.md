@@ -293,3 +293,11 @@ o对应motion模式
 | `<leader>vz`              | n     | vimux              | VimuxZoomRunner                         |
 | `<m-j>`                   | nv    | vim-move           | 当前行或块下移                          |
 | `<m-k>`                   | nv    | vim-move           | 当前行或块上称                          |
+| `<leader>sf`              | n     | ctrlsf             | 开启命令行，提示搜索                    |
+| `<leader>sb`              | n     | ctrlsf             | 对光标的单词进行搜索                    |
+| `<leader>sn`              | n     | ctrlsf             | 把当前光标的单词填到参数，提示搜索      |
+| `<leader>sp`              | n     | ctrlsf             | 把上一次搜索的单词填到参数，提示搜索    |
+| `<leader>st`              | n     | ctrlsf             | 触发ctrlsf窗口                          |
+| `<leader>sr`              | n     | ctrlsf             | 触发在当前目录搜索还是工程目录搜索      |
+| `<leader>sf`              | v     | ctrlsf             | 搜索当前选中的字符串                    |
+| `<leader>sF`              | v     | ctrlsf             | 把选中的填到参数，提示搜索              |
