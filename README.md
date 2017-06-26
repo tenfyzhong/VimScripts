@@ -144,8 +144,6 @@ o对应motion模式
 | `<leader>p`               | n     | global             | pastetoggle                             |
 | `<leader>xx`              | n     | global             | 在16进制的xxd中切换                     |
 | `<leader>o`               | n     | global             | redraw!                                 |
-| `[count]<leader>lm`       | n     | global             | 当前行向下移动[count]行                 |
-| `[count]<leader>Lm`       | n     | global             | 当前行向上移动[count]行                 |
 | `[count]<leader>l<space>` | n     | global             | 在上面添加[count]个空行                 |
 | `[count]<leader>L<space>` | n     | global             | 在下面添加[count]个空行                 |
 | `<leader>as`              | n     | a.vim              | 在源文件和头文件中切换                  |
@@ -293,3 +291,13 @@ o对应motion模式
 | `<leader>vq`              | n     | vimux              | VimuxCloseRunner                        |
 | `<leader>vc`              | n     | vimux              | VimuxInterruptRunner                    |
 | `<leader>vz`              | n     | vimux              | VimuxZoomRunner                         |
+| `<m-j>`                   | nv    | vim-move           | 当前行或块下移                          |
+| `<m-k>`                   | nv    | vim-move           | 当前行或块上称                          |
+| `<leader>sf`              | n     | ctrlsf             | 开启命令行，提示搜索                    |
+| `<leader>sb`              | n     | ctrlsf             | 对光标的单词进行搜索                    |
+| `<leader>sn`              | n     | ctrlsf             | 把当前光标的单词填到参数，提示搜索      |
+| `<leader>sp`              | n     | ctrlsf             | 把上一次搜索的单词填到参数，提示搜索    |
+| `<leader>st`              | n     | ctrlsf             | 触发ctrlsf窗口                          |
+| `<leader>sr`              | n     | ctrlsf             | 触发在当前目录搜索还是工程目录搜索      |
+| `<leader>sf`              | v     | ctrlsf             | 搜索当前选中的字符串                    |
+| `<leader>sF`              | v     | ctrlsf             | 把选中的填到参数，提示搜索              |
