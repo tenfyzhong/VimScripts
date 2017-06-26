@@ -55,7 +55,7 @@
 "==============================================================
 PluginAdd 'dyng/ctrlsf.vim'
 
-let g:ctrlsf_ackprg = 'rg'
+" let g:ctrlsf_ackprg = 'rg'
 let g:ctrlsf_auto_close = 1
 let g:ctrlsf_confirm_save = 0
 let g:ctrlsf_default_root = 'project'
