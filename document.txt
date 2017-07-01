@@ -1,29 +1,4 @@
 "==============================================================
-"    file: ag.vim.vimrc
-"   brief: 使用ag命令来查找字符串或者文件
-"
-" command: :Ag[!] [options] {pattern} [{directory}] 在directory下去查找pattern
-"          :AgBuffer[!] [option] {pattern} 在打开的buffers下去查找pattern
-"          :AgAdd[!] [option] {pattern} [{directory}] 类似Ag,但是会将查找结果拼接在之前的结果之后
-"          :AgHelp[!] [options] {pattern} 在vim documentation中查找pattern
-"          以上四个命令如果在Ag前加L,则使用location-list替换quickfix
-"          :AgFile [options] {pattern} [{directory}] 在目录下去查找文件名匹配pattern的文件
-"
-" buffer nmap:
-"           e open file and close the quickfix window.
-"           o open file (same as enter).
-"           go preview file (open but maintain focus on ag.vim results).
-"           t open in a new tab.
-"           T open in new tab silently.
-"           h open in horizontal split.
-"           H open in horizontal split silently.
-"           v open in vertical split.
-"           gv open in vertical split silently.
-"           q close the quickfix window.
-"
-"==============================================================
-
-"==============================================================
 "    file: agit.vim
 "   brief: gitk插件
 "
@@ -134,6 +109,19 @@
 "==============================================================
 
 "==============================================================
+"    file: DoxygenToolkit.vim.vimrc
+"   brief: 插入doxygen的注释
+"
+" command: :Dox 给函数插入注释
+"          :DoxAuthor 插入作者和版本
+"          :DoxLic 插入证书
+"
+"    nmap: <leader>dx :Dox
+"          <leader>da :DoxAuthor
+"          <leader>dl :DoxLic
+"==============================================================
+
+"==============================================================
 "    file: vim-gencode-cpp.vimrc
 "   brief: 
 "==============================================================
@@ -150,11 +138,6 @@
 
 "==============================================================
 "    file: CompleteParameter.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: completor.vim
 "   brief: 
 "==============================================================
 
@@ -194,6 +177,58 @@
 "==============================================================
 
 "==============================================================
+"    file: ctrlsf.vim
+"   brief: 搜索字符串
+"
+"     nmap: <leader>sf 开启命令行，提示输入文字进行搜索
+"           <leader>sb 对当前光标的单词进行全匹配搜索
+"           <leader>sn 开启命令行，把当前光标的单词填到参数
+"           <leader>sp 开启命令行，当上一次搜索的单词填到参数
+"           <leader>st 触发CtrlSF窗口
+"           <leader>sr 触发在工程目录搜索还是当前目录搜索
+"
+"     vmap: <leader>sf 搜索当前选中的字符串
+"           <leader>sF 开启命令行，把当前选中的填到参数，提示用户输入
+"
+"  command:
+"           CtrlSF [arguments] {pattern} [path] ... 搜索
+"           CtrlSFOpen 重新打开关闭的窗口
+"           CtrlSFUpdate 更新上一次的模式搜索结果
+"           CtrlSFClose 关闭CtrlSF窗口
+"           CtrlSFClearHL 清除高亮
+"           CtrlSFToggle 触发CtrlSF窗口
+"           CtrlSFToggleMap 触发CtrlSF的默认mapping，只有在CtrlSF窗口有用
+"
+" CtrlSF窗口的mapping:
+"         Enter, o, double-click - Open corresponding file of current line in the window which CtrlSF is launched from.
+"         <C-O> - Like Enter but open file in a horizontal split window.
+"         t - Like Enter but open file in a new tab.
+"         p - Like Enter but open file in a preview window.
+"         P - Like Enter but open file in a preview window and switch focus to it.
+"         O - Like Enter but always leave CtrlSF window opening.
+"         T - Like t but focus CtrlSF window instead of new opened tab.
+"         M - Switch result window between normal view and compact view.
+"         q - Quit CtrlSF window.
+"         <C-J> - Move cursor to next match.
+"         <C-K> - Move cursor to previous match.
+" Maps by default in preview window:
+"         <q>            Quit preview mode.
+"
+" Arguments:
+" '-after', '-A'    匹配行后显示的行数
+" '-before', '-B'   匹配行前显示的行数
+" '-context', '-C'  匹配行前后显示的行数
+" '-filetype'       指定搜索的文件类型
+" '-filematch'      指定要搜索的文件名模式进行搜索
+" '-ignorecase', '-I' 忽略大小写
+" '-ignoredir'      忽略目录
+" '-literal', '-L'  literal string
+" '-matchcase', '-S' 识别大小写
+" '-regex', '-R'    使用正则表达式匹配
+" '-smartcase'      smartcase
+"==============================================================
+
+"==============================================================
 "    file: dash.vim.vimrc
 "   brief: dash的vim集成，这个插件只有mac才有用
 "
@@ -213,19 +248,6 @@
 "==============================================================
 "    file: Dockerfile.vim
 "   brief: 
-"==============================================================
-
-"==============================================================
-"    file: DoxygenToolkit.vim.vimrc
-"   brief: 插入doxygen的注释
-"
-" command: :Dox 给函数插入注释
-"          :DoxAuthor 插入作者和版本
-"          :DoxLic 插入证书
-"
-"    nmap: <leader>dx :Dox
-"          <leader>da :DoxAuthor
-"          <leader>dl :DoxLic
 "==============================================================
 
 "==============================================================
@@ -702,7 +724,6 @@
 "
 "    nmap: <leader>tb :TagbarToggle
 "==============================================================
-
 
 "==============================================================
 "    file: tar.vim.vimrc
