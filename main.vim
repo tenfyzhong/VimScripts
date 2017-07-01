@@ -177,6 +177,8 @@ nnoremap <m-j>              gT
 nnoremap <m-k>              gt
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 nnoremap <silent><c-o>      <esc>:redraw!<cr>
+nnoremap <expr> n  'Nn'[v:searchforward]
+nnoremap <expr> N  'nN'[v:searchforward]
 
 " inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
 
