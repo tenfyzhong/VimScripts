@@ -6,11 +6,6 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-16 19:27:54
 "==============================================================
-PluginAdd 'pangloss/vim-javascript'
-
-if version < 704
-    set regexpengine=1
-    syntax enable
-endif
+PluginAdd 'pangloss/vim-javascript', {'for': 'javascript'}
 
 let javascript_enable_domhtmlcss=1

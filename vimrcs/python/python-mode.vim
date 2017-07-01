@@ -57,7 +57,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-26 14:12:24
 "==============================================================
-PluginAdd 'klen/python-mode'
+PluginAdd 'klen/python-mode', {'for': 'python'}
 
 " add paths to sys.path
 let g:pymode_paths = ['~/code/python']

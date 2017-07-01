@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-12-12 13:27:36
 "==============================================================
-PluginAdd 'mitsuhiko/vim-jinja'
+PluginAdd 'mitsuhiko/vim-jinja', {'for': 'jinja'}

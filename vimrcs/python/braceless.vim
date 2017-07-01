@@ -6,7 +6,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-06-19 14:55:45
 "==============================================================
-PluginAdd 'tweekmonster/braceless.vim'
+PluginAdd 'tweekmonster/braceless.vim', {'for': ['python', 'yaml', 'coffee']}
 
 highlight BracelessIndent ctermfg=NONE ctermbg=Black guibg=Grey90 
 

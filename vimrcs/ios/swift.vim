@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2017-03-04 21:27:40
 "==============================================================
-PluginAdd 'keith/swift.vim'
+PluginAdd 'keith/swift.vim', {'for': 'swift'}

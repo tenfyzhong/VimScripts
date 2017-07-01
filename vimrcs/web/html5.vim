@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-16 19:30:03
 "==============================================================
-PluginAdd 'othree/html5.vim'
+PluginAdd 'othree/html5.vim', {'for': 'html'}

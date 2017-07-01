@@ -6,7 +6,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-06-30 23:05:41
 "==============================================================
-PluginAdd 'suan/vim-instant-markdown'
+PluginAdd 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 let g:instant_markdown_autostart = 0
 

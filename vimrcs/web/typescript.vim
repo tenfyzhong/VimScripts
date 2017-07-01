@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2017-06-11 21:40:54
 "==============================================================
-PluginAdd 'leafgarland/typescript-vim'
+PluginAdd 'leafgarland/typescript-vim', {'for': 'typescript'}

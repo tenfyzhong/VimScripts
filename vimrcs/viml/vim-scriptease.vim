@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-06-13 10:44:53
 "==============================================================
-PluginAdd 'tpope/vim-scriptease'
+PluginAdd 'tpope/vim-scriptease', {'for': 'vim'}

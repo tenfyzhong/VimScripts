@@ -15,7 +15,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2017-05-06 11:00:25
 "==============================================================
-PluginAdd 'rust-lang/rust.vim'
+PluginAdd 'rust-lang/rust.vim', {'for': 'rust'}
 
 let g:rustfmt_autosave = 1
 let g:rustfmt_fail_silently = 1

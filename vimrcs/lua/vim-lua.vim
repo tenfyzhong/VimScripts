@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-09-26 09:59:10
 "==============================================================
-PluginAdd 'tbastos/vim-lua'
+PluginAdd 'tbastos/vim-lua', {'for': 'lua'}

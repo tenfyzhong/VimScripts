@@ -13,4 +13,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-16 19:21:43
 "==============================================================
-PluginAdd 'moll/vim-node'
+PluginAdd 'moll/vim-node', {'for': 'node'}
