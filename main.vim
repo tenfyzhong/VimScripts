@@ -106,7 +106,7 @@ set noerrorbells
 set novisualbell
 set t_vb=
 
-set pastetoggle=<leader>p
+" set pastetoggle=<leader>p
 set sessionoptions-=buffers
 
 if !exists('g:once_init_syntax')
@@ -179,6 +179,8 @@ nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 nnoremap <silent><c-o>      <esc>:redraw!<cr>
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
+nnoremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+noremap <leader>y "*y
 
 " inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
 
