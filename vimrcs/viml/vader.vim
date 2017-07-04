@@ -1,4 +1,4 @@
-PluginAdd 'junegunn/vader.vim', {'for': 'vader'}
+PluginAdd 'junegunn/vader.vim'
 augroup vader_init
     autocmd!
     autocmd FileType vader set fdm=marker
