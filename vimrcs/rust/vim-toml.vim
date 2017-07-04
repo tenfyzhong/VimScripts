@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2017-05-06 11:39:45
 "==============================================================
-PluginAdd 'cespare/vim-toml', {'for': 'rust'}
+PluginAdd 'cespare/vim-toml', {'for': 'toml'}
