@@ -17,5 +17,10 @@
 "==============================================================
 PluginAdd 'rust-lang/rust.vim', {'for': 'rust'}
 
-let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 0
 let g:rustfmt_fail_silently = 1
+
+augroup rust_setting
+    autocmd!
+    autocmd FileType rust nnoremap <leader>rr <ESC>:<C-u>RustRun<cr>
+augroup END
