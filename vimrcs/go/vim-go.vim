@@ -84,7 +84,7 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-16 18:46:26
 "==============================================================
-PluginAdd 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries', 'tag': '*'}
+PluginAdd 'fatih/vim-go', {'do': ':GoInstallBinaries', 'tag': '*'}
 
 let g:go_highlight_functions         = 0
 let g:go_highlight_methods           = 0
