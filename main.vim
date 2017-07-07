@@ -15,11 +15,7 @@ let g:log_level = vimlog#error_level()
 let mapleader   = "'"
 let g:MSWIN     = system#IsMswin()
 let g:UNIX      = system#IsUnix()
-if g:MSWIN
-    let g:VIMHOME=fnamemodify("~/vimfiles/", ':p')
-else
-    let g:VIMHOME=fnamemodify("~/.vim/", ':p')
-endif
+let g:VIMHOME = expand('<sfile>:p:h') . '/'
 let g:vimrc_path    = fnamemodify(g:VIMHOME . "vimrcs/", ':p')
 let g:bundle_path   = fnamemodify(g:VIMHOME . "bundle/", ':p')
 " }}} 
