@@ -30,6 +30,9 @@ endfunction
 
 " vimlog#log ----------------------------------------------------------------{{{
 function! vimlog#Log(msg)
+    if $NOVIMWARNING
+        return
+    endif
     echohl ErrorMsg | echom a:msg | echohl None
 endfunction
 " }}} --------------------------------------------------------------------------
