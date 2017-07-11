@@ -172,7 +172,16 @@ nnoremap <silent><m-,>      ,
 nnoremap <m-j>              gT
 nnoremap <m-k>              gt
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
-nnoremap <silent><c-o>      <esc>:redraw!<cr>
+
+function! s:clear_or_redraw() "{{{2
+    if has('nvim') && &buftype == 'terminal'
+        call feedkeys("i\<C-l>\<C-\>\<C-n>gg$", 'n')
+    else
+        redraw!
+    endif
+endfunction "}}}
+nnoremap <silent><c-o> <esc>:call <sid>clear_or_redraw()<cr>
+
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
