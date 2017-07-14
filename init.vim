@@ -18,3 +18,16 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 tnoremap <C-o> <C-l>
+
+function! s:split_window(cmd)
+    exec a:cmd
+    if &buftype ==# 'terminal'
+        terminal
+    endif
+endfunction
+
+nnoremap <c-w>s :call <SID>split_window('sp')<cr>
+nnoremap <c-w>S :call <SID>split_window('sp')<cr>
+nnoremap <c-w><c-s> :call <SID>split_window('sp')<cr>
+nnoremap <c-w>v :call <SID>split_window('vsp')<cr>
+nnoremap <c-w><c-v> :call <SID>split_window('vsp')<cr>
