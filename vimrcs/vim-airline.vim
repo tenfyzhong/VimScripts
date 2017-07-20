@@ -17,8 +17,8 @@
 "      <leader>7 选择tab7的内容
 "      <leader>8 选择tab8的内容
 "      <leader>9 选择tab9的内容
-"      <m-h> 选择左边buffer
-"      <m-l> 选择右边buffer
+"      <leader>h 选择左边buffer
+"      <leader>l 选择右边buffer
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfyzhong@qq.com
@@ -56,8 +56,8 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
-nmap <m-h> <Plug>AirlineSelectPrevTab
-nmap <m-l> <Plug>AirlineSelectNextTab
+nmap <leader>h <Plug>AirlineSelectPrevTab
+nmap <leader>l <Plug>AirlineSelectNextTab
 
 function! AfterAirlineInitSetting()
     call airline#parts#define_function('tablemode', 'TableModeStatusLine')

@@ -169,8 +169,8 @@ nnoremap <silent><leader>tc <Esc>:tabclose<cr>
 nnoremap <silent><leader>cf <Esc>:let @"=expand('%')<cr>
 nnoremap <silent><leader>cp <Esc>:let @"=expand('%:p')<cr>
 nnoremap <silent><m-,>      ,
-nnoremap <m-j>              gT
-nnoremap <m-k>              gt
+nnoremap <leader>j          gT
+nnoremap <leader>k          gt
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 
 function! s:clear_or_redraw() "{{{2
