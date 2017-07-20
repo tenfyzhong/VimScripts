@@ -143,9 +143,8 @@ o对应motion模式
 | `<leader>k`               | n     | global             | gt                                      |
 | `<leader>p`               | n     | global             | pastetoggle                             |
 | `<leader>xx`              | n     | global             | 在16进制的xxd中切换                     |
-| `<leader>o`               | n     | global             | redraw!                                 |
-| `[count]<leader>l<space>` | n     | global             | 在上面添加[count]个空行                 |
-| `[count]<leader>L<space>` | n     | global             | 在下面添加[count]个空行                 |
+| `[count]<leader>o<space>` | n     | global             | 在上面添加[count]个空行                 |
+| `[count]<leader>O<space>` | n     | global             | 在下面添加[count]个空行                 |
 | `<leader>p`               | n     | global             | 粘贴系统粘贴板的内容                    |
 | `<leader>y`               | n     | global             | 复制内容到系统粘贴板                    |
 | `<leader>as`              | n     | a.vim              | 在源文件和头文件中切换                  |
