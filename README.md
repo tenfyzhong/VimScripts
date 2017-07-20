@@ -142,6 +142,7 @@ o对应motion模式
 | `<leader>j`               | n     | global             | gT                                      |
 | `<leader>k`               | n     | global             | gt                                      |
 | `<leader>p`               | n     | global             | pastetoggle                             |
+| `<c-p>`                   | n     | global             | redraw!                                 |
 | `<leader>xx`              | n     | global             | 在16进制的xxd中切换                     |
 | `[count]<leader>o<space>` | n     | global             | 在上面添加[count]个空行                 |
 | `[count]<leader>O<space>` | n     | global             | 在下面添加[count]个空行                 |
