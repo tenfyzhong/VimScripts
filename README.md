@@ -272,17 +272,8 @@ o对应motion模式
 | `<leader>rnp`             | n     | pymode             | generate package                        |
 | `<leader>rs`              | n     | pymode             | change signature                        |
 | `<leader>ru`              | n     | pymode             | use function                            |
-| `<leader>h`               | n     | airline            | 选择左边的buffer                        |
-| `<leader>l`               | n     | airline            | 选择右边的buffer                        |
-| `<leader>1`               | n     | airline            | 选择buffer 1                            |
-| `<leader>2`               | n     | airline            | 选择buffer 2                            |
-| `<leader>3`               | n     | airline            | 选择buffer 3                            |
-| `<leader>4`               | n     | airline            | 选择buffer 4                            |
-| `<leader>5`               | n     | airline            | 选择buffer 5                            |
-| `<leader>6`               | n     | airline            | 选择buffer 6                            |
-| `<leader>7`               | n     | airline            | 选择buffer 7                            |
-| `<leader>8`               | n     | airline            | 选择buffer 8                            |
-| `<leader>9`               | n     | airline            | 选择buffer 9                            |
+| `<leader>h`               | n     | smart-tabline      | 选择左边的buffer                        |
+| `<leader>l`               | n     | smart-tabline      | 选择右边的buffer                        |
 | `<c-h>`                   | n     | vim-tmux-navigator | 移到左边窗口                            |
 | `<c-j>`                   | n     | vim-tmux-navigator | 移到下边窗口                            |
 | `<c-k>`                   | n     | vim-tmux-navigator | 移到上边窗口                            |

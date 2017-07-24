@@ -7,18 +7,6 @@
 "          AirlineToggle 触发airline
 "          ArilineRefresh 刷新airline
 "
-"    nmap: 
-"      <leader>1 选择tab1的内容
-"      <leader>2 选择tab2的内容
-"      <leader>3 选择tab3的内容
-"      <leader>4 选择tab4的内容
-"      <leader>5 选择tab5的内容
-"      <leader>6 选择tab6的内容
-"      <leader>7 选择tab7的内容
-"      <leader>8 选择tab8的内容
-"      <leader>9 选择tab9的内容
-"      <leader>h 选择左边buffer
-"      <leader>l 选择右边buffer
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfyzhong@qq.com
@@ -31,6 +19,8 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ycm#error_symbol = 'E:'
 let g:airline#extensions#ycm#warning_symbol = 'W:'
+let g:airline#extensions#tabline#buffers_label = 't%(%{tabpagenr()}%)/%(%{tabpagenr("$")}%)'
+let g:airline#extensions#tabline#tabs_label = 't'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 0
@@ -56,8 +46,6 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
-nmap <leader>h <Plug>AirlineSelectPrevTab
-nmap <leader>l <Plug>AirlineSelectNextTab
 
 function! AfterAirlineInitSetting()
     call airline#parts#define_function('tablemode', 'TableModeStatusLine')
