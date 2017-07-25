@@ -37,7 +37,7 @@ let g:ale_linters = {
 
 " 关闭pymode的检查
 let g:pymode_lint = 0
-let g:ale_set_quickfix = 1
+let g:ale_set_quickfix = 0
 
 nmap <silent><leader>al <Plug>(ale_lint)
 nmap <silent><leader>ad <Plug>(ale_detail)
