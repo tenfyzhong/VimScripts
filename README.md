@@ -251,6 +251,7 @@ o对应motion模式
 | `<leader>rf`              | n     | vim-go             | go-test-func                            |
 | `<leader>rc`              | n     | vim-go             | go-coverage                             |
 | `<leader>as`              | n     | vim-go             | go-alternate-edit                       |
+| `<leader>rp`              | n     | vim-go             | GoImport                                |
 | `<C-]>`                   | n     | vim-go             | GoDef                                   |
 | `<c-t>`                   | n     | vim-go             | GoDefPop                                |
 | `<leader>rr`              | n     | pymode             | :PymodeRun                              |
