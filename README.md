@@ -230,9 +230,12 @@ o对应motion模式
 | `\an`                     | in    | auto-pairs         | 跳到一个对齐的括号                      |
 | `<leader>dd`              | n     | YouCompleteMe      | 查看当前的错误                          |
 | `<leader>ds`              | n     | dash               | 在dash中搜索当前单词                    |
+| `<leader>fp`              | n     | fzf                | 提示输入FZF命令                         |
 | `<leader>ff`              | n     | fzf                | FZFFiles                                |
 | `<leader>fg`              | n     | fzf                | FZFGFiles                               |
 | `<leader>fb`              | n     | fzf                | FZFBuffers                              |
+| `<leader>fa`              | n     | fzf                | FZFAg                                   |
+| `<leader>fh`              | n     | fzf                | FZFHistory                              |
 | `<leader>fw`              | n     | fzf                | FZFWindowss                             |
 | `<leader>fm`              | n     | fzf                | FZFMarks                                |
 | `<leader>f:`              | n     | fzf                | FZFHistory:                             |

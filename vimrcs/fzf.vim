@@ -29,9 +29,12 @@
 "      `Helptags`        | Help tags [1]
 "      `Filetypes`       | File types
 "
-"    nmap:  <leader>ff :FZFFiles
+"    nmap:  <leader>fp :FZF 提示输入
+"           <leader>ff :FZFFiles
 "           <leader>fg :FZFGFiles
 "           <leader>fb :FZFBuffers
+"           <leader>fa :FZFAg
+"           <leader>fh :FZFHistory
 "           <leader>fw :FZFWindows
 "           <leader>fm :FZFMarks
 "           <leader>f: :FZFHistory:
@@ -57,9 +60,12 @@ endif
 PluginAdd 'junegunn/fzf.vim'
 let g:fzf_command_prefix = 'FZF'
 
+nnoremap <leader>fp :FZF
 nnoremap <leader>ff :FZFFiles<cr>
 nnoremap <leader>fg :FZFGFiles<cr>
 nnoremap <leader>fb :FZFBuffers<cr>
+nnoremap <leader>fa :FZFAg<cr>
+nnoremap <leader>fh :FZFHistory<cr>
 nnoremap <leader>fw :FZFWindows<cr>
 nnoremap <leader>fm :FZFMarks<cr>
 nnoremap <leader>f: :FZFHistory:<cr>
