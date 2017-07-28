@@ -299,9 +299,12 @@
 "      `Helptags`        | Help tags [1]
 "      `Filetypes`       | File types
 "
-"    nmap:  <leader>ff :FZFFiles
+"    nmap:  <leader>fp :FZF 提示输入
+"           <leader>ff :FZFFiles
 "           <leader>fg :FZFGFiles
 "           <leader>fb :FZFBuffers
+"           <leader>fa :FZFAg
+"           <leader>fh :FZFHistory
 "           <leader>fw :FZFWindows
 "           <leader>fm :FZFMarks
 "           <leader>f: :FZFHistory:
@@ -369,6 +372,26 @@
 " command: GoLintFix 修复当前行的错误
 "
 "    nmap: <leader>lf :GoLintFix
+"==============================================================
+
+"==============================================================
+"    file: vim-delve.vim
+"   brief: go的调试器，依赖delve
+"
+" command:
+"    | `DlvAddBreakpoint`             | Add a breakpoint at the current line.
+"    | `DlvAddTracepoint`             | Add a tracepoint at the current line.
+"    | `DlvAttach <pid> [flags]`      | Attach `dlv` to a running process.
+"    | `DlvClearAll`                  | Clear all the breakpoints and tracepoints in the buffer.
+"    | `DlvCore <bin> <dump> [flags]` | Debug core dumps using `dlv core`.
+"    | `DlvDebug [flags]`             | Run `dlv debug` for the current session. Use this to test `main` packages.
+"    | `DlvExec <bin> [flags]`        | Start `dlv` on a pre-built executable.
+"    | `DlvRemoveBreakpoint`          | Remove the breakpoint at the current line.
+"    | `DlvRemoveTracepoint`          | Remove the tracepoint at the current line.
+"    | `DlvTest [flags]`              | Run `dlv test` for the current session. Use this to debug non-`main` packages.
+"    | `DlvToggleBreakpoint`          | Convenience method to toggle (add or remove) a breakpoint at the current line.
+"    | `DlvToggleTracepoint`          | Convenience method to toggle (add or remove) a tracepoint at the current line.
+"    | `DlvVersion`                   | Print the `dlv` version.
 "==============================================================
 
 "==============================================================
@@ -450,6 +473,7 @@
 "          <leader>rt go-test
 "          <leader>rf go-test-func
 "          <leader>rc go-coverage
+"          <leader>rp GoImport
 "          <C-]> GoDef
 "          <c-t> GoDefPop
 "==============================================================
@@ -712,6 +736,10 @@
 "==============================================================
 "    file: smart-tabline.vim
 "   brief: 
+"
+"    nmap:
+"       <leader>h 选择左边的buffer
+"       <leader>l 选择右边的buffer
 "==============================================================
 
 "==============================================================
@@ -770,6 +798,11 @@
 "==============================================================
 
 "==============================================================
+"    file: test.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: tmux.vim
 "   brief: tmux语法文件高亮
 "==============================================================
@@ -781,7 +814,7 @@
 " command: UltiSnipsEdit[!] 为当前filetype打开一个snippet编辑窗口
 "          UltiSnipsAddFileTypes 合并其他文件类型的snippet
 "
-"    imap: <tab>展开
+"    imap: <c-j>展开
 "          <c-tab>列出snippets
 "          <c-j>跳到下一个位置
 "          <c-k>跳到上一个位置
@@ -818,18 +851,6 @@
 "          AirlineToggle 触发airline
 "          ArilineRefresh 刷新airline
 "
-"    nmap: 
-"      <leader>1 选择tab1的内容
-"      <leader>2 选择tab2的内容
-"      <leader>3 选择tab3的内容
-"      <leader>4 选择tab4的内容
-"      <leader>5 选择tab5的内容
-"      <leader>6 选择tab6的内容
-"      <leader>7 选择tab7的内容
-"      <leader>8 选择tab8的内容
-"      <leader>9 选择tab9的内容
-"      <leader>h 选择左边buffer
-"      <leader>l 选择右边buffer
 "==============================================================
 
 "==============================================================
