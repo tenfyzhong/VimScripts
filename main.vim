@@ -59,7 +59,7 @@ set hidden
 
 set showmatch    " 括号匹配
 set ruler        " 显示标尺
-set showmode     " 显示输入的命令
+set noshowmode     
 set confirm        " 在处理未保存或只读文件的时候，弹出确认
 
 set hlsearch     " 高亮search命中的文本
