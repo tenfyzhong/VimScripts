@@ -112,9 +112,9 @@ o对应motion模式
 | map                       | model | script             | describe                                |
 |---------------------------|:------|:-------------------|:----------------------------------------|
 | `<leader>w`               | n     | global             | 保存所有文件                            |
-| `j`                       | n     | global             | gj                                      |
+| `j`                       | n     | global             | 不指定行数时为gj，指定行数时为j         |
+| `k`                       | n     | global             | 不指定行数时为gk，指定行数时为k         |
 | `gj`                      | n     | global             | j                                       |
-| `k`                       | n     | global             | gk                                      |
 | `gk`                      | n     | global             | k                                       |
 | `;`                       | nx    | global             | :                                       |
 | `,`                       | n     | global             | ;                                       |

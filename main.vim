@@ -148,9 +148,9 @@ endif
 
 " global mapping {{{
 nnoremap <leader>           <NOP>
-nnoremap j                  gj
+nnoremap <silent>j          :<c-u>call <SID>jk('j')<cr>
+nnoremap <silent>k          :<c-u>call <SID>jk('k')<cr>
 nnoremap gj                 j
-nnoremap k                  gk
 nnoremap gk                 k
 cnoremap <c-k>              <Up>
 cnoremap <c-j>              <Down>
@@ -175,13 +175,6 @@ nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 nnoremap <silent><Space>    <NOP>
 nnoremap <silent><Space><Space>   zA
 
-function! s:clear_or_redraw() "{{{2
-    if has('nvim') && &buftype == 'terminal'
-        call feedkeys("i\<C-l>\<C-\>\<C-n>gg$", 'n')
-    else
-        redraw!
-    endif
-endfunction "}}}2
 nnoremap <c-p> <esc>:call <sid>clear_or_redraw()<cr>
 
 nnoremap <expr> n  'Nn'[v:searchforward]
@@ -243,14 +236,14 @@ endif
 " }}}
 
 " {{{ source dir vimrc
-function! s:SourceDirVimrc(name) 
+function! s:SourceDirVimrc(name) "{{{2
     let l:dir_vimrc_path = file#FindFile(getcwd(), a:name)
     if l:dir_vimrc_path != '' && 
                 \ l:dir_vimrc_path != fnamemodify(resolve($HOME), ':p')
         let l:dir_vimrc = l:dir_vimrc_path . a:name
         exec 'source ' . l:dir_vimrc
     endif
-endfunction 
+endfunction  "}}}2
 
 if g:MSWIN
     call <SID>SourceDirVimrc('_vimrc')
@@ -269,3 +262,21 @@ source ~/.vim/abbreviations.vim
 call loader#LoadVimrcs()
 " }}} 
 
+" {{{
+function! s:jk(cmd) "{{{2
+    if v:count == 0
+        exec 'normal! g' . a:cmd
+    else
+        exec printf('normal! %d%s', v:count, a:cmd)
+    endif
+endfunction "}}}2
+
+function! s:clear_or_redraw() "{{{2
+    if has('nvim') && &buftype == 'terminal'
+        call feedkeys("i\<C-l>\<C-\>\<C-n>gg$", 'n')
+    else
+        redraw!
+    endif
+endfunction "}}}2
+
+" }}}
