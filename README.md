@@ -297,3 +297,4 @@ o对应motion模式
 | `<leader>sr`              | n     | ctrlsf             | 触发在当前目录搜索还是工程目录搜索      |
 | `<leader>sf`              | v     | ctrlsf             | 搜索当前选中的字符串                    |
 | `<leader>sF`              | v     | ctrlsf             | 把选中的填到参数，提示搜索              |
+| `<leader>bd`              | n     | bbye               | 删除当前buffer不关闭窗口                |
