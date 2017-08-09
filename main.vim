@@ -147,6 +147,7 @@ endif
 " }}} 
 
 " global mapping {{{
+nnoremap <leader>           <NOP>
 nnoremap j                  gj
 nnoremap gj                 j
 nnoremap k                  gk
