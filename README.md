@@ -129,8 +129,7 @@ o对应motion模式
 | `]4`                      | n     | global             | diff时将内容放到窗口4                   |
 | `<c-k>`                   | c     | global             | 命令行上滚                              |
 | `<c-j>`                   | c     | global             | 命令行下滚                              |
-| `<Space>`                 | n     | global             | za                                      |
-| `<leader><Space>`         | n     | global             | zA                                      |
+| `<Space><Space>`          | n     | global             | zA                                      |
 | `<leader>`n               | n     | global             | 切换行号模式                            |
 | `<`                       | v     | global             | `<gv`                                   |
 | `>`                       | v     | global             | `>gv`                                   |

@@ -154,7 +154,6 @@ nnoremap k                  gk
 nnoremap gk                 k
 cnoremap <c-k>              <Up>
 cnoremap <c-j>              <Down>
-nnoremap <silent><Space>    za
 nnoremap ;                  :
 xnoremap ;                  :
 nnoremap ,                  ;
@@ -164,7 +163,6 @@ nnoremap <silent>dp         :diffput<cr>:diffupdate<cr>
 nnoremap <silent><leader>nn :call feature#PollNumber()<cr>
 vnoremap <                  <gv
 vnoremap >                  >gv
-nnoremap <leader><Space>    zA
 nnoremap <silent><leader>tn <Esc>:tabnew<cr>
 nnoremap <silent><leader>tc <Esc>:tabclose<cr>
 nnoremap <silent><leader>cf <Esc>:let @"=expand('%')<cr>
@@ -174,13 +172,16 @@ nnoremap <leader>j          gT
 nnoremap <leader>k          gt
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 
+nnoremap <silent><Space>    <NOP>
+nnoremap <silent><Space><Space>   zA
+
 function! s:clear_or_redraw() "{{{2
     if has('nvim') && &buftype == 'terminal'
         call feedkeys("i\<C-l>\<C-\>\<C-n>gg$", 'n')
     else
         redraw!
     endif
-endfunction "}}}
+endfunction "}}}2
 nnoremap <c-p> <esc>:call <sid>clear_or_redraw()<cr>
 
 nnoremap <expr> n  'Nn'[v:searchforward]
