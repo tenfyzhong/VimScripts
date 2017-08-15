@@ -13,8 +13,8 @@
 "==============================================================
 PluginAdd 'Raimondi/delimitMate'
 
-" let delimitMate_matchpairs = &matchpairs . ",<:>"
-
+let g:delimitMate_expand_cr = 2
+let g:delimitMate_balance_matchpairs = 0
 augroup delimitMate_setting
     autocmd!
     au FileType python let b:delimitMate_nesting_quotes = ['"']

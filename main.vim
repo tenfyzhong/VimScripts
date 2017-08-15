@@ -57,7 +57,7 @@ set autoread    " 文件修改后自动载入
 set cmdheight=1
 set hidden
 
-set showmatch    " 括号匹配
+set noshowmatch  " 括号匹配
 set ruler        " 显示标尺
 set noshowmode     
 set confirm        " 在处理未保存或只读文件的时候，弹出确认
