@@ -37,12 +37,12 @@
 "           <leader>fh :FZFHistory
 "           <leader>fw :FZFWindows
 "           <leader>fm :FZFMarks
-"           <leader>f: :FZFHistory:
+"           <leader>f; :FZFHistory:
 "           <leader>fs :FZFSnippets
 "           <leader>fc :FZFCommands
-"           <leader><tab> nmap模式的map
-"    omap:  <leader><tab> omap模式的map
-"    xmap:  <leader><tab> xmap模式的map
+"           <leader><leader> nmap模式的map
+"    omap:  <leader><leader> omap模式的map
+"    xmap:  <leader><leader> xmap模式的map
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfyzhong@tencent.com
@@ -68,10 +68,10 @@ nnoremap <leader>fa :FZFAg<cr>
 nnoremap <leader>fh :FZFHistory<cr>
 nnoremap <leader>fw :FZFWindows<cr>
 nnoremap <leader>fm :FZFMarks<cr>
-nnoremap <leader>f: :FZFHistory:<cr>
+nnoremap <leader>f; :FZFHistory:<cr>
 nnoremap <leader>fs :FZFSnippets<cr>
 nnoremap <leader>fc :FZFCommands<cr>
 
-nmap <leader><tab> <plug>(fzf-maps-n)
-omap <leader><tab> <plug>(fzf-maps-o)
-xmap <leader><tab> <plug>(fzf-maps-x)
+nmap <leader><leader> <plug>(fzf-maps-n)
+omap <leader><leader> <plug>(fzf-maps-o)
+xmap <leader><leader> <plug>(fzf-maps-x)
