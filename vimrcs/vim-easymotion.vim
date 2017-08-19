@@ -43,6 +43,7 @@ map <tab> <Plug>(easymotion-prefix)
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm'
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 0 
+let g:EasyMotion_verbose = 0
 
 nmap <tab>J <Plug>(easymotion-sol-j)
 nmap <tab>K <Plug>(easymotion-sol-k)
