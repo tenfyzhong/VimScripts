@@ -56,15 +56,6 @@
 "==============================================================
 
 "==============================================================
-"    file: auto-pairs.vimrc
-"   brief: 自动补齐括号
-"
-" (in)map: \ap 开启和关闭auto-pairs
-"          \ae 将后面的单词放到当前括号里
-"          \an 跳到下一个补齐的括号
-"==============================================================
-
-"==============================================================
 "    file: a.vim.vimrc
 "   brief: 在源文件和头文件中跳转
 "
@@ -238,6 +229,16 @@
 "          DashKeywords[!] 显示当前使用的keywords，或者设置keywords 
 "
 "    nmap: <leader>ds 搜索当前光标的单词
+"==============================================================
+
+"==============================================================
+"    file: delimitMate.vimrc
+"   brief: 自动补全右括号引号等
+"
+" command: :DelimitMateReload 重设所有的map
+"          :DelimitMateOn enable DelimitMate mappings
+"          :DelimitMateOff disable DelimitMate mappings
+"          :DelimitMateSwitch switches DelimitMate on and off
 "==============================================================
 
 "==============================================================
@@ -547,6 +548,9 @@
 " command:
 "       MarkdownPreview 打开预览窗口
 "       MarkdownPreviewStop 关闭 markdown 预览窗口，并停止开启的服务进程
+"    nmap:
+"       <leader>rp 打开预览
+"       <leader>rs 停止预览
 "==============================================================
 
 "==============================================================
@@ -992,18 +996,34 @@
 "    file: vim-easymotion.vimrc
 "   brief: 比普通的移动更强大的移动
 "
-"    nmap: <leader><leader>h 行往左
-"          <leader><leader>l 行往右
-"          <leader><leader>s 搜索
-"          <leader><leader>J 跳到下面一行的开头
-"          <leader><leader>K 跳到上面一行的开头
-"          <leader><leader>; 跳到上个模式的下一个位置
-"          <leader><leader>, 跳到上个模式的上一个位置
-"          <leader><leader>f 跨窗口的查找
-"          <leader><leader>L 跨窗口跳到某行
-"          <leader><leader>W 跨窗口跳到某个单词
-"          <leader><leader>w 跳到后面某个单词
-"          <leader><leader>b 跳到前面某个单词
+"    nmap:
+"    Default Mapping   | Details
+"    ------------------|----------------------------------------------
+"    <tab>f{char}      | Find {char} to the right. See |f|.
+"    <tab>F{char}      | Find {char} to the left. See |F|.
+"    <tab>t{char}      | Till before the {char} to the right. See |t|.
+"    <tab>T{char}      | Till after the {char} to the left. See |T|.
+"    <tab>w            | Beginning of word forward. See |w|.
+"    <tab>W            | Beginning of WORD forward. See |W|.
+"    <tab>b            | Beginning of word backward. See |b|.
+"    <tab>B            | Beginning of WORD backward. See |B|.
+"    <tab>e            | End of word forward. See |e|.
+"    <tab>E            | End of WORD forward. See |E|.
+"    <tab>ge           | End of word backward. See |ge|.
+"    <tab>gE           | End of WORD backward. See |gE|.
+"    <tab>j            | Line downward. See |j|.
+"    <tab>k            | Line upward. See |k|.
+"    <tab>n            | Jump to latest "/" or "?" forward. See |n|.
+"    <tab>N            | Jump to latest "/" or "?" backward. See |N|.
+"    <tab>s            | Find(Search) {char} forward and backward. See |f| and |F|.
+"          <tab>J 跳到下面一行的开头
+"          <tab>K 跳到上面一行的开头
+"          <tab>; 跳到上个模式的下一个位置
+"          <tab>, 跳到上个模式的上一个位置
+"          <tab>. 重复操作
+"          <tab>F 跨窗口的查找
+"          <tab>L 跨窗口跳到某行
+"          <tab>W 跨窗口跳到某个单词
 "
 "==============================================================
 
