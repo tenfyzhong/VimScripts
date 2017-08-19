@@ -2,18 +2,34 @@
 "    file: vim-easymotion.vimrc
 "   brief: 比普通的移动更强大的移动
 "
-"    nmap: <leader><leader>h 行往左
-"          <leader><leader>l 行往右
-"          <leader><leader>s 搜索
-"          <leader><leader>J 跳到下面一行的开头
-"          <leader><leader>K 跳到上面一行的开头
-"          <leader><leader>; 跳到上个模式的下一个位置
-"          <leader><leader>, 跳到上个模式的上一个位置
-"          <leader><leader>f 跨窗口的查找
-"          <leader><leader>L 跨窗口跳到某行
-"          <leader><leader>W 跨窗口跳到某个单词
-"          <leader><leader>w 跳到后面某个单词
-"          <leader><leader>b 跳到前面某个单词
+"    nmap:
+"    Default Mapping   | Details
+"    ------------------|----------------------------------------------
+"    <tab>f{char}      | Find {char} to the right. See |f|.
+"    <tab>F{char}      | Find {char} to the left. See |F|.
+"    <tab>t{char}      | Till before the {char} to the right. See |t|.
+"    <tab>T{char}      | Till after the {char} to the left. See |T|.
+"    <tab>w            | Beginning of word forward. See |w|.
+"    <tab>W            | Beginning of WORD forward. See |W|.
+"    <tab>b            | Beginning of word backward. See |b|.
+"    <tab>B            | Beginning of WORD backward. See |B|.
+"    <tab>e            | End of word forward. See |e|.
+"    <tab>E            | End of WORD forward. See |E|.
+"    <tab>ge           | End of word backward. See |ge|.
+"    <tab>gE           | End of WORD backward. See |gE|.
+"    <tab>j            | Line downward. See |j|.
+"    <tab>k            | Line upward. See |k|.
+"    <tab>n            | Jump to latest "/" or "?" forward. See |n|.
+"    <tab>N            | Jump to latest "/" or "?" backward. See |N|.
+"    <tab>s            | Find(Search) {char} forward and backward. See |f| and |F|.
+"          <tab>J 跳到下面一行的开头
+"          <tab>K 跳到上面一行的开头
+"          <tab>; 跳到上个模式的下一个位置
+"          <tab>, 跳到上个模式的上一个位置
+"          <tab>. 重复操作
+"          <tab>F 跨窗口的查找
+"          <tab>L 跨窗口跳到某行
+"          <tab>W 跨窗口跳到某个单词
 "
 " VIM Version: 7.4
 "  author: tenfyzhong
@@ -22,25 +38,20 @@
 "==============================================================
 PluginAdd 'easymotion/vim-easymotion'
 
+map <tab> <Plug>(easymotion-prefix)
+
 let g:EasyMotion_keys = 'asdfghjklqwertyuiopzxcvbnm'
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 0 
 
-map  <Leader><leader>h <Plug>(easymotion-linebackward)
-map  <Leader><leader>l <Plug>(easymotion-lineforward)
-map  <leader><leader>s <Plug>(easymotion-sn)
-nmap <leader><Leader>J <Plug>(easymotion-sol-j)
-nmap <leader><Leader>K <Plug>(easymotion-sol-k)
-nmap <Leader><leader>; <Plug>(easymotion-next)
-nmap <Leader><leader>, <Plug>(easymotion-prev)
-nmap <Leader><leader>. <Plug>(easymotion-repeat)
+nmap <tab>J <Plug>(easymotion-sol-j)
+nmap <tab>K <Plug>(easymotion-sol-k)
+nmap <tab>; <Plug>(easymotion-next)
+nmap <tab>, <Plug>(easymotion-prev)
+nmap <tab>. <Plug>(easymotion-repeat)
 
 " 以下命令可以跨窗口
-map  <leader><leader>f <Plug>(easymotion-bd-f)
-nmap <leader><Leader>f <Plug>(easymotion-overwin-f)
-map  <leader><Leader>L <Plug>(easymotion-bd-jk)
-nmap <leader><Leader>L <Plug>(easymotion-overwin-line)
-map  <leader><Leader>W <Plug>(easymotion-bd-w)
-nmap <leader><Leader>W <Plug>(easymotion-overwin-w)
-
+nmap <tab>F <Plug>(easymotion-overwin-f)
+nmap <tab>L <Plug>(easymotion-overwin-line)
+nmap <tab>W <Plug>(easymotion-overwin-w)
 

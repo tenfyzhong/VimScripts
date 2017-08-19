@@ -300,3 +300,12 @@ o对应motion模式
 | `<leader>bd`              | n     | bbye               | 删除当前buffer不关闭窗口                |
 | `<leader>rp`              | n     | markdown-preview   | 打开预览                                |
 | `<leader>rs`              | n     | markdown-preview   | 停止预览                                |
+| `<tab>J`                  | n     | easymotion         | 跳到某一行的开头                        |
+| `<tab>K`                  | n     | easymotion         | 跳到某一行的结尾                        |
+| `<tab>;`                  | n     | easymotion         | 跳到上个模式的下一个位置                |
+| `<tab>,`                  | n     | easymotion         | 跳到上个模式的上一个位置                |
+| `<tab>.`                  | n     | easymotion         | 重复操作                                |
+| `<tab>F`                  | n     | easymotion         | 跨窗口的查找                            |
+| `<tab>L`                  | n     | easymotion         | 跨窗口跳到某行                          |
+| `<tab>W`                  | n     | easymotion         | 跨窗口跳到某个单词                      |
+
