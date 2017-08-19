@@ -119,7 +119,7 @@ augroup go_filetype_local
     au FileType go nmap <leader>rf <Plug>(go-test-func)
     au FileType go nmap <leader>rc <Plug>(go-coverage-toggle)
     au FileType go nmap <leader>as <Plug>(go-alternate-edit)
-    au Filetype go nnoremap <leader>rp :GoImport 
+    au FileType go nnoremap <leader>rp :GoImport 
 
     autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
     autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
