@@ -308,12 +308,12 @@
 "           <leader>fh :FZFHistory
 "           <leader>fw :FZFWindows
 "           <leader>fm :FZFMarks
-"           <leader>f: :FZFHistory:
+"           <leader>f; :FZFHistory:
 "           <leader>fs :FZFSnippets
 "           <leader>fc :FZFCommands
-"           <leader><tab> nmap模式的map
-"    omap:  <leader><tab> omap模式的map
-"    xmap:  <leader><tab> xmap模式的map
+"           <leader><leader> nmap模式的map
+"    omap:  <leader><leader> omap模式的map
+"    xmap:  <leader><leader> xmap模式的map
 "==============================================================
 
 "==============================================================
@@ -1362,11 +1362,11 @@
 " command: Yanks 显示当前的yank栈
 "
 "    nmap: <m-p> 选择更旧的进行paste
-"          <m-P> 选择更新的进行paste
+"          <m-n> 选择更新的进行paste
 "    xmap: <m-p> 选择更旧的进行paste
-"          <m-P> 选择更新的进行paste
+"          <m-n> 选择更新的进行paste
 "    imap: <m-p> 选择更旧的进行paste
-"          <m-P> 选择更新的进行paste
+"          <m-n> 选择更新的进行paste
 "==============================================================
 
 
