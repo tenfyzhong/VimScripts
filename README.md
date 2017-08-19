@@ -243,7 +243,7 @@ o对应motion模式
 | `<leader><tab>`           | nox   | fzf                | 查找对应的map进行执行                   |
 | `<leader>af`              | n     | autoformat         | 进行autoformat                          |
 | `<m-p>`                   | nxi   | yankstack          | 选择更旧的进行paste                     |
-| `<m-P>`                   | nxi   | yankstack          | 选择更新的进行paste                     |
+| `<m-n>`                   | nxi   | yankstack          | 选择更新的进行paste                     |
 | `<leader>rs`              | n     | vim-go             | go-implements                           |
 | `<leader>ri`              | n     | vim-go             | go-info                                 |
 | `<leader>re`              | n     | vim-go             | go-rename                               |
