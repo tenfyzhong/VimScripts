@@ -37,9 +37,10 @@
 "           <leader>fh :FZFHistory
 "           <leader>fw :FZFWindows
 "           <leader>fm :FZFMarks
-"           <leader>f; :FZFHistory:
+"           <leader>; :FZFHistory:
 "           <leader>fs :FZFSnippets
 "           <leader>fc :FZFCommands
+"           <leader>/ :FZFHistory/
 "           <leader><leader> nmap模式的map
 "    omap:  <leader><leader> omap模式的map
 "    xmap:  <leader><leader> xmap模式的map
@@ -68,10 +69,12 @@ nnoremap <leader>fa :FZFAg<cr>
 nnoremap <leader>fh :FZFHistory<cr>
 nnoremap <leader>fw :FZFWindows<cr>
 nnoremap <leader>fm :FZFMarks<cr>
-nnoremap <leader>f; :FZFHistory:<cr>
+nnoremap <leader>; :FZFHistory:<cr>
 nnoremap <leader>fs :FZFSnippets<cr>
 nnoremap <leader>fc :FZFCommands<cr>
+nnoremap <leader>/ :FZFHistory/<cr>
 
 nmap <leader><leader> <plug>(fzf-maps-n)
 omap <leader><leader> <plug>(fzf-maps-o)
 xmap <leader><leader> <plug>(fzf-maps-x)
+

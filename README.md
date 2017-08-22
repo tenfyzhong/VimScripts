@@ -241,10 +241,11 @@ o对应motion模式
 | `<leader>fh`              | n     | fzf                | FZFHistory                              |
 | `<leader>fw`              | n     | fzf                | FZFWindowss                             |
 | `<leader>fm`              | n     | fzf                | FZFMarks                                |
-| `<leader>f;`              | n     | fzf                | FZFHistory:                             |
+| `<leader>;`               | n     | fzf                | FZFHistory:                             |
 | `<leader>fs`              | n     | fzf                | FZFSnippets                             |
 | `<leader>fc`              | n     | fzf                | FZFCommands                             |
 | `<leader><leader>`        | nox   | fzf                | 查找对应的map进行执行                   |
+| `<leader>/`               | n     | fzf                | FZFHistory/                             |
 | `<leader>af`              | n     | autoformat         | 进行autoformat                          |
 | `<m-p>`                   | nxi   | yankstack          | 选择更旧的进行paste                     |
 | `<m-n>`                   | nxi   | yankstack          | 选择更新的进行paste                     |
