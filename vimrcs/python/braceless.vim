@@ -12,6 +12,6 @@ highlight BracelessIndent ctermfg=NONE ctermbg=Black guibg=Grey90
 
 augroup BRACELESS_SETTING
     autocmd!
-    autocmd FileType python,yaml,coffee BracelessEnable +indent +fold +highlight
+    autocmd FileType python,yaml,coffee BracelessEnable +indent +fold 
 augroup end
 
