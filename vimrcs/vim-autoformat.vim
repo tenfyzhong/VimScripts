@@ -14,7 +14,8 @@ PluginAdd 'Chiel92/vim-autoformat'
 
 let g:formatdef_my_custom_cpp = '"clang-format -style=file"'
 let g:formatters_cpp = ['my_custom_cpp']
-let g:formatter_yapf_style = 'pep8'
+let g:formatters_python = ['my_python']
+let g:formatdef_my_python = "'yapf --style pep8 '"
 
 " augroup autoformat_setting
     " au!
