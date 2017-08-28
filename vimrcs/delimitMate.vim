@@ -17,6 +17,6 @@ let g:delimitMate_expand_cr = 2
 let g:delimitMate_balance_matchpairs = 1
 augroup delimitMate_setting
     autocmd!
-    au FileType python let b:delimitMate_nesting_quotes = ['"']
+    au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
     au FileType markdown let b:delimitMate_nesting_quotes = ['`']
 augroup END
