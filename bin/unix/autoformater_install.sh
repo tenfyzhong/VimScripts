@@ -44,6 +44,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 format_install autopep8 pip
+format_install yapf pip
 
 format_install js-beautify npm -g
 format_install typescript-formatter npm -g
