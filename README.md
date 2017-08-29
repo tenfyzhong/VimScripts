@@ -313,4 +313,6 @@ o对应motion模式
 | `<tab>F`                  | n     | easymotion         | 跨窗口的查找                            |
 | `<tab>L`                  | n     | easymotion         | 跨窗口跳到某行                          |
 | `<tab>W`                  | n     | easymotion         | 跨窗口跳到某个单词                      |
+| `<tab>a`                  | n     | vim-cycle          | 切换到下一项                            |
+| `<tab>x`                  | n     | vim-cycle          | 切换到上一项                            |
 
