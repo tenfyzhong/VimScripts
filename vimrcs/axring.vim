@@ -76,7 +76,7 @@ let g:axring_rings_sh = [
       \ ['if', 'elif', 'else', 'fi'],
       \ ]
 
-let s:axring_rings_css = [
+let g:axring_rings_css = [
       \   ["none", "block"],
       \   ["show", "hide"],
       \   ["left", "right"],
@@ -85,5 +85,10 @@ let s:axring_rings_css = [
       \   ["before", "after"],
       \   ["absolute", "relative"],
       \   ["first", "last"],
+      \ ]
+
+let g:axring_rings_gitrebase = [
+      \   ['p', 'r', 'e', 's', 'f', 'x', 'd'],
+      \   ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec', 'drop'],
       \ ]
 
