@@ -185,9 +185,9 @@ noremap <leader>y "*y
 " inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
 
 " 上面加空行
-nnoremap <leader>O<space> :<c-u>call feature#exec_list('normal m`', 'put! =repeat(nr2char(10), ' . v:count1 . ')', 'normal ``')<cr>
+nnoremap <silent><leader>O<space> :<c-u>call feature#exec_list('normal m`', 'put! =repeat(nr2char(10), ' . v:count1 . ')', 'normal ``')<cr>
 " 下面加空行
-nnoremap <leader>o<space> :<c-u>call feature#exec_list('normal m`', 'put =repeat(nr2char(10), ' . v:count1 . ')', 'normal ``')<cr>
+nnoremap <silent><leader>o<space> :<c-u>call feature#exec_list('normal m`', 'put =repeat(nr2char(10), ' . v:count1 . ')', 'normal ``')<cr>
 
 if &diff
     nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR> 
