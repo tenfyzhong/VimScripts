@@ -227,7 +227,7 @@ o对应motion模式
 | `<leader>gl`              | n     | fugitive           | Glog                                    |
 | `<leader>gs`              | n     | fugitive           | Gstatus                                 |
 | `<leader>aw`              | n     | argwrap            | 参数转换成同行或者换行模式              |
-| `<leader>sw`              | n     | windowswap         | 交换窗口                                |
+| `<leader>sw`              | n     | choosewin          | 选择窗口                                |
 | `\ap`                     | in    | auto-pairs         | 触发补齐                                |
 | `\ae`                     | in    | auto-pairs         | 将后面的单词放到当前括号里              |
 | `\an`                     | in    | auto-pairs         | 跳到一个对齐的括号                      |
