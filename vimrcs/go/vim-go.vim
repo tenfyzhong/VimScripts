@@ -70,14 +70,15 @@
 "          AT 源文件和测试文件中切换，在tab中打开
 "
 "    nmap: <leader>rs go-implements
-"          <leader>ri go-info
+"          <leader>rd go-info
 "          <leader>re go-rename
 "          <leader>rr go-run
 "          <leader>rb go-build
 "          <leader>rt go-test
 "          <leader>rf go-test-func
 "          <leader>rc go-coverage
-"          <leader>rp GoImport
+"          <leader>ri GoImport
+"          <leader>ra GoImportAs
 "          <C-]> GoDef
 "          <c-t> GoDefPop
 " VIM Version: 7.4
@@ -110,8 +111,9 @@ endfunction
 
 augroup go_filetype_local
     autocmd!
+    au FileType go nmap <leader>r  <NOP>
     au FileType go nmap <leader>rs <Plug>(go-implements)
-    au FileType go nmap <Leader>ri <Plug>(go-info)
+    au FileType go nmap <Leader>rd <Plug>(go-info)
     au FileType go nmap <Leader>re <Plug>(go-rename)
     au FileType go nmap <leader>rr <Plug>(go-run)
     au FileType go nnoremap <leader>rb :<c-u>call <SID>build_go_files()<cr>
@@ -119,10 +121,11 @@ augroup go_filetype_local
     au FileType go nmap <leader>rf <Plug>(go-test-func)
     au FileType go nmap <leader>rc <Plug>(go-coverage-toggle)
     au FileType go nmap <leader>as <Plug>(go-alternate-edit)
-    au FileType go nnoremap <leader>rp :GoImport 
+    au FileType go nnoremap <leader>ri :GoImport 
+    au FileType go nnoremap <leader>ra :GoImportAs 
 
-    autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
-    autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
-    autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
-    autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+    autocmd FileType go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+    autocmd FileType go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+    autocmd FileType go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+    autocmd FileType go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 augroup END

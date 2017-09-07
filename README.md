@@ -250,7 +250,7 @@ o对应motion模式
 | `<m-p>`                   | nxi   | yankstack          | 选择更旧的进行paste                     |
 | `<m-n>`                   | nxi   | yankstack          | 选择更新的进行paste                     |
 | `<leader>rs`              | n     | vim-go             | go-implements                           |
-| `<leader>ri`              | n     | vim-go             | go-info                                 |
+| `<leader>rd`              | n     | vim-go             | go-info                                 |
 | `<leader>re`              | n     | vim-go             | go-rename                               |
 | `<leader>rr`              | n     | vim-go             | go-run                                  |
 | `<leader>rb`              | n     | vim-go             | go-build                                |
@@ -258,7 +258,8 @@ o对应motion模式
 | `<leader>rf`              | n     | vim-go             | go-test-func                            |
 | `<leader>rc`              | n     | vim-go             | go-coverage                             |
 | `<leader>as`              | n     | vim-go             | go-alternate-edit                       |
-| `<leader>rp`              | n     | vim-go             | GoImport                                |
+| `<leader>ri`              | n     | vim-go             | GoImport                                |
+| `<leader>ra`              | n     | vim-go             | GoImportAs                              |
 | `<C-]>`                   | n     | vim-go             | GoDef                                   |
 | `<c-t>`                   | n     | vim-go             | GoDefPop                                |
 | `<leader>rr`              | n     | pymode             | :PymodeRun                              |
