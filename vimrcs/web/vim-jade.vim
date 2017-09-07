@@ -6,4 +6,4 @@
 "   email: tenfyzhong@qq.com
 " created: 2016-04-16 19:28:49
 "==============================================================
-PluginAdd 'digitaltoad/vim-jade', {'for': 'jade'}
+PluginAdd 'digitaltoad/vim-jade'
