@@ -133,7 +133,7 @@ o对应motion模式
 | `<leader>`n               | n     | global             | 切换行号模式                            |
 | `<`                       | v     | global             | `<gv`                                   |
 | `>`                       | v     | global             | `>gv`                                   |
-| `af`                      | o     | global             | 整个文件的motion动作                    |
+| `ag`                      | o     | global             | 整个文件的motion动作                    |
 | `<leader>tn`              | n     | global             | :tabnew                                 |
 | `<leader>tc`              | n     | global             | :tabclose                               |
 | `<leader>cf`              | n     | global             | 复制文件名(不包括路径)到匿名缓存区      |

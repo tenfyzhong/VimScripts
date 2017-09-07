@@ -219,7 +219,7 @@ else
   let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 endif
 
-onoremap af :<c-u>normal! ggVG<CR>
+onoremap ag :<c-u>normal! ggVG<CR>
 " }}} 
 
 " command {{{
