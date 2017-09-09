@@ -1,1 +1,1 @@
-autocmd FileType jade setlocal shiftwidth=2 softtabstop=2
+autocmd FileType jade,pug setlocal shiftwidth=2 softtabstop=2
