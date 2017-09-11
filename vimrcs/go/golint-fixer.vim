@@ -7,7 +7,7 @@
 "    nmap: <leader>lf :GoLintFix
 " VIM Version: 8.0
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2017-06-02 20:14:02
 "==============================================================
 PluginAdd 'tenfyzhong/golint-fixer.vim', {'for': 'go'}

@@ -24,7 +24,7 @@
 "          <leader>yk 选择yankring中的上一个进行替换
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 15:49:12
 "==============================================================
 PluginAdd 'tenfyzhong/YankRing.vim'

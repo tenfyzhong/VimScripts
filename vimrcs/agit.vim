@@ -26,7 +26,7 @@
 "        dl			<Plug>(agit-diff-with-local)
 " VIM Version: 8.0
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2017-05-07 13:01:42
 "==============================================================
 PluginAdd 'cohama/agit.vim'

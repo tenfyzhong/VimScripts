@@ -5,7 +5,7 @@
 "    nmap: <leader>gu 触发gundo窗口
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-14 13:23:21
 "==============================================================
 PluginAdd 'sjl/gundo.vim'

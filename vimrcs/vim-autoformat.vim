@@ -7,7 +7,7 @@
 "    nmap: <leader>af 进行format
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-15 17:33:22
 "==============================================================
 PluginAdd 'Chiel92/vim-autoformat'

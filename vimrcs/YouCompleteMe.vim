@@ -24,7 +24,7 @@
 "
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 17:02:00
 "==============================================================
 if has('nvim')

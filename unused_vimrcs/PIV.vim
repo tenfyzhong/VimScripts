@@ -3,7 +3,7 @@
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-07-06 13:47:32
 "==============================================================
 PluginAdd 'spf13/PIV'

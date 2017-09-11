@@ -10,7 +10,7 @@
 "    nmap: <leader>ds 搜索当前光标的单词
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-12-23 13:14:37
 "==============================================================
 if !has('mac')

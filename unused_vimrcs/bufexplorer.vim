@@ -14,7 +14,7 @@
 "
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-10 13:29:46
 "==============================================================
 PluginAdd 'jlanzarotta/bufexplorer'

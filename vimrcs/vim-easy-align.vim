@@ -72,7 +72,7 @@
 "    xmap: ga EasyAlign
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-19 21:50:28
 "==============================================================
 PluginAdd 'junegunn/vim-easy-align'

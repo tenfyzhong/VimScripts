@@ -12,7 +12,7 @@
 "          RustFmtRange 对选择的区域进行格式化
 " VIM Version: 8.0
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2017-05-06 11:00:25
 "==============================================================
 PluginAdd 'rust-lang/rust.vim', {'for': 'rust'}

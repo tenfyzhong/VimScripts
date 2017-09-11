@@ -20,7 +20,7 @@
 "          ConqueTermTab tab窗口运行命令
 " VIM Version: 8.0
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2017-05-04 20:34:44
 "==============================================================
 PluginAdd 'tenfyzhong/Conque-GDB'

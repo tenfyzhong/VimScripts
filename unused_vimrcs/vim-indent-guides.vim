@@ -7,7 +7,7 @@
 "          IndentGuidesDisable 关闭显示indent
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-25 23:16:59
 "==============================================================
 PluginAdd 'nathanaelkane/vim-indent-guides'

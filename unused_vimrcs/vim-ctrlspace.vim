@@ -27,7 +27,7 @@
 " | `B`   | Jump to `B`ookmark List with Search Mode                |
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-07-10 23:36:51
 "==============================================================
 finish

@@ -37,7 +37,7 @@
 "   <LocalLeader>v 选择一个tag
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 18:01:40
 "==============================================================
 PluginAdd 'othree/xml.vim', {'for': 'xml'}

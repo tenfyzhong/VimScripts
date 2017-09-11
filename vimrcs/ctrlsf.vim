@@ -50,7 +50,7 @@
 " '-smartcase'      smartcase
 " VIM Version: 8.0
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2017-06-24 11:10:49
 "==============================================================
 PluginAdd 'dyng/ctrlsf.vim'

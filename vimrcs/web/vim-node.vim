@@ -10,7 +10,7 @@
 "          [I 查询当前字符需要的文件
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 19:21:43
 "==============================================================
 PluginAdd 'moll/vim-node', {'for': 'node'}

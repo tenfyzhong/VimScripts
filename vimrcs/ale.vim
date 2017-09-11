@@ -19,7 +19,7 @@
 "          <leader>ak ALEPreviousWrap
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2017-02-08 12:52:47
 "==============================================================
 if !has('nvim') && version < 800

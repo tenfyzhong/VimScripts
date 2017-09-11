@@ -7,7 +7,7 @@
 "          VimProcInstall {args} build
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 10:57:31
 "==============================================================
 PluginAdd 'Shougo/vimproc.vim', {'do' : 'make'}

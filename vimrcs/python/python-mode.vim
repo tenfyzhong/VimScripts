@@ -54,7 +54,7 @@
 "     <leader>ru use function
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-26 14:12:24
 "==============================================================
 PluginAdd 'klen/python-mode', {'for': 'python'}

@@ -20,7 +20,7 @@
 "	:%S/{,un}nec{ce,ces,e}sar{y,ily}/{}nec{es}sar{}/g
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-15 16:44:39
 "==============================================================
 PluginAdd 'tpope/vim-abolish'

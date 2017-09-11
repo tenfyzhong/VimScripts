@@ -3,7 +3,7 @@
 "   brief: go语言编译查错
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 18:38:32
 "==============================================================
 PluginAdd 'rjohnsondev/vim-compiler-go'

@@ -3,7 +3,7 @@
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-05-02 12:54:16
 "==============================================================
 PluginAdd 'tenfyzhong/vim-binary-reader'

@@ -15,7 +15,7 @@
 "    nmap: <leader>tb :TagbarToggle
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-14 19:48:14
 "==============================================================
 PluginAdd 'majutsushi/tagbar'

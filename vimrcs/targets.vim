@@ -18,7 +18,7 @@
 "   iaIA后加n或者l为下一个或者上一个target
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-07-09 20:29:32
 "==============================================================
 PluginAdd 'wellle/targets.vim'

@@ -12,7 +12,7 @@
 "    gcgc gcu 取消注释
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-15 22:55:23
 "==============================================================
 PluginAdd 'tpope/vim-commentary'

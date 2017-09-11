@@ -36,7 +36,7 @@
 "
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 11:32:02
 "==============================================================
 PluginAdd 'kshenoy/vim-signature'

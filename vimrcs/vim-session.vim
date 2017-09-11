@@ -14,7 +14,7 @@
 "          CloseTabSession 类似于CloseSession，但是只请求当前的tab页
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 11:10:03
 "==============================================================
 PluginAdd 'xolox/vim-session'

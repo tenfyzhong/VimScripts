@@ -8,7 +8,7 @@
 "          :DelimitMateOff disable DelimitMate mappings
 "          :DelimitMateSwitch switches DelimitMate on and off
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-13 14:07:04
 "==============================================================
 PluginAdd 'Raimondi/delimitMate'

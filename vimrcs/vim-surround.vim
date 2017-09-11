@@ -27,7 +27,7 @@
 "           <C-S>
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-08-28 12:47:36
 "==============================================================
 PluginAdd 'tpope/vim-surround'

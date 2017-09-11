@@ -7,7 +7,7 @@
 "    xmap: ["x]gr 使用寄存器内容替换选中内容
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-07-09 20:09:51
 "==============================================================
 PluginAdd 'vim-scripts/ReplaceWithRegister'

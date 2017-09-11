@@ -7,7 +7,7 @@
 "       - 缩小选择
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-15 23:02:18
 "==============================================================
 PluginAdd 'terryma/vim-expand-region'

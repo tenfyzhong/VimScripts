@@ -11,7 +11,7 @@
 "       :SyntasticSetLoclist    
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-06-28 15:37:06
 "==============================================================
 if version >= 800 || has('nvim')

@@ -9,7 +9,7 @@
 "          <c-x> 跳过当前的匹配 
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-15 23:11:50
 "==============================================================
 PluginAdd 'terryma/vim-multiple-cursors'

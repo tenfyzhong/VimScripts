@@ -3,7 +3,7 @@
 "   brief: 使用tab键来进行补全
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-14 20:25:57
 "==============================================================
 PluginAdd 'ervandew/supertab'

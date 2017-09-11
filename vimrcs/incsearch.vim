@@ -5,7 +5,7 @@
 "    nmap: <esc><esc> 取消高亮
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-14 13:34:27
 "==============================================================
 PluginAdd 'haya14busa/incsearch.vim'

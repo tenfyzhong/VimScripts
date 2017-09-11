@@ -13,7 +13,7 @@
 "          <m-n> 选择更新的进行paste
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2017-04-04 17:35:55
 "==============================================================
 PluginAdd 'tenfyzhong/vim-yankstack'

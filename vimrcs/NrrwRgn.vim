@@ -24,7 +24,7 @@
 "    vmap: <leader>nr 将选择的内容放到编辑区
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-07-10 23:31:36
 "==============================================================
 PluginAdd 'chrisbra/NrrwRgn'

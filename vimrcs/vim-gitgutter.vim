@@ -28,7 +28,7 @@
 "          <leader>gg :GitGutter
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-15 14:56:52
 "==============================================================
 PluginAdd 'airblade/vim-gitgutter'

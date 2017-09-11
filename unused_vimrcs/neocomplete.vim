@@ -19,7 +19,7 @@
 "          <c-y>插入候选并关闭菜单
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-08-15 00:01:39
 "==============================================================
 PluginAdd 'Shougo/neocomplete.vim'

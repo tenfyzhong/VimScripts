@@ -83,7 +83,7 @@
 "          <c-t> GoDefPop
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@qq.com
+"   email: tenfy@tenfy.cn
 " created: 2016-04-16 18:46:26
 "==============================================================
 PluginAdd 'fatih/vim-go', {'do': ':GoInstallBinaries', 'tag': '*'}
