@@ -27,9 +27,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 17:02:00
 "==============================================================
-if has('nvim')
-    finish
-endif
 PluginAdd 'Valloric/YouCompleteMe', {'frozen': 1, 'do': './install.py --all'}
 PluginAdd 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': ['c', 'cpp'] }
 
