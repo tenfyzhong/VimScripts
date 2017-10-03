@@ -56,5 +56,5 @@ nmap <tab>F <Plug>(easymotion-overwin-f)
 nmap <tab>L <Plug>(easymotion-overwin-line)
 nmap <tab>W <Plug>(easymotion-overwin-w)
 
-hi EasyMotionTarget2First ctermbg=none ctermfg=White
-hi EasyMotionTarget2Second ctermbg=none ctermfg=Blue
+hi EasyMotionTarget2First ctermbg=none ctermfg=DarkBlue
+hi EasyMotionTarget2Second ctermbg=none ctermfg=DarkBlue
