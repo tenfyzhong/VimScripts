@@ -1,130 +1,23 @@
 "==============================================================
-"    file: agit.vim
-"   brief: gitk插件
+"    file: vim-abolish.vimrc
+"   brief: 一次查找,替换,缩写多个字符串
 "
-" command: Agit [{options}] 打开一个agit的tab
-"          AgitFile [{options}] 只打开当前文件相关的log
+" command: 
+"	:Abolish [options] {abbreviation} {replacement}
+"	:Abolish -delete [options] {abbreviation}
+"	:Abolish -search [options] {pattern}
+"	:Subvert/{pattern}[/flags]
+"	:Abolish!-search [options] {pattern}
+"	:Subvert?{pattern}[?flags]
+"	:Abolish -search [options] {pattern} {grep-arguments}
+"	:Subvert /{pattern}/[flags] {grep-options}
+"	:Abolish!-search [options] {pattern} {grep-arguments}
+"	:Subvert!/{pattern}/[flags] {grep-options}
+"	:[range]Abolish -substitute [options] {pattern} {replacement}
+"	:[range]Subvert/{pattern}/{replacement}[/flags]
 "
-"    nmap: 
-"        J			<Plug>(agit-scrolldown-stat)
-"        K			<Plug>(agit-scrollup-stat)
-"        <C-j>		<Plug>(agit-scrolldown-diff)
-"        <C-k>		<Plug>(agit-scrollup-diff)
-"        u			<PLug>(agit-reload)
-"        yh			<Plug>(agit-yank-hash)
-"        <C-g>		<Plug>(agit-print-commitmsg)
-"        q			<Plug>(agit-exit)
-"        C			<Plug>(agit-git-checkout)
-"        cb			<Plug>(agit-git-checkout-b)
-"        D			<Plug>(agit-git-branch-d)
-"        rs			<Plug>(agit-git-reset-soft)
-"        rm			<Plug>(agit-git-reset)
-"        rh			<Plug>(agit-git-reset-hard)
-"        rb			<Plug>(agit-git-rebase)
-"        ri			<Plug>(agit-git-rebase-i)
-"        di			<Plug>(agit-diff)
-"        dl			<Plug>(agit-diff-with-local)
-"==============================================================
-
-"==============================================================
-"    file: ale.vimrc
-"   brief: 异步语法检查
-"
-" command: ALELint 进行检查
-"          ALEPrevious 上一个错误或警告,不循环
-"          ALEPreviousWrap 上一个错误或警告,循环
-"          ALENext 下一个错误或警告,不循环
-"          ALENextWrap 下一个错误或警告,循环
-"          ALEToggle 触发启用ale
-"          ALEEnable 启用ale
-"          ALEDisable 禁用ale
-"          ALEDetail 显示完整的错误信息在底行
-"
-"    nmap: <leader>al ALELint
-"          <leader>ad ALEDetail
-"          <leader>at ALEToggle
-"          <leader>aj ALENextWrap
-"          <leader>ak ALEPreviousWrap
-"==============================================================
-
-"==============================================================
-"    file: asyncrun.vim
-"   brief: 异步执行外部程序
-"
-" command: AsyncRun[!] [options] {cmd} 执行cmd命令，[!]关闭自动滚动
-"          AsyncStop[!] 停止任务，[!]会使用KILL信号
-"==============================================================
-
-"==============================================================
-"    file: axring.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: a.vim.vimrc
-"   brief: 在源文件和头文件中跳转
-"
-" command: A 头文件跳到源文件中,或者相反
-"          AS split和跳转
-"          AV vertical split和跳转
-"          AT new tab和跳转
-"          AN cycles through matches
-"          IH 跳转到cursor下的文件
-"          IHS split和跳转
-"          IHV vertical split和跳转
-"          IHT new tab和跳转
-"          ITN cycles through matches
-"
-"    nmap: <leader>as :A
-"==============================================================
-
-"==============================================================
-"    file: cscope.vimrc
-"   brief: 
-"
-" command: cs help 帮助
-"          cs kill 断开链接
-"          cs reset 重新链接
-"          cs show 显示链接
-"          cs find {querytype} {name}
-"             querytype可以是下面的选项
-"		0 or s: Find this C symbol
-"		1 or g: Find this definition
-"		2 or d: Find functions called by this function
-"		3 or c: Find functions calling this function
-"		4 or t: Find this text string
-"		6 or e: Find this egrep pattern
-"		7 or f: Find this file
-"		8 or i: Find files #including this file
-"
-"    nmap: <prefix> <c-\> cs find
-"                   <c-_>s csc find
-"                   <a-_>v vert scs find
-"
-"         <c-]> 跳到定义
-"==============================================================
-
-"==============================================================
-"    file: DoxygenToolkit.vim.vimrc
-"   brief: 插入doxygen的注释
-"
-" command: :Dox 给函数插入注释
-"          :DoxAuthor 插入作者和版本
-"          :DoxLic 插入证书
-"
-"    nmap: <leader>dx :Dox
-"          <leader>da :DoxAuthor
-"          <leader>dl :DoxLic
-"==============================================================
-
-"==============================================================
-"    file: vim-gencode-cpp.vimrc
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: vim-gtest.vimrc
-"   brief: 
+"	eg:
+"	:%S/{,un}nec{ce,ces,e}sar{y,ily}/{}nec{es}sar{}/g
 "==============================================================
 
 "==============================================================
@@ -133,272 +26,94 @@
 "==============================================================
 
 "==============================================================
-"    file: CompleteParameter.vim
-"   brief: 
+"    file: vim-swap.vimrc
+"   brief: 交换items
+"
+"    nmap: 
+"       g< 与左边项交换
+"       g> 与右边项交换
+"       gs 进入交互模式
+"    xmap:
+"       gs 交互模式
 "==============================================================
 
 "==============================================================
-"    file: Conque-GDB.vim
-"   brief: 在vim中使用gdb
-"          vim中使用命令行
+"    file: vim-rename.vimrc
+"   brief: 重命名当前的buffer文件
 "
-" command: 启动gdb
-"          ConqueGdb
-"          ConqueGdb program
-"          ConqueGdb -d dir --args program [arguments]
-"          ConqueGdbSplit 水平分割出调试窗口
-"          ConqueGdbVSplit 垂直分割调试窗口
-"          ConqueGdbTab 开一个新tab打开调试窗口
-"          ConqueGdbBDelete 删除ConqueGdb打开的buffer
-"          ConqueGdbCommand 在非gdb窗口中给gdb发送命令
-"          ConqueGdbExe 设置gdb运行程序
+" command: Rename {new name}
+"==============================================================
+
+
+"==============================================================
+"    file: vim-fugitive.vimrc
+"   brief: 运行git命令
 "
-"          ConqueTerm <command> 在当前窗口运行command
-"          ConqueTermSplit 水平分割窗口运行命令
-"          ConqueTermVSplit 垂直分割窗口运行命令
-"          ConqueTermTab tab窗口运行命令
+" command: 
+"     Git! [args] 运行git命令,先cd到版本库的根目录,再执行!git [args],叹号会将输入放到一个临时buffer中
+"     Gcd [directory] cd到版本库的相对目录
+"     Glcd [directory] lcd到版本库的相对目录
+"     Gstatus 显示当前版本库的状态
+"     Gcommit [args] 提交修改,没有内容提交时会执行Gstatus
+"     Gmerge [args] 合并
+"     Gpull [args] git pull
+"     Gpush [args] git push
+"     Gfetch [args] git fetch
+"     Ggrep [args] git-grep
+"     Glgrep [args] git-grep
+"     {range}Glog [args] git log
+"     Gllog [args] like Glog
+"     Gedit [revision] :edit a fugitive-revision
+"     Gsplit! [revision] :split a fugitive-revison
+"     Gvsplit! [revision] :vsplit a fugitive-revison
+"     Gtabedit! [revision] :tabedit a fugitive-revison
+"     Gpedit! [revision] :pedit a fugitive-revison
+"     {range}Gread [revision] 读入一个revision到一个新buffer，保留range的内容
+"     {range}Gread! [args] 清空buffer，将args命令的内容写到buffer，保留range的内容
+"     Gwrite {path} 将文件写入path
+"     Gwq[!] [path] 类似于Gwrite!,写成功的话就执行:quit[!]命令
+"     Gdiff [revision] 使用vimdiff与一个revision的内容做比较，不给revision就用index的内容做比较
+"     Gsdiff [revision] 类似于Gdiff，但是总是split
+"     Gvdiff [revision] 类似于Gdiff，但是总是vertical split
+"     Gmove[!] {destination} git mv，!相当于传参数-f
+"     Gremove[!] 删除当前buffer,如果是在index中的文件,--cached会传过去,!会传入-f
+"     {range}Gblame [flags] 运行git-blame,flags可以是ltfnsewMC,传给git-blame,range会作用于特定范围
+"     Gbrowse {revision} 打开当前file,blob,tree,commit,tag的上流
+"     Gbrowse [...]@{remote} 强制使用给定的remote
+"     {range}Gbrowse[!] [args] 
+"
+"    nmap: <leader>gw Gwrite
+"          <leader>gc Gcommit
+"          <leader>gb Gblame
+"          <leader>gd Gvdiff
+"          <leader>gl Glog
+"          <leader>gs Gstatus
+"
+"    cmap: <c-r><c-g> 在命令行中返回当前文件
+"          ["x]y<c-g> 粘贴当前对象的提交sha值
+"    在git object下的map
+"    nmap:
+"      <CR> Jump to the revision under the cursor.
+"      o    Jump to the revision under the cursor in a new split.
+"      S    Jump to the revision under the cursor in a new vertical split.
+"      O    Jump to the revision under the cursor in a new tab.
+"      -    Go to the tree containing the current tree or blob.
+"      ~    Go to the current file in the [count]th first ancestor.
+"      P    Go to the current file in the [count]th parent.
+"      C    Go to the commit containing the current file.
+"      .    Start a : command line with the current revision prepopulated at the end of the line.
+"      a    Show the current tag, commit, or tree in an alternate format.
 "==============================================================
 
 "==============================================================
-"    file: csv.vim.vimrc
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: ctags.vimrc
-"   brief: 使用ctags进行跳转,需要链接tags
+"    file: vim-multiple-cursors.vimrc
+"   brief: 选择多个相同的字符串
 "
-"    nmap: <c-]> 跳转到当前字符串的定义处,与cscope一起使用的话,先使用cscope的功能
+" command: MultipleCursorFind 在整个文件或者range中匹配
 "
-"==============================================================
-
-"==============================================================
-"    file: ctrlsf.vim
-"   brief: 搜索字符串
-"
-"     nmap: <leader>sf 开启命令行，提示输入文字进行搜索
-"           <leader>sb 对当前光标的单词进行全匹配搜索
-"           <leader>sn 开启命令行，把当前光标的单词填到参数
-"           <leader>sp 开启命令行，当上一次搜索的单词填到参数
-"           <leader>st 触发CtrlSF窗口
-"           <leader>sr 触发在工程目录搜索还是当前目录搜索
-"
-"     vmap: <leader>sf 搜索当前选中的字符串
-"           <leader>sF 开启命令行，把当前选中的填到参数，提示用户输入
-"
-"  command:
-"           CtrlSF [arguments] {pattern} [path] ... 搜索
-"           CtrlSFOpen 重新打开关闭的窗口
-"           CtrlSFUpdate 更新上一次的模式搜索结果
-"           CtrlSFClose 关闭CtrlSF窗口
-"           CtrlSFClearHL 清除高亮
-"           CtrlSFToggle 触发CtrlSF窗口
-"           CtrlSFToggleMap 触发CtrlSF的默认mapping，只有在CtrlSF窗口有用
-"
-" CtrlSF窗口的mapping:
-"         Enter, o, double-click - Open corresponding file of current line in the window which CtrlSF is launched from.
-"         <C-O> - Like Enter but open file in a horizontal split window.
-"         t - Like Enter but open file in a new tab.
-"         p - Like Enter but open file in a preview window.
-"         P - Like Enter but open file in a preview window and switch focus to it.
-"         O - Like Enter but always leave CtrlSF window opening.
-"         T - Like t but focus CtrlSF window instead of new opened tab.
-"         M - Switch result window between normal view and compact view.
-"         q - Quit CtrlSF window.
-"         <C-J> - Move cursor to next match.
-"         <C-K> - Move cursor to previous match.
-" Maps by default in preview window:
-"         <q>            Quit preview mode.
-"
-" Arguments:
-" '-after', '-A'    匹配行后显示的行数
-" '-before', '-B'   匹配行前显示的行数
-" '-context', '-C'  匹配行前后显示的行数
-" '-filetype'       指定搜索的文件类型
-" '-filematch'      指定要搜索的文件名模式进行搜索
-" '-ignorecase', '-I' 忽略大小写
-" '-ignoredir'      忽略目录
-" '-literal', '-L'  literal string
-" '-matchcase', '-S' 识别大小写
-" '-regex', '-R'    使用正则表达式匹配
-" '-smartcase'      smartcase
-"==============================================================
-
-"==============================================================
-"    file: dash.vim.vimrc
-"   brief: dash的vim集成，这个插件只有mac才有用
-"
-" command: Dash[!] [TERM] [KEYWORD] 在dash中搜索当前文件类型的关键字，
-"                 [!]则全局搜索，第1个参数是要搜索的内容，第二个参数是doc
-"                 set类型
-"          DashKeywords[!] 显示当前使用的keywords，或者设置keywords 
-"
-"    nmap: <leader>ds 搜索当前光标的单词
-"==============================================================
-
-"==============================================================
-"    file: delimitMate.vimrc
-"   brief: 自动补全右括号引号等
-"
-" command: :DelimitMateReload 重设所有的map
-"          :DelimitMateOn enable DelimitMate mappings
-"          :DelimitMateOff disable DelimitMate mappings
-"          :DelimitMateSwitch switches DelimitMate on and off
-"==============================================================
-
-"==============================================================
-"    file: deoplete.nvim.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: diffchar.vim.vimrc
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: Dockerfile.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: FastFlod.vimrc
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: file_template.vim.vimrc
-"   brief: 自动根据文件类型插入文件头注释
-"
-" command: InsertTemplate 在文件头部插入注释
-"
-"==============================================================
-
-"==============================================================
-"    file: fzf.vim.vimrc
-"   brief: 适配fzf工具
-"
-" command: [!]进行全屏模式
-"      FZF {option} {path} " 从path进行搜索，不提供时为当前目录
-"      以下命令以FZF为前缀
-"      `Files [PATH]`    | Files (similar to  `:FZF` )
-"      `GFiles [OPTS]`   | Git files (git ls-files)
-"      `GFiles?`         | Git files (git status)
-"      `Buffers`         | Open buffers
-"      `Colors`          | Color schemes
-"      `Ag [PATTERN]`    | {ag}{5} search result (ALT-A to select all, ALT-D to deselect all)
-"      `Lines [QUERY]`   | Lines in loaded buffers
-"      `BLines [QUERY]`  | Lines in the current buffer
-"      `Tags [QUERY]`    | Tags in the project ( `ctags -R` )
-"      `BTags [QUERY]`   | Tags in the current buffer
-"      `Marks`           | Marks
-"      `Windows`         | Windows
-"      `Locate PATTERN`  |  `locate`  command output
-"      `History`         |  `v:oldfiles`  and open buffers
-"      `History:`        | Command history
-"      `History/`        | Search history
-"      `Snippets`        | Snippets ({UltiSnips}{6})
-"      `Commits`         | Git commits (requires {fugitive.vim}{7})
-"      `BCommits`        | Git commits for the current buffer
-"      `Commands`        | Commands
-"      `Maps`            | Normal mode mappings
-"      `Helptags`        | Help tags [1]
-"      `Filetypes`       | File types
-"
-"    nmap:  <leader>fp :FZF 提示输入
-"           <leader>ff :FZFFiles
-"           <leader>fg :FZFGFiles
-"           <leader>fb :FZFBuffers
-"           <leader>fa :FZFAg
-"           <leader>fh :FZFHistory
-"           <leader>fw :FZFWindows
-"           <leader>fm :FZFMarks
-"           <leader>; :FZFHistory:
-"           <leader>fs :FZFSnippets
-"           <leader>fc :FZFCommands
-"           <leader>/ :FZFSearchHistory
-"           <leader><leader> nmap模式的map
-"    omap:  <leader><leader> omap模式的map
-"    xmap:  <leader><leader> xmap模式的map
-"==============================================================
-
-"==============================================================
-"    file: gist-vim.vim
-"   brief: 向gist.github.com提交gist
-"
-" command: Gist 把当前buffer提交到gist
-"          '<,'>Gist 把选择的内容提交的gist
-"          Gist -p 创建一个private的gist
-"          Gist --private 
-"          Gist -P 创建了个public的gist
-"          Gist --public 
-"          Gist -a 创建一个匿名的gist
-"          Gist --anonymous
-"          Gist -m 对所有打开的buffer创建一个gist
-"          Gist --multibuffer
-"          Gist -e 编辑一个打开的gist
-"          Gist --edit
-"          Gist -e foo.js 使用foo.js编辑gist
-"          Gist -s something 提交gist并增加描述
-"          Gist --description something
-"          Gist -e -s something
-"          Gist -d 删除打开的gist
-"          Gist --delete
-"          Gist -f fork打开的gist
-"          Gist --fork
-"          Gist +1 对打开的gist加星
-"          Gist -1 取消对打开的gist加星
-"          Gist xxxxx 拉取gist xxxxx
-"          Gist -c xxxxx 把gist xxxxx拉下来并复制到clipboard
-"          Gist -l 列出你所有的gist
-"          Gist --list
-"          Gist -l username 列出username所有的gist
-"          Gist -la 列出所有人的gist
-"          Gist --listall
-"          Gist -b 在浏览器打开gist
-"          Gist --browser
-"          Gist! 当成新的gist进来post
-"
-"   在gist列表页:
-"   'o'/<ENTER> 打开当前的gist
-"   'b' 在浏览器打开当前的gist
-"   'y' 复制到clipboard
-"   'p' 复制粘贴
-"   <ESC> 关闭列表
-"==============================================================
-
-"==============================================================
-"    file: github-complete.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: golint-fixer.vim
-"   brief: 修复请求错误
-"
-" command: GoLintFix 修复当前行的错误
-"
-"    nmap: <leader>lf :GoLintFix
-"==============================================================
-
-"==============================================================
-"    file: vim-delve.vim
-"   brief: go的调试器，依赖delve
-"
-" command:
-"    | `DlvAddBreakpoint`             | Add a breakpoint at the current line.
-"    | `DlvAddTracepoint`             | Add a tracepoint at the current line.
-"    | `DlvAttach <pid> [flags]`      | Attach `dlv` to a running process.
-"    | `DlvClearAll`                  | Clear all the breakpoints and tracepoints in the buffer.
-"    | `DlvCore <bin> <dump> [flags]` | Debug core dumps using `dlv core`.
-"    | `DlvDebug [flags]`             | Run `dlv debug` for the current session. Use this to test `main` packages.
-"    | `DlvExec <bin> [flags]`        | Start `dlv` on a pre-built executable.
-"    | `DlvRemoveBreakpoint`          | Remove the breakpoint at the current line.
-"    | `DlvRemoveTracepoint`          | Remove the tracepoint at the current line.
-"    | `DlvTest [flags]`              | Run `dlv test` for the current session. Use this to debug non-`main` packages.
-"    | `DlvToggleBreakpoint`          | Convenience method to toggle (add or remove) a breakpoint at the current line.
-"    | `DlvToggleTracepoint`          | Convenience method to toggle (add or remove) a tracepoint at the current line.
-"    | `DlvVersion`                   | Print the `dlv` version.
+"    nmap: <c-n> 选择下一个匹配
+"          <c-p> 选择上一个匹配
+"          <c-x> 跳过当前的匹配 
 "==============================================================
 
 "==============================================================
@@ -487,69 +202,32 @@
 "==============================================================
 
 "==============================================================
-"    file: gundo.vim.vimrc
-"   brief: undo历史
+"    file: golint-fixer.vim
+"   brief: 修复请求错误
 "
-"    nmap: <leader>gu 触发gundo窗口
-"==============================================================
-
-"==============================================================
-"    file: incsearch.vim.vimrc
-"   brief: 高亮查找,/和?查找时会启用
+" command: GoLintFix 修复当前行的错误
 "
-"    nmap: <esc><esc> 取消高亮
-"==============================================================
-
-
-"==============================================================
-"    file: swift.vim
-"   brief: 
+"    nmap: <leader>lf :GoLintFix
 "==============================================================
 
 "==============================================================
-"    file: vim-javacomplete2.vimrc
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: vim-json.vimrc
-"   brief: 高亮json
-"==============================================================
-
-"==============================================================
-"    file: large_file.vim
-"   brief: 
-"==============================================================
-
-
-"==============================================================
-"    file: vim-lua.vimrc
-"   brief: lua的高亮和缩进
-"==============================================================
-
-"==============================================================
-"    file: Mark--Karkat.vimrc
-"   brief: 高亮字符串
+"    file: vim-delve.vim
+"   brief: go的调试器，依赖delve
 "
-"    nmap: <leader>m 高亮或者取消高亮
-"          <tab>m 清除所有的高亮
-"          <tab>n 在高亮处理则取消高亮，否则关闭或者开启高亮
-"          <tab>r 输入正则表达式来进行高亮或者取消高亮
-"          <tab>* 跳到当前高亮字符串的下一个高亮处,并记为"last mark",
-"                 不在高亮字符串的时候跳到下一个"last mark"处
-"          <tab># 跳到当前高亮字符串的上一个高亮处,并记为"last mark",
-"                 不在高亮字符串的时候跳到上一个"last mark"处
-"          <tab>/ 跳到下一个任意的高亮处
-"          <tab>? 跳到上一个任意的高亮处
-"
-"   vmap:  <tab>r 输入正则表达式来进行高亮或者取消高亮
-"
-" command: Mark {pattern} 高亮pattern.只能是ignorecase
-"          Mark 暂时去掉高亮,再次调用则高亮
-"          MarkClear 清除所有的高亮
-"          MarkSave 保存高亮,默认自动保存
-"          MarkLoad 加载高亮,不默认自动加载
-"
+" command:
+"    | `DlvAddBreakpoint`             | Add a breakpoint at the current line.
+"    | `DlvAddTracepoint`             | Add a tracepoint at the current line.
+"    | `DlvAttach <pid> [flags]`      | Attach `dlv` to a running process.
+"    | `DlvClearAll`                  | Clear all the breakpoints and tracepoints in the buffer.
+"    | `DlvCore <bin> <dump> [flags]` | Debug core dumps using `dlv core`.
+"    | `DlvDebug [flags]`             | Run `dlv debug` for the current session. Use this to test `main` packages.
+"    | `DlvExec <bin> [flags]`        | Start `dlv` on a pre-built executable.
+"    | `DlvRemoveBreakpoint`          | Remove the breakpoint at the current line.
+"    | `DlvRemoveTracepoint`          | Remove the tracepoint at the current line.
+"    | `DlvTest [flags]`              | Run `dlv test` for the current session. Use this to debug non-`main` packages.
+"    | `DlvToggleBreakpoint`          | Convenience method to toggle (add or remove) a breakpoint at the current line.
+"    | `DlvToggleTracepoint`          | Convenience method to toggle (add or remove) a tracepoint at the current line.
+"    | `DlvVersion`                   | Print the `dlv` version.
 "==============================================================
 
 "==============================================================
@@ -565,66 +243,30 @@
 "==============================================================
 
 "==============================================================
-"    file: nerdtree.vimrc
-"   brief: 目录树浏览
+"    file: vim-commentary.vimrc
+"   brief: 注释行
 "
-" command: NERDTree [<start-directory> | <bookmark>] 打开nerdtree
-"          NERDTreeFromBookmark bookmark 在书签处打开nerdtree
-"          NERDTreeToggle [<start-directory> | <bookmark>] 触发nerdtree
-"          NERDTreeMirror 使用其他的nerdtree镜像
-"          NERDTreeClose 关闭nerdtree
-"          NERDTreeFind 在当前的目录树中查找文件
-"          NERDTreeCWD 将目录树的根目录切到当前目录
+" command: [range]Commentary 注释或者取消注释行
 "
-" nerdtree buffer下的命令
-" command: Bookmark [<name>] 用name给当前结点打标签
-"          BookmarkToRoot <bookmark> 切到bookmark目录下,并以此为根目录
-"          RevealBookmark <bookmark> 定位到bookmark处
-"          OpenBookmark <bookmark> 此处的bookmark必须是文件,打开bookmark
-"          ClearBookmarks [<bookmark>] 清除掉所有的标签,如果没给参数,会清除当所结果下的所有标签
-"          ClearAllBookmarks 清除所有的标签
-"          ReadBookmarks 重新载入标签
-"
-"    nmap: <leader>nt toggle nerdtree
-"          <leader>nc nerdtree cwd
-"          <leader>np nerdtree parrent
-"          <leader>nf nerdtree file
+"    ncmd:
+"    gc{motion} 注释或者取消注释motion
+"    gcc 注释或者取消注释行
+"    {Visual}gc 注释或者取消注释选择行
+"    gc text object注释
+"    gcgc gcu 取消注释
 "==============================================================
 
 "==============================================================
-"    file: NrrwRgn.vimrc
-"   brief: 对选定内容进行编辑
+"    file: vim-bbye.vim
+"   brief: 删除buffer但是不关闭window
 "
-" command: [range]NarrowRegion[!]
-"          [range]NR[!] 选定range的内容到编辑区,[!]使用当前buffer
-"          NarrowWindow[!]
-"          NW[!] 选定当前窗口可见的内容到编辑区,[!]使用当前buffer
-"          WidenRegion[!] 将修改写回到原来的buffer中,[!]会关闭当前的窗口
-"          NRV[!] 将最后一次可视模式选择的内容放到编辑区,[!]会关闭当前的窗口
-"          NUD 对当前的chunk进行diff模式
-"          [range]NRPrepare[!]
-"          [raneg]NRP[!] 标志内容，后面用NRM来将标志的显示出来,[!]会清掉之前的标志
-"          NRMulti[!]
-"          NRM[!] 将NRP标志的内容放到编辑区，同时清掉所有的标志,[!]使用当前buffer
-"          NRSyncOnWrite
-"          NRS 启动同步内容回到原始buffer
-"          NRNoSyncOnWrite
-"          NRN 关闭同步内容回到原始buffer
-"          NRL[!] 重新上一次选择的区域到编辑区,[!]使用当前buffer
-"
-"    nmap: <leader>nr 后选择内容到编辑区
-"
-"    vmap: <leader>nr 将选择的内容放到编辑区
+" command: Bdelete 删除buffer
+"    nmap: <leader>bd :Bdelete
 "==============================================================
 
 "==============================================================
-"    file: octave.vim--.vimrc
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: vim-php-refactoring-toolbox.vimrc
-"   brief: 
+"    file: tar.vim.vimrc
+"   brief: 自动打开tar包
 "==============================================================
 
 "==============================================================
@@ -684,63 +326,70 @@
 "==============================================================
 
 "==============================================================
-"    file: quickfix.vimrc
+"    file: Dockerfile.vim
 "   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-startify.vimrc
+"   brief: 启动vim时显示最近使用的文件书签和session
 "
-"    nmap: <leader>qk 跳到上一个quickfix或者loclist的内容
-"          <leader>qj 跳到下一个quickfix或者loclist的内容
-"          <leader>qc 关闭quickfix或者loclist
-"          <leader>qo 打开quickfix或者loclist
-"          <leader>qq 打开quickfix
-"          <leader>ql 打开loclist
+" command: Startify 手动触发startify
+"          SLoad [session] 加载session
+"          SSave [session] 保存session
+"          SDelete[!] [session] 删除session
+"          SClose 关闭session
+"==============================================================
+
+"==============================================================
+"    file: vim-gitgutter.vimrc
+"   brief: 显示文件行的修改状态
 "
-" quickfix的nmap
-"     q: cclose
-"==============================================================
-
-"==============================================================
-"    file: Recover.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: ReplaceWithRegister.vimrc
-"   brief: 使用寄存器的内容替换而不更新寄存器内容
+" command: GitGutterDisable 关闭GitGutter
+"          GitGutterEnable 打开GitGutter
+"          GitGutterToggle 触发GitGutter
+"          GitGutter 更新状态
+"          GitGutterAll 更新所有buffer的状态
+"          GitGutterSignsEnable 打开行状态
+"          GitGutterSignsDisable 关闭行状态
+"          GitGutterSignsToggle 触发行状态
+"          GitGutterLineHighlightsEnable 打开高亮
+"          GitGutterLineHighlightsDisable 关闭高亮
+"          GitGutterLineHighlightsToggle  触发高亮
+"          GitGutterNextHunk 跳到下一个修改的块
+"          GitGutterPrevHunk 跳到上一个修改的块
+"          GitGutterUndoHunk 将当前块添加到stage区
+"          GitGutterRevertHunk 回滚当前块的stage区
+"          GitGutterPreviewHunk 预览当前块
 "
-"    nmap: [count]["x]gr{motion} 使用寄存器内容替换{motion}内容
-"          [count]["x}grr 替换一行
-"    xmap: ["x]gr 使用寄存器内容替换选中内容
-"==============================================================
-
-"==============================================================
-"    file: rust.vim
-"   brief: 
-" 
-" command: RustRun [args] 编译运行当前文件
-"          RustRun! [rustc-args] [--] [args]
-"          RustExpand [args] 使用--pretty扩展当前文件
-"          RustExpand! [TYPE] [args]
-"          RustEmitIr [args] 编译当前文件到LLVM IR
-"          RustEmitAsm [args] 编译当前文件到assembly
-"          RustFmt 格式化
-"          RustFmtRange 对选择的区域进行格式化
-"==============================================================
-
-"==============================================================
-"    file: vim-toml.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: vim-scala.vimrc
-"   brief: 
-"
-" command: SortScalaImports 将import排序
+"        nmap: 
+"          [h GitGutterPrevHunk
+"          ]h GitGutterNextHunk
+"          <leader>ga GitGutterStageHunk
+"          <leader>gr GitGutterUndoHunk
+"          <leader>gp GitGutterPreviewHunk
+"          <leader>gg :GitGutter
 "==============================================================
 
 "==============================================================
 "    file: vim-fish.vimrc
 "   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-session.vimrc
+"   brief: 保存加载session
+"
+" command: SaveSession[!] 保存session,!会直接覆盖同名的session而不提示
+"          OpenSession[!] 加载session,!会忽略已经加载的提示
+"          RestartVim 保存当前的session,重新打开vim和加载session
+"          CloseSession[!] 关闭所有的窗口和buffer,然后打开一个空的buffer,!会忽略所有的未保存修改而不提示
+"          DeleteSession[!] 删除session,!会忽略删除当前正打开的session的告警
+"          ViewSession[!] 查看session的脚本
+"          OpenTabSession 类似于OpenSession，但是只请求当前的tab页
+"          SaveTabSession 类似于SaveSession，但是只请求当前的tab页
+"          AppendTabSession 打开一个新的tab页，加载给定的scoped session
+"          CloseTabSession 类似于CloseSession，但是只请求当前的tab页
 "==============================================================
 
 "==============================================================
@@ -750,19 +399,6 @@
 "    nmap:
 "       <leader>h 选择左边的buffer
 "       <leader>l 选择右边的buffer
-"==============================================================
-
-"==============================================================
-"    file: syntastic.vimrc
-"   brief: 语法检查
-"
-" command: 
-"       :Errors                 打开location-list显示错误
-"       :SyntasticToggleMode    触发自动模式
-"       :SyntasticCheck         手动检查语法
-"       :SyntasticInfo          显示filetype的checker
-"       :SyntasticReset         清除所有的错误
-"       :SyntasticSetLoclist    
 "==============================================================
 
 "==============================================================
@@ -783,8 +419,100 @@
 "==============================================================
 
 "==============================================================
-"    file: tar.vim.vimrc
-"   brief: 自动打开tar包
+"    file: syntastic.vimrc
+"   brief: 语法检查
+"
+" command: 
+"       :Errors                 打开location-list显示错误
+"       :SyntasticToggleMode    触发自动模式
+"       :SyntasticCheck         手动检查语法
+"       :SyntasticInfo          显示filetype的checker
+"       :SyntasticReset         清除所有的错误
+"       :SyntasticSetLoclist    
+"==============================================================
+
+"==============================================================
+"    file: ejs-syntax.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-node.vimrc
+"   brief: 
+" 
+" command: Nedit module_name 编辑模块的main文件
+"          Nedit module_name/lib/foo 编辑lib/foo.js文件
+"          Nedit . 编辑项目main文件,一般是index.js
+"
+"    nmap: gf 在require("...")中跳到对应的模块
+"          [I 查询当前字符需要的文件
+"==============================================================
+
+"==============================================================
+"    file: jquery.vimrc
+"   brief: jquery语法高亮
+"==============================================================
+
+"==============================================================
+"    file: html5.vim.vimrc
+"   brief: html5高亮缩进补全
+"==============================================================
+
+"==============================================================
+"    file: vim-jade.vimrc
+"   brief: jade高亮
+"==============================================================
+
+"==============================================================
+"    file: typescript.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-css3-syntax.vimrc
+"   brief: css3语法高亮
+"==============================================================
+
+"==============================================================
+"    file: vim-jinja.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-coffee-script.vim
+"   brief: 
+"==============================================================
+
+
+"==============================================================
+"    file: vim-javascript.vimrc
+"   brief: js高亮和缩进
+"==============================================================
+
+"==============================================================
+"    file: vim-stylus.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-airline.vimrc
+"   brief: 
+" 
+" command: AirlineTheme {theme-name} 切换主题
+"          AirlineToggleWhitespace 触发显示空格
+"          AirlineToggle 触发airline
+"          ArilineRefresh 刷新airline
+"
+"==============================================================
+
+"==============================================================
+"    file: Recover.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-repeat.vimrc
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -808,147 +536,97 @@
 "==============================================================
 
 "==============================================================
-"    file: tmux.vim
-"   brief: tmux语法文件高亮
+"    file: vim-markdown.vimrc
+"   brief: 
 "==============================================================
 
 "==============================================================
-"    file: ultisnips.vimrc
-"   brief: 提供snippet
-"
-" command: UltiSnipsEdit[!] 为当前filetype打开一个snippet编辑窗口
-"          UltiSnipsAddFileTypes 合并其他文件类型的snippet
-"
-"    imap: <c-j>展开
-"          <c-tab>列出snippets
-"          <c-j>跳到下一个位置
-"          <c-k>跳到上一个位置
-"==============================================================
-
-"==============================================================
-"    file: vim-abolish.vimrc
-"   brief: 一次查找,替换,缩写多个字符串
-"
-" command: 
-"	:Abolish [options] {abbreviation} {replacement}
-"	:Abolish -delete [options] {abbreviation}
-"	:Abolish -search [options] {pattern}
-"	:Subvert/{pattern}[/flags]
-"	:Abolish!-search [options] {pattern}
-"	:Subvert?{pattern}[?flags]
-"	:Abolish -search [options] {pattern} {grep-arguments}
-"	:Subvert /{pattern}/[flags] {grep-options}
-"	:Abolish!-search [options] {pattern} {grep-arguments}
-"	:Subvert!/{pattern}/[flags] {grep-options}
-"	:[range]Abolish -substitute [options] {pattern} {replacement}
-"	:[range]Subvert/{pattern}/{replacement}[/flags]
-"
-"	eg:
-"	:%S/{,un}nec{ce,ces,e}sar{y,ily}/{}nec{es}sar{}/g
-"==============================================================
-
-"==============================================================
-"    file: vim-airline.vimrc
+"    file: YouCompleteMe.vimrc
 "   brief: 
 " 
-" command: AirlineTheme {theme-name} 切换主题
-"          AirlineToggleWhitespace 触发显示空格
-"          AirlineToggle 触发airline
-"          ArilineRefresh 刷新airline
+" command: YcmRestartServer 重启ycmd
+"          YcmForceCompileAndDiagnostics 强制编译
+"          YcmDiags 列出错误
+"          YcmShowDetailedDiagnostic 诊断信息
+"          YcmDebugInfo debug信息
+"          YcmCompleter 调用编译器的命令
+"          YcmCompleter GoToDeclaration 跳到声明
+"          YcmCompleter GoToDefinithion 跳到定义
+"          YcmCompleter GoTo 跳到定义，如果没有定义，则跳到声明
+"          YcmCompleter GoToImprecise 类似于GoTo，但是不进行重新编译
+"          YcmCompleter ClearCompilationFlagCache 清掉ycm_extra_conf.py中的flag
+"          YcmCompleter StartServer 启动server,仅在cs中支持
+"          YcmCompleter StopServer 停止server,仅在cs中支持
+"          YcmCompleter RestartServer 重启server,仅在cs中支持
+"          YcmCompleter ReloadSolution 重新加载,仅在cs中支持
+"          YcmCompleter GoToImplementation 跳到实现,仅在cs中支持
+"          YcmCompleter GoToImplementationElseDeclaration 跳到实现,否则跳到声明,仅在cs中支持
+"
+"          YcmGenerateConfig 生成.ycm_extra_conf.py的配置
 "
 "==============================================================
 
 "==============================================================
-"    file: vim-argwrap.vimrc
-"   brief: 参数换行和同行模式转换
+"    file: delimitMate.vimrc
+"   brief: 自动补全右括号引号等
 "
-" command: :ArgWrap 转换
-"    nmap: <leader>aw :ArgWrap
+" command: :DelimitMateReload 重设所有的map
+"          :DelimitMateOn enable DelimitMate mappings
+"          :DelimitMateOff disable DelimitMate mappings
+"          :DelimitMateSwitch switches DelimitMate on and off
 "==============================================================
 
 "==============================================================
-"    file: vim-autoformat.vimrc
-"   brief: 格式化代码
-"
-" command: Autoformat [{filetype}] 格式化当前文件
-"
-"    nmap: <leader>af 进行format
+"    file: rust.vim
+"   brief: 
+" 
+" command: RustRun [args] 编译运行当前文件
+"          RustRun! [rustc-args] [--] [args]
+"          RustExpand [args] 使用--pretty扩展当前文件
+"          RustExpand! [TYPE] [args]
+"          RustEmitIr [args] 编译当前文件到LLVM IR
+"          RustEmitAsm [args] 编译当前文件到assembly
+"          RustFmt 格式化
+"          RustFmtRange 对选择的区域进行格式化
 "==============================================================
 
 "==============================================================
-"    file: vim-bbye.vim
-"   brief: 删除buffer但是不关闭window
-"
-" command: Bdelete 删除buffer
-"    nmap: <leader>bd :Bdelete
+"    file: vim-toml.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
-"    file: vim-bookmarks.vimrc
-"   brief: 给每行插入书签,可以带标签
+"    file: ctags.vimrc
+"   brief: 使用ctags进行跳转,需要链接tags
 "
-" command: BookmarkToggle 触发书签
-"          BookmarkAnnotate <TEXT> 增加/编辑/删除注释标签
-"          BookmarkNext 跳到下一个书签
-"          BookmarkPrev 跳到上一个书签
-"          BookmarkShowAll 在新窗口显示所有书签
-"          BookmarkClear 删除当前buffer的书签
-"          BookmarkClearAll 删除所有的书签
-"          BookmarkMoveup 将当前书签移上一行
-"          BookmarkMoveDown 将当前书签移下一行
-"          BookmarkSave <FILE_PATH> 保存书签
-"          BookmarkLoad <FILE_PATH> 加载书签
-"          BookmarkProjectLoad 加载工程下的书签
+"    nmap: <c-]> 跳转到当前字符串的定义处,与cscope一起使用的话,先使用cscope的功能
 "
-"    nmap: Mm :BookmarkToggle
-"          Ma :BookmarkAnnotate
-"          Ms :BookmarkShowAll
-"          Mn :BookmarkNext
-"          Mp :BookmarkPrev
-"          Mc :BookmarkClear
-"          Mu :BookmarkMoveUp
-"          Md :BookmarkMoveDown
 "==============================================================
 
 "==============================================================
-"    file: vim-choosewin.vim
-"   brief: 选择window
-"
-" command:
-"         ChooseWin 选择window
-"         ChooseWinSwap 交换window位置
-"         ChooseWinSwapStay 交换window位置，保持光标不动
-"
-"    nmap:   <leader>sw ChooseWin
-"
-"   ChooseWin状态的key
-"	| Key  | Action     | Description                   |
-"	| ---- | ---------- | ----------------------------- |
-"	| 0    | tab_first  | Select FIRST    tab           |
-"	| [    | tab_prev   | Select PREVIOUS tab           |
-"	| ]    | tab_next   | Select NEXT     tab           |
-"	| $    | tab_last   | Select LAST     tab           |
-"	| x    | tab_close  | Close current tab             |
-"	| ;    | win_land   | Navigate to current window    |
-"	| -    | previous   | Naviage to previous window    |
-"	| s    | swap       | Swap windows               #1 |
-"	| S    | swap_stay  | Swap windows but stay      #1 |
-"	| <CR> | win_land   | Navigate to current window    |
-"	|      | <NOP>      | Disable predefined keymap     |
+"    file: vim-scriptease.vimrc
+"   brief: 
 "==============================================================
 
 "==============================================================
-"    file: vim-commentary.vimrc
-"   brief: 注释行
+"    file: helpful.vim
+"   brief: 查看vim特性所在的版本
 "
-" command: [range]Commentary 注释或者取消注释行
+" command: HelpfulVersion 加特性名
+"==============================================================
+
+
+"==============================================================
+"    file: z.vim.vimrc
+"   brief:  wrapper around the CLI z
 "
-"    ncmd:
-"    gc{motion} 注释或者取消注释motion
-"    gcc 注释或者取消注释行
-"    {Visual}gc 注释或者取消注释选择行
-"    gc text object注释
-"    gcgc gcu 取消注释
+" command: Z regex 跳转到regex匹配的目录
+"          Zl [regex] 根据regex做规则匹配，然后跳转
+"==============================================================
+
+"==============================================================
+"    file: CompleteParameter.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -1026,6 +704,126 @@
 "==============================================================
 
 "==============================================================
+"    file: Mark--Karkat.vimrc
+"   brief: 高亮字符串
+"
+"    nmap: <leader>m 高亮或者取消高亮
+"          <tab>m 清除所有的高亮
+"          <tab>n 在高亮处理则取消高亮，否则关闭或者开启高亮
+"          <tab>r 输入正则表达式来进行高亮或者取消高亮
+"          <tab>* 跳到当前高亮字符串的下一个高亮处,并记为"last mark",
+"                 不在高亮字符串的时候跳到下一个"last mark"处
+"          <tab># 跳到当前高亮字符串的上一个高亮处,并记为"last mark",
+"                 不在高亮字符串的时候跳到上一个"last mark"处
+"          <tab>/ 跳到下一个任意的高亮处
+"          <tab>? 跳到上一个任意的高亮处
+"
+"   vmap:  <tab>r 输入正则表达式来进行高亮或者取消高亮
+"
+" command: Mark {pattern} 高亮pattern.只能是ignorecase
+"          Mark 暂时去掉高亮,再次调用则高亮
+"          MarkClear 清除所有的高亮
+"          MarkSave 保存高亮,默认自动保存
+"          MarkLoad 加载高亮,不默认自动加载
+"
+"==============================================================
+
+"==============================================================
+"    file: nerdtree.vimrc
+"   brief: 目录树浏览
+"
+" command: NERDTree [<start-directory> | <bookmark>] 打开nerdtree
+"          NERDTreeFromBookmark bookmark 在书签处打开nerdtree
+"          NERDTreeToggle [<start-directory> | <bookmark>] 触发nerdtree
+"          NERDTreeMirror 使用其他的nerdtree镜像
+"          NERDTreeClose 关闭nerdtree
+"          NERDTreeFind 在当前的目录树中查找文件
+"          NERDTreeCWD 将目录树的根目录切到当前目录
+"
+" nerdtree buffer下的命令
+" command: Bookmark [<name>] 用name给当前结点打标签
+"          BookmarkToRoot <bookmark> 切到bookmark目录下,并以此为根目录
+"          RevealBookmark <bookmark> 定位到bookmark处
+"          OpenBookmark <bookmark> 此处的bookmark必须是文件,打开bookmark
+"          ClearBookmarks [<bookmark>] 清除掉所有的标签,如果没给参数,会清除当所结果下的所有标签
+"          ClearAllBookmarks 清除所有的标签
+"          ReadBookmarks 重新载入标签
+"
+"    nmap: <leader>nt toggle nerdtree
+"          <leader>nc nerdtree cwd
+"          <leader>np nerdtree parrent
+"          <leader>nf nerdtree file
+"==============================================================
+
+"==============================================================
+"    file: large_file.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: fzf.vim.vimrc
+"   brief: 适配fzf工具
+"
+" command: [!]进行全屏模式
+"      FZF {option} {path} " 从path进行搜索，不提供时为当前目录
+"      以下命令以FZF为前缀
+"      `Files [PATH]`    | Files (similar to  `:FZF` )
+"      `GFiles [OPTS]`   | Git files (git ls-files)
+"      `GFiles?`         | Git files (git status)
+"      `Buffers`         | Open buffers
+"      `Colors`          | Color schemes
+"      `Ag [PATTERN]`    | {ag}{5} search result (ALT-A to select all, ALT-D to deselect all)
+"      `Lines [QUERY]`   | Lines in loaded buffers
+"      `BLines [QUERY]`  | Lines in the current buffer
+"      `Tags [QUERY]`    | Tags in the project ( `ctags -R` )
+"      `BTags [QUERY]`   | Tags in the current buffer
+"      `Marks`           | Marks
+"      `Windows`         | Windows
+"      `Locate PATTERN`  |  `locate`  command output
+"      `History`         |  `v:oldfiles`  and open buffers
+"      `History:`        | Command history
+"      `History/`        | Search history
+"      `Snippets`        | Snippets ({UltiSnips}{6})
+"      `Commits`         | Git commits (requires {fugitive.vim}{7})
+"      `BCommits`        | Git commits for the current buffer
+"      `Commands`        | Commands
+"      `Maps`            | Normal mode mappings
+"      `Helptags`        | Help tags [1]
+"      `Filetypes`       | File types
+"
+"    nmap:  <leader>fp :FZF 提示输入
+"           <leader>ff :FZFFiles
+"           <leader>fg :FZFGFiles
+"           <leader>fb :FZFBuffers
+"           <leader>fa :FZFAg
+"           <leader>fh :FZFHistory
+"           <leader>fw :FZFWindows
+"           <leader>fm :FZFMarks
+"           <leader>; :FZFHistory:
+"           <leader>fs :FZFSnippets
+"           <leader>fc :FZFCommands
+"           <leader>/ :FZFSearchHistory
+"           <leader><leader> nmap模式的map
+"    omap:  <leader><leader> omap模式的map
+"    xmap:  <leader><leader> xmap模式的map
+"==============================================================
+
+"==============================================================
+"    file: vim-javacomplete2.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: axring.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: FastFlod.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: vim-easymotion.vimrc
 "   brief: 比普通的移动更强大的移动
 "
@@ -1061,107 +859,15 @@
 "==============================================================
 
 "==============================================================
-"    file: vim-expand-region.vimrc
-"   brief: 选择区域
+"    file: dash.vim.vimrc
+"   brief: dash的vim集成，这个插件只有mac才有用
 "
-"    nmap:
-"       + 展开选择
-"       - 缩小选择
-"==============================================================
-
-"==============================================================
-"    file: vim-fugitive.vimrc
-"   brief: 运行git命令
+" command: Dash[!] [TERM] [KEYWORD] 在dash中搜索当前文件类型的关键字，
+"                 [!]则全局搜索，第1个参数是要搜索的内容，第二个参数是doc
+"                 set类型
+"          DashKeywords[!] 显示当前使用的keywords，或者设置keywords 
 "
-" command: 
-"     Git! [args] 运行git命令,先cd到版本库的根目录,再执行!git [args],叹号会将输入放到一个临时buffer中
-"     Gcd [directory] cd到版本库的相对目录
-"     Glcd [directory] lcd到版本库的相对目录
-"     Gstatus 显示当前版本库的状态
-"     Gcommit [args] 提交修改,没有内容提交时会执行Gstatus
-"     Gmerge [args] 合并
-"     Gpull [args] git pull
-"     Gpush [args] git push
-"     Gfetch [args] git fetch
-"     Ggrep [args] git-grep
-"     Glgrep [args] git-grep
-"     {range}Glog [args] git log
-"     Gllog [args] like Glog
-"     Gedit [revision] :edit a fugitive-revision
-"     Gsplit! [revision] :split a fugitive-revison
-"     Gvsplit! [revision] :vsplit a fugitive-revison
-"     Gtabedit! [revision] :tabedit a fugitive-revison
-"     Gpedit! [revision] :pedit a fugitive-revison
-"     {range}Gread [revision] 读入一个revision到一个新buffer，保留range的内容
-"     {range}Gread! [args] 清空buffer，将args命令的内容写到buffer，保留range的内容
-"     Gwrite {path} 将文件写入path
-"     Gwq[!] [path] 类似于Gwrite!,写成功的话就执行:quit[!]命令
-"     Gdiff [revision] 使用vimdiff与一个revision的内容做比较，不给revision就用index的内容做比较
-"     Gsdiff [revision] 类似于Gdiff，但是总是split
-"     Gvdiff [revision] 类似于Gdiff，但是总是vertical split
-"     Gmove[!] {destination} git mv，!相当于传参数-f
-"     Gremove[!] 删除当前buffer,如果是在index中的文件,--cached会传过去,!会传入-f
-"     {range}Gblame [flags] 运行git-blame,flags可以是ltfnsewMC,传给git-blame,range会作用于特定范围
-"     Gbrowse {revision} 打开当前file,blob,tree,commit,tag的上流
-"     Gbrowse [...]@{remote} 强制使用给定的remote
-"     {range}Gbrowse[!] [args] 
-"
-"    nmap: <leader>gw Gwrite
-"          <leader>gc Gcommit
-"          <leader>gb Gblame
-"          <leader>gd Gvdiff
-"          <leader>gl Glog
-"          <leader>gs Gstatus
-"
-"    cmap: <c-r><c-g> 在命令行中返回当前文件
-"          ["x]y<c-g> 粘贴当前对象的提交sha值
-"    在git object下的map
-"    nmap:
-"      <CR> Jump to the revision under the cursor.
-"      o    Jump to the revision under the cursor in a new split.
-"      S    Jump to the revision under the cursor in a new vertical split.
-"      O    Jump to the revision under the cursor in a new tab.
-"      -    Go to the tree containing the current tree or blob.
-"      ~    Go to the current file in the [count]th first ancestor.
-"      P    Go to the current file in the [count]th parent.
-"      C    Go to the commit containing the current file.
-"      .    Start a : command line with the current revision prepopulated at the end of the line.
-"      a    Show the current tag, commit, or tree in an alternate format.
-"==============================================================
-
-"==============================================================
-"    file: vim-gitgutter.vimrc
-"   brief: 显示文件行的修改状态
-"
-" command: GitGutterDisable 关闭GitGutter
-"          GitGutterEnable 打开GitGutter
-"          GitGutterToggle 触发GitGutter
-"          GitGutter 更新状态
-"          GitGutterAll 更新所有buffer的状态
-"          GitGutterSignsEnable 打开行状态
-"          GitGutterSignsDisable 关闭行状态
-"          GitGutterSignsToggle 触发行状态
-"          GitGutterLineHighlightsEnable 打开高亮
-"          GitGutterLineHighlightsDisable 关闭高亮
-"          GitGutterLineHighlightsToggle  触发高亮
-"          GitGutterNextHunk 跳到下一个修改的块
-"          GitGutterPrevHunk 跳到上一个修改的块
-"          GitGutterUndoHunk 将当前块添加到stage区
-"          GitGutterRevertHunk 回滚当前块的stage区
-"          GitGutterPreviewHunk 预览当前块
-"
-"        nmap: 
-"          [h GitGutterPrevHunk
-"          ]h GitGutterNextHunk
-"          <leader>ga GitGutterStageHunk
-"          <leader>gr GitGutterUndoHunk
-"          <leader>gp GitGutterPreviewHunk
-"          <leader>gg :GitGutter
-"==============================================================
-
-"==============================================================
-"    file: vim-markdown.vimrc
-"   brief: 
+"    nmap: <leader>ds 搜索当前光标的单词
 "==============================================================
 
 "==============================================================
@@ -1170,329 +876,76 @@
 "==============================================================
 
 "==============================================================
-"    file: vim-move.vim
-"   brief: 移动行
+"    file: gist-vim.vim
+"   brief: 向gist.github.com提交gist
 "
-"    nmap: <m-j> 当前行下移
-"          <m-k> 当前行上移
-"    smap: <m-j> 当前块下移
-"          <m-k> 当前块上移  
+" command: Gist 把当前buffer提交到gist
+"          '<,'>Gist 把选择的内容提交的gist
+"          Gist -p 创建一个private的gist
+"          Gist --private 
+"          Gist -P 创建了个public的gist
+"          Gist --public 
+"          Gist -a 创建一个匿名的gist
+"          Gist --anonymous
+"          Gist -m 对所有打开的buffer创建一个gist
+"          Gist --multibuffer
+"          Gist -e 编辑一个打开的gist
+"          Gist --edit
+"          Gist -e foo.js 使用foo.js编辑gist
+"          Gist -s something 提交gist并增加描述
+"          Gist --description something
+"          Gist -e -s something
+"          Gist -d 删除打开的gist
+"          Gist --delete
+"          Gist -f fork打开的gist
+"          Gist --fork
+"          Gist +1 对打开的gist加星
+"          Gist -1 取消对打开的gist加星
+"          Gist xxxxx 拉取gist xxxxx
+"          Gist -c xxxxx 把gist xxxxx拉下来并复制到clipboard
+"          Gist -l 列出你所有的gist
+"          Gist --list
+"          Gist -l username 列出username所有的gist
+"          Gist -la 列出所有人的gist
+"          Gist --listall
+"          Gist -b 在浏览器打开gist
+"          Gist --browser
+"          Gist! 当成新的gist进来post
+"
+"   在gist列表页:
+"   'o'/<ENTER> 打开当前的gist
+"   'b' 在浏览器打开当前的gist
+"   'y' 复制到clipboard
+"   'p' 复制粘贴
+"   <ESC> 关闭列表
 "==============================================================
 
 "==============================================================
-"    file: vim-multiple-cursors.vimrc
-"   brief: 选择多个相同的字符串
-"
-" command: MultipleCursorFind 在整个文件或者range中匹配
-"
-"    nmap: <c-n> 选择下一个匹配
-"          <c-p> 选择上一个匹配
-"          <c-x> 跳过当前的匹配 
-"==============================================================
-
-"==============================================================
-"    file: vim-over.vimrc
-"   brief: 高亮:substitute
-"
-" command: OverCommandLine [{input}] 切到高亮模式,input会直接当成命令
-"          OverCommandLineNoremap {lhs} {rhs} 类似于OverCommandLine，但是使用特殊的键映射
-"
-"==============================================================
-
-"==============================================================
-"    file: vim-plug.vimrc
-"   brief: vim包管理
-"
-" command:
-"   PlugInstall [name ...] [#threads]   Install plugins
-"   PlugUpdate [name ...] [#threads]    Install or update plugins
-"   PlugClean[!]    Remove unused directories (bang version will clean without prompt)
-"   PlugUpgrade Upgrade vim-plug itself
-"   PlugStatus  Check the status of plugins
-"   PlugDiff    Examine changes from the previous update and the pending changes
-"   PlugSnapshot[!] [output path]   Generate script for restoring the current snapshot of the plugins
-"==============================================================
-
-"==============================================================
-"    file: vim-rename.vimrc
-"   brief: 重命名当前的buffer文件
-"
-" command: Rename {new name}
-"==============================================================
-
-"==============================================================
-"    file: vim-repeat.vimrc
+"    file: vim-php-refactoring-toolbox.vimrc
 "   brief: 
 "==============================================================
 
 "==============================================================
-"    file: vim-session.vimrc
-"   brief: 保存加载session
-"
-" command: SaveSession[!] 保存session,!会直接覆盖同名的session而不提示
-"          OpenSession[!] 加载session,!会忽略已经加载的提示
-"          RestartVim 保存当前的session,重新打开vim和加载session
-"          CloseSession[!] 关闭所有的窗口和buffer,然后打开一个空的buffer,!会忽略所有的未保存修改而不提示
-"          DeleteSession[!] 删除session,!会忽略删除当前正打开的session的告警
-"          ViewSession[!] 查看session的脚本
-"          OpenTabSession 类似于OpenSession，但是只请求当前的tab页
-"          SaveTabSession 类似于SaveSession，但是只请求当前的tab页
-"          AppendTabSession 打开一个新的tab页，加载给定的scoped session
-"          CloseTabSession 类似于CloseSession，但是只请求当前的tab页
-"==============================================================
-
-"==============================================================
-"    file: vim-signature.vimrc
-"   brief: 显示mark标签
-"
-"    nmap:
-"      mx 触发一个'x'字母的标签
-"      m, 插入下一个可用的标签
-"      m. 如果存在标签，则删除，否则插入下一个可用的标签
-"      m- 删除当前行的所有标签
-"      m<space> 删除所前buffer的所有标签
-"      ]` 跳到下一个标签
-"      [` 跳到上一个标签
-"      ]' 跳到下一个标签的行首
-"      [' 跳到上一个标签的行首
-"      `] 跳到字母序的下一个标签
-"      `[ 跳到字母序的上一个标签
-"      '] 跳到字母序的下一个标签行首
-"      '[ 跳到字母序的上一个标签行首
-"      m/ 打开一个location list显示当前buffer的所有标签
-"
-"      0~9是类型标签，可以重复打
-"      m[0-9] 触发一个shift+数字上的字母标签,这类型的标签可以重复打
-"      m<S-[0-9]> 删除所有抽类型的标签
-"      ]- 跳到下一个有同样标签的行
-"      [- 跳到上一个有同样标签的行
-"      ]= 跳到下一个任意类型的标签
-"      [= 跳到上一个任意类型的标签
-"      m? 打开一个location list显示所有当前buffer的类型标签
-"      m<BS> 删除所有的类型标签
-"
-" command: SignatureToggleSigns 触发显示标签
-"          SignatureRefresh 刷新显示
-"          SignatureListBufferMarks [n] 显示当前buffer的所有标签，n是上下文行数
-"          SignatureListGlobalMarks [n] 显示所有buffer的所有标签，n是上下文行数
-"          SignatureListMarkers [marker] [n] 显示当前buffer所有的marker标签，n是上下文行数
-"
-"==============================================================
-
-"==============================================================
-"    file: vim-startify.vimrc
-"   brief: 启动vim时显示最近使用的文件书签和session
-"
-" command: Startify 手动触发startify
-"          SLoad [session] 加载session
-"          SSave [session] 保存session
-"          SDelete[!] [session] 删除session
-"          SClose 关闭session
-"==============================================================
-
-"==============================================================
-"    file: vim-surround.vimrc
-"   brief: 操作括号
-"
-" TARGETS:
-"       () b
-"       {} B
-"       [] r
-"       <>
-"       '
-"       "
-"       `
-"       w
-"       W
-"       s
-"       p
-"
-"
-"    nmap:  ds 删除surroundings
-"           cs 修改surroundings
-"           ys 增加surroundings
-"           yss 整行增加surroundings
-"           yS 换行surroundings
-"           ySS 换行surroundings整行
-"    vmap:  S 对选中的进行surroundings
-"    imap:  <C-G>s
-"           <C-S>
-"==============================================================
-
-"==============================================================
-"    file: vim-swap.vimrc
-"   brief: 交换items
-"
-"    nmap: 
-"       g< 与左边项交换
-"       g> 与右边项交换
-"       gs 进入交互模式
-"    xmap:
-"       gs 交互模式
-"==============================================================
-
-"==============================================================
-"    file: vim-table-mode.vimrc
-"   brief: 
-" command:
-"           :TableModeToggle 触发表格模式
-"           :TableModeEnable 开启表格模式
-"           :TableModeDisable 关闭表格模式
-"           :Tablize 格式成表格
-"           :TableModeRealign 表格重排
-"           :TableAddFormula 增加formula
-"           :TableEvalFormulaLine 计算formula
-"           :TableSort[!] [i][u][r][n][x][o] 排序
-"
-"
-"    nmap: <leader>t prefix
-"          <leader>tm 触发table mode
-"          <leader>tt tableize格式化选择行
-"          <leader>T tableize格式化选择行，让用户选择分隔符
-"          <leader>tr 重新对齐表格
-"          <leader>t? 重新输出定义的formulas
-"          [|         移到前一个单元格
-"          ]|         移到后一个单元格
-"          {|         移到上一个单元格
-"          }|         移到下一个单元格
-"          <leader>tdd 删除行
-"          <leader>tdc 删除列
-"          <leader>tfa 请求一个fomula给当前单元格
-"          <leader>tfe 
-"          <leader>ts  排序
-"
-"   imap: | 在table mode下触发创建表格
-"         || 扩展表格头
-"==============================================================
-
-"==============================================================
-"    file: vim-tbone.vimrc
+"    file: diffchar.vim.vimrc
 "   brief: 
 "==============================================================
 
 "==============================================================
-"    file: vim-tmux-navigator.vim
-"   brief: 使切窗口与tmux一致
+"    file: asyncrun.vim
+"   brief: 异步执行外部程序
 "
-"    nmap: <c-h> 跳到左边窗口
-"          <c-j> 跳到下边窗口
-"          <c-k> 跳到上边窗口
-"          <c-l> 跳到右边窗口
+" command: AsyncRun[!] [options] {cmd} 执行cmd命令，[!]关闭自动滚动
+"          AsyncStop[!] 停止任务，[!]会使用KILL信号
 "==============================================================
 
 "==============================================================
-"    file: vim-yaml-folds.vim
-"   brief: 
-"==============================================================
-
-
-"==============================================================
-"    file: vimim.vim
+"    file: swift.vim
 "   brief: 
 "==============================================================
 
 "==============================================================
-"    file: helpful.vim
-"   brief: 查看vim特性所在的版本
-"
-" command: HelpfulVersion 加特性名
-"==============================================================
-
-
-"==============================================================
-"    file: vim-scriptease.vimrc
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: vimproc.vim.vimrc
-"   brief: 异常执行库
-"
-" command: VimProcBang {path} 执行path命令然后echo结果,这是同步的
-"          VimProcRead {path} 执行path命令然后将结果粘贴到当前的buffer
-"          VimProcInstall {args} build
-"==============================================================
-
-"==============================================================
-"    file: vimunx.vim
-"   brief: 与tmux交互的插件
-"
-" command: VimuxPromptCommand 提示输入命令运行
-"          VimuxRunLastCommand 运行上一次的命令
-"          VimuxInspectRunner 进入运行窗口并进入选择模式
-"          VimuxCloseRunner 关闭运行窗口
-"          VimuxInterruptRunner 给运行窗口发送中断信号
-"          VimuxZoomRunner 将运行窗口全屏，在tmux下使用<prefix>z返回
-"
-"    nmap: <leader>vp :VimuxPromptCommand
-"          <leader>vl :VimuxRunLastCommand
-"          <leader>vi :VimuxInspectRunner
-"          <leader>vq :VimuxCloseRunner
-"          <leader>vc :VimuxInterruptRunner
-"          <leader>vz :VimuxZoomRunner
-"==============================================================
-
-"==============================================================
-"    file: ejs-syntax.vim
-"   brief: 
-"==============================================================
-
-
-"==============================================================
-"    file: html5.vim.vimrc
-"   brief: html5高亮缩进补全
-"==============================================================
-
-"==============================================================
-"    file: jquery.vimrc
-"   brief: jquery语法高亮
-"==============================================================
-
-"==============================================================
-"    file: typescript.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: vim-coffee-script.vim
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: vim-css3-syntax.vimrc
-"   brief: css3语法高亮
-"==============================================================
-
-"==============================================================
-"    file: vim-jade.vimrc
-"   brief: jade高亮
-"==============================================================
-
-"==============================================================
-"    file: vim-javascript.vimrc
-"   brief: js高亮和缩进
-"==============================================================
-
-"==============================================================
-"    file: vim-jinja.vimrc
-"   brief: 
-"==============================================================
-
-"==============================================================
-"    file: vim-node.vimrc
-"   brief: 
-" 
-" command: Nedit module_name 编辑模块的main文件
-"          Nedit module_name/lib/foo 编辑lib/foo.js文件
-"          Nedit . 编辑项目main文件,一般是index.js
-"
-"    nmap: gf 在require("...")中跳到对应的模块
-"          [I 查询当前字符需要的文件
-"==============================================================
-
-"==============================================================
-"    file: vim-stylus.vim
-"   brief: 
+"    file: vim-lua.vimrc
+"   brief: lua的高亮和缩进
 "==============================================================
 
 "==============================================================
@@ -1535,36 +988,577 @@
 "==============================================================
 
 "==============================================================
-"    file: YouCompleteMe.vimrc
-"   brief: 
-" 
-" command: YcmRestartServer 重启ycmd
-"          YcmForceCompileAndDiagnostics 强制编译
-"          YcmDiags 列出错误
-"          YcmShowDetailedDiagnostic 诊断信息
-"          YcmDebugInfo debug信息
-"          YcmCompleter 调用编译器的命令
-"          YcmCompleter GoToDeclaration 跳到声明
-"          YcmCompleter GoToDefinithion 跳到定义
-"          YcmCompleter GoTo 跳到定义，如果没有定义，则跳到声明
-"          YcmCompleter GoToImprecise 类似于GoTo，但是不进行重新编译
-"          YcmCompleter ClearCompilationFlagCache 清掉ycm_extra_conf.py中的flag
-"          YcmCompleter StartServer 启动server,仅在cs中支持
-"          YcmCompleter StopServer 停止server,仅在cs中支持
-"          YcmCompleter RestartServer 重启server,仅在cs中支持
-"          YcmCompleter ReloadSolution 重新加载,仅在cs中支持
-"          YcmCompleter GoToImplementation 跳到实现,仅在cs中支持
-"          YcmCompleter GoToImplementationElseDeclaration 跳到实现,否则跳到声明,仅在cs中支持
+"    file: ReplaceWithRegister.vimrc
+"   brief: 使用寄存器的内容替换而不更新寄存器内容
 "
-"          YcmGenerateConfig 生成.ycm_extra_conf.py的配置
+"    nmap: [count]["x]gr{motion} 使用寄存器内容替换{motion}内容
+"          [count]["x}grr 替换一行
+"    xmap: ["x]gr 使用寄存器内容替换选中内容
+"==============================================================
+
+"==============================================================
+"    file: vimproc.vim.vimrc
+"   brief: 异常执行库
+"
+" command: VimProcBang {path} 执行path命令然后echo结果,这是同步的
+"          VimProcRead {path} 执行path命令然后将结果粘贴到当前的buffer
+"          VimProcInstall {args} build
+"==============================================================
+
+"==============================================================
+"    file: NrrwRgn.vimrc
+"   brief: 对选定内容进行编辑
+"
+" command: [range]NarrowRegion[!]
+"          [range]NR[!] 选定range的内容到编辑区,[!]使用当前buffer
+"          NarrowWindow[!]
+"          NW[!] 选定当前窗口可见的内容到编辑区,[!]使用当前buffer
+"          WidenRegion[!] 将修改写回到原来的buffer中,[!]会关闭当前的窗口
+"          NRV[!] 将最后一次可视模式选择的内容放到编辑区,[!]会关闭当前的窗口
+"          NUD 对当前的chunk进行diff模式
+"          [range]NRPrepare[!]
+"          [raneg]NRP[!] 标志内容，后面用NRM来将标志的显示出来,[!]会清掉之前的标志
+"          NRMulti[!]
+"          NRM[!] 将NRP标志的内容放到编辑区，同时清掉所有的标志,[!]使用当前buffer
+"          NRSyncOnWrite
+"          NRS 启动同步内容回到原始buffer
+"          NRNoSyncOnWrite
+"          NRN 关闭同步内容回到原始buffer
+"          NRL[!] 重新上一次选择的区域到编辑区,[!]使用当前buffer
+"
+"    nmap: <leader>nr 后选择内容到编辑区
+"
+"    vmap: <leader>nr 将选择的内容放到编辑区
+"==============================================================
+
+"==============================================================
+"    file: vim-plug.vimrc
+"   brief: vim包管理
+"
+" command:
+"   PlugInstall [name ...] [#threads]   Install plugins
+"   PlugUpdate [name ...] [#threads]    Install or update plugins
+"   PlugClean[!]    Remove unused directories (bang version will clean without prompt)
+"   PlugUpgrade Upgrade vim-plug itself
+"   PlugStatus  Check the status of plugins
+"   PlugDiff    Examine changes from the previous update and the pending changes
+"   PlugSnapshot[!] [output path]   Generate script for restoring the current snapshot of the plugins
+"==============================================================
+
+"==============================================================
+"    file: vim-tbone.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-autoformat.vimrc
+"   brief: 格式化代码
+"
+" command: Autoformat [{filetype}] 格式化当前文件
+"
+"    nmap: <leader>af 进行format
+"==============================================================
+
+"==============================================================
+"    file: agit.vim
+"   brief: gitk插件
+"
+" command: Agit [{options}] 打开一个agit的tab
+"          AgitFile [{options}] 只打开当前文件相关的log
+"
+"    nmap: 
+"        J			<Plug>(agit-scrolldown-stat)
+"        K			<Plug>(agit-scrollup-stat)
+"        <C-j>		<Plug>(agit-scrolldown-diff)
+"        <C-k>		<Plug>(agit-scrollup-diff)
+"        u			<PLug>(agit-reload)
+"        yh			<Plug>(agit-yank-hash)
+"        <C-g>		<Plug>(agit-print-commitmsg)
+"        q			<Plug>(agit-exit)
+"        C			<Plug>(agit-git-checkout)
+"        cb			<Plug>(agit-git-checkout-b)
+"        D			<Plug>(agit-git-branch-d)
+"        rs			<Plug>(agit-git-reset-soft)
+"        rm			<Plug>(agit-git-reset)
+"        rh			<Plug>(agit-git-reset-hard)
+"        rb			<Plug>(agit-git-rebase)
+"        ri			<Plug>(agit-git-rebase-i)
+"        di			<Plug>(agit-diff)
+"        dl			<Plug>(agit-diff-with-local)
+"==============================================================
+
+"==============================================================
+"    file: vim-json.vimrc
+"   brief: 高亮json
+"==============================================================
+
+"==============================================================
+"    file: csv.vim.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: tmux.vim
+"   brief: tmux语法文件高亮
+"==============================================================
+
+"==============================================================
+"    file: octave.vim--.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: gundo.vim.vimrc
+"   brief: undo历史
+"
+"    nmap: <leader>gu 触发gundo窗口
+"==============================================================
+
+"==============================================================
+"    file: vim-scala.vimrc
+"   brief: 
+"
+" command: SortScalaImports 将import排序
+"==============================================================
+
+"==============================================================
+"    file: vim-over.vimrc
+"   brief: 高亮:substitute
+"
+" command: OverCommandLine [{input}] 切到高亮模式,input会直接当成命令
+"          OverCommandLineNoremap {lhs} {rhs} 类似于OverCommandLine，但是使用特殊的键映射
 "
 "==============================================================
 
 "==============================================================
-"    file: z.vim.vimrc
-"   brief:  wrapper around the CLI z
+"    file: vim-table-mode.vimrc
+"   brief: 
+" command:
+"           :TableModeToggle 触发表格模式
+"           :TableModeEnable 开启表格模式
+"           :TableModeDisable 关闭表格模式
+"           :Tablize 格式成表格
+"           :TableModeRealign 表格重排
+"           :TableAddFormula 增加formula
+"           :TableEvalFormulaLine 计算formula
+"           :TableSort[!] [i][u][r][n][x][o] 排序
 "
-" command: Z regex 跳转到regex匹配的目录
-"          Zl [regex] 根据regex做规则匹配，然后跳转
+"
+"    nmap: <leader>t prefix
+"          <leader>tm 触发table mode
+"          <leader>tt tableize格式化选择行
+"          <leader>T tableize格式化选择行，让用户选择分隔符
+"          <leader>tr 重新对齐表格
+"          <leader>t? 重新输出定义的formulas
+"          [|         移到前一个单元格
+"          ]|         移到后一个单元格
+"          {|         移到上一个单元格
+"          }|         移到下一个单元格
+"          <leader>tdd 删除行
+"          <leader>tdc 删除列
+"          <leader>tfa 请求一个fomula给当前单元格
+"          <leader>tfe 
+"          <leader>ts  排序
+"
+"   imap: | 在table mode下触发创建表格
+"         || 扩展表格头
+"==============================================================
+
+"==============================================================
+"    file: incsearch.vim.vimrc
+"   brief: 高亮查找,/和?查找时会启用
+"
+"    nmap: <esc><esc> 取消高亮
+"==============================================================
+
+"==============================================================
+"    file: ultisnips.vimrc
+"   brief: 提供snippet
+"
+" command: UltiSnipsEdit[!] 为当前filetype打开一个snippet编辑窗口
+"          UltiSnipsAddFileTypes 合并其他文件类型的snippet
+"
+"    imap: <c-j>展开
+"          <c-tab>列出snippets
+"          <c-j>跳到下一个位置
+"          <c-k>跳到上一个位置
+"==============================================================
+
+"==============================================================
+"    file: vim-tmux-navigator.vim
+"   brief: 使切窗口与tmux一致
+"
+"    nmap: <c-h> 跳到左边窗口
+"          <c-j> 跳到下边窗口
+"          <c-k> 跳到上边窗口
+"          <c-l> 跳到右边窗口
+"==============================================================
+
+"==============================================================
+"    file: vim-bookmarks.vimrc
+"   brief: 给每行插入书签,可以带标签
+"
+" command: BookmarkToggle 触发书签
+"          BookmarkAnnotate <TEXT> 增加/编辑/删除注释标签
+"          BookmarkNext 跳到下一个书签
+"          BookmarkPrev 跳到上一个书签
+"          BookmarkShowAll 在新窗口显示所有书签
+"          BookmarkClear 删除当前buffer的书签
+"          BookmarkClearAll 删除所有的书签
+"          BookmarkMoveup 将当前书签移上一行
+"          BookmarkMoveDown 将当前书签移下一行
+"          BookmarkSave <FILE_PATH> 保存书签
+"          BookmarkLoad <FILE_PATH> 加载书签
+"          BookmarkProjectLoad 加载工程下的书签
+"
+"    nmap: Mm :BookmarkToggle
+"          Ma :BookmarkAnnotate
+"          Ms :BookmarkShowAll
+"          Mn :BookmarkNext
+"          Mp :BookmarkPrev
+"          Mc :BookmarkClear
+"          Mu :BookmarkMoveUp
+"          Md :BookmarkMoveDown
+"==============================================================
+
+"==============================================================
+"    file: vim-surround.vimrc
+"   brief: 操作括号
+"
+" TARGETS:
+"       () b
+"       {} B
+"       [] r
+"       <>
+"       '
+"       "
+"       `
+"       w
+"       W
+"       s
+"       p
+"
+"
+"    nmap:  ds 删除surroundings
+"           cs 修改surroundings
+"           ys 增加surroundings
+"           yss 整行增加surroundings
+"           yS 换行surroundings
+"           ySS 换行surroundings整行
+"    vmap:  S 对选中的进行surroundings
+"    imap:  <C-G>s
+"           <C-S>
+"==============================================================
+
+"==============================================================
+"    file: file_template.vim.vimrc
+"   brief: 自动根据文件类型插入文件头注释
+"
+" command: InsertTemplate 在文件头部插入注释
+"
+"==============================================================
+
+"==============================================================
+"    file: vim-signature.vimrc
+"   brief: 显示mark标签
+"
+"    nmap:
+"      mx 触发一个'x'字母的标签
+"      m, 插入下一个可用的标签
+"      m. 如果存在标签，则删除，否则插入下一个可用的标签
+"      m- 删除当前行的所有标签
+"      m<space> 删除所前buffer的所有标签
+"      ]` 跳到下一个标签
+"      [` 跳到上一个标签
+"      ]' 跳到下一个标签的行首
+"      [' 跳到上一个标签的行首
+"      `] 跳到字母序的下一个标签
+"      `[ 跳到字母序的上一个标签
+"      '] 跳到字母序的下一个标签行首
+"      '[ 跳到字母序的上一个标签行首
+"      m/ 打开一个location list显示当前buffer的所有标签
+"
+"      0~9是类型标签，可以重复打
+"      m[0-9] 触发一个shift+数字上的字母标签,这类型的标签可以重复打
+"      m<S-[0-9]> 删除所有抽类型的标签
+"      ]- 跳到下一个有同样标签的行
+"      [- 跳到上一个有同样标签的行
+"      ]= 跳到下一个任意类型的标签
+"      [= 跳到上一个任意类型的标签
+"      m? 打开一个location list显示所有当前buffer的类型标签
+"      m<BS> 删除所有的类型标签
+"
+" command: SignatureToggleSigns 触发显示标签
+"          SignatureRefresh 刷新显示
+"          SignatureListBufferMarks [n] 显示当前buffer的所有标签，n是上下文行数
+"          SignatureListGlobalMarks [n] 显示所有buffer的所有标签，n是上下文行数
+"          SignatureListMarkers [marker] [n] 显示当前buffer所有的marker标签，n是上下文行数
+"
+"==============================================================
+
+"==============================================================
+"    file: vim-choosewin.vim
+"   brief: 选择window
+"
+" command:
+"         ChooseWin 选择window
+"         ChooseWinSwap 交换window位置
+"         ChooseWinSwapStay 交换window位置，保持光标不动
+"
+"    nmap:   <leader>sw ChooseWin
+"
+"   ChooseWin状态的key
+"	| Key  | Action     | Description                   |
+"	| ---- | ---------- | ----------------------------- |
+"	| 0    | tab_first  | Select FIRST    tab           |
+"	| [    | tab_prev   | Select PREVIOUS tab           |
+"	| ]    | tab_next   | Select NEXT     tab           |
+"	| $    | tab_last   | Select LAST     tab           |
+"	| x    | tab_close  | Close current tab             |
+"	| ;    | win_land   | Navigate to current window    |
+"	| -    | previous   | Naviage to previous window    |
+"	| s    | swap       | Swap windows               #1 |
+"	| S    | swap_stay  | Swap windows but stay      #1 |
+"	| <CR> | win_land   | Navigate to current window    |
+"	|      | <NOP>      | Disable predefined keymap     |
+"==============================================================
+
+"==============================================================
+"    file: ctrlsf.vim
+"   brief: 搜索字符串
+"
+"     nmap: <leader>sf 开启命令行，提示输入文字进行搜索
+"           <leader>sb 对当前光标的单词进行全匹配搜索
+"           <leader>sn 开启命令行，把当前光标的单词填到参数
+"           <leader>sp 开启命令行，当上一次搜索的单词填到参数
+"           <leader>st 触发CtrlSF窗口
+"           <leader>sr 触发在工程目录搜索还是当前目录搜索
+"
+"     vmap: <leader>sf 搜索当前选中的字符串
+"           <leader>sF 开启命令行，把当前选中的填到参数，提示用户输入
+"
+"  command:
+"           CtrlSF [arguments] {pattern} [path] ... 搜索
+"           CtrlSFOpen 重新打开关闭的窗口
+"           CtrlSFUpdate 更新上一次的模式搜索结果
+"           CtrlSFClose 关闭CtrlSF窗口
+"           CtrlSFClearHL 清除高亮
+"           CtrlSFToggle 触发CtrlSF窗口
+"           CtrlSFToggleMap 触发CtrlSF的默认mapping，只有在CtrlSF窗口有用
+"
+" CtrlSF窗口的mapping:
+"         Enter, o, double-click - Open corresponding file of current line in the window which CtrlSF is launched from.
+"         <C-O> - Like Enter but open file in a horizontal split window.
+"         t - Like Enter but open file in a new tab.
+"         p - Like Enter but open file in a preview window.
+"         P - Like Enter but open file in a preview window and switch focus to it.
+"         O - Like Enter but always leave CtrlSF window opening.
+"         T - Like t but focus CtrlSF window instead of new opened tab.
+"         M - Switch result window between normal view and compact view.
+"         q - Quit CtrlSF window.
+"         <C-J> - Move cursor to next match.
+"         <C-K> - Move cursor to previous match.
+" Maps by default in preview window:
+"         <q>            Quit preview mode.
+"
+" Arguments:
+" '-after', '-A'    匹配行后显示的行数
+" '-before', '-B'   匹配行前显示的行数
+" '-context', '-C'  匹配行前后显示的行数
+" '-filetype'       指定搜索的文件类型
+" '-filematch'      指定要搜索的文件名模式进行搜索
+" '-ignorecase', '-I' 忽略大小写
+" '-ignoredir'      忽略目录
+" '-literal', '-L'  literal string
+" '-matchcase', '-S' 识别大小写
+" '-regex', '-R'    使用正则表达式匹配
+" '-smartcase'      smartcase
+"==============================================================
+
+"==============================================================
+"    file: vim-move.vim
+"   brief: 移动行
+"
+"    nmap: <m-j> 当前行下移
+"          <m-k> 当前行上移
+"    smap: <m-j> 当前块下移
+"          <m-k> 当前块上移  
+"==============================================================
+
+"==============================================================
+"    file: vim-indent-guides.vim
+"   brief: 
+"==============================================================
+
+
+"==============================================================
+"    file: cscope.vimrc
+"   brief: 
+"
+" command: cs help 帮助
+"          cs kill 断开链接
+"          cs reset 重新链接
+"          cs show 显示链接
+"          cs find {querytype} {name}
+"             querytype可以是下面的选项
+"		0 or s: Find this C symbol
+"		1 or g: Find this definition
+"		2 or d: Find functions called by this function
+"		3 or c: Find functions calling this function
+"		4 or t: Find this text string
+"		6 or e: Find this egrep pattern
+"		7 or f: Find this file
+"		8 or i: Find files #including this file
+"
+"    nmap: <prefix> <c-\> cs find
+"                   <c-_>s csc find
+"                   <a-_>v vert scs find
+"
+"         <c-]> 跳到定义
+"==============================================================
+
+"==============================================================
+"    file: DoxygenToolkit.vim.vimrc
+"   brief: 插入doxygen的注释
+"
+" command: :Dox 给函数插入注释
+"          :DoxAuthor 插入作者和版本
+"          :DoxLic 插入证书
+"
+"    nmap: <leader>dx :Dox
+"          <leader>da :DoxAuthor
+"          <leader>dl :DoxLic
+"==============================================================
+
+"==============================================================
+"    file: vim-gtest.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: a.vim.vimrc
+"   brief: 在源文件和头文件中跳转
+"
+" command: A 头文件跳到源文件中,或者相反
+"          AS split和跳转
+"          AV vertical split和跳转
+"          AT new tab和跳转
+"          AN cycles through matches
+"          IH 跳转到cursor下的文件
+"          IHS split和跳转
+"          IHV vertical split和跳转
+"          IHT new tab和跳转
+"          ITN cycles through matches
+"
+"    nmap: <leader>as :A
+"==============================================================
+
+"==============================================================
+"    file: vim-gencode-cpp.vimrc
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: quickfix.vimrc
+"   brief: 
+"
+"    nmap: <leader>qk 跳到上一个quickfix或者loclist的内容
+"          <leader>qj 跳到下一个quickfix或者loclist的内容
+"          <leader>qc 关闭quickfix或者loclist
+"          <leader>qo 打开quickfix或者loclist
+"          <leader>qq 打开quickfix
+"          <leader>ql 打开loclist
+"
+" quickfix的nmap
+"     q: cclose
+"==============================================================
+
+"==============================================================
+"    file: vimunx.vim
+"   brief: 与tmux交互的插件
+"
+" command: VimuxPromptCommand 提示输入命令运行
+"          VimuxRunLastCommand 运行上一次的命令
+"          VimuxInspectRunner 进入运行窗口并进入选择模式
+"          VimuxCloseRunner 关闭运行窗口
+"          VimuxInterruptRunner 给运行窗口发送中断信号
+"          VimuxZoomRunner 将运行窗口全屏，在tmux下使用<prefix>z返回
+"
+"    nmap: <leader>vp :VimuxPromptCommand
+"          <leader>vl :VimuxRunLastCommand
+"          <leader>vi :VimuxInspectRunner
+"          <leader>vq :VimuxCloseRunner
+"          <leader>vc :VimuxInterruptRunner
+"          <leader>vz :VimuxZoomRunner
+"==============================================================
+
+"==============================================================
+"    file: Conque-GDB.vim
+"   brief: 在vim中使用gdb
+"          vim中使用命令行
+"
+" command: 启动gdb
+"          ConqueGdb
+"          ConqueGdb program
+"          ConqueGdb -d dir --args program [arguments]
+"          ConqueGdbSplit 水平分割出调试窗口
+"          ConqueGdbVSplit 垂直分割调试窗口
+"          ConqueGdbTab 开一个新tab打开调试窗口
+"          ConqueGdbBDelete 删除ConqueGdb打开的buffer
+"          ConqueGdbCommand 在非gdb窗口中给gdb发送命令
+"          ConqueGdbExe 设置gdb运行程序
+"
+"          ConqueTerm <command> 在当前窗口运行command
+"          ConqueTermSplit 水平分割窗口运行命令
+"          ConqueTermVSplit 垂直分割窗口运行命令
+"          ConqueTermTab tab窗口运行命令
+"==============================================================
+
+"==============================================================
+"    file: github-complete.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: ale.vimrc
+"   brief: 异步语法检查
+"
+" command: ALELint 进行检查
+"          ALEPrevious 上一个错误或警告,不循环
+"          ALEPreviousWrap 上一个错误或警告,循环
+"          ALENext 下一个错误或警告,不循环
+"          ALENextWrap 下一个错误或警告,循环
+"          ALEToggle 触发启用ale
+"          ALEEnable 启用ale
+"          ALEDisable 禁用ale
+"          ALEDetail 显示完整的错误信息在底行
+"
+"    nmap: <leader>al ALELint
+"          <leader>ad ALEDetail
+"          <leader>at ALEToggle
+"          <leader>aj ALENextWrap
+"          <leader>ak ALEPreviousWrap
+"==============================================================
+
+"==============================================================
+"    file: vim-argwrap.vimrc
+"   brief: 参数换行和同行模式转换
+"
+" command: :ArgWrap 转换
+"    nmap: <leader>aw :ArgWrap
+"==============================================================
+
+"==============================================================
+"    file: vim-yaml-folds.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-expand-region.vimrc
+"   brief: 选择区域
+"
+"    nmap:
+"       + 展开选择
+"       - 缩小选择
 "==============================================================
 
