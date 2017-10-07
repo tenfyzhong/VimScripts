@@ -1,5 +1,5 @@
 "==============================================================
-"    file: csv.vim.vimrc
+"    file: csv.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

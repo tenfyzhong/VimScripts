@@ -1,5 +1,5 @@
 "==============================================================
-"    file: ultisnips.vimrc
+"    file: ultisnips.vim
 "   brief: 提供snippet
 "
 " command: UltiSnipsEdit[!] 为当前filetype打开一个snippet编辑窗口

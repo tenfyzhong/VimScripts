@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-cursorword.vimrc
+"    file: vim-cursorword.vim
 "   brief: 给当前的单词加上下划线
 " VIM Version: 7.4
 "  author: tenfyzhong

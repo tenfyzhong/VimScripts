@@ -1,5 +1,5 @@
 "==============================================================
-"    file: supertab.vimrc
+"    file: supertab.vim
 "   brief: 使用tab键来进行补全
 " VIM Version: 7.4
 "  author: tenfyzhong

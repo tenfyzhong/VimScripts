@@ -1,5 +1,5 @@
 "==============================================================
-"    file: ag.vim.vimrc
+"    file: ag.vim
 "   brief: 使用ag命令来查找字符串或者文件
 "
 " command: :Ag[!] [options] {pattern} [{directory}] 在directory下去查找pattern

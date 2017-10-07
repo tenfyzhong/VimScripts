@@ -1,5 +1,5 @@
 "==============================================================
-"    file: diffchar.vim.vimrc
+"    file: diffchar.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

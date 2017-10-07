@@ -1,5 +1,5 @@
 "==============================================================
-"    file: Mark--Karkat.vimrc
+"    file: Mark--Karkat.vim
 "   brief: 高亮字符串
 "
 "    nmap: <leader>m 高亮或者取消高亮

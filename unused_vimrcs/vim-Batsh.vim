@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-Batsh.vimrc
+"    file: vim-Batsh.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

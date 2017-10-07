@@ -1,5 +1,5 @@
 "==============================================================
-"    file: dash.vim.vimrc
+"    file: dash.vim
 "   brief: dash的vim集成，这个插件只有mac才有用
 "
 " command: Dash[!] [TERM] [KEYWORD] 在dash中搜索当前文件类型的关键字，

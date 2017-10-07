@@ -1,5 +1,5 @@
 "==============================================================
-"    file: neocomplete.vim.vimrc
+"    file: neocomplete.vim
 "   brief: 补全
 "
 " command: NeoCompleteEnable 开启补全

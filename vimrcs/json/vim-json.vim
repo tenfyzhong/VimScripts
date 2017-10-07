@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-json.vimrc
+"    file: vim-json.vim
 "   brief: 高亮json
 " VIM Version: 7.4
 "  author: tenfyzhong

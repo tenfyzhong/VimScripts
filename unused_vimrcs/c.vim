@@ -1,5 +1,5 @@
 "==============================================================
-"    file: c.vim.vimrc
+"    file: c.vim
 "   brief: help文件是csupport
 "
 "    nmap:

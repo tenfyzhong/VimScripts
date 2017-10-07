@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-indent-guides.vimrc
+"    file: vim-indent-guides.vim
 "   brief: 显示缩进
 "
 " command: IndentGuidesToggle 触发显示indent

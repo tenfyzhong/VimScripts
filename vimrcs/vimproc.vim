@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vimproc.vim.vimrc
+"    file: vimproc.vim
 "   brief: 异常执行库
 "
 " command: VimProcBang {path} 执行path命令然后echo结果,这是同步的

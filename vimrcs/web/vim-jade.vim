@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-jade.vimrc
+"    file: vim-jade.vim
 "   brief: jade高亮
 " VIM Version: 7.4
 "  author: tenfyzhong

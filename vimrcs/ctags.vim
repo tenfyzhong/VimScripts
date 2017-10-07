@@ -1,5 +1,5 @@
 "==============================================================
-"    file: ctags.vimrc
+"    file: ctags.vim
 "   brief: 使用ctags进行跳转,需要链接tags
 "
 "    nmap: <c-]> 跳转到当前字符串的定义处,与cscope一起使用的话,先使用cscope的功能

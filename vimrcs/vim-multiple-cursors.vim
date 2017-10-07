@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-multiple-cursors.vimrc
+"    file: vim-multiple-cursors.vim
 "   brief: 选择多个相同的字符串
 "
 " command: MultipleCursorFind 在整个文件或者range中匹配

@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-compiler-go.vimrc
+"    file: vim-compiler-go.vim
 "   brief: go语言编译查错
 " VIM Version: 7.4
 "  author: tenfyzhong

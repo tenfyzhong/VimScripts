@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-bookmarks.vimrc
+"    file: vim-bookmarks.vim
 "   brief: 给每行插入书签,可以带标签
 "
 " command: BookmarkToggle 触发书签

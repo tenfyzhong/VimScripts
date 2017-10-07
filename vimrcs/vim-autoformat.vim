@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-autoformat.vimrc
+"    file: vim-autoformat.vim
 "   brief: 格式化代码
 "
 " command: Autoformat [{filetype}] 格式化当前文件

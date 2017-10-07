@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-rename.vimrc
+"    file: vim-rename.vim
 "   brief: 重命名当前的buffer文件
 "
 " command: Rename {new name}

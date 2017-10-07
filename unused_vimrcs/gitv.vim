@@ -1,5 +1,5 @@
 "==============================================================
-"    file: gitv.vimrc
+"    file: gitv.vim
 "   brief: 类似gitk的git展示
 "
 " command: :[range]Gitv[!] [args] 打开gitv窗口,指定range时会打开只影响的行,!会使用file mode替换browser mode

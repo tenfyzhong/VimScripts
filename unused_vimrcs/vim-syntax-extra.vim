@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-syntax-extra.vimrc
+"    file: vim-syntax-extra.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

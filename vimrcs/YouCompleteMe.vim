@@ -1,5 +1,5 @@
 "==============================================================
-"    file: YouCompleteMe.vimrc
+"    file: YouCompleteMe.vim
 "   brief: 
 " 
 " command: YcmRestartServer 重启ycmd

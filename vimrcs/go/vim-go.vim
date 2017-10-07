@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-go.vimrc
+"    file: vim-go.vim
 "   brief: go-ide
 "
 " command: GoPath [path] 设置GOPATH

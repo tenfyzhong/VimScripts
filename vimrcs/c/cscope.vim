@@ -1,5 +1,5 @@
 "==============================================================
-"    file: cscope.vimrc
+"    file: cscope.vim
 "   brief: 
 "
 " command: cs help 帮助

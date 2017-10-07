@@ -1,5 +1,5 @@
 "==============================================================
-"    file: CmdlineComplete.vimrc
+"    file: CmdlineComplete.vim
 "   brief: 命令行模式下调用<c-p><c-n>来补全buffer中存在的字符串
 " VIM Version: 7.4
 "  author: tenfyzhong

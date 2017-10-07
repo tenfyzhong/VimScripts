@@ -1,5 +1,5 @@
 "==============================================================
-"    file: quickfix.vimrc
+"    file: quickfix.vim
 "   brief: 
 "
 "    nmap: <leader>qk 跳到上一个quickfix或者loclist的内容

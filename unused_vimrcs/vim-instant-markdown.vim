@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-instant-markdown.vimrc
+"    file: vim-instant-markdown.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

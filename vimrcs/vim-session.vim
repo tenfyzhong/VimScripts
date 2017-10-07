@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-session.vimrc
+"    file: vim-session.vim
 "   brief: 保存加载session
 "
 " command: SaveSession[!] 保存session,!会直接覆盖同名的session而不提示

@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-plug.vimrc
+"    file: vim-plug.vim
 "   brief: vim包管理
 "
 " command:

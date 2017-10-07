@@ -1,5 +1,5 @@
 "==============================================================
-"    file: tar.vim.vimrc
+"    file: tar.vim
 "   brief: 自动打开tar包
 " VIM Version: 7.4
 "  author: tenfyzhong

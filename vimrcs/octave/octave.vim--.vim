@@ -1,5 +1,5 @@
 "==============================================================
-"    file: octave.vim--.vimrc
+"    file: octave.vim--.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

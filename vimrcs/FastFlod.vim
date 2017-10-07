@@ -1,5 +1,5 @@
 "==============================================================
-"    file: FastFlod.vimrc
+"    file: FastFlod.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

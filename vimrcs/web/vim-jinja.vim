@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-jinja.vimrc
+"    file: vim-jinja.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

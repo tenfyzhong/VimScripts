@@ -1,5 +1,5 @@
 "==============================================================
-"    file: xml.vim.vimrc
+"    file: xml.vim
 "   brief: help xml-plugin
 "
 "    nmap: ;; 将当前word做为一个tag进行扩展

@@ -1,5 +1,5 @@
 "==============================================================
-"    file: incsearch.vim.vimrc
+"    file: incsearch.vim
 "   brief: 高亮查找,/和?查找时会启用
 "
 "    nmap: <esc><esc> 取消高亮

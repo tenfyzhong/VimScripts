@@ -1,5 +1,5 @@
 "==============================================================
-"    file: DoxygenToolkit.vim.vimrc
+"    file: DoxygenToolkit.vim
 "   brief: 插入doxygen的注释
 "
 " command: :Dox 给函数插入注释

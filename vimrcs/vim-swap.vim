@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-swap.vimrc
+"    file: vim-swap.vim
 "   brief: 交换items
 "
 "    nmap: 

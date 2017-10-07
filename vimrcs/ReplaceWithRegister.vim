@@ -1,5 +1,5 @@
 "==============================================================
-"    file: ReplaceWithRegister.vimrc
+"    file: ReplaceWithRegister.vim
 "   brief: 使用寄存器的内容替换而不更新寄存器内容
 "
 "    nmap: [count]["x]gr{motion} 使用寄存器内容替换{motion}内容

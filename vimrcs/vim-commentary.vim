@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-commentary.vimrc
+"    file: vim-commentary.vim
 "   brief: 注释行
 "
 " command: [range]Commentary 注释或者取消注释行

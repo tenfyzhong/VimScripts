@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-over.vimrc
+"    file: vim-over.vim
 "   brief: 高亮:substitute
 "
 " command: OverCommandLine [{input}] 切到高亮模式,input会直接当成命令

@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-expand-region.vimrc
+"    file: vim-expand-region.vim
 "   brief: 选择区域
 "
 "    nmap:

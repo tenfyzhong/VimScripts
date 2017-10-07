@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-signature.vimrc
+"    file: vim-signature.vim
 "   brief: 显示mark标签
 "
 "    nmap:
