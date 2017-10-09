@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-do.vimrc
+"    file: vim-do.vim
 "   brief: 异步执行shell脚本后将结果返回到一个新buffer中
 "
 " command: Do <command> 在后台执行command

@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vcscommand.vim.vimrc
+"    file: vcscommand.vim
 "   brief: 提供ex命令来操作vcs
 " 
 " command: VCSAdd 将当前文件添加到VCS,不会提交,参数会透传给VCS

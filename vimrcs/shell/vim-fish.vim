@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-fish.vimrc
+"    file: vim-fish.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

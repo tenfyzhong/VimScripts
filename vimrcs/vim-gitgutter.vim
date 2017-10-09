@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-gitgutter.vimrc
+"    file: vim-gitgutter.vim
 "   brief: 显示文件行的修改状态
 "
 " command: GitGutterDisable 关闭GitGutter

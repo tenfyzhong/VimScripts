@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-maven-plugin.vimrc
+"    file: vim-maven-plugin.vim
 "   brief: maven
 " VIM Version: 7.4
 "  author: tenfyzhong

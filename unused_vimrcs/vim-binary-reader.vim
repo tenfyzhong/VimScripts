@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-binary-reader.vimrc
+"    file: vim-binary-reader.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

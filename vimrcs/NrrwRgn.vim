@@ -1,5 +1,5 @@
 "==============================================================
-"    file: NrrwRgn.vimrc
+"    file: NrrwRgn.vim
 "   brief: 对选定内容进行编辑
 "
 " command: [range]NarrowRegion[!]

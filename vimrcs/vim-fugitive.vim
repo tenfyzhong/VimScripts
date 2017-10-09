@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-fugitive.vimrc
+"    file: vim-fugitive.vim
 "   brief: 运行git命令
 "
 " command: 

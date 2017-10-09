@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-scriptease.vimrc
+"    file: vim-scriptease.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

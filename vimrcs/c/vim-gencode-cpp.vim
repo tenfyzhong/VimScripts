@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-gencode-cpp.vimrc
+"    file: vim-gencode-cpp.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

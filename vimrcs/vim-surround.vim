@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-surround.vimrc
+"    file: vim-surround.vim
 "   brief: 操作括号
 "
 " TARGETS:

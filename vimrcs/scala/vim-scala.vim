@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-scala.vimrc
+"    file: vim-scala.vim
 "   brief: 
 "
 " command: SortScalaImports 将import排序

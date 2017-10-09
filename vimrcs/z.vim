@@ -1,5 +1,5 @@
 "==============================================================
-"    file: z.vim.vimrc
+"    file: z.vim
 "   brief:  wrapper around the CLI z
 "
 " command: Z regex 跳转到regex匹配的目录

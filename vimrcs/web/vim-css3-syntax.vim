@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-css3-syntax.vimrc
+"    file: vim-css3-syntax.vim
 "   brief: css3语法高亮
 " VIM Version: 7.4
 "  author: tenfyzhong

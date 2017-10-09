@@ -1,5 +1,5 @@
 "==============================================================
-"    file: bash-support.vim.vimrc
+"    file: bash-support.vim
 "   brief: bash ide
 "
 "    nmap:

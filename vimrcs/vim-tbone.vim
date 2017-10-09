@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-tbone.vimrc
+"    file: vim-tbone.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

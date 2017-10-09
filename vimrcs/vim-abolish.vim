@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-abolish.vimrc
+"    file: vim-abolish.vim
 "   brief: 一次查找,替换,缩写多个字符串
 "
 " command: 

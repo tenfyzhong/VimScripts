@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-argwrap.vimrc
+"    file: vim-argwrap.vim
 "   brief: 参数换行和同行模式转换
 "
 " command: :ArgWrap 转换

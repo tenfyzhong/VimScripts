@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-ctrlspace.vimrc
+"    file: vim-ctrlspace.vim
 "   brief: 管理文件
 "
 " command: CtrlSpace [keys] 显示ctrlspace

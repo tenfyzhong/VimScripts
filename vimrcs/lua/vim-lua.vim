@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-lua.vimrc
+"    file: vim-lua.vim
 "   brief: lua的高亮和缩进
 " VIM Version: 7.4
 "  author: tenfyzhong

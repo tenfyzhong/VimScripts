@@ -1,5 +1,5 @@
 "==============================================================
-"    file: braceless.vim.vimrc
+"    file: braceless.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

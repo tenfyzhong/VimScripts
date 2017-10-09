@@ -1,5 +1,5 @@
 "==============================================================
-"    file: YankRing.vim.vimrc
+"    file: YankRing.vim
 "   brief: 管理粘贴列表
 "
 " command: YRToggle 触发yankring

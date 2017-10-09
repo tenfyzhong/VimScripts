@@ -1,5 +1,5 @@
 "==============================================================
-"    file: python-mode.vimrc
+"    file: python-mode.vim
 "   brief: 
 "    help: pymode
 "

@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-node.vimrc
+"    file: vim-node.vim
 "   brief: 
 " 
 " command: Nedit module_name 编辑模块的main文件

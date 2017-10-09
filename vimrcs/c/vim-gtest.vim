@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-gtest.vimrc
+"    file: vim-gtest.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

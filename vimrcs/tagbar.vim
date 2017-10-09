@@ -1,5 +1,5 @@
 "==============================================================
-"    file: tagbar.vimrc
+"    file: tagbar.vim
 "   brief: 浏览tag的工具
 "
 " command: TagbarOpen [{flags}] 打开tagbar

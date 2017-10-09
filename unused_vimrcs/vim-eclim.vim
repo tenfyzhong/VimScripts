@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-eclim.vimrc
+"    file: vim-eclim.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

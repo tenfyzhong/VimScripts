@@ -1,5 +1,5 @@
 "==============================================================
-"    file: YouCompleteMe.vimrc
+"    file: YouCompleteMe.vim
 "   brief: 
 " 
 " command: YcmRestartServer 重启ycmd
@@ -27,9 +27,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 17:02:00
 "==============================================================
-if has('nvim')
-    finish
-endif
 PluginAdd 'Valloric/YouCompleteMe', {'frozen': 1, 'do': './install.py --all'}
 PluginAdd 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': ['c', 'cpp'] }
 
@@ -51,4 +48,27 @@ let g:ycm_key_list_previous_completion              = ['<C-p>', '<Up>']
 let g:ycm_server_log_level                          = 'error'
 let g:ycm_python_binary_path                        = 'python'
 
+let g:ycm_semantic_triggers =  {
+      \   'vim':        ['re![a-zA-Z_1-9]{2,}', ':', '#', '<SID>', '<Plug>'],
+      \   'c':          ['re![a-zA-Z_1-9]{2,}', '->', '.'],
+      \   'objc':       ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s', 're!\[.*\]\s'],
+      \   'ocaml':      ['re![a-zA-Z_1-9]', '.', '#'],
+      \   'cpp,objcpp': ['re![a-zA-Z_1-9]{2,}', '->', '.', '::'],
+      \   'perl':       ['re![a-zA-Z_1-9]{2,}', '->'],
+      \   'php':        ['re![a-zA-Z_1-9]{2,}', '->', '::'],
+      \   'cs':         ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'java':       ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'javascript': ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'typescript': ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'd':          ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'python':     ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'perl6':      ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'scala':      ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'vb':         ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'elixir':     ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'go':         ['re![a-zA-Z_1-9]{2,}', '.'],
+      \   'ruby':       ['re![a-zA-Z_1-9]{2,}', '.', '::'],
+      \   'lua':        ['re![a-zA-Z_1-9]{2,}', '.', ':'],
+      \   'erlang':     ['re![a-zA-Z_1-9]{2,}', ':'],
+      \ }
 

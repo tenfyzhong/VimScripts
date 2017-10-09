@@ -1,5 +1,5 @@
 "==============================================================
-"    file: nerdtree.vimrc
+"    file: nerdtree.vim
 "   brief: 目录树浏览
 "
 " command: NERDTree [<start-directory> | <bookmark>] 打开nerdtree

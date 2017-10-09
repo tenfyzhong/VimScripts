@@ -1,5 +1,5 @@
 "==============================================================
-"    file: html5.vim.vimrc
+"    file: html5.vim
 "   brief: html5高亮缩进补全
 " VIM Version: 7.4
 "  author: tenfyzhong

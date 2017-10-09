@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-javacomplete2.vimrc
+"    file: vim-javacomplete2.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

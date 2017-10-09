@@ -1,5 +1,5 @@
 "==============================================================
-"    file: delimitMate.vimrc
+"    file: delimitMate.vim
 "   brief: 自动补全右括号引号等
 " VIM Version: 7.4
 "

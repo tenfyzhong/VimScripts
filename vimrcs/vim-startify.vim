@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-startify.vimrc
+"    file: vim-startify.vim
 "   brief: 启动vim时显示最近使用的文件书签和session
 "
 " command: Startify 手动触发startify
@@ -18,7 +18,7 @@ let g:startify_session_dir = g:VIMHOME . '.startify_session'
 let g:startify_enable_special = 0
 let g:startify_change_to_dir = 1
 
-" let g:startify_bookmarks = [ {'c': '~/.vimrc'}, '~/.zshrc' ]
+" let g:startify_bookmarks = [ {'c': '~/.vim'}, '~/.zshrc' ]
 let g:startify_bookmarks = []
 
 let g:startify_skiplist = [

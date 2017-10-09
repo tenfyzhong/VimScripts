@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-airline.vimrc
+"    file: vim-airline.vim
 "   brief: 
 " 
 " command: AirlineTheme {theme-name} 切换主题

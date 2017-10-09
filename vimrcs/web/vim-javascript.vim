@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-javascript.vimrc
+"    file: vim-javascript.vim
 "   brief: js高亮和缩进
 " VIM Version: 7.4
 "  author: tenfyzhong

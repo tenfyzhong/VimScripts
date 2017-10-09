@@ -1,5 +1,5 @@
 "==============================================================
-"    file: TagHighlight.vimrc
+"    file: TagHighlight.vim
 "   brief: 高亮类，变量，类型等
 "
 " command: UpdateTypesFile 创建高亮的tag文件,递归到工程的根目录

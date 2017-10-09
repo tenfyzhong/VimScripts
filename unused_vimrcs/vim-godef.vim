@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-godef.vimrc
+"    file: vim-godef.vim
 "   brief: 跳到定义
 " VIM Version: 7.4
 "  author: tenfyzhong

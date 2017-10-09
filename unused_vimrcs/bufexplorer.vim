@@ -1,5 +1,5 @@
 "==============================================================
-"    file: bufexplorer.vimrc
+"    file: bufexplorer.vim
 "   brief: 查看当前打开的buffer的窗口列表
 "
 " commend: :BufExplorer 在当前窗口打开BufExplorer

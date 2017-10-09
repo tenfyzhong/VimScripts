@@ -1,5 +1,5 @@
 "==============================================================
-"    file: syntastic.vimrc
+"    file: syntastic.vim
 "   brief: 语法检查
 "
 " command: 

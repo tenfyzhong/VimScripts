@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-misc.vimrc
+"    file: vim-misc.vim
 "   brief: viml库
 " VIM Version: 7.4
 "  author: tenfyzhong

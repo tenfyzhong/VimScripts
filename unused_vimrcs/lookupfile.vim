@@ -1,5 +1,5 @@
 "==============================================================
-"    file: lookupfile.vimrc
+"    file: lookupfile.vim
 "   brief: 通过tag来查找文件
 "
 " command: LUTags 通过tag文件中查找文件

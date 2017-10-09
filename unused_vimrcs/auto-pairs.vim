@@ -1,5 +1,5 @@
 "==============================================================
-"    file: auto-pairs.vimrc
+"    file: auto-pairs.vim
 "   brief: 自动补齐括号
 "
 " (in)map: \ap 开启和关闭auto-pairs

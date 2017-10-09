@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-easymotion.vimrc
+"    file: vim-easymotion.vim
 "   brief: 比普通的移动更强大的移动
 "
 "    nmap:

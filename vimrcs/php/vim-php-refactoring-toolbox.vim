@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-php-refactoring-toolbox.vimrc
+"    file: vim-php-refactoring-toolbox.vim
 "   brief: 
 " VIM Version: 7.4
 "  author: tenfyzhong

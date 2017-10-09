@@ -1,5 +1,5 @@
 "==============================================================
-"    file: vim-table-mode.vimrc
+"    file: vim-table-mode.vim
 "   brief: 
 " command:
 "           :TableModeToggle 触发表格模式

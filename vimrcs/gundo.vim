@@ -1,5 +1,5 @@
 "==============================================================
-"    file: gundo.vim.vimrc
+"    file: gundo.vim
 "   brief: undo历史
 "
 "    nmap: <leader>gu 触发gundo窗口

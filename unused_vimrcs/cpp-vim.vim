@@ -1,5 +1,5 @@
 "==============================================================
-"    file: cpp-vim.vimrc
+"    file: cpp-vim.vim
 "   brief: c++11的高亮
 " VIM Version: 7.4
 "  author: tenfyzhong
