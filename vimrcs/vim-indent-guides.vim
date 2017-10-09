@@ -2,8 +2,8 @@
 "    file: vim-indent-guides.vim
 "   brief: 
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfy
+"   email: tenfy@tenfy.cn
 " created: 2017-09-26 10:29:29
 "==============================================================
 PluginAdd 'nathanaelkane/vim-indent-guides'

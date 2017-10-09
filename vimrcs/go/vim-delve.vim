@@ -17,8 +17,8 @@
 "    | `DlvToggleTracepoint`          | Convenience method to toggle (add or remove) a tracepoint at the current line.
 "    | `DlvVersion`                   | Print the `dlv` version.
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfy
+"   email: tenfy@tenfy.cn
 " created: 2017-07-24 09:03:29
 "==============================================================
 if has('nvim')

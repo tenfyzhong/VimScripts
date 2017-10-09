@@ -9,8 +9,8 @@
 "       <leader>rp 打开预览
 "       <leader>rs 停止预览
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfy
+"   email: tenfy@tenfy.cn
 " created: 2017-07-05 15:31:36
 "==============================================================
 PluginAdd 'iamcco/markdown-preview.vim'

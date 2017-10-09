@@ -24,8 +24,8 @@
 "	| <CR> | win_land   | Navigate to current window    |
 "	|      | <NOP>      | Disable predefined keymap     |
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfy
+"   email: tenfy@tenfy.cn
 " created: 2017-08-31 21:47:11
 "==============================================================
 PluginAdd 't9md/vim-choosewin'

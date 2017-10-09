@@ -6,8 +6,8 @@
 "       <leader>h 选择左边的buffer
 "       <leader>l 选择右边的buffer
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfy
+"   email: tenfy@tenfy.cn
 " created: 2017-07-10 09:02:47
 "==============================================================
 PluginAdd 'tenfyzhong/smart-tabline.vim'

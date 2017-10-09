@@ -42,8 +42,8 @@
 "   'p' 复制粘贴
 "   <ESC> 关闭列表
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfy
+"   email: tenfy@tenfy.cn
 " created: 2017-06-07 09:08:46
 "==============================================================
 PluginAdd 'mattn/webapi-vim'
