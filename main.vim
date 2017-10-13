@@ -82,7 +82,7 @@ set expandtab
 set softtabstop=4
 set smarttab
 
-set showtabline=2   "标签栏
+set showtabline=0   "标签栏
 set laststatus=2    "永远显示状态栏
 
 set number          " 显示行号

@@ -22,7 +22,7 @@ let g:airline#extensions#ycm#warning_symbol = 'W:'
 let g:airline#extensions#tabline#buffers_label = 't%(%{tabpagenr()}%)/%(%{tabpagenr("$")}%)'
 let g:airline#extensions#tabline#tabs_label = 't'
 
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#show_buffers = 1
