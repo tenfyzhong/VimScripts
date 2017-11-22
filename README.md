@@ -147,7 +147,9 @@ o对应motion模式
 | `<space>O`         | n     | global             | 在下面添加[count]个空行                 |
 | `<leader>p`        | n     | global             | 粘贴系统粘贴板的内容                    |
 | `<leader>y`        | n     | global             | 复制内容到系统粘贴板                    |
-| `<leader>as`       | n     | a.vim              | 在源文件和头文件中切换                  |
+| `<leader>aa`       | n     | a.vim              | 在源文件和头文件中切换                  |
+| `<leader>as`       | n     | a.vim              | 水平打开源文件或者头文件对应的另一部分  |
+| `<leader>av`       | n     | a.vim              | 竖直打开源文件或者头文件对应的另一部分  |
 | `<C-\>s`           | n     | cscope             | 查找这个C符号                           |
 | `<C-\>g`           | n     | cscope             | 查找这个定义                            |
 | `<C-\>c`           | n     | cscope             | 查找调用这个函数的函数                  |
@@ -255,7 +257,9 @@ o对应motion模式
 | `<leader>rt`       | n     | vim-go             | go-test                                 |
 | `<leader>rf`       | n     | vim-go             | go-test-func                            |
 | `<leader>rc`       | n     | vim-go             | go-coverage                             |
-| `<leader>as`       | n     | vim-go             | go-alternate-edit                       |
+| `<leader>aa`       | n     | vim-go             | go-alternate-edit                       |
+| `<leader>as`       | n     | vim-go             | go-alternate-split                      |
+| `<leader>av`       | n     | vim-go             | go-alternate-vertical                   |
 | `<leader>ri`       | n     | vim-go             | GoImport                                |
 | `<leader>ra`       | n     | vim-go             | GoImportAs                              |
 | `<C-]>`            | n     | vim-go             | GoDef                                   |

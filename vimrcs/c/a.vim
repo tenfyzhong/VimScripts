@@ -25,5 +25,7 @@ let g:alternateNoDefaultAlternate = 1
 
 augroup a_vim_init
     autocmd!
-    au FileType c,cpp nnoremap <silent><leader>as :A<cr>
+    au FileType c,cpp nnoremap <silent><leader>aa :A<cr>
+    au FileType c,cpp nnoremap <silent><leader>as :AS<cr>
+    au FileType c,cpp nnoremap <silent><leader>av :AV<cr>
 augroup END
