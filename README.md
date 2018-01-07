@@ -183,6 +183,7 @@ o对应motion模式
 | `<leader>nf`       | n     | nerdtree           | NERDTree %                              |
 | `<leader>tb`       | n     | tagbar or taglist  | 触发tagbar or taglist                   |
 | `<leader>ta`       | n     | tagbar or taglist  | 触发tagbar和nerdtree                    |
+| `<leader>tf`       | n     | tagbar             | 跳到tagbar，没打开则打开                |
 | `<leader>qk`       | n     | quickfix           | 上一条错误警告处                        |
 | `<leader>qj`       | n     | quickfix           | 下一条错误警告处                        |
 | `<leader>qc`       | n     | quickfix           | 关闭quickfix或者loclist                 |

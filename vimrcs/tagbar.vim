@@ -4,7 +4,7 @@
 "
 " command: TagbarOpen [{flags}] 打开tagbar
 "          TagbarClose 关闭tagbar
-"          TagbarToggle 触发tagbar
+"          TagbarToggle 触发bagbar
 "          TagbarTogglePause 触发冻结当前的tagbar,文件间切换也不会变
 "          TagbarOpenAutoClose 打开tagbar窗口后,选择完就关闭
 "          TagbarSetFoldlevel[!] {number} 设置折叠级别
@@ -13,6 +13,7 @@
 "          TagbarGetTypeConfig {filetype} 粘贴filetype的配置
 "
 "    nmap: <leader>tb :TagbarToggle
+"          <leader>tf :TagbarOpen fb
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfy@tenfy.cn
@@ -34,6 +35,7 @@ if !exists("g:tagbar_maps")
     let g:tagbar_maps = 1
     nnoremap <silent><leader>tb :call <SID>ToggleTagbar()<CR>
     nnoremap <silent><leader>ta :call <SID>ToggleNerdTreeAndTagbar()<CR>
+    nnoremap <silent><leader>tf :TagbarOpen fj<CR>
 endif
 " autocmd FileType c,cpp,h,cc,hpp,cxx nested :TagbarOpen
 
@@ -45,6 +47,7 @@ let g:tagbar_show_visibility 	= 1
 let g:tagbar_iconchars 			= ['+', '-']
 let g:tagbar_indent             = 1
 let g:tagbar_show_linenumbers   = -1
+let g:tagbar_autofocus          = 1
 
 let s:support_winid = version >= 800 || has('nvim')
 
