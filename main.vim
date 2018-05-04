@@ -175,6 +175,8 @@ nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 
 nnoremap <silent><Space>    <NOP>
 nnoremap <silent><Space><Space>   zA
+nnoremap <silent><c-w>\ <c-w>v
+nnoremap <silent><c-w>- <c-w>s
 
 nnoremap <c-p> <esc>:call <sid>clear_or_redraw()<cr>
 
