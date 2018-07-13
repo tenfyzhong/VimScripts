@@ -69,10 +69,12 @@ function! loader#LoadVimrcs()
 
     call plug#begin(g:bundle_path)
 
+    " 加载配置的脚本
     for dir in b:type_plugin_list
         call <SID>LoadDirPlugin(g:vimrc_path . dir)
     endfor
 
+    " 配置的脚本加载后，就可以去加载脚本里加入的插件了
     call <SID>load_plugins()
 
     call plug#end()
@@ -86,6 +88,9 @@ endfunction
 " 检查插件是否存在 ----------------------------------------------------------{{{
 function! loader#PluginExist(plugin)
     let plugin_name = split(a:plugin, "/")[-1]
+    if len(plugin_name) > 4 && plugin_name[-4:] == '.git'
+        let plugin_name = plugin_name[0:-5]
+    endif
     if isdirectory(g:bundle_path . plugin_name)
         return 1
     else
