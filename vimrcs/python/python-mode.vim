@@ -115,3 +115,29 @@ let g:pymode_lint_options_pep8 =
 let g:pymode_lint_options_pylint =
     \ {'max-line-length': g:pymode_options_max_line_length}
 let g:pymode_rope = 1
+
+augroup pymode_init
+  autocmd FileType python nnoremap <silent><leader>qc :call <sid>close_doc_window()<cr>
+augroup end
+
+func! s:close_doc_window()
+  " save cur pos
+  let winid = win_getid()
+  let cur_pos = getcurpos()
+
+  let quick_loc_list = feature#GetQuickfixOrLoclistWinNr()
+
+  let buf_num = bufnr('__doc__')
+  if buf_num == -1
+    return
+  endif
+  let win_ids = quick_loc_list + win_findbuf(buf_num)
+  for id in win_ids
+    if id != -1
+      call win_gotoid(id)
+      :q
+    endif
+  endfor
+  call win_gotoid(winid)
+  call setpos('.', cur_pos)
+endfunc
