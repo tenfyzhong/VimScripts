@@ -19,6 +19,8 @@ let g:formatters_python = ['yapf']
 augroup autoformat_setting
     au!
     autocmd BufWrite *.py,*.json,*.css,*.xml,*.pl silent Autoformat
+    autocmd FileType python let b:autoformat_autoindent = 0
+    autocmd FileType python let b:autoformat_retab = 0
 augroup END
 
 nnoremap <leader>af :Autoformat<cr>
