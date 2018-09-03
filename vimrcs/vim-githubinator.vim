@@ -8,7 +8,7 @@
 "==============================================================
 PluginAdd 'tenfyzhong/vim-githubinator'
 
-vmap <leader>gho <Plug>(githubinator-open)
-vmap <leader>ghc <Plug>(githubinator-copy)
+xmap <leader>gho <Plug>(githubinator-open)
+xmap <leader>ghc <Plug>(githubinator-copy)
 nmap <leader>gho <Plug>(githubinator-open)
 nmap <leader>ghc <Plug>(githubinator-copy)
