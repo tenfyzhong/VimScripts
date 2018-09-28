@@ -23,6 +23,7 @@ let g:startify_bookmarks = []
 
 let g:startify_skiplist = [
             \ 'bundle/.*/doc',
+            \ 'COMMIT_EDITMSG',
             \ ]
 
 let g:startify_custom_header = 
