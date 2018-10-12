@@ -6,4 +6,4 @@
 "   email: zhongtenghui@gf.com.cn
 " created: 2018-09-27 19:16:38
 "==============================================================
-PluginAdd 'RRethy/vim-illuminate'
+PluginAdd 'tenfyzhong/vim-illuminate'
