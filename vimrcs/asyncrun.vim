@@ -6,7 +6,7 @@
 "          AsyncStop[!] 停止任务，[!]会使用KILL信号
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@tencent.com
+"   email: tenfy@tenfy.cn
 " created: 2017-02-09 12:57:16
 "==============================================================
 PluginAdd 'skywind3000/asyncrun.vim'

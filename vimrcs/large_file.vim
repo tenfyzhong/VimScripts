@@ -3,7 +3,7 @@
 "   brief: 
 " VIM Version: 8.0
 "  author: tenfyzhong
-"   email: tenfyzhong@tencent.com
+"   email: tenfy@tenfy.cn
 " created: 2017-03-30 18:59:53
 "==============================================================
 

@@ -46,7 +46,7 @@
 "    xmap:  <leader><leader> xmap模式的map
 " VIM Version: 7.4
 "  author: tenfyzhong
-"   email: tenfyzhong@tencent.com
+"   email: tenfy@tenfy.cn
 " created: 2017-02-09 16:27:42
 "==============================================================
 
