@@ -2,8 +2,8 @@
 "    file: ywvim.vim
 "   brief: 
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfyzhong
+"   email: tenfy@tenfy.cn
 " created: 2017-07-12 13:21:24
 "==============================================================
 PluginAdd 'tenfyzhong/ywvim'

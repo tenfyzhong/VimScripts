@@ -16,8 +16,8 @@
 "          ]C 跳到最后一个修改的位置
 "          [C 跳到第一个个性的位置
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfyzhong
+"   email: tenfy@tenfy.cn
 " created: 2017-07-19 14:10:52
 "==============================================================
 finish
