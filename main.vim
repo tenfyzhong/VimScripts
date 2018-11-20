@@ -106,8 +106,6 @@ set t_vb=
 " set pastetoggle=<leader>p
 set sessionoptions-=buffers
 
-set spell spelllang=en_us,cjk
-
 if !exists('g:once_init_syntax')
     let g:once_init_syntax = 1
     " 开启语法高亮
