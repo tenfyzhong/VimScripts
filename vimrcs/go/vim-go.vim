@@ -12,7 +12,7 @@
 "          GoFmt 格式化代码
 "          GoImports import包和删除不需要的包
 "          [range]GoPlay 分享代码到play.golang.org
-"          GoVet[!] [options] 去街go vet
+"          GoVet[!] [options] 调用go vet
 "          GoDef [identifier] 跳到声明或者定义
 "          GoDefStack [number] 打开GoDef的跳转列表
 "          GoDefStackClear 清除GoDefStack
@@ -37,8 +37,8 @@
 "          GoImplements 显示选择包的实现接口
 "          GoRename [to] 重命名
 "          GoGuruScope [pattern] [pattern2] ... [patternN]
-"          GoCallees 显示被调用的包
-"          GoCallers 显示调用的包
+"          GoCallees 显示调用
+"          GoCallers 显示被调用
 "          GoDescribe 显示选择的语法和属性
 "          GoCallstack 显示调用栈
 "          GoFreevars 抽离出自由变量
@@ -52,6 +52,7 @@
 "          GoBuildTags [tags] 
 "          AsmFmt 
 "          GoAlternate[!] 在源文件和测试文件中切换
+"          GoPointsTo 显示所有可能指向当前变量的指针
 "          GoWhicherrs 显示当前可能的错误
 "          GoDecls [file] 启动ctrlp.vim时才能用，显示所有的声明
 "          GoDeclsDir [dir] 启动ctrlp.vim时才能用，显示所有的声明
@@ -60,9 +61,14 @@
 "          [range]GoRemoveTags [key],[option] [key1],[option1] ... 给成员删除tag
 "          GoAutoTypeInfoToggle toggle g:go_auto_type_info
 "          GoFmtAutoSaveToggle toggle g:go_fmt_autosave
+"          GoModFmtAutoSaveToggle toogle g:go_mod_fmt_autosave
 "          GoAsmFmtAutoSaveToggle toggle g:go_asmfmt_autosave
 "          GoMetaLinterAutoSaveToggle toggle g:go_metalinter_autosave
 "          GoTemplateAutoCreateToggle toggle g:go_template_autocreate
+"          GoKeyify 使用keyify来格式化结构
+"          GoFillStruct 使用默认值填充struct没赋值的字段
+"          GoIfErr 生成if err != nil {return ...}的错误返回
+"          GoModFmt 使用go mod edit -fmt命令来过滤当前buffer
 "
 "          A 源文件和测试文件中切换
 "          AV 源文件和测试文件中切换，在vsplit中打开
@@ -74,11 +80,12 @@
 "          <leader>re go-rename
 "          <leader>rr go-run
 "          <leader>rb go-build
-"          <leader>rt go-test
-"          <leader>rf go-test-func
+"          <leader>rtt go-test
+"          <leader>rtf go-test-func
 "          <leader>rc go-coverage
 "          <leader>ri GoImport
 "          <leader>ra GoImportAs
+"          <leader>rf GoIfErr
 "          <leader>aa go-alternate-edit
 "          <leader>as go-alternate-split
 "          <leader>av go-alternate-vertical
@@ -120,10 +127,11 @@ augroup go_filetype_local
     au FileType go nmap <Leader>re <Plug>(go-rename)
     au FileType go nmap <leader>rr <Plug>(go-run)
     au FileType go nnoremap <leader>rb :<c-u>call <SID>build_go_files()<cr>
-    au FileType go nmap <leader>rt <Plug>(go-test)
-    au FileType go nmap <leader>rf <Plug>(go-test-func)
+    au FileType go nmap <leader>rtt <Plug>(go-test)
+    au FileType go nmap <leader>rtf <Plug>(go-test-func)
     au FileType go nmap <leader>rc <Plug>(go-coverage-toggle)
     au FileType go nnoremap <leader>ri :GoImport 
+    au FileType go nnoremap <leader>rf :GoIfErr<cr>
     au FileType go nnoremap <leader>ra :GoImportAs 
     au FileType go nmap <leader>aa <Plug>(go-alternate-edit)
     au FileType go nmap <leader>as <Plug>(go-alternate-split)

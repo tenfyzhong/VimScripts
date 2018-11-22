@@ -255,14 +255,15 @@ o对应motion模式
 | `<leader>re`       | n     | vim-go             | go-rename                               |
 | `<leader>rr`       | n     | vim-go             | go-run                                  |
 | `<leader>rb`       | n     | vim-go             | go-build                                |
-| `<leader>rt`       | n     | vim-go             | go-test                                 |
-| `<leader>rf`       | n     | vim-go             | go-test-func                            |
+| `<leader>rtt`      | n     | vim-go             | go-test                                 |
+| `<leader>rtf`      | n     | vim-go             | go-test-func                            |
 | `<leader>rc`       | n     | vim-go             | go-coverage                             |
 | `<leader>aa`       | n     | vim-go             | go-alternate-edit                       |
 | `<leader>as`       | n     | vim-go             | go-alternate-split                      |
 | `<leader>av`       | n     | vim-go             | go-alternate-vertical                   |
 | `<leader>ri`       | n     | vim-go             | GoImport                                |
 | `<leader>ra`       | n     | vim-go             | GoImportAs                              |
+| `<leader>rf`       | n     | vim-go             | GoIfErr                                 |
 | `<C-]>`            | n     | vim-go             | GoDef                                   |
 | `<c-t>`            | n     | vim-go             | GoDefPop                                |
 | `<leader>rr`       | n     | pymode             | :PymodeRun                              |

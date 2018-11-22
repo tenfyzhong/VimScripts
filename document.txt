@@ -130,7 +130,7 @@
 "          GoFmt 格式化代码
 "          GoImports import包和删除不需要的包
 "          [range]GoPlay 分享代码到play.golang.org
-"          GoVet[!] [options] 去街go vet
+"          GoVet[!] [options] 调用go vet
 "          GoDef [identifier] 跳到声明或者定义
 "          GoDefStack [number] 打开GoDef的跳转列表
 "          GoDefStackClear 清除GoDefStack
@@ -155,8 +155,8 @@
 "          GoImplements 显示选择包的实现接口
 "          GoRename [to] 重命名
 "          GoGuruScope [pattern] [pattern2] ... [patternN]
-"          GoCallees 显示被调用的包
-"          GoCallers 显示调用的包
+"          GoCallees 显示调用
+"          GoCallers 显示被调用
 "          GoDescribe 显示选择的语法和属性
 "          GoCallstack 显示调用栈
 "          GoFreevars 抽离出自由变量
@@ -170,6 +170,7 @@
 "          GoBuildTags [tags] 
 "          AsmFmt 
 "          GoAlternate[!] 在源文件和测试文件中切换
+"          GoPointsTo 显示所有可能指向当前变量的指针
 "          GoWhicherrs 显示当前可能的错误
 "          GoDecls [file] 启动ctrlp.vim时才能用，显示所有的声明
 "          GoDeclsDir [dir] 启动ctrlp.vim时才能用，显示所有的声明
@@ -178,9 +179,14 @@
 "          [range]GoRemoveTags [key],[option] [key1],[option1] ... 给成员删除tag
 "          GoAutoTypeInfoToggle toggle g:go_auto_type_info
 "          GoFmtAutoSaveToggle toggle g:go_fmt_autosave
+"          GoModFmtAutoSaveToggle toogle g:go_mod_fmt_autosave
 "          GoAsmFmtAutoSaveToggle toggle g:go_asmfmt_autosave
 "          GoMetaLinterAutoSaveToggle toggle g:go_metalinter_autosave
 "          GoTemplateAutoCreateToggle toggle g:go_template_autocreate
+"          GoKeyify 使用keyify来格式化结构
+"          GoFillStruct 使用默认值填充struct没赋值的字段
+"          GoIfErr 生成if err != nil {return ...}的错误返回
+"          GoModFmt 使用go mod edit -fmt命令来过滤当前buffer
 "
 "          A 源文件和测试文件中切换
 "          AV 源文件和测试文件中切换，在vsplit中打开
@@ -192,11 +198,12 @@
 "          <leader>re go-rename
 "          <leader>rr go-run
 "          <leader>rb go-build
-"          <leader>rt go-test
-"          <leader>rf go-test-func
+"          <leader>rtt go-test
+"          <leader>rtf go-test-func
 "          <leader>rc go-coverage
 "          <leader>ri GoImport
 "          <leader>ra GoImportAs
+"          <leader>rf GoIfErr
 "          <leader>aa go-alternate-edit
 "          <leader>as go-alternate-split
 "          <leader>av go-alternate-vertical
@@ -273,6 +280,11 @@
 "==============================================================
 
 "==============================================================
+"    file: coverage-highlight.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: python-mode.vim
 "   brief: 
 "    help: pymode
@@ -342,6 +354,11 @@
 "          SSave [session] 保存session
 "          SDelete[!] [session] 删除session
 "          SClose 关闭session
+"==============================================================
+
+"==============================================================
+"    file: vim-highlightedyank.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -610,6 +627,11 @@
 " command: HelpfulVersion 加特性名
 "==============================================================
 
+
+"==============================================================
+"    file: committia.vim
+"   brief: 
+"==============================================================
 
 "==============================================================
 "    file: z.vim
@@ -916,6 +938,36 @@
 "==============================================================
 
 "==============================================================
+"    file: ag.vim
+"   brief: 使用ag命令来查找字符串或者文件
+"
+" command: :Ag[!] [options] {pattern} [{directory}] 在directory下去查找pattern
+"          :AgBuffer[!] [option] {pattern} 在打开的buffers下去查找pattern
+"          :AgAdd[!] [option] {pattern} [{directory}] 类似Ag,但是会将查找结果拼接在之前的结果之后
+"          :AgHelp[!] [options] {pattern} 在vim documentation中查找pattern
+"          以上四个命令如果在Ag前加L,则使用location-list替换quickfix
+"          :AgFile [options] {pattern} [{directory}] 在目录下去查找文件名匹配pattern的文件
+"
+" buffer nmap:
+"           e open file and close the quickfix window.
+"           o open file (same as enter).
+"           go preview file (open but maintain focus on ag.vim results).
+"           t open in a new tab.
+"           T open in new tab silently.
+"           h open in horizontal split.
+"           H open in horizontal split silently.
+"           v open in vertical split.
+"           gv open in vertical split silently.
+"           q close the quickfix window.
+"
+"==============================================================
+
+"==============================================================
+"    file: vim-tmux-focus-events.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: vim-php-refactoring-toolbox.vim
 "   brief: 
 "==============================================================
@@ -931,6 +983,11 @@
 "
 " command: AsyncRun[!] [options] {cmd} 执行cmd命令，[!]关闭自动滚动
 "          AsyncStop[!] 停止任务，[!]会使用KILL信号
+"==============================================================
+
+"==============================================================
+"    file: typecast.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -1108,6 +1165,53 @@
 "==============================================================
 
 "==============================================================
+"    file: vim-taskwarrior.vim
+"   brief: taskwarrior管理
+"
+" | a = add task    | m = modify      | S = taskd sync    | <F1> = this help     |
+" | A = annotate    | M = mod prompts | s = sort col      | <CR> = task info     |
+" | d = task done   | q = quit buffer | < = sort incr     | <C>c = abort         |
+" | D = task delete | r = new report  | > = sort decr     | <Del> = task/anno    |
+" | c = task cmd    | u = undo last   | <TAB> = next col  | <Space> = (de)select |
+" | f = add filter  | x = del annot   | <S-TAB>= prev col | p  = dupe select     |
+" | H = cycle fmt l | + = start task  | <right>= r field  | R  = refresh         |
+" | L = cycle fmt r | - = stop task   | <left> = l field  | X  = clear done      |
+" | J = next entry  | K = prev entry  | B = new bookmark  | o  = open annotation |
+
+" nmap:
+" :TW [args]            " task [filter report arguments]
+" :TWUndo               " undo the previous modification
+" :TWEditTaskrc         " edit ~/.taskrc
+" :TWEditVitrc          " edit ~/.vitrc
+" :TWDeleteCompleted    " clear all completed tasks
+" :TWAdd                " add new tasks interactively
+" :TWAnnotate           " add an annotation
+" :TWComplete           " mark task done
+" :TWDelete             " deleta a task
+" :TWDeleteAnnotation   " delete an annotation
+" :TWModifyInteractive  " make changes to a task interactively (use with caution!)
+" :TWReportInfo         " run the info report
+" :TWReportSort [args]  " overide the sort method, reset to default if no arguments passed
+" :TWSync               " synchronise with taskd server
+" :TWToggleReadonly     " toggle readonly option
+" :TWToggleHLField      " toggle highlight field option
+" :TWHistory            " list history records using unite.vim
+" :TWHistoryClear       " clear history
+" :TWBookmark           " list bookmarks using unite.vim
+" :TWBookmarkClear      " clear bookmarks
+"==============================================================
+
+"==============================================================
+"    file: codi.vim
+"   brief: 执行当前文件输出
+"
+" command:
+"     Codi {filetype} 打开codi
+"     Codi! 关闭codi
+"     Codi!! 触发codi
+"==============================================================
+
+"==============================================================
 "    file: gundo.vim
 "   brief: undo历史
 "
@@ -1128,6 +1232,11 @@
 " command: OverCommandLine [{input}] 切到高亮模式,input会直接当成命令
 "          OverCommandLineNoremap {lhs} {rhs} 类似于OverCommandLine，但是使用特殊的键映射
 "
+"==============================================================
+
+"==============================================================
+"    file: vim-githubinator.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -1324,6 +1433,11 @@
 "==============================================================
 
 "==============================================================
+"    file: vim-carbon-now-sh.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: ctrlsf.vim
 "   brief: 搜索字符串
 "
@@ -1418,6 +1532,11 @@
 "==============================================================
 
 "==============================================================
+"    file: NeoDebug.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: DoxygenToolkit.vim
 "   brief: 插入doxygen的注释
 "
@@ -1493,29 +1612,17 @@
 "==============================================================
 
 "==============================================================
-"    file: Conque-GDB.vim
-"   brief: 在vim中使用gdb
-"          vim中使用命令行
-"
-" command: 启动gdb
-"          ConqueGdb
-"          ConqueGdb program
-"          ConqueGdb -d dir --args program [arguments]
-"          ConqueGdbSplit 水平分割出调试窗口
-"          ConqueGdbVSplit 垂直分割调试窗口
-"          ConqueGdbTab 开一个新tab打开调试窗口
-"          ConqueGdbBDelete 删除ConqueGdb打开的buffer
-"          ConqueGdbCommand 在非gdb窗口中给gdb发送命令
-"          ConqueGdbExe 设置gdb运行程序
-"
-"          ConqueTerm <command> 在当前窗口运行command
-"          ConqueTermSplit 水平分割窗口运行命令
-"          ConqueTermVSplit 垂直分割窗口运行命令
-"          ConqueTermTab tab窗口运行命令
+"    file: vim-illuminatea.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
 "    file: github-complete.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
+"    file: vim-http.vim
 "   brief: 
 "==============================================================
 
