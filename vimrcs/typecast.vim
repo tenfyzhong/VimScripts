@@ -1,6 +1,11 @@
 "==============================================================
 "    file: typecast.vim
-"   brief: 
+"   brief: 类型转换插件
+"
+"    nmap:
+"      <leader>ct motion选中进行类型转换
+"    xmap:
+"      <leader>ct 选中进行类型转换
 " VIM Version: 8.0
 "  author: tenfyzhong
 "   email: tenfy@tenfy.cn
