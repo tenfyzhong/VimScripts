@@ -1,3 +1,0 @@
-" vimwiki
-PluginAdd 'vimwiki/vimwiki'
-
