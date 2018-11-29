@@ -228,7 +228,8 @@ onoremap ag :<c-u>normal! ggVG<CR>
 " command {{{
 " 数字的参数是加载级别，默认是5
 " 数字越大，越后加载
-com! -nargs=+ -bar PluginAdd call loader#BundlePlugin(<args>)
+command! -nargs=+ -bar PluginAdd call loader#BundlePlugin(<args>)
+command! W w !sudo tee %
 " }}} 
 
 " local.vim {{{
