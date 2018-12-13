@@ -103,6 +103,7 @@ PluginAdd 'a.vim'
 | `PluginAdd` | 插件名 | 安装插件    |
 | `Bigger`    |        | 加大gui字体 |
 | `Smaller`   |        | 缩小gui字体 |
+| `W`         |        | sudo保存    |
 
 
 ## 键映射
@@ -285,6 +286,7 @@ o对应motion模式
 | `<leader>rnp`      | n     | pymode             | generate package                        |
 | `<leader>rs`       | n     | pymode             | change signature                        |
 | `<leader>ru`       | n     | pymode             | use function                            |
+| `<leader>qc`       | n     | pymode             | 关闭doc窗口                             |
 | `<leader>h`        | n     | smart-tabline      | 选择左边的buffer                        |
 | `<leader>l`        | n     | smart-tabline      | 选择右边的buffer                        |
 | `<c-h>`            | n     | vim-tmux-navigator | 移到左边窗口                            |
@@ -318,4 +320,7 @@ o对应motion模式
 | `<tab>F`           | n     | easymotion         | 跨窗口的查找                            |
 | `<tab>L`           | n     | easymotion         | 跨窗口跳到某行                          |
 | `<tab>W`           | n     | easymotion         | 跨窗口跳到某个单词                      |
-
+| `<leader>p`        | n     | jsonpath           | 显示当前的节点位置                      |
+| `<leader>g`        | n     | jsonpath           | 跳到某个节点                            |
+| `<leader>gho`      | nv    | githubinator       | 在浏览器中打开                          |
+| `<leader>ghc`      | nv    | githubinator       | 复制链接                                |
