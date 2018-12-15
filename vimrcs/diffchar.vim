@@ -1,6 +1,10 @@
 "==============================================================
 "    file: diffchar.vim
-"   brief: 
+"   brief: 字符的diff
+"
+"    nmap:
+"        <leader>dg get diff字符
+"        <leader>dp put diff字符
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfy@tenfy.cn
@@ -8,3 +12,6 @@
 "==============================================================
 PluginAdd 'rickhowe/diffchar.vim'
 let g:DiffPairVisible = 0
+
+nmap  <leader>dg <Plug>GetDiffCharPair
+nmap  <leader>dp <Plug>PutDiffCharPair

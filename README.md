@@ -146,7 +146,7 @@ o对应motion模式
 | `<leader>xx`       | n     | global             | 在16进制的xxd中切换                     |
 | `<space>o`         | n     | global             | 在上面添加[count]个空行                 |
 | `<space>O`         | n     | global             | 在下面添加[count]个空行                 |
-| `<leader>p`        | n     | global             | 粘贴系统粘贴板的内容                    |
+| `<leader>p`        | n     | global             | 切换patse模式                           |
 | `<leader>y`        | n     | global             | 复制内容到系统粘贴板                    |
 | `<leader>aa`       | n     | a.vim              | 在源文件和头文件中切换                  |
 | `<leader>as`       | n     | a.vim              | 水平打开源文件或者头文件对应的另一部分  |

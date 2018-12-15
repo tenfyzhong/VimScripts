@@ -182,7 +182,8 @@ nnoremap <c-p> <esc>:call <sid>clear_or_redraw()<cr>
 
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
-nnoremap <silent><leader>p :set paste<CR>:normal! "*p<CR>:set nopaste<CR>
+" nnoremap <silent><leader>p :set paste<CR>:normal! "*p<CR>:set nopaste<CR>
+nnoremap <silent><leader>p :set invpaste<CR>
 noremap <leader>y "*y
 
 " inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
