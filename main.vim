@@ -22,7 +22,7 @@ let g:bundle_path   = fnamemodify(g:VIMHOME . "bundle/", ':p')
 
 " base setting {{{
 lang messages en_US.UTF-8
-if !exists('g:has_load_vimrc_example_vim')
+if !has('nvim') && !exists('g:has_load_vimrc_example_vim')
     let g:has_load_vimrc_example_vim = 1
     source $VIMRUNTIME/vimrc_example.vim
 endif
