@@ -9,3 +9,4 @@
 PluginAdd 'xolox/vim-lua-ftplugin'
 
 let g:lua_complete_omni = 1
+let g:lua_complete_dynamic = 0
