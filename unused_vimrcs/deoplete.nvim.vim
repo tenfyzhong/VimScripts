@@ -4,10 +4,11 @@
 " VIM Version: 8.0
 "  author: tenfyzhong
 "   email: tenfy@tenfy.cn
-" created: 2017-07-12 12:02:34
+" created: 2018-12-18 10:10:08
 "==============================================================
 if !has('nvim')
     finish
 endif
 PluginAdd 'Shougo/deoplete.nvim'
+PluginAdd 'zchee/deoplete-jedi'
 let g:deoplete#enable_at_startup = 1
