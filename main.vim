@@ -38,6 +38,7 @@ set cinoptions+=j1 " 匿名类设置正确的缩进
 set cinoptions+=J1 " 正常设置js的对齐声明
 set foldmethod=syntax   " 缩进，这个开启后，打开大文件非常慢
 set foldlevelstart=99
+set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,gb2312,cp936,usc-bom,euc-jp,gb18030
 set mouse=           " 禁用鼠标
