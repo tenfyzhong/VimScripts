@@ -1,6 +1,6 @@
 "==============================================================
 "    file: markdown-preview.vim
-"   brief: markdown预览
+"   brief: markdown预览，依赖nodejs和yarn
 "
 " command:
 "       MarkdownPreview 打开预览窗口
@@ -13,7 +13,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-07-05 15:31:36
 "==============================================================
-PluginAdd 'iamcco/markdown-preview.vim'
+PluginAdd 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 if has('macunix')
     let g:mkdp_path_to_chrome = "open -a Google\\ Chrome"
