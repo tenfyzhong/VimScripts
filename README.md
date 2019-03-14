@@ -324,3 +324,4 @@ o对应motion模式
 | `<leader>g`        | n     | jsonpath           | 跳到某个节点                            |
 | `<leader>gho`      | nv    | githubinator       | 在浏览器中打开                          |
 | `<leader>ghc`      | nv    | githubinator       | 复制链接                                |
+| `<leader>gm`       | n     | git-messenger      |  显示当前行的提交记录                   |
