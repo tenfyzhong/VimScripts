@@ -5,7 +5,7 @@
         "golang": {
             "command": "bingo",
             "args": ["--diagnostics-style=instant"],
-            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/", "vendor/", "vendor.conf"],
             "filetypes": ["go"]
         }
     },
