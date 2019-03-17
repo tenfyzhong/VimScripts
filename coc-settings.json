@@ -6,7 +6,26 @@
             "command": "bingo",
             "args": ["--diagnostics-style=instant"],
             "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/", "vendor/", "vendor.conf"],
-            "filetypes": ["go"]
+            "filetypes": ["go"],
+            "install": "go get -u github.com/saibing/bingo"
+        },
+        "dockerfile": {
+            "command": "docker-langserver",
+            "filetypes": ["dockerfile"],
+            "args": ["--stdio"],
+            "install": "npm install -g dockerfile-language-server-nodejs"
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"],
+            "install": "npm i -g bash-language-server"
+        },
+        "lua": {
+            "command": "lua-lsp",
+            "filetypes": ["lua"],
+            "install": "luarocks install --server=http://luarocks.org/dev lua-lsp; luarocks install luacheck; luarocks-5.3 install lcf"
         }
     },
     "coc.preferences.extensionUpdateCheck": "weekly",

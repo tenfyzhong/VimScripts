@@ -1,6 +1,7 @@
 "==============================================================
 "    file: coc.vim
 "   brief: 
+"   插件 CocInstall coc-json coc-tsserver  coc-ultisnips coc-lists','coc-pairs coc-emmet coc-html coc-yaml coc-css
 " VIM Version: 8.0
 "  author: tenfyzhong
 "   email: tenfy@tenfy.cn
@@ -12,7 +13,3 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 inoremap <expr> ( pumvisible() ? "\<C-y>" : "("
 nnoremap <leader>ad <Plug>()coc-diagnostic-info)
 
-augroup coc_init
-  au!
-  autocmd User CocNvimInit call coc#add_extension('coc-json', 'coc-tsserver')
-augroup end
