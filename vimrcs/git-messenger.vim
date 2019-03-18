@@ -13,3 +13,5 @@
 " created: 2019-03-14 13:05:53
 "==============================================================
 PluginAdd 'rhysd/git-messenger.vim'
+
+let g:git_messenger_close_on_cursor_moved = v:false
