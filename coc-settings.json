@@ -3,11 +3,13 @@
     "description": "Configuration file for coc.nvim",
     "languageserver": {
         "golang": {
-            "command": "bingo",
-            "args": ["--diagnostics-style=instant"],
-            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/", "vendor/", "vendor.conf"],
+            "command": "go-langserver",
             "filetypes": ["go"],
-            "install": "go get -u github.com/saibing/bingo"
+            "initializationOptions": {
+                "gocodeCompletionEnabled": true,
+                "diagnosticsEnabled": false,
+                "lintTool": "golint"
+            }
         },
         "dockerfile": {
             "command": "docker-langserver",
