@@ -329,3 +329,5 @@ o对应motion模式
 | `<leader>cj`       | n     | cow                | 关闭下边面的窗口                        |
 | `<leader>ck`       | n     | cow                | 关闭中边面的窗口                        |
 | `<leader>cl`       | n     | cow                | 关闭右边面的窗口                        |
+| `gp`               | nx    | grepper            | 查找一个operator                        |
+| `<leader>*`        | n     | grepper            | 查找当前单词                            |
