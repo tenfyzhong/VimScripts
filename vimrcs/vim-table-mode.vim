@@ -41,7 +41,7 @@ let g:table_mode_corner='|'
 
 function! TableModeStatusLine()
     if exists(':TableModeToggle')
-        return tablemode#IsActive() ? 'tablemode' : ''
+        return tablemode#IsActive() ? 'TM' : ''
     endif
 endfunction
 
