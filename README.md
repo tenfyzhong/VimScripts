@@ -331,3 +331,4 @@ o对应motion模式
 | `<leader>cl`       | n     | cow                | 关闭右边面的窗口                        |
 | `gp`               | nx    | grepper            | 查找一个operator                        |
 | `<leader>*`        | n     | grepper            | 查找当前单词                            |
+| `<leader>bt`       | n     | boxdraw            | 开启/关闭画图模式                       |
