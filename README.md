@@ -332,3 +332,6 @@ o对应motion模式
 | `gp`               | nx    | grepper            | 查找一个operator                        |
 | `<leader>*`        | n     | grepper            | 查找当前单词                            |
 | `<leader>bt`       | n     | boxdraw            | 开启/关闭画图模式                       |
+| `<leader>td`       | nv    | vim-translate-me   | 翻译光标下的文本，在命令行回显翻译内容  |
+| `<leader>tw`       | nv    | vim-translate-me   | 翻译光标下的文本，在窗口中回显翻译内容  |
+| `<leader>tr`       | nv    | vim-translate-me   | 替换光标下的文本为翻译内容              |
