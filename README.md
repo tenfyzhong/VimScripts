@@ -230,6 +230,7 @@ o对应motion模式
 | `<leader>gd`       | n     | fugitive           | Gvdiff                                  |
 | `<leader>gl`       | n     | fugitive           | Glog                                    |
 | `<leader>gs`       | n     | fugitive           | Gstatus                                 |
+| `<leader>ghf`      | n     | fugitive           | Gbrowse                                 |
 | `<leader>aw`       | n     | argwrap            | 参数转换成同行或者换行模式              |
 | `<leader>sw`       | n     | choosewin          | 选择窗口                                |
 | `\ap`              | in    | auto-pairs         | 触发补齐                                |
