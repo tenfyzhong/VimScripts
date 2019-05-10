@@ -288,8 +288,6 @@ o对应motion模式
 | `<leader>rs`       | n     | pymode             | change signature                        |
 | `<leader>ru`       | n     | pymode             | use function                            |
 | `<leader>qc`       | n     | pymode             | 关闭doc窗口                             |
-| `<leader>h`        | n     | smart-tabline      | 选择左边的buffer                        |
-| `<leader>l`        | n     | smart-tabline      | 选择右边的buffer                        |
 | `<c-h>`            | n     | vim-tmux-navigator | 移到左边窗口                            |
 | `<c-j>`            | n     | vim-tmux-navigator | 移到下边窗口                            |
 | `<c-k>`            | n     | vim-tmux-navigator | 移到上边窗口                            |
