@@ -1,6 +1,6 @@
 " Requirement {{{
-if version < 704
-    echoerr "请更新到vim 7.4以上"
+if !has('nvim') && version < 800
+    echoerr "请更新到vim 8.0以上"
     finish
 endif
 " }}} 
