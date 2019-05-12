@@ -41,6 +41,7 @@
 "          <leader>gd Gvdiff
 "          <leader>gl Glog
 "          <leader>gs Gstatus
+"          <leader>gho Gbrowse
 "
 "    cmap: <c-r><c-g> 在命令行中返回当前文件
 "          ["x]y<c-g> 粘贴当前对象的提交sha值
@@ -62,6 +63,10 @@
 " created: 2016-04-15 15:39:29
 "==============================================================
 PluginAdd 'tpope/vim-fugitive'
+PluginAdd 'tpope/vim-rhubarb'
+PluginAdd 'shumphrey/fugitive-gitlab.vim'
+PluginAdd 'tommcdo/vim-fubitive'
+PluginAdd 'linuxsuren/fugitive-gitee.vim'
 
 augroup fugitive_init
     autocmd! 
@@ -86,4 +91,5 @@ nnoremap <silent><leader>gb :Gblame<cr>
 nnoremap <silent><leader>gd :Gvdiff<cr>
 nnoremap <silent><leader>gl :silent Glog!<cr>
 nnoremap <silent><leader>gs :Gstatus<cr>
+nnoremap <silent><leader>ghf :Gbrowse<cr>
 

@@ -230,6 +230,7 @@ o对应motion模式
 | `<leader>gd`       | n     | fugitive           | Gvdiff                                  |
 | `<leader>gl`       | n     | fugitive           | Glog                                    |
 | `<leader>gs`       | n     | fugitive           | Gstatus                                 |
+| `<leader>ghf`      | n     | fugitive           | Gbrowse                                 |
 | `<leader>aw`       | n     | argwrap            | 参数转换成同行或者换行模式              |
 | `<leader>sw`       | n     | choosewin          | 选择窗口                                |
 | `\ap`              | in    | auto-pairs         | 触发补齐                                |
@@ -287,8 +288,6 @@ o对应motion模式
 | `<leader>rs`       | n     | pymode             | change signature                        |
 | `<leader>ru`       | n     | pymode             | use function                            |
 | `<leader>qc`       | n     | pymode             | 关闭doc窗口                             |
-| `<leader>h`        | n     | smart-tabline      | 选择左边的buffer                        |
-| `<leader>l`        | n     | smart-tabline      | 选择右边的buffer                        |
 | `<c-h>`            | n     | vim-tmux-navigator | 移到左边窗口                            |
 | `<c-j>`            | n     | vim-tmux-navigator | 移到下边窗口                            |
 | `<c-k>`            | n     | vim-tmux-navigator | 移到上边窗口                            |
@@ -332,3 +331,6 @@ o对应motion模式
 | `gp`               | nx    | grepper            | 查找一个operator                        |
 | `<leader>*`        | n     | grepper            | 查找当前单词                            |
 | `<leader>bt`       | n     | boxdraw            | 开启/关闭画图模式                       |
+| `<leader>td`       | nv    | vim-translate-me   | 翻译光标下的文本，在命令行回显翻译内容  |
+| `<leader>tw`       | nv    | vim-translate-me   | 翻译光标下的文本，在窗口中回显翻译内容  |
+| `<leader>tr`       | nv    | vim-translate-me   | 替换光标下的文本为翻译内容              |
