@@ -13,7 +13,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-05-27 16:20:28
 "==============================================================
-PluginAdd 'fisadev/vim-isort', {'do': 'pip install isort'}
+PluginAdd 'fisadev/vim-isort', {'do': 'pip install isort', 'for': 'python'}
 
 augroup vim_isort_init
   autocmd BufWritePre *.py Isort
