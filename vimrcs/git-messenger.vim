@@ -8,10 +8,10 @@
 "
 "    nmap: <leader>gm GitMessenger
 " VIM Version: 8.0
-"  author: zhongtenghui
-"   email: zhongtenghui@gf.com.cn
+"  author: tenfyzhong
+"   email: tenfy@tenfy.cn
 " created: 2019-03-14 13:05:53
 "==============================================================
 PluginAdd 'rhysd/git-messenger.vim'
 
-let g:git_messenger_close_on_cursor_moved = v:false
+let g:git_messenger_close_on_cursor_moved = v:true
