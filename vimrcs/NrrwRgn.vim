@@ -28,3 +28,9 @@
 " created: 2016-07-10 23:31:36
 "==============================================================
 PluginAdd 'chrisbra/NrrwRgn'
+
+augroup nrrw_rgn_init
+  autocmd!
+  autocmd FileType * let b:nrrw_aucmd_create = "ALEDisableBuffer"
+augroup end
+
