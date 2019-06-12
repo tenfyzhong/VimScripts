@@ -37,6 +37,7 @@ let g:axring_rings = [
       \   'august', 'september', 'october', 'november', 'december'],
       \ ["in", "out"],
       \ ['verbose', 'debug', 'info', 'warn', 'error', 'fatal'], 
+      \ ['long', 'short'], 
       \ ]
 
 let g:axring_rings_c = [
