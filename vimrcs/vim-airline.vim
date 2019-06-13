@@ -54,6 +54,6 @@ endfunction
 
 augroup AirlineSetting
     autocmd!
-    autocmd User AirlineAfterInit call AfterAirlineInitSetting() | call boxdraw#AirlineStatus()
+    autocmd User AirlineAfterInit call AfterAirlineInitSetting() 
 augroup END
 
