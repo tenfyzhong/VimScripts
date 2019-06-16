@@ -1,14 +1,14 @@
 " Requirement {{{
 if !has('nvim') && version < 800
-    echoerr "请更新到vim 8.0以上"
-    finish
+  echoerr "请更新到vim 8.0以上"
+  finish
 endif
-" }}} 
+" }}}
 
 " global variable {{{
 " 全局变量
 if &shell =~# 'fish$'
-    set shell=sh
+  set shell=sh
 endif
 
 let g:log_level = vimlog#error_level()
@@ -18,13 +18,13 @@ let g:UNIX      = system#IsUnix()
 let g:VIMHOME = expand('<sfile>:p:h') . '/'
 let g:vimrc_path    = fnamemodify(g:VIMHOME . "vimrcs/", ':p')
 let g:bundle_path   = fnamemodify(g:VIMHOME . "bundle/", ':p')
-" }}} 
+" }}}
 
 " base setting {{{
 lang messages en_US.UTF-8
 if !has('nvim') && !exists('g:has_load_vimrc_example_vim')
-    let g:has_load_vimrc_example_vim = 1
-    source $VIMRUNTIME/vimrc_example.vim
+  let g:has_load_vimrc_example_vim = 1
+  source $VIMRUNTIME/vimrc_example.vim
 endif
 
 set nocompatible " 关闭vi兼容模式
@@ -60,7 +60,7 @@ set hidden
 
 set noshowmatch  " 括号匹配
 set ruler        " 显示标尺
-set noshowmode     
+set noshowmode
 set confirm        " 在处理未保存或只读文件的时候，弹出确认
 
 set hlsearch     " 高亮search命中的文本
@@ -74,7 +74,7 @@ set history=500
 " 显示相关
 "set cursorcolumn        " 高亮当前列
 set cursorline            " 高亮当前行
-set t_Co=256 
+set t_Co=256
 
 " tab缩进4
 set tabstop=4
@@ -108,45 +108,45 @@ set t_vb=
 set sessionoptions-=buffers
 
 if !exists('g:once_init_syntax')
-    let g:once_init_syntax = 1
-    " 开启语法高亮
-    syntax on
-    syntax enable
+  let g:once_init_syntax = 1
+  " 开启语法高亮
+  syntax on
+  syntax enable
 
-    set background=dark
-    highlight CursorLine term=underline cterm=NONE ctermbg=DarkGrey guibg=Grey90 
-    highlight ColorColumn ctermbg=DarkGrey guibg=Grey90
-    colorscheme solarized
-    highlight Folded term=bold cterm=bold ctermfg=12 ctermbg=0 guifg=Cyan guibg=DarkGrey
+  set background=dark
+  highlight CursorLine term=underline cterm=NONE ctermbg=DarkGrey guibg=Grey90
+  highlight ColorColumn ctermbg=DarkGrey guibg=Grey90
+  colorscheme solarized
+  highlight Folded term=bold cterm=bold ctermfg=12 ctermbg=0 guifg=Cyan guibg=DarkGrey
 endif
 " }}}
 
 
 " autocmd {{{
 augroup initial
-    autocmd!
-    autocmd BufWritePost *vimrc,*.vim source % 
-    autocmd InsertLeave * set nopaste
-    autocmd InsertEnter * set number norelativenumber 
-    autocmd InsertLeave * set number relativenumber 
-    autocmd WinLeave * setl nocursorline
-    autocmd WinEnter * setl cursorline
-    autocmd BufReadPre,BufNewFile * set cmdheight=2
-    autocmd BufWinEnter * set cmdheight=1
+  autocmd!
+  autocmd BufWritePost *vimrc,*.vim source %
+  autocmd InsertLeave * set nopaste
+  autocmd InsertEnter * set number norelativenumber
+  autocmd InsertLeave * set number relativenumber
+  autocmd WinLeave * setl nocursorline
+  autocmd WinEnter * setl cursorline
+  autocmd BufReadPre,BufNewFile * set cmdheight=2
+  autocmd BufWinEnter * set cmdheight=1
 augroup END
-" }}} 
+" }}}
 
 " mswin setting {{{
 if g:MSWIN
-    colorscheme evening
-    if filereadable("$VIMRUNTIME/_vimrc")
-        source $VIMRUNTIME/_vimrc
-    endif
-    if filereadable("$VIMRUNTIME/../_vimrc")
-        source $VIMRUNTIME/../_vimrc
-    endif
+  colorscheme evening
+  if filereadable("$VIMRUNTIME/_vimrc")
+    source $VIMRUNTIME/_vimrc
+  endif
+  if filereadable("$VIMRUNTIME/../_vimrc")
+    source $VIMRUNTIME/../_vimrc
+  endif
 endif
-" }}} 
+" }}}
 
 " global mapping {{{
 nnoremap <leader>           <NOP>
@@ -195,20 +195,20 @@ nnoremap <silent><space>O :<c-u>call feature#exec_list('normal m`', 'put! =repea
 nnoremap <silent><space>o :<c-u>call feature#exec_list('normal m`', 'put =repeat(nr2char(10), ' . v:count1 . ')', 'normal ``')<cr>
 
 if &diff
-    nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR> 
-    nnoremap <silent>[2 :diffget 2<CR> :diffupdate<CR>
-    nnoremap <silent>[3 :diffget 3<CR> :diffupdate<CR>
-    nnoremap <silent>[4 :diffget 4<CR> :diffupdate<CR>
-    nnoremap <silent>]1 :diffput 1<CR> :diffupdate<CR> 
-    nnoremap <silent>]2 :diffput 2<CR> :diffupdate<CR>
-    nnoremap <silent>]3 :diffput 3<CR> :diffupdate<CR>
-    nnoremap <silent>]4 :diffput 4<CR> :diffupdate<CR>
+  nnoremap <silent>[1 :diffget 1<CR> :diffupdate<CR>
+  nnoremap <silent>[2 :diffget 2<CR> :diffupdate<CR>
+  nnoremap <silent>[3 :diffget 3<CR> :diffupdate<CR>
+  nnoremap <silent>[4 :diffget 4<CR> :diffupdate<CR>
+  nnoremap <silent>]1 :diffput 1<CR> :diffupdate<CR>
+  nnoremap <silent>]2 :diffput 2<CR> :diffupdate<CR>
+  nnoremap <silent>]3 :diffput 3<CR> :diffupdate<CR>
+  nnoremap <silent>]4 :diffput 4<CR> :diffupdate<CR>
 endif
 
 if has('gui_running')
-    " gui下，调大调小字体
-    command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
-    command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
+  " gui下，调大调小字体
+  command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
+  command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
 endif
 
 " 普通模式是块光标
@@ -225,36 +225,36 @@ else
 endif
 
 onoremap ag :<c-u>normal! ggVG<CR>
-" }}} 
+" }}}
 
 " command {{{
 " 数字的参数是加载级别，默认是5
 " 数字越大，越后加载
 command! -nargs=+ -bar PluginAdd call loader#BundlePlugin(<args>)
 command! W w !sudo tee %
-" }}} 
+" }}}
 
 " local.vim {{{
 let b:local_vim = g:VIMHOME . "local.vim"
 if filereadable(b:local_vim)
-    exec "so " . b:local_vim
+  exec "so " . b:local_vim
 endif
 " }}}
 
 " {{{ source dir vimrc
 function! s:SourceDirVimrc(name) "{{{2
-    let l:dir_vimrc_path = file#FindFile(getcwd(), a:name)
-    if l:dir_vimrc_path != '' && 
-                \ l:dir_vimrc_path != fnamemodify(resolve($HOME), ':p')
-        let l:dir_vimrc = l:dir_vimrc_path . a:name
-        exec 'source ' . l:dir_vimrc
-    endif
+  let l:dir_vimrc_path = file#FindFile(getcwd(), a:name)
+  if l:dir_vimrc_path != '' &&
+        \ l:dir_vimrc_path != fnamemodify(resolve($HOME), ':p')
+    let l:dir_vimrc = l:dir_vimrc_path . a:name
+    exec 'source ' . l:dir_vimrc
+  endif
 endfunction  "}}}2
 
 if g:MSWIN
-    call <SID>SourceDirVimrc('_vimrc')
+  call <SID>SourceDirVimrc('_vimrc')
 else
-    call <SID>SourceDirVimrc('.vimrc')
+  call <SID>SourceDirVimrc('.vimrc')
 endif
 
 source ~/.vim/abbreviations.vim
@@ -266,23 +266,23 @@ source ~/.vim/abbreviations.vim
 " 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
 call loader#LoadVimrcs()
-" }}} 
+" }}}
 
 " {{{
 function! s:jk(cmd) "{{{2
-    if v:count == 0
-        exec 'normal! g' . a:cmd
-    else
-        exec printf('normal! %d%s', v:count, a:cmd)
-    endif
+  if v:count == 0
+    exec 'normal! g' . a:cmd
+  else
+    exec printf('normal! %d%s', v:count, a:cmd)
+  endif
 endfunction "}}}2
 
 function! s:clear_or_redraw() "{{{2
-    if has('nvim') && &buftype == 'terminal'
-        call feedkeys("i\<C-l>\<C-\>\<C-n>gg$", 'n')
-    else
-        redraw!
-    endif
+  if has('nvim') && &buftype == 'terminal'
+    call feedkeys("i\<C-l>\<C-\>\<C-n>gg$", 'n')
+  else
+    redraw!
+  endif
 endfunction "}}}2
 
 " }}}
