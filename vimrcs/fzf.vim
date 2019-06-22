@@ -42,6 +42,7 @@
 "           <leader>fs :FZFSnippets
 "           <leader>fc :FZFCommands
 "           <leader>/ :FZFHistory/
+"           <leader>fu :CtrlPFunky
 "           <leader><leader> nmap模式的map
 "    omap:  <leader><leader> omap模式的map
 "    xmap:  <leader><leader> xmap模式的map
@@ -76,6 +77,7 @@ nnoremap <leader>; :FZFHistory:<cr>
 nnoremap <leader>fs :FZFSnippets<cr>
 nnoremap <leader>fc :FZFCommands<cr>
 nnoremap <leader>/ :FZFHistory/<cr>
+nnoremap <Leader>fu :CtrlPFunky<Cr>
 
 nmap <leader><leader> <plug>(fzf-maps-n)
 omap <leader><leader> <plug>(fzf-maps-o)
