@@ -34,13 +34,14 @@
 "           <leader>fg :FZFGFiles
 "           <leader>fb :FZFBuffers
 "           <leader>fa :FZFAg
+"           <leader>fA :execute 'FZFAg ' . expand('<cword>')
 "           <leader>fh :FZFHistory
 "           <leader>fw :FZFWindows
 "           <leader>fm :FZFMarks
 "           <leader>; :FZFHistory:
 "           <leader>fs :FZFSnippets
 "           <leader>fc :FZFCommands
-"           <leader>/ :FZFSearchHistory
+"           <leader>/ :FZFHistory/
 "           <leader><leader> nmap模式的map
 "    omap:  <leader><leader> omap模式的map
 "    xmap:  <leader><leader> xmap模式的map

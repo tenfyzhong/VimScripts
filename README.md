@@ -243,6 +243,7 @@ o对应motion模式
 | `<leader>fg`       | n     | fzf                | FZFGFiles                               |
 | `<leader>fb`       | n     | fzf                | FZFBuffers                              |
 | `<leader>fa`       | n     | fzf                | FZFAg                                   |
+| `<leader>fA`       | n     | fzf                | FZFAg <cword>                           |
 | `<leader>fh`       | n     | fzf                | FZFHistory                              |
 | `<leader>fw`       | n     | fzf                | FZFWindowss                             |
 | `<leader>fm`       | n     | fzf                | FZFMarks                                |
@@ -250,7 +251,7 @@ o对应motion模式
 | `<leader>fs`       | n     | fzf                | FZFSnippets                             |
 | `<leader>fc`       | n     | fzf                | FZFCommands                             |
 | `<leader><leader>` | nox   | fzf                | 查找对应的map进行执行                   |
-| `<leader>/`        | n     | fzf                | FZFSearchHistory                        |
+| `<leader>/`        | n     | fzf                | FZFHistory/                             |
 | `<leader>af`       | n     | autoformat         | 进行autoformat                          |
 | `<leader>rs`       | n     | vim-go             | go-implements                           |
 | `<leader>rd`       | n     | vim-go             | go-info                                 |
