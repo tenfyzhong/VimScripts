@@ -58,7 +58,6 @@
 "
 "==============================================================
 
-
 "==============================================================
 "    file: vim-fugitive.vim
 "   brief: 运行git命令
@@ -320,6 +319,11 @@
 "==============================================================
 
 "==============================================================
+"    file: autoflake.vim
+"   brief:
+"==============================================================
+
+"==============================================================
 "    file: coverage-highlight.vim
 "   brief: 
 "==============================================================
@@ -378,6 +382,18 @@
 "     <leader>rnp generate package
 "     <leader>rs change signature
 "     <leader>ru use function
+"==============================================================
+
+"==============================================================
+"    file: vim-isort.vim
+"   brief: 对import进行排序
+"
+" command:
+"     Isort 排序
+"
+"    nmap:
+"     <leader>is :Isort
+"
 "==============================================================
 
 "==============================================================
@@ -689,6 +705,11 @@
 "==============================================================
 
 "==============================================================
+"    file: vim-docker-tools.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: z.vim
 "   brief:  wrapper around the CLI z
 "
@@ -801,6 +822,11 @@
 "==============================================================
 
 "==============================================================
+"    file: mode.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: nerdtree.vim
 "   brief: 目录树浏览
 "
@@ -868,13 +894,15 @@
 "           <leader>fg :FZFGFiles
 "           <leader>fb :FZFBuffers
 "           <leader>fa :FZFAg
+"           <leader>fA :execute 'FZFAg ' . expand('<cword>')
 "           <leader>fh :FZFHistory
 "           <leader>fw :FZFWindows
 "           <leader>fm :FZFMarks
 "           <leader>; :FZFHistory:
 "           <leader>fs :FZFSnippets
 "           <leader>fc :FZFCommands
-"           <leader>/ :FZFSearchHistory
+"           <leader>/ :FZFHistory/
+"           <leader>fu :CtrlPFunky
 "           <leader><leader> nmap模式的map
 "    omap:  <leader><leader> omap模式的map
 "    xmap:  <leader><leader> xmap模式的map
@@ -1042,11 +1070,6 @@
 "==============================================================
 "    file: vim-lua.vim
 "   brief: lua的高亮和缩进
-"==============================================================
-
-"==============================================================
-"    file: vim-lua-ftplugin.vim
-"   brief: 
 "==============================================================
 
 "==============================================================
@@ -1236,43 +1259,6 @@
 "==============================================================
 
 "==============================================================
-"    file: vim-taskwarrior.vim
-"   brief: taskwarrior管理
-"
-" | a = add task    | m = modify      | S = taskd sync    | <F1> = this help     |
-" | A = annotate    | M = mod prompts | s = sort col      | <CR> = task info     |
-" | d = task done   | q = quit buffer | < = sort incr     | <C>c = abort         |
-" | D = task delete | r = new report  | > = sort decr     | <Del> = task/anno    |
-" | c = task cmd    | u = undo last   | <TAB> = next col  | <Space> = (de)select |
-" | f = add filter  | x = del annot   | <S-TAB>= prev col | p  = dupe select     |
-" | H = cycle fmt l | + = start task  | <right>= r field  | R  = refresh         |
-" | L = cycle fmt r | - = stop task   | <left> = l field  | X  = clear done      |
-" | J = next entry  | K = prev entry  | B = new bookmark  | o  = open annotation |
-
-" nmap:
-" :TW [args]            " task [filter report arguments]
-" :TWUndo               " undo the previous modification
-" :TWEditTaskrc         " edit ~/.taskrc
-" :TWEditVitrc          " edit ~/.vitrc
-" :TWDeleteCompleted    " clear all completed tasks
-" :TWAdd                " add new tasks interactively
-" :TWAnnotate           " add an annotation
-" :TWComplete           " mark task done
-" :TWDelete             " deleta a task
-" :TWDeleteAnnotation   " delete an annotation
-" :TWModifyInteractive  " make changes to a task interactively (use with caution!)
-" :TWReportInfo         " run the info report
-" :TWReportSort [args]  " overide the sort method, reset to default if no arguments passed
-" :TWSync               " synchronise with taskd server
-" :TWToggleReadonly     " toggle readonly option
-" :TWToggleHLField      " toggle highlight field option
-" :TWHistory            " list history records using unite.vim
-" :TWHistoryClear       " clear history
-" :TWBookmark           " list bookmarks using unite.vim
-" :TWBookmarkClear      " clear bookmarks
-"==============================================================
-
-"==============================================================
 "    file: codi.vim
 "   brief: 执行当前文件输出
 "
@@ -1406,6 +1392,11 @@
 "   brief: 补全上一次git提交消息 
 "   
 "    imap: <c-l>触发补全
+"==============================================================
+
+"==============================================================
+"    file: vim-wakatime.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -1565,16 +1556,6 @@
 " '-matchcase', '-S' 识别大小写
 " '-regex', '-R'    使用正则表达式匹配
 " '-smartcase'      smartcase
-"==============================================================
-
-"==============================================================
-"    file: vim-move.vim
-"   brief: 移动行
-"
-"    nmap: <m-j> 当前行下移
-"          <m-k> 当前行上移
-"    smap: <m-j> 当前块下移
-"          <m-k> 当前块上移  
 "==============================================================
 
 "==============================================================
@@ -1772,5 +1753,10 @@
 "    nmap:
 "       + 展开选择
 "       - 缩小选择
+"==============================================================
+
+"==============================================================
+"    file: conflict-marker.vim
+"   brief: 
 "==============================================================
 
