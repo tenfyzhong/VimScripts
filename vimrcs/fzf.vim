@@ -59,6 +59,7 @@ else
 endif
 
 PluginAdd 'junegunn/fzf.vim'
+PluginAdd 'tracyone/fzf-funky'
 let g:fzf_command_prefix = 'FZF'
 
 nnoremap <leader>fp :FZF
@@ -66,6 +67,7 @@ nnoremap <leader>ff :FZFFiles<cr>
 nnoremap <leader>fg :FZFGFiles<cr>
 nnoremap <leader>fb :FZFBuffers<cr>
 nnoremap <leader>fa :FZFAg<cr>
+nnoremap <leader>fA :execute 'FZFAg ' . expand('<cword>')<cr>
 nnoremap <leader>fh :FZFHistory<cr>
 nnoremap <leader>fw :FZFWindows<cr>
 nnoremap <leader>fm :FZFMarks<cr>
