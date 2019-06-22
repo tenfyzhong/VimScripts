@@ -72,13 +72,11 @@ nnoremap <leader>fm :FZFMarks<cr>
 nnoremap <leader>; :FZFHistory:<cr>
 nnoremap <leader>fs :FZFSnippets<cr>
 nnoremap <leader>fc :FZFCommands<cr>
-nnoremap <leader>/ :FZFSearchHistory<cr>
+nnoremap <leader>/ :FZFHistory/<cr>
 
 nmap <leader><leader> <plug>(fzf-maps-n)
 omap <leader><leader> <plug>(fzf-maps-o)
 xmap <leader><leader> <plug>(fzf-maps-x)
-
-command! -bang -nargs=0 FZFSearchHistory call s:search_history(<bang>0)
 
 "----------------------------------------------------------------------
 let s:ansi = {'black': 30, 'red': 31, 'green': 32, 'yellow': 33, 'blue': 34, 'magenta': 35, 'cyan': 36}
@@ -116,14 +114,6 @@ function! s:get_color(attr, ...) "{{{
     endif
   endfor
   return ''
-endfunction "}}}
-
-function! s:history_source(type) "{{{
-  let max  = histnr(a:type)
-  let fmt  = ' %'.len(string(max)).'d '
-  let list = filter(map(range(1, max), 'histget(a:type, - v:val)'), '!empty(v:val)')
-  return extend([' :: Press '.s:magenta('CTRL-E', 'Special').' to edit'],
-    \ map(list, 's:yellow(printf(fmt, len(list) - v:key), "Number")." ".v:val'))
 endfunction "}}}
 
 let s:TYPE = {'dict': type({}), 'funcref': type(function('call')), 'string': type('')}
@@ -180,12 +170,5 @@ function! s:history_sink(type, lines) "{{{
   else
     call feedkeys(a:type.item."\<cr>", 'n')
   endif
-endfunction "}}}
-
-function! s:search_history(...) "{{{
-  return s:fzf('history-search', {
-  \ 'source':  s:history_source('/'),
-  \ 'sink*':   function('s:search_history_sink'),
-  \ 'options': '+m --ansi --prompt="Hist/> " --header-lines=1 --expect=ctrl-e --tiebreak=index'}, a:000)
 endfunction "}}}
 
