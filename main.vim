@@ -179,7 +179,7 @@ nnoremap <silent><Space><Space>   zA
 nnoremap <silent><c-w>\ <c-w>v
 nnoremap <silent><c-w>- <c-w>s
 
-nnoremap <c-p> <esc>:call <sid>clear_or_redraw()<cr>
+nnoremap <silent><c-p> <esc>:call <sid>clear_or_redraw()<cr>
 
 nnoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
