@@ -46,7 +46,9 @@ let NERDTreeChDirMode               = 2
 let NERDTreeMinimalUI               = 1
 " 不显示指定的内容
 let NERDTreeIgnoreTmp 				= 
-            \['\.o$[[file]]', 
+            \['\.a$[[file]]', 
+            \'\.so$[[file]]', 
+            \'\.o$[[file]]', 
             \'\.swp$[[file]]', 
             \'\.bak$[[file]]', 
             \'\~$[[file]]', 
