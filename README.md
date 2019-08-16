@@ -194,7 +194,7 @@ o对应motion模式
 | `<leader>dx`       | n     | Doxygen            | 生成函数和类注释                        |
 | `<leader>da`       | n     | Doxygen            | 生成文件注释                            |
 | `<leader>dl`       | n     | Doxygen            | 生成证书注释                            |
-| `<leader>gu`       | n     | Gundo              | GundoToogle                             |
+| `<leader>ut`       | n     | undotree           | UndotreeToggle                          |
 | `ga`               | nx    | vim-easy-align     | 开启对齐                                |
 | `<tab>m`           | n     | Mark               | 清除所有的mark                          |
 | `<tab>n`           | n     | Mark               | 如果在高亮处，则取消高亮，否则触发高亮  |
