@@ -8,6 +8,10 @@
 "==============================================================
 PluginAdd 'tenfyzhong/leetcode.vim', {'do': 'pip3 install requests beautifulsoup4 --user'}
 
+let g:leetcode_company_enable = 0
+let g:leetcode_topic_enable = 1
+let g:leetcode_paid_only_enable = 0
+
 function! LeetCodeMode()
   let mappings = []
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ll', ':LeetCodeList<cr>', '<silent>'))
