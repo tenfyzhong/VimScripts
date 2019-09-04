@@ -24,6 +24,7 @@ function! LeetCodeMode()
 endfunction
 
 augroup leetcode_init
+  au!
   autocmd FileType leetcode nnoremap <silent><buffer><leader>da :LeetCodeDifficulty All<cr>
   autocmd FileType leetcode nnoremap <silent><buffer><leader>de :LeetCodeDifficulty Easy<cr>
   autocmd FileType leetcode nnoremap <silent><buffer><leader>dm :LeetCodeDifficulty Medium<cr>
