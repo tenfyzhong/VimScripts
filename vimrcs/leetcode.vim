@@ -23,7 +23,7 @@ function! LeetCodeMode()
   call mode#enable('leetcode')
 endfunction
 
-augroup leetcode_init
+augroup leetcode_vim_init
   au!
   autocmd FileType leetcode nnoremap <silent><buffer><leader>da :LeetCodeDifficulty All<cr>
   autocmd FileType leetcode nnoremap <silent><buffer><leader>de :LeetCodeDifficulty Easy<cr>
