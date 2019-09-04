@@ -23,6 +23,18 @@ function! LeetCodeMode()
   call mode#enable('leetcode')
 endfunction
 
+augroup leetcode_init
+  autocmd FileType leetcode nnoremap <silent><buffer><leader>da :LeetCodeDifficulty All<cr>
+  autocmd FileType leetcode nnoremap <silent><buffer><leader>de :LeetCodeDifficulty Easy<cr>
+  autocmd FileType leetcode nnoremap <silent><buffer><leader>dm :LeetCodeDifficulty Medium<cr>
+  autocmd FileType leetcode nnoremap <silent><buffer><leader>dh :LeetCodeDifficulty Hard<cr>
+  autocmd FileType leetcode nnoremap <silent><buffer><leader>sa :LeetCodeStatus All<cr>
+  autocmd FileType leetcode nnoremap <silent><buffer><leader>st :LeetCodeStatus Todo<cr>
+  autocmd FileType leetcode nnoremap <silent><buffer><leader>ss :LeetCodeStatus Solved<cr>
+  autocmd FileType leetcode nnoremap <silent><buffer><leader>sd :LeetCodeStatus Attempted<cr>
+augroup end
+
+
 command! -nargs=0 LeetCodeOpen call <sid>leetcode_open()
 
 function! s:leetcode_open()
