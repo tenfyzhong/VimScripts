@@ -60,7 +60,7 @@ function! LeetcodeCRPre(problem)
     return
   endif
   let root = trim(system('git rev-parse --show-toplevel 2>/dev/null'))
-  let problem_id = a:problem['id']
+  let problem_id = a:problem['fid']
   let problem_slug = a:problem['slug']
   if root != ''
     call <sid>TryCd(root, problem_id, problem_slug)
