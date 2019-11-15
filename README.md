@@ -270,6 +270,9 @@ o对应motion模式
 | `<leader>rf`       | n     | vim-go             | GoIfErr                                 |
 | `<C-]>`            | n     | vim-go             | GoDef                                   |
 | `<c-t>`            | n     | vim-go             | GoDefPop                                |
+| `<leader>rtp`      | n     | reftools           | Fixplurals                              |
+| `<leader>rts`      | n     | reftools           | Fillstruct                              |
+| `<leader>rtw`      | n     | reftools           | Fillswitch                              |
 | `<leader>rr`       | n     | pymode             | :PymodeRun                              |
 | `<leader>rb`       | n     | pymode             | 设置断点                                |
 | `<leader>ra`       | n     | pymode             | autoimport                              |
