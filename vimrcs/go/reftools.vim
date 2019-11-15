@@ -13,6 +13,9 @@
 "==============================================================
 PluginAdd 'tenfyzhong/reftools.vim'
 
-nmap <leader>rtp <Plug>(reftools#fixplurals)
-nmap <leader>rts <Plug>(reftools#fillstruct)
-nmap <leader>rtw <Plug>(reftools#fillswitch)
+augroup reftools_local
+  au!
+  au FileType go nmap <leader>rtp <Plug>(reftools#fixplurals)
+  au FileType go nmap <leader>rts <Plug>(reftools#fillstruct)
+  au FileType go nmap <leader>rtw <Plug>(reftools#fillswitch)
+augroup end
