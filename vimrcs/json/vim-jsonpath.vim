@@ -16,6 +16,6 @@ PluginAdd 'mogelbrod/vim-jsonpath'
 
 augroup jsonpath_init
   au!
-  au FileType json noremap <buffer><silent><leader>p :JsonPath<cr>
-  au FileType json noremap <buffer><silent><expr> <leader>g jsonpath#goto()
+  au FileType json noremap <buffer><silent><leader>p :call jsonpath#echo()<cr>
+  au FileType json noremap <buffer><silent><leader>g :call jsonpath#goto()<cr>
 augroup end
