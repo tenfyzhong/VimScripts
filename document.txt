@@ -141,6 +141,20 @@
 "==============================================================
 
 "==============================================================
+"    file: gounit-vim.vim
+"   brief: 生成单元测试
+"
+" command: GoUnit                       生成当前行的函数测试
+"          GoUnitTemplateAdd /file/name 把文件添加到模板
+"          GoUnitTemplateDel template   删除模板
+"          GoUnitTemplateList           列出所有模板
+"          GoUnitTemplateUse template   设置默认模板
+"
+"    nmap:
+"      <leader>rtg GoUnit
+"==============================================================
+
+"==============================================================
 "    file: vim-go.vim
 "   brief: go-ide
 "
@@ -256,6 +270,10 @@
 "==============================================================
 "    file: reftools.vim
 "   brief: reftools的工具
+"
+" command: Fixplurals 去除参数中的多余类型
+"          Fillstruct 填充当前行的结构成员
+"          Fillswitch 填充当前switch的case
 "
 "    nmap:
 "     <leader>rtp 运行fixplurals
