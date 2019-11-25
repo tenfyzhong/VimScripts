@@ -2,6 +2,10 @@
 "    file: reftools.vim
 "   brief: reftools的工具
 "
+" command: Fixplurals 去除参数中的多余类型
+"          Fillstruct 填充当前行的结构成员
+"          Fillswitch 填充当前switch的case
+"
 "    nmap:
 "     <leader>rtp 运行fixplurals
 "     <leader>rts 运行fillstruct
