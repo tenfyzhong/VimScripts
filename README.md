@@ -273,6 +273,7 @@ o对应motion模式
 | `<leader>rtp`      | n     | reftools           | Fixplurals                              |
 | `<leader>rts`      | n     | reftools           | Fillstruct                              |
 | `<leader>rtw`      | n     | reftools           | Fillswitch                              |
+| `<leader>rtg`      | n     | gounit-vim         | 生成单元测试                            |
 | `<leader>rr`       | n     | pymode             | :PymodeRun                              |
 | `<leader>rb`       | n     | pymode             | 设置断点                                |
 | `<leader>ra`       | n     | pymode             | autoimport                              |
