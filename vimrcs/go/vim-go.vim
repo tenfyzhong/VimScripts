@@ -104,10 +104,9 @@ let g:go_highlight_types             = 0
 let g:go_highlight_operators         = 0
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_fail_silently           = 1
-let g:go_fmt_experimental            = 1
 let g:go_get_update                  = 0
 let g:go_fmt_autosave                = 1
-let g:go_info_mode                   = 'guru'
+let g:go_info_mode                 = 'guru'
 
 " 如果慢的话，把它去掉
 " let g:go_fmt_command = 'goimports'
