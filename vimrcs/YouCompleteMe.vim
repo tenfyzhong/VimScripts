@@ -27,7 +27,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 17:02:00
 "==============================================================
-PluginAdd 'Valloric/YouCompleteMe', {'frozen': 1, 'do': 'git submodule update --init --recursive && ./install.py --all'}
+PluginAdd 'ycm-core/YouCompleteMe', {'frozen': 1, 'do': 'git submodule update --init --recursive && ./install.py --all'}
 PluginAdd 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': ['c', 'cpp'] }
 
 " augroup load_ycm
