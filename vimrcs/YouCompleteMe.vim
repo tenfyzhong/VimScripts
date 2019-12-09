@@ -30,10 +30,10 @@
 PluginAdd 'ycm-core/YouCompleteMe', {'frozen': 1, 'do': 'git submodule update --init --recursive && ./install.py --all'}
 PluginAdd 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': ['c', 'cpp'] }
 
-" augroup load_ycm
-    " autocmd!
-    " autocmd InsertEnter * call plug#load('YouCompleteMe') | autocmd! load_ycm
-" augroup END
+augroup load_ycm_local
+    autocmd!
+    autocmd BufWritePre *.go silent YcmCompleter Format 
+augroup END
 
 let g:ycm_disable_signature_help                    = 1
 let g:ycm_min_num_of_chars_for_completion 			= 1
