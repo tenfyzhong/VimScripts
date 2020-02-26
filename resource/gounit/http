@@ -1,0 +1,57 @@
+{{$func := .Func}}
+
+func {{ $func.TestName }}(t *testing.T) {
+	{{- if (gt $func.NumParams 0) }}
+		type args struct {
+            w *httptest.ResponseRecorder
+            r *http.Request
+		}
+	{{ end -}}
+	tests := []struct {
+		name string
+		{{- if $func.IsMethod }}
+			init func(ctrl *gomock.Controller) {{ ast $func.ReceiverType }}
+			inspect func(r {{ ast $func.ReceiverType }}, t *testing.T) //inspects {{ ast $func.ReceiverType }} after execution of {{$func.Name}}
+		{{ end }}
+		{{- if (gt $func.NumParams 0) }}
+			args func(t *gomock.Controller) args
+		{{ end }}
+        expect func(t *testing.T, resp *http.Response)
+	}{
+		{{- if eq .Comment "" }}
+			//TODO: Add test cases
+		{{else}}
+			//{{ .Comment }}
+		{{end -}}
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+		  ctrl := gomock.NewController(t)
+		  defer ctrl.Finish()
+
+			{{if (gt $func.NumParams 0) }}
+				tArgs := tt.args(ctrl)
+			{{ end}}
+			{{- if $func.IsMethod -}}
+				receiver := tt.init(ctrl)
+
+				{{ if (gt $func.NumResults 0) }}{{ join $func.ResultsNames ", " }} := {{end}}receiver.{{$func.Name}}(
+					{{- range $i, $pn := $func.ParamsNames }}
+						{{- if not (eq $i 0)}},{{end}}tArgs.{{ $pn }}{{ end }})
+
+				if tt.inspect != nil {
+					tt.inspect(receiver, t)
+				}
+			{{ else }}
+				{{ if (gt $func.NumResults 0) }}{{ join $func.ResultsNames ", " }} := {{end}}{{$func.Name}}(
+					{{- range $i, $pn := $func.ParamsNames }}
+						{{- if not (eq $i 0)}},{{end}}tArgs.{{ $pn }}{{ end }})
+			{{end}}
+            
+            if tt.expect != nil {
+                tt.expect(t, tArgs.w.Result())
+            }
+		})
+	}
+}
