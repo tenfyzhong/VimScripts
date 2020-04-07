@@ -95,3 +95,6 @@ let g:axring_rings_gitrebase = [
       \   ['pick', 'reword', 'edit', 'squash', 'fixup', 'exec', 'drop'],
       \ ]
 
+let g:axring_rings_nginx = [
+      \   ["debug", "info", "notice", "warn", "error", "crit", "alert", "emerg"],
+      \ ]
