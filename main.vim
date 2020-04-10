@@ -103,6 +103,7 @@ set belloff=all
 set noerrorbells
 set novisualbell
 set t_vb=
+set shortmess+=c
 
 " set pastetoggle=<leader>p
 set sessionoptions-=buffers
