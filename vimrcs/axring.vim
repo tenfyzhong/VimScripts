@@ -64,6 +64,7 @@ let g:axring_rings_go = [
       \ ['uint', 'uint8', 'uint16', 'uint32', 'uint64'],
       \ ['float32', 'float64'],
       \ ['interface', 'struct'],
+      \ ['const', 'var'],
       \ ]
 
 let g:axring_rings_vim = [
