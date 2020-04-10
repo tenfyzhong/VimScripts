@@ -97,4 +97,5 @@ let g:axring_rings_gitrebase = [
 
 let g:axring_rings_nginx = [
       \   ["debug", "info", "notice", "warn", "error", "crit", "alert", "emerg"],
+      \   ["ip_hash", "fair", "url_hash", "least_conn", "hash"],
       \ ]
