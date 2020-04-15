@@ -139,8 +139,6 @@ o对应motion模式
 | `<leader>tc`       | n     | global             | :tabclose                               |
 | `<leader>cf`       | n     | global             | 复制文件名(不包括路径)到匿名缓存区      |
 | `<leader>cp`       | n     | global             | 复制文件名和路径到匿名缓存区            |
-| `<leader>j`        | n     | global             | gT                                      |
-| `<leader>k`        | n     | global             | gt                                      |
 | `<leader>p`        | n     | global             | pastetoggle                             |
 | `<c-p>`            | n     | global             | redraw!                                 |
 | `<leader>xx`       | n     | global             | 在16进制的xxd中切换                     |
