@@ -61,7 +61,7 @@ let NERDTreeIgnoreTmp 				=
             \'\.d.\d*$[[file]]', 
             \'cscope.*out$[[file]]', 
             \'\.pyc$[[file]]'] 
-let NERDTreeSortOrder = ['\/$', '*', '_test\.py$', '_test\.go$', '^test_.*\.py$']
+let NERDTreeSortOrder = ['\/$', '*', '^mock_.*\.go$', '_test\.py$', '_test\.go$', '^test_.*\.py$']
 if exists('NERDTreeIgnore')
     let NERDTreeIgnore += NERDTreeIgnoreTmp
 else
