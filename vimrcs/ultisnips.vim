@@ -24,3 +24,5 @@ PluginAdd 'tenfyzhong/tsnippets.vim'
 
 let g:UltiSnipsEditSplit     = "horizontal"
 let g:UltiSnipsExpandTrigger = '<c-j>'
+
+let g:snips_author = 'tenfyzhong'
