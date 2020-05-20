@@ -11,6 +11,7 @@ PluginAdd 'tenfyzhong/leetcode.vim', {'do': 'pip3 install requests beautifulsoup
 let g:leetcode_company_enable = 0
 let g:leetcode_topic_enable = 1
 let g:leetcode_paid_only_enable = 0
+let g:leetcode_browser = 'firefox'
 
 function! LeetCodeMode()
   let mappings = []
