@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-07-16 08:52:43
 "==============================================================
-PluginAdd 'tenfyzhong/leetcode.vim', {'do': 'pip3 install requests beautifulsoup4 --user'}
+PluginAdd 'ianding1/leetcode.vim', {'do': 'pip3 install requests beautifulsoup4 --user'}
 
 let g:leetcode_company_enable = 0
 let g:leetcode_topic_enable = 1
