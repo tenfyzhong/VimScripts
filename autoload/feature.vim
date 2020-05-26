@@ -111,3 +111,7 @@ function! feature#exec_list(...) "{{{ 执行所有的命令，没有返回值
         exec cmd
     endfor
 endfunction "}}}
+
+function! feature#StrfimeWord()
+  echo strftime('%F %T', expand('<cword>'))
+endfunction

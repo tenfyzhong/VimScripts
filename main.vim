@@ -173,6 +173,7 @@ nnoremap <silent><leader>cf <Esc>:let @"=expand('%')<cr>
 nnoremap <silent><leader>cp <Esc>:let @"=expand('%:p')<cr>
 nnoremap <silent><m-,>      ,
 nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
+nnoremap <silent><leader>et <Esc>:call feature#StrfimeWord()<cr>
 
 nnoremap <silent><Space>    <NOP>
 nnoremap <silent><Space><Space>   zA
