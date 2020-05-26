@@ -146,6 +146,7 @@ o对应motion模式
 | `<space>O`         | n     | global             | 在下面添加[count]个空行                 |
 | `<leader>p`        | n     | global             | 切换patse模式                           |
 | `<leader>y`        | n     | global             | 复制内容到系统粘贴板                    |
+| `<leader>et`       | n     | global             | 转换和打印当前光标的时间戳              |
 | `<leader>aa`       | n     | a.vim              | 在源文件和头文件中切换                  |
 | `<leader>as`       | n     | a.vim              | 水平打开源文件或者头文件对应的另一部分  |
 | `<leader>av`       | n     | a.vim              | 竖直打开源文件或者头文件对应的另一部分  |
