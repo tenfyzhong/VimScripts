@@ -21,33 +21,29 @@ function! LeetCodeMode()
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ls', ':LeetCodeSubmit<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>lt', ':LeetCodeTest<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ld', ':LeetCodeToDir<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>da', ':LeetCodeTagDifficulty All<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>de', ':LeetCodeTagDifficulty Easy<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>dm', ':LeetCodeTagDifficulty Medium<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>dh', ':LeetCodeTagDifficulty Hard<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>sa', ':LeetCodeTagStatus All<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>st', ':LeetCodeTagStatus Todo<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ss', ':LeetCodeTagStatus Solved<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>sd', ':LeetCodeTagStatus Attempted<cr>', '<silent>'))
   call mode#add('leetcode', '', mappings)
   call mode#enable('leetcode')
 endfunction
 
-augroup leetcode_vim_init
-  au!
-  autocmd FileType leetcode nnoremap <silent><buffer><leader>da :LeetCodeDifficulty All<cr>
-  autocmd FileType leetcode nnoremap <silent><buffer><leader>de :LeetCodeDifficulty Easy<cr>
-  autocmd FileType leetcode nnoremap <silent><buffer><leader>dm :LeetCodeDifficulty Medium<cr>
-  autocmd FileType leetcode nnoremap <silent><buffer><leader>dh :LeetCodeDifficulty Hard<cr>
-  autocmd FileType leetcode nnoremap <silent><buffer><leader>sa :LeetCodeStatus All<cr>
-  autocmd FileType leetcode nnoremap <silent><buffer><leader>st :LeetCodeStatus Todo<cr>
-  autocmd FileType leetcode nnoremap <silent><buffer><leader>ss :LeetCodeStatus Solved<cr>
-  autocmd FileType leetcode nnoremap <silent><buffer><leader>sd :LeetCodeStatus Attempted<cr>
-augroup end
-
-
 command! -nargs=0 LeetCodeOpen call <sid>leetcode_open()
-command! -nargs=0 LeetCodeToDir :call <sid>leetcode_to_dir()
-command! -nargs=0 LeetCodeInsertExtra :call <sid>leetcode_insert_extra()
-command! -nargs=0 LeetCodeResetInsert :call <sid>leetcode_reset_insert()
+command! -nargs=0 LeetCodeToDir call <sid>leetcode_to_dir()
+command! -nargs=0 LeetCodeInsertExtra call <sid>leetcode_insert_extra()
+command! -nargs=0 LeetCodeResetInsert call <sid>leetcode_reset_insert()
+command! -nargs=1 -complete=customlist,s:difficulty_complete LeetCodeTagDifficulty call <sid>leetcode_select_tag('^## Difficulty', <q-args>)
+command! -nargs=1 -complete=customlist,s:status_complete LeetCodeTagStatus call <sid>leetcode_select_tag('^## Status', <q-args>)
 
 function! s:leetcode_reset_insert() " {{{
   LeetCodeReset
   LeetCodeInsertExtra
 endfunction " }}}
-
 
 function! s:leetcode_open() " {{{
   let slug = expand('%:t:r')
@@ -146,5 +142,23 @@ function! s:leetcode_description(end_line_of_description) " {{{
     call add(lines, line)
   endfor
   return lines
+endfunction " }}}
+
+function! s:leetcode_select_tag(parent, tag) " {{{
+  let name = bufname()
+  if name !~ '^leetcode:\/\/\/problems'
+    return
+  endif
+  call search(a:parent)
+  call search(a:tag, 'z')
+  call feedkeys("\<CR>")
+endfunction " }}}
+
+function! s:difficulty_complete(A, L, P) " {{{
+  return filter(['All', 'Easy', 'Medium', 'Hard'], 'v:val =~# a:A')
+endfunction " }}}
+
+function! s:status_complete(A, L, P) " {{{
+  return filter(['All', 'Todo', 'Solved', 'Attempted'], 'v:val =~# a:A')
 endfunction " }}}
 
