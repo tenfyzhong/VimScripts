@@ -17,9 +17,10 @@ function! LeetCodeMode()
   let mappings = []
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ll', ':LeetCodeList<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>lo', ':LeetCodeOpen<cr>', '<silent>'))
-  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>lr', ':LeetCodeReset<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>lr', ':LeetCodeResetInsert<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ls', ':LeetCodeSubmit<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>lt', ':LeetCodeTest<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ld', ':LeetCodeToDir<cr>', '<silent>'))
   call mode#add('leetcode', '', mappings)
   call mode#enable('leetcode')
 endfunction
@@ -38,8 +39,17 @@ augroup end
 
 
 command! -nargs=0 LeetCodeOpen call <sid>leetcode_open()
+command! -nargs=0 LeetCodeToDir :call <sid>leetcode_to_dir()
+command! -nargs=0 LeetCodeInsertExtra :call <sid>leetcode_insert_extra()
+command! -nargs=0 LeetCodeResetInsert :call <sid>leetcode_reset_insert()
 
-function! s:leetcode_open()
+function! s:leetcode_reset_insert() " {{{
+  LeetCodeReset
+  LeetCodeInsertExtra
+endfunction " }}}
+
+
+function! s:leetcode_open() " {{{
   let slug = expand('%:t:r')
   if get(g:, 'leetcode_china', 0) == 1
     let url = printf('https://leetcode-cn.com/problems/%s/', slug)
@@ -54,45 +64,67 @@ function! s:leetcode_open()
     echoerr 'leetcode: no `open` or equivalent command found.'
   endif
   redraw!
-endfunction
+endfunction " }}}
 
-function! LeetcodeCRPre(problem)
-  if a:problem == {}
+function! s:leetcode_to_dir() " {{{
+  let filename = expand('%:p:t')
+  if filename !~ '\d\+\..*\.\w\+'
     return
   endif
-  let root = trim(system('git rev-parse --show-toplevel 2>/dev/null'))
-  let problem_id = a:problem['fid']
-  let problem_slug = a:problem['slug']
-  if root != ''
-    call <sid>TryCd(root, problem_id, problem_slug)
-  endif
-endfunction
 
-function! LeetcodeResetSolutionAfter(problem)
-  call <sid>create_readme(a:problem['slug'], a:problem['title'], a:problem['desc'])
-  let ft = &ft
+  let fileitems = matchlist(filename, '\(\d\+\)\.\(.*\)\.\(\w\+\)')
+  if len(fileitems) < 4
+    return
+  endif
+  let id = fileitems[1]
+  let slug = substitute(fileitems[2], '_', '-', 'g')
+  let filetype = fileitems[3]
+
+  let dirname = printf('%04d-%s', id, slug)
+  let newfile = printf('%s.%s', slug, filetype)
+
+  " create directory and file
+  if !isdirectory(dirname)
+    call mkdir(dirname)
+  endif
+  exec "cd " . dirname
+  exec "saveas " . newfile
+  call system(printf("rm ../%s", filename))
+
+  let title = getline(1)[3:]
+  " get the description
+  let end_of_description = search('\[End of Description\]', 'n')
+  if end_of_description == 0
+    return
+  endif
+  let description = <SID>leetcode_description(end_of_description)
+
+  " create readme
+  call <SID>create_readme(slug, title, description)
+
+  " insert test content
+  call <sid>leetcode_insert_extra()
+endfunction " }}}
+
+function! s:leetcode_insert_extra() " {{{
+  let end_of_description = search('\[End of Description\]', 'n')
+  if end_of_description == 0
+    return
+  endif
+
+  let ft = &filetype
+
   if ft == 'cpp'
-    let pos = getcurpos()
-    call cursor(1, 1)
-    let search_if_test = search('ifdef TEST')
-    if search_if_test == 0
-      call <SID>afterComment(ft)
-      call <SID>afterCode(ft)
-    endif
-    call setpos('.', pos)
-  endif
-endfunction
+    let content = ['', '#ifdef TEST', '#define CATCH_CONFIG_MAIN', '#include "catch.hpp"', '#endif', '#include <iostream>', 'using namespace std;', '']
+    call append(end_of_description, content)
 
-function! s:TryCd(root, id, slug)
-  let dir = printf('%04d-%s', a:id, a:slug)
-  exec "cd " . a:root
-  if !isdirectory(dir)
-    call mkdir(dir)
+    let content = ['', 'static const int fastIO = []() {', '    std::ios::sync_with_stdio(false);', '    std::cin.tie(nullptr);', '    return 0;', '}();', '', '#ifdef TEST', 'TEST_CASE("") {', '}', '#endif']
+    call append('$', content)
+    silent w
   endif
-  exec "cd " . dir
-endfunction
+endfunction " }}}
 
-function! s:create_readme(slug, title, desc)
+function! s:create_readme(slug, title, desc) " {{{
   if filereadable('README.md')
     return
   endif
@@ -102,22 +134,17 @@ function! s:create_readme(slug, title, desc)
   call add(content, '')
   call add(content, '# 解题思路')
   call writefile(content, 'README.md')
-endfunction
+endfunction " }}}
 
-function! s:afterComment(ft)
-  if a:ft == 'cpp'
-    let content = ['', '#ifdef TEST', '#define CATCH_CONFIG_MAIN', '#include "catch.hpp"', '#endif', '#include <iostream>', 'using namespace std;', '']
-    let search_end_of_description = search('\[End of Description\]')
-    if search_end_of_description == 0
-      return
-    endif
-    call append(search_end_of_description, content)
+function! s:leetcode_description(end_line_of_description) " {{{
+  if a:end_line_of_description < 4
+    return []
   endif
-endfunction
+  let lines = []
+  for i in range(5, a:end_line_of_description-1)
+    let line = getline(i)[3:]
+    call add(lines, line)
+  endfor
+  return lines
+endfunction " }}}
 
-function! s:afterCode(ft)
-  if a:ft == 'cpp'
-    let content = ['', 'static const int fastIO = []() {', '    std::ios::sync_with_stdio(false);', '    std::cin.tie(nullptr);', '    return 0;', '}();', '', '#ifdef TEST', 'TEST_CASE("") {', '}', '#endif']
-    call append('$', content)
-  endif
-endfunction
