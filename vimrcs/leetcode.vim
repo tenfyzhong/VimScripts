@@ -112,6 +112,29 @@ function! s:leetcode_to_dir() " {{{
   call <sid>leetcode_insert_extra()
 endfunction " }}}
 
+let s:head_content = [
+      \ '', 
+      \ '#ifdef TEST', 
+      \ '#define CATCH_CONFIG_MAIN', 
+      \ '#include "catch.hpp"', 
+      \ '#endif', 
+      \ '#include <iostream>', 
+      \ 'using namespace std;', 
+      \ '']
+
+let s:tail_content = [
+      \ '', 
+      \ 'static const int fastIO = []() {', 
+      \ '    std::ios::sync_with_stdio(false);', 
+      \ '    std::cin.tie(nullptr);', 
+      \ '    return 0;', 
+      \ '}();', 
+      \ '', 
+      \ '#ifdef TEST', 
+      \ 'TEST_CASE("") {', 
+      \ '}', 
+      \ '#endif']
+
 function! s:leetcode_insert_extra() " {{{
   let end_of_description = search('\[End of Description\]', 'n')
   if end_of_description == 0
@@ -121,11 +144,8 @@ function! s:leetcode_insert_extra() " {{{
   let ft = &filetype
 
   if ft == 'cpp'
-    let content = ['', '#ifdef TEST', '#define CATCH_CONFIG_MAIN', '#include "catch.hpp"', '#endif', '#include <iostream>', 'using namespace std;', '']
-    call append(end_of_description, content)
-
-    let content = ['', 'static const int fastIO = []() {', '    std::ios::sync_with_stdio(false);', '    std::cin.tie(nullptr);', '    return 0;', '}();', '', '#ifdef TEST', 'TEST_CASE("") {', '}', '#endif']
-    call append('$', content)
+    call append(end_of_description, s:head_content)
+    call append('$', s:tail_content)
     silent w
   endif
 endfunction " }}}
