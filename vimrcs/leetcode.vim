@@ -46,7 +46,17 @@ function! s:leetcode_reset_insert() " {{{
 endfunction " }}}
 
 function! s:leetcode_open() " {{{
-  let slug = expand('%:t:r')
+  let path = expand('%:p')
+  let dir = fnamemodify(path, ':h:t')
+  let filename = fnamemodify(path, ':t:r')
+  let slug = ''
+  if dir =~# '\d\+-' . filename
+    let slug = filename
+  else
+    let slug = substitute(filename, '\d\+\.\(.*\)', '\1', 'g')
+    let slug = substitute(slug, '_', '-', 'g')
+  endif
+
   if get(g:, 'leetcode_china', 0) == 1
     let url = printf('https://leetcode-cn.com/problems/%s/', slug)
   else
