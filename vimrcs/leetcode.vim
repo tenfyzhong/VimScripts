@@ -73,6 +73,7 @@ function! s:leetcode_open() " {{{
 endfunction " }}}
 
 function! s:leetcode_to_dir() " {{{
+  let filepath = expand('%:p')
   let filename = expand('%:p:t')
   if filename !~ '\d\+\..*\.\w\+'
     return
@@ -86,8 +87,10 @@ function! s:leetcode_to_dir() " {{{
   let slug = substitute(fileitems[2], '_', '-', 'g')
   let filetype = fileitems[3]
 
-  let dirname = printf('%04d-%s', id, slug)
-  let newfile = printf('%s.%s', slug, filetype)
+  let root = trim(system('git rev-parse --show-toplevel'))
+
+  let dirname = printf('%s/%04d-%s', root, id, slug)
+  let newfile = printf('%s/%s.%s', root, slug, filetype)
 
   " create directory and file
   if !isdirectory(dirname)
@@ -95,7 +98,7 @@ function! s:leetcode_to_dir() " {{{
   endif
   exec "cd " . dirname
   exec "saveas " . newfile
-  call system(printf("rm ../%s", filename))
+  call system(printf("rm %s", filepath))
 
   let title = getline(1)[3:]
   " get the description
