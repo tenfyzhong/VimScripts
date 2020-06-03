@@ -21,6 +21,7 @@ function! LeetCodeMode()
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ls', ':LeetCodeSubmit<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>lt', ':LeetCodeTest<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ld', ':LeetCodeToDir<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ci', ':LeetCodeCommit<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>da', ':LeetCodeTagDifficulty All<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>de', ':LeetCodeTagDifficulty Easy<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>dm', ':LeetCodeTagDifficulty Medium<cr>', '<silent>'))
@@ -37,8 +38,26 @@ command! -nargs=0 LeetCodeOpen call <sid>leetcode_open()
 command! -nargs=0 LeetCodeToDir call <sid>leetcode_to_dir()
 command! -nargs=0 LeetCodeInsertExtra call <sid>leetcode_insert_extra()
 command! -nargs=0 LeetCodeResetInsert call <sid>leetcode_reset_insert()
+command! -nargs=0 LeetCodeCommit call <sid>leetcode_commit()
 command! -nargs=1 -complete=customlist,s:difficulty_complete LeetCodeTagDifficulty call <sid>leetcode_select_tag('^## Difficulty', <q-args>)
 command! -nargs=1 -complete=customlist,s:status_complete LeetCodeTagStatus call <sid>leetcode_select_tag('^## Status', <q-args>)
+
+function! s:leetcode_commit() " {{{
+  let path = expand('%:p')
+  let dir = fnamemodify(path, ':h:t')
+  let filename = fnamemodify(path, ':t:r')
+  let slug = ''
+  if dir !~# '\d\+-' . filename
+    echo 'Please open the solution file and try again.'
+    return
+  endif
+
+  let title = getline(1)[3:]
+  call system(printf('cd %s; git add .; git commit -m "解决%s" > /dev/null', fnamemodify(dir, ':h'), title))
+  redraw!
+  echo printf("<%s> commited!", title)
+endfunction " }}}
+
 
 function! s:leetcode_reset_insert() " {{{
   LeetCodeReset
