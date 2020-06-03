@@ -32,6 +32,11 @@ function! LeetCodeMode()
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>sd', ':LeetCodeTagStatus Attempted<cr>', '<silent>'))
   call mode#add('leetcode', '', mappings)
   call mode#enable('leetcode')
+
+  augroup leetcode_mode_local_inif
+    au!
+    autocmd BufWritePre *.cpp LeetCodeToDir
+  augroup end
 endfunction
 
 command! -nargs=0 LeetCodeOpen call <sid>leetcode_open()
@@ -110,13 +115,20 @@ function! s:leetcode_to_dir() " {{{
 
   let dirname = printf('%s/%04d-%s', root, id, slug)
   let newfile = printf('%s/%s.%s', dirname, slug, filetype)
+  if filereadable(newfile)
+    if input(printf('%s/%s.%s existed, continue? (y/N): ', fnamemodify(dirname, ':t'), slug, filetype)) !=? "y"
+      let newfile  = printf('%s/%s', root, filename)
+      exec 'saveas! ' . newfile
+      return
+    endif
+  endif
 
   " create directory and file
   if !isdirectory(dirname)
     call mkdir(dirname)
   endif
   exec "cd " . dirname
-  exec "saveas " . newfile
+  exec "saveas! " . newfile
   call system(printf("rm %s", filepath))
 
   let title = getline(1)[3:]
