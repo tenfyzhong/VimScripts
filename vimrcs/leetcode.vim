@@ -8,10 +8,10 @@
 "==============================================================
 PluginAdd 'ianding1/leetcode.vim', {'do': 'pip3 install requests beautifulsoup4 --user'}
 
-let g:leetcode_company_enable = 0
-let g:leetcode_topic_enable = 1
-let g:leetcode_paid_only_enable = 0
 let g:leetcode_browser = 'firefox'
+let g:leetcode_hide_paid_only = 1
+let g:leetcode_hide_topics = 0
+let g:leetcode_hide_companies = 1
 
 function! LeetCodeMode()
   let mappings = []
@@ -90,7 +90,7 @@ function! s:leetcode_to_dir() " {{{
   let root = trim(system('git rev-parse --show-toplevel'))
 
   let dirname = printf('%s/%04d-%s', root, id, slug)
-  let newfile = printf('%s/%s.%s', root, slug, filetype)
+  let newfile = printf('%s/%s.%s', dirname, slug, filetype)
 
   " create directory and file
   if !isdirectory(dirname)
