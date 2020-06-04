@@ -20,7 +20,7 @@ function! LeetCodeMode()
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>lr', ':LeetCodeResetInsert<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ls', ':LeetCodeSubmit<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>lt', ':LeetCodeTest<cr>', '<silent>'))
-  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ld', ':LeetCodeToDir<cr>', '<silent>'))
+  call add(mappings, mode#mapping#create('n', 1, 0, '<leader>cd', ':LeetCodeCD<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>ci', ':LeetCodeCommit<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>da', ':LeetCodeTagDifficulty All<cr>', '<silent>'))
   call add(mappings, mode#mapping#create('n', 1, 0, '<leader>de', ':LeetCodeTagDifficulty Easy<cr>', '<silent>'))
@@ -35,12 +35,12 @@ function! LeetCodeMode()
 
   augroup leetcode_mode_local_inif
     au!
-    autocmd BufWritePre *.cpp LeetCodeToDir
+    autocmd BufWritePre *.cpp LeetCodeCD
   augroup end
 endfunction
 
 command! -nargs=0 LeetCodeOpen call <sid>leetcode_open()
-command! -nargs=0 LeetCodeToDir call <sid>leetcode_to_dir()
+command! -nargs=0 LeetCodeCD call <sid>leetcode_cd()
 command! -nargs=0 LeetCodeInsertExtra call <sid>leetcode_insert_extra()
 command! -nargs=0 LeetCodeResetInsert call <sid>leetcode_reset_insert()
 command! -nargs=0 LeetCodeCommit call <sid>leetcode_commit()
@@ -95,7 +95,7 @@ function! s:leetcode_open() " {{{
   redraw!
 endfunction " }}}
 
-function! s:leetcode_to_dir() " {{{
+function! s:leetcode_cd() " {{{
   let filepath = expand('%:p')
   let filename = expand('%:p:t')
   if filename !~ '\d\+\..*\.\w\+'
