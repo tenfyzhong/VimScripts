@@ -178,8 +178,12 @@ function! s:leetcode_insert_extra() " {{{
   let ft = &filetype
 
   if ft == 'cpp'
-    call append(end_of_description, s:head_content)
-    call append('$', s:tail_content)
+    if search('#define CATCH_CONFIG_MAIN', 'n') == 0
+      call append(end_of_description, s:head_content)
+    endif
+    if search('std::ios::sync_with_stdio', 'n') == 0
+      call append('$', s:tail_content)
+    endif
     silent w
   endif
 endfunction " }}}
