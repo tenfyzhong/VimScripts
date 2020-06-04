@@ -57,10 +57,9 @@ function! s:leetcode_commit() " {{{
     return
   endif
 
-  let title = getline(1)[3:]
-  call system(printf('cd %s; git add .; git commit -m "解决%s" > /dev/null', fnamemodify(dir, ':h'), title))
+  call system(printf('cd %s; git add .; git commit -m "解决%s" > /dev/null', fnamemodify(path, ':h'), dir))
   redraw!
-  echo printf("<%s> commited!", title)
+  echo printf("<%s> commited!", dir)
 endfunction " }}}
 
 
