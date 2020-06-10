@@ -341,3 +341,7 @@ o对应motion模式
 | `<leader>tr`       | nv    | vim-translate-me   | 替换光标下的文本为翻译内容              |
 | `<leader>k`        | nxo   | columnskip         | 行对齐上移                              |
 | `<leader>j`        | nxo   | columnskip         | 行对齐下移                              |
+| `<leader>ob`       | nv    | vim-open-url       | 打开当前的url                           |
+| `<leader>og`       | nv    | vim-open-url       | 在google中搜索                          |
+| `<leader>ow`       | nv    | vim-open-url       | 在wikipedia中搜索                       |
+| `<leader>os`       | nv    | vim-open-url       | 在stackoverflow中搜索                   |
