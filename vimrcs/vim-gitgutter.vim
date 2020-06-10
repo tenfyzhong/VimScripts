@@ -40,10 +40,10 @@ endif
 let g:gitgutter_map_keys    = 0
 let g:gitgutter_escape_grep = 1
 
-nmap [h <Plug>GitGutterPrevHunk
-nmap ]h <Plug>GitGutterNextHunk
-nmap <Leader>ga <Plug>GitGutterStageHunk
-nmap <Leader>gr <Plug>GitGutterUndoHunk
-nmap <Leader>gp <Plug>GitGutterPreviewHunk
+nmap [h <Plug>(GitGutterPrevHunk)
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap <Leader>ga <Plug>(GitGutterStageHunk)
+nmap <Leader>gr <Plug>(GitGutterUndoHunk)
+nmap <Leader>gp <Plug>(GitGutterPreviewHunk)
 nnoremap <silent><Leader>gg :GitGutter<cr>
 
