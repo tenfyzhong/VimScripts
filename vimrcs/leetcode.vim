@@ -8,10 +8,12 @@
 "==============================================================
 PluginAdd 'ianding1/leetcode.vim', {'do': 'pip3 install requests beautifulsoup4 --user'}
 
+let g:leetcode_china = 0
 let g:leetcode_browser = 'firefox'
 let g:leetcode_hide_paid_only = 1
 let g:leetcode_hide_topics = 0
 let g:leetcode_hide_companies = 1
+let g:leetcode_problemset = 'algorithms'
 
 function! LeetCodeMode()
   let mappings = []
@@ -52,7 +54,8 @@ function! s:leetcode_commit() " {{{
   let dir = fnamemodify(path, ':h:t')
   let filename = fnamemodify(path, ':t:r')
   let slug = ''
-  if dir !~# '\d\+-' . filename
+  let root = trim(system('git rev-parse --show-toplevel'))
+  if fnamemodify(path, ':h') ==# root
     echo 'Please open the solution file and try again.'
     return
   endif
@@ -98,11 +101,11 @@ endfunction " }}}
 function! s:leetcode_cd() " {{{
   let filepath = expand('%:p')
   let filename = expand('%:p:t')
-  if filename !~ '\d\+\..*\.\w\+'
+  if filename !~ '^.\+\.\w\+\.\w\+$'
     return
   endif
 
-  let fileitems = matchlist(filename, '\(\d\+\)\.\(.*\)\.\(\w\+\)')
+  let fileitems = matchlist(filename, '^\(.\+\)\.\(\w\+\)\.\(\w\+\)$')
   if len(fileitems) < 4
     return
   endif
@@ -112,7 +115,7 @@ function! s:leetcode_cd() " {{{
 
   let root = trim(system('git rev-parse --show-toplevel'))
 
-  let dirname = printf('%s/%04d-%s', root, id, slug)
+  let dirname = printf('%s/%04s-%s', root, id, slug)
   let newfile = printf('%s/%s.%s', dirname, slug, filetype)
   if filereadable(newfile)
     if input(printf('%s/%s.%s existed, continue? (y/N): ', fnamemodify(dirname, ':t'), slug, filetype)) !=? "y"
