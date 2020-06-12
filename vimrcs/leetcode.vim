@@ -133,13 +133,11 @@ function! s:leetcode_cd() " {{{
   exec "saveas! " . newfile
   call system(printf("rm %s", filepath))
 
-  let title = getline(1)[3:]
+
   " get the description
-  let end_of_description = search('\[End of Description\]', 'n')
-  if end_of_description == 0
-    return
-  endif
-  let description = <SID>leetcode_description(end_of_description)
+  let description_name = printf('[DESCRIPTION] %s.%s', id, slug)
+  let title = getbufline(bufnr(description_name), 2)[0][3:]
+  let description = <SID>leetcode_description(description_name)
 
   " create readme
   call <SID>create_readme(slug, title, description)
@@ -172,16 +170,11 @@ let s:tail_content = [
       \ '#endif']
 
 function! s:leetcode_insert_extra() " {{{
-  let end_of_description = search('\[End of Description\]', 'n')
-  if end_of_description == 0
-    return
-  endif
-
   let ft = &filetype
 
   if ft == 'cpp'
     if search('#define CATCH_CONFIG_MAIN', 'n') == 0
-      call append(end_of_description, s:head_content)
+      call append(0, s:head_content)
     endif
     if search('std::ios::sync_with_stdio', 'n') == 0
       call append('$', s:tail_content)
@@ -202,16 +195,13 @@ function! s:create_readme(slug, title, desc) " {{{
   call writefile(content, 'README.md')
 endfunction " }}}
 
-function! s:leetcode_description(end_line_of_description) " {{{
-  if a:end_line_of_description < 4
+function! s:leetcode_description(bufname) " {{{
+  let expr = bufnr(a:bufname)
+  if expr == -1
     return []
   endif
-  let lines = []
-  for i in range(5, a:end_line_of_description-1)
-    let line = getline(i)[3:]
-    call add(lines, line)
-  endfor
-  return lines
+  let lines = getbufline(expr, 1, '$')[5:-2]
+  return map(lines, 'v:val[3:]')
 endfunction " }}}
 
 function! s:leetcode_select_tag(parent, tag) " {{{
