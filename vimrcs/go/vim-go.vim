@@ -108,6 +108,7 @@ let g:go_get_update                  = 0
 let g:go_fmt_autosave                = 0
 let g:go_info_mode                   = 'guru'
 let g:go_echo_go_info                = 0
+let g:go_doc_popup_window            = 1
 
 " 如果慢的话，把它去掉
 " let g:go_fmt_command = 'goimports'
