@@ -65,8 +65,8 @@
 PluginAdd 'tpope/vim-fugitive'
 PluginAdd 'tpope/vim-rhubarb'
 PluginAdd 'shumphrey/fugitive-gitlab.vim'
-PluginAdd 'tommcdo/vim-fubitive'
-PluginAdd 'linuxsuren/fugitive-gitee.vim'
+" PluginAdd 'tommcdo/vim-fubitive'
+" PluginAdd 'linuxsuren/fugitive-gitee.vim'
 
 augroup fugitive_init
     autocmd! 
