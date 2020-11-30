@@ -124,21 +124,21 @@ endfunction
 
 augroup go_filetype_local
     autocmd!
-    au FileType go nmap <leader>r  <NOP>
-    au FileType go nmap <leader>rs <Plug>(go-implements)
-    au FileType go nmap <Leader>rd <Plug>(go-info)
-    au FileType go nmap <Leader>re <Plug>(go-rename)
-    au FileType go nmap <leader>rr <Plug>(go-run)
-    au FileType go nnoremap <leader>rb :<c-u>call <SID>build_go_files()<cr>
-    au FileType go nmap <leader>rtt <Plug>(go-test)
-    au FileType go nmap <leader>rtf <Plug>(go-test-func)
-    au FileType go nmap <leader>rc <Plug>(go-coverage-toggle)
-    au FileType go nnoremap <leader>ri :GoImport 
-    au FileType go nnoremap <leader>rf :GoIfErr<cr>
-    au FileType go nnoremap <leader>ra :GoImportAs 
-    au FileType go nmap <leader>aa <Plug>(go-alternate-edit)
-    au FileType go nmap <leader>as <Plug>(go-alternate-split)
-    au FileType go nmap <leader>av <Plug>(go-alternate-vertical)
+    autocmd FileType go nmap <buffer><leader>r  <NOP>
+    autocmd FileType go nmap <buffer><leader>rs <Plug>(go-implements)
+    autocmd FileType go nmap <buffer><Leader>rd <Plug>(go-info)
+    autocmd FileType go nmap <buffer><Leader>re <Plug>(go-rename)
+    autocmd FileType go nmap <buffer><leader>rr <Plug>(go-run)
+    autocmd FileType go nnoremap <buffer><leader>rb :<c-u>call <SID>build_go_files()<cr>
+    autocmd FileType go nmap <buffer><leader>rtt <Plug>(go-test)
+    autocmd FileType go nmap <buffer><leader>rtf <Plug>(go-test-func)
+    autocmd FileType go nmap <buffer><leader>rc <Plug>(go-coverage-toggle)
+    autocmd FileType go nnoremap <buffer><leader>ri :GoImport 
+    autocmd FileType go nnoremap <buffer><leader>rf :GoIfErr<cr>
+    autocmd FileType go nnoremap <buffer><leader>ra :GoImportAs 
+    autocmd FileType go nmap <buffer><leader>aa <Plug>(go-alternate-edit)
+    autocmd FileType go nmap <buffer><leader>as <Plug>(go-alternate-split)
+    autocmd FileType go nmap <buffer><leader>av <Plug>(go-alternate-vertical)
 
     autocmd FileType go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
     autocmd FileType go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')

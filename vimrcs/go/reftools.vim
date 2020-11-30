@@ -19,7 +19,7 @@ PluginAdd 'tenfyzhong/reftools.vim', {'frozen': 1}
 
 augroup reftools_local
   au!
-  au FileType go nmap <leader>rtp <Plug>(reftools#fixplurals)
-  au FileType go nmap <leader>rts <Plug>(reftools#fillstruct)
-  au FileType go nmap <leader>rtw <Plug>(reftools#fillswitch)
+  au FileType go nmap <buffer><leader>rtp <Plug>(reftools#fixplurals)
+  au FileType go nmap <buffer><leader>rts <Plug>(reftools#fillstruct)
+  au FileType go nmap <buffer><leader>rtw <Plug>(reftools#fillswitch)
 augroup end

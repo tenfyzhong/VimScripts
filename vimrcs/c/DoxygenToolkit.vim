@@ -22,7 +22,7 @@ let g:DoxygenToolkit_briefTag_funcName = "yes"
 
 augroup doxygen_toolkit_init
     autocmd!
-    autocmd FileType c,cpp nnoremap <silent><leader>dx <esc>:Dox<cr>
-    autocmd FileType c,cpp nnoremap <silent><leader>da <esc>:DoxAuthor<cr>
-    autocmd FileType c,cpp nnoremap <silent><leader>dl <esc>:DoxLic<cr>
+    autocmd FileType c,cpp nnoremap <buffer><silent><leader>dx <esc>:Dox<cr>
+    autocmd FileType c,cpp nnoremap <buffer><silent><leader>da <esc>:DoxAuthor<cr>
+    autocmd FileType c,cpp nnoremap <buffer><silent><leader>dl <esc>:DoxLic<cr>
 augroup END

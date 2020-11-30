@@ -22,5 +22,5 @@ let g:rustfmt_fail_silently = 1
 
 augroup rust_setting
     autocmd!
-    autocmd FileType rust nnoremap <leader>rr <ESC>:<C-u>RustRun<cr>
+    autocmd FileType rust nnoremap <buffer><leader>rr <ESC>:<C-u>RustRun<cr>
 augroup END

@@ -117,7 +117,7 @@ let g:pymode_lint_options_pylint =
 let g:pymode_rope = 1
 
 augroup pymode_init
-  autocmd FileType python nnoremap <silent><leader>qc :call <sid>close_doc_window()<cr>
+  autocmd FileType python nnoremap <buffer><silent><leader>qc :call <sid>close_doc_window()<cr>
 augroup end
 
 func! s:close_doc_window()

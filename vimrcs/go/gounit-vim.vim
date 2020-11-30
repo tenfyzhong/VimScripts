@@ -24,5 +24,5 @@ endfunction
 
 augroup gounit_vim_local
   au!
-  au FileType go nnoremap <leader>rtg :normal vaf<cr>:GoUnit<cr>
+  au FileType go nnoremap <buffer><leader>rtg :normal vaf<cr>:GoUnit<cr>
 augroup end
