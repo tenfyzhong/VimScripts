@@ -14,7 +14,8 @@
 "        yh			<Plug>(agit-yank-hash)
 "        <C-g>		<Plug>(agit-print-commitmsg)
 "        q			<Plug>(agit-exit)
-"        C			<Plug>(agit-git-checkout)
+"        C          <Plus>(agit-git-cherry-pick)
+"        co			<Plug>(agit-git-checkout)
 "        cb			<Plug>(agit-git-checkout-b)
 "        D			<Plug>(agit-git-branch-d)
 "        rs			<Plug>(agit-git-reset-soft)
@@ -30,3 +31,9 @@
 " created: 2017-05-07 13:01:42
 "==============================================================
 PluginAdd 'cohama/agit.vim'
+
+augroup agit_init
+  au!
+  autocmd FileType agit,agit_stat,agit_diff nmap <buffer> C <Plug>(agit-git-cherry-pick)
+  autocmd FileType agit,agit_stat,agit_diff nmap <buffer> co <Plug>(agit-git-checkout)
+augroup end
