@@ -6,8 +6,8 @@
 "          AgitFile [{options}] 只打开当前文件相关的log
 "
 "    nmap: 
-"        j			<Plug>(agit-scrolldown-stat)
-"        k			<Plug>(agit-scrollup-stat)
+"        J			<Plug>(agit-scrolldown-stat)
+"        K			<Plug>(agit-scrollup-stat)
 "        <C-j>		<Plug>(agit-scrolldown-diff)
 "        <C-k>		<Plug>(agit-scrollup-diff)
 "        u			<PLug>(agit-reload)
