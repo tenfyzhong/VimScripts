@@ -23,6 +23,6 @@ let g:mkdp_auto_close = 0
 
 augroup markdown_preview_init
     autocmd!
-    autocmd FileType markdown nmap <silent><leader>rp <Plug>MarkdownPreview
-    autocmd FileType markdown nmap <silent><leader>rs <Plug>StopMarkdownPreview
+    autocmd FileType markdown nmap <buffer><silent><leader>rp <Plug>MarkdownPreview
+    autocmd FileType markdown nmap <buffer><silent><leader>rs <Plug>StopMarkdownPreview
 augroup END
