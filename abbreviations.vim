@@ -1,5 +1,6 @@
 ab eles else
 ab contineu continue
+ab 1= !=
 
 augroup ft_abbreviate
   au!
