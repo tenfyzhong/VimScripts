@@ -1,18 +1,14 @@
 "==============================================================
-"    file: file_template.vim
+"    file: ftemplate.vim
 "   brief: 自动根据文件类型插入文件头注释
 "
 " command: InsertTemplate 在文件头部插入注释
 "
-" VIM Version: 7.4
+" VIM Version: 8.2
 "  author: tenfyzhong
 "   email: tenfy@tenfy.cn
-" created: 2016-04-14 09:49:19
+" created: 2020-12-30 10:58:55
 "==============================================================
-PluginAdd 'tenfyzhong/file_template.vim', 9
+PluginAdd 'tenfyzhong/ftemplate.vim', 9
 
-" let g:file_template_ignore_filetype = ['sh', 'cpp', 'c'] 
-
-if !exists('g:local_template_dir') 
-    let g:local_template_dir = '~/.vim/resource/file_template'
-endif
+let g:ftemplate_local_templates = '~/.vim/resource/file_template'
