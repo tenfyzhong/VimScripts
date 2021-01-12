@@ -126,18 +126,14 @@ func! s:close_doc_window()
   let cur_pos = getcurpos()
 
   let quick_loc_list = feature#GetQuickfixOrLoclistWinNr()
-
-  let buf_num = bufnr('__doc__')
-  if buf_num == -1
-    return
-  endif
-  let win_ids = quick_loc_list + win_findbuf(buf_num)
-  for id in win_ids
-    if id != -1
-      call win_gotoid(id)
-      :q
+  let doc_bufnr = bufnr('__doc__')
+  if doc_bufnr != -1
+    let doc_winnr = bufwinnr(doc_bufnr)
+    if doc_winnr != -1
+      exec printf('%dclose', doc_winnr)
+      return
     endif
-  endfor
-  call win_gotoid(winid)
-  call setpos('.', cur_pos)
+  endif
+
+  call feature#QuickfixDo('close')
 endfunc
