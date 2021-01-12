@@ -30,28 +30,27 @@ function! feature#PollNumber() "{{{ 行号相对行号间切换
 endfunction "}}}
 
 function! feature#GetLoclistWinNr() "{{{ 如果loclist已经打开，则返回其winnr，否则返回-1
-    return feature#GetQuickfixOrLoclistWinNr()[0]
+    let winid = getloclist(0, {'winid': 1}).winid
+    if winid == 0
+        return -1
+    endif
+    let nr = win_id2win(winid)
+    return nr
 endfunction "}}}
 
 function! feature#GetQuickfixWinNr() "{{{ 如果quickfix已经打开，则返回其winnr，否则返回-1
-    return feature#GetQuickfixOrLoclistWinNr()[1]
+    let winid = getqflist({'winid': 1}).winid
+    if winid == 0
+        return -1
+    endif
+    let nr = win_id2win(winid)
+    return nr
 endfunction "}}}
 
 function! feature#GetQuickfixOrLoclistWinNr() "{{{ 返回quickfix和loclist的winnr元组，[0]为loclist,[1]为quickfix
-    let wininfo = getwininfo()
-    " let result = {'quickfix':-1, 'loclist':-1}
-    let result = [-1, -1]
-    for info in wininfo
-        if info['quickfix'] == 1 && info['loclist'] == 1
-            " let result['loclist'] = info['winnr']
-            let result[0] = info['winnr']
-        endif
-        if info['quickfix'] == 1 && info['loclist'] == 0
-            " let result['quickfix'] = info['winnr']
-            let result[1] = info['winnr']
-        endif
-    endfor
-    return result
+    let locnr = feature#GetLoclistWinNr()
+    let qfnr = feature#GetQuickfixWinNr()
+    return [locnr, qfnr]
 endfunction "}}}
 
 function! feature#QuickfixOpen() "{{{ 打开quickfix或者loclist
