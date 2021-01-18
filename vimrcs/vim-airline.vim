@@ -5,7 +5,7 @@
 " command: AirlineTheme {theme-name} 切换主题
 "          AirlineToggleWhitespace 触发显示空格
 "          AirlineToggle 触发airline
-"          ArilineRefresh 刷新airline
+"          AirlineRefresh 刷新airline
 "
 " VIM Version: 7.4
 "  author: tenfyzhong
@@ -37,19 +37,11 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#disable_rtp_load = 0
 let g:airline_exclude_preview = 1
 let g:airline#extensions#whitespace#checks = [ 'indent', 'mixed-indent' ]
-" nmap <leader>1 <Plug>AirlineSelectTab1
-" nmap <leader>2 <Plug>AirlineSelectTab2
-" nmap <leader>3 <Plug>AirlineSelectTab3
-" nmap <leader>4 <Plug>AirlineSelectTab4
-" nmap <leader>5 <Plug>AirlineSelectTab5
-" nmap <leader>6 <Plug>AirlineSelectTab6
-" nmap <leader>7 <Plug>AirlineSelectTab7
-" nmap <leader>8 <Plug>AirlineSelectTab8
-" nmap <leader>9 <Plug>AirlineSelectTab9
 
 function! AfterAirlineInitSetting()
     call airline#parts#define_function('tablemode', 'TableModeStatusLine')
     let g:airline_section_warning .= airline#section#create_right(['tablemode'])
+    call airline#add_statusline_func('joplin#statusline#airline')
 endfunction
 
 augroup AirlineSetting
