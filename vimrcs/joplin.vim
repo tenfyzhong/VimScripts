@@ -9,8 +9,8 @@
 PluginAdd 'tenfyzhong/joplin.vim'
 
 let g:joplin_note_order_desc = 1
-let g:joplin_icon_open = '▼'
-let g:joplin_icon_close = '▶'
+let g:joplin_icon_open = '▾ '
+let g:joplin_icon_close = '▸ '
 let g:joplin_icon_completed = '[✓]'
 let g:joplin_number = 1
 let g:joplin_relativenumber = 1
