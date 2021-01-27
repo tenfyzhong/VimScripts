@@ -172,7 +172,6 @@ nnoremap <silent><leader>tc <Esc>:tabclose<cr>
 nnoremap <silent><leader>cf <Esc>:let @"=expand('%')<cr>
 nnoremap <silent><leader>cp <Esc>:let @"=expand('%:p')<cr>
 nnoremap <silent><m-,>      ,
-nnoremap <silent><leader>xx :call feature#toggle_xxd()<cr>
 nnoremap <silent><leader>et <Esc>:call feature#StrfimeWord()<cr>
 
 nnoremap <silent><Space>    <NOP>
@@ -206,12 +205,6 @@ if &diff
   nnoremap <silent>]4 :diffput 4<CR> :diffupdate<CR>
 endif
 
-if has('gui_running')
-  " gui下，调大调小字体
-  command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
-  command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
-endif
-
 " 普通模式是块光标
 " 插入模式竖线光标
 " 替换模式下横线光标
@@ -229,10 +222,18 @@ onoremap ag :<c-u>normal! ggVG<CR>
 " }}}
 
 " command {{{
+if has('gui_running')
+  " gui下，调大调小字体
+  command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
+  command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
+endif
+
 " 数字的参数是加载级别，默认是5
 " 数字越大，越后加载
 command! -nargs=+ -bar PluginAdd call loader#BundlePlugin(<args>)
 command! W w !sudo tee %
+
+command! -nargs=0 XXD call feature#toggle_xxd()
 " }}}
 
 " local.vim {{{
