@@ -13,3 +13,6 @@ let g:bullets_enabled_file_types = [
     \ 'text',
     \ 'gitcommit',
     \]
+
+let g:bullets_checkbox_markers = ' x'
+let g:bullets_renumber_on_change = 0
