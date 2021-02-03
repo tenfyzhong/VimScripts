@@ -1,17 +1,18 @@
-ab eles else
-ab contineu continue
-ab 1= !=
+iab eles else
+iab contineu continue
+iab 1= !=
 
 augroup ft_abbreviate
   au!
-  autocmd FileType python ab <buffer> true True
-  autocmd FileType python ab <buffer> false False
-  autocmd FileType python ab <buffer> none None
-  autocmd FileType python ab <buffer> __MAIN__ __main__
-  autocmd FileType python ab <buffer> __NAME__ __name__
+  autocmd FileType python iab <buffer> true True
+  autocmd FileType python iab <buffer> false False
+  autocmd FileType python iab <buffer> none None
+  autocmd FileType python iab <buffer> __MAIN__ __main__
+  autocmd FileType python iab <buffer> __NAME__ __name__
 
-  autocmd FileType proto ab <buffer> int int32
-  autocmd FileType proto ab <buffer> uint uint32
-  autocmd FileType proto ab <buffer> byte bytes
+  autocmd FileType proto iab <buffer> int int32
+  autocmd FileType proto iab <buffer> uint uint32
+  autocmd FileType proto iab <buffer> byte bytes
+  autocmd FileType proto iab <buffer> return returns
 
 augroup end
