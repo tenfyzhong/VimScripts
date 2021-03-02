@@ -9,7 +9,7 @@
 PluginAdd 'ianding1/leetcode.vim', {'do': 'pip3 install requests beautifulsoup4 --user'}
 
 let g:leetcode_china = 0
-let g:leetcode_browser = 'chrome'
+let g:leetcode_browser = 'firefox'
 let g:leetcode_hide_paid_only = 1
 let g:leetcode_hide_topics = 0
 let g:leetcode_hide_companies = 1
