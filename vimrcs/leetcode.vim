@@ -147,7 +147,6 @@ function! s:leetcode_cd() " {{{
 endfunction " }}}
 
 let s:head_content = [
-      \ '', 
       \ '#ifdef TEST', 
       \ '#define CATCH_CONFIG_MAIN', 
       \ '#include "catch.hpp"', 
