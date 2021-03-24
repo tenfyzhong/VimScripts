@@ -41,7 +41,9 @@ let g:airline#extensions#whitespace#checks = [ 'indent', 'mixed-indent' ]
 function! AfterAirlineInitSetting()
     call airline#parts#define_function('tablemode', 'TableModeStatusLine')
     let g:airline_section_warning .= airline#section#create_right(['tablemode'])
-    call airline#add_statusline_func('joplin#statusline#airline')
+    if exists('*joplin#statusline#airline')
+        call airline#add_statusline_func('joplin#statusline#airline')
+    endif
 endfunction
 
 augroup AirlineSetting
