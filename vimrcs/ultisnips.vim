@@ -22,7 +22,8 @@ PluginAdd 'SirVer/ultisnips', 1
 PluginAdd 'honza/vim-snippets'
 PluginAdd 'tenfyzhong/tsnippets.vim'
 
-let g:UltiSnipsEditSplit     = "horizontal"
-let g:UltiSnipsExpandTrigger = '<c-j>'
+let g:UltiSnipsEditSplit      = "horizontal"
+let g:UltiSnipsExpandTrigger  = '<c-j>'
+let g:UltiSnipsEnableSnipMate = 0
 
 let g:snips_author = 'tenfyzhong'
