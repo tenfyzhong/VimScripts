@@ -15,4 +15,6 @@ augroup ft_abbreviate
   autocmd FileType proto iab <buffer> byte bytes
   autocmd FileType proto iab <buffer> return returns
 
+  autocmd FileType go iab <buffer> ;= :=
+
 augroup end
