@@ -17,4 +17,10 @@ augroup ft_abbreviate
 
   autocmd FileType go iab <buffer> ;= :=
 
+  autocmd FileType lua iab <buffer> != ~=
+  autocmd FileType lua iab <buffer> 1= ~=
+
+  autocmd FileType nginx iab <buffer> != ~=
+  autocmd FileType nginx iab <buffer> 1= ~=
+
 augroup end
