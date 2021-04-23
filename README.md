@@ -324,8 +324,8 @@ o对应motion模式
 | `<tab>F`           | n     | easymotion         | 跨窗口的查找                            |
 | `<tab>L`           | n     | easymotion         | 跨窗口跳到某行                          |
 | `<tab>W`           | n     | easymotion         | 跨窗口跳到某个单词                      |
-| `<leader>p`        | n     | jsonpath           | 显示当前的节点位置                      |
-| `<leader>g`        | n     | jsonpath           | 跳到某个节点                            |
+| `<leader>rp`       | n     | jsonpath           | 显示当前的节点位置                      |
+| `<leader>rg`       | n     | jsonpath           | 跳到某个节点                            |
 | `<leader>gho`      | nv    | githubinator       | 在浏览器中打开                          |
 | `<leader>ghc`      | nv    | githubinator       | 复制链接                                |
 | `<leader>gm`       | n     | git-messenger      | 显示当前行的提交记录                    |
