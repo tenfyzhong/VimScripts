@@ -90,6 +90,6 @@ nnoremap <silent><leader>gc :Gcommit<cr>
 nnoremap <silent><leader>gb :Gblame<cr>
 nnoremap <silent><leader>gd :Gvdiff<cr>
 nnoremap <silent><leader>gl :silent Glog!<cr>
-nnoremap <silent><leader>gs :Gstatus<cr>
+nnoremap <silent><leader>gs :Git<cr>
 nnoremap <silent><leader>ghf :GBrowse<cr>
 
