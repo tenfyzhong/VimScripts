@@ -91,5 +91,5 @@ nnoremap <silent><leader>gb :Gblame<cr>
 nnoremap <silent><leader>gd :Gvdiff<cr>
 nnoremap <silent><leader>gl :silent Glog!<cr>
 nnoremap <silent><leader>gs :Gstatus<cr>
-nnoremap <silent><leader>ghf :Gbrowse<cr>
+nnoremap <silent><leader>ghf :GBrowse<cr>
 
