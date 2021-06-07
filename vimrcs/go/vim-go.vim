@@ -106,7 +106,7 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_fail_silently           = 1
 let g:go_get_update                  = 0
 let g:go_fmt_autosave                = 0
-let g:go_info_mode                   = 'guru'
+" let g:go_info_mode                   = 'guru'
 let g:go_echo_go_info                = 0
 let g:go_doc_popup_window            = 1
 
