@@ -100,3 +100,9 @@ let g:axring_rings_nginx = [
       \   ["debug", "info", "notice", "warn", "error", "crit", "alert", "emerg"],
       \   ["ip_hash", "fair", "url_hash", "least_conn", "hash"],
       \ ]
+
+let g:axring_rings_thrift = [
+      \   ["i16", "i32", "i64"],
+      \   ["required", "optional"],
+      \ ]
+
