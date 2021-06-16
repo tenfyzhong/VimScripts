@@ -43,7 +43,7 @@
 "          GoCallstack 显示调用栈
 "          GoFreevars 抽离出自由变量
 "          GoChannelPeers 显示可能的发送接收channel
-"          GoReferers 查询引用
+"          GoReferrers 查询引用
 "          GoSameIds 高亮相同的identifiers
 "          GoSameIdsClear 去除identifiers的高亮
 "          GoSameIdsToggle 在GoSameIds和GoSameIdsClear中切换
@@ -90,8 +90,9 @@
 "          <leader>as go-alternate-split
 "          <leader>av go-alternate-vertical
 "          <leader>rh YCMHover
+"          <c-[> GoReferrers
 "          <C-]> GoDef
-"          <c-t> GoDefPop
+"          <C-t> GoDefPop
 " VIM Version: 7.4
 "  author: tenfyzhong
 "   email: tenfy@tenfy.cn
@@ -141,6 +142,7 @@ augroup go_filetype_local
     autocmd FileType go nmap <buffer><leader>as <Plug>(go-alternate-split)
     autocmd FileType go nmap <buffer><leader>av <Plug>(go-alternate-vertical)
     autocmd FileType go nmap <buffer><leader>rh <Plug>(YCMHover)
+    autocmd FileType go nnoremap <buffer><c-[> :GoReferrers<cr>
 
     autocmd FileType go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
     autocmd FileType go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
