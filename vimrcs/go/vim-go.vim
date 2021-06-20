@@ -90,7 +90,7 @@
 "          <leader>as go-alternate-split
 "          <leader>av go-alternate-vertical
 "          <leader>rh YCMHover
-"          <c-[> GoReferrers
+"          <c-q> GoReferrers
 "          <C-]> GoDef
 "          <C-t> GoDefPop
 " VIM Version: 7.4
@@ -142,7 +142,7 @@ augroup go_filetype_local
     autocmd FileType go nmap <buffer><leader>as <Plug>(go-alternate-split)
     autocmd FileType go nmap <buffer><leader>av <Plug>(go-alternate-vertical)
     autocmd FileType go nmap <buffer><leader>rh <Plug>(YCMHover)
-    autocmd FileType go nnoremap <buffer><c-[> :GoReferrers<cr>
+    autocmd FileType go nnoremap <buffer><c-q> :GoReferrers<cr>
 
     autocmd FileType go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
     autocmd FileType go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
