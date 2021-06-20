@@ -23,4 +23,8 @@ augroup ft_abbreviate
   autocmd FileType nginx iab <buffer> != ~=
   autocmd FileType nginx iab <buffer> 1= ~=
 
+  autocmd FileType thrift iab <buffer> int16 i16
+  autocmd FileType thrift iab <buffer> int32 i32
+  autocmd FileType thrift iab <buffer> int64 i64
+
 augroup end
