@@ -141,7 +141,6 @@ augroup go_filetype_local
     autocmd FileType go nmap <buffer><leader>aa <Plug>(go-alternate-edit)
     autocmd FileType go nmap <buffer><leader>as <Plug>(go-alternate-split)
     autocmd FileType go nmap <buffer><leader>av <Plug>(go-alternate-vertical)
-    autocmd FileType go nmap <buffer><leader>rh <Plug>(YCMHover)
     autocmd FileType go nnoremap <buffer><c-q> :GoReferrers<cr>
 
     autocmd FileType go command! -bang A call go#alternate#Switch(<bang>0, 'edit')

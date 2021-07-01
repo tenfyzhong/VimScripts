@@ -77,3 +77,6 @@ let g:ycm_semantic_triggers =  {
       \   'erlang':     ['re![a-zA-Z_1-9]{2,}', ':'],
       \ }
 let g:ycm_show_diagnostics_ui = 0
+
+nmap <leader>rh <Plug>(YCMHover)
+
