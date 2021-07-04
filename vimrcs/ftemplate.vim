@@ -11,4 +11,3 @@
 "==============================================================
 PluginAdd 'tenfyzhong/ftemplate.vim', 9
 
-let g:ftemplate_local_templates = '~/.vim/resource/ftemplate'
