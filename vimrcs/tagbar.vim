@@ -24,6 +24,7 @@ PluginAdd 'tenfyzhong/tagbar-markdown.vim'
 PluginAdd 'tenfyzhong/tagbar-proto.vim'
 PluginAdd 'tenfyzhong/tagbar-makefile.vim'
 PluginAdd 'tenfyzhong/tagbar-rust.vim'
+PluginAdd 'tenfyzhong/tagbar-thrift.vim'
 
 " 比taglist更现代的代码结构浏览工具
 function! TagbarStatusFunc(current, sort, fname, ...) abort
