@@ -26,6 +26,11 @@
 "==============================================================
 
 "==============================================================
+"    file: thrift.vim
+"   brief: 
+"==============================================================
+
+"==============================================================
 "    file: vim-swap.vim
 "   brief: 交换items
 "
@@ -217,7 +222,7 @@
 "          GoCallstack 显示调用栈
 "          GoFreevars 抽离出自由变量
 "          GoChannelPeers 显示可能的发送接收channel
-"          GoReferers 查询引用
+"          GoReferrers 查询引用
 "          GoSameIds 高亮相同的identifiers
 "          GoSameIdsClear 去除identifiers的高亮
 "          GoSameIdsToggle 在GoSameIds和GoSameIdsClear中切换
@@ -263,8 +268,10 @@
 "          <leader>aa go-alternate-edit
 "          <leader>as go-alternate-split
 "          <leader>av go-alternate-vertical
+"          <leader>rh YCMHover
+"          <c-q> GoReferrers
 "          <C-]> GoDef
-"          <c-t> GoDefPop
+"          <C-t> GoDefPop
 "==============================================================
 
 "==============================================================
@@ -329,6 +336,11 @@
 "    nmap:
 "       <leader>rp 打开预览
 "       <leader>rs 停止预览
+"==============================================================
+
+"==============================================================
+"    file: xterm-color-table.vim
+"   brief: 
 "==============================================================
 
 "==============================================================
@@ -868,11 +880,10 @@
 "
 "    nmap: <leader>m 高亮或者取消高亮
 "          <tab>m 清除所有的高亮
-"          <tab>n 在高亮处理则取消高亮，否则关闭或者开启高亮
 "          <tab>r 输入正则表达式来进行高亮或者取消高亮
-"          <tab>* 跳到当前高亮字符串的下一个高亮处,并记为"last mark",
+"          <tab>n 跳到当前高亮字符串的下一个高亮处,并记为"last mark",
 "                 不在高亮字符串的时候跳到下一个"last mark"处
-"          <tab># 跳到当前高亮字符串的上一个高亮处,并记为"last mark",
+"          <tab>N 跳到当前高亮字符串的上一个高亮处,并记为"last mark",
 "                 不在高亮字符串的时候跳到上一个"last mark"处
 "          <tab>/ 跳到下一个任意的高亮处
 "          <tab>? 跳到上一个任意的高亮处
@@ -979,7 +990,8 @@
 "           <leader>fs :FZFSnippets
 "           <leader>fc :FZFCommands
 "           <leader>/ :FZFHistory/
-"           <leader>fu :CtrlPFunky
+"           <leader>fu :FzfFunky
+"           <leader>fz :FZFFzm
 "           <leader><leader> nmap模式的map
 "    omap:  <leader><leader> omap模式的map
 "    xmap:  <leader><leader> xmap模式的map
