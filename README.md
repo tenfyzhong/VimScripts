@@ -196,10 +196,9 @@ o对应motion模式
 | `<leader>ut`       | n     | undotree           | UndotreeToggle                          |
 | `ga`               | nx    | vim-easy-align     | 开启对齐                                |
 | `<tab>m`           | n     | Mark               | 清除所有的mark                          |
-| `<tab>n`           | n     | Mark               | 如果在高亮处，则取消高亮，否则触发高亮  |
 | `<tab>r`           | nv    | Mark               | 根据正则进行高亮                        |
-| `<tab>*`           | n     | Mark               | 跳到当前高亮的下一个高亮处或last mark处 |
-| `<tab>#`           | n     | Mark               | 跳到当前高亮的上一个高亮处或last mark处 |
+| `<tab>n`           | n     | Mark               | 跳到当前高亮的下一个高亮处或last mark处 |
+| `<tab>N`           | n     | Mark               | 跳到当前高亮的上一个高亮处或last mark处 |
 | `<tab>/`           | n     | Mark               | 跳到下一个任意的高亮处                  |
 | `<tab>?`           | n     | Mark               | 跳到上一个任意的高亮处                  |
 | `Mm`               | n     | vim-bookmarks      | toggle一个bookmark                      |
