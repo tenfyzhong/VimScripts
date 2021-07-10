@@ -44,6 +44,7 @@
 "           <leader>/ :FZFHistory/
 "           <leader>fu :FzfFunky
 "           <leader>fz :FZFFzm
+"           <leader>fM :FZFBookmarks
 "           <leader><leader> nmap模式的map
 "    omap:  <leader><leader> omap模式的map
 "    xmap:  <leader><leader> xmap模式的map
