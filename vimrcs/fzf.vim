@@ -64,6 +64,7 @@ endif
 PluginAdd 'junegunn/fzf.vim'
 PluginAdd 'tracyone/fzf-funky'
 PluginAdd 'tenfyzhong/fzf-marks.vim'
+PluginAdd 'tenfyzhong/fzf-bookmarks.vim'
 let g:fzf_command_prefix = 'FZF'
 let g:fzf_history_dir = '~/.fzf-history'
 
@@ -82,6 +83,7 @@ nnoremap <leader>fc :FZFCommands<cr>
 nnoremap <leader>/ :FZFHistory/<cr>
 nnoremap <Leader>fu :FzfFunky<Cr>
 nnoremap <leader>fz :FZFFzm<cr>
+nnoremap <leader>fM :FZFBookmarks<cr>
 
 nmap <leader><leader> <plug>(fzf-maps-n)
 omap <leader><leader> <plug>(fzf-maps-o)

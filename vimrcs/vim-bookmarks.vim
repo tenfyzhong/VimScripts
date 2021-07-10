@@ -35,6 +35,7 @@ let g:bookmark_annotation_sign = "$"
 let g:bookmark_no_default_key_mappings = 1
 let g:bookmark_save_per_working_dir = 1
 let g:bookmark_auto_save = 1
+let g:bookmark_disable_ctrlp = 1
 
 " Finds the Git super-project directory.
 function! g:BMWorkDirFileLocation()
@@ -50,19 +51,12 @@ function! g:BMWorkDirFileLocation()
 endfunction
 
 
-if exists("g:vim_bookmarks_init")
-    finish
-endif
-
-nnoremap <silent>Mm :BookmarkToggle<CR>
-nnoremap <silent>Ma :BookmarkAnnotate<CR>
-nnoremap <silent>Ms :BookmarkShowAll<CR>
-nnoremap <silent>Mn :BookmarkNext<CR>
-nnoremap <silent>Mp :BookmarkPrev<CR>
-nnoremap <silent>Mc :BookmarkClear<CR>
-nnoremap <silent>Mx :BookmarkClearAll<CR>
-nnoremap <silent>Mu :BookmarkMoveUp<CR>
-nnoremap <silent>Md :BookmarkMoveDown<CR>
-
-let g:vim_bookmarks_init = 1
-
+nmap <silent>Mm <Plug>BookmarkToggle
+nmap <silent>Ma <Plug>BookmarkAnnotate
+nmap <silent>Ms <Plug>BookmarkShowAll
+nmap <silent>Mn <Plug>BookmarkNext
+nmap <silent>Mp <Plug>BookmarkPrev
+nmap <silent>Mc <Plug>BookmarkClear
+nmap <silent>Mx <Plug>BookmarkClearAll
+nmap <silent>Mu <Plug>BookmarkMoveUp
+nmap <silent>Md <Plug>BookmarkMoveDown
