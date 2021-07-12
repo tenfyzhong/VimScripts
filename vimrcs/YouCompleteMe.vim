@@ -39,7 +39,7 @@ augroup load_ycm_local
     autocmd BufWritePre *.go silent YcmCompleter Format 
 augroup END
 
-let g:ycm_disable_signature_help                    = 1
+let g:ycm_disable_signature_help                    = 0
 let g:ycm_min_num_of_chars_for_completion 			= 1
 let g:ycm_add_preview_to_completeopt 				= 0
 let g:ycm_autoclose_preview_window_after_insertion 	= 1
