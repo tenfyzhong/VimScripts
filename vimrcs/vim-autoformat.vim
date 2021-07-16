@@ -15,9 +15,7 @@ PluginAdd 'Chiel92/vim-autoformat', {'do': 'pip install yapf sqlparse'}
 let g:formatdef_my_custom_cpp = '"clang-format -style=file"'
 let g:formatters_cpp = ['my_custom_cpp']
 let g:formatters_python = ['yapf']
-" let g:formatdef_golines = '"golines -m 120"'
 let g:formatdef_gofmt_2 = '"gofmt -s"'
-" let g:formatters_go = ['goimports']
 let g:formatters_go_auto = ['goimports2', 'gofmt_2']
 let g:formatters_go = ['goimports', 'gofmt_2']
 let g:run_all_formatters_go = 1
