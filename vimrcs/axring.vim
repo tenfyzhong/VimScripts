@@ -106,3 +106,6 @@ let g:axring_rings_thrift = [
       \   ["required", "optional"],
       \ ]
 
+let g:axring_rings_proto = [
+      \ ["int32", "int64"]
+      \ ]
