@@ -75,3 +75,8 @@ let g:ycm_show_diagnostics_ui = 0
 
 nmap <leader>rh <Plug>(YCMHover)
 
+
+augroup load_ycm_local
+    autocmd!
+    autocmd BufWritePre *.go silent YcmCompleter Format 
+augroup END

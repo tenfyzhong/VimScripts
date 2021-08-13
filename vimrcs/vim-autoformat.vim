@@ -16,15 +16,12 @@ let g:formatdef_my_custom_cpp = '"clang-format -style=file"'
 let g:formatters_cpp = ['my_custom_cpp']
 let g:formatters_python = ['yapf']
 let g:formatdef_gofmt_2 = '"gofmt -s"'
-let g:formatters_go_auto = ['goimports2', 'gofmt_2']
-let g:formatters_go = ['goimports', 'gofmt_2']
 let g:run_all_formatters_go = 1
 
 
 augroup autoformat_setting
     au!
     autocmd BufWritePre *.py,*.json,*.css,*.xml,*.pl,*.sql silent Autoformat
-    autocmd BufWritePre *.go silent Autoformat go_auto
     autocmd FileType python let b:autoformat_autoindent = 0
     autocmd FileType python let b:autoformat_retab = 0
 augroup END
