@@ -29,5 +29,5 @@ augroup ft_abbreviate
   autocmd FileType thrift iab <buffer> int16 i16
   autocmd FileType thrift iab <buffer> int32 i32
   autocmd FileType thrift iab <buffer> int64 i64
-
+  autocmd FileType thrift iab <buffer> import include
 augroup end
