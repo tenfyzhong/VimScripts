@@ -136,7 +136,7 @@ augroup go_filetype_local
     autocmd FileType go nnoremap <buffer><leader>rb :<c-u>call <SID>build_go_files()<cr>
     autocmd FileType go nmap <buffer><leader>rtt <Plug>(go-test)
     autocmd FileType go nmap <buffer><leader>rtf <Plug>(go-test-func)
-    autocmd FileType go nmap <buffer><leader>rc <Plug>(go-coverage-toggle)
+    autocmd FileType go nmap <silent><buffer><leader>rc :GoCoverageToggle! -gcflags=all=-l<cr>
     autocmd FileType go nnoremap <buffer><leader>ri :GoImport 
     autocmd FileType go nnoremap <buffer><leader>rf :GoIfErr<cr>
     autocmd FileType go nnoremap <buffer><leader>ra :GoImportAs 
