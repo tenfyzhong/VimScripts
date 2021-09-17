@@ -161,7 +161,7 @@ cnoremap <c-j>              <Down>
 nnoremap ;                  :
 xnoremap ;                  :
 nnoremap ,                  ;
-nnoremap <leader>w          :redraw!<cr>:<c-u>wa<CR>
+nnoremap <silent><leader>w  :<c-u>wa<cr>:redraw!<cr>:echo ":wa"<cr>
 nnoremap <silent>do         :diffget<cr>:diffupdate<cr>
 nnoremap <silent>dp         :diffput<cr>:diffupdate<cr>
 nnoremap <silent><leader>nn :call feature#PollNumber()<cr>
