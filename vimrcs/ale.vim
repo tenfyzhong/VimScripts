@@ -31,6 +31,7 @@ let g:ale_cpp_gcc_options = '-std=c++11 -Wall'
 let g:ale_c_gcc_options = '-I. -I.. -I./include -I../include -Wall'
 let g:ale_go_golangci_lint_package = 1
 let g:ale_go_golangci_lint_options = '-c ~/.golangci.yml'
+let g:ale_thrift_thrift_generators = ['go']
 
 let g:ale_linters = {
             \ 'go': ['golangci-lint'],
