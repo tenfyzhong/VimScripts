@@ -35,7 +35,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-06-30 14:18:42
 "==============================================================
-PluginAdd 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode'
 
 let g:table_mode_corner='|'
 

@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 19:28:49
 "==============================================================
-PluginAdd 'digitaltoad/vim-jade'
+Plug 'digitaltoad/vim-jade'

@@ -15,7 +15,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2020-06-10 13:13:30
 "==============================================================
-PluginAdd 'dhruvasagar/vim-open-url'
+Plug 'dhruvasagar/vim-open-url'
 
 let g:open_url_default_mappings = 0
 
@@ -32,7 +32,7 @@ function! s:open_url() abort
   let ft=&ft
   if ft ==# 'vim'
     let line = getline(line('.'))
-    let match = matchlist(line, "PluginAdd '\\(.*\\)'")
+    let match = matchlist(line, "Plug '\\(.*\\)'")
     if len(match) >= 2
       let url = match[1]
       if url !~? 'https\?:\/\/'

@@ -10,7 +10,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 22:11:56
 "==============================================================
-PluginAdd 'magic-dot-files/TagHighlight'
+Plug 'magic-dot-files/TagHighlight'
 
 if !exists("g:TagHighlightSettings")
     let g:TagHighlightSettings = {}

@@ -18,9 +18,9 @@ if !has('python') && !has('python3')
     finish
 endif
 
-PluginAdd 'SirVer/ultisnips', 1
-PluginAdd 'honza/vim-snippets'
-PluginAdd 'tenfyzhong/tsnippets.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tenfyzhong/tsnippets.vim'
 
 let g:UltiSnipsEditSplit      = "horizontal"
 let g:UltiSnipsExpandTrigger  = '<c-j>'

@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-07-02 09:44:31
 "==============================================================
-PluginAdd 'mgedmin/coverage-highlight.vim'
+Plug 'mgedmin/coverage-highlight.vim'

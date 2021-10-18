@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-09-03 19:44:29
 "==============================================================
-PluginAdd 'wavded/vim-stylus'
+Plug 'wavded/vim-stylus'

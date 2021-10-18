@@ -26,6 +26,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-13 13:37:23
 "==============================================================
-PluginAdd 'tenfyzhong/ag.vim'
+Plug 'tenfyzhong/ag.vim'
 
 let g:ag_highlight = 1

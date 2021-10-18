@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2020-04-01 16:31:20
 "==============================================================
-PluginAdd 'chr4/nginx.vim'
+Plug 'chr4/nginx.vim'

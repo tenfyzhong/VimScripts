@@ -26,7 +26,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 17:36:59
 "==============================================================
-PluginAdd 'c.vim'
+Plug 'c.vim'
 
 " 帮助: help csupport
 let g:C_GuiSnippetBrowser 	= 'commandline'

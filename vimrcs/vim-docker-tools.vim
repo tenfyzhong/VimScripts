@@ -6,6 +6,6 @@
 "   email: zhongtenghui@gf.com.cn
 " created: 2019-06-11 13:39:39
 "==============================================================
-PluginAdd 'kkvh/vim-docker-tools'
+Plug 'kkvh/vim-docker-tools'
 
 let g:dockertools_default_all = 0

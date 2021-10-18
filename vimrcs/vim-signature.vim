@@ -39,4 +39,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 11:32:02
 "==============================================================
-PluginAdd 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'

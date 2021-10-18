@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 19:17:14
 "==============================================================
-PluginAdd 'skammer/vim-css-color'
+Plug 'skammer/vim-css-color'

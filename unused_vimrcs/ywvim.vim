@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-07-12 13:21:24
 "==============================================================
-PluginAdd 'tenfyzhong/ywvim'
+Plug 'tenfyzhong/ywvim'
 
 let g:ywvim_ims=[ 
             \['wb', '五笔', 'wubi.ywvim'], 

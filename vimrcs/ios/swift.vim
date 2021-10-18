@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-03-04 21:27:40
 "==============================================================
-PluginAdd 'keith/swift.vim', {'for': 'swift'}
+Plug 'keith/swift.vim', {'for': 'swift'}

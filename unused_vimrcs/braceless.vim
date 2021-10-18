@@ -7,7 +7,7 @@
 " created: 2016-06-19 14:55:45
 "==============================================================
 finish
-PluginAdd 'tweekmonster/braceless.vim'
+Plug 'tweekmonster/braceless.vim'
 
 highlight BracelessIndent ctermfg=NONE ctermbg=Black guibg=Grey90 
 

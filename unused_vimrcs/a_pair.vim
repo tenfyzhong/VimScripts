@@ -1,1 +1,1 @@
-PluginAdd 'tenfyzhong/a_pair'
+Plug 'tenfyzhong/a_pair'

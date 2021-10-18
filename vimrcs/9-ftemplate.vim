@@ -9,5 +9,5 @@
 "   email: tenfy@tenfy.cn
 " created: 2020-12-30 10:58:55
 "==============================================================
-PluginAdd 'tenfyzhong/ftemplate.vim', 9
+Plug 'tenfyzhong/ftemplate.vim'
 

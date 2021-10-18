@@ -6,5 +6,5 @@
 "   email: tenfy@tenfy.cn
 " created: 2021-09-08 13:59:39
 "==============================================================
-PluginAdd 'luochen1990/rainbow'
+Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 

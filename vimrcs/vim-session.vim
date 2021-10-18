@@ -17,7 +17,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 11:10:03
 "==============================================================
-PluginAdd 'xolox/vim-session'
+Plug 'xolox/vim-session'
 
 let g:session_default_overwrite = 0
 let g:session_autosave          = 'yes'

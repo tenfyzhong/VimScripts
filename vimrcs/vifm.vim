@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2020-09-22 16:46:05
 "==============================================================
-PluginAdd 'vifm/vifm.vim'
+Plug 'vifm/vifm.vim'

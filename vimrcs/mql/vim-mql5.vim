@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-07-08 18:10:44
 "==============================================================
-PluginAdd 'rupurt/vim-mql5'
+Plug 'rupurt/vim-mql5'

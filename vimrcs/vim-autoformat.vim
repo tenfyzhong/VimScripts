@@ -10,7 +10,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 17:33:22
 "==============================================================
-PluginAdd 'Chiel92/vim-autoformat', {'do': 'pip install yapf sqlparse'}
+Plug 'Chiel92/vim-autoformat', {'do': 'pip install yapf sqlparse'}
 
 let g:formatdef_my_custom_cpp = '"clang-format -style=file"'
 let g:formatters_cpp = ['my_custom_cpp']

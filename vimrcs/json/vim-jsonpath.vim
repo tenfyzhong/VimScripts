@@ -12,7 +12,7 @@
 "   email: zhongtenghui@gf.com.cn
 " created: 2018-11-28 13:50:44
 "==============================================================
-PluginAdd 'mogelbrod/vim-jsonpath'
+Plug 'mogelbrod/vim-jsonpath'
 
 augroup jsonpath_init
   au!

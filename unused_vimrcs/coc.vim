@@ -7,7 +7,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-03-16 11:15:28
 "==============================================================
-PluginAdd 'neoclide/coc.nvim', {'do': 'yarn install'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 inoremap <expr> ( pumvisible() ? "\<C-y>" : "("

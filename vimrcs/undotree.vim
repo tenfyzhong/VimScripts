@@ -8,7 +8,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-08-16 10:05:32
 "==============================================================
-PluginAdd 'mbbill/undotree'
+Plug 'mbbill/undotree'
 
 nnoremap <leader>ut :UndotreeToggle<cr>
 

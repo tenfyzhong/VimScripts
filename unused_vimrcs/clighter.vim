@@ -1,1 +1,1 @@
-PluginAdd 'bbchung/clighter'
+Plug 'bbchung/clighter'

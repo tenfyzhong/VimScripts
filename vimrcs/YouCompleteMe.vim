@@ -31,8 +31,8 @@ if has('nvim')
     finish
 endif
 
-PluginAdd 'ycm-core/YouCompleteMe', {'frozen': 1, 'do': 'git submodule update --init --recursive && ./install.py --all'}
-PluginAdd 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': ['c', 'cpp'] }
+Plug 'ycm-core/YouCompleteMe', {'frozen': 1, 'do': 'git submodule update --init --recursive && ./install.py --all'}
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': ['c', 'cpp'] }
 
 let g:ycm_disable_signature_help                    = 0
 let g:ycm_min_num_of_chars_for_completion 			= 1

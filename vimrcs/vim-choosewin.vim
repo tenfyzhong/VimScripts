@@ -28,6 +28,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-08-31 21:47:11
 "==============================================================
-PluginAdd 't9md/vim-choosewin'
+Plug 't9md/vim-choosewin'
 
 nmap <leader>sw <Plug>(choosewin)

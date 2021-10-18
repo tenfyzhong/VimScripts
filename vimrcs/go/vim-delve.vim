@@ -22,5 +22,5 @@
 " created: 2017-07-24 09:03:29
 "==============================================================
 if has('nvim')
-    PluginAdd 'sebdah/vim-delve'
+    Plug 'sebdah/vim-delve'
 endif

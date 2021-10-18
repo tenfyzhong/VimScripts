@@ -25,7 +25,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 19:05:58
 "==============================================================
-PluginAdd 'vim-scripts/Mark--Karkat'
+Plug 'vim-scripts/Mark--Karkat'
 
 let g:mwAutoLoadMarks = 1
 let g:mwAutoSaveMarks = 1

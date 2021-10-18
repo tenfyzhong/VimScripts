@@ -17,7 +17,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-04-10 10:30:01
 "==============================================================
-PluginAdd 'mhinz/vim-grepper'
+Plug 'mhinz/vim-grepper'
 
 let g:grepper = {
       \ "highlight": 1,

@@ -11,6 +11,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-08-13 22:04:02
 "==============================================================
-PluginAdd 'metakirby5/codi.vim'
+Plug 'metakirby5/codi.vim'
 
 let g:codi#rightalign = 0

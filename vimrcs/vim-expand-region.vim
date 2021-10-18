@@ -10,4 +10,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 23:02:18
 "==============================================================
-PluginAdd 'terryma/vim-expand-region'
+Plug 'terryma/vim-expand-region'

@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-07-03 22:38:11
 "==============================================================
-PluginAdd 'rhysd/committia.vim'
+Plug 'rhysd/committia.vim'
 
 
 " You can get the information about the windows with first argument as a dictionary.

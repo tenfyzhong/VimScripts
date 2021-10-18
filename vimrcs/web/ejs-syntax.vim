@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-09-03 19:44:50
 "==============================================================
-PluginAdd 'nikvdp/ejs-syntax'
+Plug 'nikvdp/ejs-syntax'

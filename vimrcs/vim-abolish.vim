@@ -23,4 +23,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 16:44:39
 "==============================================================
-PluginAdd 'tpope/vim-abolish'
+Plug 'tpope/vim-abolish'

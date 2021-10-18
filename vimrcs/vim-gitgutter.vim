@@ -31,7 +31,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 14:56:52
 "==============================================================
-PluginAdd 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 if system#IsUnixInMswin()
     let g:gitgutter_sign_removed_first_line = '*'

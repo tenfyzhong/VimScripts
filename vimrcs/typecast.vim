@@ -11,4 +11,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-09-26 15:10:10
 "==============================================================
-PluginAdd 'tenfyzhong/typecast.vim', {'frozen': 1}
+Plug 'tenfyzhong/typecast.vim', {'frozen': 1}

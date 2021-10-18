@@ -8,7 +8,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 13:34:27
 "==============================================================
-PluginAdd 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch.vim'
 
 if exists("g:incsearch_vim_init")
     finish

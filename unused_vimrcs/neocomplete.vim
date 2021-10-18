@@ -22,8 +22,8 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-08-15 00:01:39
 "==============================================================
-PluginAdd 'Shougo/neocomplete.vim'
-PluginAdd 'Shougo/neopairs.vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neopairs.vim'
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0

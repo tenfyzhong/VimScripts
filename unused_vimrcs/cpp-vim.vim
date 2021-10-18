@@ -10,5 +10,5 @@ if g:MSWIN
     finish
 endif
 
-PluginAdd 'vim-jp/cpp-vim'
+Plug 'vim-jp/cpp-vim'
 

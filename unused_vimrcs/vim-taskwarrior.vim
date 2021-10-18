@@ -38,6 +38,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-07-15 23:20:31
 "==============================================================
-PluginAdd 'blindFS/vim-taskwarrior'
+Plug 'blindFS/vim-taskwarrior'
 
 let g:task_default_prompt = ['due', 'project', 'description', 'tag']

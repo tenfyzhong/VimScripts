@@ -12,4 +12,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 23:11:50
 "==============================================================
-PluginAdd 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'

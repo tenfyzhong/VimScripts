@@ -17,6 +17,6 @@ if !has('mac')
     finish
 endif
 
-PluginAdd 'rizzatti/dash.vim'
+Plug 'rizzatti/dash.vim'
 
 nmap <silent><leader>ds <Plug>DashSearch

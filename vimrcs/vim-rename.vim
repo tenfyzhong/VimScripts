@@ -8,4 +8,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 20:38:51
 "==============================================================
-PluginAdd 'artnez/vim-rename'
+Plug 'artnez/vim-rename'

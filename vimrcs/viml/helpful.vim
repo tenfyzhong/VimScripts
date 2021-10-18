@@ -8,4 +8,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-23 22:37:59
 "==============================================================
-PluginAdd 'tweekmonster/helpful.vim', {'for': 'vim'}
+Plug 'tweekmonster/helpful.vim', {'for': 'vim'}

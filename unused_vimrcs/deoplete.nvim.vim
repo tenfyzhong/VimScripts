@@ -9,6 +9,6 @@
 if !has('nvim')
     finish
 endif
-PluginAdd 'Shougo/deoplete.nvim'
-PluginAdd 'zchee/deoplete-jedi'
+Plug 'Shougo/deoplete.nvim'
+Plug 'zchee/deoplete-jedi'
 let g:deoplete#enable_at_startup = 1

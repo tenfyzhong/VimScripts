@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-07 20:26:40
 "==============================================================
-PluginAdd 'tenfyzhong/CompleteParameter.vim', {'frozen': 1}
+Plug 'tenfyzhong/CompleteParameter.vim', {'frozen': 1}
 
 let g:complete_parameter_log_level = 4
 let g:complete_parameter_use_ultisnips_mappings = 1

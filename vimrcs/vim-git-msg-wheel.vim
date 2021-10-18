@@ -8,4 +8,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-12-15 23:00:57
 "==============================================================
-PluginAdd 'johngrib/vim-git-msg-wheel'
+Plug 'johngrib/vim-git-msg-wheel'

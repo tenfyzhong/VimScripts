@@ -10,7 +10,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-06-13 11:15:22
 "==============================================================
-PluginAdd 'rickhowe/diffchar.vim'
+Plug 'rickhowe/diffchar.vim'
 let g:DiffPairVisible = 0
 
 nmap  <leader>dg <Plug>GetDiffCharPair

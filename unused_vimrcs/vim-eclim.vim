@@ -10,5 +10,5 @@ if !executable('eclimd')
     finish
 endif
 
-PluginAdd 'starcraftman/vim-eclim'
+Plug 'starcraftman/vim-eclim'
 

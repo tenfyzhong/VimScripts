@@ -30,7 +30,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-05-07 13:01:42
 "==============================================================
-PluginAdd 'cohama/agit.vim'
+Plug 'cohama/agit.vim'
 
 augroup agit_init
   au!

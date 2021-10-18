@@ -12,8 +12,8 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 17:04:40
 "==============================================================
-PluginAdd 'vim-airline/vim-airline'
-PluginAdd 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#branch#enabled = 1

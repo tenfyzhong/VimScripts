@@ -36,7 +36,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-13 19:34:15
 "==============================================================
-PluginAdd 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 
 map <tab> <Plug>(easymotion-prefix)
 

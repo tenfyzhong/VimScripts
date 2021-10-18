@@ -10,7 +10,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-07-31 23:21:56
 "==============================================================
-PluginAdd 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 let g:AutoPairsShortcutToggle = '\ap'
 let g:AutoPairsShortcutFastWrap = '\ae'

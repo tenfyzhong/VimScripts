@@ -10,4 +10,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-11-28 21:48:26
 "==============================================================
-PluginAdd 'godoctor/godoctor.vim', {'do': ':GoDoctorInstall'}
+Plug 'godoctor/godoctor.vim', {'do': ':GoDoctorInstall'}

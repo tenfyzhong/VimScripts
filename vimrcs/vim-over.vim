@@ -10,4 +10,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 14:15:32
 "==============================================================
-PluginAdd 'osyo-manga/vim-over'
+Plug 'osyo-manga/vim-over'

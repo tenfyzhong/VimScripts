@@ -11,7 +11,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-04-21 09:36:42
 "==============================================================
-PluginAdd 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 let g:tmux_navigator_no_mappings = 1
 

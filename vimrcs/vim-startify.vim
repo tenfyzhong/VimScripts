@@ -12,7 +12,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 11:57:01
 "==============================================================
-PluginAdd 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 
 let g:startify_session_dir = g:VIMHOME . '.startify_session'
 let g:startify_enable_special = 0

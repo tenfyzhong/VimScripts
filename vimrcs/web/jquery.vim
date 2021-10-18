@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 14:09:13
 "==============================================================
-PluginAdd 'nono/jquery.vim', {'for': 'javascript'}
+Plug 'nono/jquery.vim', {'for': 'javascript'}
 
 augroup JQUERY
     autocmd!

@@ -16,4 +16,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-05-09 09:04:36
 "==============================================================
-PluginAdd 'konfekt/vim-select-replace'
+Plug 'konfekt/vim-select-replace'

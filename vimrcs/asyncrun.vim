@@ -9,7 +9,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-02-09 12:57:16
 "==============================================================
-PluginAdd 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asyncrun.vim'
 
 augroup asyncrun_user_init
     autocmd!

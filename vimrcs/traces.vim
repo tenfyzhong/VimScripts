@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-12-15 22:59:30
 "==============================================================
-PluginAdd 'markonm/traces.vim'
+Plug 'markonm/traces.vim'

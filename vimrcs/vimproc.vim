@@ -10,4 +10,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 10:57:31
 "==============================================================
-PluginAdd 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}

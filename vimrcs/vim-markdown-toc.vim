@@ -12,4 +12,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-02-23 19:18:22
 "==============================================================
-PluginAdd 'mzlogin/vim-markdown-toc'
+Plug 'mzlogin/vim-markdown-toc'

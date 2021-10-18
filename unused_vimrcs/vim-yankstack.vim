@@ -16,7 +16,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-04-04 17:35:55
 "==============================================================
-PluginAdd 'tenfyzhong/vim-yankstack'
+Plug 'tenfyzhong/vim-yankstack'
 
 let g:yankstack_map_keys = 0
 nmap <m-p> <Plug>yankstack_substitute_older_paste

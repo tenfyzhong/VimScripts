@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-02-10 19:41:34
 "==============================================================
-PluginAdd 'vim-scripts/octave.vim--', {'for': 'octave'}
+Plug 'vim-scripts/octave.vim--', {'for': 'octave'}
 
 augroup octave_init
     autocmd!

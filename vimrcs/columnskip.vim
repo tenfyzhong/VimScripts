@@ -9,7 +9,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2020-04-15 09:47:59
 "==============================================================
-PluginAdd 'tyru/columnskip.vim'
+Plug 'tyru/columnskip.vim'
 
 nmap <leader>j <Plug>(columnskip-j)
 omap <leader>j <Plug>(columnskip-j)

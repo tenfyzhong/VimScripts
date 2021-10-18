@@ -9,6 +9,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-08-07 15:55:31
 "==============================================================
-PluginAdd 'moll/vim-bbye'
+Plug 'moll/vim-bbye'
 
 nnoremap <silent><leader>bd :<C-u>Bdelete<CR>

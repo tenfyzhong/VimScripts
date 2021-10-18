@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 18:38:32
 "==============================================================
-PluginAdd 'rjohnsondev/vim-compiler-go'
+Plug 'rjohnsondev/vim-compiler-go'
 
 autocmd FileType go compiler golang
 

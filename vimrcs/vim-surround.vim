@@ -30,4 +30,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-08-28 12:47:36
 "==============================================================
-PluginAdd 'tpope/vim-surround'
+Plug 'tpope/vim-surround'

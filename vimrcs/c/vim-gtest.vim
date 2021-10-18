@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-06-20 19:15:00
 "==============================================================
-PluginAdd 'alepez/vim-gtest', {'for': 'cpp'}
+Plug 'alepez/vim-gtest', {'for': 'cpp'}

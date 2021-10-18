@@ -21,5 +21,5 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-07-09 20:29:32
 "==============================================================
-PluginAdd 'wellle/targets.vim'
+Plug 'wellle/targets.vim'
 

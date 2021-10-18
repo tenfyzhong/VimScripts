@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-05-21 08:50:40
 "==============================================================
-PluginAdd 'nicwest/vim-http'
+Plug 'nicwest/vim-http'

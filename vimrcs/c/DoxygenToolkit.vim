@@ -14,7 +14,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-13 14:46:55
 "==============================================================
-PluginAdd 'vim-scripts/DoxygenToolkit.vim', {'for': ['c', 'cpp']}
+Plug 'vim-scripts/DoxygenToolkit.vim', {'for': ['c', 'cpp']}
 
 let g:load_doxygen_syntax              = 1
 let g:doxygen_enhanced_color           = 1

@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2020-11-20 08:56:06
 "==============================================================
-PluginAdd 'dbatten5/vim-macroscope'
+Plug 'dbatten5/vim-macroscope'

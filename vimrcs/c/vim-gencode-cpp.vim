@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-06-02 21:52:23
 "==============================================================
-PluginAdd 'tenfyzhong/vim-gencode-cpp', {'for': ['c', 'cpp']}
+Plug 'tenfyzhong/vim-gencode-cpp', {'for': ['c', 'cpp']}

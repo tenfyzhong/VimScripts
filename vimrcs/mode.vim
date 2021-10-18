@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-06-13 16:11:40
 "==============================================================
-PluginAdd 'tenfyzhong/mode.vim'
+Plug 'tenfyzhong/mode.vim'

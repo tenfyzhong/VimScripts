@@ -27,7 +27,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-07-10 23:31:36
 "==============================================================
-PluginAdd 'chrisbra/NrrwRgn'
+Plug 'chrisbra/NrrwRgn'
 
 augroup nrrw_rgn_init
   autocmd!

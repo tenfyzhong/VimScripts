@@ -6,6 +6,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-09-27 19:16:38
 "==============================================================
-PluginAdd 'tenfyzhong/vim-illuminate'
+Plug 'tenfyzhong/vim-illuminate'
 
 hi illuminatedWord  ctermbg=236

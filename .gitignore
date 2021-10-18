@@ -8,6 +8,7 @@ Myself*
 
 UltiSnips
 
+*-local.vim
 local.vim
 .sessions/
 .netrwhist

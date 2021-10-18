@@ -1,1 +1,1 @@
-PluginAdd 'tenfyzhong/a_indent'
+Plug 'tenfyzhong/a_indent'

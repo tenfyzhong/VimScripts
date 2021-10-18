@@ -75,7 +75,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-19 21:50:28
 "==============================================================
-PluginAdd 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align'
 
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)

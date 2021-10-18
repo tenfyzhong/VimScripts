@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2021-07-10 22:09:25
 "==============================================================
-PluginAdd 'tenfyzhong/macos-autoim.vim'
+Plug 'tenfyzhong/macos-autoim.vim'

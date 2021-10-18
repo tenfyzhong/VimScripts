@@ -6,5 +6,5 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 18:34:32
 "==============================================================
-PluginAdd 'leshill/vim-json', {'for': 'json'}
+Plug 'leshill/vim-json', {'for': 'json'}
 

@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-09-20 09:11:17
 "==============================================================
-PluginAdd 'machakann/vim-highlightedyank'
+Plug 'machakann/vim-highlightedyank'
 
 if !exists('##TextYankPost')
   map y <Plug>(highlightedyank)

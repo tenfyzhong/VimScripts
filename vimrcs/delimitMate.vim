@@ -11,7 +11,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-13 14:07:04
 "==============================================================
-PluginAdd 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 
 let g:delimitMate_expand_cr = 2
 let g:delimitMate_balance_matchpairs = 1

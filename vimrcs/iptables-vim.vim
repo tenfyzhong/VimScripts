@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2021-02-05 09:11:14
 "==============================================================
-PluginAdd 'eiginn/iptables-vim'
+Plug 'eiginn/iptables-vim'

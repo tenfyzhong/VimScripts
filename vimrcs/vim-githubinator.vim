@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-08-30 14:21:58
 "==============================================================
-PluginAdd 'tenfyzhong/vim-githubinator'
+Plug 'tenfyzhong/vim-githubinator'
 
 xmap <leader>gho <Plug>(githubinator-open)
 xmap <leader>ghc <Plug>(githubinator-copy)

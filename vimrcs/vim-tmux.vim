@@ -6,5 +6,5 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-06-23 10:10:21
 "==============================================================
-PluginAdd 'tmux-plugins/vim-tmux-focus-events'
-PluginAdd 'tmux-plugins/vim-tmux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux'

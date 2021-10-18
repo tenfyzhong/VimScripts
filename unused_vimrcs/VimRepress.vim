@@ -1,3 +1,3 @@
 " VimRepress
-PluginAdd 'vim-scripts/VimRepress'
+Plug 'vim-scripts/VimRepress'
 

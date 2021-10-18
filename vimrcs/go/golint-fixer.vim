@@ -10,4 +10,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-02 20:14:02
 "==============================================================
-PluginAdd 'tenfyzhong/golint-fixer.vim', {'for': 'go'}
+Plug 'tenfyzhong/golint-fixer.vim', {'for': 'go'}

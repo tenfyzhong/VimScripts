@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-17 16:26:53
 "==============================================================
-PluginAdd 'rhysd/github-complete.vim'
+Plug 'rhysd/github-complete.vim'

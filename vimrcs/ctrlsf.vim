@@ -53,7 +53,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-24 11:10:49
 "==============================================================
-PluginAdd 'dyng/ctrlsf.vim'
+Plug 'dyng/ctrlsf.vim'
 
 " let g:ctrlsf_ackprg = 'rg'
 let g:ctrlsf_auto_close = 1

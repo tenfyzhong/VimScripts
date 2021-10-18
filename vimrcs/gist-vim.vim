@@ -46,8 +46,8 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-07 09:08:46
 "==============================================================
-PluginAdd 'mattn/webapi-vim'
-PluginAdd 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
 
 let g:gist_show_privates = 1
 let g:gist_get_multiplefile = 1

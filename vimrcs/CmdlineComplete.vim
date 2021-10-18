@@ -6,6 +6,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-13 14:00:12
 "==============================================================
-PluginAdd 'vim-scripts/CmdlineComplete'
+Plug 'vim-scripts/CmdlineComplete'
 
 

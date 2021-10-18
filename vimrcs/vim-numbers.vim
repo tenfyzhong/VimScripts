@@ -12,4 +12,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2021-01-26 15:03:44
 "==============================================================
-PluginAdd 'MisanthropicBit/vim-numbers'
+Plug 'MisanthropicBit/vim-numbers'

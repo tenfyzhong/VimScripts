@@ -9,7 +9,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-07-09 19:53:40
 "==============================================================
-PluginAdd 'FooSoft/vim-argwrap'
+Plug 'FooSoft/vim-argwrap'
 
 if exists('g:vim_argwrap_setting')
     finish

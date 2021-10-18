@@ -9,4 +9,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-02-05 16:44:49
 "==============================================================
-PluginAdd 'tenfyzhong/z.vim'
+Plug 'tenfyzhong/z.vim'

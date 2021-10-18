@@ -25,7 +25,7 @@
 if !has('nvim') && version < 800
     finish
 endif
-PluginAdd 'w0rp/ale'
+Plug 'w0rp/ale'
 
 let g:ale_cpp_gcc_options = '-std=c++11 -Wall'
 let g:ale_c_gcc_options = '-I. -I.. -I./include -I../include -Wall'

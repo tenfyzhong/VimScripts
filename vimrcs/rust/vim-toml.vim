@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-05-06 11:39:45
 "==============================================================
-PluginAdd 'cespare/vim-toml', {'for': 'toml'}
+Plug 'cespare/vim-toml', {'for': 'toml'}

@@ -20,7 +20,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-04-21 09:51:08
 "==============================================================
-PluginAdd 'benmills/vimux'
+Plug 'benmills/vimux'
 
 nnoremap <Leader>vp :VimuxPromptCommand<CR>
 nnoremap <Leader>vl :VimuxRunLastCommand<CR>

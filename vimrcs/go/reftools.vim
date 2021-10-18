@@ -15,7 +15,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-11-15 09:28:09
 "==============================================================
-PluginAdd 'tenfyzhong/reftools.vim', {'frozen': 1}
+Plug 'tenfyzhong/reftools.vim', {'frozen': 1}
 
 augroup reftools_local
   au!

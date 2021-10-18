@@ -21,6 +21,6 @@
 " created: 2017-07-19 14:10:52
 "==============================================================
 finish
-PluginAdd 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify'
 
 let g:signify_vcs_list = ['git']

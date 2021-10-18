@@ -12,7 +12,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-04-29 08:47:54
 "==============================================================
-PluginAdd 'voldikss/vim-translate-me'
+Plug 'voldikss/vim-translate-me'
 
 " 普通模式，<Leader>d 翻译光标下的文本，在命令行回显翻译内容
 nmap <silent> <Leader>td <Plug>Translate

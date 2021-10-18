@@ -7,7 +7,7 @@
 " created: 2019-07-29 11:08:19
 " depends: brew install tectonic
 "==============================================================
-PluginAdd 'lervag/vimtex'
+Plug 'lervag/vimtex'
 
 let g:vimtex_view_method = 'skim'
 let g:tex_flavor = 'latex'

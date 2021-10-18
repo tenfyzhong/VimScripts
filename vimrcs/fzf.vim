@@ -62,10 +62,10 @@ else
     finish
 endif
 
-PluginAdd 'junegunn/fzf.vim'
-PluginAdd 'tracyone/fzf-funky'
-PluginAdd 'tenfyzhong/fzf-marks.vim'
-PluginAdd 'tenfyzhong/fzf-bookmarks.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'tracyone/fzf-funky'
+Plug 'tenfyzhong/fzf-marks.vim'
+Plug 'tenfyzhong/fzf-bookmarks.vim'
 let g:fzf_command_prefix = 'FZF'
 let g:fzf_history_dir = '~/.fzf-history'
 

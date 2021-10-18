@@ -1,1 +1,1 @@
-PluginAdd 'asins/vimcdoc'
+Plug 'asins/vimcdoc'

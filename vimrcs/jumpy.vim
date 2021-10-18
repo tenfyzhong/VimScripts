@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-08-15 10:16:04
 "==============================================================
-PluginAdd 'arp242/jumpy.vim'
+Plug 'arp242/jumpy.vim'

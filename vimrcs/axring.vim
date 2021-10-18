@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-08-30 08:57:39
 "==============================================================
-PluginAdd 'tenfyzhong/axring.vim', {'frozen': 1}
+Plug 'tenfyzhong/axring.vim', {'frozen': 1}
 
 let g:axring_rings = [
       \ ['&&', '||'],

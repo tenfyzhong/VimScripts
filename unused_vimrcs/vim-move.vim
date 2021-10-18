@@ -11,7 +11,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-23 23:01:11
 "==============================================================
-PluginAdd 'matze/vim-move'
+Plug 'matze/vim-move'
 
 let g:move_key_modifier = 'M'
 let g:move_auto_indent = 0

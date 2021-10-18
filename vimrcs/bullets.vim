@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2020-01-21 14:35:25
 "==============================================================
-PluginAdd 'dkarter/bullets.vim'
+Plug 'dkarter/bullets.vim'
 
 let g:bullets_enabled_file_types = [
     \ 'markdown',

@@ -1,2 +1,2 @@
-PluginAdd 'rhysd/vim-clang-format'
+Plug 'rhysd/vim-clang-format'
 

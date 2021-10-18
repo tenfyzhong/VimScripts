@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-08-28 15:46:16
 "==============================================================
-PluginAdd 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'

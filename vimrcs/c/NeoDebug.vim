@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2018-05-03 17:38:18
 "==============================================================
-PluginAdd 'cpiger/NeoDebug'
+Plug 'cpiger/NeoDebug'

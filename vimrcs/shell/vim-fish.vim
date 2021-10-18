@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-28 17:24:43
 "==============================================================
-PluginAdd 'dag/vim-fish', {'for': 'fish'}
+Plug 'dag/vim-fish', {'for': 'fish'}

@@ -42,9 +42,9 @@ let g:type_plugin_list = ["c", "go", "web"]
 cscope会从当前目录一直往上去查找cscope目录，找到则链接
 
 加入插件，在 `~/.vim/vimrcs/` 下加入一个.vimrc或.vim后缀的脚本，
-在脚本开头调用`PluginAdd`命令 加载插件，脚本下面可以加入其他的配置。例如：
+在脚本开头调用`Plug`命令 加载插件，脚本下面可以加入其他的配置。例如：
 ```viml
-PluginAdd 'a.vim'
+Plug 'a.vim'
 ```
 对于不使用的插件，可以有以下操作：
 -  将其移到`unused_vimrcs`目录下(建议)
@@ -100,7 +100,6 @@ PluginAdd 'a.vim'
 ## 命令
 | command     | args   | describe    |
 |:------------|:-------|:------------|
-| `PluginAdd` | 插件名 | 安装插件    |
 | `Bigger`    |        | 加大gui字体 |
 | `Smaller`   |        | 缩小gui字体 |
 | `W`         |        | sudo保存    |

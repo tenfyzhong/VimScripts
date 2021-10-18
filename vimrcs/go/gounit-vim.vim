@@ -15,7 +15,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-11-23 09:31:45
 "==============================================================
-PluginAdd 'hexdigest/gounit-vim', {'do': ':call GoUnitLocalInit()'}
+Plug 'hexdigest/gounit-vim', {'do': ':call GoUnitLocalInit()'}
 
 function! GoUnitLocalInit()
   GoUnitInstallBinaries

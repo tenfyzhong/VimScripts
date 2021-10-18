@@ -19,7 +19,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 17:25:46
 "==============================================================
-PluginAdd 'tenfyzhong/a.vim', {'for': ['c', 'cpp']}
+Plug 'tenfyzhong/a.vim', {'for': ['c', 'cpp']}
 
 let g:alternateNoDefaultAlternate = 1
 

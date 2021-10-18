@@ -228,9 +228,6 @@ if has('gui_running')
   command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
 endif
 
-" 数字的参数是加载级别，默认是5
-" 数字越大，越后加载
-command! -nargs=+ -bar PluginAdd call loader#BundlePlugin(<args>)
 command! W w !sudo tee %
 
 command! -nargs=0 XXD call feature#toggle_xxd()
@@ -264,10 +261,16 @@ source ~/.vim/abbreviations.vim
 
 " source plugin {{{
 " 加载插件
-" 建议：插件的配置最好以插件名加.vimrc命名
-" 如a.vim的配置为a.vim.vimrc，放在vimrcs目录下
+" 建议：插件的配置最好以插件名加.vim命名
+" 如a.vim的配置为a.vim.vim，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
-call loader#LoadVimrcs()
+call plug#begin(g:bundle_path)
+call pload#load(g:vimrc_path)
+call plug#end()
+filetype on					" 侦测文件类型	
+filetype plugin on			" 开启文件识别
+filetype indent on			" 针对不同的文件类型采用不同的缩进格式
+filetype plugin indent on	" 启动自动补全
 " }}}
 
 " {{{

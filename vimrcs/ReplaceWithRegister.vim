@@ -10,4 +10,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-07-09 20:09:51
 "==============================================================
-PluginAdd 'vim-scripts/ReplaceWithRegister'
+Plug 'vim-scripts/ReplaceWithRegister'

@@ -28,7 +28,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 20:28:14
 "==============================================================
-PluginAdd 'MattesGroeger/vim-bookmarks'
+Plug 'MattesGroeger/vim-bookmarks'
 
 let g:bookmark_sign            = ">"
 let g:bookmark_annotation_sign = "$"

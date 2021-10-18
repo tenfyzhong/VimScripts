@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2021-01-26 14:55:16
 "==============================================================
-PluginAdd 'flwyd/vim-conjoin'
+Plug 'flwyd/vim-conjoin'

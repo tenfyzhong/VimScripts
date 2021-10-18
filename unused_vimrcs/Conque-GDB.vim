@@ -23,7 +23,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-05-04 20:34:44
 "==============================================================
-PluginAdd 'tenfyzhong/Conque-GDB'
+Plug 'tenfyzhong/Conque-GDB'
 
 let g:ConqueTerm_StartMessages = 0
 let g:ConqueTerm_CloseOnEnd = 1

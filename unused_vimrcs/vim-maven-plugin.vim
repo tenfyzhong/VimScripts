@@ -7,4 +7,4 @@
 " created: 2016-04-08 21:38:19
 "==============================================================
 
-PluginAdd 'mikelue/vim-maven-plugin'
+Plug 'mikelue/vim-maven-plugin'

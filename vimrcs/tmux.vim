@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-04-21 11:05:58
 "==============================================================
-PluginAdd 'keith/tmux.vim'
+Plug 'keith/tmux.vim'

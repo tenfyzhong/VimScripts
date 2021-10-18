@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-05-29 13:23:12
 "==============================================================
-PluginAdd 'tenfyzhong/autoflake.vim'
+Plug 'tenfyzhong/autoflake.vim'
 
 augroup autoflake_vim_init
   autocmd BufWritePre *.py silent Autoflake 

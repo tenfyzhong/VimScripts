@@ -1,3 +1,3 @@
 " VOom
-PluginAdd 'vim-scripts/VOoM'
+Plug 'vim-scripts/VOoM'
 

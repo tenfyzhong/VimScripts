@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-11 21:40:54
 "==============================================================
-PluginAdd 'leafgarland/typescript-vim', {'for': 'typescript'}
+Plug 'leafgarland/typescript-vim', {'for': 'typescript'}

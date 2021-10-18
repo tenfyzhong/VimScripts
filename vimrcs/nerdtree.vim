@@ -28,8 +28,8 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 19:23:56
 "==============================================================
-PluginAdd 'scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeToggle']}
-PluginAdd 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree', {'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeToggle']}
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 let NERDChristmasTree 				= 1
 let NERDTreeShowHidden 				= 0 "	不显示隐藏文件

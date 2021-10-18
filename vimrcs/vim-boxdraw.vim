@@ -15,6 +15,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2019-04-22 10:33:49
 "==============================================================
-PluginAdd 'tenfyzhong/vim-boxdraw'
+Plug 'tenfyzhong/vim-boxdraw'
 
 nmap <leader>bt <Plug>(boxdraw-toggle)

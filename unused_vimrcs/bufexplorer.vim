@@ -17,5 +17,5 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-10 13:29:46
 "==============================================================
-PluginAdd 'jlanzarotta/bufexplorer'
+Plug 'jlanzarotta/bufexplorer'
 

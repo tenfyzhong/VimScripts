@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2021-06-02 21:18:44
 "==============================================================
-PluginAdd 'solarnz/thrift.vim'
+Plug 'solarnz/thrift.vim'

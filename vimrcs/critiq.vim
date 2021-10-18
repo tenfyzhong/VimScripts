@@ -1,9 +1,9 @@
 "==============================================================
-"    file: xterm-color-table.vim
+"    file: critiq.vim
 "   brief: 
 " VIM Version: 8.2
 "  author: tenfyzhong
 "   email: tenfy@tenfy.cn
-" created: 2021-07-10 11:10:37
+" created: 2021-10-09 14:16:41
 "==============================================================
-Plug 'guns/xterm-color-table.vim'
+" Plug 'AGhost-7/critiq.vim'

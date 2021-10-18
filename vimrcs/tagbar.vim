@@ -19,8 +19,8 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 19:48:14
 "==============================================================
-PluginAdd 'majutsushi/tagbar'
-PluginAdd 'tenfyzhong/tagbar-ext.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tenfyzhong/tagbar-ext.vim'
 
 " 比taglist更现代的代码结构浏览工具
 function! TagbarStatusFunc(current, sort, fname, ...) abort

@@ -27,7 +27,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 15:49:12
 "==============================================================
-PluginAdd 'tenfyzhong/YankRing.vim'
+Plug 'tenfyzhong/YankRing.vim'
 
 let g:yankring_history_file = '.yankring_history'
 

@@ -15,4 +15,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-02-25 21:42:29
 "==============================================================
-PluginAdd 'junegunn/vim-plug'
+Plug 'junegunn/vim-plug'

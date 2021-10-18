@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-21 17:51:12
 "==============================================================
-PluginAdd 'ekalinin/Dockerfile.vim'
+Plug 'ekalinin/Dockerfile.vim'

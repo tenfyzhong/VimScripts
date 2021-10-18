@@ -6,4 +6,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2021-04-14 16:27:35
 "==============================================================
-PluginAdd 'tenfyzhong/gengotag', {'do': 'go build'}
+Plug 'tenfyzhong/gengotag', {'do': 'go build'}

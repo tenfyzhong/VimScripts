@@ -6,7 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2021-01-06 16:24:32
 "==============================================================
-PluginAdd 'tenfyzhong/joplin.vim'
+Plug 'tenfyzhong/joplin.vim'
 
 let g:joplin_note_order_desc = 1
 let g:joplin_icon_open = '▾ '

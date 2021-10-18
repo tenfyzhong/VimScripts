@@ -13,4 +13,4 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-06-13 11:14:53
 "==============================================================
-PluginAdd 'machakann/vim-swap'
+Plug 'machakann/vim-swap'

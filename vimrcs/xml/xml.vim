@@ -40,7 +40,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 18:01:40
 "==============================================================
-PluginAdd 'othree/xml.vim', {'for': 'xml'}
+Plug 'othree/xml.vim', {'for': 'xml'}
 
 let g:xml_syntax_folding = 1
 

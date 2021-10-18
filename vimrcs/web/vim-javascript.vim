@@ -6,6 +6,6 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-16 19:27:54
 "==============================================================
-PluginAdd 'pangloss/vim-javascript', {'for': 'javascript'}
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 
 let javascript_enable_domhtmlcss=1

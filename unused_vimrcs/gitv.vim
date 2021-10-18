@@ -11,7 +11,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 09:50:35
 "==============================================================
-PluginAdd 'gregsexton/gitv'
+Plug 'gregsexton/gitv'
 
 if exists("g:gitv_init")
     finish
