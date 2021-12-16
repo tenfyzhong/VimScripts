@@ -115,8 +115,9 @@ function! feature#StrfimeWord()
   echo strftime('%F %T', expand('<cword>'))
 endfunction
 
-function! feature#SubtituteCamel()
+function! feature#CamelUnderScore(fn)
   let word = expand('<cword>')
-  let camel = string#ToCamel(word)
-  exec printf('%%s/%s/%s/gc', word, camel)
+  let text = a:fn(word)
+  exec printf('%%s/%s/%s/gc', word, text)
 endfunction
+

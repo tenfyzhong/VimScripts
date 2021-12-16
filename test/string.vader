@@ -1,11 +1,55 @@
-Execute (string#ToCamel):
-  let result = string#ToCamel('hello_world_hello')
+Execute (string#ToCamelU):
+  let result = string#ToCamelU('hello_world_hello')
   AssertEqual 'HelloWorldHello', result
 
-Execute (string#ToCamel 'hello_world_'):
-  let result = string#ToCamel('hello_world_')
+Execute (string#ToCamelU 'hello_world_'):
+  let result = string#ToCamelU('hello_world_')
   AssertEqual 'HelloWorld', result
 
-Execute (string#ToCamel '_hello_world_'):
-  let result = string#ToCamel('_hello_world_')
+Execute (string#ToCamelU '_hello_world_'):
+  let result = string#ToCamelU('_hello_world_')
   AssertEqual 'HelloWorld', result
+
+Execute (string#ToCamelU 'HELLO_WORLD_'):
+  let result = string#ToCamelU('HELLO_WORLD_')
+  AssertEqual 'HelloWorld', result
+
+Execute (string#ToCamelL):
+  let result = string#ToCamelL('hello_world_hello')
+  AssertEqual 'helloWorldHello', result
+
+Execute (string#ToCamelL 'hello_world_'):
+  let result = string#ToCamelL('hello_world_')
+  AssertEqual 'helloWorld', result
+
+Execute (string#ToCamelL '_hello_world_'):
+  let result = string#ToCamelL('_hello_world_')
+  AssertEqual 'helloWorld', result
+
+Execute (string#ToCamelL 'HELLO_WORLD_'):
+  let result = string#ToCamelL('HELLO_WORLD_')
+  AssertEqual 'helloWorld', result
+
+Execute (string#ToUnderScoreL 'NameLikeThis'):
+  let result = string#ToUnderScoreL('NameLikeThis')
+  AssertEqual 'name_like_this', result
+
+Execute (string#ToUnderScoreL 'nameLikeThis'):
+  let result = string#ToUnderScoreL('nameLikeThis')
+  AssertEqual 'name_like_this', result
+
+Execute (string#ToUnderScoreL 'name1Like2This3'):
+  let result = string#ToUnderScoreL('name1Like2This3')
+  AssertEqual 'name1_like2_this3', result
+
+Execute (string#ToUnderScoreU 'NameLikeThis'):
+  let result = string#ToUnderScoreU('NameLikeThis')
+  AssertEqual 'NAME_LIKE_THIS', result
+
+Execute (string#ToUnderScoreU 'nameLikeThis'):
+  let result = string#ToUnderScoreU('nameLikeThis')
+  AssertEqual 'NAME_LIKE_THIS', result
+
+Execute (string#ToUnderScoreU 'name1Like2This3'):
+  let result = string#ToUnderScoreU('name1Like2This3')
+  AssertEqual 'NAME1_LIKE2_THIS3', result
