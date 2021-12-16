@@ -186,6 +186,7 @@ nnoremap <expr> N  'nN'[v:searchforward]
 " nnoremap <silent><leader>p :set paste<CR>:normal! "*p<CR>:set nopaste<CR>
 nnoremap <silent><leader>p :set invpaste<CR>
 noremap <leader>y "*y
+noremap <leader>stc :call feature#SubtituteCamel()<CR>
 
 " inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
 
@@ -231,6 +232,7 @@ endif
 command! W w !sudo tee %
 
 command! -nargs=0 XXD call feature#toggle_xxd()
+command! -nargs=0 ToCamel call feature#SubtituteCamel()
 " }}}
 
 " local.vim {{{

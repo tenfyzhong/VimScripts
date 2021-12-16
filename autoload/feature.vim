@@ -114,3 +114,9 @@ endfunction "}}}
 function! feature#StrfimeWord()
   echo strftime('%F %T', expand('<cword>'))
 endfunction
+
+function! feature#SubtituteCamel()
+  let word = expand('<cword>')
+  let camel = string#ToCamel(word)
+  exec printf('%%s/%s/%s/gc', word, camel)
+endfunction
