@@ -109,3 +109,7 @@ let g:axring_rings_thrift = [
 let g:axring_rings_proto = [
       \ ["int32", "int64"]
       \ ]
+
+let g:axring_rings_gitcommit = [
+      \ ["feat", "fix", "doc", "chore", "perf", "refactor", "test"]
+      \]
