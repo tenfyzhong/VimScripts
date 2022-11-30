@@ -113,3 +113,7 @@ let g:axring_rings_proto = [
 let g:axring_rings_gitcommit = [
       \ ["feat", "fix", "doc", "chore", "perf", "refactor", "test"]
       \]
+
+let g:axring_rings_d2 = [
+      \  ["rectangle", "square", "page", "parallelogram", "document", "cylinder", "queue", "package", "step", "callout", "stored_data", "person", "diamond", "oval", "circle", "hexagon", "cloud", "text", "code", "class", "sql_table", "image"],
+      \ ]

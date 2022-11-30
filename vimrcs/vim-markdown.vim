@@ -6,6 +6,7 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-06-30 22:38:13
 "==============================================================
-Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+" Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+Plug 'tpope/vim-markdown', {'as': 'tpope-vim-markdown'}
 
 let g:vim_markdown_folding_disabled = 1
