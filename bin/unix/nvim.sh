@@ -14,4 +14,4 @@ set -o nounset                              # Treat unset variables as an error
 
 
 mkdir -p ~/.config/nvim
-ln -sf ~/.vim/vimrc ~/.config/nvim/init.vim
+ln -sf ~/.vim/init.vim ~/.config/nvim/init.vim

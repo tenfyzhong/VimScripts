@@ -251,9 +251,12 @@ o对应motion模式
 | `<leader>;`        | n     | fzf                | FZFHistory:                             |
 | `<leader>fs`       | n     | fzf                | FZFSnippets                             |
 | `<leader>fc`       | n     | fzf                | FZFCommands                             |
-| `<leader><leader>` | nox   | fzf                | 查找对应的map进行执行                   |
 | `<leader>/`        | n     | fzf                | FZFHistory/                             |
-| `<leader>fu`       | n     | fzf                | CtrlPFunky                              |
+| `<leader>ft`       | n     | fzf                | FZFBTags                                |
+| `<leader>fT`       | n     | fzf                | FZFTags                                 |
+| `<leader>fz`       | n     | fzf                | FZFFzm                                  |
+| `<leader>fM`       | n     | fzf                | FZFBookmarks                            |
+| `<leader><leader>` | nox   | fzf                | 查找对应的map进行执行                   |
 | `<leader>af`       | n     | autoformat         | 进行autoformat                          |
 | `<leader>rs`       | n     | vim-go             | go-implements                           |
 | `<leader>rd`       | n     | vim-go             | go-info                                 |

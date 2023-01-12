@@ -14,6 +14,9 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 12:52:50
 "==============================================================
+if has('nvim')
+  finish
+endif
 if !has('python') && !has('python3')
     finish
 endif

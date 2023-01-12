@@ -6,6 +6,9 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-13 14:00:12
 "==============================================================
+if has('nvim')
+  finish
+endif
 Plug 'vim-scripts/CmdlineComplete'
 
 

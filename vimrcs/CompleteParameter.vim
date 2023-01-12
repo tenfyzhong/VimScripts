@@ -6,6 +6,9 @@
 "   email: tenfy@tenfy.cn
 " created: 2017-06-07 20:26:40
 "==============================================================
+if has('nvim')
+  finish
+endif
 Plug 'tenfyzhong/CompleteParameter.vim', {'frozen': 1}
 
 let g:complete_parameter_log_level = 4

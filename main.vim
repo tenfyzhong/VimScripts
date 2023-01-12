@@ -90,7 +90,7 @@ set laststatus=2    "永远显示状态栏
 
 set number          " 显示行号
 set relativenumber
-set completeopt=menuone
+set completeopt=menu,menuone,noselect,noinsert
 
 exec "set backupdir=" . g:VIMHOME . ".backupfile"
 exec "set undodir=" . g:VIMHOME . ".undofile"
@@ -158,6 +158,8 @@ nnoremap <silent>j          :<c-u>call <SID>jk('j')<cr>
 nnoremap <silent>k          :<c-u>call <SID>jk('k')<cr>
 nnoremap gj                 j
 nnoremap gk                 k
+inoremap <c-k>              <Up>
+inoremap <c-j>              <Down>
 cnoremap <c-k>              <Up>
 cnoremap <c-j>              <Down>
 nnoremap ;                  :
@@ -193,8 +195,11 @@ noremap <leader>scl :call feature#CamelUnderScore(function('string#ToCamelL'))<c
 noremap <leader>scu :call feature#CamelUnderScore(function('string#ToCamelU'))<cr>
 noremap <leader>sul :call feature#CamelUnderScore(function('string#ToUnderScoreL'))<cr>
 noremap <leader>suu :call feature#CamelUnderScore(function('string#ToUnderScoreU'))<cr>
+nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 
 " inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
+inoremap <silent><c-v> <esc>:call feature#ctrlv()<cr>a
+nnoremap <silent><c-v> :call feature#ctrlv()<cr>
 
 " 上面加空行
 nnoremap <silent><space>O :<c-u>call feature#exec_list('normal m`', 'put! =repeat(nr2char(10), ' . v:count1 . ')', 'normal ``')<cr>

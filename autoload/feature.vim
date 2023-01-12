@@ -121,3 +121,13 @@ function! feature#CamelUnderScore(fn)
   exec printf('%%s/%s/%s/gc', word, text)
 endfunction
 
+function! feature#ctrlv()
+  set paste
+  echom "paste".string(&paste)
+  let str = system("pbpaste")
+  let save = @a
+  let @a = str
+  normal "ap
+  let @a = save
+  " set nopaste
+endfunction

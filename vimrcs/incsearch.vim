@@ -8,11 +8,10 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 13:34:27
 "==============================================================
-Plug 'haya14busa/incsearch.vim'
-
-if exists("g:incsearch_vim_init")
-    finish
+if has('nvim')
+  finish
 endif
+Plug 'haya14busa/incsearch.vim'
 
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
@@ -21,6 +20,3 @@ map g/ <Plug>(incsearch-stay)
 set hlsearch
 let g:incsearch#auto_nohlsearch = 0
 
-nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
-
-let g:incsearch_vim_init = 1

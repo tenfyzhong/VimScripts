@@ -42,7 +42,8 @@
 "           <leader>fs :FZFSnippets
 "           <leader>fc :FZFCommands
 "           <leader>/ :FZFHistory/
-"           <leader>fu :FzfFunky
+"           <leader>ft :FZFBTags
+"           <leader>fT :FZFTags
 "           <leader>fz :FZFFzm
 "           <leader>fM :FZFBookmarks
 "           <leader><leader> nmap模式的map
@@ -63,28 +64,28 @@ else
 endif
 
 Plug 'junegunn/fzf.vim'
-Plug 'tracyone/fzf-funky'
 Plug 'tenfyzhong/fzf-marks.vim'
 Plug 'tenfyzhong/fzf-bookmarks.vim'
 let g:fzf_command_prefix = 'FZF'
 let g:fzf_history_dir = '~/.fzf-history'
 
-nnoremap <leader>fp :FZF
-nnoremap <leader>ff :FZFFiles<cr>
-nnoremap <leader>fg :FZFGFiles<cr>
-nnoremap <leader>fb :FZFBuffers<cr>
-nnoremap <leader>fa :FZFAg<cr>
-nnoremap <leader>fA :execute 'FZFAg ' . expand('<cword>')<cr>
-nnoremap <leader>fh :FZFHistory<cr>
-nnoremap <leader>fw :FZFWindows<cr>
-nnoremap <leader>fm :FZFMarks<cr>
-nnoremap <leader>; :FZFHistory:<cr>
-nnoremap <leader>fs :FZFSnippets<cr>
-nnoremap <leader>fc :FZFCommands<cr>
-nnoremap <leader>/ :FZFHistory/<cr>
-nnoremap <Leader>fu :FzfFunky<Cr>
-nnoremap <leader>fz :FZFFzm<cr>
-nnoremap <leader>fM :FZFBookmarks<cr>
+nnoremap <silent><leader>fp :FZF
+nnoremap <silent><leader>ff :FZFFiles<cr>
+nnoremap <silent><leader>fg :FZFGFiles<cr>
+nnoremap <silent><leader>fb :FZFBuffers<cr>
+nnoremap <silent><leader>fa :FZFAg<cr>
+nnoremap <silent><leader>fA :execute 'FZFAg ' . expand('<cword>')<cr>
+nnoremap <silent><leader>fh :FZFHistory<cr>
+nnoremap <silent><leader>fw :FZFWindows<cr>
+nnoremap <silent><leader>fm :FZFMarks<cr>
+nnoremap <silent><leader>; :FZFHistory:<cr>
+nnoremap <silent><leader>fs :FZFSnippets<cr>
+nnoremap <silent><leader>fc :FZFCommands<cr>
+nnoremap <silent><leader>/ :FZFHistory/<cr>
+nnoremap <silent><leader>ft :FZFBTags<cr>
+nnoremap <silent><leader>fT :FZFTags<cr>
+nnoremap <silent><leader>fz :FZFFzm<cr>
+nnoremap <silent><leader>fM :FZFBookmarks<cr>
 
 nmap <leader><leader> <plug>(fzf-maps-n)
 omap <leader><leader> <plug>(fzf-maps-o)
