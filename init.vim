@@ -31,3 +31,6 @@ nnoremap <c-w>S :call <SID>split_window('sp')<cr>
 nnoremap <c-w><c-s> :call <SID>split_window('sp')<cr>
 nnoremap <c-w>v :call <SID>split_window('vsp')<cr>
 nnoremap <c-w><c-v> :call <SID>split_window('vsp')<cr>
+
+set clipboard+=unnamedplus
+
