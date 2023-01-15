@@ -18,8 +18,10 @@ let mapleader   = "'"
 let g:MSWIN = 0
 let g:UNIX = 1
 let g:VIMHOME = expand('<sfile>:p:h') . '/'
-let g:vimrc_path    = fnamemodify(g:VIMHOME . "vimrcs/", ':p')
-let g:bundle_path   = fnamemodify(g:VIMHOME . "bundle/", ':p')
+let g:vimrc_path       = fnamemodify(g:VIMHOME . "vimrcs/", ':p')
+let g:vimrc_post_path  = fnamemodify(g:VIMHOME . "vimrcs_post", ':p')
+let g:nvimrc_post_path = fnamemodify(g:VIMHOME . "nvim_post", ':p')
+let g:bundle_path      = fnamemodify(g:VIMHOME . "bundle/", ':p')
 " }}}
 
 " base setting {{{
@@ -278,8 +280,14 @@ source ~/.vim/abbreviations.vim
 " 如a.vim的配置为a.vim.vim，放在vimrcs目录下
 " 加载vimrcs目录下的所有脚本
 call plug#begin(g:bundle_path)
-call pload#load(g:vimrc_path)
+call pload#source(g:vimrc_path)
 call plug#end()
+call pload#source(g:vimrc_post_path)
+call pload#luafile(g:vimrc_post_path)
+if has('nvim')
+    call pload#source(g:nvimrc_post_path)
+    call pload#luafile(g:nvimrc_post_path)
+endif
 filetype on					" 侦测文件类型	
 filetype plugin on			" 开启文件识别
 filetype indent on			" 针对不同的文件类型采用不同的缩进格式
@@ -304,4 +312,3 @@ function! s:clear_or_redraw() "{{{2
 endfunction "}}}2
 
 " }}}
-source ~/.vim/defx.vim

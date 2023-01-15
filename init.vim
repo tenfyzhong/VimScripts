@@ -10,7 +10,6 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 let main = '~/.vim/main.vim'
 exec 'source ' . main
-luafile ~/.vim/nvim-cmp.lua
 
 " tnoremap <Esc> <C-\><C-n>
 " tnoremap <C-h> <C-\><C-n><C-w>h

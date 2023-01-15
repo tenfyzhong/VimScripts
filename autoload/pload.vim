@@ -7,7 +7,7 @@
 "       https://raw.githubusercontent.com/tenfyzhong/VimScripts/master/autoload/pload.vim
 "
 "   Edit your .vimrc
-"   call pload#load('~/.vim/vimrcs')
+"   call pload#source('~/.vim/vimrcs')
 "
 "   Then you can put you plugin configuration in difference files, 
 "   and then put the configuration in `~/.vim/vimrcs`. 
@@ -27,7 +27,7 @@
 "
 "   " file ~/.vim/vimrc
 "   call plug#begin('~/.vim/plugged')
-"   call pload#load('~/.vim/vimrcs/)
+"   call pload#source('~/.vim/vimrcs/)
 "   call plug#end()
 "   filetype on					
 "   filetype plugin on			
@@ -39,7 +39,7 @@
 " created: 2021-10-12 15:08:59
 "==============================================================
 
-function pload#load(path)
+function! pload#source(path)
   let path = fnamemodify(a:path, ':p')
   let path .= <sid>iswin() ? '\' : '/'
   let vimrcs = globpath(path . '**', '*.vim', 0, 1)
@@ -63,6 +63,15 @@ function pload#load(path)
     for vimrc in vimrcs
       execute "source " . vimrc
     endfor
+  endfor
+endfunction
+
+function! pload#luafile(path)
+  let path = fnamemodify(a:path, ':p')
+  let path .= <sid>iswin() ? '\' : '/'
+  let files = globpath(path . '**', '*.lua', 0, 1)
+  for file in files
+    execute 'luafile ' . file
   endfor
 endfunction
 

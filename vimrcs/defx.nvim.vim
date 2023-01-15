@@ -43,13 +43,13 @@ function! s:defx_setting()
         \ "\<Ignore>"
   nnoremap <silent><buffer><expr> s 
         \ !defx#is_directory() && !defx#is_binary() ? 
-        \ defx#do_action('call', 'split') :
+        \ defx#do_action('drop', 'split') :
         \ "\<Ignore>"
   nnoremap <silent><buffer><expr> <CR> 
         \ defx#is_directory() ?
         \ defx#do_action('open_tree', 'toggle') : 
         \ !defx#is_binary() ? defx#do_action('drop') : "\<Ignore>"
-  nmap <silent>o <CR>
+  nmap <silent><buffer>o <CR>
 
   nnoremap <silent><buffer><expr> mk defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> mf defx#do_action('new_file')
