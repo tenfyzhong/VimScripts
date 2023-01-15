@@ -12,6 +12,7 @@ call defx#custom#column('icon', {
 call defx#custom#column('mark', {
       \ 'readonly_icon': '✗',
       \ 'selected_icon': '✓',
+      \ 'length': 0,
       \ })
 
 call defx#custom#option('_', {
@@ -21,7 +22,7 @@ call defx#custom#option('_', {
       \ 'show_ignored_files': 0,
       \ 'toggle': 1,
       \ 'resume': 1,
-      \ 'columns': 'mark:git:indent:icon:filename',
+      \ 'columns': 'git:indent:icons:filename',
 	  \ 'root_marker': '',
       \ 'ignored_files': '.*,*.a,*.so,*.o,*.d,*.swp,*.bak,*~,tags,cscope.*,*.pyc',
       \ 'auto_cd': 1,

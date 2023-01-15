@@ -15,18 +15,11 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'kristijanhusak/defx-git'
+Plug 'kristijanhusak/defx-icons'
 
 let g:defx_icons_column_length = 2
 
 nnoremap <silent><leader>nt :Defx<cr>
-
-function! DefxSelect(context)
-  if len(defx#get_selected_candidates()) > 0
-  else
-  endif
-  call defx#do_action('toggle_select')
-  normal j
-endfunction
 
 function! s:defx_setting()
   nnoremap <silent><buffer><expr> yy defx#do_action('copy')
@@ -76,4 +69,5 @@ augroup defx_init
   autocmd!
   autocmd FileType defx call <SID>defx_setting()
 augroup END
+
 
