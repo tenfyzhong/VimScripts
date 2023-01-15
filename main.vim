@@ -304,3 +304,4 @@ function! s:clear_or_redraw() "{{{2
 endfunction "}}}2
 
 " }}}
+source ~/.vim/defx.vim
