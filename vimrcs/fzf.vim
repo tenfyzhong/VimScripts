@@ -82,7 +82,7 @@ nnoremap <silent><leader>; :FZFHistory:<cr>
 nnoremap <silent><leader>fs :FZFSnippets<cr>
 nnoremap <silent><leader>fc :FZFCommands<cr>
 nnoremap <silent><leader>/ :FZFHistory/<cr>
-nnoremap <silent><leader>ft :FZFBTags<cr>
+" nnoremap <silent><leader>ft :FZFBTags<cr>
 nnoremap <silent><leader>fT :FZFTags<cr>
 nnoremap <silent><leader>fz :FZFFzm<cr>
 nnoremap <silent><leader>fM :FZFBookmarks<cr>
