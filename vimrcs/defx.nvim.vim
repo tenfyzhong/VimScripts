@@ -75,5 +75,6 @@ endfunction
 augroup defx_init
   autocmd!
   autocmd FileType defx call <SID>defx_setting()
+  autocmd WinEnter * if (len(winnr('$')) == 1 && match(bufname(), '[defx]') == 1) | qall | endif
 augroup END
 
