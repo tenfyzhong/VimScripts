@@ -19,6 +19,9 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-14 19:48:14
 "==============================================================
+if has('nvim')
+  finish
+endif
 Plug 'majutsushi/tagbar'
 Plug 'tenfyzhong/tagbar-ext.vim'
 
