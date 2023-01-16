@@ -21,10 +21,8 @@ let g:run_all_formatters_go = 1
 
 augroup autoformat_setting
     au!
-    autocmd BufWritePre *.py,*.json,*.css,*.xml,*.pl,*.sql silent Autoformat
     autocmd FileType python let b:autoformat_autoindent = 0
     autocmd FileType python let b:autoformat_retab = 0
 augroup END
 
 nnoremap <leader>af :Autoformat<cr>
-

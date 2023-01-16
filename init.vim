@@ -33,3 +33,7 @@ nnoremap <c-w><c-v> :call <SID>split_window('vsp')<cr>
 
 set clipboard+=unnamedplus
 
+augroup nvim_global_init
+  au!
+  autocmd BufWritePre * lua vim.lsp.buf.format { async = true }
+augroup END
