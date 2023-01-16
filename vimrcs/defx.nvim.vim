@@ -63,6 +63,11 @@ function! s:defx_setting()
   nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
   nnoremap <silent><buffer><expr> > defx#do_action('resize', defx#get_context().winwidth + 2)
   nnoremap <silent><buffer><expr> < defx#do_action('resize', defx#get_context().winwidth - 2)
+  nnoremap <buffer><silent> [c <Plug>(defx-git-prev)
+  nnoremap <buffer><silent> ]c <Plug>(defx-git-next)
+  nnoremap <buffer><silent> ]a <Plug>(defx-git-stage)
+  nnoremap <buffer><silent> ]r <Plug>(defx-git-reset)
+  nnoremap <buffer><silent> ]d <Plug>(defx-git-discard)
 endfunction
 
 augroup defx_init
