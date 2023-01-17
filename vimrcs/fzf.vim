@@ -93,6 +93,7 @@ xmap <leader><leader> <plug>(fzf-maps-x)
 
 augroup fzf_local
   autocmd!
-  autocmd User FZFMarksCd NERDTree
+  autocmd User FZFMarksCd Defx -buffer-name=`'defx' . tabpagenr()`
+  autocmd FileType thrift nnoremap <silent><buffer><leader>ft :FZFBTags<cr>
 augroup END
 
