@@ -115,10 +115,11 @@ function! feature#StrfimeWord()
   echo strftime('%F %T', expand('<cword>'))
 endfunction
 
-function! feature#CamelUnderScore(fn)
+function! feature#CamelUnderScore(fn, mkey)
   let word = expand('<cword>')
   let text = a:fn(word)
-  exec printf('%%s/%s/%s/gc', word, text)
+  exec printf('%%s/%s/%s/g', word, text)
+  silent! call repeat#set(a:mkey, v:count)
 endfunction
 
 function! feature#ctrlv()

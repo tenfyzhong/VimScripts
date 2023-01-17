@@ -193,10 +193,10 @@ nnoremap <expr> N  'nN'[v:searchforward]
 nnoremap <silent><leader>p :set invpaste<CR>
 noremap <leader>y "*y
 
-noremap <leader>scl :call feature#CamelUnderScore(function('string#ToCamelL'))<cr>
-noremap <leader>scu :call feature#CamelUnderScore(function('string#ToCamelU'))<cr>
-noremap <leader>sul :call feature#CamelUnderScore(function('string#ToUnderScoreL'))<cr>
-noremap <leader>suu :call feature#CamelUnderScore(function('string#ToUnderScoreU'))<cr>
+noremap <leader>scl :call feature#CamelUnderScore(function('string#ToCamelL'), "\<leader>scl")<cr>
+noremap <leader>scu :call feature#CamelUnderScore(function('string#ToCamelU'), "\<leader>scu")<cr>
+noremap <leader>sul :call feature#CamelUnderScore(function('string#ToUnderScoreL'), "\<leader>sul")<cr>
+noremap <leader>suu :call feature#CamelUnderScore(function('string#ToUnderScoreU'), "\<leader>suu")<cr>
 nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 
 " inoremap <silent><expr><Esc> pumvisible() ? "\<C-y>" : "\<Esc>"
