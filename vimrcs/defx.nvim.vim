@@ -19,7 +19,11 @@ Plug 'kristijanhusak/defx-icons'
 
 let g:defx_icons_column_length = 2
 
-nnoremap <silent><leader>nt :Defx<cr>
+nnoremap <silent><leader>nt :Defx -buffer-name=`'defx' . tabpagenr()`<cr>
+
+function! DefxAutoCD(context)
+  echom 'context:'.string(a:context)
+endfunction
 
 function! s:defx_setting()
   nnoremap <silent><buffer><expr> yy defx#do_action('copy')

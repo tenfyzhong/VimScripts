@@ -1,3 +1,18 @@
+function! DefxRoot(path)
+  let root = system('git rev-parse --show-toplevel 2> /dev/null')
+  let root = substitute(root, '\n', '', '')
+  let project = fnamemodify(root, ':t')
+  if root != ''
+    return fnamemodify(a:path, ':p:s?'.root.'?$/'.project.'?:~')
+  else
+    return fnamemodify(a:path, ':p:~')
+  endif
+endfunction
+
+call defx#custom#source('file', {
+      \ 'root': 'DefxRoot',
+      \ })
+
 call defx#custom#column('indent', 'indent', ' ')
 call defx#custom#column('time', 'format', '%y-%m-%d %H:%M')
 " call defx#custom#column('space', '')
