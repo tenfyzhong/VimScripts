@@ -1,5 +1,5 @@
 -- Set up nvim-cmp.
-local cmp = require'cmp'
+local cmp = require 'cmp'
 
 local has_words_before = function()
     unpack = unpack or table.unpack
@@ -42,7 +42,7 @@ cmp.setup({
             return true
         else
             return not context.in_treesitter_capture("comment")
-            and not context.in_syntax_group("Comment")
+                and not context.in_syntax_group("Comment")
         end
     end,
     snippet = {
@@ -90,7 +90,7 @@ cmp.setup({
 
             -- The function below will be called before any actual modifications from lspkind
             -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-            before = function (entry, vim_item)
+            before = function(entry, vim_item)
                 -- ...
                 return vim_item
             end
@@ -125,8 +125,11 @@ cmp.setup.cmdline(':', {
     })
 })
 
+require("neodev").setup({})
+
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -139,7 +142,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 lspconfig.gopls.setup {
     capabilities = capabilities,
-    cmd = {'gopls'},
+    cmd = { 'gopls' },
     settings = {
         gopls = {
             analyses = {
@@ -155,4 +158,44 @@ lspconfig.gopls.setup {
         },
     },
     on_attach = on_attach,
+}
+
+lspconfig.sumneko_lua.setup {
+    settings = {
+        Lua = {
+            runtime = {
+                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                version = 'LuaJIT',
+            },
+            diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = { 'vim' },
+            },
+            workspace = {
+                -- Make the server aware of Neovim runtime files
+                library = vim.api.nvim_get_runtime_file("", true),
+            },
+            -- Do not send telemetry data containing a randomized but unique identifier
+            telemetry = {
+                enable = false,
+            },
+            completion = {
+                callSnippet = "Replace"
+            },
+        },
+    },
+}
+
+lspconfig.vimls.setup {}
+lspconfig.pylsp.setup {
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    ignore = { 'W391' },
+                    maxLineLength = 100
+                }
+            }
+        }
+    }
 }
