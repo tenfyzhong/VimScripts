@@ -11,7 +11,20 @@
 "==============================================================
 Plug 'skywind3000/asyncrun.vim'
 
+function! s:go_get()
+  let line = getline(line('.'))
+  let items = matchlist(line, '"\(.*\)"')
+  if len(items) < 2
+    return
+  endif
+  let package = items[1]
+  exec printf('AsyncRun -cwd=$(VIM_FILEDIR) -post=echom\ "go\ get\ %s\ finish" go get %s', package, package)
+endfunction
+
+let g:asyncrun_open = 8
+
 augroup asyncrun_user_init
     autocmd!
-    autocmd User AsyncRunStop call asyncrun#quickfix_toggle(8)
+    " autocmd User AsyncRunStop call asyncrun#quickfix_toggle(8)
+    autocmd FileType go nnoremap <silent><buffer><leader>rg :call <sid>go_get()<cr>
 augroup END
