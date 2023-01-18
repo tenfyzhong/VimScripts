@@ -23,6 +23,8 @@ Plug 'tenfyzhong/tsnippets.vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'folke/neodev.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'petertriho/cmp-git'
 
 " Expand or jump
 " imap <expr> <C-j>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-j>'

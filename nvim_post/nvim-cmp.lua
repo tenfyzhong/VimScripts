@@ -75,6 +75,7 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'nvim_lua' },
+        { name = "git" },
         { name = 'vsnip' }, -- For vsnip users.
         -- { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
@@ -199,3 +200,7 @@ lspconfig.pylsp.setup {
         }
     }
 }
+
+lspconfig.bufls.setup {}
+lspconfig.bashls.setup {}
+lspconfig.jsonls.setup{}
