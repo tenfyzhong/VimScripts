@@ -36,4 +36,5 @@ set clipboard+=unnamedplus
 augroup nvim_global_init
   au!
   autocmd BufWritePre * lua vim.lsp.buf.format { async = true }
+  autocmd FileType json nnoremap <silent><buffer><leader>af :lua vim.lsp.buf.format {async = true}<cr>
 augroup END

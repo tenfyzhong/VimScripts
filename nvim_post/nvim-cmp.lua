@@ -203,4 +203,4 @@ lspconfig.pylsp.setup {
 
 lspconfig.bufls.setup {}
 lspconfig.bashls.setup {}
-lspconfig.jsonls.setup{}
+lspconfig.jsonls.setup {}
