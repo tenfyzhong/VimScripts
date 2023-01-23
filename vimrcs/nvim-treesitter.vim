@@ -9,7 +9,7 @@
 if !has('nvim')
   finish
 endif
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
