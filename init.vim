@@ -3,6 +3,7 @@ if !has('nvim')
     finish
 endif
 set runtimepath+=~/.vim,~/.vim/after
+set directory=.
 let &packpath = &runtimepath
 
 let g:python_host_prog  = '/usr/local/bin/python'
