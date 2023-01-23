@@ -86,10 +86,10 @@ function! s:set_commit_edit_msg_cursor()
 endfunction
 
 nnoremap <silent><leader>gw :Gwrite<cr>
-nnoremap <silent><leader>gc :Gcommit<cr>
-nnoremap <silent><leader>gb :Gblame<cr>
-nnoremap <silent><leader>gd :Gvdiff<cr>
-nnoremap <silent><leader>gl :silent Glog!<cr>
+nnoremap <silent><leader>gc :Git commit<cr>
+nnoremap <silent><leader>gb :Git blame<cr>
+nnoremap <silent><leader>gd :Gvdiffsplit<cr>
+nnoremap <silent><leader>gl :silent Gclog!<cr>
 nnoremap <silent><leader>gs :Git<cr>
 nnoremap <silent><leader>ghf :GBrowse<cr>
 
