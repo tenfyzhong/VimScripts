@@ -31,6 +31,9 @@
 "   email: tenfy@tenfy.cn
 " created: 2016-04-15 14:56:52
 "==============================================================
+if has('nvim')
+  finish
+endif
 Plug 'airblade/vim-gitgutter'
 
 if system#IsUnixInMswin()
